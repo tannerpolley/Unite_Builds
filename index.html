@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon Unite Meta Moveset Viewer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="main-container">
+
+    <div class="main-header">
+      <h1>Pokemon Unite Meta Moveset Viewer</h1>
+    </div>
+
+    <div id="filters">
+
+      <input id="nameSearch" placeholder="Search Name or Moves..." />
+
+      <div class="pick-rate-container">
+        <label for="minPickRate" class="pick-rate-label">Min Pick Rate:</label>
+        <input type="number" id="minPickRate" value="1" min="0" max="100">
+        <span class="percentage-sign">%</span>
+      </div>
+
+      <div class="role-filters">
+        <label class="role-option">
+          <input type="checkbox" name="role" value="Attacker">
+          <span class="role-label">Attacker</span>
+        </label>
+        <label class="role-option">
+          <input type="checkbox" name="role" value="Defender">
+          <span class="role-label">Defender</span>
+        </label>
+        <label class="role-option">
+          <input type="checkbox" name="role" value="All-Rounder">
+          <span class="role-label">All-Rounder</span>
+        </label>
+        <label class="role-option">
+          <input type="checkbox" name="role" value="Speedster">
+          <span class="role-label">Speedster</span>
+        </label>
+        <label class="role-option">
+          <input type="checkbox" name="role" value="Supporter">
+          <span class="role-label">Supporter</span>
+        </label>
+      </div>
+
+      <button id="resetFilters" class="reset-button">Reset</button>
+
+    </div>
+
+    <div id="moveset-table">
+      <div class="moveset-header moveset-row">
+        <div>Pokemon</div>
+        <div data-sort="Name">Name <span id="arrow-Name"></span></div>
+        <div>Role</div>
+        <div>Move Set</div>
+        <div>Moves</div>
+        <div data-sort="Win Rate">Win Rate <span id="arrow-Win Rate"></span></div>
+        <div data-sort="Pick Rate">Pick Rate <span id="arrow-Pick Rate"></span></div>
+      </div>
+    </div>
+
+    <div id="popup" class="popup hidden">
+      <div class="popup-content" id="popupContent"></div>
+    </div>
+
+  </div>
+</body>
+</html>

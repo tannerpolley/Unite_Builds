@@ -1,0 +1,470 @@
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto; /* Allow scrolling if table is wider than viewport */
+  min-width: 950px; /* Minimum width to prevent extreme squishing */
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 20px;
+  width: 98vw;
+  max-width: 2000px;
+  box-sizing: border-box;
+  overflow-x: visible;
+}
+
+.main-header {
+  text-align: center;
+  padding: 15px;
+}
+
+.main-header h1 {
+  font-size: 3.5em;
+  font-weight: 775;
+  margin: auto;
+}
+
+/* First, let's fix the script.js reference problem by updating your filters CSS */
+#filters {
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 5);
+  color: white;
+  gap: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Fix the search input width */
+#nameSearch {
+  width: 240px; /* Fixed width that matches your design */
+  min-width: 180px;
+  padding: 8px 12px;
+  font-size: 1.2em;
+  text-align: center;
+  border-radius: 6px;
+  border: none;
+  background-color: #3b415a;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#nameSearch::placeholder {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.pick-rate-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Make inputs more visible on black background */
+#minPickRate {
+  background-color: #222;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 6px;
+  font-size: 1.2em;
+  font-weight: 700;
+  width: 45px;
+  text-align: right;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  -moz-appearance: textfield;
+}
+
+/* Remove spinner for Chrome, Safari, Edge, Opera */
+#minPickRate::-webkit-outer-spin-button,
+#minPickRate::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.pick-rate-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pick-rate-label {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: white;
+  white-space: nowrap;
+}
+
+.percentage-sign {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: white;
+  margin-left: 4px;
+  display: inline-block;
+}
+
+/* Make the role options more interactive with better hover effects */
+.role-option {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 15px;
+  background-color: #3b415a;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  user-select: none;
+}
+
+/* Enhanced hover effect for role options */
+.role-option:hover {
+  transform: translateY(-2px);
+  background-color: #4b516a;
+}
+
+
+.role-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.role-option input[type="checkbox"] {
+  display: none;
+}
+
+/* Role labels in filter box - blue only on hover */
+.role-label {
+  transition: color 0.2s;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 700;
+  user-select: none;
+  text-align: center;
+}
+
+/* Fix the reset button to be inline instead of block */
+.reset-button {
+  padding: 8px 20px;
+  font-size: 1.2em;
+  border-radius: 6px;
+  border: none;
+  background-color: #d13232;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: inline-block; /* Changed from block to inline-block */
+  margin: 0; /* Remove auto margins */
+}
+
+.reset-button:hover {
+  background-color: #f14242;
+  transform: translateY(-2px);
+}
+
+.role-label:hover,
+.role-option.active-role,
+.role-option.active-role .role-label,
+.reset-button:hover,
+.view-items:hover,
+.header-text:hover,
+.filter-name:hover,
+.filter-role:hover,
+.filter-name.active,
+.filter-role.active{
+  color: #57c1ed;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+#moveset-table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  table-layout: fixed;
+  text-align: center;
+  border: 4px solid #FFFFFF;
+  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 5);
+  /* Add negative letter-spacing to bring columns slightly closer */
+  letter-spacing: -0.01em;
+}
+
+.moveset-header {
+  display: table-row;
+  background-color: #1F2537;
+  font-weight: 700;
+  font-size: 1.8em;
+  white-space: nowrap;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  transition: 0.2s ease;
+  position: sticky;
+  top: 2px;
+  z-index: 100;
+  border-collapse: collapse;
+}
+
+
+
+.header-text {
+  cursor: pointer;
+  user-select: text; /* Make text selectable */
+  color: white;
+  font-weight: bold;
+  font-size: 1em; /* Match parent size */
+  display: inline-block;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 0.2s;
+}
+
+/* arrow size */
+.moveset-header span[id^="arrow-"] {
+  user-select: none;
+  font-size: 0.7em; /* Match existing arrow size */
+  display: inline-block;
+  vertical-align: top; /* Align with text */
+  margin-left: 6px; /* Add space between text and arrow */
+}
+
+.moveset-column {
+  display: table-column
+}
+
+
+/* Simple white borders for cell alignment */
+/* Additional styling to ensure content is centered */
+.moveset-row {
+  display: table-row;
+  font-weight: 700;
+  font-size: 1.6em;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  transition: 0.2s ease;
+  border: none; /* Remove border to reduce spacing */
+  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 5);
+  height: 95px; /* Set a consistent height for rows */
+  border-collapse: collapse; /* Ensure collapse behavior */
+}
+
+.moveset-row > div {
+  display: table-cell; /* Override any other display values */
+  justify-content: center;
+  align-items: center;
+  overflow-wrap: break-word;
+  text-align: center;
+  padding: 10px 1px;
+  overflow: visible; /* Ensure content isn't cut off */
+  vertical-align: middle; /* Center content vertically */
+  horiz-align: center; /* Center content vertically */
+}
+
+.moveset-header{
+  border-right: 2px solid rgba(128, 128, 128, 0.3); /* Light gray semi-transparent border */
+}
+
+
+/* Ensure images are properly centered */
+.moveset-row img {
+  max-width: 90px;
+  display: block;
+  margin: 0 auto; /* Center images horizontally */
+}
+
+/* Center the move images and their wrappers */
+.move-wrapper {
+  display: inline-block;
+  margin: 0 4px; /* Reduce margin from 8px to 4px */
+  vertical-align: middle;
+  text-align: center;
+}
+
+.move-img {
+  max-width: 50px;
+  max-height: 50px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(10, 10, 10, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.popup-content {
+  background-color: #000000;
+  font-weight: 700; /* try 600–700 for bolder */
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 850px; /* Increased width for additional images */
+  width: 90%;
+  color: white;
+  text-align: left;
+  font-size: 1.8em;
+  border: 2px solid #FFFFFF; /* ✨ thick solid white */
+  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 5);
+}
+
+/* Desktop popup styling */
+.popup-content {
+  padding: 30px;
+  font-size: 1.8em;
+  width: 90%;
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+}
+
+/* Popup table styles for desktop */
+.popup-table-container {
+  width: 85%;
+}
+
+.popup-table .item-col {
+  width: 25%;
+}
+
+.popup-table .rate-col {
+  width: 37.5%;
+}
+
+.item-img {
+  height: 60px;
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.popup-pokemon-img {
+  max-height: 100px;
+  margin-right: 10px;
+}
+
+.popup-move-container {
+  display: flex;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.popup-move-img {
+  max-height: 60px;
+}
+
+.popup-title {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+}
+
+/* Popup table styling */
+.popup-table-container {
+  width: 85%; /* Wider table */
+  margin: 0 auto;
+}
+
+.popup-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.popup-table td {
+  padding: 1px 0; /* Minimal vertical padding */
+  vertical-align: middle;
+}
+
+.popup-table th {
+  border-bottom: 1px solid #666;
+  font-weight: bold;
+  padding-bottom: 5px;
+  vertical-align: middle;
+}
+
+.popup-table .item-col {
+  width: 25%; /* Narrower item column */
+}
+
+.popup-table .rate-col {
+  width: 37.5%;
+}
+
+.item-img {
+  height: 60px; /* Maintain item image size */
+  image-rendering: crisp-edges;
+  margin: 0 auto;
+  display: block; /* Center images */
+  padding: 0; /* Remove padding */
+}
+
+.win-rate {
+  font-weight: bold;
+  transition: color 0.2s;
+  background: transparent;
+  white-space: nowrap;
+}
+
+/* More compact table row height */
+.popup-table tbody tr {
+  height: 60px; /* Slightly shorter height */
+}
+
+/* Style for move images in the table */
+.move-img {
+  max-width: 70px;
+  max-height: 70px;
+  margin: 0 auto;
+  display: block;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+/* Button for win rate - hover effect with blue, keep bold always */
+.view-items {
+  /*cursor: pointer;*/
+  font-size: 1.05em;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
