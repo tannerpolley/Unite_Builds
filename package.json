@@ -1,0 +1,24 @@
+{
+  "name": "unite_builds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "static/js/data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preview": "node scripts/screenshot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tannerpolley/Unite_Builds.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tannerpolley/Unite_Builds/issues"
+  },
+  "homepage": "https://github.com/tannerpolley/Unite_Builds#readme",
+  "dependencies": {
+    "puppeteer": "^24.9.0"
+  }
+}
