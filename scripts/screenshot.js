@@ -1,25 +1,29 @@
-// screenshot.js
-const path      = require('path');
 const puppeteer = require('puppeteer');
 
 ;(async () => {
   const browser = await puppeteer.launch({
-    // you can also pass the window-size here:
-    args: ['--window-size=1900,1080']
+    headless: true,
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      // optionally reduce memory pressure:
+      '--disable-dev-shm-usage'
+    ]
   });
-  const page    = await browser.newPage();
 
-  // explicitly set the viewport
+  const page = await browser.newPage();
   await page.setViewport({ width: 1900, height: 1080 });
-
   await page.goto(
     'https://tannerpolley.github.io/Unite_Builds/',
     { waitUntil: 'networkidle2' }
   );
-
-  const outPath = path.resolve(__dirname, 'preview.png');
-  await page.screenshot({ path: outPath });
-  console.log(`✅ Wrote ${outPath}`);
+  await page.evaluate(() => {
+  document.body.style.zoom = '1.0';
+});
+  const { setTimeout } = require('node:timers/promises');
+  await setTimeout(200);
+  await page.screenshot({ path: 'static/img/preview.png' });
   await browser.close();
+  console.log('✅ preview.png generated');
 })();
 
