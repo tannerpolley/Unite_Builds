@@ -6,6 +6,7 @@ body {
   padding: 0;
   overflow-x: auto; /* Allow scrolling if table is wider than viewport */
   min-width: 950px; /* Minimum width to prevent extreme squishing */
+  zoom: 0.75;
 }
 
 @media (max-width: 600px) {
