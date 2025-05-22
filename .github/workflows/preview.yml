@@ -1,22 +1,32 @@
 name: 📸 Update Preview Image
 
+# Give this workflow permission to write to the repo
+permissions:
+  contents: write
+
 on:
   push:
-    branches: [ main ]                # or master, whichever is your default
+    branches: [ main ]
     paths:
       - '**/*.html'
       - '**/*.css'
-      - '../../static/js/script.js'
-      - '../../static/css/style.css'
-      - '../../src/index.html'
+      - 'static/js/**'
+      - 'static/css/**'
+      - 'scripts/screenshot.js'
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+      # 1) Checkout the repo _with_ the GITHUB_TOKEN so pushes work
       - uses: actions/checkout@v3
+        with:
+          # persist-credentials=true is the default, but included here for clarity
+          persist-credentials: true
+          token: ${{ secrets.GITHUB_TOKEN }}
 
+      # 2) Install, generate the preview, etc.
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -28,10 +38,11 @@ jobs:
       - name: Generate preview.png
         run: npm run preview
 
-      - name: Commit & Push preview.png
+      # 3) Commit & push back the updated file
+      - name: Commit & push preview.png
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "actions@github.com"
-          git add preview.png
-          git diff --quiet && echo "No changes to commit" || git commit -m "ci: update preview.png"
-          git push
+          git add static/img/preview.png
+          git diff --quiet && echo "No changes to commit" \
+            || (git commit -m "ci: update preview.png" && git push)
