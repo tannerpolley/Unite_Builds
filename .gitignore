@@ -1,0 +1,16 @@
+cat <<EOF > .gitignore
+# Node dependencies
+/node_modules/
+
+# Python caches
+__pycache__/
+*.pyc
+
+# IDE settings
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+EOF
