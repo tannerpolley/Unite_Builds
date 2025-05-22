@@ -8,6 +8,55 @@ document.addEventListener("DOMContentLoaded", () => {
   const minPickRate = document.getElementById("minPickRate");
   const nameSearch = document.getElementById("nameSearch");
   const resetFilters = document.getElementById("resetFilters");
+
+
+  function getOrdinalSuffix(day) {
+    const j = day % 10,
+          k = day % 100;
+    if (j === 1 && k !== 11) return "st";
+    if (j === 2 && k !== 12) return "nd";
+    if (j === 3 && k !== 13) return "rd";
+    return "th";
+}
+
+    // utility to fetch a text file and trim any trailing newline
+  async function fetchText(path) {
+    const res = await fetch(path);
+    if (!res.ok) throw new Error(`Couldn’t load ${path}: ${res.status}`);
+    return (await res.text()).trim();
+  }
+
+  async function injectHeaderText() {
+    try {
+      const [rawDate, matchesRaw] = await Promise.all([
+        fetchText('date.txt'),
+        fetchText('matches.txt')
+      ]);
+      const d = new Date(rawDate);            // parse “2025-05-22” or “May 22, 2025”
+      const day   = d.getDate();
+      const month = d.toLocaleString('default',{ month: 'long' });
+      const year  = d.getFullYear();
+      const suffix = getOrdinalSuffix(day);
+      const formattedDate = `${month} ${day}${suffix}`;
+
+      const matches = Number(matchesRaw)
+                         .toLocaleString(undefined,{ maximumFractionDigits: 0 });
+
+      document.getElementById('header-text')
+        .textContent = `Data comes from Unite API as of ${formattedDate} with ${matches} total games analyzed. Currently only working on non-mobile devices.
+        Click on a moveset winrate to see details on specific battle item winrates and pickrates for that moveset`;
+    } catch(e) {
+      console.error(e);
+    }
+  }
+
+  // run it once the DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', injectHeaderText);
+  } else {
+    injectHeaderText();
+  }
+
   
   // Desktop-only mode - no mobile detection needed
   console.log("Desktop view mode active");
@@ -300,14 +349,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function renderRows(filteredItems) {
-    document.querySelectorAll(".moveset-row:not(.moveset-header)").forEach(e => e.remove());
-
-    // Remove any orange highlight from the last column
-    document.querySelectorAll(".moveset-header > div:last-child, .moveset-row > div:last-child").forEach(cell => {
-      cell.style.boxShadow = "none";
-      cell.style.backgroundColor = "transparent";
-      cell.style.border = "none";
-    });
+    const tableBody = document.querySelector('.table-row-group');
+    tableBody.innerHTML = ''; // Clear existing rows
 
     if (currentSort.column) {
       filteredItems.sort((a, b) => {
@@ -331,69 +374,47 @@ document.addEventListener("DOMContentLoaded", () => {
     updateSortArrows();
 
     filteredItems.forEach((entry, index) => {
-      const row = document.createElement("div");
-
-      // Set alternating row colors directly through inline styles
-      // Starting with lighter blue for the first row (index 0)
-      const rowBgColor = index % 2 === 0 ? "#3B4A6A" : "#1F2537";
-      row.className = "moveset-row";
-      row.style.backgroundColor = rowBgColor;
-
-      // Add a data attribute to remember original color for hover effects
-      row.dataset.originalBg = rowBgColor;
-
-      // Log to debug
-      console.log(`Row ${index}: Setting background color to ${rowBgColor}`);
+      const row = document.createElement('div');
+      row.className = 'table-row';
 
       const isActive = activeNameFilter === entry["Name"];
       const nameClass = isActive ? "filter-name active" : "filter-name";
-      const nameStyle = isActive ? "text-decoration: none !important;" : "";
 
       const isRoleActive = activeRoleFilters.includes(entry["Role"]);
       const roleClass = isRoleActive ? "filter-role active" : "filter-role";
-      const roleStyle = isRoleActive ? "text-decoration: none !important;" : "";
 
-      // Use the fixed middle point color calculation
       const winRate = parseFloat(entry["Win Rate"]);
       const winRateColor = getWinRateColor(winRate);
 
-      // Debug very close to 50% entries
-      if (Math.abs(winRate - 50) < 0.5) {
-        console.log(`VERY CLOSE TO 50%: ${entry.Name} at ${winRate.toFixed(2)}%, color: ${winRateColor}`);
-      }
-      // Debug slightly away from 50%
-      else if (Math.abs(winRate - 50) < 1.5) {
-        console.log(`SLIGHT DEVIATION: ${entry.Name} at ${winRate.toFixed(2)}%, color: ${winRateColor}`);
-      }
-      // Log extreme values
-      else if (winRate > 60) {
-        console.log(`HIGH RATE: ${entry.Name} at ${winRate.toFixed(2)}%, color: ${winRateColor}`);
-      }
-      else if (winRate < 40) {
-        console.log(`LOW RATE: ${entry.Name} at ${winRate.toFixed(2)}%, color: ${winRateColor}`);
-      }
-
       row.innerHTML = `
-        <div><img src="assets/${entry["Pokemon"]}" alt="${entry["Name"]}"></div>
-        <div><span class="${nameClass}" style="${nameStyle} text-decoration: none !important;" data-name="${entry["Name"]}">${entry["Name"]}</span></div>
-        <div><span class="${roleClass}" style="${roleStyle} text-decoration: none !important;" data-role="${entry["Role"]}">${entry["Role"]}</span></div>
-        <div>${entry["Move Set"]}</div>
-        <div class="moves-column">
+        <div class="table-cell"><img src="assets/${entry["Pokemon"]}" alt="${entry["Name"]}"></div>
+        <div class="table-cell"><span class="${nameClass}" data-name="${entry["Name"]}">${entry["Name"]}</span></div>
+        <div class="table-cell"><span class="${roleClass}" data-role="${entry["Role"]}">${entry["Role"]}</span></div>
+        <div class="table-cell">${entry["Move Set"]}</div>
+        <div class="table-cell">
           <span class="move-wrapper">${renderMoves(entry["Move 1"])}</span>
           <span class="move-wrapper">${renderMoves(entry["Move 2"])}</span>
         </div>
-        <div>
+        <div class="table-cell">
           <button class="view-items" data-index="${items.indexOf(entry)}" 
-                  style="color: ${winRateColor}; font-weight: bold; background: none; border: none; text-decoration: none !important;" 
+                  style="color: ${winRateColor}; font-weight: bold; background: none; border: none;" 
                   data-win-rate="${entry["Win Rate"]}">
             ${format(entry["Win Rate"])}
           </button>
         </div>
-        <div style="text-decoration: none !important;">${format(entry["Pick Rate"])}</div>
+        <div class="table-cell">${format(entry["Pick Rate"])}</div>
       `;
-      tableContainer.appendChild(row);
+
+      tableBody.appendChild(row);
     });
 
+    // Attach event handlers
+    attachEventHandlers();
+    syncFilterWidthToTable();
+  }
+
+  function attachEventHandlers() {
+    // View items button handlers
     document.querySelectorAll(".view-items").forEach(button => {
       // Add hover effect that ONLY changes text color
       button.addEventListener("mouseenter", () => {
@@ -444,54 +465,12 @@ document.addEventListener("DOMContentLoaded", () => {
           activeRoleFilters.push(clickedRole);
         }
 
-        // Update role checkboxes to match activeRoleFilters
-        roleFilters.forEach(filter => {
-          // Check if this filter should be checked
-          filter.checked = activeRoleFilters.includes(filter.value);
-
-          const roleOption = filter.closest('.role-option');
-          if (roleOption) {
-            if (filter.checked) {
-              roleOption.classList.add('active-role');
-
-              // Ensure no underline on the label within the role option
-              const roleLabel = roleOption.querySelector('.role-label');
-              if (roleLabel) {
-                roleLabel.style.textDecoration = "none !important";
-              }
-            } else {
-              roleOption.classList.remove('active-role');
-            }
-          }
-        });
-
+        updateRoleCheckboxes();
         renderRows(filterItems());
       });
     });
-
-    // Completely remove all hover effects and borders for rows and cells
-    document.querySelectorAll(".moveset-row:not(.moveset-header)").forEach(row => {
-      // Set border style to none to ensure no borders appear
-      row.style.border = "none";
-
-      // Also remove all cell borders
-      row.querySelectorAll("div").forEach(cell => {
-        cell.style.border = "none";
-        cell.style.boxShadow = "none";
-      });
-
-      // Remove any hover events that might change appearance
-      row.addEventListener("mouseenter", () => {
-        // Do nothing - no hover effects
-      });
-
-      row.addEventListener("mouseleave", () => {
-        // Do nothing - no hover effects
-      });
-    });
-
-    syncFilterWidthToTable(); // ✅ Ensure filter box matches width
   }
+
 
   function showPopup(entry) {
     // Create an array of items to sort
@@ -610,6 +589,33 @@ document.addEventListener("DOMContentLoaded", () => {
     renderRows(filterItems());
   });
   
+  // Function to update role checkboxes based on activeRoleFilters
+  function updateRoleCheckboxes() {
+    // Get all role checkboxes
+    const checkboxes = document.querySelectorAll('input[name="role"]');
+    
+    // Update each checkbox
+    checkboxes.forEach(checkbox => {
+      // Check if this role is in the activeRoleFilters array
+      const isActive = activeRoleFilters.includes(checkbox.value);
+      
+      // Set the checkbox state
+      checkbox.checked = isActive;
+      
+      // Update the role-option class
+      const roleOption = checkbox.closest('.role-option');
+      if (roleOption) {
+        if (isActive) {
+          roleOption.classList.add('active-role');
+        } else {
+          roleOption.classList.remove('active-role');
+        }
+      }
+    });
+    
+    console.log("Updated role checkboxes to match:", activeRoleFilters);
+  }
+  
   function filterItems() {
     // Split search query into individual terms and remove empty strings
     const searchTerms = nameSearch.value.toLowerCase().split(/\s+/).filter(term => term.length > 0);
@@ -668,7 +674,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
     function attachSortHandlers() {
-    document.querySelectorAll(".moveset-header div[data-sort]").forEach(div => {
+    document.querySelectorAll(".table-header-group .table-cell[data-sort]").forEach(div => {
       // Only process if we haven't already created the sort-text span
       if (!div.querySelector('.header-text')) {
         // Get the text content (excluding any spans)
@@ -720,7 +726,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateSortArrows() {
-    document.querySelectorAll(".moveset-header div[data-sort]").forEach(div => {
+    document.querySelectorAll(".table-header-group .table-cell[data-sort]").forEach(div => {
       const col = div.getAttribute("data-sort");
       const arrow = document.getElementById(`arrow-${col}`);
       if (arrow) {

@@ -10,13 +10,12 @@
 </head>
 <body>
   <div class="main-container">
-
     <div class="main-header">
-      <h1>Pokemon Unite Meta Moveset Viewer</h1>
+      <h1>Pokemon Unite Moveset Tierlist</h1>
+      <div id="header-text" class="subheading"></div>
     </div>
 
     <div id="filters">
-
       <input id="nameSearch" placeholder="Search Name or Moves..." />
 
       <div class="pick-rate-container">
@@ -49,25 +48,43 @@
       </div>
 
       <button id="resetFilters" class="reset-button">Reset</button>
-
     </div>
 
     <div id="moveset-table">
-      <div class="moveset-header moveset-row">
-        <div>Pokemon</div>
-        <div data-sort="Name">Name <span id="arrow-Name"></span></div>
-        <div>Role</div>
-        <div>Move Set</div>
-        <div>Moves</div>
-        <div data-sort="Win Rate">Win Rate <span id="arrow-Win Rate"></span></div>
-        <div data-sort="Pick Rate">Pick Rate <span id="arrow-Pick Rate"></span></div>
+      <!-- Column definitions -->
+      <div class="table-column-group">
+        <div class="table-column col-pokemon"></div>
+        <div class="table-column col-name"></div>
+        <div class="table-column col-role"></div>
+        <div class="table-column col-moveset"></div>
+        <div class="table-column col-moves"></div>
+        <div class="table-column col-winrate"></div>
+        <div class="table-column col-pickrate"></div>
       </div>
+
+      <!-- Header -->
+      <div class="table-header-group">
+        <div class="table-row">
+          <div class="table-cell">Pokemon</div>
+          <div class="table-cell" data-sort="Name">Name <span id="arrow-Name"></span></div>
+          <div class="table-cell">Role</div>
+          <div class="table-cell">Move Set</div>
+          <div class="table-cell">Moves</div>
+          <div class="table-cell" data-sort="Win Rate">Win Rate <span id="arrow-Win Rate"></span></div>
+          <div class="table-cell" data-sort="Pick Rate">Pick Rate <span id="arrow-Pick Rate"></span></div>
+        </div>
+      </div>
+
+      <!-- Body (will be filled by JavaScript) -->
+      <div class="table-row-group"></div>
     </div>
 
     <div id="popup" class="popup hidden">
       <div class="popup-content" id="popupContent"></div>
     </div>
-
   </div>
 </body>
 </html>
+
+
+

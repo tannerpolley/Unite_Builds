@@ -8,6 +8,18 @@ body {
   min-width: 950px; /* Minimum width to prevent extreme squishing */
 }
 
+@media (max-width: 600px) {
+  /* collapse multi-column into one */
+  .two-col { display: block; }
+  /* enlarge tap targets */
+  button, .btn {
+    padding: 0.75em 1.2em;
+    font-size: 1.1rem;
+  }
+  /* simplify nav: hide secondary links */
+  .nav-secondary { display: none; }
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
@@ -29,6 +41,14 @@ body {
   font-size: 3.5em;
   font-weight: 775;
   margin: auto;
+}
+
+.subheading {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: auto;
+  text-align: center;
+  white-space: pre-line; 
 }
 
 /* First, let's fix the script.js reference problem by updating your filters CSS */
@@ -197,92 +217,158 @@ body {
   cursor: pointer;
 }
 
+/* Table specific styles */
 #moveset-table {
+  font-weight: bold;
   display: table;
-  width: 100%;
+  width: 85%;
   border-collapse: collapse;
-  border-radius: 10px;
-  table-layout: fixed;
-  text-align: center;
-  border: 4px solid #FFFFFF;
+  border-radius: 5px;
+  border: 3px solid #FFFFFF;
   box-shadow: 0 0 2px 1px rgba(255, 255, 255, 5);
-  /* Add negative letter-spacing to bring columns slightly closer */
-  letter-spacing: -0.01em;
-}
+  table-layout: auto;
 
-.moveset-header {
-  display: table-row;
   background-color: #1F2537;
-  font-weight: 700;
-  font-size: 1.8em;
-  white-space: nowrap;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  transition: 0.2s ease;
-  position: sticky;
-  top: 2px;
-  z-index: 100;
-  border-collapse: collapse;
+  font-size: 1.6em; /* Increased base font size */
 }
 
+/* Header styles */
+.table-header-group {
+  display: table-header-group;
+  background-color: #3B4A6A;
+}
 
+/* Table cells in header */
+.table-header-group .table-cell {
+  font-weight: bold;
+  font-size: 1.1em;
+  border-bottom: 3px solid #ffffff;
+  padding: 8px 8px;
+  text-align: center;
+  min-height: 8px;
+}
 
+/* Only make the text in sortable headers have pointer cursor */
 .header-text {
   cursor: pointer;
-  user-select: text; /* Make text selectable */
-  color: white;
-  font-weight: bold;
-  font-size: 1em; /* Match parent size */
   display: inline-block;
-  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Make role text clickable */
+.filter-role {
+  cursor: pointer;
   transition: color 0.2s;
 }
 
-/* arrow size */
-.moveset-header span[id^="arrow-"] {
-  user-select: none;
-  font-size: 0.7em; /* Match existing arrow size */
+
+/* Remove hover from entire cell */
+.table-cell[data-sort] {
+  position: relative;
+}
+
+.table-cell[data-sort]:hover {
+  background-color: transparent; /* Remove background change on hover */
+}
+
+/* Style for sort arrows */
+[id^="arrow-"] {
+  margin-left: 6px;
   display: inline-block;
-  vertical-align: top; /* Align with text */
-  margin-left: 6px; /* Add space between text and arrow */
+  user-select: none;
 }
 
-.moveset-column {
-  display: table-column
-}
-
-
-/* Simple white borders for cell alignment */
-/* Additional styling to ensure content is centered */
-.moveset-row {
+/* Row styles */
+.table-row {
   display: table-row;
-  font-weight: 700;
-  font-size: 1.6em;
-  white-space: nowrap;
-  margin-bottom: 10px;
-  border-radius: 6px;
-  transition: 0.2s ease;
-  border: none; /* Remove border to reduce spacing */
-  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 5);
-  height: 95px; /* Set a consistent height for rows */
-  border-collapse: collapse; /* Ensure collapse behavior */
 }
 
-.moveset-row > div {
-  display: table-cell; /* Override any other display values */
-  justify-content: center;
-  align-items: center;
-  overflow-wrap: break-word;
-  text-align: center;
-  padding: 10px 1px;
-  overflow: visible; /* Ensure content isn't cut off */
-  vertical-align: middle; /* Center content vertically */
-  horiz-align: center; /* Center content vertically */
+/* Cell styles */
+.table-cell {
+  display: table-cell;
+  padding: 12px 8px; /* Increased padding */
+  vertical-align: middle;
+  text-align: center; /* Center all content */
 }
 
-.moveset-header{
-  border-right: 2px solid rgba(128, 128, 128, 0.3); /* Light gray semi-transparent border */
+
+/* Pokemon image cell */
+.table-cell img {
+  max-width: 85px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Move images */
+.move-wrapper {
+  display: inline-block;
+  margin: 0 4px;
+  vertical-align: middle;
+}
+
+.move-img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin: 0 auto;
+  /*display: block;*/
+}
+
+/* Alternating row colors */
+.table-row-group .table-row:nth-child(even) {
+  background-color: #3B4A6A;
+}
+
+.table-row-group .table-row:nth-child(odd) {
+  background-color: #1F2537;
+}
+
+/* Hover effect on rows */
+.table-row:hover {
+  background-color: #4B5A7A !important;
+}
+
+/* Name and role links */
+.filter-name, .filter-role {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Win rate and pick rate cells */
+.view-items {
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.view-items:hover {
+  transform: translateY(-2px);
+}
+
+/* Column definitions */
+.table-column-group {
+  display: table-column-group;
+}
+
+.table-column {
+  display: table-column;
+  /*border-left: .1px solid rgba(255, 255, 255, 0.3);*/
+  /*border-right: .1px solid rgba(255, 255, 255, 0.3);*/
+
+}
+
+/* Body */
+.table-row-group {
+  display: table-row-group;
 }
 
 
@@ -293,30 +379,12 @@ body {
   margin: 0 auto; /* Center images horizontally */
 }
 
-/* Center the move images and their wrappers */
-.move-wrapper {
-  display: inline-block;
-  margin: 0 4px; /* Reduce margin from 8px to 4px */
-  vertical-align: middle;
-  text-align: center;
-}
-
-.move-img {
-  max-width: 50px;
-  max-height: 50px;
-  object-fit: contain;
-  margin: 0 auto;
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .popup {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-
   background-color: rgba(10, 10, 10, 0.6);
   display: flex;
   justify-content: center;
@@ -329,8 +397,8 @@ body {
   font-weight: 700; /* try 600–700 for bolder */
   padding: 30px;
   border-radius: 12px;
-  max-width: 850px; /* Increased width for additional images */
-  width: 90%;
+  max-width: 800px; /* Increased width for additional images */
+  width: 80%;
   color: white;
   text-align: left;
   font-size: 1.8em;
@@ -387,7 +455,7 @@ body {
 }
 
 .popup-move-img {
-  max-height: 60px;
+  max-height: 90px;
 }
 
 .popup-title {
@@ -403,10 +471,13 @@ body {
 }
 
 .popup-table {
-  width: 100%;
+  width: 70%;
   border-collapse: collapse;
   text-align: center;
   margin: 0 auto;
+  border-radius: 3px;
+  border: 3px solid #FFFFFF; /* ✨ thick solid white */
+  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 5);
 }
 
 .popup-table td {
@@ -415,7 +486,7 @@ body {
 }
 
 .popup-table th {
-  border-bottom: 1px solid #666;
+  border-bottom: 3px solid #ffffff;
   font-weight: bold;
   padding-bottom: 5px;
   vertical-align: middle;
@@ -430,7 +501,7 @@ body {
 }
 
 .item-img {
-  height: 60px; /* Maintain item image size */
+  height: 90px; /* Maintain item image size */
   image-rendering: crisp-edges;
   margin: 0 auto;
   display: block; /* Center images */
@@ -444,27 +515,7 @@ body {
   white-space: nowrap;
 }
 
-/* More compact table row height */
-.popup-table tbody tr {
-  height: 60px; /* Slightly shorter height */
-}
-
-/* Style for move images in the table */
-.move-img {
-  max-width: 70px;
-  max-height: 70px;
-  margin: 0 auto;
-  display: block;
-}
 
 .popup.hidden {
   display: none;
-}
-
-/* Button for win rate - hover effect with blue, keep bold always */
-.view-items {
-  /*cursor: pointer;*/
-  font-size: 1.05em;
-  border-radius: 4px;
-  letter-spacing: 0.5px;
 }

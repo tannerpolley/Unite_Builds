@@ -4021,13 +4021,13 @@ const items = [
     "Win Rate": 48.46,
     "Pick Rate": 6.1,
     "Item 1": "images/Battle_Items/Eject Button.png",
-    "Win Rate 1": 0.0,
+    "Win Rate 1": 48.86,
     "Pick Rate 1": 91.03,
     "Item 2": "images/Battle_Items/X Speed.png",
-    "Win Rate 2": 0.0,
+    "Win Rate 2": 47.51,
     "Pick Rate 2": 5.65,
     "Item 3": "images/Battle_Items/Potion.png",
-    "Win Rate 3": 0.0,
+    "Win Rate 3": 40.42,
     "Pick Rate 3": 1.26
   },
   {
