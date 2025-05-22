@@ -22,7 +22,7 @@ const puppeteer = require('puppeteer');
 });
   const { setTimeout } = require('node:timers/promises');
   await setTimeout(200);
-  await page.screenshot({ path: 'static/img/preview.png' });
+  await page.screenshot({ path: 'preview.png' });
   await browser.close();
   console.log('✅ preview.png generated');
 })();
