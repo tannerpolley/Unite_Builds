@@ -9,18 +9,6 @@ body {
   zoom: 0.67;
 }
 
-@media (max-width: 600px) {
-  /* collapse multi-column into one */
-  .two-col { display: block; }
-  /* enlarge tap targets */
-  button, .btn {
-    padding: 0.75em 1.2em;
-    font-size: 1.1rem;
-  }
-  /* simplify nav: hide secondary links */
-  .nav-secondary { display: none; }
-}
-
 .main-container {
   display: flex;
   flex-direction: column;

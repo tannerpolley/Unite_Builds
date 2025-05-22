@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
   async function injectHeaderText() {
     try {
       const [rawDate, matchesRaw] = await Promise.all([
-        fetchText('date.txt'),
-        fetchText('matches.txt')
+        fetchText('data/txt/date.txt'),
+        fetchText('data/txt/matches.txt')
       ]);
       const d = new Date(rawDate);            // parse “2025-05-22” or “May 22, 2025”
       const day   = d.getDate();
@@ -319,9 +319,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderMoves(moves) {
     if (Array.isArray(moves)) {
-      return moves.map(m => `<img src="assets/${m}" alt="${m}" class="move-img">`).join('');
+      return moves.map(m => `<img src="static/img/${m}" alt="${m}" class="move-img">`).join('');
     }
-    return `<img src="assets/${moves}" alt="${moves}" class="move-img">`;
+    return `<img src="static/img/${moves}" alt="${moves}" class="move-img">`;
   }
 
   function syncFilterWidthToTable() {
@@ -387,7 +387,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const winRateColor = getWinRateColor(winRate);
 
       row.innerHTML = `
-        <div class="table-cell"><img src="assets/${entry["Pokemon"]}" alt="${entry["Name"]}"></div>
+        <div class="table-cell"><img src="static/img/${entry["Pokemon"]}" alt="${entry["Name"]}"></div>
         <div class="table-cell"><span class="${nameClass}" data-name="${entry["Name"]}">${entry["Name"]}</span></div>
         <div class="table-cell"><span class="${roleClass}" data-role="${entry["Role"]}">${entry["Role"]}</span></div>
         <div class="table-cell">${entry["Move Set"]}</div>
@@ -505,11 +505,11 @@ document.addEventListener("DOMContentLoaded", () => {
     
     popupContent.innerHTML = `
       <div class="popup-header">
-        <img src="assets/${entry["Pokemon"]}" alt="${entry["Name"]}" class="popup-pokemon-img">
+        <img src="static/img/${entry["Pokemon"]}" alt="${entry["Name"]}" class="popup-pokemon-img">
         <h3 class="popup-title">${entry["Name"]} – ${entry["Move Set"]}</h3>
         <div class="popup-move-container">
-          <img src="assets/${move1Img}" alt="Move 1" class="popup-move-img">
-          <img src="assets/${move2Img}" alt="Move 2" class="popup-move-img">
+          <img src="static/img/${move1Img}" alt="Move 1" class="popup-move-img">
+          <img src="static/img/${move2Img}" alt="Move 2" class="popup-move-img">
         </div>
       </div>
       <p style="text-align: center; margin-top: 0; margin-bottom: 15px;">
@@ -534,7 +534,7 @@ document.addEventListener("DOMContentLoaded", () => {
               return `
               <tr style="background-color: ${rowBgColor}; height: 60px;">
                 <td class="item-col" style="padding: 0;">
-                  <img src="assets/${item.item}" class="item-img" alt="Item ${index+1}" style="max-width: 100%;">
+                  <img src="static/img/${item.item}" class="item-img" alt="Item ${index+1}" style="max-width: 100%;">
                 </td>
                 <td class="rate-col" style="padding-left: 5px; padding-right: 5px;">
                   <span class="win-rate" style="color: ${itemWinRateColor}; display: block;"

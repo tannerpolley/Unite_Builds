@@ -1,0 +1,37 @@
+name: 📸 Update Preview Image
+
+on:
+  push:
+    branches: [ main ]                # or master, whichever is your default
+    paths:
+      - '**/*.html'
+      - '**/*.css'
+      - '../../static/js/script.js'
+      - '../../static/css/style.css'
+      - '../../src/index.html'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate preview.png
+        run: npm run preview
+
+      - name: Commit & Push preview.png
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "actions@github.com"
+          git add preview.png
+          git diff --quiet && echo "No changes to commit" || git commit -m "ci: update preview.png"
+          git push

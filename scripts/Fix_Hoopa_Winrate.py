@@ -313,10 +313,10 @@ def fix_hoopa_winrate(df_hoopa, total_pick_rate, total_win_rate, pick_rate_dict,
         #
         move_sets.append(moveset)
         move_1_i, move_2_i = moveset.split('/')
-        move_1.append('images/Moves/Hoopa' + ' - ' + move_1_i + '.png')
-        move_2.append('images/Moves/Hoopa' + ' - ' + move_2_i + '.png')
+        move_1.append('Moves/Hoopa' + ' - ' + move_1_i + '.png')
+        move_2.append('Moves/Hoopa' + ' - ' + move_2_i + '.png')
         name.append('Hoopa')
-        Pokemon.append('images/Pokemon/Hoopa.png')
+        Pokemon.append('Pokemon/Hoopa.png')
         Role.append('Supporter')
 
     df_hoopa_items['True Win Rate'] = true_win_rate
@@ -324,7 +324,6 @@ def fix_hoopa_winrate(df_hoopa, total_pick_rate, total_win_rate, pick_rate_dict,
     df_hoopa_items['True Wins'] = true_wins
     df_hoopa_items['True Picks'] = true_picks
 
-    # print(df_hoopa_items.to_string())
 
     hoopa_dic_2['True Win Rate'] = []
     hoopa_dic_2['True Pick Rate'] = []

@@ -2,18 +2,14 @@ from bs4 import BeautifulSoup
 import os
 import json
 import pandas as pd
-import requests
 import numpy as np
-import gspread as gc
-import re
-from urllib.parse import unquote
-from Fix_Hoopa_Winrate import fix_hoopa_winrate, fix_comfey_winrate
+from scripts.Fix_Hoopa_Winrate import fix_hoopa_winrate, fix_comfey_winrate
 import ast
 from pprint import pprint
 
 # Gather overall Win Rate and Pick Rate data from main meta page
 
-with open('Unite API _ Pokémon Unite Meta Tierlist.html', 'r') as fp:
+with open('../data/html/Unite API _ Pokémon Unite Meta Tierlist.html', 'r') as fp:
     soup = BeautifulSoup(fp, "html.parser")
 
     date, matches = soup.find_all('div', class_="simpleStat_stat__o0Y7q")
@@ -22,10 +18,10 @@ with open('Unite API _ Pokémon Unite Meta Tierlist.html', 'r') as fp:
     matches = float(
         matches.find('p', class_="mantine-focus-auto simpleStat_count__dG_xB m_b6d8b162 mantine-Text-root").text)
 
-    with open("date.txt", "w") as f:
+    with open("../data/txt/date.txt", "w") as f:
         f.write(date)
 
-    with open("matches.txt", "w") as f:
+    with open("../data/txt/matches.txt", "w") as f:
         f.write(str(matches))
 
     class_str = "sc-d5d8a548-1 jXtpKR"
@@ -98,11 +94,11 @@ for k, v in win_rate_dict.items():
 
 df = pd.DataFrame(combined_dict, index=names)
 
-df.to_csv('Unite_Meta.csv')
+df.to_csv('../data/csv/Unite_Meta.csv')
 #
 # #%%
 #
-df = pd.read_csv('Unite_Meta.csv', index_col=0)
+df = pd.read_csv('../data/csv/Unite_Meta.csv', index_col=0)
 
 win_rate_dict = {}
 pick_rate_dict = {}
@@ -112,10 +108,10 @@ for i, row in df.iterrows():
     pick_rate_dict[i] = row['Pick Rate']
     ban_rate_dict[i] = row['Ban Rate']
 
-with open("roles.json") as f_in:
+with open("../data/roles.json") as f_in:
     role_dict = json.load(f_in)
 
-with open("battle_items.json") as f_in:
+with open("../data/battle_items.json") as f_in:
     battle_items_dict = json.load(f_in)
 
 print(win_rate_dict)
@@ -166,7 +162,7 @@ for file in files:
                     else:
                         Pokemon_name_2 = Pokemon_name
 
-                    move_1_pic_file = 'images/Moves/' + Pokemon_name_2 + ' - ' + move_1_name + '.png'
+                    move_1_pic_file = 'Moves/' + Pokemon_name_2 + ' - ' + move_1_name + '.png'
 
                 elif j == 3:
                     move_2_name = text
@@ -176,7 +172,7 @@ for file in files:
                     else:
                         Pokemon_name_2 = Pokemon_name
 
-                    move_2_pic_file = 'images/Moves/' + Pokemon_name_2 + ' - ' + move_2_name + '.png'
+                    move_2_pic_file = 'Moves/' + Pokemon_name_2 + ' - ' + move_2_name + '.png'
 
             # Contains each seperate 1 of 3 blocks for pick rate, win rate, and item name
             item_set_list_dict = []
@@ -224,7 +220,7 @@ for file in files:
                 Pokemon_name_2 = 'Urshifu_Rapid'
             elif move_1_name == 'Wicked Blow':
                 Pokemon_name_2 = 'Urshifu_Single'
-            build_i['Pokemon'] = 'images/Pokemon/' + Pokemon_name_2 + '.png'
+            build_i['Pokemon'] = 'Pokemon/' + Pokemon_name_2 + '.png'
 
             if Pokemon_name == 'Mew' and i == 3:
 
@@ -310,8 +306,6 @@ for file in files:
                 item_dictionary['Remainder']['Pick Rate'].append((picks - move_set_picks) / picks * 100)
                 item_dictionary['Remainder']['Win Rate'].append((wins - move_set_wins) / (picks - move_set_picks) * 100)
 
-
-                pprint(item_dictionary)
                 total_dictionary = {
                     'Eject Button': {
                         'Picks': [],
@@ -348,11 +342,7 @@ for file in files:
                     total_dictionary[item]['Picks'] = sum(item_dictionary[item]['Picks'])
                     total_dictionary[item]['Wins'] = sum(item_dictionary[item]['Wins'])
                     total_dictionary[item]['Pick Rate'] = total_dictionary[item]['Picks'] /mew_matches*100
-                    total_dictionary[item]['Win Rate'] = np.array(total_dictionary[item]['Wins']) / (np.array(total_dictionary[item]['Picks']))*100 + 1e-5
-
-
-
-                pprint(total_dictionary)
+                    total_dictionary[item]['Win Rate'] = np.array(total_dictionary[item]['Wins']) / (np.array(total_dictionary[item]['Picks']) + 1e-5 )*100
 
                 del total_dictionary['Remainder']
                 item_pick_rate_dict = {}
@@ -375,14 +365,14 @@ for file in files:
                     item_set_list_dict_new.append(item_set_dict)
 
 
-                move_1_file = ['images/Moves/' + 'Mew' + ' - ' + 'Solar Beam' + '.png',
-                               'images/Moves/' + 'Mew' + ' - ' + 'Surf' + '.png',
-                               'images/Moves/' + 'Mew' + ' - ' + 'Electro Ball' + '.png']
-                move_2_file = ['images/Moves/' + 'Mew' + ' - ' + 'Light Screen' + '.png',
-                               'images/Moves/' + 'Mew' + ' - ' + 'Agility' + '.png',
-                               'images/Moves/' + 'Mew' + ' - ' + 'Coaching' + '.png']
+                move_1_file = ['Moves/' + 'Mew' + ' - ' + 'Solar Beam' + '.png',
+                               'Moves/' + 'Mew' + ' - ' + 'Surf' + '.png',
+                               'Moves/' + 'Mew' + ' - ' + 'Electro Ball' + '.png']
+                move_2_file = ['Moves/' + 'Mew' + ' - ' + 'Light Screen' + '.png',
+                               'Moves/' + 'Mew' + ' - ' + 'Agility' + '.png',
+                               'Moves/' + 'Mew' + ' - ' + 'Coaching' + '.png']
 
-                build_i = {'Name': Pokemon_name, 'Pokemon': 'images/Pokemon/' + Pokemon_name + '.png',
+                build_i = {'Name': Pokemon_name, 'Pokemon': 'Pokemon/' + Pokemon_name + '.png',
                            'Role': role_dict[Pokemon_name],
                            'Pick Rate': pick_rate_dict[Pokemon_name],
                            'Win Rate': win_rate_dict[Pokemon_name], 'Move Set': 'All',
@@ -394,10 +384,10 @@ for file in files:
                 continue
 
             elif Pokemon_name == 'Blaziken' and i == 1:
-                move_1_file = ['images/Moves/' + 'Blaziken' + ' - ' + 'Overheat' + '.png',
-                               'images/Moves/' + 'Blaziken' + ' - ' + 'Fire Punch' + '.png']
-                move_2_file = ['images/Moves/' + 'Blaziken' + ' - ' + 'Blaze Kick' + '.png',
-                               'images/Moves/' + 'Blaziken' + ' - ' + 'Focus Blast' + '.png']
+                move_1_file = ['Moves/' + 'Blaziken' + ' - ' + 'Overheat' + '.png',
+                               'Moves/' + 'Blaziken' + ' - ' + 'Fire Punch' + '.png']
+                move_2_file = ['Moves/' + 'Blaziken' + ' - ' + 'Blaze Kick' + '.png',
+                               'Moves/' + 'Blaziken' + ' - ' + 'Focus Blast' + '.png']
 
                 pick_rate_0 = all_movesets[-1]['Pick Rate']
                 win_rate_0 = all_movesets[-1]['Win Rate']
@@ -433,7 +423,7 @@ for file in files:
                     item_set_list_dict_new.append(item_set_dict)
 
 
-                build_i = {'Name': Pokemon_name, 'Pokemon': 'images/Pokemon/' + Pokemon_name + '.png',
+                build_i = {'Name': Pokemon_name, 'Pokemon': 'Pokemon/' + Pokemon_name + '.png',
                            'Role': role_dict[Pokemon_name], 'Pick Rate': pick_rate_dict[Pokemon_name],
                            'Win Rate': win_rate_dict[Pokemon_name], 'Move Set': 'All', 'Move 1': move_1_file,
                            'Move 2': move_2_file, 'Battle Items': item_set_list_dict_new}
@@ -502,12 +492,12 @@ pd.options.display.float_format = '{:.2f}%'.format
 df['Pick Rate'] = df['Pick Rate'].round(2)
 df['Win Rate'] = df['Win Rate'].round(2)
 
-df.to_csv('all_movesets.csv',
+df.to_csv('../data/all_movesets.csv',
           index=False,
           quoting=1,
           )
 
-df = pd.read_csv('all_movesets.csv')
+df = pd.read_csv('../data/all_movesets.csv')
 
 
 df['Battle Items'] = df['Battle Items'].apply(ast.literal_eval)
@@ -527,10 +517,10 @@ df_final = pd.concat([
 ], axis=1)
 
 for i, row in df_final.iterrows():
-    df_final.loc[i, 'Battle Item'] = f'images/Battle_Items/{row["Battle Item"]}.png'
+    df_final.loc[i, 'Battle Item'] = f'Battle_Items/{row["Battle Item"]}.png'
 
 # df = df[df['Pick Rate'] >= .75]
-df_final.to_csv('all_movesets.csv',
+df_final.to_csv("../data/all_movesets.csv",
           index=False,
           quoting=1,
           )
@@ -546,7 +536,7 @@ def ensure_list(cell):
 
 
 # Load and process the CSV
-df = pd.read_csv("all_movesets.csv")
+df = pd.read_csv("../data/all_movesets.csv")
 df["Move 1"] = df["Move 1"].apply(ensure_list)
 df["Move 2"] = df["Move 2"].apply(ensure_list)
 
@@ -567,7 +557,7 @@ for (name, moveset), group in df.groupby(group_keys, sort=False):
     final_data.append(moveset_entry)
 
 # Export to data.js
-with open("data.js", "w", encoding="utf-8") as f:
+with open("../static/js/data.js", "w", encoding="utf-8") as f:
     f.write("const items = ")
     json.dump(final_data, f, indent=2)
     f.write(";")
