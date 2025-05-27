@@ -28,6 +28,8 @@ def fix_hoopa_winrate(df_hoopa, total_pick_rate, total_win_rate, pick_rate_dict,
 
     battle_item_nested_dict = defaultdict(lambda: defaultdict(dict))
 
+    items = ['Eject Button', 'Potion', 'X Speed', 'X Attack']
+
     hoopa_dic = {'Move Set': [], 'Win Rate': [], 'Pick Rate': [], 'Win Count': [], 'Pick Count': []}
     for i, row in df_hoopa.iterrows():
         hoopa_dic['Win Rate'].append(row['Win Rate'])
@@ -41,7 +43,10 @@ def fix_hoopa_winrate(df_hoopa, total_pick_rate, total_win_rate, pick_rate_dict,
             battle_item_nested_dict[row['Move Set']][v[0]][k[1]] = v[1]
             battle_item_nested_dict[row['Move Set']][v[0]][k[2]] = v[2]
 
-
+            for item in items:
+                if item not in battle_item_nested_dict[row['Move Set']].keys():
+                    battle_item_nested_dict[row['Move Set']][item][k[1]] = 00.00
+                    battle_item_nested_dict[row['Move Set']][item][k[2]] = 00.00
 
 
     def dictify(obj):
@@ -53,55 +58,16 @@ def fix_hoopa_winrate(df_hoopa, total_pick_rate, total_win_rate, pick_rate_dict,
             return {k: dictify(v) for k, v in obj.items()}
         return obj
 
+
     # suppose your nested default dict is called `nested_dd`
     new_dict = dictify(battle_item_nested_dict)
-    movesets = hoopa_dic['Move Set']
-
-    items = ['Eject Button', 'Potion', 'X Speed']
-
-
-
-    battle_item_dict = {
-        'Hyperspace Fury/Hyperspace Fury': {
-            'Eject Button': {
-                'Pick Rate': 30.5, 'Win Rate': 71.3},
-            'Potion': {
-                'Pick Rate': 6.26, 'Win Rate': 68.12},
-            'X Speed': {
-                'Pick Rate': 51.94, 'Win Rate': 72.72}
-        },
-        'Phantom Force/Hyperspace Hole': {
-            'Eject Button': {
-                'Pick Rate': 35.84, 'Win Rate': 46.49},
-            'Potion': {
-                'Pick Rate': 5.49, 'Win Rate': 38.87},
-            'X Speed': {
-                'Pick Rate': 44.58, 'Win Rate': 44.17}
-        },
-        'Phantom Force/Trick': {
-            'Eject Button': {
-                'Pick Rate': 27.0, 'Win Rate': 51.03},
-            'Potion': {
-                'Pick Rate': 6.77, 'Win Rate': 48.18},
-            'X Speed': {
-                'Pick Rate': 60.4, 'Win Rate': 50.43}
-        },
-        'Shadow Ball/Trick': {
-            'Eject Button': {
-                'Pick Rate': 23.07, 'Win Rate': 48.27},
-            'Potion': {
-                'Pick Rate': 12.83, 'Win Rate': 39.93},
-            'X Speed': {
-                'Pick Rate': 43.61, 'Win Rate': 49.57}
-        }
-    }
 
     # pprint(new_dict)
 
+    movesets = hoopa_dic['Move Set']
+
     hoopa_dic['Pick Rate'].append(missing_pick_rate)
     hoopa_dic['Move Set'].append(missing_moveset)
-
-
 
     all_moves_pick_rate = np.array(hoopa_dic['Pick Rate'])
 
@@ -119,7 +85,6 @@ def fix_hoopa_winrate(df_hoopa, total_pick_rate, total_win_rate, pick_rate_dict,
 
     hoopa_dic['Win Rate'].append(hoopa_dic['Win Count'][-1] * 100 / hoopa_dic['Pick Count'][-1])
 
-
     hoopa_dic['Move Set'].append('Total')
     hoopa_dic['Win Count'].append(sum(hoopa_dic['Win Count']))
     hoopa_dic['Pick Count'].append(sum(hoopa_dic['Pick Count']))
@@ -129,15 +94,11 @@ def fix_hoopa_winrate(df_hoopa, total_pick_rate, total_win_rate, pick_rate_dict,
     df_hoopa_all = pd.DataFrame(hoopa_dic)
     # print(df_hoopa_all.to_string())
 
-
     movesets.remove(missing_moveset)
     movesets.remove('Total')
 
-
-
     for moveset in movesets:
         for item in items:
-
             new_dict[moveset][item]['Picks'] = new_dict[moveset][item]['Pick Rate'] / 100 * float(df_hoopa_all[df_hoopa_all['Move Set'] == moveset]['Pick Count'].to_numpy())
             new_dict[moveset][item]['Wins'] = new_dict[moveset][item]['Win Rate'] / 100 * new_dict[moveset][item]['Picks']
 
@@ -165,12 +126,12 @@ def fix_hoopa_winrate(df_hoopa, total_pick_rate, total_win_rate, pick_rate_dict,
     for i, (k, v) in enumerate(new_dict.items()):
         v['Random Item'] = random_item_dict_list[i]
 
-    items = ['Eject Button', 'Potion', 'X Speed', 'Random Item']
+    items = ['Eject Button', 'Potion', 'X Speed', 'X Attack', 'Random Item']
     missing_dict_list = []
     avg = 0
+    
     for item in items:
         missing_dict = {}
-
         avg_pick_rate = sum([new_dict[moveset][item]['Pick Rate'] for moveset in movesets]) / 4
         ratio_of_wins = 0
         for moveset in movesets:
@@ -185,10 +146,11 @@ def fix_hoopa_winrate(df_hoopa, total_pick_rate, total_win_rate, pick_rate_dict,
         missing_dict['Picks'] = picks
         missing_dict['Wins'] = wins
         missing_dict['Pick Rate'] = picks/total_picks*100
-        missing_dict['Win Rate'] = wins/picks*100
+        missing_dict['Win Rate'] = wins/picks*100 + 1e-5
         missing_dict_list.append(missing_dict)
 
     new_dict[missing_moveset] = {items[i]: missing_dict_list[i] for i in range(len(items))}
+
 
     # pprint(new_dict)
 
@@ -223,13 +185,13 @@ def fix_hoopa_winrate(df_hoopa, total_pick_rate, total_win_rate, pick_rate_dict,
         hoopa_dic_2['Picks'].append(Σ_picks)
         hoopa_dic_2['Wins'].append(Σ_wins)
         hoopa_dic_2['Pick Rate'].append(Σ_picks/total_hoopa_matches*100)
-        hoopa_dic_2['Win Rate'].append(Σ_wins/Σ_picks*100)
+        hoopa_dic_2['Win Rate'].append(Σ_wins/Σ_picks*100 + 1e-5)
 
     hoopa_dic_2['Move Set'].append('Total')
     hoopa_dic_2['Picks'].append(sum(hoopa_dic_2['Picks']))
     hoopa_dic_2['Wins'].append(sum(hoopa_dic_2['Wins']))
     hoopa_dic_2['Pick Rate'].append(hoopa_dic_2['Picks'][-1] / total_matches * 100)
-    hoopa_dic_2['Win Rate'].append(hoopa_dic_2['Wins'][-1] / hoopa_dic_2['Picks'][-1] * 100)
+    hoopa_dic_2['Win Rate'].append(hoopa_dic_2['Wins'][-1] / hoopa_dic_2['Picks'][-1] * 100 + 1e-5)
 
     df_hoopa_all_2 = pd.DataFrame(hoopa_dic_2)
 
@@ -301,9 +263,12 @@ def fix_hoopa_winrate(df_hoopa, total_pick_rate, total_win_rate, pick_rate_dict,
                 Σ_true_picks += item_picks + pick_share_item
                 win_share_item = item_pick_rate_per_moveset * HH_item_wins
                 true_wins.append(item_wins + win_share_item)
-                true_win_rate.append((item_wins + win_share_item)/(item_picks + pick_share_item)*100)
+                if (item_picks + pick_share_item) == 0:
+                    true_win_rate.append(0.0)
+                else:
+                    true_win_rate.append((item_wins + win_share_item)/(item_picks + pick_share_item)*100)
 
-        for i in range(4):
+        for i in range(5):
             if moveset == HH_moveset:
                 continue
             else:
@@ -323,7 +288,6 @@ def fix_hoopa_winrate(df_hoopa, total_pick_rate, total_win_rate, pick_rate_dict,
     df_hoopa_items['True Pick Rate'] = true_pick_rate
     df_hoopa_items['True Wins'] = true_wins
     df_hoopa_items['True Picks'] = true_picks
-
 
     hoopa_dic_2['True Win Rate'] = []
     hoopa_dic_2['True Pick Rate'] = []
@@ -357,14 +321,23 @@ def fix_hoopa_winrate(df_hoopa, total_pick_rate, total_win_rate, pick_rate_dict,
             if item == 'Random Item':
                 continue
             else:
-                item_dictionary = {'Battle Item': item, 'Pick Rate': round(
-                    df_hoopa_items[df_hoopa_items['Move Set'] == moveset + ' - ' + item]['True Pick Rate'].to_numpy()[
-                        0], 2), 'Win Rate': round(
-                    df_hoopa_items[df_hoopa_items['Move Set'] == moveset + ' - ' + item]['True Win Rate'].to_numpy()[0],
-                    2)}
+                item_dictionary = {'Battle Item': item,
+                                   'Pick Rate': round(df_hoopa_items[df_hoopa_items['Move Set'] == moveset + ' - ' + item]['True Pick Rate'].to_numpy()[0], 2),
+                                   'Win Rate': round(df_hoopa_items[df_hoopa_items['Move Set'] == moveset + ' - ' + item]['True Win Rate'].to_numpy()[0], 2)}
+                if item_dictionary['Pick Rate'] == 0.0 and moveset != 'Hyperspace Fury/Hyperspace Fury':
+                    continue
                 battle_item_list_dict.append(item_dictionary)
+
+        if moveset == missing_moveset:
+            find_lowest = {}
+            for dictionary in battle_item_list_dict:
+                find_lowest[dictionary['Battle Item']] = dictionary['Pick Rate']
+
+            item_to_remove = min(find_lowest, key=find_lowest.get)
+
+            battle_item_list_dict = [d for d in battle_item_list_dict if d["Battle Item"] != item_to_remove]
+            
         battle_item_list_dict_2.append(battle_item_list_dict)
-    # print(battle_item_list_dict)
 
     #
     new_dic = {"Name": name,
@@ -376,7 +349,11 @@ def fix_hoopa_winrate(df_hoopa, total_pick_rate, total_win_rate, pick_rate_dict,
                "Move 2": move_2,
                "Battle Items": battle_item_list_dict_2
                }
+
+
+
     df = pd.DataFrame(new_dic)
+    # print(df)
     df.drop(df[df['Move Set'] == 'Hyperspace Fury/Hyperspace Fury'].index, inplace=True)
 
     # print(df.to_string())

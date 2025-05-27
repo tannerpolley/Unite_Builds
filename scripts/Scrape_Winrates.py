@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 from scripts.Fix_Hoopa_Winrate import fix_hoopa_winrate, fix_comfey_winrate
 import ast
+np.set_printoptions(legacy='1.25')
 from pprint import pprint
 
 # Gather overall Win Rate and Pick Rate data from main meta page
@@ -114,12 +115,11 @@ with open("../data/roles.json") as f_in:
 with open("../data/battle_items.json") as f_in:
     battle_items_dict = json.load(f_in)
 
-print(win_rate_dict)
 #
 # #%%
 #
 #%%
-path = r'C:\Users\Tanner\Documents\git\Pokemon_Unite\Pokemon_Sites'
+path = r'C:\Users\Tanner\Documents\git\Unite_Builds\data\html\Pokemon_Sites'
 
 files = os.listdir(path)
 
@@ -492,19 +492,18 @@ pd.options.display.float_format = '{:.2f}%'.format
 df['Pick Rate'] = df['Pick Rate'].round(2)
 df['Win Rate'] = df['Win Rate'].round(2)
 
-df.to_csv('../data/all_movesets.csv',
+df.to_csv('../data/csv/all_movesets.csv',
           index=False,
           quoting=1,
           )
 
-df = pd.read_csv('../data/all_movesets.csv')
+df = pd.read_csv('../data/csv/all_movesets.csv')
 
 
 df['Battle Items'] = df['Battle Items'].apply(ast.literal_eval)
 
 # 3. Explode so each dict becomes its own row
 df_exploded = df.explode('Battle Items').reset_index(drop=True)
-
 
 
 # 4. Normalize those dicts into separate columns
@@ -520,7 +519,7 @@ for i, row in df_final.iterrows():
     df_final.loc[i, 'Battle Item'] = f'Battle_Items/{row["Battle Item"]}.png'
 
 # df = df[df['Pick Rate'] >= .75]
-df_final.to_csv("../data/all_movesets.csv",
+df_final.to_csv("../data/csv/all_movesets.csv",
           index=False,
           quoting=1,
           )
@@ -536,7 +535,7 @@ def ensure_list(cell):
 
 
 # Load and process the CSV
-df = pd.read_csv("../data/all_movesets.csv")
+df = pd.read_csv("../data/csv/all_movesets.csv")
 df["Move 1"] = df["Move 1"].apply(ensure_list)
 df["Move 2"] = df["Move 2"].apply(ensure_list)
 
