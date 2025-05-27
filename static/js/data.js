@@ -810,93 +810,93 @@ const items = [
     "Name": "Ceruledge",
     "Pokemon": "Pokemon/Ceruledge.png",
     "Role": "All-Rounder",
-    "Move Set": "Overheat/Imprison",
+    "Move Set": "Psycho Cut/Flame Charge",
     "Move 1": [
-      "Moves/Ceruledge - Overheat.png"
+      "Moves/Ceruledge - Psycho Cut.png"
     ],
     "Move 2": [
-      "Moves/Ceruledge - Imprison.png"
+      "Moves/Ceruledge - Flame Charge.png"
     ],
-    "Win Rate": 51.95,
-    "Pick Rate": 3.5,
-    "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 52.95,
-    "Pick Rate 1": 79.08,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 48.06,
-    "Pick Rate 2": 17.71,
-    "Item 3": "Battle_Items/Shedinja Doll.png",
-    "Win Rate 3": 64.52,
-    "Pick Rate 3": 1.42
+    "Win Rate": 50.53,
+    "Pick Rate": 5.51,
+    "Item 1": "Battle_Items/X Attack.png",
+    "Win Rate 1": 53.45,
+    "Pick Rate 1": 35.43,
+    "Item 2": "Battle_Items/Eject Button.png",
+    "Win Rate 2": 50.09,
+    "Pick Rate 2": 28.13,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 46.71,
+    "Pick Rate 3": 14.4
   },
   {
     "Name": "Ceruledge",
     "Pokemon": "Pokemon/Ceruledge.png",
     "Role": "All-Rounder",
-    "Move Set": "Flamethrower/Imprison",
+    "Move Set": "Psycho Cut/Phantom Force",
     "Move 1": [
-      "Moves/Ceruledge - Flamethrower.png"
+      "Moves/Ceruledge - Psycho Cut.png"
     ],
     "Move 2": [
-      "Moves/Ceruledge - Imprison.png"
+      "Moves/Ceruledge - Phantom Force.png"
     ],
-    "Win Rate": 48.51,
-    "Pick Rate": 2.79,
+    "Win Rate": 48.89,
+    "Pick Rate": 4.04,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 48.47,
-    "Pick Rate 1": 78.97,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 49.66,
-    "Pick Rate 2": 16.9,
-    "Item 3": "Battle_Items/Shedinja Doll.png",
-    "Win Rate 3": 38.1,
-    "Pick Rate 3": 1.21
+    "Win Rate 1": 47.47,
+    "Pick Rate 1": 39.73,
+    "Item 2": "Battle_Items/X Attack.png",
+    "Win Rate 2": 51.01,
+    "Pick Rate 2": 29.31,
+    "Item 3": "Battle_Items/Full Heal.png",
+    "Win Rate 3": 53.98,
+    "Pick Rate 3": 11.41
   },
   {
     "Name": "Ceruledge",
     "Pokemon": "Pokemon/Ceruledge.png",
     "Role": "All-Rounder",
-    "Move Set": "Flamethrower/Poltergeist",
+    "Move Set": "Bitter Blade/Phantom Force",
     "Move 1": [
-      "Moves/Ceruledge - Flamethrower.png"
+      "Moves/Ceruledge - Bitter Blade.png"
     ],
     "Move 2": [
-      "Moves/Ceruledge - Poltergeist.png"
+      "Moves/Ceruledge - Phantom Force.png"
     ],
-    "Win Rate": 49.11,
-    "Pick Rate": 2.62,
+    "Win Rate": 45.27,
+    "Pick Rate": 1.59,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 50.85,
-    "Pick Rate 1": 64.39,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 45.92,
-    "Pick Rate 2": 27.67,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 53.97,
-    "Pick Rate 3": 3.85
+    "Win Rate 1": 45.3,
+    "Pick Rate 1": 52.42,
+    "Item 2": "Battle_Items/X Attack.png",
+    "Win Rate 2": 44.69,
+    "Pick Rate 2": 15.89,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 44.44,
+    "Pick Rate 3": 10.79
   },
   {
     "Name": "Ceruledge",
     "Pokemon": "Pokemon/Ceruledge.png",
     "Role": "All-Rounder",
-    "Move Set": "Overheat/Poltergeist",
+    "Move Set": "Bitter Blade/Flame Charge",
     "Move 1": [
-      "Moves/Ceruledge - Overheat.png"
+      "Moves/Ceruledge - Bitter Blade.png"
     ],
     "Move 2": [
-      "Moves/Ceruledge - Poltergeist.png"
+      "Moves/Ceruledge - Flame Charge.png"
     ],
-    "Win Rate": 48.55,
-    "Pick Rate": 2.43,
+    "Win Rate": 50.35,
+    "Pick Rate": 0.2,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.35,
-    "Pick Rate 1": 60.87,
+    "Win Rate 1": 48.72,
+    "Pick Rate 1": 27.66,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 49.25,
-    "Pick Rate 2": 30.9,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 39.13,
-    "Pick Rate 3": 3.03
+    "Win Rate 2": 48.48,
+    "Pick Rate 2": 23.4,
+    "Item 3": "Battle_Items/X Attack.png",
+    "Win Rate 3": 54.39,
+    "Pick Rate 3": 20.21
   },
   {
     "Name": "Chandelure",
