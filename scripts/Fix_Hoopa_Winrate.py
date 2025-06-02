@@ -141,9 +141,9 @@ def fix_hoopa_winrate(df_hoopa, total_pick_rate, total_win_rate, pick_rate_dict,
         avg += avg_pick_rate
         total_picks = float(df_hoopa_all[df_hoopa_all['Move Set'] == missing_moveset]['Pick Count'].to_numpy())
         total_wins = float(df_hoopa_all[df_hoopa_all['Move Set'] == missing_moveset]['Win Count'].to_numpy())
-        picks = avg_pick_rate/100*total_picks
+        picks = avg_pick_rate/100*total_picks  + 1e-5
         wins = ratio_of_wins/100*total_wins
-        missing_dict['Picks'] = picks
+        missing_dict['Picks'] = picks 
         missing_dict['Wins'] = wins
         missing_dict['Pick Rate'] = picks/total_picks*100
         missing_dict['Win Rate'] = wins/picks*100 + 1e-5

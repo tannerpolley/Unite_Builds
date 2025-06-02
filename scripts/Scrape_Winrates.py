@@ -122,7 +122,7 @@ with open("../data/battle_items.json") as f_in:
 path = r'C:\Users\Tanner\Documents\git\Unite_Builds\data\html\Pokemon_Sites'
 
 files = os.listdir(path)
-
+print(len(files))
 #
 # #%%
 all_movesets = []
