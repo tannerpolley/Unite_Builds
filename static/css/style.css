@@ -37,7 +37,7 @@ body {
   font-weight: 600;
   margin: auto;
   text-align: center;
-  white-space: pre-line; 
+  white-space: pre-line;
 }
 
 /* First, let's fix the script.js reference problem by updating your filters CSS */

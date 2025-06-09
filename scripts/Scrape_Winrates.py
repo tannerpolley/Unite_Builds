@@ -122,7 +122,11 @@ with open("../data/battle_items.json") as f_in:
 path = r'C:\Users\Tanner\Documents\git\Unite_Builds\data\html\Pokemon_Sites'
 
 files = os.listdir(path)
-print(len(files))
+for file in files:
+    if file[35:-5] in list(role_dict.keys()) is False:
+        print(len(files), len(list(role_dict.keys())))
+
+
 #
 # #%%
 all_movesets = []
