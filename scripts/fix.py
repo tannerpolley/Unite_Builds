@@ -1,34 +1,24 @@
+import os
 import requests
 
-# # Path to the folder with files you want to rename
-# folder_path = r"C:\Users\Tanner\Documents\git\Pokemon_Unite\static\images\Pokemon"
-#
-# # Iterate over all the files in the folder
-# for filename in os.listdir(folder_path):
-#     # Check if the file name starts with "t_square_"
-#     if filename.startswith("t_Square_"):
-#         # Remove the "t_square_" part from the file name
-#         new_filename = filename.replace("t_Square_", "")
-#
-#         # Get the full path of the current and new file
-#         old_file = os.path.join(folder_path, filename)
-#         new_file = os.path.join(folder_path, new_filename)
-#
-#         # Rename the file
-#         os.rename(old_file, new_file)
-#         print(f'Renamed: {filename} -> {new_filename}')
-move_name = 'Electro Ball'
-Pokemon_name = 'Alolan Raichu'
-Battle_Item_name = 'Goal Hacker'
-img_url = 'https://d275t8dp8rxb42.cloudfront.net/items/battle/Goal+Hacker.png'
-img_response = requests.get(img_url)
-name_pic_file = 'static/images/Pokemon/' + Pokemon_name + '.png'
-battle_item_pic_file = 'static/images/Battle_Items/' + Battle_Item_name + '.png'
-move_1_pic_file = 'static/images/Battle_Items/' + Battle_Item_name + '.png'
-with open(move_1_pic_file, 'wb') as f:
-    print(move_1_pic_file)
-    f.write(img_response.content)
+move_name   = 'Decorate'
+pokemon     = 'Alcremie'
+img_url     = 'https://d275t8dp8rxb42.cloudfront.net/skills/Alcremie/Decorate.png'
 
-# with open(battle_item_pic_file, 'wb') as f:
-#     print(battle_item_pic_file)
-#     f.write(img_response.content)
+# 1. Download the image
+resp = requests.get(img_url)
+resp.raise_for_status()   # optional: raise if download failed
+
+# 2. Build the output path
+output_dir  = os.path.join('static', 'img', 'Moves')
+filename    = f"{pokemon} - {move_name}.png"
+output_path = os.path.join(output_dir, filename)
+
+# 3. Ensure the directory exists
+os.makedirs(output_dir, exist_ok=True)
+
+# 4. Write the file
+with open(output_path, 'wb') as f:
+    f.write(resp.content)
+
+print(f"Downloaded and saved to: {output_path}")

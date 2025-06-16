@@ -528,8 +528,6 @@ df_final.to_csv("../data/csv/all_movesets.csv",
           quoting=1,
           )
 
-
-
 def ensure_list(cell):
     try:
         parsed = eval(cell)
