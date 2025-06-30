@@ -20,8 +20,8 @@ path = r'C:\Users\Tanner\Documents\git\Unite_Builds\data\html\Pokemon_Sites'
 with open("../data/roles.json") as f_in:
     role_dict = json.load(f_in)
 
-new_week = False
-get_pages = False
+new_week = True
+get_pages = True
 
 if new_week:
 
@@ -48,14 +48,14 @@ if get_pages:
         time.sleep(.3)
 
         pyautogui.press('enter')
-        time.sleep(2)
+        time.sleep(1)
         pyautogui.hotkey('ctrl', 's')       # open Save As dialog
         time.sleep(1)
         pyperclip.copy(fname)
         pyautogui.hotkey('ctrl', 'v')
-        time.sleep(2)
+        time.sleep(1)
         pyautogui.press('enter')
-        time.sleep(2)
+        time.sleep(1)
 
 
 
