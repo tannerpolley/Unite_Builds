@@ -20,8 +20,8 @@ path = r'C:\Users\Tanner\Documents\git\Unite_Builds\data\html\Pokemon_Sites'
 with open("../data/roles.json") as f_in:
     role_dict = json.load(f_in)
 
-new_week = True
-get_pages = True
+new_week = False
+get_pages = False
 
 if new_week:
 
@@ -43,19 +43,19 @@ if get_pages:
         fname = r"Unite API _ Pokémon Unite Meta for " + pokemon
         pyperclip.copy(url)
         pyautogui.hotkey('ctrl', 'l')
-        time.sleep(.3)
+        time.sleep(.5)
         pyautogui.hotkey('ctrl', 'v')
-        time.sleep(.3)
+        time.sleep(.5)
 
         pyautogui.press('enter')
-        time.sleep(1)
+        time.sleep(1.0)
         pyautogui.hotkey('ctrl', 's')       # open Save As dialog
-        time.sleep(1)
+        time.sleep(1.0)
         pyperclip.copy(fname)
         pyautogui.hotkey('ctrl', 'v')
-        time.sleep(1)
+        time.sleep(1.0)
         pyautogui.press('enter')
-        time.sleep(1)
+        time.sleep(3.5)
 
 
 
