@@ -1,9 +1,10 @@
 import os
 import requests
 
-move_name   = 'Decorate'
-pokemon     = 'Alcremie'
+move_name   = 'Luster Purge'
+pokemon     = 'Latios'
 img_url     = 'https://d275t8dp8rxb42.cloudfront.net/skills/Alcremie/Decorate.png'
+
 
 # 1. Download the image
 resp = requests.get(img_url)
