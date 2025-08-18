@@ -8,7 +8,7 @@ import json
 import glob
 
 
-def wait_for_downloads(path, pokemon, timeout=30, poll=0.1):
+def wait_for_downloads(path, pokemon, timeout=90, poll=0.1):
     """
     Block until no .crdownload files remain in `folder`,
     or raise if `timeout` seconds elapse.

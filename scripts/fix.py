@@ -2,8 +2,8 @@ import os
 import requests
 
 move_name   = 'Luster Purge'
-pokemon     = 'Latios'
-img_url     = 'https://d275t8dp8rxb42.cloudfront.net/skills/Alcremie/Decorate.png'
+pokemon     = 'Latias'
+img_url     = 'https://uniteapi.dev/_next/image?url=%2FSprites%2Ft_Skill_Latias_S12.png&w=64&q=75'
 
 
 # 1. Download the image
