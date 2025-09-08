@@ -34,7 +34,7 @@ get_pages = True
 if new_week:
 
     files = [f.unlink() for f in Path(path).glob("*") if f.is_file() or f.is_dir()]
-    # Path(r"C:\Users\Tanner\Documents\git\Unite_Builds\data\html\Unite API _ Pokémon Unite Meta Tierlist.html").unlink()
+    Path(r"C:\Users\Tanner\Documents\git\Unite_Builds\data\html\Unite API _ Pokémon Unite Meta Tierlist.html").unlink()
 
 
 else:
