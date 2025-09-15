@@ -134,6 +134,8 @@ all_movesets = []
 for file in files:
     Pokemon_name = file[35:-5]
 
+    print(Pokemon_name)
+
     with open(path + '\\' + file, 'r') as fp:
 
         soup = BeautifulSoup(fp, "html.parser")
