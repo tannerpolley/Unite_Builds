@@ -538,7 +538,7 @@ def ensure_list(cell):
         return [cell]
 
 
-# Load and process the CSV
+# Load and process the CSV bleh
 df = pd.read_csv("../data/csv/all_movesets.csv")
 df["Move 1"] = df["Move 1"].apply(ensure_list)
 df["Move 2"] = df["Move 2"].apply(ensure_list)
