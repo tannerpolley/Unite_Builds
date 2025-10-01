@@ -48,9 +48,12 @@ with open('../data/html/Unite API _ Pokémon Unite Meta Tierlist.html', 'r') as 
                                                          win_rate_block.find_all('img'),
                                                          ban_rate_block.find_all('img')
                                                          ):
+
+
         pick_rate_name.append(pick_mon_name['src'][39:-14])
         win_rate_name.append(win_mon_name['src'][39:-14])
         ban_rate_name.append(ban_mon_name['src'][39:-14])
+
 
 pick_rate_dict = {}
 for k, v in zip(pick_rate_name, pick_rate_num):
@@ -89,6 +92,8 @@ for k, v in win_rate_dict.items():
         k3 = 'Meowscarada'
     elif k == 'Rapidash':
         k3 = 'Galarian Rapidash'
+    elif k == 'MEGALucario':
+        k3 = 'Mega Lucario'
     else:
         k3 = k
     names.append(k3)
@@ -115,6 +120,8 @@ with open("../data/roles.json") as f_in:
 with open("../data/battle_items.json") as f_in:
     battle_items_dict = json.load(f_in)
 
+
+
 #
 # #%%
 #
@@ -135,6 +142,25 @@ for file in files:
     Pokemon_name = file[35:-5]
 
     print(Pokemon_name)
+
+    if Pokemon_name == 'Mega Lucari':
+        Pokemon_name = "Mega Lucario"
+        Pokemon_name_2 = Pokemon_name
+        move_1_name = 'Power-Up Punch'
+        move_2_name = 'Close Combat'
+        move_1_pic_file = 'Moves/' + Pokemon_name_2 + ' - ' + move_1_name + '.png'
+        move_2_pic_file = 'Moves/' + Pokemon_name_2 + ' - ' + move_2_name + '.png'
+
+        build_i = {'Name': Pokemon_name, 'Pokemon': 'Pokemon/' + Pokemon_name + '.png',
+                   'Role': role_dict[Pokemon_name],
+                   'Pick Rate': pick_rate_dict[Pokemon_name],
+                   'Win Rate': win_rate_dict[Pokemon_name], 'Move Set': move_1_name + '/' + move_2_name,
+                   'Move 1': move_1_pic_file, 'Move 2': move_2_pic_file, 'Battle Items': {}}
+
+        all_movesets.append(build_i)
+
+        continue
+
 
     with open(path + '\\' + file, 'r') as fp:
 
@@ -190,7 +216,6 @@ for file in files:
                 # Contains both the pick rate and win rate for each item
                 text = column.find('p', class_='sc-6d6ea15e-3 hxGuyl').text
                 pick_rate, win_rate = column.find_all('p', class_='sc-6d6ea15e-3 LHyXa')
-                # print(pick_rate)
 
                 img = column.find('img')
 
@@ -209,11 +234,6 @@ for file in files:
                 }
                 item_set_list_dict.append(item_set_dict)
 
-            # item_set_line_1 = f'{item_names[0]:>15}: {item_pick_rates[0]:05.2f} % | {item_win_rates[0]:05.2f} %'
-            # item_set_line_2 = f'{item_names[1]:>15}: {item_pick_rates[1]:05.2f} % | {item_win_rates[1]:05.2f} %'
-            # item_set_line_3 = f'{item_names[2]:>15}: {item_pick_rates[2]:05.2f} % | {item_win_rates[2]:05.2f} %'
-            # combined_string = "<br>".join([item_set_line_1, item_set_line_2, item_set_line_3])
-
             if Pokemon_name != 'Mew' or Pokemon_name != 'Blaziken':
                 build_i['Move Set'] = move_1_name + '/' + move_2_name
                 build_i['Move 1'] = move_1_pic_file
@@ -229,7 +249,6 @@ for file in files:
             build_i['Pokemon'] = 'Pokemon/' + Pokemon_name_2 + '.png'
 
             if Pokemon_name == 'Mew' and i == 3:
-
 
                 item_dictionary = {
                     'Eject Button': {
@@ -266,30 +285,28 @@ for file in files:
                 item_set_list_dict_new = []
 
                 pick_rates = []
-                for i in [-3, -2, -1]:
-                    pick_rate = all_movesets[i]['Pick Rate']
+                for k in [-3, -2, -1]:
+                    pick_rate = all_movesets[k]['Pick Rate']
                     pick_rates.append(pick_rate / pick_rate_dict[Pokemon_name]*100)
-                    win_rate = all_movesets[i]['Win Rate']
+                    win_rate = all_movesets[k]['Win Rate']
                     picks = pick_rate/100 * matches
                     wins = picks * win_rate/100
-                    item_set_list_dict_i = all_movesets[i]['Battle Items']
+                    item_set_list_dict_i = all_movesets[k]['Battle Items']
                     move_set_picks = 0
                     move_set_wins = 0
-                    for j in range(3):
-                        item = item_set_list_dict_i[j]['Battle Item']
-                        item_dictionary[item]['Pick Rate'].append(item_set_list_dict_i[j]['Pick Rate'])
-                        item_dictionary[item]['Picks'].append(item_set_list_dict_i[j]['Pick Rate']/100 * picks)
-                        move_set_picks += item_set_list_dict_i[j]['Pick Rate']/100 * picks
-                        item_dictionary[item]['Win Rate'].append(item_set_list_dict_i[j]['Win Rate'])
-                        item_dictionary[item]['Wins'].append(item_set_list_dict_i[j]['Pick Rate']/100 * picks * item_set_list_dict_i[j]['Win Rate']/100)
-                        move_set_wins += item_set_list_dict_i[j]['Pick Rate']/100 * picks * item_set_list_dict_i[j]['Win Rate']/100
+                    for l in range(3):
+                        item = item_set_list_dict_i[l]['Battle Item']
+                        item_dictionary[item]['Pick Rate'].append(item_set_list_dict_i[l]['Pick Rate'])
+                        item_dictionary[item]['Picks'].append(item_set_list_dict_i[l]['Pick Rate']/100 * picks)
+                        move_set_picks += item_set_list_dict_i[l]['Pick Rate']/100 * picks
+                        item_dictionary[item]['Win Rate'].append(item_set_list_dict_i[l]['Win Rate'])
+                        item_dictionary[item]['Wins'].append(item_set_list_dict_i[l]['Pick Rate']/100 * picks * item_set_list_dict_i[l]['Win Rate']/100)
+                        move_set_wins += item_set_list_dict_i[l]['Pick Rate']/100 * picks * item_set_list_dict_i[l]['Win Rate']/100
 
                     item_dictionary['Remainder']['Picks'].append(picks - move_set_picks)
                     item_dictionary['Remainder']['Wins'].append((wins - move_set_wins))
                     item_dictionary['Remainder']['Pick Rate'].append((picks - move_set_picks)/picks*100)
                     item_dictionary['Remainder']['Win Rate'].append((wins - move_set_wins)/(picks - move_set_picks)*100)
-
-
 
                 pick_rate = build_i['Pick Rate']
                 pick_rates.append(pick_rate / pick_rate_dict[Pokemon_name] * 100)
@@ -298,14 +315,14 @@ for file in files:
                 wins = picks * win_rate / 100
                 move_set_picks = 0
                 move_set_wins = 0
-                for j in range(3):
-                    item = item_set_list_dict[j]['Battle Item']
-                    item_dictionary[item]['Pick Rate'].append(item_set_list_dict[j]['Pick Rate'])
-                    item_dictionary[item]['Picks'].append(item_set_list_dict[j]['Pick Rate']/100 * picks)
-                    move_set_picks += item_set_list_dict[j]['Pick Rate']/100 * picks
-                    item_dictionary[item]['Win Rate'].append(item_set_list_dict[j]['Win Rate'])
-                    item_dictionary[item]['Wins'].append(item_set_list_dict[j]['Pick Rate']/100 * picks * item_set_list_dict[j]['Win Rate']/100)
-                    move_set_wins += item_set_list_dict[j]['Pick Rate']/100 * picks * item_set_list_dict[j]['Win Rate']/100
+                for k in range(3):
+                    item = item_set_list_dict[k]['Battle Item']
+                    item_dictionary[item]['Pick Rate'].append(item_set_list_dict[k]['Pick Rate'])
+                    item_dictionary[item]['Picks'].append(item_set_list_dict[k]['Pick Rate']/100 * picks)
+                    move_set_picks += item_set_list_dict[k]['Pick Rate']/100 * picks
+                    item_dictionary[item]['Win Rate'].append(item_set_list_dict[k]['Win Rate'])
+                    item_dictionary[item]['Wins'].append(item_set_list_dict[k]['Pick Rate']/100 * picks * item_set_list_dict[k]['Win Rate']/100)
+                    move_set_wins += item_set_list_dict[k]['Pick Rate']/100 * picks * item_set_list_dict[k]['Win Rate']/100
 
                 item_dictionary['Remainder']['Picks'].append(picks - move_set_picks)
                 item_dictionary['Remainder']['Wins'].append((wins - move_set_wins))
@@ -370,7 +387,6 @@ for file in files:
                     }
                     item_set_list_dict_new.append(item_set_dict)
 
-
                 move_1_file = ['Moves/' + 'Mew' + ' - ' + 'Solar Beam' + '.png',
                                'Moves/' + 'Mew' + ' - ' + 'Surf' + '.png',
                                'Moves/' + 'Mew' + ' - ' + 'Electro Ball' + '.png']
@@ -403,23 +419,23 @@ for file in files:
                 picks_1 = pick_rate_1 * matches
                 item_set_list_dict_1 = item_set_list_dict
                 item_set_list_dict_new = []
-                for i in range(len(item_set_list_dict_0)):
-                    item = item_set_list_dict_0[i]['Battle Item']
-                    pick_rate_item_0 = item_set_list_dict_0[i]['Pick Rate']
+                for k in range(len(item_set_list_dict_0)):
+                    item = item_set_list_dict_0[k]['Battle Item']
+                    pick_rate_item_0 = item_set_list_dict_0[k]['Pick Rate']
                     picks_item_0 = pick_rate_item_0 * picks_0
-                    win_rate_item_0 = item_set_list_dict_0[i]['Win Rate']
+                    win_rate_item_0 = item_set_list_dict_0[k]['Win Rate']
                     wins_item_0 = picks_item_0 * win_rate_0
 
-                    pick_rate_item_1 = item_set_list_dict_1[i]['Pick Rate']
+                    pick_rate_item_1 = item_set_list_dict_1[k]['Pick Rate']
                     picks_item_1 = pick_rate_item_1 * picks_1
-                    win_rate_item_1 = item_set_list_dict_1[i]['Win Rate']
+                    win_rate_item_1 = item_set_list_dict_1[k]['Win Rate']
                     wins_item_1 = picks_item_1 * win_rate_item_1
 
                     picks_item_total = picks_item_0 + picks_item_1
                     wins_item_total = wins_item_0 + wins_item_1
 
-                    item_set_list_dict[i]['Pick Rate'] = picks_item_total / (picks_0 + picks_1)
-                    item_set_list_dict[i]['Win Rate'] = wins_item_total / picks_item_total * 100
+                    item_set_list_dict[k]['Pick Rate'] = picks_item_total / (picks_0 + picks_1)
+                    item_set_list_dict[k]['Win Rate'] = wins_item_total / picks_item_total * 100
 
                     item_set_dict = {
                         'Battle Item': item,
@@ -427,7 +443,6 @@ for file in files:
                         'Win Rate': round(float(wins_item_total / picks_item_total),2),
                     }
                     item_set_list_dict_new.append(item_set_dict)
-
 
                 build_i = {'Name': Pokemon_name, 'Pokemon': 'Pokemon/' + Pokemon_name + '.png',
                            'Role': role_dict[Pokemon_name], 'Pick Rate': pick_rate_dict[Pokemon_name],
@@ -442,6 +457,7 @@ for file in files:
             #     continue
 
             all_movesets.append(build_i)
+
 
 # #%%
 #
