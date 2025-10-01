@@ -140,7 +140,7 @@ all_movesets = []
 
 for file in files:
     Pokemon_name = file[35:-5]
-
+    #
     print(Pokemon_name)
 
     if Pokemon_name == 'Mega Lucari':
