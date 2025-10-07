@@ -28,7 +28,7 @@ path = r'C:\Users\Tanner\Documents\git\Unite_Builds\data\html\Pokemon_Sites'
 with open("../data/roles.json") as f_in:
     role_dict = json.load(f_in)
 
-new_week = False
+new_week = True
 get_pages = True
 
 if new_week:
@@ -47,25 +47,25 @@ names = [name.lower().replace(".", "") for name in names]
 short_rest = .5
 
 if get_pages:
-    # time.sleep(3)
-    # pyautogui.hotkey('ctrl', 'l')
-    # time.sleep(short_rest)
-    # url = r'https://uniteapi.dev/meta'
-    # pyperclip.copy(url)
-    # pyautogui.hotkey('ctrl', 'v')
-    # time.sleep(short_rest)
-    # pyautogui.press('enter')
-    # time.sleep(short_rest)
-    # pyautogui.hotkey('ctrl', 's')  # open Save As dialog
-    # time.sleep(short_rest)
-    # pyautogui.hotkey('alt', 'n')
-    # time.sleep(short_rest)
-    # fname = r"C:\Users\Tanner\Documents\git\Unite_Builds\data\html\Unite API _ Pokémon Unite Meta Tierlist.html"
-    # pyperclip.copy(fname)
-    # pyautogui.hotkey('ctrl', 'v')
-    # time.sleep(short_rest)
-    # pyautogui.press('enter')
-    # wait_for_downloads(fname, "Main Meta Page")
+    time.sleep(3)
+    pyautogui.hotkey('ctrl', 'l')
+    time.sleep(short_rest)
+    url = r'https://uniteapi.dev/meta'
+    pyperclip.copy(url)
+    pyautogui.hotkey('ctrl', 'v')
+    time.sleep(short_rest)
+    pyautogui.press('enter')
+    time.sleep(short_rest)
+    pyautogui.hotkey('ctrl', 's')  # open Save As dialog
+    time.sleep(short_rest)
+    pyautogui.hotkey('alt', 'n')
+    time.sleep(short_rest)
+    fname = r"C:\Users\Tanner\Documents\git\Unite_Builds\data\html\Unite API _ Pokémon Unite Meta Tierlist.html"
+    pyperclip.copy(fname)
+    pyautogui.hotkey('ctrl', 'v')
+    time.sleep(short_rest)
+    pyautogui.press('enter')
+    wait_for_downloads(fname, "Main Meta Page")
     
     for name, pokemon in zip(names, pokemons):
         if name == 'scyther':
@@ -75,10 +75,10 @@ if get_pages:
             fname = os.path.join(path, f"Unite API _ Pokémon Unite Meta for {pokemon}.txt")
             np.savetxt(fname, np.array([]))
             time.sleep(short_rest / 2)
-            break
+            continue
         else:
             print(pokemon)
-            continue
+
 
 
         url = r'https://uniteapi.dev/meta/pokemon-unite-meta-for-' + name
