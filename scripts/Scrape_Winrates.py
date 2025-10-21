@@ -269,6 +269,12 @@ for file in files:
                         'Picks': [],
                         'Wins': [],
                     },
+                    'Full Heal': {
+                        'Pick Rate': [],
+                        'Win Rate': [],
+                        'Picks': [],
+                        'Wins': [],
+                    },
                     'X Attack': {
                         'Pick Rate': [],
                         'Win Rate': [],
