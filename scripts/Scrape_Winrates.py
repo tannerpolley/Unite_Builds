@@ -3,10 +3,10 @@ import os
 import json
 import pandas as pd
 import numpy as np
-from scripts.Fix_Hoopa_Winrate import fix_hoopa_winrate, fix_comfey_winrate
-import ast
+from scripts.Extra_Functions import fix_special_cases, organize_df
+
+
 np.set_printoptions(legacy='1.25')
-from pprint import pprint
 
 # Gather overall Win Rate and Pick Rate data from main meta page
 
@@ -48,12 +48,9 @@ with open('../data/html/Unite API _ Pokémon Unite Meta Tierlist.html', 'r') as 
                                                          win_rate_block.find_all('img'),
                                                          ban_rate_block.find_all('img')
                                                          ):
-
-
         pick_rate_name.append(pick_mon_name['src'][39:-14])
         win_rate_name.append(win_mon_name['src'][39:-14])
         ban_rate_name.append(ban_mon_name['src'][39:-14])
-
 
 pick_rate_dict = {}
 for k, v in zip(pick_rate_name, pick_rate_num):
@@ -94,6 +91,8 @@ for k, v in win_rate_dict.items():
         k3 = 'Galarian Rapidash'
     elif k == 'MEGALucario':
         k3 = 'Mega Lucario'
+    elif k == 'CharizardX':
+        k3 = 'Mega Charizard X'
     else:
         k3 = k
     names.append(k3)
@@ -120,8 +119,6 @@ with open("../data/roles.json") as f_in:
 with open("../data/battle_items.json") as f_in:
     battle_items_dict = json.load(f_in)
 
-
-
 #
 # #%%
 #
@@ -133,456 +130,97 @@ for file in files:
     if file[35:-5] in list(role_dict.keys()) is False:
         print(len(files), len(list(role_dict.keys())))
 
-
 #
 # #%%
-all_movesets = []
+movesets = []
 
 for file in files:
     Pokemon_name = file[35:-5]
     #
     print(Pokemon_name)
 
-    if Pokemon_name == 'Mega Lucari':
-        Pokemon_name = "Mega Lucario"
-        Pokemon_name_2 = Pokemon_name
-        move_1_name = 'Power-Up Punch'
-        move_2_name = 'Close Combat'
-        move_1_pic_file = 'Moves/' + Pokemon_name_2 + ' - ' + move_1_name + '.png'
-        move_2_pic_file = 'Moves/' + Pokemon_name_2 + ' - ' + move_2_name + '.png'
+    if Pokemon_name == 'Mega Charizard ':
+        Pokemon_name = "Mega Charizard X"
+        move_1_name = 'Fire Punch'
+        move_2_name = 'Flare Blitz'
+        move_1_pic_file = 'Moves/' + Pokemon_name + ' - ' + move_1_name + '.png'
+        move_2_pic_file = 'Moves/' + Pokemon_name + ' - ' + move_2_name + '.png'
 
-        build_i = {'Name': Pokemon_name, 'Pokemon': 'Pokemon/' + Pokemon_name + '.png',
+        moveset_i = {'Name': Pokemon_name, 'Pokemon': 'Pokemon/' + Pokemon_name + '.png',
                    'Role': role_dict[Pokemon_name],
                    'Pick Rate': pick_rate_dict[Pokemon_name],
                    'Win Rate': win_rate_dict[Pokemon_name], 'Move Set': move_1_name + '/' + move_2_name,
                    'Move 1': move_1_pic_file, 'Move 2': move_2_pic_file, 'Battle Items': {}}
 
-        all_movesets.append(build_i)
+        movesets.append(moveset_i)
 
         continue
-
 
     with open(path + '\\' + file, 'r') as fp:
 
         soup = BeautifulSoup(fp, "html.parser")
 
-        builds = []
-        # Contains the moveset block
-        for i, build_block in enumerate(soup.find_all('div', class_='sc-a9315c2e-0 dNgHcB')):
-            build_i = {'Name': Pokemon_name, 'Role': role_dict[Pokemon_name]}
+        # Gets all the rows of the existing movesets for the current pokemon
+        moveset_rows = soup.find_all('div', class_='sc-a9315c2e-0 dNgHcB')
 
-            # Contains the each seperate 1 of 4 blocks for pick rate, win rate, and move names
-            for j, column in enumerate(build_block.find_all('div', class_='sc-a9315c2e-2 SBHRg')):
-                text = column.find('p', class_='sc-6d6ea15e-3 hxGuyl').text
-                numb = column.find('p', class_='sc-6d6ea15e-4 eZnfiD')
+        # Loops through each row of all the movesets
+        for i, moveset_row in enumerate(moveset_rows):
+            moveset_i = {
+                'Name': Pokemon_name,
+                'Pokemon': 'Pokemon/' + Pokemon_name + '.png',
+                'Role': role_dict[Pokemon_name],
+            }
 
-                if numb is not None:
-                    numb = numb.text
+            # Gets all the columns of the current row for the current moveset
+            moveset_columns = moveset_row.find_all('div', class_='sc-a9315c2e-2 SBHRg')
 
-                if j < 2:
-                    if j == 0:
-                        numb = str(float(numb[:-2]) * pick_rate_dict[Pokemon_name] / 100) + ' %'
+            # Loops through each column of current moveset row
+            move_names = []
+            for j, moveset_column in enumerate(moveset_columns):
 
-                    build_i[text] = float(numb[:-2])
+                # Text of column name (Pick Rate, Win Rate, Move Name 1 or Move Name 2)
+                text = moveset_column.find('p', class_='sc-6d6ea15e-3 hxGuyl').text
+                numb = moveset_column.find('p', class_='sc-6d6ea15e-4 eZnfiD')
 
-                elif j == 2:
-                    move_1_name = text
-                    if move_1_name == 'Dual Wingbeat':
-                        Pokemon_name_2 = 'Scyther'
-                        build_i['Role'] = 'Speedster'
-                        build_i['Name'] = Pokemon_name_2
-                    else:
-                        Pokemon_name_2 = Pokemon_name
+                # Filters for either the Pick Rate column or Win Rate column
 
-                    move_1_pic_file = 'Moves/' + Pokemon_name_2 + ' - ' + move_1_name + '.png'
+                if text == 'Pick Rate':
+                    numb = numb.text[:-2]
+                    print(float((str(float(numb) * pick_rate_dict[Pokemon_name] / 100) + ' %')[:-2]))
+                    moveset_i[text] = float((str(float(numb) * pick_rate_dict[Pokemon_name] / 100) + ' %')[:-2])
+                elif text == 'Win Rate':
+                    moveset_i[text] = float(numb.text[:-2])
+                else:
+                    moveset_i[f"Move {int(j-1)}"] = 'Moves/' + Pokemon_name + ' - ' + text + '.png'
+                    move_names.append(text)
 
-                elif j == 3:
-                    move_2_name = text
-                    if move_1_name == 'Dual Wingbeat':
-                        Pokemon_name_2 = 'Scyther'
-                        build_i['Role'] = 'Speedster'
-                    else:
-                        Pokemon_name_2 = Pokemon_name
+            moveset_i['Move Set'] = move_names[0] + '/' + move_names[1]
 
-                    move_2_pic_file = 'Moves/' + Pokemon_name_2 + ' - ' + move_2_name + '.png'
+            # Contains each seperate 1 of 3 blocks for item pick rate, item win rate, and item name
+            item_columns = moveset_row.find_all('div', class_='sc-6106a1d4-1 RuwBF')
 
-            # Contains each seperate 1 of 3 blocks for pick rate, win rate, and item name
             item_set_list_dict = []
-            item_pick_rates = []
-            item_win_rates = []
-            item_names = []
-            for j, column in enumerate(build_block.find_all('div', class_='sc-6106a1d4-1 RuwBF')):
-
+            for j, item_column in enumerate(item_columns):
                 # Contains both the pick rate and win rate for each item
-                text = column.find('p', class_='sc-6d6ea15e-3 hxGuyl').text
-                pick_rate, win_rate = column.find_all('p', class_='sc-6d6ea15e-3 LHyXa')
+                pick_rate, win_rate = item_column.find_all('p', class_='sc-6d6ea15e-3 LHyXa')
+                item_name = battle_items_dict[item_column.find('img')['src'][37:-15]]
 
-                img = column.find('img')
+                pick_rate = float(pick_rate.text[:-2])
+                win_rate = float(win_rate.text[:-2])
 
-                # pull out the url=… part and URL-decode it
-                item_names.append(battle_items_dict[img['src'][37:-15]])
-
-                pick_rate = pick_rate.text
-                win_rate = win_rate.text
-
-                item_pick_rates.append(float(pick_rate[:-2]))
-                item_win_rates.append(float(win_rate[:-2]))
                 item_set_dict = {
-                    'Battle Item': battle_items_dict[img['src'][37:-15]],
-                    'Pick Rate': float(pick_rate[:-2]),
-                    'Win Rate': float(win_rate[:-2]),
+                    'Battle Item': item_name,
+                    'Pick Rate': pick_rate,
+                    'Win Rate': win_rate,
                 }
                 item_set_list_dict.append(item_set_dict)
 
-            if Pokemon_name != 'Mew' or Pokemon_name != 'Blaziken':
-                build_i['Move Set'] = move_1_name + '/' + move_2_name
-                build_i['Move 1'] = move_1_pic_file
-                build_i['Move 2'] = move_2_pic_file
+            moveset_i['Battle Items'] = item_set_list_dict
+
+            movesets.append(moveset_i)
 
 
-            build_i['Battle Items'] = item_set_list_dict
+column_titles = ["Name", "Pokemon", "Move Set", "Win Rate", "Pick Rate", "Role", "Move 1", "Move 2", "Battle Items"]
 
-            if move_1_name == 'Surging Strikes':
-                Pokemon_name_2 = 'Urshifu_Rapid'
-            elif move_1_name == 'Wicked Blow':
-                Pokemon_name_2 = 'Urshifu_Single'
-            build_i['Pokemon'] = 'Pokemon/' + Pokemon_name_2 + '.png'
-
-            if Pokemon_name == 'Mew' and i == 3:
-
-                item_dictionary = {
-                    'Eject Button': {
-                        'Pick Rate': [],
-                        'Win Rate': [],
-                        'Picks': [],
-                        'Wins': [],
-                    },
-                    'X Speed': {
-                        'Pick Rate': [],
-                        'Win Rate': [],
-                        'Picks': [],
-                        'Wins': [],
-                    },
-                    'Potion': {
-                        'Pick Rate': [],
-                        'Win Rate': [],
-                        'Picks': [],
-                        'Wins': [],
-                    },
-                    'Full Heal': {
-                        'Pick Rate': [],
-                        'Win Rate': [],
-                        'Picks': [],
-                        'Wins': [],
-                    },
-                    'X Attack': {
-                        'Pick Rate': [],
-                        'Win Rate': [],
-                        'Picks': [],
-                        'Wins': [],
-                    },
-                    'Remainder': {
-                        'Pick Rate': [],
-                        'Win Rate': [],
-                        'Picks': [],
-                        'Wins': [],
-                    }
-                }
-                item_set_list_dict_new = []
-
-                pick_rates = []
-                for k in [-3, -2, -1]:
-                    pick_rate = all_movesets[k]['Pick Rate']
-                    pick_rates.append(pick_rate / pick_rate_dict[Pokemon_name]*100)
-                    win_rate = all_movesets[k]['Win Rate']
-                    picks = pick_rate/100 * matches
-                    wins = picks * win_rate/100
-                    item_set_list_dict_i = all_movesets[k]['Battle Items']
-                    move_set_picks = 0
-                    move_set_wins = 0
-                    for l in range(3):
-                        item = item_set_list_dict_i[l]['Battle Item']
-                        item_dictionary[item]['Pick Rate'].append(item_set_list_dict_i[l]['Pick Rate'])
-                        item_dictionary[item]['Picks'].append(item_set_list_dict_i[l]['Pick Rate']/100 * picks)
-                        move_set_picks += item_set_list_dict_i[l]['Pick Rate']/100 * picks
-                        item_dictionary[item]['Win Rate'].append(item_set_list_dict_i[l]['Win Rate'])
-                        item_dictionary[item]['Wins'].append(item_set_list_dict_i[l]['Pick Rate']/100 * picks * item_set_list_dict_i[l]['Win Rate']/100)
-                        move_set_wins += item_set_list_dict_i[l]['Pick Rate']/100 * picks * item_set_list_dict_i[l]['Win Rate']/100
-
-                    item_dictionary['Remainder']['Picks'].append(picks - move_set_picks)
-                    item_dictionary['Remainder']['Wins'].append((wins - move_set_wins))
-                    item_dictionary['Remainder']['Pick Rate'].append((picks - move_set_picks)/picks*100)
-                    item_dictionary['Remainder']['Win Rate'].append((wins - move_set_wins)/(picks - move_set_picks)*100)
-
-                pick_rate = build_i['Pick Rate']
-                pick_rates.append(pick_rate / pick_rate_dict[Pokemon_name] * 100)
-                win_rate = build_i['Win Rate']
-                picks = pick_rate/100 * matches
-                wins = picks * win_rate / 100
-                move_set_picks = 0
-                move_set_wins = 0
-                for k in range(3):
-                    item = item_set_list_dict[k]['Battle Item']
-                    item_dictionary[item]['Pick Rate'].append(item_set_list_dict[k]['Pick Rate'])
-                    item_dictionary[item]['Picks'].append(item_set_list_dict[k]['Pick Rate']/100 * picks)
-                    move_set_picks += item_set_list_dict[k]['Pick Rate']/100 * picks
-                    item_dictionary[item]['Win Rate'].append(item_set_list_dict[k]['Win Rate'])
-                    item_dictionary[item]['Wins'].append(item_set_list_dict[k]['Pick Rate']/100 * picks * item_set_list_dict[k]['Win Rate']/100)
-                    move_set_wins += item_set_list_dict[k]['Pick Rate']/100 * picks * item_set_list_dict[k]['Win Rate']/100
-
-                item_dictionary['Remainder']['Picks'].append(picks - move_set_picks)
-                item_dictionary['Remainder']['Wins'].append((wins - move_set_wins))
-                item_dictionary['Remainder']['Pick Rate'].append((picks - move_set_picks) / picks * 100)
-                item_dictionary['Remainder']['Win Rate'].append((wins - move_set_wins) / (picks - move_set_picks) * 100)
-
-                total_dictionary = {
-                    'Eject Button': {
-                        'Picks': [],
-                        'Wins': [],
-                        'Pick Rate': [],
-                        'Win Rate': [],
-                    },
-                    'X Speed': {
-                        'Picks': [],
-                        'Wins': [],
-                        'Pick Rate': [],
-                        'Win Rate': [],
-                    },
-                    'Potion': {
-                        'Picks': [],
-                        'Wins': [],
-                    },
-                    'X Attack': {
-                        'Picks': [],
-                        'Wins': [],
-                        'Pick Rate': [],
-                        'Win Rate': [],
-                    },
-                    'Remainder': {
-                        'Picks': [],
-                        'Wins': [],
-                        'Pick Rate': [],
-                        'Win Rate': [],
-                    }
-                }
-
-                mew_matches = sum(pick_rates) /10000 * pick_rate_dict[Pokemon_name] * matches
-                for item in total_dictionary.keys():
-                    total_dictionary[item]['Picks'] = sum(item_dictionary[item]['Picks'])
-                    total_dictionary[item]['Wins'] = sum(item_dictionary[item]['Wins'])
-                    total_dictionary[item]['Pick Rate'] = total_dictionary[item]['Picks'] /mew_matches*100
-                    total_dictionary[item]['Win Rate'] = np.array(total_dictionary[item]['Wins']) / (np.array(total_dictionary[item]['Picks']) + 1e-5 )*100
-
-                del total_dictionary['Remainder']
-                item_pick_rate_dict = {}
-                for item in total_dictionary.keys():
-                    item_pick_rate_dict[item] = total_dictionary[item]['Pick Rate']
-
-                key_min = min(item_pick_rate_dict, key=item_pick_rate_dict.get)
-
-                item_pick_rate_dict.pop(key_min)
-
-                valid_keys = item_pick_rate_dict.keys()
-
-                item_set_list_dict_new = []
-                for item in valid_keys:
-                    item_set_dict = {
-                        'Battle Item': item,
-                        'Pick Rate': round(float(total_dictionary[item]['Pick Rate']),2),
-                        'Win Rate': round(float(total_dictionary[item]['Win Rate']),2),
-                    }
-                    item_set_list_dict_new.append(item_set_dict)
-
-                move_1_file = ['Moves/' + 'Mew' + ' - ' + 'Solar Beam' + '.png',
-                               'Moves/' + 'Mew' + ' - ' + 'Surf' + '.png',
-                               'Moves/' + 'Mew' + ' - ' + 'Electro Ball' + '.png']
-                move_2_file = ['Moves/' + 'Mew' + ' - ' + 'Light Screen' + '.png',
-                               'Moves/' + 'Mew' + ' - ' + 'Agility' + '.png',
-                               'Moves/' + 'Mew' + ' - ' + 'Coaching' + '.png']
-
-                build_i = {'Name': Pokemon_name, 'Pokemon': 'Pokemon/' + Pokemon_name + '.png',
-                           'Role': role_dict[Pokemon_name],
-                           'Pick Rate': pick_rate_dict[Pokemon_name],
-                           'Win Rate': win_rate_dict[Pokemon_name], 'Move Set': 'All',
-                           'Move 1': move_1_file, 'Move 2': move_2_file, 'Battle Items': item_set_list_dict_new}
-                all_movesets.pop(-1)
-                all_movesets.pop(-1)
-                all_movesets.pop(-1)
-                all_movesets.append(build_i)
-                continue
-
-            elif Pokemon_name == 'Blaziken' and i == 1:
-                move_1_file = ['Moves/' + 'Blaziken' + ' - ' + 'Overheat' + '.png',
-                               'Moves/' + 'Blaziken' + ' - ' + 'Fire Punch' + '.png']
-                move_2_file = ['Moves/' + 'Blaziken' + ' - ' + 'Blaze Kick' + '.png',
-                               'Moves/' + 'Blaziken' + ' - ' + 'Focus Blast' + '.png']
-
-                pick_rate_0 = all_movesets[-1]['Pick Rate']
-                win_rate_0 = all_movesets[-1]['Win Rate']
-                picks_0 = pick_rate_0 * matches
-                item_set_list_dict_0 = all_movesets[-1]['Battle Items']
-                pick_rate_1 = build_i['Pick Rate']
-                picks_1 = pick_rate_1 * matches
-                item_set_list_dict_1 = item_set_list_dict
-                item_set_list_dict_new = []
-                for k in range(len(item_set_list_dict_0)):
-                    item = item_set_list_dict_0[k]['Battle Item']
-                    pick_rate_item_0 = item_set_list_dict_0[k]['Pick Rate']
-                    picks_item_0 = pick_rate_item_0 * picks_0
-                    win_rate_item_0 = item_set_list_dict_0[k]['Win Rate']
-                    wins_item_0 = picks_item_0 * win_rate_0
-
-                    pick_rate_item_1 = item_set_list_dict_1[k]['Pick Rate']
-                    picks_item_1 = pick_rate_item_1 * picks_1
-                    win_rate_item_1 = item_set_list_dict_1[k]['Win Rate']
-                    wins_item_1 = picks_item_1 * win_rate_item_1
-
-                    picks_item_total = picks_item_0 + picks_item_1
-                    wins_item_total = wins_item_0 + wins_item_1
-
-                    item_set_list_dict[k]['Pick Rate'] = picks_item_total / (picks_0 + picks_1)
-                    item_set_list_dict[k]['Win Rate'] = wins_item_total / picks_item_total * 100
-
-                    item_set_dict = {
-                        'Battle Item': item,
-                        'Pick Rate': round(float(picks_item_total / (picks_0 + picks_1)),2),
-                        'Win Rate': round(float(wins_item_total / picks_item_total),2),
-                    }
-                    item_set_list_dict_new.append(item_set_dict)
-
-                build_i = {'Name': Pokemon_name, 'Pokemon': 'Pokemon/' + Pokemon_name + '.png',
-                           'Role': role_dict[Pokemon_name], 'Pick Rate': pick_rate_dict[Pokemon_name],
-                           'Win Rate': win_rate_dict[Pokemon_name], 'Move Set': 'All', 'Move 1': move_1_file,
-                           'Move 2': move_2_file, 'Battle Items': item_set_list_dict_new}
-                all_movesets.pop(-1)
-
-                all_movesets.append(build_i)
-                continue
-
-            # if (Pokemon_name == 'Mew' or Pokemon_name == 'Blaziken') and i > 0:
-            #     continue
-
-            all_movesets.append(build_i)
-
-
-# #%%
-#
-
-pd.options.display.float_format = '{:.2f}%'.format
-df = pd.DataFrame(all_movesets)
-
-columns_titles = ["Name", "Pokemon", "Move Set", "Win Rate", "Pick Rate", "Role", "Move 1", "Move 2", "Battle Items"]
-df = df.reindex(columns=columns_titles)
-
-# print(df[df["Name"] == 'Comfey'])
-
-#
-# Fix Hoopa Winrates
-
-win_rate = win_rate_dict['Hoopa']
-pick_rate = pick_rate_dict['Hoopa']
-
-df_hoopa = df[df['Name'] == 'Hoopa']
-df_hoopa_fix = fix_hoopa_winrate(df_hoopa, pick_rate, win_rate, pick_rate_dict, matches)
-df = df[df['Name'] != 'Hoopa']
-df = pd.concat([df, df_hoopa_fix], ignore_index=True)
-df = df.sort_values(by='Name').reset_index(drop=True)
-
-# Fix Comfey Winrates
-
-# pokemon = df['Move Set'].to_list()
-# name = 'Comfey'
-#
-# indicies = []
-# for i in range(len(pokemon)):
-#     if pokemon[i] == 'Floral Healing/Magical Leaf':
-#         indicies.append(i)
-# win_rate = win_rate_dict[name]
-# pick_rate = pick_rate_dict[name]
-#
-# win_rates = []
-# pick_rates = []
-# for i in indicies:
-#     win_rates.append(df.loc[i, 'Win Rate'])
-#     pick_rates.append(df.loc[i, 'Pick Rate'] / pick_rate_dict[name] * 100)
-#
-# pick_rate, win_rate = fix_comfey_winrate(pick_rates, win_rates, pick_rate, win_rate, matches)
-# pick_rate = np.round(pick_rate * pick_rate_dict[name] / 100, 4)
-#
-# df.loc[indicies[0], 'Win Rate'] = win_rate
-# df.loc[indicies[0], 'Pick Rate'] = pick_rate
-# df.drop(index=indicies[1], inplace=True)
-
-
-pd.options.display.float_format = '{:.2f}%'.format
-
-#%%
-df['Pick Rate'] = df['Pick Rate'].round(2)
-df['Win Rate'] = df['Win Rate'].round(2)
-
-df.to_csv('../data/csv/all_movesets.csv',
-          index=False,
-          quoting=1,
-          )
-
-df = pd.read_csv('../data/csv/all_movesets.csv')
-
-
-df['Battle Items'] = df['Battle Items'].apply(ast.literal_eval)
-
-# 3. Explode so each dict becomes its own row
-df_exploded = df.explode('Battle Items').reset_index(drop=True)
-
-
-# 4. Normalize those dicts into separate columns
-item_details = pd.json_normalize(df_exploded['Battle Items'])
-
-# 5. Drop the old list-column and concat the new fields
-df_final = pd.concat([
-    df_exploded.drop(columns=['Battle Items']),
-    item_details
-], axis=1)
-
-for i, row in df_final.iterrows():
-    df_final.loc[i, 'Battle Item'] = f'Battle_Items/{row["Battle Item"]}.png'
-
-# df = df[df['Pick Rate'] >= .75]
-df_final.to_csv("../data/csv/all_movesets.csv",
-          index=False,
-          quoting=1,
-          )
-
-def ensure_list(cell):
-    try:
-        parsed = eval(cell)
-        return parsed if isinstance(parsed, list) else [cell]
-    except:
-        return [cell]
-
-
-# Load and process the CSV b
-df = pd.read_csv("../data/csv/all_movesets.csv")
-df["Move 1"] = df["Move 1"].apply(ensure_list)
-df["Move 2"] = df["Move 2"].apply(ensure_list)
-
-group_keys = ["Name", "Move Set"]
-static_columns = ["Name", "Pokemon", "Role", "Move Set", "Move 1", "Move 2", "Win Rate", "Pick Rate"]
-
-# Group by Name + Move Set
-final_data = []
-for (name, moveset), group in df.groupby(group_keys, sort=False):
-    row = group.iloc[0]
-    moveset_entry = {col: row[col] for col in static_columns}
-
-    for idx, (_, item_row) in enumerate(group.iterrows(), 1):
-        moveset_entry[f"Item {idx}"] = item_row["Battle Item"]
-        moveset_entry[f"Win Rate {idx}"] = item_row["Win Rate.1"]
-        moveset_entry[f"Pick Rate {idx}"] = item_row["Pick Rate.1"]
-
-    final_data.append(moveset_entry)
-
-# Export to data.js
-with open("../static/js/data.js", "w", encoding="utf-8") as f:
-    f.write("const items = ")
-    json.dump(final_data, f, indent=2)
-    f.write(";")
+df = fix_special_cases(movesets, matches, pick_rate_dict, win_rate_dict)
+organize_df(df, column_titles)

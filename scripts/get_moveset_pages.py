@@ -70,7 +70,7 @@ if get_pages:
     for name, pokemon in zip(names, pokemons):
         if name == 'scyther':
             continue
-        if name == 'megalucario':
+        if name == 'megacharizardx':
 
             fname = os.path.join(path, f"Unite API _ Pokémon Unite Meta for {pokemon}.txt")
             np.savetxt(fname, np.array([]))
@@ -78,8 +78,6 @@ if get_pages:
             continue
         else:
             print(pokemon)
-
-
 
         url = r'https://uniteapi.dev/meta/pokemon-unite-meta-for-' + name
         pyperclip.copy(url)
@@ -101,7 +99,6 @@ if get_pages:
         pyautogui.press('enter')
         wait_for_downloads(fname, pokemon)
         time.sleep(short_rest/2)
-
 
 
 pokemon_list = []
