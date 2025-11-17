@@ -763,7 +763,7 @@ def fix_scyther_and_urshifu(movesets):
 
 def fix_mega(movesets, pokemon_movesets, matches):
 
-
+    print(pokemon_movesets)
     moveset_0, moveset_1 = pokemon_movesets
 
     pick_rate_0 = moveset_0['Pick Rate']

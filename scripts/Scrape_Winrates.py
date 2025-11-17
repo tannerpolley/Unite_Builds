@@ -3,6 +3,7 @@ import os
 import json
 import pandas as pd
 import numpy as np
+from pprint import pprint
 from scripts.Extra_Functions import fix_special_cases, organize_df
 
 
@@ -186,7 +187,7 @@ for file in files:
 
                 if text == 'Pick Rate':
                     numb = numb.text[:-2]
-                    print(float((str(float(numb) * pick_rate_dict[Pokemon_name] / 100) + ' %')[:-2]))
+
                     moveset_i[text] = float((str(float(numb) * pick_rate_dict[Pokemon_name] / 100) + ' %')[:-2])
                 elif text == 'Win Rate':
                     moveset_i[text] = float(numb.text[:-2])

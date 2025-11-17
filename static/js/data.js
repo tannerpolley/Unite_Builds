@@ -10,17 +10,17 @@ const items = [
     "Move 2": [
       "Moves/Absol - Sucker Punch.png"
     ],
-    "Win Rate": 48.05,
-    "Pick Rate": 3.94,
+    "Win Rate": 49.44,
+    "Pick Rate": 3.45,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 46.31,
-    "Pick Rate 1": 33.34,
+    "Win Rate 1": 49.97,
+    "Pick Rate 1": 31.5,
     "Item 2": "Battle_Items/Full Heal.png",
-    "Win Rate 2": 49.8,
-    "Pick Rate 2": 27.11,
+    "Win Rate 2": 51.26,
+    "Pick Rate 2": 29.3,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 48.12,
-    "Pick Rate 3": 13.81
+    "Win Rate 3": 47.07,
+    "Pick Rate 3": 13.82
   },
   {
     "Name": "Absol",
@@ -33,17 +33,17 @@ const items = [
     "Move 2": [
       "Moves/Absol - Psycho Cut.png"
     ],
-    "Win Rate": 46.29,
-    "Pick Rate": 3.22,
+    "Win Rate": 47.49,
+    "Pick Rate": 2.7,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 48.65,
-    "Pick Rate 1": 31.04,
+    "Win Rate 1": 50.04,
+    "Pick Rate 1": 29.32,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 43.27,
-    "Pick Rate 2": 27.51,
+    "Win Rate 2": 44.94,
+    "Pick Rate 2": 25.83,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 50.55,
-    "Pick Rate 3": 15.34
+    "Win Rate 3": 52.81,
+    "Pick Rate 3": 17.24
   },
   {
     "Name": "Absol",
@@ -56,17 +56,17 @@ const items = [
     "Move 2": [
       "Moves/Absol - Psycho Cut.png"
     ],
-    "Win Rate": 45.42,
-    "Pick Rate": 2.27,
+    "Win Rate": 47.68,
+    "Pick Rate": 2.07,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 46.77,
-    "Pick Rate 1": 34.03,
+    "Win Rate 1": 50.14,
+    "Pick Rate 1": 32.44,
     "Item 2": "Battle_Items/Full Heal.png",
-    "Win Rate 2": 46.15,
-    "Pick Rate 2": 19.62,
+    "Win Rate 2": 48.14,
+    "Pick Rate 2": 18.14,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 43.77,
-    "Pick Rate 3": 17.43
+    "Win Rate 3": 44.21,
+    "Pick Rate 3": 17.97
   },
   {
     "Name": "Absol",
@@ -79,17 +79,17 @@ const items = [
     "Move 2": [
       "Moves/Absol - Sucker Punch.png"
     ],
-    "Win Rate": 46.8,
-    "Pick Rate": 0.5,
+    "Win Rate": 46.58,
+    "Pick Rate": 0.59,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 43.59,
-    "Pick Rate 1": 28.3,
+    "Win Rate 1": 43.26,
+    "Pick Rate 1": 29.19,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 47.53,
-    "Pick Rate 2": 19.59,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 53.08,
-    "Pick Rate 3": 15.72
+    "Win Rate 2": 33.71,
+    "Pick Rate 2": 18.12,
+    "Item 3": "Battle_Items/Full Heal.png",
+    "Win Rate 3": 53.29,
+    "Pick Rate 3": 17.29
   },
   {
     "Name": "Aegislash",
@@ -102,17 +102,17 @@ const items = [
     "Move 2": [
       "Moves/Aegislash - Wide Guard.png"
     ],
-    "Win Rate": 47.17,
-    "Pick Rate": 3.7,
+    "Win Rate": 47.46,
+    "Pick Rate": 3.34,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 47.96,
-    "Pick Rate 1": 43.79,
+    "Win Rate 1": 48.36,
+    "Pick Rate 1": 43.28,
     "Item 2": "Battle_Items/Full Heal.png",
-    "Win Rate 2": 48.93,
-    "Pick Rate 2": 21.33,
+    "Win Rate 2": 48.21,
+    "Pick Rate 2": 21.86,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 43.73,
-    "Pick Rate 3": 15.43
+    "Win Rate 3": 45.94,
+    "Pick Rate 3": 15.66
   },
   {
     "Name": "Aegislash",
@@ -125,17 +125,17 @@ const items = [
     "Move 2": [
       "Moves/Aegislash - Wide Guard.png"
     ],
-    "Win Rate": 46.35,
-    "Pick Rate": 2.56,
+    "Win Rate": 48.98,
+    "Pick Rate": 2.52,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 48.12,
-    "Pick Rate 1": 36.96,
+    "Win Rate 1": 51.92,
+    "Pick Rate 1": 38.24,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 46.25,
-    "Pick Rate 2": 19.74,
+    "Win Rate 2": 45.98,
+    "Pick Rate 2": 20.05,
     "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 45.16,
-    "Pick Rate 3": 18.71
+    "Win Rate 3": 50.75,
+    "Pick Rate 3": 17.55
   },
   {
     "Name": "Aegislash",
@@ -148,17 +148,17 @@ const items = [
     "Move 2": [
       "Moves/Aegislash - Iron Head.png"
     ],
-    "Win Rate": 46.94,
-    "Pick Rate": 0.69,
+    "Win Rate": 47.5,
+    "Pick Rate": 0.68,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 45.05,
-    "Pick Rate 1": 38.88,
+    "Win Rate 1": 45.7,
+    "Pick Rate 1": 40.37,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 55.05,
-    "Pick Rate 2": 17.34,
+    "Win Rate 2": 55.24,
+    "Pick Rate 2": 18.72,
     "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 53.09,
-    "Pick Rate 3": 16.99
+    "Win Rate 3": 45.71,
+    "Pick Rate 3": 15.6
   },
   {
     "Name": "Aegislash",
@@ -171,17 +171,17 @@ const items = [
     "Move 2": [
       "Moves/Aegislash - Iron Head.png"
     ],
-    "Win Rate": 45.72,
-    "Pick Rate": 0.23,
+    "Win Rate": 45.93,
+    "Pick Rate": 0.16,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 48.11,
-    "Pick Rate 1": 28.34,
-    "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 47.73,
-    "Pick Rate 2": 23.53,
-    "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 40.68,
-    "Pick Rate 3": 15.78
+    "Win Rate 1": 45.45,
+    "Pick Rate 1": 36.67,
+    "Item 2": "Battle_Items/Eject Button.png",
+    "Win Rate 2": 50.85,
+    "Pick Rate 2": 21.85,
+    "Item 3": "Battle_Items/Full Heal.png",
+    "Win Rate 3": 53.33,
+    "Pick Rate 3": 16.67
   },
   {
     "Name": "Alcremie",
@@ -194,17 +194,17 @@ const items = [
     "Move 2": [
       "Moves/Alcremie - Sweet Scent.png"
     ],
-    "Win Rate": 46.74,
-    "Pick Rate": 0.22,
+    "Win Rate": 52.2,
+    "Pick Rate": 0.19,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 45.6,
-    "Pick Rate 1": 52.45,
+    "Win Rate 1": 52.53,
+    "Pick Rate 1": 49.69,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 54.55,
-    "Pick Rate 2": 17.93,
+    "Win Rate 2": 49.28,
+    "Pick Rate 2": 21.7,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 45.16,
-    "Pick Rate 3": 16.85
+    "Win Rate 3": 61.67,
+    "Pick Rate 3": 18.87
   },
   {
     "Name": "Alcremie",
@@ -217,17 +217,17 @@ const items = [
     "Move 2": [
       "Moves/Alcremie - Dazzling Gleam.png"
     ],
-    "Win Rate": 48.04,
-    "Pick Rate": 0.32,
+    "Win Rate": 51.99,
+    "Pick Rate": 0.29,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 46.69,
-    "Pick Rate 1": 50.84,
+    "Win Rate 1": 51.46,
+    "Pick Rate 1": 57.44,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 48.23,
-    "Pick Rate 2": 26.36,
+    "Win Rate 2": 52.83,
+    "Pick Rate 2": 22.22,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 52.7,
-    "Pick Rate 3": 13.83
+    "Win Rate 3": 50.7,
+    "Pick Rate 3": 14.88
   },
   {
     "Name": "Alcremie",
@@ -240,17 +240,17 @@ const items = [
     "Move 2": [
       "Moves/Alcremie - Sweet Scent.png"
     ],
-    "Win Rate": 51.96,
-    "Pick Rate": 4.83,
+    "Win Rate": 52.87,
+    "Pick Rate": 4.84,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 51.57,
-    "Pick Rate 1": 62.47,
+    "Win Rate 1": 51.48,
+    "Pick Rate 1": 61.58,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 54.78,
-    "Pick Rate 2": 23.79,
+    "Win Rate 2": 56.57,
+    "Pick Rate 2": 24.54,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 49.42,
-    "Pick Rate 3": 8.58
+    "Win Rate 3": 53.13,
+    "Pick Rate 3": 8.03
   },
   {
     "Name": "Alcremie",
@@ -263,40 +263,17 @@ const items = [
     "Move 2": [
       "Moves/Alcremie - Dazzling Gleam.png"
     ],
-    "Win Rate": 48.07,
-    "Pick Rate": 0.94,
+    "Win Rate": 49.31,
+    "Pick Rate": 0.84,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 48.78,
-    "Pick Rate 1": 55.26,
+    "Win Rate 1": 49.67,
+    "Pick Rate 1": 54.74,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 46.95,
-    "Pick Rate 2": 24.2,
+    "Win Rate 2": 51.67,
+    "Pick Rate 2": 21.69,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 48.7,
-    "Pick Rate 3": 12.39
-  },
-  {
-    "Name": "Alolan Ninetales",
-    "Pokemon": "Pokemon/Alolan Ninetales.png",
-    "Role": "Attacker",
-    "Move Set": "Avalanche/Aurora Veil",
-    "Move 1": [
-      "Moves/Alolan Ninetales - Avalanche.png"
-    ],
-    "Move 2": [
-      "Moves/Alolan Ninetales - Aurora Veil.png"
-    ],
-    "Win Rate": 42.91,
-    "Pick Rate": 0.17,
-    "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 45.05,
-    "Pick Rate 1": 40.36,
-    "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 42.86,
-    "Pick Rate 2": 20.36,
-    "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 32.0,
-    "Pick Rate 3": 18.18
+    "Win Rate 3": 48.69,
+    "Pick Rate 3": 13.81
   },
   {
     "Name": "Alolan Ninetales",
@@ -309,17 +286,17 @@ const items = [
     "Move 2": [
       "Moves/Alolan Ninetales - Blizzard.png"
     ],
-    "Win Rate": 47.86,
-    "Pick Rate": 8.93,
+    "Win Rate": 48.41,
+    "Pick Rate": 8.19,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.17,
-    "Pick Rate 1": 54.99,
+    "Win Rate 1": 49.73,
+    "Pick Rate 1": 53.29,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 46.61,
-    "Pick Rate 2": 28.59,
+    "Win Rate 2": 47.6,
+    "Pick Rate 2": 29.11,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 44.92,
-    "Pick Rate 3": 10.79
+    "Win Rate 3": 47.02,
+    "Pick Rate 3": 11.59
   },
   {
     "Name": "Alolan Ninetales",
@@ -332,17 +309,17 @@ const items = [
     "Move 2": [
       "Moves/Alolan Ninetales - Aurora Veil.png"
     ],
-    "Win Rate": 48.33,
-    "Pick Rate": 1.19,
+    "Win Rate": 47.16,
+    "Pick Rate": 1.0,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 47.78,
-    "Pick Rate 1": 52.42,
+    "Win Rate 1": 47.05,
+    "Pick Rate 1": 51.74,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 50.0,
-    "Pick Rate 2": 27.07,
+    "Win Rate 2": 49.52,
+    "Pick Rate 2": 25.5,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 50.2,
-    "Pick Rate 3": 12.58
+    "Win Rate 3": 45.71,
+    "Pick Rate 3": 12.81
   },
   {
     "Name": "Alolan Ninetales",
@@ -355,17 +332,40 @@ const items = [
     "Move 2": [
       "Moves/Alolan Ninetales - Blizzard.png"
     ],
-    "Win Rate": 43.53,
-    "Pick Rate": 0.34,
-    "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 46.4,
-    "Pick Rate 1": 38.81,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 42.86,
-    "Pick Rate 2": 34.27,
+    "Win Rate": 45.83,
+    "Pick Rate": 0.33,
+    "Item 1": "Battle_Items/X Speed.png",
+    "Win Rate 1": 47.78,
+    "Pick Rate 1": 37.66,
+    "Item 2": "Battle_Items/Eject Button.png",
+    "Win Rate 2": 51.96,
+    "Pick Rate 2": 33.21,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 40.23,
-    "Pick Rate 3": 15.21
+    "Win Rate 3": 35.05,
+    "Pick Rate 3": 18.0
+  },
+  {
+    "Name": "Alolan Ninetales",
+    "Pokemon": "Pokemon/Alolan Ninetales.png",
+    "Role": "Attacker",
+    "Move Set": "Avalanche/Aurora Veil",
+    "Move 1": [
+      "Moves/Alolan Ninetales - Avalanche.png"
+    ],
+    "Move 2": [
+      "Moves/Alolan Ninetales - Aurora Veil.png"
+    ],
+    "Win Rate": 38.11,
+    "Pick Rate": 0.15,
+    "Item 1": "Battle_Items/Eject Button.png",
+    "Win Rate 1": 43.36,
+    "Pick Rate 1": 46.31,
+    "Item 2": "Battle_Items/X Speed.png",
+    "Win Rate 2": 37.21,
+    "Pick Rate 2": 17.62,
+    "Item 3": "Battle_Items/X Attack.png",
+    "Win Rate 3": 35.9,
+    "Pick Rate 3": 15.98
   },
   {
     "Name": "Alolan Raichu",
@@ -378,17 +378,17 @@ const items = [
     "Move 2": [
       "Moves/Alolan Raichu - Psychic.png"
     ],
-    "Win Rate": 48.4,
-    "Pick Rate": 0.82,
+    "Win Rate": 50.08,
+    "Pick Rate": 0.74,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.2,
-    "Pick Rate 1": 54.66,
+    "Win Rate 1": 50.73,
+    "Pick Rate 1": 55.99,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 48.3,
-    "Pick Rate 2": 25.66,
+    "Win Rate 2": 49.83,
+    "Pick Rate 2": 24.71,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 47.31,
-    "Pick Rate 3": 12.17
+    "Win Rate 3": 50.83,
+    "Pick Rate 3": 9.85
   },
   {
     "Name": "Alolan Raichu",
@@ -401,40 +401,17 @@ const items = [
     "Move 2": [
       "Moves/Alolan Raichu - Thunderbolt.png"
     ],
-    "Win Rate": 47.56,
-    "Pick Rate": 2.67,
+    "Win Rate": 47.23,
+    "Pick Rate": 2.29,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 48.54,
-    "Pick Rate 1": 52.48,
+    "Win Rate 1": 49.82,
+    "Pick Rate 1": 51.95,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 46.47,
-    "Pick Rate 2": 25.46,
+    "Win Rate 2": 45.15,
+    "Pick Rate 2": 25.4,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 45.85,
-    "Pick Rate 3": 13.29
-  },
-  {
-    "Name": "Alolan Raichu",
-    "Pokemon": "Pokemon/Alolan Raichu.png",
-    "Role": "Attacker",
-    "Move Set": "Electro Ball/Thunderbolt",
-    "Move 1": [
-      "Moves/Alolan Raichu - Electro Ball.png"
-    ],
-    "Move 2": [
-      "Moves/Alolan Raichu - Thunderbolt.png"
-    ],
-    "Win Rate": 52.31,
-    "Pick Rate": 10.77,
-    "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 53.18,
-    "Pick Rate 1": 83.35,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 47.25,
-    "Pick Rate 2": 10.25,
-    "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 50.67,
-    "Pick Rate 3": 2.93
+    "Win Rate 3": 44.69,
+    "Pick Rate 3": 13.22
   },
   {
     "Name": "Alolan Raichu",
@@ -447,17 +424,40 @@ const items = [
     "Move 2": [
       "Moves/Alolan Raichu - Psychic.png"
     ],
-    "Win Rate": 48.91,
-    "Pick Rate": 6.14,
+    "Win Rate": 49.96,
+    "Pick Rate": 4.96,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.11,
-    "Pick Rate 1": 58.02,
+    "Win Rate 1": 50.24,
+    "Pick Rate 1": 56.04,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 48.22,
-    "Pick Rate 2": 18.92,
+    "Win Rate 2": 51.05,
+    "Pick Rate 2": 21.01,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 48.77,
-    "Pick Rate 3": 16.67
+    "Win Rate 3": 48.1,
+    "Pick Rate 3": 15.78
+  },
+  {
+    "Name": "Alolan Raichu",
+    "Pokemon": "Pokemon/Alolan Raichu.png",
+    "Role": "Attacker",
+    "Move Set": "Electro Ball/Thunderbolt",
+    "Move 1": [
+      "Moves/Alolan Raichu - Electro Ball.png"
+    ],
+    "Move 2": [
+      "Moves/Alolan Raichu - Thunderbolt.png"
+    ],
+    "Win Rate": 52.13,
+    "Pick Rate": 10.1,
+    "Item 1": "Battle_Items/Eject Button.png",
+    "Win Rate 1": 53.16,
+    "Pick Rate 1": 83.87,
+    "Item 2": "Battle_Items/X Speed.png",
+    "Win Rate 2": 45.03,
+    "Pick Rate 2": 9.5,
+    "Item 3": "Battle_Items/X Attack.png",
+    "Win Rate 3": 51.53,
+    "Pick Rate 3": 2.76
   },
   {
     "Name": "Armarouge",
@@ -470,17 +470,17 @@ const items = [
     "Move 2": [
       "Moves/Armarouge - Psyshock.png"
     ],
-    "Win Rate": 48.09,
-    "Pick Rate": 1.95,
+    "Win Rate": 49.38,
+    "Pick Rate": 1.68,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 48.08,
-    "Pick Rate 1": 38.64,
-    "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 50.53,
-    "Pick Rate 2": 20.22,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 48.52,
-    "Pick Rate 3": 18.83
+    "Win Rate 1": 48.39,
+    "Pick Rate 1": 40.45,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 51.74,
+    "Pick Rate 2": 19.79,
+    "Item 3": "Battle_Items/Eject Button.png",
+    "Win Rate 3": 50.46,
+    "Pick Rate 3": 19.65
   },
   {
     "Name": "Armarouge",
@@ -493,17 +493,17 @@ const items = [
     "Move 2": [
       "Moves/Armarouge - Psyshock.png"
     ],
-    "Win Rate": 53.16,
-    "Pick Rate": 1.71,
+    "Win Rate": 53.13,
+    "Pick Rate": 1.43,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 54.3,
-    "Pick Rate 1": 57.88,
+    "Win Rate 1": 53.64,
+    "Pick Rate 1": 61.01,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 51.83,
-    "Pick Rate 2": 33.76,
+    "Win Rate 2": 52.35,
+    "Pick Rate 2": 30.65,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 55.05,
-    "Pick Rate 3": 3.84
+    "Win Rate 3": 51.72,
+    "Pick Rate 3": 3.68
   },
   {
     "Name": "Armarouge",
@@ -516,17 +516,17 @@ const items = [
     "Move 2": [
       "Moves/Armarouge - Flame Charge.png"
     ],
-    "Win Rate": 46.14,
-    "Pick Rate": 0.98,
+    "Win Rate": 49.14,
+    "Pick Rate": 0.81,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 48.34,
-    "Pick Rate 1": 37.26,
-    "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 47.48,
-    "Pick Rate 2": 23.26,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 40.96,
-    "Pick Rate 3": 23.2
+    "Win Rate 1": 49.07,
+    "Pick Rate 1": 40.33,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 47.96,
+    "Pick Rate 2": 23.82,
+    "Item 3": "Battle_Items/Eject Button.png",
+    "Win Rate 3": 44.78,
+    "Pick Rate 3": 20.01
   },
   {
     "Name": "Armarouge",
@@ -539,86 +539,17 @@ const items = [
     "Move 2": [
       "Moves/Armarouge - Flame Charge.png"
     ],
-    "Win Rate": 46.21,
+    "Win Rate": 43.88,
     "Pick Rate": 0.08,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 41.27,
-    "Pick Rate 1": 47.73,
+    "Win Rate 1": 39.71,
+    "Pick Rate 1": 48.92,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 54.76,
-    "Pick Rate 2": 31.82,
+    "Win Rate 2": 52.38,
+    "Pick Rate 2": 30.22,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 38.46,
-    "Pick Rate 3": 9.85
-  },
-  {
-    "Name": "Azumarill",
-    "Pokemon": "Pokemon/Azumarill.png",
-    "Role": "All-Rounder",
-    "Move Set": "Water Pulse/Whirlpool",
-    "Move 1": [
-      "Moves/Azumarill - Water Pulse.png"
-    ],
-    "Move 2": [
-      "Moves/Azumarill - Whirlpool.png"
-    ],
-    "Win Rate": 36.93,
-    "Pick Rate": 0.17,
-    "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 35.92,
-    "Pick Rate 1": 35.89,
-    "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 28.33,
-    "Pick Rate 2": 20.91,
-    "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 39.29,
-    "Pick Rate 3": 19.51
-  },
-  {
-    "Name": "Azumarill",
-    "Pokemon": "Pokemon/Azumarill.png",
-    "Role": "All-Rounder",
-    "Move Set": "Play Rough/Whirlpool",
-    "Move 1": [
-      "Moves/Azumarill - Play Rough.png"
-    ],
-    "Move 2": [
-      "Moves/Azumarill - Whirlpool.png"
-    ],
-    "Win Rate": 46.72,
-    "Pick Rate": 3.14,
-    "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 47.96,
-    "Pick Rate 1": 49.19,
-    "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 43.89,
-    "Pick Rate 2": 20.34,
-    "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 46.35,
-    "Pick Rate 3": 16.5
-  },
-  {
-    "Name": "Azumarill",
-    "Pokemon": "Pokemon/Azumarill.png",
-    "Role": "All-Rounder",
-    "Move Set": "Water Pulse/Aqua Tail",
-    "Move 1": [
-      "Moves/Azumarill - Water Pulse.png"
-    ],
-    "Move 2": [
-      "Moves/Azumarill - Aqua Tail.png"
-    ],
-    "Win Rate": 48.94,
-    "Pick Rate": 1.95,
-    "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 49.19,
-    "Pick Rate 1": 70.48,
-    "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 45.53,
-    "Pick Rate 2": 7.92,
-    "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 56.15,
-    "Pick Rate 3": 7.52
+    "Win Rate 3": 28.57,
+    "Pick Rate 3": 10.07
   },
   {
     "Name": "Azumarill",
@@ -631,17 +562,86 @@ const items = [
     "Move 2": [
       "Moves/Azumarill - Aqua Tail.png"
     ],
-    "Win Rate": 43.58,
-    "Pick Rate": 0.26,
+    "Win Rate": 41.76,
+    "Pick Rate": 0.22,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 43.75,
-    "Pick Rate 1": 44.04,
+    "Win Rate 1": 43.95,
+    "Pick Rate 1": 43.13,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 39.81,
-    "Pick Rate 2": 24.77,
+    "Win Rate 2": 37.36,
+    "Pick Rate 2": 25.0,
+    "Item 3": "Battle_Items/Eject Button.png",
+    "Win Rate 3": 40.48,
+    "Pick Rate 3": 11.54
+  },
+  {
+    "Name": "Azumarill",
+    "Pokemon": "Pokemon/Azumarill.png",
+    "Role": "All-Rounder",
+    "Move Set": "Water Pulse/Whirlpool",
+    "Move 1": [
+      "Moves/Azumarill - Water Pulse.png"
+    ],
+    "Move 2": [
+      "Moves/Azumarill - Whirlpool.png"
+    ],
+    "Win Rate": 46.37,
+    "Pick Rate": 0.18,
+    "Item 1": "Battle_Items/X Speed.png",
+    "Win Rate 1": 46.67,
+    "Pick Rate 1": 41.52,
+    "Item 2": "Battle_Items/X Attack.png",
+    "Win Rate 2": 55.84,
+    "Pick Rate 2": 26.64,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 38.3,
+    "Pick Rate 3": 16.26
+  },
+  {
+    "Name": "Azumarill",
+    "Pokemon": "Pokemon/Azumarill.png",
+    "Role": "All-Rounder",
+    "Move Set": "Play Rough/Whirlpool",
+    "Move 1": [
+      "Moves/Azumarill - Play Rough.png"
+    ],
+    "Move 2": [
+      "Moves/Azumarill - Whirlpool.png"
+    ],
+    "Win Rate": 48.06,
+    "Pick Rate": 2.97,
+    "Item 1": "Battle_Items/X Speed.png",
+    "Win Rate 1": 48.92,
+    "Pick Rate 1": 48.14,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 44.79,
+    "Pick Rate 2": 20.57,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 38.64,
-    "Pick Rate 3": 10.09
+    "Win Rate 3": 49.55,
+    "Pick Rate 3": 18.3
+  },
+  {
+    "Name": "Azumarill",
+    "Pokemon": "Pokemon/Azumarill.png",
+    "Role": "All-Rounder",
+    "Move Set": "Water Pulse/Aqua Tail",
+    "Move 1": [
+      "Moves/Azumarill - Water Pulse.png"
+    ],
+    "Move 2": [
+      "Moves/Azumarill - Aqua Tail.png"
+    ],
+    "Win Rate": 49.12,
+    "Pick Rate": 1.69,
+    "Item 1": "Battle_Items/X Speed.png",
+    "Win Rate 1": 50.1,
+    "Pick Rate 1": 69.92,
+    "Item 2": "Battle_Items/Full Heal.png",
+    "Win Rate 2": 50.0,
+    "Pick Rate 2": 8.48,
+    "Item 3": "Battle_Items/Eject Button.png",
+    "Win Rate 3": 41.83,
+    "Pick Rate 3": 7.47
   },
   {
     "Name": "Blastoise",
@@ -654,17 +654,17 @@ const items = [
     "Move 2": [
       "Moves/Blastoise - Surf.png"
     ],
-    "Win Rate": 48.85,
-    "Pick Rate": 15.51,
+    "Win Rate": 48.27,
+    "Pick Rate": 12.93,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.31,
-    "Pick Rate 1": 64.59,
+    "Win Rate 1": 49.01,
+    "Pick Rate 1": 62.93,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 48.47,
-    "Pick Rate 2": 18.84,
+    "Win Rate 2": 47.58,
+    "Pick Rate 2": 19.73,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 48.02,
-    "Pick Rate 3": 13.23
+    "Win Rate 3": 47.19,
+    "Pick Rate 3": 13.64
   },
   {
     "Name": "Blastoise",
@@ -677,17 +677,17 @@ const items = [
     "Move 2": [
       "Moves/Blastoise - Rapid Spin.png"
     ],
-    "Win Rate": 50.51,
-    "Pick Rate": 3.97,
+    "Win Rate": 52.65,
+    "Pick Rate": 3.11,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 50.85,
-    "Pick Rate 1": 90.31,
+    "Win Rate 1": 53.22,
+    "Pick Rate 1": 89.23,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 48.39,
-    "Pick Rate 2": 4.69,
+    "Win Rate 2": 49.49,
+    "Pick Rate 2": 5.72,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 47.14,
-    "Pick Rate 3": 4.24
+    "Win Rate 3": 47.44,
+    "Pick Rate 3": 4.2
   },
   {
     "Name": "Blastoise",
@@ -700,17 +700,17 @@ const items = [
     "Move 2": [
       "Moves/Blastoise - Rapid Spin.png"
     ],
-    "Win Rate": 48.7,
-    "Pick Rate": 1.01,
+    "Win Rate": 49.92,
+    "Pick Rate": 0.81,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 50.1,
-    "Pick Rate 1": 59.55,
+    "Win Rate 1": 50.06,
+    "Pick Rate 1": 59.77,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 48.51,
-    "Pick Rate 2": 19.93,
+    "Win Rate 2": 50.2,
+    "Pick Rate 2": 18.72,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 43.46,
-    "Pick Rate 3": 15.42
+    "Win Rate 3": 50.22,
+    "Pick Rate 3": 17.07
   },
   {
     "Name": "Blaziken",
@@ -725,86 +725,17 @@ const items = [
       "Moves/Blaziken - Blaze Kick.png",
       "Moves/Blaziken - Focus Blast.png"
     ],
-    "Win Rate": 50.18,
-    "Pick Rate": 17.14,
+    "Win Rate": 50.94,
+    "Pick Rate": 14.72,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 50.53,
-    "Pick Rate 1": 84.77,
-    "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 50.3,
-    "Pick Rate 2": 9.9,
-    "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 46.47,
-    "Pick Rate 3": 1.94
-  },
-  {
-    "Name": "Blissey",
-    "Pokemon": "Pokemon/Blissey.png",
-    "Role": "Supporter",
-    "Move Set": "Helping Hand/Safeguard",
-    "Move 1": [
-      "Moves/Blissey - Helping Hand.png"
-    ],
-    "Move 2": [
-      "Moves/Blissey - Safeguard.png"
-    ],
-    "Win Rate": 49.97,
-    "Pick Rate": 8.77,
-    "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 50.58,
-    "Pick Rate 1": 78.48,
+    "Win Rate 1": 51.69,
+    "Pick Rate 1": 85.14,
     "Item 2": "Battle_Items/Potion.png",
     "Win Rate 2": 47.78,
-    "Pick Rate 2": 11.09,
-    "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 45.95,
-    "Pick Rate 3": 4.91
-  },
-  {
-    "Name": "Blissey",
-    "Pokemon": "Pokemon/Blissey.png",
-    "Role": "Supporter",
-    "Move Set": "Helping Hand/Soft-Boiled",
-    "Move 1": [
-      "Moves/Blissey - Helping Hand.png"
-    ],
-    "Move 2": [
-      "Moves/Blissey - Soft-Boiled.png"
-    ],
-    "Win Rate": 42.32,
-    "Pick Rate": 0.42,
-    "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 43.08,
-    "Pick Rate 1": 63.27,
-    "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 43.12,
-    "Pick Rate 2": 15.64,
-    "Item 3": "Battle_Items/Slow Smoke.png",
-    "Win Rate 3": 43.08,
-    "Pick Rate 3": 9.33
-  },
-  {
-    "Name": "Blissey",
-    "Pokemon": "Pokemon/Blissey.png",
-    "Role": "Supporter",
-    "Move Set": "Egg Bomb/Safeguard",
-    "Move 1": [
-      "Moves/Blissey - Egg Bomb.png"
-    ],
-    "Move 2": [
-      "Moves/Blissey - Safeguard.png"
-    ],
-    "Win Rate": 44.14,
-    "Pick Rate": 0.26,
-    "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 42.25,
-    "Pick Rate 1": 65.29,
-    "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 47.83,
-    "Pick Rate 2": 15.86,
-    "Item 3": "Battle_Items/Slow Smoke.png",
-    "Win Rate 3": 45.45,
-    "Pick Rate 3": 7.59
+    "Pick Rate 2": 9.56,
+    "Item 3": "Battle_Items/Full Heal.png",
+    "Win Rate 3": 41.24,
+    "Pick Rate 3": 1.93
   },
   {
     "Name": "Blissey",
@@ -817,40 +748,63 @@ const items = [
     "Move 2": [
       "Moves/Blissey - Soft-Boiled.png"
     ],
-    "Win Rate": 50.75,
-    "Pick Rate": 13.03,
+    "Win Rate": 50.22,
+    "Pick Rate": 10.71,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 51.02,
-    "Pick Rate 1": 87.15,
+    "Win Rate 1": 50.66,
+    "Pick Rate 1": 86.86,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 49.6,
-    "Pick Rate 2": 5.16,
+    "Win Rate 2": 49.07,
+    "Pick Rate 2": 5.5,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 46.85,
-    "Pick Rate 3": 4.47
+    "Win Rate 3": 45.44,
+    "Pick Rate 3": 4.67
   },
   {
-    "Name": "Buzzwole",
-    "Pokemon": "Pokemon/Buzzwole.png",
-    "Role": "All-Rounder",
-    "Move Set": "Lunge/Superpower",
+    "Name": "Blissey",
+    "Pokemon": "Pokemon/Blissey.png",
+    "Role": "Supporter",
+    "Move Set": "Helping Hand/Safeguard",
     "Move 1": [
-      "Moves/Buzzwole - Lunge.png"
+      "Moves/Blissey - Helping Hand.png"
     ],
     "Move 2": [
-      "Moves/Buzzwole - Superpower.png"
+      "Moves/Blissey - Safeguard.png"
     ],
-    "Win Rate": 50.41,
-    "Pick Rate": 0.51,
-    "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 50.91,
-    "Pick Rate 1": 64.39,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 52.02,
-    "Pick Rate 2": 20.33,
-    "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 52.0,
-    "Pick Rate 3": 5.88
+    "Win Rate": 49.09,
+    "Pick Rate": 7.15,
+    "Item 1": "Battle_Items/X Speed.png",
+    "Win Rate 1": 49.69,
+    "Pick Rate 1": 78.46,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 46.66,
+    "Pick Rate 2": 9.93,
+    "Item 3": "Battle_Items/Slow Smoke.png",
+    "Win Rate 3": 47.07,
+    "Pick Rate 3": 5.08
+  },
+  {
+    "Name": "Blissey",
+    "Pokemon": "Pokemon/Blissey.png",
+    "Role": "Supporter",
+    "Move Set": "Helping Hand/Soft-Boiled",
+    "Move 1": [
+      "Moves/Blissey - Helping Hand.png"
+    ],
+    "Move 2": [
+      "Moves/Blissey - Soft-Boiled.png"
+    ],
+    "Win Rate": 42.47,
+    "Pick Rate": 0.38,
+    "Item 1": "Battle_Items/X Speed.png",
+    "Win Rate 1": 41.98,
+    "Pick Rate 1": 64.9,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 42.86,
+    "Pick Rate 2": 16.83,
+    "Item 3": "Battle_Items/Slow Smoke.png",
+    "Win Rate 3": 42.59,
+    "Pick Rate 3": 8.65
   },
   {
     "Name": "Buzzwole",
@@ -863,17 +817,40 @@ const items = [
     "Move 2": [
       "Moves/Buzzwole - Leech Life.png"
     ],
-    "Win Rate": 47.09,
-    "Pick Rate": 1.76,
+    "Win Rate": 48.28,
+    "Pick Rate": 1.61,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 48.65,
-    "Pick Rate 1": 40.62,
+    "Win Rate 1": 48.71,
+    "Pick Rate 1": 39.45,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 47.75,
-    "Pick Rate 2": 31.27,
+    "Win Rate 2": 52.83,
+    "Pick Rate 2": 31.37,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 44.64,
-    "Pick Rate 3": 15.96
+    "Win Rate 3": 41.5,
+    "Pick Rate 3": 15.55
+  },
+  {
+    "Name": "Buzzwole",
+    "Pokemon": "Pokemon/Buzzwole.png",
+    "Role": "All-Rounder",
+    "Move Set": "Lunge/Superpower",
+    "Move 1": [
+      "Moves/Buzzwole - Lunge.png"
+    ],
+    "Move 2": [
+      "Moves/Buzzwole - Superpower.png"
+    ],
+    "Win Rate": 51.97,
+    "Pick Rate": 0.46,
+    "Item 1": "Battle_Items/Eject Button.png",
+    "Win Rate 1": 53.2,
+    "Pick Rate 1": 63.82,
+    "Item 2": "Battle_Items/X Speed.png",
+    "Win Rate 2": 47.69,
+    "Pick Rate 2": 17.11,
+    "Item 3": "Battle_Items/Full Heal.png",
+    "Win Rate 3": 46.48,
+    "Pick Rate 3": 9.34
   },
   {
     "Name": "Buzzwole",
@@ -886,17 +863,17 @@ const items = [
     "Move 2": [
       "Moves/Buzzwole - Superpower.png"
     ],
-    "Win Rate": 48.07,
-    "Pick Rate": 8.26,
+    "Win Rate": 48.96,
+    "Pick Rate": 7.49,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 48.67,
-    "Pick Rate 1": 84.43,
+    "Win Rate 1": 49.81,
+    "Pick Rate 1": 84.32,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 44.48,
-    "Pick Rate 2": 9.29,
+    "Win Rate 2": 44.35,
+    "Pick Rate 2": 9.47,
     "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 42.83,
-    "Pick Rate 3": 3.35
+    "Win Rate 3": 47.0,
+    "Pick Rate 3": 3.24
   },
   {
     "Name": "Buzzwole",
@@ -909,17 +886,17 @@ const items = [
     "Move 2": [
       "Moves/Buzzwole - Leech Life.png"
     ],
-    "Win Rate": 46.39,
-    "Pick Rate": 7.44,
+    "Win Rate": 46.38,
+    "Pick Rate": 6.72,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 47.89,
-    "Pick Rate 1": 53.15,
+    "Win Rate 1": 47.52,
+    "Pick Rate 1": 51.86,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 44.27,
-    "Pick Rate 2": 26.79,
+    "Win Rate 2": 45.71,
+    "Pick Rate 2": 25.94,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 43.75,
-    "Pick Rate 3": 11.25
+    "Win Rate 3": 42.73,
+    "Pick Rate 3": 12.87
   },
   {
     "Name": "Ceruledge",
@@ -932,17 +909,17 @@ const items = [
     "Move 2": [
       "Moves/Ceruledge - Phantom Force.png"
     ],
-    "Win Rate": 46.02,
-    "Pick Rate": 1.57,
+    "Win Rate": 47.35,
+    "Pick Rate": 1.34,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 44.88,
-    "Pick Rate 1": 35.44,
+    "Win Rate 1": 45.73,
+    "Pick Rate 1": 34.95,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 49.31,
-    "Pick Rate 2": 33.18,
+    "Win Rate 2": 51.89,
+    "Pick Rate 2": 29.92,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 41.79,
-    "Pick Rate 3": 10.24
+    "Win Rate 3": 43.64,
+    "Pick Rate 3": 12.45
   },
   {
     "Name": "Ceruledge",
@@ -955,17 +932,17 @@ const items = [
     "Move 2": [
       "Moves/Ceruledge - Phantom Force.png"
     ],
-    "Win Rate": 46.68,
-    "Pick Rate": 1.34,
+    "Win Rate": 46.07,
+    "Pick Rate": 1.16,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 46.86,
-    "Pick Rate 1": 40.84,
-    "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 46.4,
-    "Pick Rate 2": 19.36,
-    "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 49.27,
-    "Pick Rate 3": 18.51
+    "Win Rate 1": 45.51,
+    "Pick Rate 1": 40.35,
+    "Item 2": "Battle_Items/X Attack.png",
+    "Win Rate 2": 47.3,
+    "Pick Rate 2": 19.41,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 46.6,
+    "Pick Rate 3": 17.0
   },
   {
     "Name": "Ceruledge",
@@ -978,17 +955,17 @@ const items = [
     "Move 2": [
       "Moves/Ceruledge - Flame Charge.png"
     ],
-    "Win Rate": 48.26,
-    "Pick Rate": 0.21,
+    "Win Rate": 48.38,
+    "Pick Rate": 0.19,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 50.53,
-    "Pick Rate 1": 27.62,
+    "Win Rate 1": 43.82,
+    "Pick Rate 1": 28.9,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 54.67,
-    "Pick Rate 2": 21.8,
+    "Win Rate 2": 43.48,
+    "Pick Rate 2": 22.4,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 46.38,
-    "Pick Rate 3": 20.06
+    "Win Rate 3": 59.02,
+    "Pick Rate 3": 19.81
   },
   {
     "Name": "Ceruledge",
@@ -1001,17 +978,17 @@ const items = [
     "Move 2": [
       "Moves/Ceruledge - Flame Charge.png"
     ],
-    "Win Rate": 49.6,
-    "Pick Rate": 3.36,
+    "Win Rate": 47.87,
+    "Pick Rate": 2.97,
     "Item 1": "Battle_Items/X Attack.png",
-    "Win Rate 1": 50.95,
-    "Pick Rate 1": 36.77,
+    "Win Rate 1": 50.14,
+    "Pick Rate 1": 36.22,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 50.41,
-    "Pick Rate 2": 23.92,
+    "Win Rate 2": 49.38,
+    "Pick Rate 2": 23.14,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 48.61,
-    "Pick Rate 3": 16.75
+    "Win Rate 3": 45.29,
+    "Pick Rate 3": 16.04
   },
   {
     "Name": "Chandelure",
@@ -1024,40 +1001,17 @@ const items = [
     "Move 2": [
       "Moves/Chandelure - Imprison.png"
     ],
-    "Win Rate": 50.23,
-    "Pick Rate": 1.03,
+    "Win Rate": 47.95,
+    "Pick Rate": 0.92,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 51.46,
-    "Pick Rate 1": 72.33,
+    "Win Rate 1": 48.87,
+    "Pick Rate 1": 70.37,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 48.03,
-    "Pick Rate 2": 22.33,
-    "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 46.0,
-    "Pick Rate 3": 2.93
-  },
-  {
-    "Name": "Chandelure",
-    "Pokemon": "Pokemon/Chandelure.png",
-    "Role": "Attacker",
-    "Move Set": "Overheat/Imprison",
-    "Move 1": [
-      "Moves/Chandelure - Overheat.png"
-    ],
-    "Move 2": [
-      "Moves/Chandelure - Imprison.png"
-    ],
-    "Win Rate": 49.59,
-    "Pick Rate": 0.95,
-    "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.55,
-    "Pick Rate 1": 69.53,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 50.67,
-    "Pick Rate 2": 23.66,
-    "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 55.77,
-    "Pick Rate 3": 3.28
+    "Win Rate 2": 47.91,
+    "Pick Rate 2": 23.74,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 44.44,
+    "Pick Rate 3": 1.79
   },
   {
     "Name": "Chandelure",
@@ -1070,17 +1024,40 @@ const items = [
     "Move 2": [
       "Moves/Chandelure - Poltergeist.png"
     ],
-    "Win Rate": 48.2,
-    "Pick Rate": 0.95,
+    "Win Rate": 50.61,
+    "Pick Rate": 0.89,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 50.3,
-    "Pick Rate 1": 53.26,
+    "Win Rate 1": 51.18,
+    "Pick Rate 1": 51.84,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 45.49,
-    "Pick Rate 2": 37.18,
+    "Win Rate 2": 52.01,
+    "Pick Rate 2": 40.65,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 54.05,
-    "Pick Rate 3": 4.69
+    "Win Rate 3": 43.1,
+    "Pick Rate 3": 3.96
+  },
+  {
+    "Name": "Chandelure",
+    "Pokemon": "Pokemon/Chandelure.png",
+    "Role": "Attacker",
+    "Move Set": "Overheat/Imprison",
+    "Move 1": [
+      "Moves/Chandelure - Overheat.png"
+    ],
+    "Move 2": [
+      "Moves/Chandelure - Imprison.png"
+    ],
+    "Win Rate": 50.25,
+    "Pick Rate": 0.86,
+    "Item 1": "Battle_Items/Eject Button.png",
+    "Win Rate 1": 51.14,
+    "Pick Rate 1": 68.22,
+    "Item 2": "Battle_Items/X Speed.png",
+    "Win Rate 2": 47.24,
+    "Pick Rate 2": 26.96,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 56.25,
+    "Pick Rate 3": 2.26
   },
   {
     "Name": "Chandelure",
@@ -1093,17 +1070,17 @@ const items = [
     "Move 2": [
       "Moves/Chandelure - Poltergeist.png"
     ],
-    "Win Rate": 48.94,
-    "Pick Rate": 0.74,
+    "Win Rate": 50.65,
+    "Pick Rate": 0.7,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 51.36,
-    "Pick Rate 1": 47.73,
+    "Win Rate 1": 51.88,
+    "Pick Rate 1": 45.98,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 47.24,
-    "Pick Rate 2": 39.69,
+    "Win Rate 2": 50.6,
+    "Pick Rate 2": 43.39,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 31.91,
-    "Pick Rate 3": 3.81
+    "Win Rate 3": 47.73,
+    "Pick Rate 3": 3.8
   },
   {
     "Name": "Charizard",
@@ -1116,17 +1093,17 @@ const items = [
     "Move 2": [
       "Moves/Charizard - Flare Blitz.png"
     ],
-    "Win Rate": 50.68,
-    "Pick Rate": 1.06,
+    "Win Rate": 48.95,
+    "Pick Rate": 0.61,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 53.97,
-    "Pick Rate 1": 37.85,
+    "Win Rate 1": 53.12,
+    "Pick Rate 1": 40.06,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 48.45,
-    "Pick Rate 2": 27.41,
+    "Win Rate 2": 41.88,
+    "Pick Rate 2": 27.67,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 49.36,
-    "Pick Rate 3": 13.22
+    "Win Rate 3": 48.72,
+    "Pick Rate 3": 11.69
   },
   {
     "Name": "Charizard",
@@ -1139,17 +1116,17 @@ const items = [
     "Move 2": [
       "Moves/Charizard - Fire Blast.png"
     ],
-    "Win Rate": 49.32,
-    "Pick Rate": 3.46,
+    "Win Rate": 50.81,
+    "Pick Rate": 2.43,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 50.49,
-    "Pick Rate 1": 40.69,
+    "Win Rate 1": 51.2,
+    "Pick Rate 1": 38.55,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 48.92,
-    "Pick Rate 2": 25.07,
+    "Win Rate 2": 49.76,
+    "Pick Rate 2": 26.54,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 48.05,
-    "Pick Rate 3": 13.4
+    "Win Rate 3": 50.89,
+    "Pick Rate 3": 14.11
   },
   {
     "Name": "Charizard",
@@ -1162,17 +1139,17 @@ const items = [
     "Move 2": [
       "Moves/Charizard - Fire Blast.png"
     ],
-    "Win Rate": 47.91,
-    "Pick Rate": 1.48,
+    "Win Rate": 48.16,
+    "Pick Rate": 0.94,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 47.63,
-    "Pick Rate 1": 43.68,
+    "Win Rate 1": 48.13,
+    "Pick Rate 1": 43.19,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 49.0,
-    "Pick Rate 2": 20.4,
+    "Win Rate 2": 45.63,
+    "Pick Rate 2": 22.92,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 48.81,
-    "Pick Rate 3": 17.07
+    "Win Rate 3": 50.0,
+    "Pick Rate 3": 16.01
   },
   {
     "Name": "Charizard",
@@ -1185,17 +1162,17 @@ const items = [
     "Move 2": [
       "Moves/Charizard - Flare Blitz.png"
     ],
-    "Win Rate": 50.45,
-    "Pick Rate": 7.94,
+    "Win Rate": 50.38,
+    "Pick Rate": 4.69,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 50.51,
-    "Pick Rate 1": 34.36,
+    "Win Rate 1": 50.66,
+    "Pick Rate 1": 36.51,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 51.56,
-    "Pick Rate 2": 22.57,
-    "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 49.35,
-    "Pick Rate 3": 16.35
+    "Win Rate 2": 49.94,
+    "Pick Rate 2": 21.5,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 49.5,
+    "Pick Rate 3": 16.8
   },
   {
     "Name": "Cinderace",
@@ -1208,17 +1185,17 @@ const items = [
     "Move 2": [
       "Moves/Cinderace - Feint.png"
     ],
-    "Win Rate": 48.04,
-    "Pick Rate": 9.5,
+    "Win Rate": 48.62,
+    "Pick Rate": 8.56,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.2,
-    "Pick Rate 1": 45.33,
+    "Win Rate 1": 49.71,
+    "Pick Rate 1": 44.46,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 48.85,
-    "Pick Rate 2": 30.36,
+    "Win Rate 2": 48.77,
+    "Pick Rate 2": 30.19,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 44.7,
-    "Pick Rate 3": 14.2
+    "Win Rate 3": 47.66,
+    "Pick Rate 3": 14.89
   },
   {
     "Name": "Cinderace",
@@ -1231,17 +1208,17 @@ const items = [
     "Move 2": [
       "Moves/Cinderace - Feint.png"
     ],
-    "Win Rate": 52.28,
-    "Pick Rate": 6.99,
+    "Win Rate": 51.05,
+    "Pick Rate": 5.7,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 52.69,
-    "Pick Rate 1": 66.68,
+    "Win Rate 1": 51.53,
+    "Pick Rate 1": 64.76,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 51.91,
-    "Pick Rate 2": 25.29,
+    "Win Rate 2": 51.72,
+    "Pick Rate 2": 26.58,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 50.63,
-    "Pick Rate 3": 4.12
+    "Win Rate 3": 43.93,
+    "Pick Rate 3": 4.39
   },
   {
     "Name": "Cinderace",
@@ -1254,17 +1231,17 @@ const items = [
     "Move 2": [
       "Moves/Cinderace - Flame Charge.png"
     ],
-    "Win Rate": 48.26,
-    "Pick Rate": 5.6,
+    "Win Rate": 47.4,
+    "Pick Rate": 5.2,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 48.95,
-    "Pick Rate 1": 41.4,
+    "Win Rate 1": 48.57,
+    "Pick Rate 1": 38.37,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 49.78,
+    "Win Rate 2": 47.43,
     "Pick Rate 2": 29.55,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 45.65,
-    "Pick Rate 3": 14.55
+    "Win Rate 3": 45.77,
+    "Pick Rate 3": 16.84
   },
   {
     "Name": "Cinderace",
@@ -1277,40 +1254,40 @@ const items = [
     "Move 2": [
       "Moves/Cinderace - Flame Charge.png"
     ],
-    "Win Rate": 52.1,
-    "Pick Rate": 2.09,
+    "Win Rate": 52.81,
+    "Pick Rate": 1.88,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 51.15,
-    "Pick Rate 1": 59.07,
+    "Win Rate 1": 53.91,
+    "Pick Rate 1": 57.0,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 56.0,
-    "Pick Rate 2": 29.78,
+    "Win Rate 2": 52.46,
+    "Pick Rate 2": 32.12,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 49.7,
-    "Pick Rate 3": 4.87
+    "Win Rate 3": 46.63,
+    "Pick Rate 3": 5.75
   },
   {
     "Name": "Clefable",
     "Pokemon": "Pokemon/Clefable.png",
     "Role": "Supporter",
-    "Move Set": "Draining Kiss/Follow Me",
+    "Move Set": "Draining Kiss/Gravity",
     "Move 1": [
       "Moves/Clefable - Draining Kiss.png"
     ],
     "Move 2": [
-      "Moves/Clefable - Follow Me.png"
+      "Moves/Clefable - Gravity.png"
     ],
-    "Win Rate": 39.64,
-    "Pick Rate": 0.27,
+    "Win Rate": 38.52,
+    "Pick Rate": 0.31,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 39.62,
-    "Pick Rate 1": 59.68,
+    "Win Rate 1": 39.87,
+    "Pick Rate 1": 58.56,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 38.68,
-    "Pick Rate 2": 23.87,
+    "Win Rate 2": 35.04,
+    "Pick Rate 2": 22.76,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 50.0,
-    "Pick Rate 3": 6.31
+    "Win Rate 3": 45.95,
+    "Pick Rate 3": 7.2
   },
   {
     "Name": "Clefable",
@@ -1323,17 +1300,17 @@ const items = [
     "Move 2": [
       "Moves/Clefable - Follow Me.png"
     ],
-    "Win Rate": 51.63,
-    "Pick Rate": 9.95,
+    "Win Rate": 52.86,
+    "Pick Rate": 10.86,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 51.96,
-    "Pick Rate 1": 88.07,
+    "Win Rate 1": 53.18,
+    "Pick Rate 1": 87.5,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 51.38,
-    "Pick Rate 2": 5.47,
+    "Win Rate 2": 50.94,
+    "Pick Rate 2": 5.65,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 46.47,
-    "Pick Rate 3": 2.91
+    "Win Rate 3": 50.62,
+    "Pick Rate 3": 3.17
   },
   {
     "Name": "Clefable",
@@ -1346,17 +1323,40 @@ const items = [
     "Move 2": [
       "Moves/Clefable - Gravity.png"
     ],
-    "Win Rate": 50.23,
-    "Pick Rate": 10.87,
+    "Win Rate": 50.72,
+    "Pick Rate": 11.19,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 50.56,
-    "Pick Rate 1": 78.33,
+    "Win Rate 1": 51.18,
+    "Pick Rate 1": 78.11,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 48.61,
-    "Pick Rate 2": 8.76,
+    "Win Rate 2": 48.89,
+    "Pick Rate 2": 8.78,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 51.27,
-    "Pick Rate 3": 5.88
+    "Win Rate 3": 49.68,
+    "Pick Rate 3": 6.02
+  },
+  {
+    "Name": "Clefable",
+    "Pokemon": "Pokemon/Clefable.png",
+    "Role": "Supporter",
+    "Move Set": "Draining Kiss/Follow Me",
+    "Move 1": [
+      "Moves/Clefable - Draining Kiss.png"
+    ],
+    "Move 2": [
+      "Moves/Clefable - Follow Me.png"
+    ],
+    "Win Rate": 44.1,
+    "Pick Rate": 1.37,
+    "Item 1": "Battle_Items/X Speed.png",
+    "Win Rate 1": 44.23,
+    "Pick Rate 1": 54.17,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 43.17,
+    "Pick Rate 2": 26.0,
+    "Item 3": "Battle_Items/Eject Button.png",
+    "Win Rate 3": 42.57,
+    "Pick Rate 3": 11.05
   },
   {
     "Name": "Comfey",
@@ -1369,17 +1369,17 @@ const items = [
     "Move 2": [
       "Moves/Comfey - Magical Leaf.png"
     ],
-    "Win Rate": 46.98,
-    "Pick Rate": 7.08,
+    "Win Rate": 45.97,
+    "Pick Rate": 6.55,
     "Item 1": "Battle_Items/Slow Smoke.png",
-    "Win Rate 1": 47.33,
-    "Pick Rate 1": 94.53,
+    "Win Rate 1": 46.24,
+    "Pick Rate 1": 93.95,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 37.5,
-    "Pick Rate 2": 1.7,
-    "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 40.67,
-    "Pick Rate 3": 1.27
+    "Win Rate 2": 37.71,
+    "Pick Rate 2": 1.62,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 45.34,
+    "Pick Rate 3": 1.49
   },
   {
     "Name": "Comfey",
@@ -1392,17 +1392,17 @@ const items = [
     "Move 2": [
       "Moves/Comfey - Grass Knot.png"
     ],
-    "Win Rate": 49.07,
-    "Pick Rate": 6.72,
+    "Win Rate": 48.8,
+    "Pick Rate": 6.46,
     "Item 1": "Battle_Items/Slow Smoke.png",
-    "Win Rate 1": 49.28,
-    "Pick Rate 1": 97.43,
+    "Win Rate 1": 49.13,
+    "Pick Rate 1": 97.19,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 34.29,
-    "Pick Rate 2": 0.94,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 48.98,
-    "Pick Rate 3": 0.44
+    "Win Rate 2": 38.27,
+    "Pick Rate 2": 0.76,
+    "Item 3": "Battle_Items/X Attack.png",
+    "Win Rate 3": 42.11,
+    "Pick Rate 3": 0.54
   },
   {
     "Name": "Comfey",
@@ -1415,17 +1415,17 @@ const items = [
     "Move 2": [
       "Moves/Comfey - Grass Knot.png"
     ],
-    "Win Rate": 54.75,
-    "Pick Rate": 3.15,
+    "Win Rate": 51.83,
+    "Pick Rate": 3.0,
     "Item 1": "Battle_Items/Slow Smoke.png",
-    "Win Rate 1": 55.16,
-    "Pick Rate 1": 90.85,
+    "Win Rate 1": 52.36,
+    "Pick Rate 1": 90.51,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 47.29,
-    "Pick Rate 2": 3.87,
+    "Win Rate 2": 47.28,
+    "Pick Rate 2": 3.73,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 60.39,
-    "Pick Rate 3": 2.94
+    "Win Rate 3": 51.16,
+    "Pick Rate 3": 2.62
   },
   {
     "Name": "Comfey",
@@ -1438,63 +1438,17 @@ const items = [
     "Move 2": [
       "Moves/Comfey - Magical Leaf.png"
     ],
-    "Win Rate": 40.9,
-    "Pick Rate": 0.53,
+    "Win Rate": 40.65,
+    "Pick Rate": 0.5,
     "Item 1": "Battle_Items/Slow Smoke.png",
-    "Win Rate 1": 41.33,
-    "Pick Rate 1": 93.22,
-    "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 23.53,
-    "Pick Rate 2": 1.92,
-    "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 35.71,
-    "Pick Rate 3": 1.58
-  },
-  {
-    "Name": "Cramorant",
-    "Pokemon": "Pokemon/Cramorant.png",
-    "Role": "Attacker",
-    "Move Set": "Surf/Hurricane",
-    "Move 1": [
-      "Moves/Cramorant - Surf.png"
-    ],
-    "Move 2": [
-      "Moves/Cramorant - Hurricane.png"
-    ],
-    "Win Rate": 48.26,
-    "Pick Rate": 1.58,
-    "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.91,
-    "Pick Rate 1": 66.17,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 42.57,
-    "Pick Rate 2": 17.22,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 48.05,
-    "Pick Rate 3": 8.82
-  },
-  {
-    "Name": "Cramorant",
-    "Pokemon": "Pokemon/Cramorant.png",
-    "Role": "Attacker",
-    "Move Set": "Dive/Air Slash",
-    "Move 1": [
-      "Moves/Cramorant - Dive.png"
-    ],
-    "Move 2": [
-      "Moves/Cramorant - Air Slash.png"
-    ],
-    "Win Rate": 47.44,
-    "Pick Rate": 0.7,
-    "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 47.36,
-    "Pick Rate 1": 75.98,
-    "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 48.21,
-    "Pick Rate 2": 9.57,
-    "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 47.27,
-    "Pick Rate 3": 4.7
+    "Win Rate 1": 40.89,
+    "Pick Rate 1": 92.64,
+    "Item 2": "Battle_Items/Eject Button.png",
+    "Win Rate 2": 52.94,
+    "Pick Rate 2": 2.05,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 36.36,
+    "Pick Rate 3": 1.33
   },
   {
     "Name": "Cramorant",
@@ -1507,17 +1461,17 @@ const items = [
     "Move 2": [
       "Moves/Cramorant - Hurricane.png"
     ],
-    "Win Rate": 49.83,
+    "Win Rate": 48.4,
     "Pick Rate": 0.53,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 50.21,
-    "Pick Rate 1": 82.56,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 42.37,
-    "Pick Rate 2": 6.68,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 58.0,
-    "Pick Rate 3": 5.66
+    "Win Rate 1": 49.15,
+    "Pick Rate 1": 80.37,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 38.33,
+    "Pick Rate 2": 6.85,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 53.33,
+    "Pick Rate 3": 6.85
   },
   {
     "Name": "Cramorant",
@@ -1530,40 +1484,63 @@ const items = [
     "Move 2": [
       "Moves/Cramorant - Air Slash.png"
     ],
-    "Win Rate": 52.38,
-    "Pick Rate": 0.05,
+    "Win Rate": 42.47,
+    "Pick Rate": 0.04,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.12,
-    "Pick Rate 1": 67.86,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 63.64,
-    "Pick Rate 2": 13.1,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 55.56,
-    "Pick Rate 3": 10.71
+    "Win Rate 1": 44.19,
+    "Pick Rate 1": 58.9,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 41.67,
+    "Pick Rate 2": 16.44,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 33.33,
+    "Pick Rate 3": 16.44
   },
   {
-    "Name": "Crustle",
-    "Pokemon": "Pokemon/Crustle.png",
-    "Role": "Defender",
-    "Move Set": "Shell Smash/Stealth Rock",
+    "Name": "Cramorant",
+    "Pokemon": "Pokemon/Cramorant.png",
+    "Role": "Attacker",
+    "Move Set": "Surf/Hurricane",
     "Move 1": [
-      "Moves/Crustle - Shell Smash.png"
+      "Moves/Cramorant - Surf.png"
     ],
     "Move 2": [
-      "Moves/Crustle - Stealth Rock.png"
+      "Moves/Cramorant - Hurricane.png"
     ],
-    "Win Rate": 47.8,
-    "Pick Rate": 0.62,
-    "Item 1": "Battle_Items/Fluffy Tail.png",
-    "Win Rate 1": 47.02,
-    "Pick Rate 1": 57.27,
-    "Item 2": "Battle_Items/Goal Getter.png",
-    "Win Rate 2": 52.82,
-    "Pick Rate 2": 13.85,
+    "Win Rate": 47.32,
+    "Pick Rate": 1.54,
+    "Item 1": "Battle_Items/Eject Button.png",
+    "Win Rate 1": 49.55,
+    "Pick Rate 1": 66.29,
+    "Item 2": "Battle_Items/X Speed.png",
+    "Win Rate 2": 46.95,
+    "Pick Rate 2": 16.76,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 35.57,
+    "Pick Rate 3": 7.63
+  },
+  {
+    "Name": "Cramorant",
+    "Pokemon": "Pokemon/Cramorant.png",
+    "Role": "Attacker",
+    "Move Set": "Dive/Air Slash",
+    "Move 1": [
+      "Moves/Cramorant - Dive.png"
+    ],
+    "Move 2": [
+      "Moves/Cramorant - Air Slash.png"
+    ],
+    "Win Rate": 49.95,
+    "Pick Rate": 0.66,
+    "Item 1": "Battle_Items/Eject Button.png",
+    "Win Rate 1": 52.54,
+    "Pick Rate 1": 78.21,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 50.0,
+    "Pick Rate 2": 7.02,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 49.5,
-    "Pick Rate 3": 9.85
+    "Win Rate 3": 37.88,
+    "Pick Rate 3": 6.09
   },
   {
     "Name": "Crustle",
@@ -1576,17 +1553,17 @@ const items = [
     "Move 2": [
       "Moves/Crustle - X-Scissor.png"
     ],
-    "Win Rate": 51.46,
-    "Pick Rate": 5.27,
+    "Win Rate": 50.68,
+    "Pick Rate": 4.78,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 52.14,
-    "Pick Rate 1": 75.31,
+    "Win Rate 1": 51.79,
+    "Pick Rate 1": 74.68,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 50.96,
-    "Pick Rate 2": 13.66,
+    "Win Rate 2": 48.48,
+    "Pick Rate 2": 14.25,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 48.0,
-    "Pick Rate 3": 8.56
+    "Win Rate 3": 46.72,
+    "Pick Rate 3": 8.7
   },
   {
     "Name": "Crustle",
@@ -1599,17 +1576,17 @@ const items = [
     "Move 2": [
       "Moves/Crustle - X-Scissor.png"
     ],
-    "Win Rate": 46.7,
-    "Pick Rate": 1.96,
+    "Win Rate": 46.6,
+    "Pick Rate": 1.93,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 45.7,
-    "Pick Rate 1": 31.48,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 49.94,
-    "Pick Rate 2": 24.01,
-    "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 47.6,
-    "Pick Rate 3": 21.76
+    "Win Rate 1": 49.17,
+    "Pick Rate 1": 26.43,
+    "Item 2": "Battle_Items/Eject Button.png",
+    "Win Rate 2": 47.09,
+    "Pick Rate 2": 23.79,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 44.84,
+    "Pick Rate 3": 22.88
   },
   {
     "Name": "Crustle",
@@ -1622,17 +1599,40 @@ const items = [
     "Move 2": [
       "Moves/Crustle - Stealth Rock.png"
     ],
-    "Win Rate": 48.37,
-    "Pick Rate": 1.0,
+    "Win Rate": 46.37,
+    "Pick Rate": 0.95,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 49.49,
-    "Pick Rate 1": 29.49,
+    "Win Rate 1": 44.65,
+    "Pick Rate 1": 30.38,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 48.61,
-    "Pick Rate 2": 28.17,
+    "Win Rate 2": 49.25,
+    "Pick Rate 2": 29.87,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 47.8,
-    "Pick Rate 3": 27.38
+    "Win Rate 3": 47.27,
+    "Pick Rate 3": 26.82
+  },
+  {
+    "Name": "Crustle",
+    "Pokemon": "Pokemon/Crustle.png",
+    "Role": "Defender",
+    "Move Set": "Shell Smash/Stealth Rock",
+    "Move 1": [
+      "Moves/Crustle - Shell Smash.png"
+    ],
+    "Move 2": [
+      "Moves/Crustle - Stealth Rock.png"
+    ],
+    "Win Rate": 45.66,
+    "Pick Rate": 0.6,
+    "Item 1": "Battle_Items/Fluffy Tail.png",
+    "Win Rate 1": 46.59,
+    "Pick Rate 1": 60.71,
+    "Item 2": "Battle_Items/Goal Getter.png",
+    "Win Rate 2": 44.14,
+    "Pick Rate 2": 11.21,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 46.3,
+    "Pick Rate 3": 10.91
   },
   {
     "Name": "Darkrai",
@@ -1645,17 +1645,17 @@ const items = [
     "Move 2": [
       "Moves/Darkrai - Nasty Plot.png"
     ],
-    "Win Rate": 51.68,
-    "Pick Rate": 26.22,
-    "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 51.76,
-    "Pick Rate 1": 32.89,
-    "Item 2": "Battle_Items/Full Heal.png",
-    "Win Rate 2": 53.02,
-    "Pick Rate 2": 32.32,
+    "Win Rate": 51.55,
+    "Pick Rate": 25.72,
+    "Item 1": "Battle_Items/Full Heal.png",
+    "Win Rate 1": 52.9,
+    "Pick Rate 1": 33.8,
+    "Item 2": "Battle_Items/Eject Button.png",
+    "Win Rate 2": 51.62,
+    "Pick Rate 2": 31.72,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 52.37,
-    "Pick Rate 3": 21.66
+    "Win Rate 3": 51.89,
+    "Pick Rate 3": 21.33
   },
   {
     "Name": "Darkrai",
@@ -1668,17 +1668,17 @@ const items = [
     "Move 2": [
       "Moves/Darkrai - Dark Pulse.png"
     ],
-    "Win Rate": 52.58,
-    "Pick Rate": 2.64,
+    "Win Rate": 53.42,
+    "Pick Rate": 2.47,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 54.76,
-    "Pick Rate 1": 40.92,
+    "Win Rate 1": 53.77,
+    "Pick Rate 1": 37.74,
     "Item 2": "Battle_Items/Full Heal.png",
-    "Win Rate 2": 48.59,
-    "Pick Rate 2": 31.5,
+    "Win Rate 2": 52.78,
+    "Pick Rate 2": 30.92,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 57.17,
-    "Pick Rate 3": 10.32
+    "Win Rate 3": 55.15,
+    "Pick Rate 3": 12.64
   },
   {
     "Name": "Darkrai",
@@ -1691,17 +1691,17 @@ const items = [
     "Move 2": [
       "Moves/Darkrai - Dark Pulse.png"
     ],
-    "Win Rate": 51.52,
-    "Pick Rate": 0.79,
-    "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 54.63,
-    "Pick Rate 1": 31.25,
-    "Item 2": "Battle_Items/Shedinja Doll.png",
-    "Win Rate 2": 54.37,
-    "Pick Rate 2": 27.9,
+    "Win Rate": 50.25,
+    "Pick Rate": 0.73,
+    "Item 1": "Battle_Items/Shedinja Doll.png",
+    "Win Rate 1": 52.83,
+    "Pick Rate 1": 26.32,
+    "Item 2": "Battle_Items/Eject Button.png",
+    "Win Rate 2": 46.52,
+    "Pick Rate 2": 26.16,
     "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 53.26,
-    "Pick Rate 3": 14.02
+    "Win Rate 3": 63.36,
+    "Pick Rate 3": 21.69
   },
   {
     "Name": "Decidueye",
@@ -1714,17 +1714,17 @@ const items = [
     "Move 2": [
       "Moves/Decidueye - Leaf Storm.png"
     ],
-    "Win Rate": 47.38,
-    "Pick Rate": 2.08,
+    "Win Rate": 47.48,
+    "Pick Rate": 1.85,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 48.01,
-    "Pick Rate 1": 48.8,
+    "Win Rate 1": 48.55,
+    "Pick Rate 1": 46.59,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 47.53,
-    "Pick Rate 2": 38.65,
+    "Win Rate 2": 48.08,
+    "Pick Rate 2": 41.16,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 43.22,
-    "Pick Rate 3": 5.76
+    "Win Rate 3": 44.16,
+    "Pick Rate 3": 5.07
   },
   {
     "Name": "Decidueye",
@@ -1737,17 +1737,17 @@ const items = [
     "Move 2": [
       "Moves/Decidueye - Shadow Sneak.png"
     ],
-    "Win Rate": 49.13,
-    "Pick Rate": 14.73,
+    "Win Rate": 50.03,
+    "Pick Rate": 13.9,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.8,
-    "Pick Rate 1": 51.42,
+    "Win Rate 1": 50.43,
+    "Pick Rate 1": 49.37,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 49.15,
-    "Pick Rate 2": 40.88,
+    "Win Rate 2": 50.56,
+    "Pick Rate 2": 43.05,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 44.44,
-    "Pick Rate 3": 4.19
+    "Win Rate 3": 46.28,
+    "Pick Rate 3": 4.29
   },
   {
     "Name": "Decidueye",
@@ -1760,17 +1760,17 @@ const items = [
     "Move 2": [
       "Moves/Decidueye - Leaf Storm.png"
     ],
-    "Win Rate": 45.76,
-    "Pick Rate": 3.82,
+    "Win Rate": 46.31,
+    "Pick Rate": 3.38,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 45.93,
-    "Pick Rate 1": 40.09,
+    "Win Rate 1": 47.1,
+    "Pick Rate 1": 39.62,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 44.38,
-    "Pick Rate 2": 27.19,
+    "Win Rate 2": 44.56,
+    "Pick Rate 2": 27.11,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 48.13,
-    "Pick Rate 3": 25.3
+    "Win Rate 3": 48.14,
+    "Pick Rate 3": 24.2
   },
   {
     "Name": "Decidueye",
@@ -1783,17 +1783,17 @@ const items = [
     "Move 2": [
       "Moves/Decidueye - Shadow Sneak.png"
     ],
-    "Win Rate": 46.58,
-    "Pick Rate": 2.13,
+    "Win Rate": 48.4,
+    "Pick Rate": 2.17,
     "Item 1": "Battle_Items/X Attack.png",
-    "Win Rate 1": 47.12,
-    "Pick Rate 1": 30.76,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 45.09,
-    "Pick Rate 2": 30.4,
-    "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 48.82,
-    "Pick Rate 3": 29.81
+    "Win Rate 1": 47.28,
+    "Pick Rate 1": 32.46,
+    "Item 2": "Battle_Items/Eject Button.png",
+    "Win Rate 2": 51.63,
+    "Pick Rate 2": 29.29,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 48.87,
+    "Pick Rate 3": 28.65
   },
   {
     "Name": "Delphox",
@@ -1806,17 +1806,17 @@ const items = [
     "Move 2": [
       "Moves/Delphox - Fire Spin.png"
     ],
-    "Win Rate": 50.55,
-    "Pick Rate": 6.83,
+    "Win Rate": 49.13,
+    "Pick Rate": 6.37,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 51.89,
-    "Pick Rate 1": 51.66,
+    "Win Rate 1": 49.95,
+    "Pick Rate 1": 51.3,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 49.79,
-    "Pick Rate 2": 37.2,
+    "Win Rate 2": 48.88,
+    "Pick Rate 2": 38.13,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 48.49,
-    "Pick Rate 3": 5.25
+    "Win Rate 3": 45.2,
+    "Pick Rate 3": 5.17
   },
   {
     "Name": "Delphox",
@@ -1829,17 +1829,17 @@ const items = [
     "Move 2": [
       "Moves/Delphox - Flame Charge.png"
     ],
-    "Win Rate": 53.12,
-    "Pick Rate": 5.05,
+    "Win Rate": 54.03,
+    "Pick Rate": 4.5,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 54.57,
-    "Pick Rate 1": 79.28,
+    "Win Rate 1": 55.16,
+    "Pick Rate 1": 80.48,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 45.75,
-    "Pick Rate 2": 13.18,
+    "Win Rate 2": 49.63,
+    "Pick Rate 2": 12.73,
     "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 55.86,
-    "Pick Rate 3": 3.86
+    "Win Rate 3": 48.5,
+    "Pick Rate 3": 3.59
   },
   {
     "Name": "Delphox",
@@ -1852,17 +1852,17 @@ const items = [
     "Move 2": [
       "Moves/Delphox - Fire Spin.png"
     ],
-    "Win Rate": 48.6,
-    "Pick Rate": 3.19,
+    "Win Rate": 50.98,
+    "Pick Rate": 2.96,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.78,
-    "Pick Rate 1": 63.18,
+    "Win Rate 1": 52.57,
+    "Pick Rate 1": 64.12,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 45.63,
-    "Pick Rate 2": 29.04,
+    "Win Rate 2": 48.28,
+    "Pick Rate 2": 28.57,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 49.7,
-    "Pick Rate 3": 3.11
+    "Win Rate 3": 47.3,
+    "Pick Rate 3": 3.03
   },
   {
     "Name": "Delphox",
@@ -1875,17 +1875,17 @@ const items = [
     "Move 2": [
       "Moves/Delphox - Flame Charge.png"
     ],
-    "Win Rate": 49.11,
-    "Pick Rate": 0.2,
+    "Win Rate": 51.25,
+    "Pick Rate": 0.17,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 48.32,
-    "Pick Rate 1": 44.35,
+    "Win Rate 1": 57.69,
+    "Pick Rate 1": 46.26,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 54.7,
-    "Pick Rate 2": 34.82,
+    "Win Rate 2": 41.3,
+    "Pick Rate 2": 32.74,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 37.04,
-    "Pick Rate 3": 8.04
+    "Win Rate 3": 58.54,
+    "Pick Rate 3": 14.59
   },
   {
     "Name": "Dodrio",
@@ -1898,17 +1898,17 @@ const items = [
     "Move 2": [
       "Moves/Dodrio - Agility.png"
     ],
-    "Win Rate": 42.2,
-    "Pick Rate": 0.2,
+    "Win Rate": 39.18,
+    "Pick Rate": 0.21,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 41.78,
-    "Pick Rate 1": 68.81,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 34.88,
-    "Pick Rate 2": 13.15,
+    "Win Rate 1": 43.28,
+    "Pick Rate 1": 58.77,
+    "Item 2": "Battle_Items/Goal Getter.png",
+    "Win Rate 2": 30.19,
+    "Pick Rate 2": 15.5,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 50.0,
-    "Pick Rate 3": 4.89
+    "Win Rate 3": 30.0,
+    "Pick Rate 3": 8.77
   },
   {
     "Name": "Dodrio",
@@ -1921,17 +1921,17 @@ const items = [
     "Move 2": [
       "Moves/Dodrio - Agility.png"
     ],
-    "Win Rate": 37.21,
+    "Win Rate": 34.24,
     "Pick Rate": 0.18,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 42.53,
-    "Pick Rate 1": 28.9,
+    "Win Rate 1": 34.07,
+    "Pick Rate 1": 30.85,
     "Item 2": "Battle_Items/Full Heal.png",
-    "Win Rate 2": 28.24,
-    "Pick Rate 2": 28.24,
+    "Win Rate 2": 27.91,
+    "Pick Rate 2": 29.15,
     "Item 3": "Battle_Items/Goal Getter.png",
-    "Win Rate 3": 37.78,
-    "Pick Rate 3": 14.95
+    "Win Rate 3": 43.14,
+    "Pick Rate 3": 17.29
   },
   {
     "Name": "Dodrio",
@@ -1944,17 +1944,17 @@ const items = [
     "Move 2": [
       "Moves/Dodrio - Jump Kick.png"
     ],
-    "Win Rate": 54.21,
-    "Pick Rate": 7.42,
+    "Win Rate": 52.72,
+    "Pick Rate": 5.72,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 54.65,
-    "Pick Rate 1": 97.16,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 39.84,
-    "Pick Rate 2": 1.0,
-    "Item 3": "Battle_Items/Goal Getter.png",
-    "Win Rate 3": 42.39,
-    "Pick Rate 3": 0.75
+    "Win Rate 1": 52.97,
+    "Pick Rate 1": 96.45,
+    "Item 2": "Battle_Items/Goal Getter.png",
+    "Win Rate 2": 50.76,
+    "Pick Rate 2": 1.4,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 43.16,
+    "Pick Rate 3": 1.01
   },
   {
     "Name": "Dodrio",
@@ -1967,17 +1967,17 @@ const items = [
     "Move 2": [
       "Moves/Dodrio - Jump Kick.png"
     ],
-    "Win Rate": 49.67,
-    "Pick Rate": 1.98,
+    "Win Rate": 48.24,
+    "Pick Rate": 1.73,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 51.12,
-    "Pick Rate 1": 67.66,
+    "Win Rate 1": 48.92,
+    "Pick Rate 1": 66.61,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 46.44,
-    "Pick Rate 2": 13.68,
+    "Win Rate 2": 50.74,
+    "Pick Rate 2": 16.54,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 42.91,
-    "Pick Rate 3": 7.51
+    "Win Rate 3": 43.03,
+    "Pick Rate 3": 5.79
   },
   {
     "Name": "Dragapult",
@@ -1990,17 +1990,17 @@ const items = [
     "Move 2": [
       "Moves/Dragapult - Phantom Force.png"
     ],
-    "Win Rate": 49.69,
-    "Pick Rate": 3.99,
+    "Win Rate": 47.41,
+    "Pick Rate": 3.26,
     "Item 1": "Battle_Items/X Attack.png",
-    "Win Rate 1": 50.91,
-    "Pick Rate 1": 67.24,
+    "Win Rate 1": 48.94,
+    "Pick Rate 1": 67.84,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 48.77,
-    "Pick Rate 2": 20.19,
+    "Win Rate 2": 46.2,
+    "Pick Rate 2": 20.4,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 41.79,
-    "Pick Rate 3": 7.06
+    "Win Rate 3": 40.45,
+    "Pick Rate 3": 5.77
   },
   {
     "Name": "Dragapult",
@@ -2013,17 +2013,17 @@ const items = [
     "Move 2": [
       "Moves/Dragapult - Dragon Dance.png"
     ],
-    "Win Rate": 48.61,
-    "Pick Rate": 2.93,
+    "Win Rate": 48.65,
+    "Pick Rate": 2.56,
     "Item 1": "Battle_Items/X Attack.png",
-    "Win Rate 1": 50.23,
-    "Pick Rate 1": 48.24,
-    "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 46.42,
-    "Pick Rate 2": 20.39,
-    "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 49.83,
-    "Pick Rate 3": 17.97
+    "Win Rate 1": 49.92,
+    "Pick Rate 1": 45.35,
+    "Item 2": "Battle_Items/Full Heal.png",
+    "Win Rate 2": 49.35,
+    "Pick Rate 2": 20.19,
+    "Item 3": "Battle_Items/Eject Button.png",
+    "Win Rate 3": 46.7,
+    "Pick Rate 3": 19.77
   },
   {
     "Name": "Dragapult",
@@ -2036,17 +2036,17 @@ const items = [
     "Move 2": [
       "Moves/Dragapult - Dragon Dance.png"
     ],
-    "Win Rate": 48.64,
-    "Pick Rate": 0.88,
+    "Win Rate": 50.38,
+    "Pick Rate": 0.8,
     "Item 1": "Battle_Items/X Attack.png",
-    "Win Rate 1": 49.86,
-    "Pick Rate 1": 47.07,
+    "Win Rate 1": 54.17,
+    "Pick Rate 1": 47.42,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 46.73,
-    "Pick Rate 2": 21.84,
+    "Win Rate 2": 48.68,
+    "Pick Rate 2": 23.1,
     "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 49.77,
-    "Pick Rate 3": 14.63
+    "Win Rate 3": 51.12,
+    "Pick Rate 3": 13.53
   },
   {
     "Name": "Dragapult",
@@ -2059,40 +2059,17 @@ const items = [
     "Move 2": [
       "Moves/Dragapult - Phantom Force.png"
     ],
-    "Win Rate": 47.1,
-    "Pick Rate": 0.86,
+    "Win Rate": 47.42,
+    "Pick Rate": 0.67,
     "Item 1": "Battle_Items/X Attack.png",
-    "Win Rate 1": 48.83,
-    "Pick Rate 1": 53.74,
+    "Win Rate 1": 48.78,
+    "Pick Rate 1": 55.58,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 45.31,
-    "Pick Rate 2": 21.62,
+    "Win Rate 2": 45.74,
+    "Pick Rate 2": 20.22,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 43.61,
-    "Pick Rate 3": 15.89
-  },
-  {
-    "Name": "Dragonite",
-    "Pokemon": "Pokemon/Dragonite.png",
-    "Role": "All-Rounder",
-    "Move Set": "Dragon Dance/Hyper Beam",
-    "Move 1": [
-      "Moves/Dragonite - Dragon Dance.png"
-    ],
-    "Move 2": [
-      "Moves/Dragonite - Hyper Beam.png"
-    ],
-    "Win Rate": 51.78,
-    "Pick Rate": 1.4,
-    "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 54.69,
-    "Pick Rate 1": 59.04,
-    "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 51.08,
-    "Pick Rate 2": 23.96,
-    "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 37.98,
-    "Pick Rate 3": 5.54
+    "Win Rate 3": 43.9,
+    "Pick Rate 3": 14.87
   },
   {
     "Name": "Dragonite",
@@ -2105,17 +2082,40 @@ const items = [
     "Move 2": [
       "Moves/Dragonite - Outrage.png"
     ],
-    "Win Rate": 48.32,
-    "Pick Rate": 1.34,
-    "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 45.0,
-    "Pick Rate 1": 26.0,
-    "Item 2": "Battle_Items/Full Heal.png",
-    "Win Rate 2": 53.14,
-    "Pick Rate 2": 21.43,
+    "Win Rate": 48.47,
+    "Pick Rate": 1.45,
+    "Item 1": "Battle_Items/Full Heal.png",
+    "Win Rate 1": 53.74,
+    "Pick Rate 1": 23.5,
+    "Item 2": "Battle_Items/X Attack.png",
+    "Win Rate 2": 47.28,
+    "Pick Rate 2": 21.5,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 46.3,
+    "Pick Rate 3": 21.5
+  },
+  {
+    "Name": "Dragonite",
+    "Pokemon": "Pokemon/Dragonite.png",
+    "Role": "All-Rounder",
+    "Move Set": "Dragon Dance/Hyper Beam",
+    "Move 1": [
+      "Moves/Dragonite - Dragon Dance.png"
+    ],
+    "Move 2": [
+      "Moves/Dragonite - Hyper Beam.png"
+    ],
+    "Win Rate": 52.66,
+    "Pick Rate": 1.13,
+    "Item 1": "Battle_Items/Full Heal.png",
+    "Win Rate 1": 56.0,
+    "Pick Rate 1": 51.53,
+    "Item 2": "Battle_Items/Eject Button.png",
+    "Win Rate 2": 51.0,
+    "Pick Rate 2": 29.61,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 48.1,
-    "Pick Rate 3": 18.92
+    "Win Rate 3": 50.39,
+    "Pick Rate 3": 6.82
   },
   {
     "Name": "Dragonite",
@@ -2128,17 +2128,17 @@ const items = [
     "Move 2": [
       "Moves/Dragonite - Outrage.png"
     ],
-    "Win Rate": 48.63,
-    "Pick Rate": 1.12,
+    "Win Rate": 47.56,
+    "Pick Rate": 1.1,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 49.72,
-    "Pick Rate 1": 28.64,
+    "Win Rate 1": 49.02,
+    "Pick Rate 1": 28.13,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 53.36,
-    "Pick Rate 2": 25.58,
-    "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 47.33,
-    "Pick Rate 3": 14.08
+    "Win Rate 2": 50.2,
+    "Pick Rate 2": 27.35,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 42.17,
+    "Pick Rate 3": 13.79
   },
   {
     "Name": "Duraludon",
@@ -2151,17 +2151,17 @@ const items = [
     "Move 2": [
       "Moves/Duraludon - Dragon Tail.png"
     ],
-    "Win Rate": 48.72,
+    "Win Rate": 45.64,
     "Pick Rate": 0.09,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 52.81,
-    "Pick Rate 1": 57.05,
+    "Win Rate 1": 54.69,
+    "Pick Rate 1": 42.95,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 47.22,
-    "Pick Rate 2": 23.08,
+    "Win Rate 2": 43.14,
+    "Pick Rate 2": 34.23,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 25.0,
-    "Pick Rate 3": 10.26
+    "Win Rate 3": 26.09,
+    "Pick Rate 3": 15.44
   },
   {
     "Name": "Duraludon",
@@ -2174,17 +2174,17 @@ const items = [
     "Move 2": [
       "Moves/Duraludon - Dragon Tail.png"
     ],
-    "Win Rate": 48.86,
-    "Pick Rate": 1.08,
+    "Win Rate": 50.32,
+    "Pick Rate": 1.15,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 48.82,
-    "Pick Rate 1": 52.15,
+    "Win Rate 1": 50.45,
+    "Pick Rate 1": 46.58,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 51.65,
-    "Pick Rate 2": 28.75,
+    "Win Rate 2": 52.68,
+    "Pick Rate 2": 32.4,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 43.21,
-    "Pick Rate 3": 9.05
+    "Win Rate 3": 43.45,
+    "Pick Rate 3": 8.85
   },
   {
     "Name": "Duraludon",
@@ -2197,17 +2197,17 @@ const items = [
     "Move 2": [
       "Moves/Duraludon - Stealth Rock.png"
     ],
-    "Win Rate": 50.86,
-    "Pick Rate": 0.59,
+    "Win Rate": 53.37,
+    "Pick Rate": 0.68,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 52.19,
-    "Pick Rate 1": 48.63,
+    "Win Rate 1": 54.44,
+    "Pick Rate 1": 52.93,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 53.18,
-    "Pick Rate 2": 31.88,
+    "Win Rate 2": 54.17,
+    "Pick Rate 2": 25.53,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 39.6,
-    "Pick Rate 3": 10.25
+    "Win Rate 3": 53.15,
+    "Pick Rate 3": 12.68
   },
   {
     "Name": "Duraludon",
@@ -2220,17 +2220,17 @@ const items = [
     "Move 2": [
       "Moves/Duraludon - Stealth Rock.png"
     ],
-    "Win Rate": 47.71,
-    "Pick Rate": 0.35,
+    "Win Rate": 51.28,
+    "Pick Rate": 0.33,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 45.8,
-    "Pick Rate 1": 44.48,
+    "Win Rate 1": 49.06,
+    "Pick Rate 1": 48.72,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 50.49,
-    "Pick Rate 2": 34.63,
+    "Win Rate 2": 55.42,
+    "Pick Rate 2": 30.29,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 47.06,
-    "Pick Rate 3": 14.43
+    "Win Rate 3": 51.19,
+    "Pick Rate 3": 15.33
   },
   {
     "Name": "Eldegoss",
@@ -2243,17 +2243,17 @@ const items = [
     "Move 2": [
       "Moves/Eldegoss - Cotton Guard.png"
     ],
-    "Win Rate": 50.93,
-    "Pick Rate": 7.07,
+    "Win Rate": 50.44,
+    "Pick Rate": 6.55,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 51.34,
-    "Pick Rate 1": 50.56,
+    "Win Rate 1": 49.79,
+    "Pick Rate 1": 50.81,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 52.06,
-    "Pick Rate 2": 32.37,
+    "Win Rate 2": 52.64,
+    "Pick Rate 2": 32.28,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 42.78,
-    "Pick Rate 3": 6.24
+    "Win Rate 3": 48.45,
+    "Pick Rate 3": 6.28
   },
   {
     "Name": "Eldegoss",
@@ -2266,17 +2266,17 @@ const items = [
     "Move 2": [
       "Moves/Eldegoss - Cotton Spore.png"
     ],
-    "Win Rate": 49.05,
-    "Pick Rate": 5.34,
+    "Win Rate": 49.57,
+    "Pick Rate": 4.84,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 47.73,
-    "Pick Rate 1": 47.51,
+    "Win Rate 1": 49.04,
+    "Pick Rate 1": 48.21,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 49.96,
-    "Pick Rate 2": 27.96,
+    "Win Rate 2": 50.4,
+    "Pick Rate 2": 28.47,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 51.7,
-    "Pick Rate 3": 9.58
+    "Win Rate 3": 48.82,
+    "Pick Rate 3": 10.1
   },
   {
     "Name": "Eldegoss",
@@ -2289,17 +2289,17 @@ const items = [
     "Move 2": [
       "Moves/Eldegoss - Cotton Spore.png"
     ],
-    "Win Rate": 49.38,
-    "Pick Rate": 0.96,
+    "Win Rate": 50.04,
+    "Pick Rate": 0.78,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 48.44,
-    "Pick Rate 1": 32.13,
+    "Win Rate 1": 50.4,
+    "Pick Rate 1": 29.38,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 46.88,
-    "Pick Rate 2": 26.0,
+    "Win Rate 2": 48.28,
+    "Pick Rate 2": 27.12,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 51.34,
-    "Pick Rate 3": 23.38
+    "Win Rate 3": 51.89,
+    "Pick Rate 3": 20.58
   },
   {
     "Name": "Eldegoss",
@@ -2312,17 +2312,17 @@ const items = [
     "Move 2": [
       "Moves/Eldegoss - Cotton Guard.png"
     ],
-    "Win Rate": 49.75,
-    "Pick Rate": 0.48,
+    "Win Rate": 51.9,
+    "Pick Rate": 0.43,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 50.42,
-    "Pick Rate 1": 44.68,
+    "Win Rate 1": 50.5,
+    "Pick Rate 1": 42.45,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 48.78,
-    "Pick Rate 2": 20.76,
+    "Win Rate 2": 54.32,
+    "Pick Rate 2": 22.85,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 44.25,
-    "Pick Rate 3": 14.3
+    "Win Rate 3": 55.75,
+    "Pick Rate 3": 15.94
   },
   {
     "Name": "Empoleon",
@@ -2335,17 +2335,17 @@ const items = [
     "Move 2": [
       "Moves/Empoleon - Aqua Jet.png"
     ],
-    "Win Rate": 49.8,
-    "Pick Rate": 8.75,
+    "Win Rate": 49.33,
+    "Pick Rate": 7.02,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 51.66,
-    "Pick Rate 1": 41.34,
+    "Win Rate 1": 51.78,
+    "Pick Rate 1": 42.8,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 48.67,
-    "Pick Rate 2": 28.86,
+    "Win Rate 2": 47.8,
+    "Pick Rate 2": 27.13,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 48.05,
-    "Pick Rate 3": 12.85
+    "Win Rate 3": 46.01,
+    "Pick Rate 3": 13.12
   },
   {
     "Name": "Empoleon",
@@ -2358,17 +2358,17 @@ const items = [
     "Move 2": [
       "Moves/Empoleon - Metal Claw.png"
     ],
-    "Win Rate": 49.08,
-    "Pick Rate": 3.81,
+    "Win Rate": 49.78,
+    "Pick Rate": 2.82,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.78,
-    "Pick Rate 1": 28.69,
+    "Win Rate 1": 50.84,
+    "Pick Rate 1": 26.9,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 48.23,
-    "Pick Rate 2": 22.25,
-    "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 50.55,
-    "Pick Rate 3": 21.6
+    "Win Rate 2": 46.99,
+    "Pick Rate 2": 22.95,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 50.91,
+    "Pick Rate 3": 21.44
   },
   {
     "Name": "Empoleon",
@@ -2381,17 +2381,17 @@ const items = [
     "Move 2": [
       "Moves/Empoleon - Metal Claw.png"
     ],
-    "Win Rate": 48.1,
-    "Pick Rate": 1.16,
+    "Win Rate": 45.03,
+    "Pick Rate": 0.83,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 50.88,
-    "Pick Rate 1": 32.36,
+    "Win Rate 1": 44.02,
+    "Pick Rate 1": 32.6,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 46.89,
-    "Pick Rate 2": 21.71,
+    "Win Rate 2": 45.39,
+    "Pick Rate 2": 20.75,
     "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 44.58,
-    "Pick Rate 3": 21.56
+    "Win Rate 3": 44.83,
+    "Pick Rate 3": 19.21
   },
   {
     "Name": "Empoleon",
@@ -2404,40 +2404,17 @@ const items = [
     "Move 2": [
       "Moves/Empoleon - Aqua Jet.png"
     ],
-    "Win Rate": 48.96,
-    "Pick Rate": 0.95,
+    "Win Rate": 46.92,
+    "Pick Rate": 0.73,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 48.88,
-    "Pick Rate 1": 25.36,
+    "Win Rate 1": 48.2,
+    "Pick Rate 1": 27.79,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 47.89,
-    "Pick Rate 2": 22.45,
-    "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 51.85,
-    "Pick Rate 3": 22.2
-  },
-  {
-    "Name": "Espeon",
-    "Pokemon": "Pokemon/Espeon.png",
-    "Role": "Attacker",
-    "Move Set": "Psyshock/Psybeam",
-    "Move 1": [
-      "Moves/Espeon - Psyshock.png"
-    ],
-    "Move 2": [
-      "Moves/Espeon - Psybeam.png"
-    ],
-    "Win Rate": 48.33,
-    "Pick Rate": 4.46,
-    "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.28,
-    "Pick Rate 1": 66.44,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 46.87,
-    "Pick Rate 2": 24.56,
+    "Win Rate 2": 48.47,
+    "Pick Rate 2": 21.8,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 45.98,
-    "Pick Rate 3": 6.05
+    "Win Rate 3": 46.15,
+    "Pick Rate 3": 21.63
   },
   {
     "Name": "Espeon",
@@ -2450,17 +2427,40 @@ const items = [
     "Move 2": [
       "Moves/Espeon - Future Sight.png"
     ],
-    "Win Rate": 46.71,
-    "Pick Rate": 3.35,
+    "Win Rate": 50.25,
+    "Pick Rate": 13.81,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 46.4,
-    "Pick Rate 1": 51.24,
+    "Win Rate 1": 50.9,
+    "Pick Rate 1": 66.1,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 46.47,
-    "Pick Rate 2": 35.42,
+    "Win Rate 2": 49.31,
+    "Pick Rate 2": 24.91,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 48.37,
-    "Pick Rate 3": 8.81
+    "Win Rate 3": 48.02,
+    "Pick Rate 3": 4.99
+  },
+  {
+    "Name": "Espeon",
+    "Pokemon": "Pokemon/Espeon.png",
+    "Role": "Attacker",
+    "Move Set": "Psyshock/Psybeam",
+    "Move 1": [
+      "Moves/Espeon - Psyshock.png"
+    ],
+    "Move 2": [
+      "Moves/Espeon - Psybeam.png"
+    ],
+    "Win Rate": 49.37,
+    "Pick Rate": 6.44,
+    "Item 1": "Battle_Items/Eject Button.png",
+    "Win Rate 1": 50.48,
+    "Pick Rate 1": 66.21,
+    "Item 2": "Battle_Items/X Speed.png",
+    "Win Rate 2": 48.09,
+    "Pick Rate 2": 23.19,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 44.55,
+    "Pick Rate 3": 6.66
   },
   {
     "Name": "Espeon",
@@ -2473,17 +2473,17 @@ const items = [
     "Move 2": [
       "Moves/Espeon - Future Sight.png"
     ],
-    "Win Rate": 47.14,
-    "Pick Rate": 3.34,
+    "Win Rate": 50.51,
+    "Pick Rate": 5.73,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 48.03,
-    "Pick Rate 1": 54.51,
+    "Win Rate 1": 51.37,
+    "Pick Rate 1": 57.97,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 45.86,
-    "Pick Rate 2": 33.05,
+    "Win Rate 2": 49.33,
+    "Pick Rate 2": 31.57,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 45.7,
-    "Pick Rate 3": 7.97
+    "Win Rate 3": 50.39,
+    "Pick Rate 3": 6.83
   },
   {
     "Name": "Espeon",
@@ -2496,40 +2496,17 @@ const items = [
     "Move 2": [
       "Moves/Espeon - Psybeam.png"
     ],
-    "Win Rate": 48.76,
-    "Pick Rate": 3.09,
+    "Win Rate": 50.33,
+    "Pick Rate": 5.64,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 48.6,
-    "Pick Rate 1": 68.69,
+    "Win Rate 1": 51.37,
+    "Pick Rate 1": 71.81,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 49.91,
-    "Pick Rate 2": 22.77,
+    "Win Rate 2": 48.36,
+    "Pick Rate 2": 20.42,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 47.31,
-    "Pick Rate 3": 5.42
-  },
-  {
-    "Name": "Falinks",
-    "Pokemon": "Pokemon/Falinks.png",
-    "Role": "All-Rounder",
-    "Move Set": "Iron Head/No Retreat",
-    "Move 1": [
-      "Moves/Falinks - Iron Head.png"
-    ],
-    "Move 2": [
-      "Moves/Falinks - No Retreat.png"
-    ],
-    "Win Rate": 39.58,
-    "Pick Rate": 0.09,
-    "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 40.0,
-    "Pick Rate 1": 45.14,
-    "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 33.33,
-    "Pick Rate 2": 27.08,
-    "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 36.36,
-    "Pick Rate 3": 7.64
+    "Win Rate 3": 45.88,
+    "Pick Rate 3": 4.84
   },
   {
     "Name": "Falinks",
@@ -2542,17 +2519,40 @@ const items = [
     "Move 2": [
       "Moves/Falinks - Beat Up.png"
     ],
-    "Win Rate": 37.96,
+    "Win Rate": 45.21,
+    "Pick Rate": 0.09,
+    "Item 1": "Battle_Items/X Speed.png",
+    "Win Rate 1": 39.58,
+    "Pick Rate 1": 32.88,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 52.78,
+    "Pick Rate 2": 24.66,
+    "Item 3": "Battle_Items/Eject Button.png",
+    "Win Rate 3": 52.0,
+    "Pick Rate 3": 17.12
+  },
+  {
+    "Name": "Falinks",
+    "Pokemon": "Pokemon/Falinks.png",
+    "Role": "All-Rounder",
+    "Move Set": "Iron Head/No Retreat",
+    "Move 1": [
+      "Moves/Falinks - Iron Head.png"
+    ],
+    "Move 2": [
+      "Moves/Falinks - No Retreat.png"
+    ],
+    "Win Rate": 42.97,
     "Pick Rate": 0.08,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 35.9,
-    "Pick Rate 1": 28.47,
-    "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 29.41,
-    "Pick Rate 2": 24.82,
-    "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 39.29,
-    "Pick Rate 3": 20.44
+    "Win Rate 1": 47.27,
+    "Pick Rate 1": 42.97,
+    "Item 2": "Battle_Items/Eject Button.png",
+    "Win Rate 2": 44.44,
+    "Pick Rate 2": 35.16,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 41.67,
+    "Pick Rate 3": 9.38
   },
   {
     "Name": "Falinks",
@@ -2565,17 +2565,17 @@ const items = [
     "Move 2": [
       "Moves/Falinks - Beat Up.png"
     ],
-    "Win Rate": 50.08,
-    "Pick Rate": 0.75,
+    "Win Rate": 50.7,
+    "Pick Rate": 0.82,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 46.6,
-    "Pick Rate 1": 31.61,
+    "Win Rate 1": 52.91,
+    "Pick Rate 1": 30.45,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 55.44,
-    "Pick Rate 2": 30.02,
-    "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 53.89,
-    "Pick Rate 3": 13.3
+    "Win Rate 2": 47.76,
+    "Pick Rate 2": 29.71,
+    "Item 3": "Battle_Items/Full Heal.png",
+    "Win Rate 3": 57.28,
+    "Pick Rate 3": 15.23
   },
   {
     "Name": "Falinks",
@@ -2588,86 +2588,17 @@ const items = [
     "Move 2": [
       "Moves/Falinks - No Retreat.png"
     ],
-    "Win Rate": 45.73,
-    "Pick Rate": 0.26,
-    "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 46.15,
-    "Pick Rate 1": 33.03,
-    "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 48.89,
-    "Pick Rate 2": 31.18,
+    "Win Rate": 48.07,
+    "Pick Rate": 0.27,
+    "Item 1": "Battle_Items/Eject Button.png",
+    "Win Rate 1": 53.1,
+    "Pick Rate 1": 32.88,
+    "Item 2": "Battle_Items/X Speed.png",
+    "Win Rate 2": 45.77,
+    "Pick Rate 2": 32.2,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 38.46,
-    "Pick Rate 3": 18.01
-  },
-  {
-    "Name": "Galarian Rapidash",
-    "Pokemon": "Pokemon/Galarian Rapidash.png",
-    "Role": "Speedster",
-    "Move Set": "Dazzling Gleam/Agility",
-    "Move 1": [
-      "Moves/Galarian Rapidash - Dazzling Gleam.png"
-    ],
-    "Move 2": [
-      "Moves/Galarian Rapidash - Agility.png"
-    ],
-    "Win Rate": 45.15,
-    "Pick Rate": 0.3,
-    "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 49.21,
-    "Pick Rate 1": 62.38,
-    "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 38.46,
-    "Pick Rate 2": 15.45,
-    "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 42.86,
-    "Pick Rate 3": 9.7
-  },
-  {
-    "Name": "Galarian Rapidash",
-    "Pokemon": "Pokemon/Galarian Rapidash.png",
-    "Role": "Speedster",
-    "Move Set": "Fairy Wind/Agility",
-    "Move 1": [
-      "Moves/Galarian Rapidash - Fairy Wind.png"
-    ],
-    "Move 2": [
-      "Moves/Galarian Rapidash - Agility.png"
-    ],
-    "Win Rate": 45.19,
-    "Pick Rate": 0.14,
-    "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 45.59,
-    "Pick Rate 1": 56.9,
-    "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 41.86,
-    "Pick Rate 2": 17.99,
-    "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 47.62,
-    "Pick Rate 3": 8.79
-  },
-  {
-    "Name": "Galarian Rapidash",
-    "Pokemon": "Pokemon/Galarian Rapidash.png",
-    "Role": "Speedster",
-    "Move Set": "Fairy Wind/Smart Strike",
-    "Move 1": [
-      "Moves/Galarian Rapidash - Fairy Wind.png"
-    ],
-    "Move 2": [
-      "Moves/Galarian Rapidash - Smart Strike.png"
-    ],
-    "Win Rate": 49.43,
-    "Pick Rate": 0.11,
-    "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 46.9,
-    "Pick Rate 1": 64.2,
-    "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 73.91,
-    "Pick Rate 2": 13.07,
-    "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 47.06,
-    "Pick Rate 3": 9.66
+    "Win Rate 3": 41.25,
+    "Pick Rate 3": 18.14
   },
   {
     "Name": "Galarian Rapidash",
@@ -2680,17 +2611,86 @@ const items = [
     "Move 2": [
       "Moves/Galarian Rapidash - Smart Strike.png"
     ],
-    "Win Rate": 53.31,
-    "Pick Rate": 2.72,
+    "Win Rate": 51.85,
+    "Pick Rate": 2.24,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 51.91,
-    "Pick Rate 1": 42.31,
+    "Win Rate 1": 50.38,
+    "Pick Rate 1": 42.61,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 55.72,
-    "Pick Rate 2": 31.68,
+    "Win Rate 2": 54.84,
+    "Pick Rate 2": 32.31,
     "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 54.02,
-    "Pick Rate 3": 22.82
+    "Win Rate 3": 52.36,
+    "Pick Rate 3": 21.28
+  },
+  {
+    "Name": "Galarian Rapidash",
+    "Pokemon": "Pokemon/Galarian Rapidash.png",
+    "Role": "Speedster",
+    "Move Set": "Dazzling Gleam/Agility",
+    "Move 1": [
+      "Moves/Galarian Rapidash - Dazzling Gleam.png"
+    ],
+    "Move 2": [
+      "Moves/Galarian Rapidash - Agility.png"
+    ],
+    "Win Rate": 42.36,
+    "Pick Rate": 0.28,
+    "Item 1": "Battle_Items/X Speed.png",
+    "Win Rate 1": 43.68,
+    "Pick Rate 1": 60.48,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 36.92,
+    "Pick Rate 2": 14.19,
+    "Item 3": "Battle_Items/Full Heal.png",
+    "Win Rate 3": 38.6,
+    "Pick Rate 3": 12.45
+  },
+  {
+    "Name": "Galarian Rapidash",
+    "Pokemon": "Pokemon/Galarian Rapidash.png",
+    "Role": "Speedster",
+    "Move Set": "Fairy Wind/Agility",
+    "Move 1": [
+      "Moves/Galarian Rapidash - Fairy Wind.png"
+    ],
+    "Move 2": [
+      "Moves/Galarian Rapidash - Agility.png"
+    ],
+    "Win Rate": 46.43,
+    "Pick Rate": 0.15,
+    "Item 1": "Battle_Items/X Speed.png",
+    "Win Rate 1": 48.68,
+    "Pick Rate 1": 60.32,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 34.48,
+    "Pick Rate 2": 11.51,
+    "Item 3": "Battle_Items/Eject Button.png",
+    "Win Rate 3": 55.56,
+    "Pick Rate 3": 10.71
+  },
+  {
+    "Name": "Galarian Rapidash",
+    "Pokemon": "Pokemon/Galarian Rapidash.png",
+    "Role": "Speedster",
+    "Move Set": "Fairy Wind/Smart Strike",
+    "Move 1": [
+      "Moves/Galarian Rapidash - Fairy Wind.png"
+    ],
+    "Move 2": [
+      "Moves/Galarian Rapidash - Smart Strike.png"
+    ],
+    "Win Rate": 45.37,
+    "Pick Rate": 0.14,
+    "Item 1": "Battle_Items/X Speed.png",
+    "Win Rate 1": 42.57,
+    "Pick Rate 1": 65.2,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 52.38,
+    "Pick Rate 2": 18.5,
+    "Item 3": "Battle_Items/Eject Button.png",
+    "Win Rate 3": 35.71,
+    "Pick Rate 3": 6.17
   },
   {
     "Name": "Garchomp",
@@ -2703,17 +2703,17 @@ const items = [
     "Move 2": [
       "Moves/Garchomp - Dragon Claw.png"
     ],
-    "Win Rate": 49.34,
-    "Pick Rate": 2.56,
+    "Win Rate": 49.74,
+    "Pick Rate": 2.38,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 50.9,
-    "Pick Rate 1": 73.22,
+    "Win Rate 1": 51.31,
+    "Pick Rate 1": 73.95,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 42.61,
-    "Pick Rate 2": 9.36,
+    "Win Rate 2": 40.0,
+    "Pick Rate 2": 8.68,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 51.17,
-    "Pick Rate 3": 7.01
+    "Win Rate 3": 48.57,
+    "Pick Rate 3": 6.26
   },
   {
     "Name": "Garchomp",
@@ -2726,17 +2726,17 @@ const items = [
     "Move 2": [
       "Moves/Garchomp - Earthquake.png"
     ],
-    "Win Rate": 46.3,
-    "Pick Rate": 0.45,
+    "Win Rate": 47.95,
+    "Pick Rate": 0.42,
     "Item 1": "Battle_Items/X Attack.png",
-    "Win Rate 1": 43.88,
-    "Pick Rate 1": 31.9,
+    "Win Rate 1": 47.29,
+    "Pick Rate 1": 29.68,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 45.45,
-    "Pick Rate 2": 22.21,
+    "Win Rate 2": 54.43,
+    "Pick Rate 2": 23.1,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 46.25,
-    "Pick Rate 3": 21.53
+    "Win Rate 3": 45.16,
+    "Pick Rate 3": 22.66
   },
   {
     "Name": "Garchomp",
@@ -2749,17 +2749,17 @@ const items = [
     "Move 2": [
       "Moves/Garchomp - Dragon Claw.png"
     ],
-    "Win Rate": 43.48,
-    "Pick Rate": 0.07,
+    "Win Rate": 45.6,
+    "Pick Rate": 0.08,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 41.46,
-    "Pick Rate 1": 35.65,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 33.33,
-    "Pick Rate 2": 23.48,
-    "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 52.17,
-    "Pick Rate 3": 20.0
+    "Win Rate 1": 51.02,
+    "Pick Rate 1": 39.2,
+    "Item 2": "Battle_Items/Eject Button.png",
+    "Win Rate 2": 54.17,
+    "Pick Rate 2": 19.2,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 33.33,
+    "Pick Rate 3": 16.8
   },
   {
     "Name": "Garchomp",
@@ -2772,17 +2772,17 @@ const items = [
     "Move 2": [
       "Moves/Garchomp - Earthquake.png"
     ],
-    "Win Rate": 43.93,
-    "Pick Rate": 0.06,
+    "Win Rate": 37.1,
+    "Pick Rate": 0.08,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 40.74,
-    "Pick Rate 1": 25.23,
-    "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 43.48,
-    "Pick Rate 2": 21.5,
+    "Win Rate 1": 34.38,
+    "Pick Rate 1": 25.81,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 48.39,
+    "Pick Rate 2": 25.0,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 45.45,
-    "Pick Rate 3": 20.56
+    "Win Rate 3": 21.74,
+    "Pick Rate 3": 18.55
   },
   {
     "Name": "Gardevoir",
@@ -2795,17 +2795,17 @@ const items = [
     "Move 2": [
       "Moves/Gardevoir - Psyshock.png"
     ],
-    "Win Rate": 51.05,
-    "Pick Rate": 4.7,
+    "Win Rate": 51.02,
+    "Pick Rate": 4.72,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 54.75,
-    "Pick Rate 1": 54.12,
+    "Win Rate 1": 54.35,
+    "Pick Rate 1": 53.73,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 47.71,
-    "Pick Rate 2": 33.3,
+    "Win Rate 2": 48.05,
+    "Pick Rate 2": 32.29,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 45.17,
-    "Pick Rate 3": 6.09
+    "Win Rate 3": 46.4,
+    "Pick Rate 3": 6.8
   },
   {
     "Name": "Gardevoir",
@@ -2818,17 +2818,17 @@ const items = [
     "Move 2": [
       "Moves/Gardevoir - Psyshock.png"
     ],
-    "Win Rate": 49.93,
-    "Pick Rate": 3.1,
+    "Win Rate": 50.54,
+    "Pick Rate": 3.01,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 51.72,
-    "Pick Rate 1": 59.69,
+    "Win Rate 1": 53.26,
+    "Pick Rate 1": 57.93,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 48.19,
-    "Pick Rate 2": 28.88,
+    "Win Rate 2": 47.73,
+    "Pick Rate 2": 29.84,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 43.59,
-    "Pick Rate 3": 5.3
+    "Win Rate 3": 44.81,
+    "Pick Rate 3": 6.21
   },
   {
     "Name": "Gardevoir",
@@ -2841,17 +2841,17 @@ const items = [
     "Move 2": [
       "Moves/Gardevoir - Future Sight.png"
     ],
-    "Win Rate": 48.65,
-    "Pick Rate": 2.43,
+    "Win Rate": 49.25,
+    "Pick Rate": 2.44,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.75,
-    "Pick Rate 1": 58.44,
+    "Win Rate 1": 50.17,
+    "Pick Rate 1": 60.01,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 47.9,
-    "Pick Rate 2": 31.74,
+    "Win Rate 2": 48.44,
+    "Pick Rate 2": 31.1,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 42.94,
-    "Pick Rate 3": 4.38
+    "Win Rate 3": 51.27,
+    "Pick Rate 3": 3.93
   },
   {
     "Name": "Gardevoir",
@@ -2864,40 +2864,17 @@ const items = [
     "Move 2": [
       "Moves/Gardevoir - Future Sight.png"
     ],
-    "Win Rate": 52.13,
-    "Pick Rate": 1.94,
+    "Win Rate": 50.2,
+    "Pick Rate": 1.84,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 53.54,
-    "Pick Rate 1": 58.74,
+    "Win Rate 1": 51.36,
+    "Pick Rate 1": 60.51,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 52.78,
-    "Pick Rate 2": 31.88,
+    "Win Rate 2": 50.21,
+    "Pick Rate 2": 31.18,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 41.89,
-    "Pick Rate 3": 4.59
-  },
-  {
-    "Name": "Gengar",
-    "Pokemon": "Pokemon/Gengar.png",
-    "Role": "Speedster",
-    "Move Set": "Shadow Ball/Hex",
-    "Move 1": [
-      "Moves/Gengar - Shadow Ball.png"
-    ],
-    "Move 2": [
-      "Moves/Gengar - Hex.png"
-    ],
-    "Win Rate": 34.46,
-    "Pick Rate": 0.23,
-    "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 30.77,
-    "Pick Rate 1": 30.55,
-    "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 36.27,
-    "Pick Rate 2": 26.63,
-    "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 36.36,
-    "Pick Rate 3": 17.23
+    "Win Rate 3": 40.65,
+    "Pick Rate 3": 4.05
   },
   {
     "Name": "Gengar",
@@ -2910,17 +2887,17 @@ const items = [
     "Move 2": [
       "Moves/Gengar - Dream Eater.png"
     ],
-    "Win Rate": 50.1,
-    "Pick Rate": 12.94,
+    "Win Rate": 50.66,
+    "Pick Rate": 11.07,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 50.16,
-    "Pick Rate 1": 45.53,
-    "Item 2": "Battle_Items/Full Heal.png",
-    "Win Rate 2": 52.48,
-    "Pick Rate 2": 21.08,
-    "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 48.52,
-    "Pick Rate 3": 19.2
+    "Win Rate 1": 51.41,
+    "Pick Rate 1": 45.52,
+    "Item 2": "Battle_Items/X Speed.png",
+    "Win Rate 2": 48.55,
+    "Pick Rate 2": 20.09,
+    "Item 3": "Battle_Items/Full Heal.png",
+    "Win Rate 3": 52.25,
+    "Pick Rate 3": 19.89
   },
   {
     "Name": "Gengar",
@@ -2933,40 +2910,40 @@ const items = [
     "Move 2": [
       "Moves/Gengar - Hex.png"
     ],
-    "Win Rate": 51.33,
-    "Pick Rate": 9.53,
+    "Win Rate": 53.21,
+    "Pick Rate": 8.55,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 53.49,
-    "Pick Rate 1": 59.96,
+    "Win Rate 1": 55.82,
+    "Pick Rate 1": 58.04,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 48.91,
-    "Pick Rate 2": 18.81,
+    "Win Rate 2": 49.44,
+    "Pick Rate 2": 19.84,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 46.6,
-    "Pick Rate 3": 11.86
+    "Win Rate 3": 48.87,
+    "Pick Rate 3": 11.97
   },
   {
     "Name": "Glaceon",
     "Pokemon": "Pokemon/Glaceon.png",
     "Role": "Attacker",
-    "Move Set": "Icy Wind/Freeze-Dry",
+    "Move Set": "Icicle Spear/Freeze-Dry",
     "Move 1": [
-      "Moves/Glaceon - Icy Wind.png"
+      "Moves/Glaceon - Icicle Spear.png"
     ],
     "Move 2": [
       "Moves/Glaceon - Freeze-Dry.png"
     ],
-    "Win Rate": 47.21,
-    "Pick Rate": 0.62,
-    "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 48.89,
-    "Pick Rate 1": 74.08,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 40.33,
-    "Pick Rate 2": 17.44,
+    "Win Rate": 37.1,
+    "Pick Rate": 0.21,
+    "Item 1": "Battle_Items/X Speed.png",
+    "Win Rate 1": 39.01,
+    "Pick Rate 1": 40.87,
+    "Item 2": "Battle_Items/Eject Button.png",
+    "Win Rate 2": 35.85,
+    "Pick Rate 2": 30.72,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 45.24,
-    "Pick Rate 3": 4.05
+    "Win Rate 3": 36.17,
+    "Pick Rate 3": 13.62
   },
   {
     "Name": "Glaceon",
@@ -2979,17 +2956,40 @@ const items = [
     "Move 2": [
       "Moves/Glaceon - Ice Shard.png"
     ],
-    "Win Rate": 47.75,
-    "Pick Rate": 14.63,
+    "Win Rate": 47.91,
+    "Pick Rate": 14.56,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 48.52,
-    "Pick Rate 1": 48.81,
+    "Win Rate 1": 49.21,
+    "Pick Rate 1": 47.63,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 47.19,
-    "Pick Rate 2": 42.0,
+    "Win Rate 2": 47.57,
+    "Pick Rate 2": 41.54,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 45.79,
-    "Pick Rate 3": 4.59
+    "Win Rate 3": 43.94,
+    "Pick Rate 3": 5.34
+  },
+  {
+    "Name": "Glaceon",
+    "Pokemon": "Pokemon/Glaceon.png",
+    "Role": "Attacker",
+    "Move Set": "Icy Wind/Freeze-Dry",
+    "Move 1": [
+      "Moves/Glaceon - Icy Wind.png"
+    ],
+    "Move 2": [
+      "Moves/Glaceon - Freeze-Dry.png"
+    ],
+    "Win Rate": 50.3,
+    "Pick Rate": 0.71,
+    "Item 1": "Battle_Items/Eject Button.png",
+    "Win Rate 1": 54.78,
+    "Pick Rate 1": 71.11,
+    "Item 2": "Battle_Items/X Speed.png",
+    "Win Rate 2": 38.68,
+    "Pick Rate 2": 20.89,
+    "Item 3": "Battle_Items/X Attack.png",
+    "Win Rate 3": 44.9,
+    "Pick Rate 3": 4.21
   },
   {
     "Name": "Goodra",
@@ -3002,17 +3002,17 @@ const items = [
     "Move 2": [
       "Moves/Goodra - Power Whip.png"
     ],
-    "Win Rate": 46.34,
-    "Pick Rate": 3.42,
+    "Win Rate": 46.79,
+    "Pick Rate": 3.23,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 46.07,
-    "Pick Rate 1": 61.48,
+    "Win Rate 1": 46.76,
+    "Pick Rate 1": 64.69,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 47.22,
-    "Pick Rate 2": 27.48,
+    "Win Rate 2": 45.27,
+    "Pick Rate 2": 24.24,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 44.12,
-    "Pick Rate 3": 4.18
+    "Win Rate 3": 50.25,
+    "Pick Rate 3": 3.7
   },
   {
     "Name": "Goodra",
@@ -3025,17 +3025,17 @@ const items = [
     "Move 2": [
       "Moves/Goodra - Acid Spray.png"
     ],
-    "Win Rate": 45.42,
-    "Pick Rate": 1.67,
+    "Win Rate": 47.64,
+    "Pick Rate": 1.56,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 46.51,
-    "Pick Rate 1": 63.39,
+    "Win Rate 1": 48.54,
+    "Pick Rate 1": 62.88,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 43.77,
-    "Pick Rate 2": 25.96,
+    "Win Rate 2": 46.26,
+    "Pick Rate 2": 26.04,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 37.62,
-    "Pick Rate 3": 3.63
+    "Win Rate 3": 50.76,
+    "Pick Rate 3": 5.15
   },
   {
     "Name": "Goodra",
@@ -3048,17 +3048,17 @@ const items = [
     "Move 2": [
       "Moves/Goodra - Acid Spray.png"
     ],
-    "Win Rate": 50.19,
-    "Pick Rate": 0.48,
+    "Win Rate": 53.58,
+    "Pick Rate": 0.46,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 53.02,
-    "Pick Rate 1": 49.44,
+    "Win Rate 1": 53.87,
+    "Pick Rate 1": 51.46,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 47.31,
-    "Pick Rate 2": 41.49,
+    "Win Rate 2": 53.7,
+    "Pick Rate 2": 41.25,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 45.83,
-    "Pick Rate 3": 2.98
+    "Win Rate 3": 52.38,
+    "Pick Rate 3": 2.79
   },
   {
     "Name": "Goodra",
@@ -3071,17 +3071,17 @@ const items = [
     "Move 2": [
       "Moves/Goodra - Power Whip.png"
     ],
-    "Win Rate": 46.45,
+    "Win Rate": 46.0,
     "Pick Rate": 0.36,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 46.13,
-    "Pick Rate 1": 46.94,
+    "Win Rate 1": 44.65,
+    "Pick Rate 1": 54.5,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 47.41,
-    "Pick Rate 2": 41.49,
-    "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 33.33,
-    "Pick Rate 3": 3.97
+    "Win Rate 2": 47.94,
+    "Pick Rate 2": 32.33,
+    "Item 3": "Battle_Items/Full Heal.png",
+    "Win Rate 3": 51.11,
+    "Pick Rate 3": 7.5
   },
   {
     "Name": "Greedent",
@@ -3094,17 +3094,17 @@ const items = [
     "Move 2": [
       "Moves/Greedent - Covet.png"
     ],
-    "Win Rate": 52.22,
-    "Pick Rate": 2.02,
+    "Win Rate": 50.23,
+    "Pick Rate": 1.95,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 52.94,
-    "Pick Rate 1": 40.04,
+    "Win Rate 1": 51.43,
+    "Pick Rate 1": 35.88,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 51.26,
-    "Pick Rate 2": 27.24,
+    "Win Rate 2": 49.78,
+    "Pick Rate 2": 28.02,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 52.36,
-    "Pick Rate 3": 17.62
+    "Win Rate 3": 50.09,
+    "Pick Rate 3": 18.24
   },
   {
     "Name": "Greedent",
@@ -3117,17 +3117,17 @@ const items = [
     "Move 2": [
       "Moves/Greedent - Stuff Cheeks.png"
     ],
-    "Win Rate": 50.23,
-    "Pick Rate": 1.03,
+    "Win Rate": 50.35,
+    "Pick Rate": 0.97,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 51.66,
-    "Pick Rate 1": 38.8,
+    "Win Rate 1": 47.23,
+    "Pick Rate 1": 41.87,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 52.23,
-    "Pick Rate 2": 30.19,
+    "Win Rate 2": 51.95,
+    "Pick Rate 2": 24.17,
     "Item 3": "Battle_Items/Goal Getter.png",
-    "Win Rate 3": 50.69,
-    "Pick Rate 3": 17.0
+    "Win Rate 3": 51.65,
+    "Pick Rate 3": 15.19
   },
   {
     "Name": "Greedent",
@@ -3140,17 +3140,17 @@ const items = [
     "Move 2": [
       "Moves/Greedent - Stuff Cheeks.png"
     ],
-    "Win Rate": 43.71,
-    "Pick Rate": 0.17,
+    "Win Rate": 42.68,
+    "Pick Rate": 0.14,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 38.79,
-    "Pick Rate 1": 40.56,
+    "Win Rate 1": 41.77,
+    "Pick Rate 1": 33.05,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 46.15,
-    "Pick Rate 2": 22.73,
+    "Win Rate 2": 42.55,
+    "Pick Rate 2": 19.67,
     "Item 3": "Battle_Items/Goal Getter.png",
     "Win Rate 3": 50.0,
-    "Pick Rate 3": 14.69
+    "Pick Rate 3": 15.9
   },
   {
     "Name": "Greedent",
@@ -3163,17 +3163,17 @@ const items = [
     "Move 2": [
       "Moves/Greedent - Covet.png"
     ],
-    "Win Rate": 44.0,
+    "Win Rate": 42.14,
     "Pick Rate": 0.09,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 44.68,
-    "Pick Rate 1": 31.33,
+    "Win Rate 1": 40.43,
+    "Pick Rate 1": 33.57,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 43.18,
-    "Pick Rate 2": 29.33,
+    "Win Rate 2": 48.78,
+    "Pick Rate 2": 29.29,
     "Item 3": "Battle_Items/Eject Button.png",
     "Win Rate 3": 37.93,
-    "Pick Rate 3": 19.33
+    "Pick Rate 3": 20.71
   },
   {
     "Name": "Greninja",
@@ -3186,17 +3186,17 @@ const items = [
     "Move 2": [
       "Moves/Greninja - Smokescreen.png"
     ],
-    "Win Rate": 43.33,
-    "Pick Rate": 0.31,
+    "Win Rate": 48.72,
+    "Pick Rate": 0.28,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 44.05,
-    "Pick Rate 1": 32.94,
+    "Win Rate 1": 52.98,
+    "Pick Rate 1": 35.9,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 40.0,
-    "Pick Rate 2": 27.45,
+    "Win Rate 2": 47.4,
+    "Pick Rate 2": 32.91,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 44.25,
-    "Pick Rate 3": 22.16
+    "Win Rate 3": 48.39,
+    "Pick Rate 3": 19.87
   },
   {
     "Name": "Greninja",
@@ -3209,17 +3209,17 @@ const items = [
     "Move 2": [
       "Moves/Greninja - Double Team.png"
     ],
-    "Win Rate": 49.3,
-    "Pick Rate": 13.51,
+    "Win Rate": 49.2,
+    "Pick Rate": 11.89,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.94,
-    "Pick Rate 1": 40.6,
+    "Win Rate 1": 49.28,
+    "Pick Rate 1": 39.76,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 50.59,
-    "Pick Rate 2": 30.49,
+    "Win Rate 2": 50.19,
+    "Pick Rate 2": 29.95,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 47.39,
-    "Pick Rate 3": 15.75
+    "Win Rate 3": 48.19,
+    "Pick Rate 3": 15.78
   },
   {
     "Name": "Greninja",
@@ -3232,17 +3232,17 @@ const items = [
     "Move 2": [
       "Moves/Greninja - Double Team.png"
     ],
-    "Win Rate": 50.8,
-    "Pick Rate": 7.29,
+    "Win Rate": 49.65,
+    "Pick Rate": 7.09,
     "Item 1": "Battle_Items/X Attack.png",
-    "Win Rate 1": 52.95,
-    "Pick Rate 1": 57.48,
+    "Win Rate 1": 50.97,
+    "Pick Rate 1": 58.34,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 49.09,
-    "Pick Rate 2": 25.72,
+    "Win Rate 2": 48.34,
+    "Pick Rate 2": 24.55,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 46.44,
-    "Pick Rate 3": 7.88
+    "Win Rate 3": 46.67,
+    "Pick Rate 3": 8.12
   },
   {
     "Name": "Greninja",
@@ -3255,17 +3255,17 @@ const items = [
     "Move 2": [
       "Moves/Greninja - Smokescreen.png"
     ],
-    "Win Rate": 50.32,
-    "Pick Rate": 4.08,
+    "Win Rate": 49.59,
+    "Pick Rate": 3.83,
     "Item 1": "Battle_Items/X Attack.png",
-    "Win Rate 1": 51.76,
-    "Pick Rate 1": 71.01,
+    "Win Rate 1": 50.72,
+    "Pick Rate 1": 71.71,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 46.46,
-    "Pick Rate 2": 18.52,
+    "Win Rate 2": 47.53,
+    "Pick Rate 2": 18.34,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 42.86,
-    "Pick Rate 3": 4.12
+    "Win Rate 3": 42.34,
+    "Pick Rate 3": 4.35
   },
   {
     "Name": "Gyarados",
@@ -3278,17 +3278,17 @@ const items = [
     "Move 2": [
       "Moves/Gyarados - Bounce.png"
     ],
-    "Win Rate": 51.96,
-    "Pick Rate": 1.11,
+    "Win Rate": 51.51,
+    "Pick Rate": 1.02,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 51.38,
-    "Pick Rate 1": 55.0,
+    "Win Rate 1": 53.89,
+    "Pick Rate 1": 54.83,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 52.78,
-    "Pick Rate 2": 13.7,
+    "Win Rate 2": 51.47,
+    "Pick Rate 2": 16.1,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 49.59,
-    "Pick Rate 3": 13.37
+    "Win Rate 3": 43.6,
+    "Pick Rate 3": 12.49
   },
   {
     "Name": "Gyarados",
@@ -3301,17 +3301,17 @@ const items = [
     "Move 2": [
       "Moves/Gyarados - Waterfall.png"
     ],
-    "Win Rate": 47.35,
-    "Pick Rate": 0.7,
+    "Win Rate": 44.73,
+    "Pick Rate": 0.67,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 49.1,
-    "Pick Rate 1": 37.95,
+    "Win Rate 1": 46.48,
+    "Pick Rate 1": 40.86,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 46.92,
-    "Pick Rate 2": 24.96,
+    "Win Rate 2": 46.39,
+    "Pick Rate 2": 23.67,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 45.13,
-    "Pick Rate 3": 19.32
+    "Win Rate 3": 38.18,
+    "Pick Rate 3": 14.85
   },
   {
     "Name": "Gyarados",
@@ -3324,17 +3324,17 @@ const items = [
     "Move 2": [
       "Moves/Gyarados - Bounce.png"
     ],
-    "Win Rate": 42.16,
-    "Pick Rate": 0.25,
+    "Win Rate": 40.0,
+    "Pick Rate": 0.22,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 46.03,
-    "Pick Rate 1": 61.76,
+    "Win Rate 1": 41.86,
+    "Pick Rate 1": 59.72,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 36.23,
-    "Pick Rate 2": 16.91,
-    "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 41.67,
-    "Pick Rate 3": 8.82
+    "Win Rate 2": 35.56,
+    "Pick Rate 2": 12.5,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 41.86,
+    "Pick Rate 3": 11.94
   },
   {
     "Name": "Gyarados",
@@ -3347,17 +3347,17 @@ const items = [
     "Move 2": [
       "Moves/Gyarados - Waterfall.png"
     ],
-    "Win Rate": 43.75,
-    "Pick Rate": 0.22,
+    "Win Rate": 44.48,
+    "Pick Rate": 0.2,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 47.4,
-    "Pick Rate 1": 41.85,
+    "Win Rate 1": 40.32,
+    "Pick Rate 1": 37.01,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 43.69,
-    "Pick Rate 2": 27.99,
+    "Win Rate 2": 47.22,
+    "Pick Rate 2": 32.24,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 31.91,
-    "Pick Rate 3": 12.77
+    "Win Rate 3": 39.39,
+    "Pick Rate 3": 9.85
   },
   {
     "Name": "Ho-Oh",
@@ -3370,17 +3370,17 @@ const items = [
     "Move 2": [
       "Moves/Ho-Oh - Flamethrower.png"
     ],
-    "Win Rate": 49.06,
-    "Pick Rate": 0.64,
+    "Win Rate": 53.16,
+    "Pick Rate": 0.61,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 49.56,
-    "Pick Rate 1": 53.75,
+    "Win Rate 1": 54.26,
+    "Pick Rate 1": 56.57,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 49.35,
-    "Pick Rate 2": 28.71,
+    "Win Rate 2": 54.3,
+    "Pick Rate 2": 29.19,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 41.1,
-    "Pick Rate 3": 6.85
+    "Win Rate 3": 50.88,
+    "Pick Rate 3": 5.72
   },
   {
     "Name": "Ho-Oh",
@@ -3393,17 +3393,17 @@ const items = [
     "Move 2": [
       "Moves/Ho-Oh - Sky Attack.png"
     ],
-    "Win Rate": 49.9,
-    "Pick Rate": 0.62,
+    "Win Rate": 47.88,
+    "Pick Rate": 0.57,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 50.66,
-    "Pick Rate 1": 44.21,
+    "Win Rate 1": 52.63,
+    "Pick Rate 1": 42.36,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 47.19,
-    "Pick Rate 2": 37.84,
+    "Win Rate 2": 46.06,
+    "Pick Rate 2": 36.41,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 49.41,
-    "Pick Rate 3": 8.2
+    "Win Rate 3": 36.71,
+    "Pick Rate 3": 8.39
   },
   {
     "Name": "Ho-Oh",
@@ -3416,17 +3416,17 @@ const items = [
     "Move 2": [
       "Moves/Ho-Oh - Sky Attack.png"
     ],
-    "Win Rate": 52.02,
-    "Pick Rate": 1.94,
+    "Win Rate": 51.47,
+    "Pick Rate": 1.9,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 52.84,
-    "Pick Rate 1": 53.6,
+    "Win Rate 1": 52.16,
+    "Pick Rate 1": 50.42,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 50.73,
-    "Pick Rate 2": 29.94,
+    "Win Rate 2": 51.37,
+    "Pick Rate 2": 32.76,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 50.81,
-    "Pick Rate 3": 7.7
+    "Win Rate 3": 51.89,
+    "Pick Rate 3": 8.45
   },
   {
     "Name": "Ho-Oh",
@@ -3439,17 +3439,17 @@ const items = [
     "Move 2": [
       "Moves/Ho-Oh - Flamethrower.png"
     ],
-    "Win Rate": 49.73,
-    "Pick Rate": 1.89,
+    "Win Rate": 52.87,
+    "Pick Rate": 1.78,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 50.57,
-    "Pick Rate 1": 47.91,
+    "Win Rate 1": 53.37,
+    "Pick Rate 1": 50.27,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 48.84,
-    "Pick Rate 2": 35.83,
+    "Win Rate 2": 52.54,
+    "Pick Rate 2": 32.91,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 48.43,
-    "Pick Rate 3": 8.1
+    "Win Rate 3": 52.49,
+    "Pick Rate 3": 7.55
   },
   {
     "Name": "Hoopa",
@@ -3462,17 +3462,17 @@ const items = [
     "Move 2": [
       "Moves/Hoopa - Trick.png"
     ],
-    "Win Rate": 52.64,
-    "Pick Rate": 0.91,
+    "Win Rate": 51.36,
+    "Pick Rate": 1.02,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 56.21,
-    "Pick Rate 1": 28.3,
-    "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 48.65,
-    "Pick Rate 2": 7.56,
-    "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 51.21,
-    "Pick Rate 3": 50.05
+    "Win Rate 1": 53.1,
+    "Pick Rate 1": 30.17,
+    "Item 2": "Battle_Items/X Speed.png",
+    "Win Rate 2": 51.72,
+    "Pick Rate 2": 49.39,
+    "Item 3": "Battle_Items/X Attack.png",
+    "Win Rate 3": 42.24,
+    "Pick Rate 3": 6.92
   },
   {
     "Name": "Hoopa",
@@ -3485,17 +3485,17 @@ const items = [
     "Move 2": [
       "Moves/Hoopa - Trick.png"
     ],
-    "Win Rate": 50.37,
-    "Pick Rate": 1.09,
+    "Win Rate": 50.61,
+    "Pick Rate": 1.19,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 52.71,
-    "Pick Rate 1": 25.84,
+    "Win Rate 1": 51.71,
+    "Pick Rate 1": 26.85,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 48.7,
-    "Pick Rate 2": 12.8,
+    "Win Rate 2": 48.94,
+    "Pick Rate 2": 11.92,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 48.16,
-    "Pick Rate 3": 41.61
+    "Win Rate 3": 51.81,
+    "Pick Rate 3": 40.96
   },
   {
     "Name": "Hoopa",
@@ -3508,17 +3508,17 @@ const items = [
     "Move 2": [
       "Moves/Hoopa - Hyperspace Hole.png"
     ],
-    "Win Rate": 50.51,
-    "Pick Rate": 5.19,
+    "Win Rate": 50.12,
+    "Pick Rate": 5.27,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 52.86,
-    "Pick Rate 1": 38.99,
+    "Win Rate 1": 51.34,
+    "Pick Rate 1": 39.05,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 49.68,
-    "Pick Rate 2": 5.08,
+    "Win Rate 2": 48.95,
+    "Pick Rate 2": 4.37,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 50.26,
-    "Pick Rate 3": 44.52
+    "Win Rate 3": 49.86,
+    "Pick Rate 3": 45.73
   },
   {
     "Name": "Hoopa",
@@ -3531,14 +3531,17 @@ const items = [
     "Move 2": [
       "Moves/Hoopa - Hyperspace Hole.png"
     ],
-    "Win Rate": 46.81,
+    "Win Rate": 44.74,
     "Pick Rate": 0.26,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.6,
-    "Pick Rate 1": 32.64,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 45.66,
-    "Pick Rate 2": 44.89
+    "Win Rate 1": 46.46,
+    "Pick Rate 1": 33.32,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 42.5,
+    "Pick Rate 2": 5.51,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 44.76,
+    "Pick Rate 3": 44.86
   },
   {
     "Name": "Inteleon",
@@ -3551,17 +3554,17 @@ const items = [
     "Move 2": [
       "Moves/Inteleon - Liquidation.png"
     ],
-    "Win Rate": 47.25,
-    "Pick Rate": 0.36,
+    "Win Rate": 45.17,
+    "Pick Rate": 0.33,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 46.21,
-    "Pick Rate 1": 68.05,
+    "Win Rate 1": 45.48,
+    "Pick Rate 1": 65.8,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 49.59,
-    "Pick Rate 2": 20.47,
+    "Win Rate 2": 43.75,
+    "Pick Rate 2": 20.82,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 53.66,
-    "Pick Rate 3": 6.82
+    "Win Rate 3": 44.74,
+    "Pick Rate 3": 7.06
   },
   {
     "Name": "Inteleon",
@@ -3574,17 +3577,17 @@ const items = [
     "Move 2": [
       "Moves/Inteleon - Snipe Shot.png"
     ],
-    "Win Rate": 42.18,
-    "Pick Rate": 0.2,
+    "Win Rate": 40.59,
+    "Pick Rate": 0.21,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 44.64,
-    "Pick Rate 1": 68.73,
+    "Win Rate 1": 40.64,
+    "Pick Rate 1": 64.41,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 32.05,
-    "Pick Rate 2": 23.01,
+    "Win Rate 2": 38.46,
+    "Pick Rate 2": 19.12,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 56.25,
-    "Pick Rate 3": 4.72
+    "Win Rate 3": 51.85,
+    "Pick Rate 3": 7.94
   },
   {
     "Name": "Inteleon",
@@ -3597,17 +3600,17 @@ const items = [
     "Move 2": [
       "Moves/Inteleon - Liquidation.png"
     ],
-    "Win Rate": 49.88,
-    "Pick Rate": 3.02,
+    "Win Rate": 48.28,
+    "Pick Rate": 2.71,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 50.12,
-    "Pick Rate 1": 73.4,
+    "Win Rate 1": 49.68,
+    "Pick Rate 1": 69.63,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 50.06,
-    "Pick Rate 2": 17.88,
+    "Win Rate 2": 45.79,
+    "Pick Rate 2": 17.6,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 47.58,
-    "Pick Rate 3": 4.52
+    "Win Rate 3": 41.52,
+    "Pick Rate 3": 6.49
   },
   {
     "Name": "Inteleon",
@@ -3620,17 +3623,17 @@ const items = [
     "Move 2": [
       "Moves/Inteleon - Snipe Shot.png"
     ],
-    "Win Rate": 48.75,
-    "Pick Rate": 3.69,
+    "Win Rate": 48.13,
+    "Pick Rate": 3.74,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.6,
-    "Pick Rate 1": 90.56,
+    "Win Rate 1": 49.31,
+    "Pick Rate 1": 89.36,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 39.95,
-    "Pick Rate 2": 6.24,
+    "Win Rate 2": 37.44,
+    "Pick Rate 2": 6.6,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 42.71,
-    "Pick Rate 3": 1.56
+    "Win Rate 3": 36.44,
+    "Pick Rate 3": 1.92
   },
   {
     "Name": "Lapras",
@@ -3643,40 +3646,17 @@ const items = [
     "Move 2": [
       "Moves/Lapras - Bubble Beam.png"
     ],
-    "Win Rate": 48.58,
-    "Pick Rate": 2.87,
+    "Win Rate": 50.04,
+    "Pick Rate": 2.79,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 49.33,
-    "Pick Rate 1": 56.45,
+    "Win Rate 1": 50.02,
+    "Pick Rate 1": 57.02,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 47.58,
-    "Pick Rate 2": 38.16,
+    "Win Rate 2": 51.06,
+    "Pick Rate 2": 38.07,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 51.67,
-    "Pick Rate 3": 2.52
-  },
-  {
-    "Name": "Lapras",
-    "Pokemon": "Pokemon/Lapras.png",
-    "Role": "Defender",
-    "Move Set": "Water Pulse/Ice Beam",
-    "Move 1": [
-      "Moves/Lapras - Water Pulse.png"
-    ],
-    "Move 2": [
-      "Moves/Lapras - Ice Beam.png"
-    ],
-    "Win Rate": 51.78,
-    "Pick Rate": 1.99,
-    "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 51.5,
-    "Pick Rate 1": 54.5,
-    "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 53.09,
-    "Pick Rate 2": 40.63,
-    "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 46.94,
-    "Pick Rate 3": 2.96
+    "Win Rate 3": 40.21,
+    "Pick Rate 3": 2.11
   },
   {
     "Name": "Lapras",
@@ -3689,17 +3669,40 @@ const items = [
     "Move 2": [
       "Moves/Lapras - Bubble Beam.png"
     ],
-    "Win Rate": 46.76,
-    "Pick Rate": 1.98,
+    "Win Rate": 47.6,
+    "Pick Rate": 2.02,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 46.84,
-    "Pick Rate 1": 54.98,
+    "Win Rate 1": 47.02,
+    "Pick Rate 1": 52.46,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 46.17,
-    "Pick Rate 2": 36.53,
+    "Win Rate 2": 49.36,
+    "Pick Rate 2": 37.62,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 50.0,
-    "Pick Rate 3": 4.44
+    "Win Rate 3": 41.83,
+    "Pick Rate 3": 4.6
+  },
+  {
+    "Name": "Lapras",
+    "Pokemon": "Pokemon/Lapras.png",
+    "Role": "Defender",
+    "Move Set": "Water Pulse/Ice Beam",
+    "Move 1": [
+      "Moves/Lapras - Water Pulse.png"
+    ],
+    "Move 2": [
+      "Moves/Lapras - Ice Beam.png"
+    ],
+    "Win Rate": 51.09,
+    "Pick Rate": 1.9,
+    "Item 1": "Battle_Items/X Speed.png",
+    "Win Rate 1": 53.02,
+    "Pick Rate 1": 57.71,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 49.03,
+    "Pick Rate 2": 37.8,
+    "Item 3": "Battle_Items/Eject Button.png",
+    "Win Rate 3": 43.42,
+    "Pick Rate 3": 2.43
   },
   {
     "Name": "Lapras",
@@ -3712,17 +3715,17 @@ const items = [
     "Move 2": [
       "Moves/Lapras - Ice Beam.png"
     ],
-    "Win Rate": 49.31,
-    "Pick Rate": 1.71,
+    "Win Rate": 48.9,
+    "Pick Rate": 1.69,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 51.31,
-    "Pick Rate 1": 60.63,
+    "Win Rate 1": 49.14,
+    "Pick Rate 1": 60.39,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 46.71,
-    "Pick Rate 2": 32.7,
+    "Win Rate 2": 49.42,
+    "Pick Rate 2": 34.03,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 41.46,
-    "Pick Rate 3": 2.89
+    "Win Rate 3": 43.59,
+    "Pick Rate 3": 2.81
   },
   {
     "Name": "Latias",
@@ -3735,17 +3738,17 @@ const items = [
     "Move 2": [
       "Moves/Latias - Dragon Breath.png"
     ],
-    "Win Rate": 48.16,
-    "Pick Rate": 0.98,
+    "Win Rate": 49.92,
+    "Pick Rate": 0.75,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 50.19,
-    "Pick Rate 1": 47.55,
+    "Win Rate 1": 51.01,
+    "Pick Rate 1": 47.98,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 45.18,
-    "Pick Rate 2": 26.07,
+    "Win Rate 2": 50.58,
+    "Pick Rate 2": 27.63,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 47.9,
-    "Pick Rate 3": 21.9
+    "Win Rate 3": 49.36,
+    "Pick Rate 3": 18.98
   },
   {
     "Name": "Latias",
@@ -3758,17 +3761,17 @@ const items = [
     "Move 2": [
       "Moves/Latias - Dragon Breath.png"
     ],
-    "Win Rate": 54.33,
-    "Pick Rate": 1.21,
+    "Win Rate": 50.85,
+    "Pick Rate": 0.93,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 57.19,
-    "Pick Rate 1": 49.23,
+    "Win Rate 1": 51.96,
+    "Pick Rate 1": 47.04,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 49.8,
-    "Pick Rate 2": 24.44,
+    "Win Rate 2": 47.76,
+    "Pick Rate 2": 24.9,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 51.79,
-    "Pick Rate 3": 20.73
+    "Win Rate 3": 52.02,
+    "Pick Rate 3": 22.73
   },
   {
     "Name": "Latias",
@@ -3781,17 +3784,17 @@ const items = [
     "Move 2": [
       "Moves/Latias - Dragon Pulse.png"
     ],
-    "Win Rate": 55.27,
-    "Pick Rate": 10.39,
+    "Win Rate": 55.54,
+    "Pick Rate": 9.98,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 56.14,
-    "Pick Rate 1": 39.66,
+    "Win Rate 1": 55.8,
+    "Pick Rate 1": 42.45,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 54.59,
-    "Pick Rate 2": 32.84,
+    "Win Rate 2": 55.38,
+    "Pick Rate 2": 29.02,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 53.64,
-    "Pick Rate 3": 22.04
+    "Win Rate 3": 55.69,
+    "Pick Rate 3": 22.91
   },
   {
     "Name": "Latias",
@@ -3804,17 +3807,17 @@ const items = [
     "Move 2": [
       "Moves/Latias - Dragon Pulse.png"
     ],
-    "Win Rate": 52.44,
-    "Pick Rate": 21.8,
+    "Win Rate": 52.65,
+    "Pick Rate": 19.0,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 53.05,
-    "Pick Rate 1": 51.45,
-    "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 51.31,
-    "Pick Rate 2": 22.18,
-    "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 51.92,
-    "Pick Rate 3": 20.06
+    "Win Rate 1": 53.36,
+    "Pick Rate 1": 51.69,
+    "Item 2": "Battle_Items/X Speed.png",
+    "Win Rate 2": 51.43,
+    "Pick Rate 2": 21.34,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 52.19,
+    "Pick Rate 3": 20.75
   },
   {
     "Name": "Latios",
@@ -3827,17 +3830,17 @@ const items = [
     "Move 2": [
       "Moves/Latios - Dragon Pulse.png"
     ],
-    "Win Rate": 51.16,
-    "Pick Rate": 18.47,
+    "Win Rate": 51.99,
+    "Pick Rate": 20.71,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 51.43,
-    "Pick Rate 1": 88.15,
+    "Win Rate 1": 52.47,
+    "Pick Rate 1": 90.4,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 48.42,
-    "Pick Rate 2": 8.44,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 49.87,
-    "Pick Rate 3": 1.24
+    "Win Rate 2": 48.27,
+    "Pick Rate 2": 6.87,
+    "Item 3": "Battle_Items/Full Heal.png",
+    "Win Rate 3": 51.87,
+    "Pick Rate 3": 0.79
   },
   {
     "Name": "Latios",
@@ -3850,17 +3853,17 @@ const items = [
     "Move 2": [
       "Moves/Latios - Draco Meteor.png"
     ],
-    "Win Rate": 46.0,
-    "Pick Rate": 1.24,
+    "Win Rate": 47.5,
+    "Pick Rate": 1.05,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 47.89,
-    "Pick Rate 1": 67.72,
+    "Win Rate 1": 49.82,
+    "Pick Rate 1": 63.33,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 42.2,
-    "Pick Rate 2": 22.06,
+    "Win Rate 2": 43.71,
+    "Pick Rate 2": 26.08,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 38.04,
-    "Pick Rate 3": 4.46
+    "Win Rate 3": 44.05,
+    "Pick Rate 3": 4.84
   },
   {
     "Name": "Latios",
@@ -3873,17 +3876,17 @@ const items = [
     "Move 2": [
       "Moves/Latios - Dragon Pulse.png"
     ],
-    "Win Rate": 50.32,
-    "Pick Rate": 3.87,
+    "Win Rate": 50.89,
+    "Pick Rate": 4.24,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 50.7,
-    "Pick Rate 1": 81.71,
+    "Win Rate 1": 51.54,
+    "Pick Rate 1": 83.55,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 48.22,
-    "Pick Rate 2": 11.34,
+    "Win Rate 2": 46.33,
+    "Pick Rate 2": 9.96,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 49.75,
-    "Pick Rate 3": 3.09
+    "Win Rate 3": 44.09,
+    "Pick Rate 3": 2.66
   },
   {
     "Name": "Latios",
@@ -3896,40 +3899,17 @@ const items = [
     "Move 2": [
       "Moves/Latios - Draco Meteor.png"
     ],
-    "Win Rate": 47.44,
-    "Pick Rate": 1.53,
+    "Win Rate": 47.72,
+    "Pick Rate": 1.31,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 48.34,
-    "Pick Rate 1": 69.94,
+    "Win Rate 1": 49.59,
+    "Pick Rate 1": 67.84,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 47.83,
-    "Pick Rate 2": 22.73,
+    "Win Rate 2": 46.12,
+    "Pick Rate 2": 22.17,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 35.29,
-    "Pick Rate 3": 4.02
-  },
-  {
-    "Name": "Leafeon",
-    "Pokemon": "Pokemon/Leafeon.png",
-    "Role": "Speedster",
-    "Move Set": "Razor Leaf/Leaf Blade",
-    "Move 1": [
-      "Moves/Leafeon - Razor Leaf.png"
-    ],
-    "Move 2": [
-      "Moves/Leafeon - Leaf Blade.png"
-    ],
-    "Win Rate": 41.22,
-    "Pick Rate": 1.26,
-    "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 39.78,
-    "Pick Rate 1": 31.13,
-    "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 42.23,
-    "Pick Rate 2": 29.22,
-    "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 40.06,
-    "Pick Rate 3": 16.36
+    "Win Rate 3": 34.43,
+    "Pick Rate 3": 5.67
   },
   {
     "Name": "Leafeon",
@@ -3942,17 +3922,40 @@ const items = [
     "Move 2": [
       "Moves/Leafeon - Leaf Blade.png"
     ],
-    "Win Rate": 45.27,
-    "Pick Rate": 0.73,
+    "Win Rate": 44.88,
+    "Pick Rate": 2.86,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 44.83,
-    "Pick Rate 1": 42.96,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 48.14,
-    "Pick Rate 2": 24.28,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 47.43,
-    "Pick Rate 3": 14.4
+    "Win Rate 1": 47.26,
+    "Pick Rate 1": 51.91,
+    "Item 2": "Battle_Items/X Attack.png",
+    "Win Rate 2": 44.41,
+    "Pick Rate 2": 18.03,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 41.03,
+    "Pick Rate 3": 17.29
+  },
+  {
+    "Name": "Leafeon",
+    "Pokemon": "Pokemon/Leafeon.png",
+    "Role": "Speedster",
+    "Move Set": "Razor Leaf/Leaf Blade",
+    "Move 1": [
+      "Moves/Leafeon - Razor Leaf.png"
+    ],
+    "Move 2": [
+      "Moves/Leafeon - Leaf Blade.png"
+    ],
+    "Win Rate": 43.25,
+    "Pick Rate": 2.05,
+    "Item 1": "Battle_Items/X Speed.png",
+    "Win Rate 1": 42.57,
+    "Pick Rate 1": 29.98,
+    "Item 2": "Battle_Items/Eject Button.png",
+    "Win Rate 2": 41.14,
+    "Pick Rate 2": 29.8,
+    "Item 3": "Battle_Items/X Attack.png",
+    "Win Rate 3": 47.38,
+    "Pick Rate 3": 19.23
   },
   {
     "Name": "Leafeon",
@@ -3965,17 +3968,17 @@ const items = [
     "Move 2": [
       "Moves/Leafeon - Aerial Ace.png"
     ],
-    "Win Rate": 45.36,
-    "Pick Rate": 0.18,
-    "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 43.62,
-    "Pick Rate 1": 32.3,
-    "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 46.51,
-    "Pick Rate 2": 29.55,
+    "Win Rate": 41.39,
+    "Pick Rate": 0.45,
+    "Item 1": "Battle_Items/Eject Button.png",
+    "Win Rate 1": 44.26,
+    "Pick Rate 1": 40.72,
+    "Item 2": "Battle_Items/X Speed.png",
+    "Win Rate 2": 37.29,
+    "Pick Rate 2": 23.63,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 37.84,
-    "Pick Rate 3": 12.71
+    "Win Rate 3": 37.07,
+    "Pick Rate 3": 15.49
   },
   {
     "Name": "Leafeon",
@@ -3988,17 +3991,17 @@ const items = [
     "Move 2": [
       "Moves/Leafeon - Aerial Ace.png"
     ],
-    "Win Rate": 49.72,
-    "Pick Rate": 9.43,
+    "Win Rate": 48.8,
+    "Pick Rate": 9.69,
     "Item 1": "Battle_Items/X Attack.png",
-    "Win Rate 1": 51.77,
-    "Pick Rate 1": 67.96,
+    "Win Rate 1": 50.95,
+    "Pick Rate 1": 64.26,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 44.75,
-    "Pick Rate 2": 12.94,
+    "Win Rate 2": 43.79,
+    "Pick Rate 2": 15.14,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 42.66,
-    "Pick Rate 3": 8.34
+    "Win Rate 3": 44.35,
+    "Pick Rate 3": 9.43
   },
   {
     "Name": "Lucario",
@@ -4011,17 +4014,17 @@ const items = [
     "Move 2": [
       "Moves/Lucario - Bone Rush.png"
     ],
-    "Win Rate": 51.94,
-    "Pick Rate": 10.13,
+    "Win Rate": 52.44,
+    "Pick Rate": 10.21,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 53.04,
-    "Pick Rate 1": 88.16,
+    "Win Rate 1": 53.01,
+    "Pick Rate 1": 89.94,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 42.92,
-    "Pick Rate 2": 5.74,
+    "Win Rate 2": 45.72,
+    "Pick Rate 2": 5.07,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 46.78,
-    "Pick Rate 3": 2.4
+    "Win Rate 3": 48.11,
+    "Pick Rate 3": 2.36
   },
   {
     "Name": "Lucario",
@@ -4034,17 +4037,17 @@ const items = [
     "Move 2": [
       "Moves/Lucario - Close Combat.png"
     ],
-    "Win Rate": 48.16,
-    "Pick Rate": 3.61,
+    "Win Rate": 49.31,
+    "Pick Rate": 2.54,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.23,
-    "Pick Rate 1": 68.38,
+    "Win Rate 1": 49.91,
+    "Pick Rate 1": 63.86,
     "Item 2": "Battle_Items/Full Heal.png",
-    "Win Rate 2": 46.49,
-    "Pick Rate 2": 10.43,
+    "Win Rate 2": 46.73,
+    "Pick Rate 2": 12.09,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 45.74,
-    "Pick Rate 3": 9.18
+    "Win Rate 3": 50.72,
+    "Pick Rate 3": 10.01
   },
   {
     "Name": "Lucario",
@@ -4057,17 +4060,17 @@ const items = [
     "Move 2": [
       "Moves/Lucario - Bone Rush.png"
     ],
-    "Win Rate": 49.53,
-    "Pick Rate": 0.57,
+    "Win Rate": 50.53,
+    "Pick Rate": 0.46,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.22,
-    "Pick Rate 1": 67.65,
+    "Win Rate 1": 50.11,
+    "Pick Rate 1": 60.39,
     "Item 2": "Battle_Items/Full Heal.png",
-    "Win Rate 2": 50.39,
-    "Pick Rate 2": 13.38,
+    "Win Rate 2": 54.1,
+    "Pick Rate 2": 16.05,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 57.14,
-    "Pick Rate 3": 8.85
+    "Win Rate 3": 46.48,
+    "Pick Rate 3": 9.34
   },
   {
     "Name": "Lucario",
@@ -4080,17 +4083,17 @@ const items = [
     "Move 2": [
       "Moves/Lucario - Close Combat.png"
     ],
-    "Win Rate": 42.18,
-    "Pick Rate": 0.4,
+    "Win Rate": 44.61,
+    "Pick Rate": 0.33,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 40.72,
-    "Pick Rate 1": 32.94,
+    "Win Rate 1": 45.05,
+    "Pick Rate 1": 33.83,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 41.61,
-    "Pick Rate 2": 23.99,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 41.49,
-    "Pick Rate 3": 14.01
+    "Win Rate 2": 45.0,
+    "Pick Rate 2": 22.3,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 39.24,
+    "Pick Rate 3": 14.68
   },
   {
     "Name": "Machamp",
@@ -4103,17 +4106,17 @@ const items = [
     "Move 2": [
       "Moves/Machamp - Submission.png"
     ],
-    "Win Rate": 50.34,
-    "Pick Rate": 3.89,
+    "Win Rate": 49.95,
+    "Pick Rate": 3.42,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 51.27,
-    "Pick Rate 1": 64.86,
+    "Win Rate 1": 50.64,
+    "Pick Rate 1": 64.9,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 50.54,
-    "Pick Rate 2": 17.21,
+    "Win Rate 2": 48.26,
+    "Pick Rate 2": 17.84,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 45.56,
-    "Pick Rate 3": 7.66
+    "Win Rate 3": 45.43,
+    "Pick Rate 3": 7.58
   },
   {
     "Name": "Machamp",
@@ -4126,17 +4129,17 @@ const items = [
     "Move 2": [
       "Moves/Machamp - Dynamic Punch.png"
     ],
-    "Win Rate": 49.78,
-    "Pick Rate": 2.09,
+    "Win Rate": 49.08,
+    "Pick Rate": 1.94,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 52.16,
-    "Pick Rate 1": 67.21,
+    "Win Rate 1": 50.73,
+    "Pick Rate 1": 66.45,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 42.45,
-    "Pick Rate 2": 12.19,
+    "Win Rate 2": 45.54,
+    "Pick Rate 2": 13.31,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 45.18,
-    "Pick Rate 3": 11.33
+    "Win Rate 3": 47.71,
+    "Pick Rate 3": 11.59
   },
   {
     "Name": "Machamp",
@@ -4149,17 +4152,17 @@ const items = [
     "Move 2": [
       "Moves/Machamp - Submission.png"
     ],
-    "Win Rate": 46.08,
-    "Pick Rate": 1.3,
+    "Win Rate": 47.21,
+    "Pick Rate": 1.12,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 48.4,
-    "Pick Rate 1": 47.56,
+    "Win Rate 1": 48.93,
+    "Pick Rate 1": 48.24,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 45.55,
+    "Win Rate 2": 48.57,
     "Pick Rate 2": 22.79,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 39.25,
-    "Pick Rate 3": 13.51
+    "Win Rate 3": 43.14,
+    "Pick Rate 3": 13.84
   },
   {
     "Name": "Machamp",
@@ -4172,17 +4175,17 @@ const items = [
     "Move 2": [
       "Moves/Machamp - Dynamic Punch.png"
     ],
-    "Win Rate": 50.34,
-    "Pick Rate": 0.79,
+    "Win Rate": 50.81,
+    "Pick Rate": 0.71,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 51.28,
-    "Pick Rate 1": 68.53,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 43.07,
-    "Pick Rate 2": 10.47,
-    "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 44.27,
-    "Pick Rate 3": 10.01
+    "Win Rate 1": 53.16,
+    "Pick Rate 1": 73.96,
+    "Item 2": "Battle_Items/X Attack.png",
+    "Win Rate 2": 46.26,
+    "Pick Rate 2": 12.51,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 44.05,
+    "Pick Rate 3": 7.15
   },
   {
     "Name": "Mamoswine",
@@ -4195,17 +4198,17 @@ const items = [
     "Move 2": [
       "Moves/Mamoswine - High Horsepower.png"
     ],
-    "Win Rate": 45.47,
-    "Pick Rate": 2.22,
+    "Win Rate": 46.7,
+    "Pick Rate": 2.15,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 45.4,
-    "Pick Rate 1": 37.43,
+    "Win Rate 1": 44.56,
+    "Pick Rate 1": 36.31,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 46.97,
-    "Pick Rate 2": 28.2,
+    "Win Rate 2": 47.32,
+    "Pick Rate 2": 32.1,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 44.27,
-    "Pick Rate 3": 26.98
+    "Win Rate 3": 48.85,
+    "Pick Rate 3": 24.51
   },
   {
     "Name": "Mamoswine",
@@ -4218,17 +4221,17 @@ const items = [
     "Move 2": [
       "Moves/Mamoswine - Earthquake.png"
     ],
-    "Win Rate": 51.6,
-    "Pick Rate": 0.75,
+    "Win Rate": 54.21,
+    "Pick Rate": 0.74,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 57.23,
-    "Pick Rate 1": 38.16,
+    "Win Rate 1": 60.56,
+    "Pick Rate 1": 41.42,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 51.03,
-    "Pick Rate 2": 35.12,
+    "Win Rate 2": 51.95,
+    "Pick Rate 2": 33.83,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 42.01,
-    "Pick Rate 3": 21.52
+    "Win Rate 3": 44.08,
+    "Pick Rate 3": 17.41
   },
   {
     "Name": "Mamoswine",
@@ -4241,17 +4244,17 @@ const items = [
     "Move 2": [
       "Moves/Mamoswine - High Horsepower.png"
     ],
-    "Win Rate": 47.51,
-    "Pick Rate": 1.51,
+    "Win Rate": 47.69,
+    "Pick Rate": 1.49,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 48.7,
-    "Pick Rate 1": 36.64,
+    "Win Rate 1": 46.6,
+    "Pick Rate 1": 41.51,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 46.94,
-    "Pick Rate 2": 28.0,
+    "Win Rate 2": 51.42,
+    "Pick Rate 2": 25.93,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 49.3,
-    "Pick Rate 3": 25.61
+    "Win Rate 3": 46.84,
+    "Pick Rate 3": 23.31
   },
   {
     "Name": "Mamoswine",
@@ -4264,17 +4267,17 @@ const items = [
     "Move 2": [
       "Moves/Mamoswine - Earthquake.png"
     ],
-    "Win Rate": 50.78,
-    "Pick Rate": 6.57,
+    "Win Rate": 50.3,
+    "Pick Rate": 6.85,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 52.07,
-    "Pick Rate 1": 75.85,
+    "Win Rate 1": 51.58,
+    "Pick Rate 1": 75.74,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 46.91,
-    "Pick Rate 2": 12.27,
+    "Win Rate 2": 46.69,
+    "Pick Rate 2": 12.87,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 46.96,
-    "Pick Rate 3": 9.04
+    "Win Rate 3": 45.68,
+    "Pick Rate 3": 9.02
   },
   {
     "Name": "Mega Charizard X",
@@ -4287,8 +4290,8 @@ const items = [
     "Move 2": [
       "Moves/Mega Charizard X - Flare Blitz.png"
     ],
-    "Win Rate": 55.35,
-    "Pick Rate": 39.13,
+    "Win Rate": 51.36,
+    "Pick Rate": 60.97,
     "Item 1": "Battle_Items/nan.png",
     "Win Rate 1": NaN,
     "Pick Rate 1": NaN
@@ -4304,17 +4307,17 @@ const items = [
     "Move 2": [
       "Moves/Mega Lucario - Close Combat.png"
     ],
-    "Win Rate": 53.33,
-    "Pick Rate": 40.97,
+    "Win Rate": 52.23,
+    "Pick Rate": 30.97,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 54.56,
-    "Pick Rate 1": 77.35,
+    "Win Rate 1": 53.47,
+    "Pick Rate 1": 78.18,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 49.38,
-    "Pick Rate 2": 8.19,
+    "Win Rate 2": 47.81,
+    "Pick Rate 2": 7.92,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 48.02,
-    "Pick Rate 3": 5.6
+    "Win Rate 3": 47.81,
+    "Pick Rate 3": 5.53
   },
   {
     "Name": "Meowscarada",
@@ -4327,17 +4330,17 @@ const items = [
     "Move 2": [
       "Moves/Meowscarada - Double Team.png"
     ],
-    "Win Rate": 52.37,
-    "Pick Rate": 2.9,
+    "Win Rate": 52.6,
+    "Pick Rate": 2.45,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 52.99,
-    "Pick Rate 1": 81.05,
+    "Win Rate 1": 53.0,
+    "Pick Rate 1": 80.92,
     "Item 2": "Battle_Items/Shedinja Doll.png",
-    "Win Rate 2": 50.93,
-    "Pick Rate 2": 7.81,
+    "Win Rate 2": 56.58,
+    "Pick Rate 2": 6.96,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 52.27,
-    "Pick Rate 3": 3.64
+    "Win Rate 3": 43.71,
+    "Pick Rate 3": 3.74
   },
   {
     "Name": "Meowscarada",
@@ -4350,17 +4353,17 @@ const items = [
     "Move 2": [
       "Moves/Meowscarada - Trailblaze.png"
     ],
-    "Win Rate": 39.24,
-    "Pick Rate": 0.3,
+    "Win Rate": 41.49,
+    "Pick Rate": 0.26,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 41.62,
-    "Pick Rate 1": 67.2,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 26.92,
-    "Pick Rate 2": 10.46,
-    "Item 3": "Battle_Items/Shedinja Doll.png",
-    "Win Rate 3": 41.46,
-    "Pick Rate 3": 8.25
+    "Win Rate 1": 43.06,
+    "Pick Rate 1": 65.5,
+    "Item 2": "Battle_Items/Shedinja Doll.png",
+    "Win Rate 2": 38.46,
+    "Pick Rate 2": 9.09,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 50.0,
+    "Pick Rate 3": 7.46
   },
   {
     "Name": "Meowscarada",
@@ -4373,17 +4376,17 @@ const items = [
     "Move 2": [
       "Moves/Meowscarada - Double Team.png"
     ],
-    "Win Rate": 46.13,
-    "Pick Rate": 0.2,
+    "Win Rate": 43.38,
+    "Pick Rate": 0.17,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 46.32,
-    "Pick Rate 1": 40.48,
+    "Win Rate 1": 35.63,
+    "Pick Rate 1": 31.99,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 45.59,
-    "Pick Rate 2": 20.24,
+    "Win Rate 2": 54.67,
+    "Pick Rate 2": 27.57,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 45.45,
-    "Pick Rate 3": 16.37
+    "Win Rate 3": 52.94,
+    "Pick Rate 3": 18.75
   },
   {
     "Name": "Meowscarada",
@@ -4396,17 +4399,17 @@ const items = [
     "Move 2": [
       "Moves/Meowscarada - Trailblaze.png"
     ],
-    "Win Rate": 47.31,
-    "Pick Rate": 3.9,
+    "Win Rate": 47.4,
+    "Pick Rate": 3.45,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 46.17,
-    "Pick Rate 1": 46.38,
+    "Win Rate 1": 48.72,
+    "Pick Rate 1": 47.99,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 48.48,
-    "Pick Rate 2": 13.75,
+    "Win Rate 2": 49.19,
+    "Pick Rate 2": 13.09,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 49.27,
-    "Pick Rate 3": 12.62
+    "Win Rate 3": 41.36,
+    "Pick Rate 3": 10.38
   },
   {
     "Name": "Metagross",
@@ -4419,17 +4422,17 @@ const items = [
     "Move 2": [
       "Moves/Metagross - Magnet Rise.png"
     ],
-    "Win Rate": 49.69,
-    "Pick Rate": 2.12,
+    "Win Rate": 49.2,
+    "Pick Rate": 2.01,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 51.46,
-    "Pick Rate 1": 54.48,
+    "Win Rate 1": 51.23,
+    "Pick Rate 1": 55.15,
     "Item 2": "Battle_Items/Full Heal.png",
-    "Win Rate 2": 49.06,
-    "Pick Rate 2": 21.15,
+    "Win Rate 2": 48.34,
+    "Pick Rate 2": 20.07,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 47.54,
-    "Pick Rate 3": 14.43
+    "Win Rate 3": 44.88,
+    "Pick Rate 3": 13.87
   },
   {
     "Name": "Metagross",
@@ -4442,17 +4445,17 @@ const items = [
     "Move 2": [
       "Moves/Metagross - Zen Headbutt.png"
     ],
-    "Win Rate": 47.1,
-    "Pick Rate": 1.92,
+    "Win Rate": 49.75,
+    "Pick Rate": 1.81,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 49.25,
-    "Pick Rate 1": 33.41,
+    "Win Rate 1": 51.32,
+    "Pick Rate 1": 35.74,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 43.7,
-    "Pick Rate 2": 21.41,
-    "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 48.84,
-    "Pick Rate 3": 18.9
+    "Win Rate 2": 47.51,
+    "Pick Rate 2": 21.57,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 53.12,
+    "Pick Rate 3": 16.69
   },
   {
     "Name": "Metagross",
@@ -4465,17 +4468,17 @@ const items = [
     "Move 2": [
       "Moves/Metagross - Magnet Rise.png"
     ],
-    "Win Rate": 47.95,
-    "Pick Rate": 0.56,
+    "Win Rate": 49.32,
+    "Pick Rate": 0.58,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 47.84,
-    "Pick Rate 1": 37.47,
+    "Win Rate 1": 50.26,
+    "Pick Rate 1": 40.84,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 51.05,
-    "Pick Rate 2": 20.52,
+    "Win Rate 2": 46.63,
+    "Pick Rate 2": 21.78,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 50.59,
-    "Pick Rate 3": 18.36
+    "Win Rate 3": 44.1,
+    "Pick Rate 3": 16.86
   },
   {
     "Name": "Metagross",
@@ -4488,17 +4491,17 @@ const items = [
     "Move 2": [
       "Moves/Metagross - Zen Headbutt.png"
     ],
-    "Win Rate": 45.05,
+    "Win Rate": 45.97,
     "Pick Rate": 0.41,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 44.93,
-    "Pick Rate 1": 40.77,
+    "Win Rate 1": 50.21,
+    "Pick Rate 1": 35.07,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 41.38,
-    "Pick Rate 2": 21.42,
+    "Win Rate 2": 47.4,
+    "Pick Rate 2": 22.99,
     "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 51.64,
-    "Pick Rate 3": 18.02
+    "Win Rate 3": 46.83,
+    "Pick Rate 3": 18.81
   },
   {
     "Name": "Mew",
@@ -4515,17 +4518,17 @@ const items = [
       "Moves/Mew - Agility.png",
       "Moves/Mew - Coaching.png"
     ],
-    "Win Rate": 50.55,
-    "Pick Rate": 13.2,
+    "Win Rate": 49.05,
+    "Pick Rate": 11.79,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 51.88,
-    "Pick Rate 1": 92.74,
+    "Win Rate 1": 50.21,
+    "Pick Rate 1": 92.43,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 43.55,
-    "Pick Rate 2": 4.66,
+    "Win Rate 2": 43.5,
+    "Pick Rate 2": 5.03,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 43.71,
-    "Pick Rate 3": 0.98
+    "Win Rate 3": 45.38,
+    "Pick Rate 3": 0.79
   },
   {
     "Name": "MewtwoX",
@@ -4538,17 +4541,17 @@ const items = [
     "Move 2": [
       "Moves/MewtwoX - Teleport.png"
     ],
-    "Win Rate": 45.74,
-    "Pick Rate": 0.17,
+    "Win Rate": 46.23,
+    "Pick Rate": 0.12,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 42.11,
-    "Pick Rate 1": 40.43,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 51.92,
-    "Pick Rate 2": 18.44,
-    "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 45.1,
-    "Pick Rate 3": 18.09
+    "Win Rate 1": 42.42,
+    "Pick Rate 1": 33.17,
+    "Item 2": "Battle_Items/Eject Button.png",
+    "Win Rate 2": 45.83,
+    "Pick Rate 2": 24.12,
+    "Item 3": "Battle_Items/X Attack.png",
+    "Win Rate 3": 43.75,
+    "Pick Rate 3": 16.08
   },
   {
     "Name": "MewtwoX",
@@ -4561,17 +4564,17 @@ const items = [
     "Move 2": [
       "Moves/MewtwoX - Recover.png"
     ],
-    "Win Rate": 49.13,
-    "Pick Rate": 0.69,
+    "Win Rate": 48.26,
+    "Pick Rate": 0.66,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 51.03,
-    "Pick Rate 1": 50.43,
+    "Win Rate 1": 48.3,
+    "Pick Rate 1": 48.44,
     "Item 2": "Battle_Items/Full Heal.png",
-    "Win Rate 2": 55.03,
-    "Pick Rate 2": 14.64,
-    "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 43.88,
-    "Pick Rate 3": 12.05
+    "Win Rate 2": 51.43,
+    "Pick Rate 2": 12.84,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 45.99,
+    "Pick Rate 3": 12.57
   },
   {
     "Name": "MewtwoX",
@@ -4584,17 +4587,17 @@ const items = [
     "Move 2": [
       "Moves/MewtwoX - Recover.png"
     ],
-    "Win Rate": 49.59,
-    "Pick Rate": 0.37,
+    "Win Rate": 44.26,
+    "Pick Rate": 0.36,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 50.84,
-    "Pick Rate 1": 58.21,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 50.54,
-    "Pick Rate 2": 15.12,
-    "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 49.12,
-    "Pick Rate 3": 9.27
+    "Win Rate 1": 46.33,
+    "Pick Rate 1": 59.8,
+    "Item 2": "Battle_Items/X Attack.png",
+    "Win Rate 2": 38.57,
+    "Pick Rate 2": 11.82,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 44.07,
+    "Pick Rate 3": 9.97
   },
   {
     "Name": "MewtwoX",
@@ -4607,17 +4610,17 @@ const items = [
     "Move 2": [
       "Moves/MewtwoX - Teleport.png"
     ],
-    "Win Rate": 51.61,
+    "Win Rate": 45.14,
     "Pick Rate": 0.19,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 54.26,
-    "Pick Rate 1": 30.32,
-    "Item 2": "Battle_Items/Full Heal.png",
-    "Win Rate 2": 50.75,
-    "Pick Rate 2": 21.61,
+    "Win Rate 1": 48.08,
+    "Pick Rate 1": 32.6,
+    "Item 2": "Battle_Items/X Attack.png",
+    "Win Rate 2": 45.45,
+    "Pick Rate 2": 20.69,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 50.94,
-    "Pick Rate 3": 17.1
+    "Win Rate 3": 42.11,
+    "Pick Rate 3": 17.87
   },
   {
     "Name": "MewtwoY",
@@ -4630,17 +4633,17 @@ const items = [
     "Move 2": [
       "Moves/MewtwoY - Teleport.png"
     ],
-    "Win Rate": 46.65,
-    "Pick Rate": 1.03,
+    "Win Rate": 43.64,
+    "Pick Rate": 0.86,
     "Item 1": "Battle_Items/X Attack.png",
-    "Win Rate 1": 47.89,
-    "Pick Rate 1": 66.47,
+    "Win Rate 1": 44.65,
+    "Pick Rate 1": 67.04,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 45.33,
-    "Pick Rate 2": 16.85,
+    "Win Rate 2": 41.18,
+    "Pick Rate 2": 17.92,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 46.58,
-    "Pick Rate 3": 8.51
+    "Win Rate 3": 51.55,
+    "Pick Rate 3": 6.82
   },
   {
     "Name": "MewtwoY",
@@ -4653,17 +4656,17 @@ const items = [
     "Move 2": [
       "Moves/MewtwoY - Teleport.png"
     ],
-    "Win Rate": 42.08,
-    "Pick Rate": 0.4,
+    "Win Rate": 43.52,
+    "Pick Rate": 0.35,
     "Item 1": "Battle_Items/X Attack.png",
-    "Win Rate 1": 42.46,
-    "Pick Rate 1": 69.98,
+    "Win Rate 1": 44.33,
+    "Pick Rate 1": 68.57,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 40.66,
-    "Pick Rate 2": 13.73,
+    "Win Rate 2": 42.11,
+    "Pick Rate 2": 13.13,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 38.71,
-    "Pick Rate 3": 9.35
+    "Win Rate 3": 42.31,
+    "Pick Rate 3": 8.98
   },
   {
     "Name": "MewtwoY",
@@ -4676,17 +4679,17 @@ const items = [
     "Move 2": [
       "Moves/MewtwoY - Recover.png"
     ],
-    "Win Rate": 46.31,
-    "Pick Rate": 0.26,
+    "Win Rate": 39.3,
+    "Pick Rate": 0.21,
     "Item 1": "Battle_Items/X Attack.png",
-    "Win Rate 1": 48.67,
-    "Pick Rate 1": 69.12,
+    "Win Rate 1": 37.67,
+    "Pick Rate 1": 65.4,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 37.29,
-    "Pick Rate 2": 13.59,
-    "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 47.5,
-    "Pick Rate 3": 9.22
+    "Win Rate 2": 40.0,
+    "Pick Rate 2": 11.73,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 47.22,
+    "Pick Rate 3": 10.56
   },
   {
     "Name": "MewtwoY",
@@ -4699,40 +4702,17 @@ const items = [
     "Move 2": [
       "Moves/MewtwoY - Recover.png"
     ],
-    "Win Rate": 43.19,
-    "Pick Rate": 0.15,
+    "Win Rate": 44.41,
+    "Pick Rate": 0.18,
     "Item 1": "Battle_Items/X Attack.png",
-    "Win Rate 1": 42.22,
-    "Pick Rate 1": 52.53,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 48.98,
-    "Pick Rate 2": 19.07,
-    "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 44.74,
-    "Pick Rate 3": 14.79
-  },
-  {
-    "Name": "Mimikyu",
-    "Pokemon": "Pokemon/Mimikyu.png",
-    "Role": "All-Rounder",
-    "Move Set": "Play Rough/Shadow Sneak",
-    "Move 1": [
-      "Moves/Mimikyu - Play Rough.png"
-    ],
-    "Move 2": [
-      "Moves/Mimikyu - Shadow Sneak.png"
-    ],
-    "Win Rate": 48.02,
-    "Pick Rate": 5.99,
-    "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 47.64,
-    "Pick Rate 1": 34.67,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 47.19,
-    "Pick Rate 2": 22.33,
-    "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 49.69,
-    "Pick Rate 3": 19.41
+    "Win Rate 1": 45.06,
+    "Pick Rate 1": 54.92,
+    "Item 2": "Battle_Items/Eject Button.png",
+    "Win Rate 2": 46.3,
+    "Pick Rate 2": 18.31,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 36.17,
+    "Pick Rate 3": 15.93
   },
   {
     "Name": "Mimikyu",
@@ -4745,17 +4725,40 @@ const items = [
     "Move 2": [
       "Moves/Mimikyu - Shadow Sneak.png"
     ],
-    "Win Rate": 45.89,
-    "Pick Rate": 2.11,
-    "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 46.35,
-    "Pick Rate 1": 27.77,
-    "Item 2": "Battle_Items/Full Heal.png",
-    "Win Rate 2": 48.69,
-    "Pick Rate 2": 27.14,
+    "Win Rate": 51.05,
+    "Pick Rate": 11.19,
+    "Item 1": "Battle_Items/Full Heal.png",
+    "Win Rate 1": 53.91,
+    "Pick Rate 1": 42.13,
+    "Item 2": "Battle_Items/Eject Button.png",
+    "Win Rate 2": 48.18,
+    "Pick Rate 2": 23.77,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 44.98,
-    "Pick Rate 3": 24.43
+    "Win Rate 3": 49.45,
+    "Pick Rate 3": 17.61
+  },
+  {
+    "Name": "Mimikyu",
+    "Pokemon": "Pokemon/Mimikyu.png",
+    "Role": "All-Rounder",
+    "Move Set": "Play Rough/Shadow Sneak",
+    "Move 1": [
+      "Moves/Mimikyu - Play Rough.png"
+    ],
+    "Move 2": [
+      "Moves/Mimikyu - Shadow Sneak.png"
+    ],
+    "Win Rate": 50.71,
+    "Pick Rate": 9.24,
+    "Item 1": "Battle_Items/Eject Button.png",
+    "Win Rate 1": 52.01,
+    "Pick Rate 1": 33.94,
+    "Item 2": "Battle_Items/X Speed.png",
+    "Win Rate 2": 48.69,
+    "Pick Rate 2": 22.12,
+    "Item 3": "Battle_Items/Full Heal.png",
+    "Win Rate 3": 53.17,
+    "Pick Rate 3": 19.5
   },
   {
     "Name": "Mimikyu",
@@ -4768,17 +4771,17 @@ const items = [
     "Move 2": [
       "Moves/Mimikyu - Trick Room.png"
     ],
-    "Win Rate": 53.05,
-    "Pick Rate": 1.8,
+    "Win Rate": 51.78,
+    "Pick Rate": 8.32,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 55.15,
-    "Pick Rate 1": 82.88,
+    "Win Rate 1": 53.28,
+    "Pick Rate 1": 82.74,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 43.05,
-    "Pick Rate 2": 7.44,
+    "Win Rate 2": 42.84,
+    "Pick Rate 2": 8.42,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 44.9,
-    "Pick Rate 3": 3.27
+    "Win Rate 3": 45.89,
+    "Pick Rate 3": 3.47
   },
   {
     "Name": "Miraidon",
@@ -4791,17 +4794,17 @@ const items = [
     "Move 2": [
       "Moves/Miraidon - Thunder.png"
     ],
-    "Win Rate": 49.43,
-    "Pick Rate": 5.7,
+    "Win Rate": 49.6,
+    "Pick Rate": 4.59,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 50.95,
-    "Pick Rate 1": 78.39,
+    "Win Rate 1": 50.03,
+    "Pick Rate 1": 77.56,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 44.56,
-    "Pick Rate 2": 16.4,
+    "Win Rate 2": 48.31,
+    "Pick Rate 2": 16.03,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 45.16,
-    "Pick Rate 3": 1.64
+    "Win Rate 3": 50.28,
+    "Pick Rate 3": 2.37
   },
   {
     "Name": "Miraidon",
@@ -4814,17 +4817,17 @@ const items = [
     "Move 2": [
       "Moves/Miraidon - Parabolic Charge.png"
     ],
-    "Win Rate": 50.58,
-    "Pick Rate": 2.84,
+    "Win Rate": 51.75,
+    "Pick Rate": 2.42,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 50.35,
-    "Pick Rate 1": 48.02,
+    "Win Rate 1": 52.71,
+    "Pick Rate 1": 44.56,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 51.41,
-    "Pick Rate 2": 30.0,
+    "Win Rate 2": 52.21,
+    "Pick Rate 2": 34.1,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 51.52,
-    "Pick Rate 3": 16.06
+    "Win Rate 3": 50.88,
+    "Pick Rate 3": 14.33
   },
   {
     "Name": "Miraidon",
@@ -4837,17 +4840,17 @@ const items = [
     "Move 2": [
       "Moves/Miraidon - Parabolic Charge.png"
     ],
-    "Win Rate": 48.46,
-    "Pick Rate": 0.45,
+    "Win Rate": 48.3,
+    "Pick Rate": 0.38,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.91,
-    "Pick Rate 1": 75.97,
+    "Win Rate 1": 49.06,
+    "Pick Rate 1": 68.5,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 41.67,
-    "Pick Rate 2": 16.02,
-    "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 55.56,
-    "Pick Rate 3": 3.6
+    "Win Rate 2": 47.97,
+    "Pick Rate 2": 19.87,
+    "Item 3": "Battle_Items/X Attack.png",
+    "Win Rate 3": 42.31,
+    "Pick Rate 3": 4.2
   },
   {
     "Name": "Mr. Mime",
@@ -4860,17 +4863,17 @@ const items = [
     "Move 2": [
       "Moves/Mr. Mime - Power Swap.png"
     ],
-    "Win Rate": 49.28,
-    "Pick Rate": 0.76,
+    "Win Rate": 50.25,
+    "Pick Rate": 0.72,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 50.97,
-    "Pick Rate 1": 53.5,
+    "Win Rate 1": 51.79,
+    "Pick Rate 1": 54.03,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 48.29,
-    "Pick Rate 2": 20.91,
+    "Win Rate 2": 53.82,
+    "Pick Rate 2": 24.2,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 47.89,
-    "Pick Rate 3": 20.75
+    "Win Rate 3": 44.23,
+    "Pick Rate 3": 17.48
   },
   {
     "Name": "Mr. Mime",
@@ -4883,17 +4886,17 @@ const items = [
     "Move 2": [
       "Moves/Mr. Mime - Barrier.png"
     ],
-    "Win Rate": 40.71,
+    "Win Rate": 44.7,
     "Pick Rate": 0.08,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 35.0,
-    "Pick Rate 1": 42.86,
+    "Win Rate 1": 42.11,
+    "Pick Rate 1": 43.18,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 36.59,
-    "Pick Rate 2": 29.29,
+    "Win Rate 2": 55.0,
+    "Pick Rate 2": 30.3,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 47.06,
-    "Pick Rate 3": 12.14
+    "Win Rate 3": 40.0,
+    "Pick Rate 3": 11.36
   },
   {
     "Name": "Mr. Mime",
@@ -4906,17 +4909,17 @@ const items = [
     "Move 2": [
       "Moves/Mr. Mime - Barrier.png"
     ],
-    "Win Rate": 50.66,
-    "Pick Rate": 5.22,
+    "Win Rate": 51.39,
+    "Pick Rate": 5.57,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 50.09,
-    "Pick Rate 1": 57.51,
+    "Win Rate 1": 51.98,
+    "Pick Rate 1": 56.53,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 53.08,
-    "Pick Rate 2": 28.23,
+    "Win Rate 2": 51.6,
+    "Pick Rate 2": 31.69,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 50.11,
-    "Pick Rate 3": 10.19
+    "Win Rate 3": 49.13,
+    "Pick Rate 3": 8.13
   },
   {
     "Name": "Mr. Mime",
@@ -4929,17 +4932,17 @@ const items = [
     "Move 2": [
       "Moves/Mr. Mime - Power Swap.png"
     ],
-    "Win Rate": 52.98,
-    "Pick Rate": 1.52,
+    "Win Rate": 51.68,
+    "Pick Rate": 1.56,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 53.24,
-    "Pick Rate 1": 51.79,
+    "Win Rate 1": 51.88,
+    "Pick Rate 1": 54.02,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 53.34,
-    "Pick Rate 2": 29.51,
+    "Win Rate 2": 50.24,
+    "Pick Rate 2": 24.86,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 52.38,
-    "Pick Rate 3": 12.43
+    "Win Rate 3": 52.62,
+    "Pick Rate 3": 16.39
   },
   {
     "Name": "Pawmot",
@@ -4952,17 +4955,17 @@ const items = [
     "Move 2": [
       "Moves/Pawmot - Volt Switch.png"
     ],
-    "Win Rate": 50.44,
-    "Pick Rate": 3.52,
+    "Win Rate": 51.51,
+    "Pick Rate": 2.79,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 53.07,
-    "Pick Rate 1": 51.22,
+    "Win Rate 1": 53.04,
+    "Pick Rate 1": 51.79,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 49.54,
-    "Pick Rate 2": 16.82,
+    "Win Rate 2": 50.13,
+    "Pick Rate 2": 16.62,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 46.31,
-    "Pick Rate 3": 14.82
+    "Win Rate 3": 51.34,
+    "Pick Rate 3": 13.81
   },
   {
     "Name": "Pawmot",
@@ -4975,17 +4978,17 @@ const items = [
     "Move 2": [
       "Moves/Pawmot - Mach Punch.png"
     ],
-    "Win Rate": 49.38,
-    "Pick Rate": 3.31,
+    "Win Rate": 48.57,
+    "Pick Rate": 2.77,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 49.76,
-    "Pick Rate 1": 45.61,
+    "Win Rate 1": 50.51,
+    "Pick Rate 1": 40.76,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 49.68,
-    "Pick Rate 2": 19.55,
+    "Win Rate 2": 48.32,
+    "Pick Rate 2": 22.89,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 47.86,
-    "Pick Rate 3": 14.0
+    "Win Rate 3": 45.65,
+    "Pick Rate 3": 15.39
   },
   {
     "Name": "Pawmot",
@@ -4998,17 +5001,17 @@ const items = [
     "Move 2": [
       "Moves/Pawmot - Mach Punch.png"
     ],
-    "Win Rate": 47.58,
-    "Pick Rate": 1.37,
+    "Win Rate": 46.77,
+    "Pick Rate": 1.07,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 49.33,
-    "Pick Rate 1": 36.14,
+    "Win Rate 1": 45.92,
+    "Pick Rate 1": 31.97,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 46.12,
-    "Pick Rate 2": 19.28,
+    "Win Rate 2": 49.87,
+    "Pick Rate 2": 21.49,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 47.9,
-    "Pick Rate 3": 17.83
+    "Win Rate 3": 46.45,
+    "Pick Rate 3": 19.16
   },
   {
     "Name": "Pawmot",
@@ -5021,17 +5024,17 @@ const items = [
     "Move 2": [
       "Moves/Pawmot - Volt Switch.png"
     ],
-    "Win Rate": 46.63,
-    "Pick Rate": 0.64,
+    "Win Rate": 47.26,
+    "Pick Rate": 0.58,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 43.98,
-    "Pick Rate 1": 24.91,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 46.32,
-    "Pick Rate 2": 21.63,
+    "Win Rate 1": 44.83,
+    "Pick Rate 1": 24.42,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 50.7,
+    "Pick Rate 2": 22.42,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 46.98,
-    "Pick Rate 3": 20.13
+    "Win Rate 3": 42.08,
+    "Pick Rate 3": 21.26
   },
   {
     "Name": "Pikachu",
@@ -5044,17 +5047,17 @@ const items = [
     "Move 2": [
       "Moves/Pikachu - Volt Tackle.png"
     ],
-    "Win Rate": 47.98,
-    "Pick Rate": 11.71,
+    "Win Rate": 47.78,
+    "Pick Rate": 10.27,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 48.73,
-    "Pick Rate 1": 48.94,
+    "Win Rate 1": 48.18,
+    "Pick Rate 1": 47.33,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 47.85,
-    "Pick Rate 2": 33.73,
+    "Win Rate 2": 48.51,
+    "Pick Rate 2": 34.43,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 44.26,
-    "Pick Rate 3": 8.81
+    "Win Rate 3": 44.88,
+    "Pick Rate 3": 9.59
   },
   {
     "Name": "Pikachu",
@@ -5067,17 +5070,17 @@ const items = [
     "Move 2": [
       "Moves/Pikachu - Thunderbolt.png"
     ],
-    "Win Rate": 40.0,
-    "Pick Rate": 0.45,
+    "Win Rate": 43.88,
+    "Pick Rate": 0.39,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 42.81,
-    "Pick Rate 1": 44.53,
+    "Win Rate 1": 44.84,
+    "Pick Rate 1": 39.07,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 35.11,
-    "Pick Rate 2": 37.6,
+    "Win Rate 2": 42.8,
+    "Pick Rate 2": 36.59,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 49.35,
-    "Pick Rate 3": 10.27
+    "Win Rate 3": 48.39,
+    "Pick Rate 3": 14.42
   },
   {
     "Name": "Pikachu",
@@ -5090,17 +5093,17 @@ const items = [
     "Move 2": [
       "Moves/Pikachu - Thunderbolt.png"
     ],
-    "Win Rate": 47.85,
-    "Pick Rate": 3.92,
+    "Win Rate": 48.19,
+    "Pick Rate": 3.56,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.15,
-    "Pick Rate 1": 55.93,
+    "Win Rate 1": 49.6,
+    "Pick Rate 1": 54.82,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 46.6,
-    "Pick Rate 2": 32.24,
+    "Win Rate 2": 47.39,
+    "Pick Rate 2": 34.02,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 38.89,
-    "Pick Rate 3": 4.69
+    "Win Rate 3": 45.29,
+    "Pick Rate 3": 4.71
   },
   {
     "Name": "Pikachu",
@@ -5113,17 +5116,17 @@ const items = [
     "Move 2": [
       "Moves/Pikachu - Volt Tackle.png"
     ],
-    "Win Rate": 49.45,
-    "Pick Rate": 4.59,
+    "Win Rate": 50.09,
+    "Pick Rate": 4.5,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 50.99,
-    "Pick Rate 1": 44.14,
+    "Win Rate 1": 50.88,
+    "Pick Rate 1": 43.5,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 48.32,
-    "Pick Rate 2": 37.09,
+    "Win Rate 2": 50.57,
+    "Pick Rate 2": 37.81,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 47.5,
-    "Pick Rate 3": 8.39
+    "Win Rate 3": 45.52,
+    "Pick Rate 3": 9.04
   },
   {
     "Name": "Psyduck",
@@ -5136,17 +5139,17 @@ const items = [
     "Move 2": [
       "Moves/Psyduck - Disable.png"
     ],
-    "Win Rate": 50.96,
+    "Win Rate": 50.0,
     "Pick Rate": 0.69,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 49.9,
-    "Pick Rate 1": 44.26,
+    "Win Rate 1": 50.28,
+    "Pick Rate 1": 48.14,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 51.9,
-    "Pick Rate 2": 36.52,
+    "Win Rate 2": 50.84,
+    "Pick Rate 2": 36.66,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 50.6,
-    "Pick Rate 3": 14.43
+    "Win Rate 3": 49.62,
+    "Pick Rate 3": 11.57
   },
   {
     "Name": "Psyduck",
@@ -5159,17 +5162,17 @@ const items = [
     "Move 2": [
       "Moves/Psyduck - Psychic.png"
     ],
-    "Win Rate": 48.42,
-    "Pick Rate": 0.97,
+    "Win Rate": 49.0,
+    "Pick Rate": 1.16,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 50.59,
-    "Pick Rate 1": 47.5,
+    "Win Rate 1": 52.67,
+    "Pick Rate 1": 52.16,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 48.62,
-    "Pick Rate 2": 33.66,
+    "Win Rate 2": 47.26,
+    "Pick Rate 2": 32.63,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 40.27,
-    "Pick Rate 3": 13.65
+    "Win Rate 3": 40.0,
+    "Pick Rate 3": 12.11
   },
   {
     "Name": "Psyduck",
@@ -5182,17 +5185,17 @@ const items = [
     "Move 2": [
       "Moves/Psyduck - Disable.png"
     ],
-    "Win Rate": 51.34,
-    "Pick Rate": 0.61,
+    "Win Rate": 48.42,
+    "Pick Rate": 0.54,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 52.13,
-    "Pick Rate 1": 55.79,
+    "Win Rate 1": 50.38,
+    "Pick Rate 1": 59.68,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 52.04,
-    "Pick Rate 2": 31.55,
+    "Win Rate 2": 47.19,
+    "Pick Rate 2": 26.01,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 45.0,
-    "Pick Rate 3": 7.91
+    "Win Rate 3": 35.96,
+    "Pick Rate 3": 10.02
   },
   {
     "Name": "Psyduck",
@@ -5205,17 +5208,17 @@ const items = [
     "Move 2": [
       "Moves/Psyduck - Psychic.png"
     ],
-    "Win Rate": 51.56,
-    "Pick Rate": 1.23,
+    "Win Rate": 51.63,
+    "Pick Rate": 1.33,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 52.6,
-    "Pick Rate 1": 63.71,
+    "Win Rate 1": 53.6,
+    "Pick Rate 1": 59.84,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 52.45,
-    "Pick Rate 2": 22.88,
+    "Win Rate 2": 48.48,
+    "Pick Rate 2": 25.75,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 42.93,
-    "Pick Rate 3": 10.0
+    "Win Rate 3": 52.23,
+    "Pick Rate 3": 10.28
   },
   {
     "Name": "Sableye",
@@ -5228,17 +5231,17 @@ const items = [
     "Move 2": [
       "Moves/Sableye - Confuse Ray.png"
     ],
-    "Win Rate": 45.13,
-    "Pick Rate": 0.85,
+    "Win Rate": 48.31,
+    "Pick Rate": 0.95,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 46.32,
-    "Pick Rate 1": 59.38,
+    "Win Rate 1": 50.26,
+    "Pick Rate 1": 60.82,
     "Item 2": "Battle_Items/Goal Getter.png",
-    "Win Rate 2": 44.31,
-    "Pick Rate 2": 22.92,
+    "Win Rate 2": 42.93,
+    "Pick Rate 2": 24.38,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 46.61,
-    "Pick Rate 3": 8.32
+    "Win Rate 3": 51.83,
+    "Pick Rate 3": 10.47
   },
   {
     "Name": "Sableye",
@@ -5251,17 +5254,17 @@ const items = [
     "Move 2": [
       "Moves/Sableye - Confuse Ray.png"
     ],
-    "Win Rate": 48.36,
-    "Pick Rate": 4.5,
+    "Win Rate": 49.16,
+    "Pick Rate": 4.54,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 49.26,
-    "Pick Rate 1": 72.47,
+    "Win Rate 1": 50.26,
+    "Pick Rate 1": 72.31,
     "Item 2": "Battle_Items/Goal Getter.png",
-    "Win Rate 2": 46.1,
-    "Pick Rate 2": 20.58,
+    "Win Rate 2": 45.21,
+    "Pick Rate 2": 20.29,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 47.54,
-    "Pick Rate 3": 4.08
+    "Win Rate 3": 52.41,
+    "Pick Rate 3": 4.17
   },
   {
     "Name": "Sableye",
@@ -5274,17 +5277,17 @@ const items = [
     "Move 2": [
       "Moves/Sableye - Feint Attack.png"
     ],
-    "Win Rate": 45.98,
-    "Pick Rate": 2.26,
+    "Win Rate": 46.27,
+    "Pick Rate": 2.0,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 46.66,
-    "Pick Rate 1": 63.83,
+    "Win Rate 1": 47.25,
+    "Pick Rate 1": 60.19,
     "Item 2": "Battle_Items/Goal Getter.png",
-    "Win Rate 2": 44.24,
-    "Pick Rate 2": 27.76,
+    "Win Rate 2": 44.16,
+    "Pick Rate 2": 29.87,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 50.64,
-    "Pick Rate 3": 4.16
+    "Win Rate 3": 52.81,
+    "Pick Rate 3": 5.4
   },
   {
     "Name": "Sableye",
@@ -5297,17 +5300,17 @@ const items = [
     "Move 2": [
       "Moves/Sableye - Feint Attack.png"
     ],
-    "Win Rate": 41.07,
-    "Pick Rate": 0.31,
+    "Win Rate": 41.72,
+    "Pick Rate": 0.27,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 41.28,
-    "Pick Rate 1": 53.93,
+    "Win Rate 1": 41.22,
+    "Pick Rate 1": 59.41,
     "Item 2": "Battle_Items/Goal Getter.png",
-    "Win Rate 2": 44.52,
-    "Pick Rate 2": 28.02,
+    "Win Rate 2": 36.79,
+    "Pick Rate 2": 24.04,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 47.73,
-    "Pick Rate 3": 8.45
+    "Win Rate 3": 56.25,
+    "Pick Rate 3": 7.26
   },
   {
     "Name": "Scizor",
@@ -5320,17 +5323,17 @@ const items = [
     "Move 2": [
       "Moves/Scizor - Swords Dance.png"
     ],
-    "Win Rate": 46.96,
-    "Pick Rate": 4.57,
+    "Win Rate": 47.43,
+    "Pick Rate": 4.1,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 46.97,
-    "Pick Rate 1": 36.06,
+    "Win Rate 1": 47.11,
+    "Pick Rate 1": 36.89,
     "Item 2": "Battle_Items/Full Heal.png",
-    "Win Rate 2": 46.8,
-    "Pick Rate 2": 23.66,
+    "Win Rate 2": 49.63,
+    "Pick Rate 2": 22.29,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 45.87,
-    "Pick Rate 3": 13.39
+    "Win Rate 3": 47.15,
+    "Pick Rate 3": 14.06
   },
   {
     "Name": "Scizor",
@@ -5343,17 +5346,17 @@ const items = [
     "Move 2": [
       "Moves/Scizor - Double Hit.png"
     ],
-    "Win Rate": 46.31,
-    "Pick Rate": 2.81,
+    "Win Rate": 45.83,
+    "Pick Rate": 2.53,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 46.65,
-    "Pick Rate 1": 40.27,
+    "Win Rate 1": 45.21,
+    "Pick Rate 1": 43.67,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 45.33,
-    "Pick Rate 2": 18.32,
+    "Win Rate 2": 45.02,
+    "Pick Rate 2": 15.42,
     "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 46.67,
-    "Pick Rate 3": 16.05
+    "Win Rate 3": 51.26,
+    "Pick Rate 3": 15.23
   },
   {
     "Name": "Scyther",
@@ -5366,17 +5369,17 @@ const items = [
     "Move 2": [
       "Moves/Scyther - Double Hit.png"
     ],
-    "Win Rate": 47.85,
-    "Pick Rate": 3.38,
+    "Win Rate": 46.94,
+    "Pick Rate": 2.97,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 50.09,
-    "Pick Rate 1": 70.4,
-    "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 40.53,
-    "Pick Rate 2": 8.65,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 45.61,
-    "Pick Rate 3": 8.51
+    "Win Rate 1": 49.3,
+    "Pick Rate 1": 71.71,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 45.38,
+    "Pick Rate 2": 7.76,
+    "Item 3": "Battle_Items/Eject Button.png",
+    "Win Rate 3": 39.57,
+    "Pick Rate 3": 7.55
   },
   {
     "Name": "Scyther",
@@ -5389,17 +5392,17 @@ const items = [
     "Move 2": [
       "Moves/Scyther - Swords Dance.png"
     ],
-    "Win Rate": 43.54,
-    "Pick Rate": 0.8,
+    "Win Rate": 47.93,
+    "Pick Rate": 0.76,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 44.98,
-    "Pick Rate 1": 84.46,
-    "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 42.19,
-    "Pick Rate 2": 4.8,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 32.69,
-    "Pick Rate 3": 3.9
+    "Win Rate 1": 48.94,
+    "Pick Rate 1": 86.07,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 43.1,
+    "Pick Rate 2": 4.62,
+    "Item 3": "Battle_Items/Eject Button.png",
+    "Win Rate 3": 46.67,
+    "Pick Rate 3": 3.58
   },
   {
     "Name": "Slowbro",
@@ -5412,17 +5415,17 @@ const items = [
     "Move 2": [
       "Moves/Slowbro - Telekinesis.png"
     ],
-    "Win Rate": 50.28,
-    "Pick Rate": 9.46,
+    "Win Rate": 50.78,
+    "Pick Rate": 8.72,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 51.38,
-    "Pick Rate 1": 46.22,
+    "Win Rate 1": 51.79,
+    "Pick Rate 1": 46.25,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 49.74,
-    "Pick Rate 2": 32.99,
+    "Win Rate 2": 49.25,
+    "Pick Rate 2": 31.77,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 49.59,
-    "Pick Rate 3": 17.95
+    "Win Rate 3": 50.89,
+    "Pick Rate 3": 18.77
   },
   {
     "Name": "Slowbro",
@@ -5435,17 +5438,17 @@ const items = [
     "Move 2": [
       "Moves/Slowbro - Amnesia.png"
     ],
-    "Win Rate": 50.72,
-    "Pick Rate": 3.51,
+    "Win Rate": 51.46,
+    "Pick Rate": 3.2,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 50.22,
-    "Pick Rate 1": 43.78,
+    "Win Rate 1": 50.02,
+    "Pick Rate 1": 44.25,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 52.3,
-    "Pick Rate 2": 35.36,
+    "Win Rate 2": 54.68,
+    "Pick Rate 2": 33.88,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 48.96,
-    "Pick Rate 3": 18.12
+    "Win Rate 3": 49.76,
+    "Pick Rate 3": 19.57
   },
   {
     "Name": "Slowbro",
@@ -5458,17 +5461,17 @@ const items = [
     "Move 2": [
       "Moves/Slowbro - Amnesia.png"
     ],
-    "Win Rate": 48.69,
-    "Pick Rate": 3.64,
+    "Win Rate": 49.0,
+    "Pick Rate": 3.21,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 48.95,
-    "Pick Rate 1": 48.25,
+    "Win Rate 1": 47.67,
+    "Pick Rate 1": 46.67,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 49.25,
-    "Pick Rate 2": 27.74,
+    "Win Rate 2": 51.6,
+    "Pick Rate 2": 28.44,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 48.18,
-    "Pick Rate 3": 21.87
+    "Win Rate 3": 49.5,
+    "Pick Rate 3": 22.72
   },
   {
     "Name": "Slowbro",
@@ -5481,17 +5484,17 @@ const items = [
     "Move 2": [
       "Moves/Slowbro - Telekinesis.png"
     ],
-    "Win Rate": 48.76,
-    "Pick Rate": 3.81,
+    "Win Rate": 47.82,
+    "Pick Rate": 3.37,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 48.16,
-    "Pick Rate 1": 36.1,
+    "Win Rate 1": 46.0,
+    "Pick Rate 1": 36.02,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 50.83,
-    "Pick Rate 2": 35.39,
+    "Win Rate 2": 49.87,
+    "Pick Rate 2": 34.2,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 46.74,
-    "Pick Rate 3": 24.49
+    "Win Rate 3": 47.94,
+    "Pick Rate 3": 26.22
   },
   {
     "Name": "Snorlax",
@@ -5504,17 +5507,17 @@ const items = [
     "Move 2": [
       "Moves/Snorlax - Yawn.png"
     ],
-    "Win Rate": 45.22,
-    "Pick Rate": 1.11,
-    "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 47.96,
-    "Pick Rate 1": 37.24,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 42.72,
-    "Pick Rate 2": 34.31,
+    "Win Rate": 47.91,
+    "Pick Rate": 1.12,
+    "Item 1": "Battle_Items/X Speed.png",
+    "Win Rate 1": 46.27,
+    "Pick Rate 1": 35.73,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 50.77,
+    "Pick Rate 2": 35.45,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 46.69,
-    "Pick Rate 3": 13.95
+    "Win Rate 3": 45.31,
+    "Pick Rate 3": 13.92
   },
   {
     "Name": "Snorlax",
@@ -5527,17 +5530,17 @@ const items = [
     "Move 2": [
       "Moves/Snorlax - Block.png"
     ],
-    "Win Rate": 48.66,
-    "Pick Rate": 10.28,
+    "Win Rate": 49.26,
+    "Pick Rate": 9.64,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.02,
-    "Pick Rate 1": 46.08,
+    "Win Rate 1": 48.77,
+    "Pick Rate 1": 48.29,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 48.76,
-    "Pick Rate 2": 42.45,
+    "Win Rate 2": 50.48,
+    "Pick Rate 2": 41.09,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 46.85,
-    "Pick Rate 3": 9.84
+    "Win Rate 3": 47.38,
+    "Pick Rate 3": 9.25
   },
   {
     "Name": "Snorlax",
@@ -5550,17 +5553,17 @@ const items = [
     "Move 2": [
       "Moves/Snorlax - Block.png"
     ],
-    "Win Rate": 48.57,
-    "Pick Rate": 3.28,
+    "Win Rate": 50.71,
+    "Pick Rate": 3.16,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 49.59,
-    "Pick Rate 1": 45.01,
+    "Win Rate 1": 50.83,
+    "Pick Rate 1": 45.23,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 48.79,
-    "Pick Rate 2": 37.89,
+    "Win Rate 2": 51.23,
+    "Pick Rate 2": 36.87,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 46.21,
-    "Pick Rate 3": 9.45
+    "Win Rate 3": 48.7,
+    "Pick Rate 3": 10.36
   },
   {
     "Name": "Snorlax",
@@ -5573,17 +5576,17 @@ const items = [
     "Move 2": [
       "Moves/Snorlax - Yawn.png"
     ],
-    "Win Rate": 50.17,
-    "Pick Rate": 4.5,
+    "Win Rate": 50.45,
+    "Pick Rate": 4.33,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 50.59,
-    "Pick Rate 1": 76.8,
+    "Win Rate 1": 50.79,
+    "Pick Rate 1": 76.69,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 49.6,
-    "Pick Rate 2": 16.55,
+    "Win Rate 2": 49.23,
+    "Pick Rate 2": 17.32,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 47.53,
-    "Pick Rate 3": 5.67
+    "Win Rate 3": 49.03,
+    "Pick Rate 3": 5.04
   },
   {
     "Name": "Suicune",
@@ -5596,17 +5599,17 @@ const items = [
     "Move 2": [
       "Moves/Suicune - Ice Beam.png"
     ],
-    "Win Rate": 51.33,
-    "Pick Rate": 19.92,
+    "Win Rate": 51.81,
+    "Pick Rate": 18.31,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 52.14,
-    "Pick Rate 1": 70.91,
+    "Win Rate 1": 52.6,
+    "Pick Rate 1": 72.08,
     "Item 2": "Battle_Items/X Speed.png",
     "Win Rate 2": 49.29,
-    "Pick Rate 2": 18.51,
+    "Pick Rate 2": 17.5,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 49.6,
-    "Pick Rate 3": 7.92
+    "Win Rate 3": 51.06,
+    "Pick Rate 3": 8.0
   },
   {
     "Name": "Suicune",
@@ -5619,17 +5622,17 @@ const items = [
     "Move 2": [
       "Moves/Suicune - Icy Wind.png"
     ],
-    "Win Rate": 49.35,
-    "Pick Rate": 1.75,
+    "Win Rate": 47.77,
+    "Pick Rate": 1.54,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.57,
-    "Pick Rate 1": 44.2,
+    "Win Rate 1": 46.55,
+    "Pick Rate 1": 41.66,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 49.49,
-    "Pick Rate 2": 33.93,
+    "Win Rate 2": 48.03,
+    "Pick Rate 2": 35.95,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 50.54,
-    "Pick Rate 3": 15.76
+    "Win Rate 3": 51.02,
+    "Pick Rate 3": 15.45
   },
   {
     "Name": "Suicune",
@@ -5642,17 +5645,17 @@ const items = [
     "Move 2": [
       "Moves/Suicune - Ice Beam.png"
     ],
-    "Win Rate": 45.7,
-    "Pick Rate": 0.69,
+    "Win Rate": 48.38,
+    "Pick Rate": 0.6,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 44.79,
-    "Pick Rate 1": 39.56,
+    "Win Rate 1": 51.1,
+    "Pick Rate 1": 41.31,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 48.06,
-    "Pick Rate 2": 38.51,
+    "Win Rate 2": 48.6,
+    "Pick Rate 2": 36.16,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 43.39,
-    "Pick Rate 3": 16.58
+    "Win Rate 3": 42.08,
+    "Pick Rate 3": 18.48
   },
   {
     "Name": "Suicune",
@@ -5665,17 +5668,17 @@ const items = [
     "Move 2": [
       "Moves/Suicune - Icy Wind.png"
     ],
-    "Win Rate": 42.38,
-    "Pick Rate": 0.41,
+    "Win Rate": 43.82,
+    "Pick Rate": 0.34,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 44.79,
-    "Pick Rate 1": 47.8,
+    "Win Rate 1": 47.22,
+    "Pick Rate 1": 44.52,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 41.4,
-    "Pick Rate 2": 31.52,
+    "Win Rate 2": 39.25,
+    "Pick Rate 2": 32.86,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 40.38,
-    "Pick Rate 3": 15.25
+    "Win Rate 3": 47.92,
+    "Pick Rate 3": 16.96
   },
   {
     "Name": "Sylveon",
@@ -5688,17 +5691,17 @@ const items = [
     "Move 2": [
       "Moves/Sylveon - Draining Kiss.png"
     ],
-    "Win Rate": 47.87,
-    "Pick Rate": 0.35,
+    "Win Rate": 44.3,
+    "Pick Rate": 0.73,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 48.81,
-    "Pick Rate 1": 50.26,
-    "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 51.7,
-    "Pick Rate 2": 25.04,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 43.52,
-    "Pick Rate 3": 18.4
+    "Win Rate 1": 44.54,
+    "Pick Rate 1": 49.08,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 45.66,
+    "Pick Rate 2": 22.19,
+    "Item 3": "Battle_Items/Eject Button.png",
+    "Win Rate 3": 41.5,
+    "Pick Rate 3": 21.19
   },
   {
     "Name": "Sylveon",
@@ -5711,17 +5714,17 @@ const items = [
     "Move 2": [
       "Moves/Sylveon - Draining Kiss.png"
     ],
-    "Win Rate": 48.67,
-    "Pick Rate": 5.82,
+    "Win Rate": 49.1,
+    "Pick Rate": 12.59,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 50.1,
-    "Pick Rate 1": 39.52,
+    "Win Rate 1": 50.38,
+    "Pick Rate 1": 39.51,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 48.13,
-    "Pick Rate 2": 36.7,
+    "Win Rate 2": 48.33,
+    "Pick Rate 2": 36.22,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 48.11,
-    "Pick Rate 3": 17.81
+    "Win Rate 3": 48.71,
+    "Pick Rate 3": 17.93
   },
   {
     "Name": "Sylveon",
@@ -5734,17 +5737,17 @@ const items = [
     "Move 2": [
       "Moves/Sylveon - Calm Mind.png"
     ],
-    "Win Rate": 50.22,
-    "Pick Rate": 0.96,
+    "Win Rate": 48.0,
+    "Pick Rate": 2.02,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 52.64,
-    "Pick Rate 1": 69.68,
+    "Win Rate 1": 48.99,
+    "Pick Rate 1": 68.51,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 42.58,
-    "Pick Rate 2": 15.97,
+    "Win Rate 2": 46.36,
+    "Pick Rate 2": 18.17,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 43.26,
-    "Pick Rate 3": 8.8
+    "Win Rate 3": 48.45,
+    "Pick Rate 3": 8.75
   },
   {
     "Name": "Sylveon",
@@ -5757,17 +5760,17 @@ const items = [
     "Move 2": [
       "Moves/Sylveon - Calm Mind.png"
     ],
-    "Win Rate": 42.37,
-    "Pick Rate": 0.14,
+    "Win Rate": 48.89,
+    "Pick Rate": 0.27,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 45.83,
-    "Pick Rate 1": 40.68,
+    "Win Rate 1": 49.72,
+    "Pick Rate 1": 39.33,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 40.79,
-    "Pick Rate 2": 32.2,
+    "Win Rate 2": 51.39,
+    "Pick Rate 2": 32.0,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 36.36,
-    "Pick Rate 3": 18.64
+    "Win Rate 3": 48.72,
+    "Pick Rate 3": 17.33
   },
   {
     "Name": "Talonflame",
@@ -5780,17 +5783,17 @@ const items = [
     "Move 2": [
       "Moves/Talonflame - Fly.png"
     ],
-    "Win Rate": 50.1,
-    "Pick Rate": 10.93,
+    "Win Rate": 49.97,
+    "Pick Rate": 9.49,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 51.39,
-    "Pick Rate 1": 67.9,
-    "Item 2": "Battle_Items/Goal Getter.png",
-    "Win Rate 2": 49.01,
-    "Pick Rate 2": 10.79,
-    "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 46.68,
-    "Pick Rate 3": 10.6
+    "Win Rate 1": 51.15,
+    "Pick Rate 1": 67.4,
+    "Item 2": "Battle_Items/X Speed.png",
+    "Win Rate 2": 46.74,
+    "Pick Rate 2": 10.9,
+    "Item 3": "Battle_Items/Goal Getter.png",
+    "Win Rate 3": 46.36,
+    "Pick Rate 3": 10.56
   },
   {
     "Name": "Talonflame",
@@ -5803,17 +5806,17 @@ const items = [
     "Move 2": [
       "Moves/Talonflame - Brave Bird.png"
     ],
-    "Win Rate": 48.11,
-    "Pick Rate": 6.71,
+    "Win Rate": 50.09,
+    "Pick Rate": 6.09,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.56,
-    "Pick Rate 1": 51.78,
+    "Win Rate 1": 50.6,
+    "Pick Rate 1": 49.04,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 49.81,
-    "Pick Rate 2": 19.1,
+    "Win Rate 2": 53.65,
+    "Pick Rate 2": 22.26,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 44.15,
-    "Pick Rate 3": 10.71
+    "Win Rate 3": 40.7,
+    "Pick Rate 3": 9.65
   },
   {
     "Name": "Talonflame",
@@ -5826,17 +5829,17 @@ const items = [
     "Move 2": [
       "Moves/Talonflame - Fly.png"
     ],
-    "Win Rate": 45.07,
-    "Pick Rate": 2.33,
+    "Win Rate": 45.67,
+    "Pick Rate": 2.1,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 45.79,
-    "Pick Rate 1": 37.36,
+    "Win Rate 1": 47.13,
+    "Pick Rate 1": 35.35,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 42.5,
-    "Pick Rate 2": 18.76,
-    "Item 3": "Battle_Items/Shedinja Doll.png",
-    "Win Rate 3": 51.46,
-    "Pick Rate 3": 12.38
+    "Win Rate 2": 43.51,
+    "Pick Rate 2": 20.98,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 39.7,
+    "Pick Rate 3": 11.68
   },
   {
     "Name": "Talonflame",
@@ -5849,40 +5852,17 @@ const items = [
     "Move 2": [
       "Moves/Talonflame - Brave Bird.png"
     ],
-    "Win Rate": 42.77,
-    "Pick Rate": 0.51,
+    "Win Rate": 42.07,
+    "Pick Rate": 0.48,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 43.92,
-    "Pick Rate 1": 44.42,
-    "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 42.25,
-    "Pick Rate 2": 16.69,
-    "Item 3": "Battle_Items/Goal Getter.png",
-    "Win Rate 3": 44.88,
-    "Pick Rate 3": 14.92
-  },
-  {
-    "Name": "Tinkaton",
-    "Pokemon": "Pokemon/Tinkaton.png",
-    "Role": "All-Rounder",
-    "Move Set": "Smack Down/Ice Hammer",
-    "Move 1": [
-      "Moves/Tinkaton - Smack Down.png"
-    ],
-    "Move 2": [
-      "Moves/Tinkaton - Ice Hammer.png"
-    ],
-    "Win Rate": 43.15,
-    "Pick Rate": 0.2,
-    "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 46.1,
-    "Pick Rate 1": 45.83,
-    "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 45.12,
-    "Pick Rate 2": 24.4,
+    "Win Rate 1": 45.0,
+    "Pick Rate 1": 40.92,
+    "Item 2": "Battle_Items/Goal Getter.png",
+    "Win Rate 2": 44.53,
+    "Pick Rate 2": 16.37,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 36.23,
-    "Pick Rate 3": 20.54
+    "Win Rate 3": 35.65,
+    "Pick Rate 3": 14.71
   },
   {
     "Name": "Tinkaton",
@@ -5895,17 +5875,40 @@ const items = [
     "Move 2": [
       "Moves/Tinkaton - Thief.png"
     ],
-    "Win Rate": 47.61,
+    "Win Rate": 44.66,
+    "Pick Rate": 0.22,
+    "Item 1": "Battle_Items/Eject Button.png",
+    "Win Rate 1": 50.0,
+    "Pick Rate 1": 48.31,
+    "Item 2": "Battle_Items/X Speed.png",
+    "Win Rate 2": 46.99,
+    "Pick Rate 2": 23.31,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 33.8,
+    "Pick Rate 3": 19.94
+  },
+  {
+    "Name": "Tinkaton",
+    "Pokemon": "Pokemon/Tinkaton.png",
+    "Role": "All-Rounder",
+    "Move Set": "Smack Down/Ice Hammer",
+    "Move 1": [
+      "Moves/Tinkaton - Smack Down.png"
+    ],
+    "Move 2": [
+      "Moves/Tinkaton - Ice Hammer.png"
+    ],
+    "Win Rate": 43.47,
     "Pick Rate": 0.26,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 46.01,
-    "Pick Rate 1": 37.13,
+    "Win Rate 1": 43.48,
+    "Pick Rate 1": 43.71,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 48.67,
-    "Pick Rate 2": 25.74,
+    "Win Rate 2": 40.34,
+    "Pick Rate 2": 28.27,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 50.0,
-    "Pick Rate 3": 25.06
+    "Win Rate 3": 37.88,
+    "Pick Rate 3": 15.68
   },
   {
     "Name": "Tinkaton",
@@ -5918,17 +5921,17 @@ const items = [
     "Move 2": [
       "Moves/Tinkaton - Ice Hammer.png"
     ],
-    "Win Rate": 41.4,
-    "Pick Rate": 0.27,
+    "Win Rate": 43.54,
+    "Pick Rate": 0.28,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 41.74,
-    "Pick Rate 1": 54.75,
+    "Win Rate 1": 42.13,
+    "Pick Rate 1": 55.58,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 39.39,
-    "Pick Rate 2": 22.4,
+    "Win Rate 2": 43.43,
+    "Pick Rate 2": 21.66,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 52.17,
-    "Pick Rate 3": 15.61
+    "Win Rate 3": 46.99,
+    "Pick Rate 3": 18.16
   },
   {
     "Name": "Tinkaton",
@@ -5941,17 +5944,17 @@ const items = [
     "Move 2": [
       "Moves/Tinkaton - Thief.png"
     ],
-    "Win Rate": 48.19,
-    "Pick Rate": 2.3,
+    "Win Rate": 48.25,
+    "Pick Rate": 1.93,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 50.05,
-    "Pick Rate 1": 57.49,
+    "Win Rate 1": 49.69,
+    "Pick Rate 1": 61.87,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 46.01,
-    "Pick Rate 2": 30.5,
+    "Win Rate 2": 48.39,
+    "Pick Rate 2": 26.4,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 46.24,
-    "Pick Rate 3": 9.4
+    "Win Rate 3": 41.92,
+    "Pick Rate 3": 9.18
   },
   {
     "Name": "Trevenant",
@@ -5964,17 +5967,17 @@ const items = [
     "Move 2": [
       "Moves/Trevenant - Pain Split.png"
     ],
-    "Win Rate": 49.56,
-    "Pick Rate": 5.77,
+    "Win Rate": 49.14,
+    "Pick Rate": 5.32,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 50.68,
-    "Pick Rate 1": 54.03,
+    "Win Rate 1": 49.93,
+    "Pick Rate 1": 54.04,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 48.93,
-    "Pick Rate 2": 35.51,
+    "Win Rate 2": 49.36,
+    "Pick Rate 2": 36.27,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 48.38,
-    "Pick Rate 3": 6.44
+    "Win Rate 3": 44.17,
+    "Pick Rate 3": 6.07
   },
   {
     "Name": "Trevenant",
@@ -5987,17 +5990,17 @@ const items = [
     "Move 2": [
       "Moves/Trevenant - Horn Leech.png"
     ],
-    "Win Rate": 50.57,
-    "Pick Rate": 6.48,
+    "Win Rate": 50.8,
+    "Pick Rate": 5.78,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 51.58,
-    "Pick Rate 1": 44.16,
+    "Win Rate 1": 52.31,
+    "Pick Rate 1": 46.08,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 50.16,
-    "Pick Rate 2": 34.02,
+    "Win Rate 2": 49.26,
+    "Pick Rate 2": 31.17,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 49.77,
-    "Pick Rate 3": 20.26
+    "Win Rate 3": 50.74,
+    "Pick Rate 3": 20.61
   },
   {
     "Name": "Trevenant",
@@ -6010,17 +6013,17 @@ const items = [
     "Move 2": [
       "Moves/Trevenant - Horn Leech.png"
     ],
-    "Win Rate": 49.66,
-    "Pick Rate": 3.11,
+    "Win Rate": 49.8,
+    "Pick Rate": 3.05,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 53.0,
-    "Pick Rate 1": 55.76,
+    "Win Rate 1": 53.91,
+    "Pick Rate 1": 56.7,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 46.33,
-    "Pick Rate 2": 22.68,
+    "Win Rate 2": 43.54,
+    "Pick Rate 2": 21.56,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 44.64,
-    "Pick Rate 3": 19.33
+    "Win Rate 3": 45.51,
+    "Pick Rate 3": 19.49
   },
   {
     "Name": "Trevenant",
@@ -6033,17 +6036,17 @@ const items = [
     "Move 2": [
       "Moves/Trevenant - Pain Split.png"
     ],
-    "Win Rate": 46.32,
-    "Pick Rate": 0.46,
+    "Win Rate": 47.51,
+    "Pick Rate": 0.44,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 47.23,
-    "Pick Rate 1": 54.61,
+    "Win Rate 1": 49.87,
+    "Pick Rate 1": 52.07,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 43.88,
-    "Pick Rate 2": 31.18,
+    "Win Rate 2": 45.99,
+    "Pick Rate 2": 32.73,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 53.25,
-    "Pick Rate 3": 10.13
+    "Win Rate 3": 41.89,
+    "Pick Rate 3": 10.22
   },
   {
     "Name": "Tsareena",
@@ -6056,17 +6059,17 @@ const items = [
     "Move 2": [
       "Moves/Tsareena - Trop Kick.png"
     ],
-    "Win Rate": 52.94,
-    "Pick Rate": 4.86,
+    "Win Rate": 53.14,
+    "Pick Rate": 4.55,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 53.58,
-    "Pick Rate 1": 77.7,
+    "Win Rate 1": 54.42,
+    "Pick Rate 1": 75.88,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 54.93,
-    "Pick Rate 2": 12.69,
+    "Win Rate 2": 53.56,
+    "Pick Rate 2": 14.23,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 40.34,
-    "Pick Rate 3": 3.65
+    "Win Rate 3": 40.79,
+    "Pick Rate 3": 3.7
   },
   {
     "Name": "Tsareena",
@@ -6079,17 +6082,17 @@ const items = [
     "Move 2": [
       "Moves/Tsareena - Grassy Glide.png"
     ],
-    "Win Rate": 51.07,
-    "Pick Rate": 1.44,
+    "Win Rate": 51.34,
+    "Pick Rate": 1.26,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 51.89,
-    "Pick Rate 1": 79.78,
+    "Win Rate 1": 52.01,
+    "Pick Rate 1": 77.67,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 53.51,
-    "Pick Rate 2": 11.34,
-    "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 40.85,
-    "Pick Rate 3": 2.97
+    "Win Rate 2": 50.0,
+    "Pick Rate 2": 11.24,
+    "Item 3": "Battle_Items/Eject Button.png",
+    "Win Rate 3": 50.0,
+    "Pick Rate 3": 5.19
   },
   {
     "Name": "Tsareena",
@@ -6102,17 +6105,17 @@ const items = [
     "Move 2": [
       "Moves/Tsareena - Trop Kick.png"
     ],
-    "Win Rate": 48.13,
-    "Pick Rate": 1.14,
+    "Win Rate": 50.71,
+    "Pick Rate": 1.07,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 51.14,
-    "Pick Rate 1": 46.02,
+    "Win Rate 1": 53.05,
+    "Pick Rate 1": 44.85,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 48.73,
-    "Pick Rate 2": 18.69,
+    "Win Rate 2": 52.11,
+    "Pick Rate 2": 21.63,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 40.76,
-    "Pick Rate 3": 12.53
+    "Win Rate 3": 47.45,
+    "Pick Rate 3": 11.16
   },
   {
     "Name": "Tsareena",
@@ -6125,17 +6128,17 @@ const items = [
     "Move 2": [
       "Moves/Tsareena - Grassy Glide.png"
     ],
-    "Win Rate": 48.21,
-    "Pick Rate": 0.3,
+    "Win Rate": 51.04,
+    "Pick Rate": 0.32,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 50.34,
-    "Pick Rate 1": 59.36,
+    "Win Rate 1": 54.78,
+    "Pick Rate 1": 59.58,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 45.45,
-    "Pick Rate 2": 13.15,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 49.02,
-    "Pick Rate 3": 10.16
+    "Win Rate 2": 55.0,
+    "Pick Rate 2": 11.39,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 45.28,
+    "Pick Rate 3": 10.06
   },
   {
     "Name": "Tyranitar",
@@ -6148,17 +6151,17 @@ const items = [
     "Move 2": [
       "Moves/Tyranitar - Sand Tomb.png"
     ],
-    "Win Rate": 47.97,
-    "Pick Rate": 0.31,
+    "Win Rate": 51.91,
+    "Pick Rate": 0.36,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 46.0,
-    "Pick Rate 1": 29.01,
+    "Win Rate 1": 52.44,
+    "Pick Rate 1": 27.29,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 46.62,
-    "Pick Rate 2": 25.73,
+    "Win Rate 2": 52.14,
+    "Pick Rate 2": 23.29,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 48.62,
-    "Pick Rate 3": 21.08
+    "Win Rate 3": 50.39,
+    "Pick Rate 3": 21.13
   },
   {
     "Name": "Tyranitar",
@@ -6171,17 +6174,17 @@ const items = [
     "Move 2": [
       "Moves/Tyranitar - Sand Tomb.png"
     ],
-    "Win Rate": 47.79,
-    "Pick Rate": 1.12,
-    "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 48.52,
-    "Pick Rate 1": 25.54,
+    "Win Rate": 52.94,
+    "Pick Rate": 1.17,
+    "Item 1": "Battle_Items/Eject Button.png",
+    "Win Rate 1": 50.52,
+    "Pick Rate 1": 25.25,
     "Item 2": "Battle_Items/Full Heal.png",
-    "Win Rate 2": 50.93,
-    "Pick Rate 2": 23.28,
-    "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 45.77,
-    "Pick Rate 3": 21.66
+    "Win Rate 2": 54.96,
+    "Pick Rate 2": 25.2,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 49.53,
+    "Pick Rate 3": 21.97
   },
   {
     "Name": "Tyranitar",
@@ -6194,17 +6197,17 @@ const items = [
     "Move 2": [
       "Moves/Tyranitar - Ancient Power.png"
     ],
-    "Win Rate": 48.9,
-    "Pick Rate": 0.82,
+    "Win Rate": 48.1,
+    "Pick Rate": 0.81,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 50.45,
-    "Pick Rate 1": 49.12,
-    "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 49.26,
-    "Pick Rate 2": 14.88,
-    "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 45.55,
-    "Pick Rate 3": 14.0
+    "Win Rate 1": 47.97,
+    "Pick Rate 1": 51.3,
+    "Item 2": "Battle_Items/Full Heal.png",
+    "Win Rate 2": 48.1,
+    "Pick Rate 2": 15.66,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 50.0,
+    "Pick Rate 3": 14.91
   },
   {
     "Name": "Tyranitar",
@@ -6217,86 +6220,17 @@ const items = [
     "Move 2": [
       "Moves/Tyranitar - Ancient Power.png"
     ],
-    "Win Rate": 40.16,
-    "Pick Rate": 0.07,
+    "Win Rate": 39.62,
+    "Pick Rate": 0.1,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 46.51,
-    "Pick Rate 1": 35.25,
+    "Win Rate 1": 36.36,
+    "Pick Rate 1": 34.59,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 40.91,
-    "Pick Rate 2": 18.03,
+    "Win Rate 2": 45.65,
+    "Pick Rate 2": 28.93,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 33.33,
-    "Pick Rate 3": 17.21
-  },
-  {
-    "Name": "Umbreon",
-    "Pokemon": "Pokemon/Umbreon.png",
-    "Role": "Defender",
-    "Move Set": "Mean Look/Snarl",
-    "Move 1": [
-      "Moves/Umbreon - Mean Look.png"
-    ],
-    "Move 2": [
-      "Moves/Umbreon - Snarl.png"
-    ],
-    "Win Rate": 49.29,
-    "Pick Rate": 2.29,
-    "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 49.6,
-    "Pick Rate 1": 64.95,
-    "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 50.55,
-    "Pick Rate 2": 19.05,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 44.75,
-    "Pick Rate 3": 13.25
-  },
-  {
-    "Name": "Umbreon",
-    "Pokemon": "Pokemon/Umbreon.png",
-    "Role": "Defender",
-    "Move Set": "Mean Look/Wish",
-    "Move 1": [
-      "Moves/Umbreon - Mean Look.png"
-    ],
-    "Move 2": [
-      "Moves/Umbreon - Wish.png"
-    ],
-    "Win Rate": 49.99,
-    "Pick Rate": 10.58,
-    "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 50.59,
-    "Pick Rate 1": 62.18,
-    "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 49.86,
-    "Pick Rate 2": 19.66,
-    "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 48.71,
-    "Pick Rate 3": 14.77
-  },
-  {
-    "Name": "Umbreon",
-    "Pokemon": "Pokemon/Umbreon.png",
-    "Role": "Defender",
-    "Move Set": "Foul Play/Snarl",
-    "Move 1": [
-      "Moves/Umbreon - Foul Play.png"
-    ],
-    "Move 2": [
-      "Moves/Umbreon - Snarl.png"
-    ],
-    "Win Rate": 51.74,
-    "Pick Rate": 5.76,
-    "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 52.16,
-    "Pick Rate 1": 80.67,
-    "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 52.38,
-    "Pick Rate 2": 11.87,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 47.4,
-    "Pick Rate 3": 6.24
+    "Win Rate 3": 43.48,
+    "Pick Rate 3": 14.47
   },
   {
     "Name": "Umbreon",
@@ -6309,17 +6243,86 @@ const items = [
     "Move 2": [
       "Moves/Umbreon - Wish.png"
     ],
-    "Win Rate": 49.68,
-    "Pick Rate": 2.09,
+    "Win Rate": 51.97,
+    "Pick Rate": 2.5,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 50.99,
-    "Pick Rate 1": 66.71,
+    "Win Rate 1": 52.63,
+    "Pick Rate 1": 63.96,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 44.53,
-    "Pick Rate 2": 18.4,
+    "Win Rate 2": 49.59,
+    "Pick Rate 2": 20.82,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 52.21,
-    "Pick Rate 3": 13.0
+    "Win Rate 3": 53.75,
+    "Pick Rate 3": 13.01
+  },
+  {
+    "Name": "Umbreon",
+    "Pokemon": "Pokemon/Umbreon.png",
+    "Role": "Defender",
+    "Move Set": "Mean Look/Wish",
+    "Move 1": [
+      "Moves/Umbreon - Mean Look.png"
+    ],
+    "Move 2": [
+      "Moves/Umbreon - Wish.png"
+    ],
+    "Win Rate": 48.9,
+    "Pick Rate": 10.51,
+    "Item 1": "Battle_Items/X Speed.png",
+    "Win Rate 1": 49.67,
+    "Pick Rate 1": 59.34,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 47.74,
+    "Pick Rate 2": 21.5,
+    "Item 3": "Battle_Items/Eject Button.png",
+    "Win Rate 3": 48.83,
+    "Pick Rate 3": 15.28
+  },
+  {
+    "Name": "Umbreon",
+    "Pokemon": "Pokemon/Umbreon.png",
+    "Role": "Defender",
+    "Move Set": "Foul Play/Snarl",
+    "Move 1": [
+      "Moves/Umbreon - Foul Play.png"
+    ],
+    "Move 2": [
+      "Moves/Umbreon - Snarl.png"
+    ],
+    "Win Rate": 51.96,
+    "Pick Rate": 5.95,
+    "Item 1": "Battle_Items/X Speed.png",
+    "Win Rate 1": 52.31,
+    "Pick Rate 1": 78.78,
+    "Item 2": "Battle_Items/Eject Button.png",
+    "Win Rate 2": 51.21,
+    "Pick Rate 2": 11.43,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 50.24,
+    "Pick Rate 3": 8.54
+  },
+  {
+    "Name": "Umbreon",
+    "Pokemon": "Pokemon/Umbreon.png",
+    "Role": "Defender",
+    "Move Set": "Mean Look/Snarl",
+    "Move 1": [
+      "Moves/Umbreon - Mean Look.png"
+    ],
+    "Move 2": [
+      "Moves/Umbreon - Snarl.png"
+    ],
+    "Win Rate": 47.47,
+    "Pick Rate": 2.32,
+    "Item 1": "Battle_Items/X Speed.png",
+    "Win Rate 1": 47.72,
+    "Pick Rate 1": 63.81,
+    "Item 2": "Battle_Items/Eject Button.png",
+    "Win Rate 2": 49.64,
+    "Pick Rate 2": 18.25,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 45.71,
+    "Pick Rate 3": 14.95
   },
   {
     "Name": "Urshifu",
@@ -6332,17 +6335,17 @@ const items = [
     "Move 2": [
       "Moves/Urshifu - Liquidation.png"
     ],
-    "Win Rate": 53.29,
-    "Pick Rate": 3.59,
+    "Win Rate": 52.24,
+    "Pick Rate": 4.13,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 55.56,
-    "Pick Rate 1": 80.61,
+    "Win Rate 1": 54.37,
+    "Pick Rate 1": 84.35,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 43.43,
-    "Pick Rate 2": 5.86,
+    "Win Rate 2": 38.87,
+    "Pick Rate 2": 5.76,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 45.76,
-    "Pick Rate 3": 4.94
+    "Win Rate 3": 47.56,
+    "Pick Rate 3": 3.31
   },
   {
     "Name": "Urshifu",
@@ -6355,17 +6358,17 @@ const items = [
     "Move 2": [
       "Moves/Urshifu - Throat Chop.png"
     ],
-    "Win Rate": 47.95,
-    "Pick Rate": 1.29,
+    "Win Rate": 47.36,
+    "Pick Rate": 1.23,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 49.58,
-    "Pick Rate 1": 72.81,
+    "Win Rate 1": 49.46,
+    "Pick Rate 1": 67.96,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 45.69,
-    "Pick Rate 2": 10.82,
+    "Win Rate 2": 43.82,
+    "Pick Rate 2": 13.16,
     "Item 3": "Battle_Items/Full Heal.png",
-    "Win Rate 3": 47.46,
-    "Pick Rate 3": 8.26
+    "Win Rate 3": 39.29,
+    "Pick Rate 3": 9.66
   },
   {
     "Name": "Venusaur",
@@ -6378,17 +6381,17 @@ const items = [
     "Move 2": [
       "Moves/Venusaur - Solar Beam.png"
     ],
-    "Win Rate": 49.36,
-    "Pick Rate": 12.67,
+    "Win Rate": 49.84,
+    "Pick Rate": 10.27,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 50.3,
-    "Pick Rate 1": 61.21,
+    "Win Rate 1": 51.28,
+    "Pick Rate 1": 59.18,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 48.59,
-    "Pick Rate 2": 25.21,
+    "Win Rate 2": 48.42,
+    "Pick Rate 2": 26.54,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 45.93,
-    "Pick Rate 3": 7.22
+    "Win Rate 3": 46.94,
+    "Pick Rate 3": 7.83
   },
   {
     "Name": "Venusaur",
@@ -6401,17 +6404,17 @@ const items = [
     "Move 2": [
       "Moves/Venusaur - Petal Dance.png"
     ],
-    "Win Rate": 48.23,
-    "Pick Rate": 4.95,
+    "Win Rate": 48.21,
+    "Pick Rate": 3.82,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 48.54,
-    "Pick Rate 1": 30.81,
+    "Win Rate 1": 47.81,
+    "Pick Rate 1": 30.96,
     "Item 2": "Battle_Items/Full Heal.png",
-    "Win Rate 2": 51.08,
-    "Pick Rate 2": 28.68,
+    "Win Rate 2": 52.01,
+    "Pick Rate 2": 25.4,
     "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 46.66,
-    "Pick Rate 3": 17.43
+    "Win Rate 3": 49.73,
+    "Pick Rate 3": 17.92
   },
   {
     "Name": "Venusaur",
@@ -6424,17 +6427,17 @@ const items = [
     "Move 2": [
       "Moves/Venusaur - Solar Beam.png"
     ],
-    "Win Rate": 45.89,
-    "Pick Rate": 0.86,
+    "Win Rate": 45.93,
+    "Pick Rate": 0.69,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 47.29,
-    "Pick Rate 1": 64.35,
+    "Win Rate 1": 48.7,
+    "Pick Rate 1": 64.87,
     "Item 2": "Battle_Items/X Speed.png",
-    "Win Rate 2": 44.04,
-    "Pick Rate 2": 15.18,
+    "Win Rate 2": 40.12,
+    "Pick Rate 2": 14.78,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 47.29,
-    "Pick Rate 3": 8.98
+    "Win Rate 3": 42.86,
+    "Pick Rate 3": 9.29
   },
   {
     "Name": "Venusaur",
@@ -6447,17 +6450,17 @@ const items = [
     "Move 2": [
       "Moves/Venusaur - Petal Dance.png"
     ],
-    "Win Rate": 41.29,
-    "Pick Rate": 0.32,
+    "Win Rate": 44.1,
+    "Pick Rate": 0.26,
     "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 42.53,
-    "Pick Rate 1": 32.95,
-    "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 40.85,
-    "Pick Rate 2": 26.89,
-    "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 41.18,
-    "Pick Rate 3": 25.76
+    "Win Rate 1": 42.59,
+    "Pick Rate 1": 38.21,
+    "Item 2": "Battle_Items/X Speed.png",
+    "Win Rate 2": 41.46,
+    "Pick Rate 2": 29.01,
+    "Item 3": "Battle_Items/Eject Button.png",
+    "Win Rate 3": 49.37,
+    "Pick Rate 3": 18.63
   },
   {
     "Name": "Wigglytuff",
@@ -6470,17 +6473,17 @@ const items = [
     "Move 2": [
       "Moves/Wigglytuff - Rollout.png"
     ],
-    "Win Rate": 49.84,
-    "Pick Rate": 0.55,
-    "Item 1": "Battle_Items/Potion.png",
-    "Win Rate 1": 49.3,
-    "Pick Rate 1": 30.99,
-    "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 51.75,
-    "Pick Rate 2": 30.99,
-    "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 50.67,
-    "Pick Rate 3": 24.38
+    "Win Rate": 50.17,
+    "Pick Rate": 0.53,
+    "Item 1": "Battle_Items/X Speed.png",
+    "Win Rate 1": 47.12,
+    "Pick Rate 1": 31.63,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 54.32,
+    "Pick Rate 2": 27.65,
+    "Item 3": "Battle_Items/Eject Button.png",
+    "Win Rate 3": 48.95,
+    "Pick Rate 3": 26.96
   },
   {
     "Name": "Wigglytuff",
@@ -6493,17 +6496,17 @@ const items = [
     "Move 2": [
       "Moves/Wigglytuff - Rollout.png"
     ],
-    "Win Rate": 51.33,
-    "Pick Rate": 0.14,
+    "Win Rate": 52.07,
+    "Pick Rate": 0.15,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 59.46,
-    "Pick Rate 1": 32.74,
-    "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 47.37,
-    "Pick Rate 2": 25.22,
-    "Item 3": "Battle_Items/X Speed.png",
-    "Win Rate 3": 48.0,
-    "Pick Rate 3": 22.12
+    "Win Rate 1": 54.12,
+    "Pick Rate 1": 35.12,
+    "Item 2": "Battle_Items/X Speed.png",
+    "Win Rate 2": 54.24,
+    "Pick Rate 2": 24.38,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 42.11,
+    "Pick Rate 3": 23.55
   },
   {
     "Name": "Wigglytuff",
@@ -6516,17 +6519,17 @@ const items = [
     "Move 2": [
       "Moves/Wigglytuff - Sing.png"
     ],
-    "Win Rate": 49.93,
-    "Pick Rate": 4.4,
+    "Win Rate": 50.77,
+    "Pick Rate": 4.2,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 49.74,
-    "Pick Rate 1": 50.07,
+    "Win Rate 1": 50.86,
+    "Pick Rate 1": 47.88,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 49.97,
-    "Pick Rate 2": 22.63,
+    "Win Rate 2": 53.17,
+    "Pick Rate 2": 24.14,
     "Item 3": "Battle_Items/Slow Smoke.png",
-    "Win Rate 3": 50.73,
-    "Pick Rate 3": 13.07
+    "Win Rate 3": 49.01,
+    "Pick Rate 3": 13.8
   },
   {
     "Name": "Wigglytuff",
@@ -6539,17 +6542,17 @@ const items = [
     "Move 2": [
       "Moves/Wigglytuff - Sing.png"
     ],
-    "Win Rate": 50.44,
-    "Pick Rate": 1.65,
+    "Win Rate": 49.62,
+    "Pick Rate": 1.51,
     "Item 1": "Battle_Items/X Speed.png",
-    "Win Rate 1": 52.15,
-    "Pick Rate 1": 48.98,
+    "Win Rate 1": 48.31,
+    "Pick Rate 1": 50.02,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 48.18,
-    "Pick Rate 2": 18.96,
-    "Item 3": "Battle_Items/Slow Smoke.png",
-    "Win Rate 3": 50.9,
-    "Pick Rate 3": 14.23
+    "Win Rate 2": 51.61,
+    "Pick Rate 2": 21.3,
+    "Item 3": "Battle_Items/Eject Button.png",
+    "Win Rate 3": 51.96,
+    "Pick Rate 3": 13.33
   },
   {
     "Name": "Zacian",
@@ -6562,17 +6565,17 @@ const items = [
     "Move 2": [
       "Moves/Zacian - Play Rough.png"
     ],
-    "Win Rate": 51.99,
-    "Pick Rate": 5.08,
+    "Win Rate": 52.16,
+    "Pick Rate": 4.24,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 53.2,
-    "Pick Rate 1": 65.64,
+    "Win Rate 1": 53.06,
+    "Pick Rate 1": 66.58,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 51.06,
-    "Pick Rate 2": 26.91,
+    "Win Rate 2": 51.69,
+    "Pick Rate 2": 25.05,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 49.44,
-    "Pick Rate 3": 4.22
+    "Win Rate 3": 45.54,
+    "Pick Rate 3": 4.81
   },
   {
     "Name": "Zacian",
@@ -6585,17 +6588,17 @@ const items = [
     "Move 2": [
       "Moves/Zacian - Agility.png"
     ],
-    "Win Rate": 53.05,
-    "Pick Rate": 1.1,
+    "Win Rate": 54.75,
+    "Pick Rate": 1.22,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 54.95,
-    "Pick Rate 1": 60.46,
+    "Win Rate 1": 54.64,
+    "Pick Rate 1": 64.79,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 49.49,
-    "Pick Rate 2": 26.74,
+    "Win Rate 2": 54.32,
+    "Pick Rate 2": 25.91,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 55.26,
-    "Pick Rate 3": 8.28
+    "Win Rate 3": 58.77,
+    "Pick Rate 3": 5.67
   },
   {
     "Name": "Zacian",
@@ -6608,17 +6611,17 @@ const items = [
     "Move 2": [
       "Moves/Zacian - Play Rough.png"
     ],
-    "Win Rate": 48.6,
-    "Pick Rate": 0.6,
+    "Win Rate": 47.2,
+    "Pick Rate": 0.56,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 51.43,
-    "Pick Rate 1": 49.0,
+    "Win Rate 1": 51.01,
+    "Pick Rate 1": 47.85,
     "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 47.66,
-    "Pick Rate 2": 36.3,
+    "Win Rate 2": 43.92,
+    "Pick Rate 2": 38.92,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 40.98,
-    "Pick Rate 3": 6.1
+    "Win Rate 3": 45.83,
+    "Pick Rate 3": 5.16
   },
   {
     "Name": "Zacian",
@@ -6631,17 +6634,17 @@ const items = [
     "Move 2": [
       "Moves/Zacian - Agility.png"
     ],
-    "Win Rate": 46.72,
-    "Pick Rate": 0.32,
+    "Win Rate": 50.78,
+    "Pick Rate": 0.43,
     "Item 1": "Battle_Items/Eject Button.png",
-    "Win Rate 1": 46.18,
-    "Pick Rate 1": 54.03,
+    "Win Rate 1": 50.27,
+    "Pick Rate 1": 53.35,
     "Item 2": "Battle_Items/Full Heal.png",
-    "Win Rate 2": 50.0,
-    "Pick Rate 2": 30.02,
+    "Win Rate 2": 52.45,
+    "Pick Rate 2": 37.8,
     "Item 3": "Battle_Items/X Attack.png",
-    "Win Rate 3": 41.94,
-    "Pick Rate 3": 5.82
+    "Win Rate 3": 48.0,
+    "Pick Rate 3": 3.57
   },
   {
     "Name": "Zeraora",
@@ -6654,17 +6657,17 @@ const items = [
     "Move 2": [
       "Moves/Zeraora - Wild Charge.png"
     ],
-    "Win Rate": 48.64,
-    "Pick Rate": 8.74,
+    "Win Rate": 48.86,
+    "Pick Rate": 7.68,
     "Item 1": "Battle_Items/X Attack.png",
-    "Win Rate 1": 50.72,
-    "Pick Rate 1": 36.04,
+    "Win Rate 1": 50.15,
+    "Pick Rate 1": 36.49,
     "Item 2": "Battle_Items/Full Heal.png",
-    "Win Rate 2": 48.09,
-    "Pick Rate 2": 25.82,
+    "Win Rate 2": 51.21,
+    "Pick Rate 2": 23.46,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 46.51,
-    "Pick Rate 3": 14.59
+    "Win Rate 3": 46.63,
+    "Pick Rate 3": 15.96
   },
   {
     "Name": "Zeraora",
@@ -6677,17 +6680,17 @@ const items = [
     "Move 2": [
       "Moves/Zeraora - Wild Charge.png"
     ],
-    "Win Rate": 44.39,
-    "Pick Rate": 0.8,
-    "Item 1": "Battle_Items/X Attack.png",
-    "Win Rate 1": 48.44,
-    "Pick Rate 1": 21.78,
-    "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 41.52,
-    "Pick Rate 2": 20.87,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 43.49,
-    "Pick Rate 3": 20.27
+    "Win Rate": 41.72,
+    "Pick Rate": 0.68,
+    "Item 1": "Battle_Items/Potion.png",
+    "Win Rate 1": 42.99,
+    "Pick Rate 1": 28.11,
+    "Item 2": "Battle_Items/X Attack.png",
+    "Win Rate 2": 41.21,
+    "Pick Rate 2": 17.82,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 40.82,
+    "Pick Rate 3": 17.55
   },
   {
     "Name": "Zeraora",
@@ -6700,17 +6703,17 @@ const items = [
     "Move 2": [
       "Moves/Zeraora - Discharge.png"
     ],
-    "Win Rate": 51.56,
-    "Pick Rate": 1.55,
+    "Win Rate": 50.98,
+    "Pick Rate": 1.43,
     "Item 1": "Battle_Items/X Attack.png",
-    "Win Rate 1": 52.59,
-    "Pick Rate 1": 52.49,
+    "Win Rate 1": 52.29,
+    "Pick Rate 1": 54.58,
     "Item 2": "Battle_Items/Full Heal.png",
-    "Win Rate 2": 52.21,
-    "Pick Rate 2": 25.47,
+    "Win Rate 2": 49.9,
+    "Pick Rate 2": 20.82,
     "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 54.19,
-    "Pick Rate 3": 8.83
+    "Win Rate 3": 51.01,
+    "Pick Rate 3": 12.55
   },
   {
     "Name": "Zeraora",
@@ -6723,40 +6726,17 @@ const items = [
     "Move 2": [
       "Moves/Zeraora - Discharge.png"
     ],
-    "Win Rate": 48.68,
-    "Pick Rate": 3.02,
+    "Win Rate": 48.53,
+    "Pick Rate": 2.73,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 50.99,
-    "Pick Rate 1": 47.11,
+    "Win Rate 1": 51.54,
+    "Pick Rate 1": 48.46,
     "Item 2": "Battle_Items/X Attack.png",
-    "Win Rate 2": 49.05,
-    "Pick Rate 2": 23.21,
+    "Win Rate 2": 46.98,
+    "Pick Rate 2": 22.13,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 44.09,
-    "Pick Rate 3": 10.13
-  },
-  {
-    "Name": "Zoroark",
-    "Pokemon": "Pokemon/Zoroark.png",
-    "Role": "Speedster",
-    "Move Set": "Cut/Night Slash",
-    "Move 1": [
-      "Moves/Zoroark - Cut.png"
-    ],
-    "Move 2": [
-      "Moves/Zoroark - Night Slash.png"
-    ],
-    "Win Rate": 46.83,
-    "Pick Rate": 1.31,
-    "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 47.5,
-    "Pick Rate 1": 89.21,
-    "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 38.38,
-    "Pick Rate 2": 4.55,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 57.58,
-    "Pick Rate 3": 3.03
+    "Win Rate 3": 42.94,
+    "Pick Rate 3": 11.51
   },
   {
     "Name": "Zoroark",
@@ -6769,17 +6749,40 @@ const items = [
     "Move 2": [
       "Moves/Zoroark - Feint Attack.png"
     ],
-    "Win Rate": 45.74,
-    "Pick Rate": 1.35,
+    "Win Rate": 47.69,
+    "Pick Rate": 1.26,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 45.5,
-    "Pick Rate 1": 44.58,
+    "Win Rate 1": 49.32,
+    "Pick Rate 1": 46.1,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 49.5,
-    "Pick Rate 2": 35.93,
-    "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 41.07,
-    "Pick Rate 3": 7.49
+    "Win Rate 2": 45.99,
+    "Pick Rate 2": 35.4,
+    "Item 3": "Battle_Items/X Speed.png",
+    "Win Rate 3": 46.72,
+    "Pick Rate 3": 6.6
+  },
+  {
+    "Name": "Zoroark",
+    "Pokemon": "Pokemon/Zoroark.png",
+    "Role": "Speedster",
+    "Move Set": "Cut/Night Slash",
+    "Move 1": [
+      "Moves/Zoroark - Cut.png"
+    ],
+    "Move 2": [
+      "Moves/Zoroark - Night Slash.png"
+    ],
+    "Win Rate": 45.15,
+    "Pick Rate": 1.36,
+    "Item 1": "Battle_Items/Full Heal.png",
+    "Win Rate 1": 45.68,
+    "Pick Rate 1": 88.96,
+    "Item 2": "Battle_Items/Eject Button.png",
+    "Win Rate 2": 46.24,
+    "Pick Rate 2": 4.16,
+    "Item 3": "Battle_Items/Potion.png",
+    "Win Rate 3": 36.62,
+    "Pick Rate 3": 3.17
   },
   {
     "Name": "Zoroark",
@@ -6792,17 +6795,17 @@ const items = [
     "Move 2": [
       "Moves/Zoroark - Night Slash.png"
     ],
-    "Win Rate": 42.38,
-    "Pick Rate": 0.43,
+    "Win Rate": 40.87,
+    "Pick Rate": 0.48,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 44.2,
-    "Pick Rate 1": 70.5,
-    "Item 2": "Battle_Items/Eject Button.png",
-    "Win Rate 2": 38.81,
-    "Pick Rate 2": 9.28,
-    "Item 3": "Battle_Items/Potion.png",
-    "Win Rate 3": 40.0,
-    "Pick Rate 3": 7.62
+    "Win Rate 1": 43.24,
+    "Pick Rate 1": 67.05,
+    "Item 2": "Battle_Items/Potion.png",
+    "Win Rate 2": 42.03,
+    "Pick Rate 2": 8.81,
+    "Item 3": "Battle_Items/Eject Button.png",
+    "Win Rate 3": 35.94,
+    "Pick Rate 3": 8.17
   },
   {
     "Name": "Zoroark",
@@ -6815,16 +6818,16 @@ const items = [
     "Move 2": [
       "Moves/Zoroark - Feint Attack.png"
     ],
-    "Win Rate": 47.82,
-    "Pick Rate": 11.68,
+    "Win Rate": 48.05,
+    "Pick Rate": 10.77,
     "Item 1": "Battle_Items/Full Heal.png",
-    "Win Rate 1": 48.64,
-    "Pick Rate 1": 86.73,
+    "Win Rate 1": 49.04,
+    "Pick Rate 1": 87.01,
     "Item 2": "Battle_Items/Potion.png",
-    "Win Rate 2": 44.12,
-    "Pick Rate 2": 4.64,
+    "Win Rate 2": 40.34,
+    "Pick Rate 2": 4.29,
     "Item 3": "Battle_Items/Eject Button.png",
-    "Win Rate 3": 41.1,
-    "Pick Rate 3": 3.65
+    "Win Rate 3": 40.95,
+    "Pick Rate 3": 3.55
   }
 ];
