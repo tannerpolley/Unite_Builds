@@ -70,7 +70,7 @@ if get_pages:
     for name, pokemon in zip(names, pokemons):
         if name == 'scyther':
             continue
-        if name == 'megacharizardx':
+        if name == 'megacharizardx' or name == 'megagyarados':
 
             fname = os.path.join(path, f"Unite API _ Pokémon Unite Meta for {pokemon}.txt")
             np.savetxt(fname, np.array([]))

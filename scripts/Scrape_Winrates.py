@@ -94,6 +94,12 @@ for k, v in win_rate_dict.items():
         k3 = 'Mega Lucario'
     elif k == 'CharizardX':
         k3 = 'Mega Charizard X'
+    elif k == 'MegaGyarados':
+        k3 = 'Mega Gyarados'
+    elif k == 'MewtwoY':
+        k3 = 'Mega Mewtwo Y'
+    elif k == 'MewtwoX':
+        k3 = 'Mega Mewtwo X'
     else:
         k3 = k
     names.append(k3)
@@ -136,14 +142,30 @@ for file in files:
 movesets = []
 
 for file in files:
-    Pokemon_name = file[35:-5]
-    #
-    print(Pokemon_name)
+    if file[-4:] == 'html':
+        Pokemon_name = file[35:-5]
+    elif file[-3:] == 'txt':
+        Pokemon_name = file[35:-4]
 
-    if Pokemon_name == 'Mega Charizard ':
-        Pokemon_name = "Mega Charizard X"
+    if Pokemon_name == 'Mega Charizard X':
         move_1_name = 'Fire Punch'
         move_2_name = 'Flare Blitz'
+        move_1_pic_file = 'Moves/' + Pokemon_name + ' - ' + move_1_name + '.png'
+        move_2_pic_file = 'Moves/' + Pokemon_name + ' - ' + move_2_name + '.png'
+
+        moveset_i = {'Name': Pokemon_name, 'Pokemon': 'Pokemon/' + Pokemon_name + '.png',
+                   'Role': role_dict[Pokemon_name],
+                   'Pick Rate': pick_rate_dict[Pokemon_name],
+                   'Win Rate': win_rate_dict[Pokemon_name], 'Move Set': move_1_name + '/' + move_2_name,
+                   'Move 1': move_1_pic_file, 'Move 2': move_2_pic_file, 'Battle Items': {}}
+
+        movesets.append(moveset_i)
+
+        continue
+
+    if Pokemon_name == 'Mega Gyarados':
+        move_1_name = 'Dragon Breath'
+        move_2_name = 'Waterfall'
         move_1_pic_file = 'Moves/' + Pokemon_name + ' - ' + move_1_name + '.png'
         move_2_pic_file = 'Moves/' + Pokemon_name + ' - ' + move_2_name + '.png'
 

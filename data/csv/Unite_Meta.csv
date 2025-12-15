@@ -1,82 +1,84 @@
 ,Win Rate,Pick Rate,Ban Rate
-Latias,53.47,30.66,9.73
-Tsareena,52.37,7.2,0.7
-Alcremie,52.33,6.16,0.19
-Mega Lucario,52.24,30.99,115.52
-Zacian,52.12,6.45,2.35
-Ho-Oh,51.77,4.86,1.19
-Darkrai,51.62,29.08,103.53
-Lucario,51.6,13.54,2.14
-Gengar,51.53,19.91,9.44
-Latios,51.44,27.31,10.44
-Mega Charizard X,51.36,60.97,166.87
-Suicune,51.28,20.8,21.1
-Mr. Mime,51.28,7.93,0.86
-Duraludon,51.2,2.26,0.28
-Clefable,51.15,23.73,26.6
-Delphox,51.12,14.01,0.74
-Urshifu,51.11,5.36,0.55
-Mimikyu,51.09,28.92,11.09
-Dodrio,50.95,7.84,2.06
-Blaziken,50.93,14.72,2.64
-Alolan Raichu,50.83,18.09,6.47
-Tyranitar,50.65,2.44,0.39
-Armarouge,50.56,4.01,0.12
-Wigglytuff,50.48,6.39,1.29
-Gardevoir,50.42,12.01,0.81
-Galarian Rapidash,50.29,2.81,1.13
-Hoopa,50.18,7.74,0.78
-Charizard,50.16,8.67,4.74
-Miraidon,50.14,7.44,0.71
-Espeon,50.13,31.63,0.64
-Eldegoss,50.13,12.6,0.19
-Slowbro,50.05,18.5,3.17
-Psyduck,50.04,3.71,0.62
-Umbreon,49.96,21.28,3.28
-Trevenant,49.89,14.6,1.13
-Chandelure,49.8,3.37,0.14
-Snorlax,49.71,18.24,0.51
-Greedent,49.7,3.15,0.24
-Blissey,49.58,18.41,5.8
-Mamoswine,49.52,11.23,0.31
-Lapras,49.46,8.4,0.38
-Dragonite,49.42,3.7,0.36
-Greninja,49.4,23.09,1.14
-Machamp,49.37,7.2,0.83
-Cinderace,49.34,21.35,1.04
-Pawmot,49.34,7.21,2.41
-Talonflame,49.31,18.15,2.34
-Falinks,49.27,1.26,0.23
-Venusaur,49.15,15.03,2.2
-Metagross,49.15,4.81,0.68
-Blastoise,49.14,16.93,1.51
-Meowscarada,49.06,6.33,0.52
-Garchomp,49.06,2.95,0.31
-Mew,49.05,11.79,1.17
-Decidueye,49.05,21.29,1.02
-Empoleon,48.98,11.39,3.59
-Comfey,48.89,17.11,10.37
-Crustle,48.87,8.27,0.58
-Sylveon,48.73,15.61,0.28
-Zeraora,48.65,12.52,1.2
-Pikachu,48.33,18.72,2.29
-Absol,48.24,8.8,0.88
-Dragapult,48.17,7.29,0.44
-Azumarill,48.08,5.06,0.38
-Dhelmise,48.08,11.99,4.1
-Cramorant,48.08,2.78,0.14
-Sableye,48.05,7.76,2.57
-Alolan Ninetales,48.03,9.66,1.62
-Aegislash,48.0,6.71,0.44
-Buzzwole,47.91,16.28,4.15
-Inteleon,47.83,6.98,0.21
-Glaceon,47.79,15.62,0.95
-Goodra,47.53,5.61,0.41
-Gyarados,47.5,2.12,0.47
-Zoroark,47.48,13.87,4.93
-Ceruledge,47.39,5.66,0.33
-Leafeon,47.08,15.05,1.43
-Tinkaton,47.01,2.68,0.15
-Scizor,46.94,10.36,1.8
-MewtwoX,46.55,1.34,0.37
-MewtwoY,43.14,1.6,0.32
+Mega Gyarados,62.21,8.65,127.56
+Vaporeon,55.06,51.02,65.32
+Falinks,53.49,0.92,0.09
+Dhelmise,52.72,29.43,23.73
+Latias,52.39,14.81,0.67
+Glaceon,52.2,40.11,97.61
+Mega Mewtwo X,51.76,25.1,6.2
+Mega Lucario,51.67,21.38,29.65
+Dodrio,51.59,5.87,0.74
+Delphox,51.52,16.56,0.9
+Armarouge,51.5,3.58,0.07
+Gengar,51.31,16.92,5.03
+Galarian Rapidash,51.3,1.88,0.64
+Tsareena,51.24,8.04,0.52
+Mega Charizard X,51.12,20.43,113.47
+Mr. Mime,51.09,8.75,0.6
+Scizor,51.07,25.22,5.09
+Urshifu,50.97,5.94,0.48
+Gyarados,50.95,6.19,1.16
+Miraidon,50.86,11.81,0.8
+Mimikyu,50.78,26.19,19.3
+Blaziken,50.74,16.46,1.47
+Alcremie,50.67,7.48,0.15
+Tyranitar,50.55,6.4,1.6
+Mega Mewtwo Y,50.52,20.64,2.75
+Meowscarada,50.35,5.83,0.41
+Hoopa,50.32,7.98,0.38
+Gardevoir,50.18,13.05,0.55
+Duraludon,49.96,1.41,0.09
+Dragonite,49.9,3.1,0.48
+Pawmot,49.87,5.74,0.53
+Talonflame,49.85,21.17,1.9
+Psyduck,49.65,4.13,0.58
+Leafeon,49.59,12.43,1.13
+Latios,49.58,15.38,1.07
+Eldegoss,49.53,14.19,0.12
+Mew,49.45,10.51,0.7
+Ho-Oh,49.43,4.68,0.64
+Alolan Raichu,49.35,12.88,2.64
+Zacian,49.35,4.27,0.55
+Tinkaton,49.35,1.93,0.12
+Greninja,49.33,20.93,0.92
+Espeon,49.32,21.6,1.08
+Chandelure,49.31,3.15,0.33
+Trevenant,49.3,12.15,0.7
+Cinderace,49.27,20.56,0.84
+Empoleon,49.25,5.77,0.9
+Wigglytuff,49.17,6.1,0.74
+Dragapult,48.98,5.72,0.33
+Umbreon,48.85,19.65,1.86
+Decidueye,48.8,19.36,0.82
+Machamp,48.76,7.3,0.55
+Venusaur,48.73,14.33,1.29
+Lucario,48.73,10.39,0.73
+Greedent,48.73,2.87,0.18
+Clefable,48.69,22.26,14.3
+Slowbro,48.67,17.44,2.51
+Crustle,48.65,9.78,0.22
+Suicune,48.57,18.62,10.5
+Darkrai,48.57,4.73,3.74
+Comfey,48.57,14.08,6.15
+Blissey,48.52,21.48,3.05
+Mamoswine,48.45,11.17,0.38
+Inteleon,47.99,6.47,0.25
+Aegislash,47.91,5.48,0.22
+Alolan Ninetales,47.86,9.52,1.51
+Snorlax,47.79,17.34,0.61
+Azumarill,47.72,4.16,0.44
+Lapras,47.69,10.25,0.41
+Pikachu,47.59,17.28,1.61
+Goodra,47.56,3.76,0.34
+Sylveon,47.55,10.99,0.34
+Charizard,47.52,6.46,1.59
+Blastoise,47.48,14.54,0.68
+Metagross,47.35,3.74,0.21
+Absol,47.29,9.23,0.52
+Ceruledge,47.08,4.57,0.27
+Zoroark,47.01,9.13,1.89
+Buzzwole,46.75,13.99,2.06
+Zeraora,45.98,12.19,0.96
+Garchomp,45.8,3.23,0.29
+Cramorant,45.65,2.84,0.16
+Sableye,45.59,5.49,2.05
