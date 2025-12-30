@@ -76,8 +76,6 @@ def fix_special_cases(movesets, matches, pick_rate_dict, win_rate_dict):
 
     blaziken_movesets = []
     mew_movesets = []
-    mega_lucario_movesets = []
-    collect_mega_charizard_x_movesets = []
     for moveset in movesets:
         Pokemon_name = moveset['Name']
 
@@ -85,11 +83,9 @@ def fix_special_cases(movesets, matches, pick_rate_dict, win_rate_dict):
             blaziken_movesets.append(moveset)
         elif Pokemon_name == 'Mew':
             mew_movesets.append(moveset)
-        elif Pokemon_name == 'Mega Lucario':
-            mega_lucario_movesets.append(moveset)
 
     movesets = fix_blaziken(movesets, blaziken_movesets, matches)
-    movesets = fix_mega(movesets, mega_lucario_movesets, matches)
+    # movesets = fix_mega(movesets, mega_lucario_movesets, matches)
     movesets = fix_mew(movesets, mew_movesets, matches, pick_rate_dict, win_rate_dict)
     movesets = fix_scyther_and_urshifu(movesets)
 
