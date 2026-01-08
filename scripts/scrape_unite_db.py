@@ -13,8 +13,10 @@ from bs4 import BeautifulSoup
 import json
 import time
 import re
+import os
 from typing import Dict, List, Optional
 import logging
+from urllib.parse import urljoin
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -32,6 +34,7 @@ class UniteDBWorkingScraper:
         self.driver = None
         self.headless = headless
         self.load_pokemon_database()
+        self.create_image_directories()
 
     def load_pokemon_database(self):
         """Load existing Pokemon database from all_pokemon_detailed.json"""
@@ -45,6 +48,35 @@ class UniteDBWorkingScraper:
         except Exception as e:
             logger.error(f"Error loading database: {e}")
             self.pokemon_data = {}
+
+    def create_image_directories(self):
+        """Create necessary image directories if they don't exist"""
+        unite_moves_dir = 'static/img/Unite_Moves'
+        if not os.path.exists(unite_moves_dir):
+            os.makedirs(unite_moves_dir)
+            logger.info(f"Created directory: {unite_moves_dir}")
+
+    def download_image(self, image_url: str, save_path: str) -> bool:
+        """Download an image from URL and save to local path"""
+        try:
+            # Make sure the URL is absolute
+            if not image_url.startswith('http'):
+                image_url = urljoin(self.BASE_URL, image_url)
+
+            # Download the image
+            response = requests.get(image_url, timeout=10)
+            response.raise_for_status()
+
+            # Save the image
+            with open(save_path, 'wb') as f:
+                f.write(response.content)
+
+            logger.info(f"Downloaded image: {save_path}")
+            return True
+
+        except Exception as e:
+            logger.error(f"Failed to download image from {image_url}: {e}")
+            return False
 
     def setup_driver(self):
         """Setup Chrome WebDriver with options"""
@@ -189,7 +221,7 @@ class UniteDBWorkingScraper:
 
             # Check if this is Mew (special move group structure)
             if pokemon_name.lower() == 'mew':
-                pokemon_data = self.extract_mew_moves(soup)
+                pokemon_data = self.extract_mew_moves(soup, pokemon_name=preferred_name)
             else:
                 # Determine if this Pokemon uses single or dual upgrade structure
                 has_single_upgrade = self.check_single_upgrade_structure(preferred_name)
@@ -199,7 +231,7 @@ class UniteDBWorkingScraper:
                     "Attack": self.extract_auto_attack(soup),
                     "Move 1": self.extract_move(soup, move_number=1, single_upgrade=has_single_upgrade.get("Move 1", False)),
                     "Move 2": self.extract_move(soup, move_number=2, single_upgrade=has_single_upgrade.get("Move 2", False)),
-                    "Unite Move": self.extract_unite_move(soup)
+                    "Unite Move": self.extract_unite_move(soup, pokemon_name=preferred_name)
                 }
 
             # Validate that we didn't get blank critical fields
@@ -261,12 +293,12 @@ class UniteDBWorkingScraper:
 
         return ""
 
-    def extract_mew_moves(self, soup: BeautifulSoup) -> Dict:
+    def extract_mew_moves(self, soup: BeautifulSoup, pokemon_name: str = "") -> Dict:
         """Extract Mew's special move group structure"""
         pokemon_data = {
             "Passive Ability": self.extract_passive_ability(soup),
             "Attack": self.extract_auto_attack(soup),
-            "Unite Move": self.extract_unite_move(soup)
+            "Unite Move": self.extract_unite_move(soup, pokemon_name=pokemon_name)
         }
 
         # Find skill Move 1 and skill Move 2 divs first
@@ -641,15 +673,16 @@ class UniteDBWorkingScraper:
 
         return move_data
 
-    def extract_unite_move(self, soup: BeautifulSoup) -> Dict[str, str]:
-        """Extract Unite Move information"""
+    def extract_unite_move(self, soup: BeautifulSoup, pokemon_name: str = "") -> Dict[str, str]:
+        """Extract Unite Move information and download image"""
         unite_data = {
             "Name": "",
             "Level": "",
             "Cooldown": "",
             "Description": "",
             "Buff Duration": "",
-            "Buff Stats": ""
+            "Buff Stats": "",
+            "Image": ""
         }
 
         try:
@@ -667,6 +700,21 @@ class UniteDBWorkingScraper:
                         if name_elem:
                             unite_data["Name"] = self.clean_text(name_elem.get_text())
 
+                    # Extract and download Unite Move image
+                    img_elem = ultimate_div.find('img')
+                    if img_elem and img_elem.get('src'):
+                        image_url = img_elem['src']
+
+                        # Create filename: Pokemon_Name - Unite_Move_Name.png
+                        if pokemon_name and unite_data["Name"]:
+                            filename = f"{pokemon_name} - {unite_data['Name']}.png"
+                            save_path = os.path.join('static', 'img', 'Unite_Moves', filename)
+
+                            # Download the image
+                            if self.download_image(image_url, save_path):
+                                unite_data["Image"] = filename
+
+                    if info_div:
                         # Get cooldown from p.cooldown
                         cooldown_p = info_div.find('p', class_='cooldown')
                         if cooldown_p:

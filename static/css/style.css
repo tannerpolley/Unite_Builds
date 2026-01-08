@@ -7,6 +7,49 @@ body {
   overflow-x: auto; /* Allow scrolling if table is wider than viewport */
   min-width: 950px; /* Minimum width to prevent extreme squishing */
   zoom: 0.67;
+  position: relative;
+}
+
+/* Features box styling */
+.features-box {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #1F2537;
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 5);
+  z-index: 1000;
+  max-width: 320px;
+}
+
+.features-box h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.8em;
+  color: #57c1ed;
+  text-align: center;
+}
+
+.features-box ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.features-box li {
+  margin-bottom: 8px;
+  font-size: 1.4em;
+  line-height: 1.4;
+}
+
+.features-box li:last-child {
+  margin-bottom: 0;
+}
+
+.features-box strong {
+  color: #57c1ed;
+  font-weight: bold;
 }
 
 .main-container {
@@ -291,6 +334,16 @@ body {
   margin: 0 auto;
 }
 
+/* Hover effect for Pokemon images in first column */
+.table-row .table-cell:first-child img {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.table-row .table-cell:first-child img:hover {
+  transform: scale(1.1);
+}
+
 /* Move images */
 .move-wrapper {
   display: inline-block;
@@ -387,12 +440,15 @@ body {
   padding: 30px;
   border-radius: 12px;
   max-width: 800px; /* Increased width for additional images */
+  max-height: 85vh; /* Limit height to 85% of viewport height */
   width: 80%;
   color: white;
   text-align: left;
   font-size: 1.8em;
   border: 2px solid #FFFFFF; /* ✨ thick solid white */
   box-shadow: 0 0 2px 1px rgba(255, 255, 255, 5);
+  overflow-y: auto; /* Add vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Desktop popup styling */
@@ -400,6 +456,8 @@ body {
   padding: 30px;
   font-size: 1.8em;
   width: 90%;
+  max-height: 85vh; /* Limit height to 85% of viewport height */
+  overflow-y: auto; /* Add vertical scrolling */
 }
 
 .popup-header {
@@ -451,6 +509,7 @@ body {
   flex: 1;
   text-align: center;
   margin: 0;
+  font-size: 1.6em;
 }
 
 /* Popup table styling */
@@ -598,4 +657,24 @@ body {
 
 .tooltip.hidden {
   display: none;
+}
+
+/* Custom scrollbar styling for popup */
+.popup-content::-webkit-scrollbar {
+  width: 12px;
+}
+
+.popup-content::-webkit-scrollbar-track {
+  background: #1F2537;
+  border-radius: 6px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+  background: #57c1ed;
+  border-radius: 6px;
+  border: 2px solid #1F2537;
+}
+
+.popup-content::-webkit-scrollbar-thumb:hover {
+  background: #6ed1ff;
 }

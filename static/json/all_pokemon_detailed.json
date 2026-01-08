@@ -58,7 +58,8 @@
       "Cooldown": "100s",
       "Description": "The user briefly becomes unstoppable before becoming untargetable and invulnerable for 1.15s while unleashing a flurry of 5 slashes in front of themself in the designated area, damaging opposing Pokémon in the area of effect. The user then becomes unstoppable again and unleashes a final slash in front of them with 3 blades of energy, shoving opposing Pokémon and dealing damage, up to 4 times at close range and down to 1 time at maximum range. The damage of the flurry of 5 slashes is divided by the number of targets hit. The first hit from the final slash deals full damage to each target hit; subsequent hits deal 30% of the full damage to the same target.",
       "Buff Duration": "6s",
-      "Buff Stats": "80% Movement Speed, 20% Max HP Shield"
+      "Buff Stats": "80% Movement Speed, 20% Max HP Shield",
+      "Image": "Absol - Midnight Slash.png"
     }
   },
   "Aegislash": {
@@ -120,7 +121,8 @@
       "Cooldown": "100s",
       "Description": "Becomes unstoppable and unleashes a ground-splitting slash in the designated direction, damaging opposing Pokémon in the line area of effect, dealing additional missing HP damage to those hit. Increases the boost count by 2 if this Unite Move knocks out an opposing Pokémon.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Aegislash - Coup de Grace.png"
     }
   },
   "Alcremie": {
@@ -182,7 +184,8 @@
       "Cooldown": "100s",
       "Description": "Create a giant cake and stand atop it becoming unstoppable and gaining a shield for 6s. Then throw whipped cream at allies. Allies who receive whipped cream are healed and have their maximum HP buffed for 8s. This move ends early if this move's shield is lost, Alcremie becomes bound, or if the move is manually cancelled. The shield is 60% of Alcremie's max HP",
       "Buff Duration": "6s",
-      "Buff Stats": "40% Movement Speed, 30% CDR, 30% Max HP Shield (Applied when the move ends)"
+      "Buff Stats": "40% Movement Speed, 30% CDR, 30% Max HP Shield (Applied when the move ends)",
+      "Image": "Alcremie - Fluffy Cream Supreme.png"
     }
   },
   "Alolan Ninetales": {
@@ -244,7 +247,8 @@
       "Cooldown": "112s",
       "Description": "Attack with a chilly blast of snow and ice; dealing damage to enemies in the area of effect around Ninetales when it hits. Deals increased damage to enemies that are frozen. Ninetales is unstoppable during the cast.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Alolan Ninetales - Snow Globe.png"
     }
   },
   "Alolan Raichu": {
@@ -306,7 +310,8 @@
       "Cooldown": "112s",
       "Description": "Creates a star-shaped zone of electricity in the designated area for 4s, damaging opposing Pokémon in the area of effect when created, then damaging opposing Pokémon over time (up to 5 times) and decreasing their movement speed by 60% while in the zone. If the user hits an opposing Pokémon that is in the zone with an auto attack, the next basic attack becomes a boosted attack.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 35% Attack Speed, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 35% Attack Speed, 20% Max HP Shield",
+      "Image": "Alolan Raichu - Thunderstorm Aerial.png"
     }
   },
   "Armarouge": {
@@ -368,7 +373,8 @@
       "Cooldown": "112s",
       "Description": "Has the user jump up, becoming unstoppable for 1.85s, and charge psychic power for 1s, then create an area that leaves opposing Pokémon unable to act. While the user is charging psychic power, the Unite Move can be used again to adjust the position of the area. The user then fires a ball of flame towards the center of the area, dealing damage to opposing Pokémon and throwing them away from the center of the area.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Armarouge - Psykaboom.png"
     }
   },
   "Azumarill": {
@@ -430,7 +436,8 @@
       "Cooldown": "89s",
       "Description": "Azumarill targets an enemy player and then pounds their belly three times; losing 5% remaining HP with each pound in exchange for a 6.5% max HP shield that stacks with each pound and lasts 6s. Azumarill gains 60 Attack for 5s and can move while pounding their belly. Azumarill then charges at the target damaging and throwing all Pokémon hit while charging and Pokémon within the area effect around the target. Azumarill is unstoppable during this move.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Azumarill - Belly Bash.png"
     }
   },
   "Blastoise": {
@@ -492,7 +499,8 @@
       "Cooldown": "89s",
       "Description": "Becomes unstoppable for 2s and gains a shield for 4s; shoots immense jets of water in a large circle around themself after 1.1s, damaging opposing Pokémon in the area of effect and throwing them for 1.5s when it hits.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 40% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 40% Max HP Shield",
+      "Image": "Blastoise - Hydro Typhoon.png"
     }
   },
   "Blaziken": {
@@ -554,7 +562,8 @@
       "Cooldown": "4.7s",
       "Description": "Perform a flaming punch around itself, dealing damage to nearby enemies hit and increase the user's movement speed by 20% for 4s. After using this move, the user switches to Punch Style and all Punch Style cooldowns are reset.",
       "Buff Duration": "6s",
-      "Buff Stats": "9% Max HP Shield; Has an internal cooldown of 30s to activate Energy Amplifier; Has an internal cooldown of 60s to activate Buddy Barrier;"
+      "Buff Stats": "9% Max HP Shield; Has an internal cooldown of 30s to activate Energy Amplifier; Has an internal cooldown of 60s to activate Buddy Barrier;",
+      "Image": "Blaziken - Spinning Flame Fist.png"
     }
   },
   "Blissey": {
@@ -616,7 +625,8 @@
       "Cooldown": "112s",
       "Description": "The user becomes unstoppable and dashes to the designated ally Pokémon to give it an egg, granting that ally a shield and increasing their Attack and Sp. Atk by 20% for 6s. The user also intercepts 50% of the post-mitigation damage received by that ally as unmitigated damage for 6s. While dashing, opposing Pokémon hit are damaged and thrown into the air for 0.8s. When reaching the target ally, nearby opposing Pokémon are damaged again.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Blissey - Bliss Assistance.png"
     }
   },
   "Buzzwole": {
@@ -678,7 +688,8 @@
       "Cooldown": "112s",
       "Description": "Buzzwole flies at high speed, dealing damage to enemies in the area-of-effect. Afterward, the user targets the enemy with the lowest percentage of HP remaining among those hit and charges down at them from the sky, dealing area damage once again and additional damage to the targeted enemy based on their missing HP. Buzzwole is Unstoppable during this move. Against Wild Pokemon: Missing HP damage is not dealt.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Buzzwole - Ultra Swole Slam.png"
     }
   },
   "Ceruledge": {
@@ -740,7 +751,8 @@
       "Cooldown": "112s",
       "Description": "Ceruledge charges both of their arm blades gaining unstoppable and 70% Damage reduction for 0.5s before slashing through to the designated location faster than the eye can track. Ceruledge leaves enemies hit unable to act for 0.7s and applies a mark to them. After 0.7s, Ceruledge slices marked enemies with three slashing blows. The mark can be cleansed, preventing the damage.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Ceruledge - Revenant Rend.png"
     }
   },
   "Chandelure": {
@@ -802,7 +814,8 @@
       "Cooldown": "100s",
       "Description": "Reduce the vision of enemies around itself by 30% for 3s. If this Unite Move is used again, Chandelure continuously fires a beam of fire in a designated direction, dealing damage to Pokémon it hits. The beam may be redirected while firing and its final blast deals increased damage. Ignite Midnight can be cancelled early.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 40% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 40% Max HP Shield",
+      "Image": "Chandelure - Ignite Midnight.png"
     }
   },
   "Charizard": {
@@ -864,7 +877,8 @@
       "Cooldown": "134s",
       "Description": "The user briefly becomes unstoppable and grabs the designated Pokémon from the opposing team. The target is bound, and the user and the target become invincible as the user flies up then slams them onto the ground, damaging the target and nearby opposing Pokémon, dealing an additional 8% max HP damage to each opposing Pokémon hit. The user gains hindrance resistance the moment they slam into the ground and fly up into the air for 7.5s. While flying in the air, the user is able to use basic attacks and move freely over obstacles. Unite Move basic attacks burn opposing Pokémon for 1s (dealing damage 2 times). The user restores HP for 80% of the damage dealt with Unite Move basic attacks (excluding burns or additional damage). Damage dealt by burns from Unite Move basic attacks also benefit from regular lifesteal. The Attack of opposing Pokémon burned by Unite Move basic attacks is decreased by 5%.",
       "Buff Duration": "6s",
-      "Buff Stats": "50% Movement Speed, 20% Max HP Shield"
+      "Buff Stats": "50% Movement Speed, 20% Max HP Shield",
+      "Image": "Charizard - Seismic Slam.png"
     }
   },
   "Cinderace": {
@@ -926,7 +940,8 @@
       "Cooldown": "112s",
       "Description": "Becomes unstoppable and kicks up a giant ball of flame, then kicks it toward the location of the designated opposing Pokémon. The ball releases a fierce shock wave upon impact, damaging opposing Pokémon in the area of effect, dealing additional missing HP damage to those hit; and increasing movement speed by 10% for 5s when this Unite Move hits.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 35% Attack Speed, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 35% Attack Speed, 20% Max HP Shield",
+      "Image": "Cinderace - Blazing Bicycle Kick.png"
     }
   },
   "Clefable": {
@@ -988,7 +1003,8 @@
       "Cooldown": "100s",
       "Description": "Clefable waggles their finger, restoring HP to allies in the area-of-effect. The lower an ally's HP is, the more HP this move restores to that ally. Afterward, Clefable gets a random move that can be performed by using the Unite Move again within 10s. Note: Some random moves will activate immediately.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Clefable - Wonder Wish.png"
     }
   },
   "Comfey": {
@@ -1050,7 +1066,8 @@
       "Cooldown": "89s",
       "Description": "Briefly becomes unstoppable and creates a large area of tall grass around their location for 6s. Pokémon in this tall grass cannot be seen, just as with other tall grass on the map. Restores the HP of teammates in this Unite Move's tall grass every 0.5s. Gains special flowers from this tall grass, which grant access to an empowered use of Floral Healing or Sweet Kiss.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Comfey - Flowery Fields Forever.png"
     }
   },
   "Cramorant": {
@@ -1112,7 +1129,8 @@
       "Cooldown": "123s",
       "Description": "The user becomes unstoppable for up to 6.5s and catches a series of prey to spit at the nearest Pokémon from the opposing team or wild Pokémon up to 10 times. The user cannot move or use moves while using Gatling Gulp Missile. The user can use this Unite Move again to cancel it early. The prey caught for each Gatling Gulp Missile attack depends on the user's current HP. If a boosted attack is readied when this Unite Move is used, the user spits this prey out first as a regular boosted attack before catching and spitting out up to 10 Gatling Gulp Missile prey.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Max HP Shield granted at the start of the Move, 30% Movement Speed granted at the end of the turret"
+      "Buff Stats": "30% Max HP Shield granted at the start of the Move, 30% Movement Speed granted at the end of the turret",
+      "Image": "Cramorant - Gatling Gulp Missile.png"
     }
   },
   "Crustle": {
@@ -1174,7 +1192,8 @@
       "Cooldown": "134s",
       "Description": "The user becomes unstoppable as they summon a whirlwind of rocks around them, gaining a shield, and stunning nearby enemies for 1s. For 10s after, the whirlwind of rocks damage nearby opposing Pokémon every 1s. If the user receives damage during Rubble Rouser, the user deals additional revenge damage to nearby opposing Pokémon (2s CD). The value of the shield gained from Rubble Rouser is equal to 40% max HP + 600.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 40% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 40% Max HP Shield",
+      "Image": "Crustle - Rubble Rouser.png"
     }
   },
   "Darkrai": {
@@ -1236,7 +1255,8 @@
       "Cooldown": "112s",
       "Description": "The user becomes unstoppable and casts a sleeping spell on the designated Pokémon from the opposing team. If the target is successfully put to sleep, the user's moves' cooldowns are reset, the target is marked to receive 3% max HP damage over time every 0.5s over 10s (up to 21 times; maximum 63% max HP damage as Sp. Atk-based damage), and the user sends that target into a nightmare realm centered on their initial location for up to 8s. The user follows the target into the nightmare realm. While inside the nightmare realm, Darkrai and the target are unaffected by goal zones, jump pads, and Berries. Other Pokémon outside of the nightmare realm cannot target Darkrai or their target while they're inside. If the designated Pokémon from the opposing team cannot be put to sleep, this Unite Move is canceled and 90% of the Unite Move gauge is refunded. This energy regeneration is affected by Energy Amplifier.",
       "Buff Duration": "6s",
-      "Buff Stats": "80% Movement Speed, 20% Max HP Shield"
+      "Buff Stats": "80% Movement Speed, 20% Max HP Shield",
+      "Image": "Darkrai - Worst Nightmare.png"
     }
   },
   "Decidueye": {
@@ -1298,7 +1318,8 @@
       "Cooldown": "112s",
       "Description": "Fires quills in the designated direction, dealing damage to enemies but does not pierce through them. The move ends by unleashing a large quill that deals damage to all enemies it hits (30% more damage if the target is below 50% HP) but Nock Nock can be cancelled early. While using this move, Decidueye becomes unstoppable but is unable to move.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Max HP Shield granted at the start of the Move, 30% Movement Speed granted at the end of the turret"
+      "Buff Stats": "30% Max HP Shield granted at the start of the Move, 30% Movement Speed granted at the end of the turret",
+      "Image": "Decidueye - Nock Nock.png"
     }
   },
   "Delphox": {
@@ -1360,7 +1381,8 @@
       "Cooldown": "84s",
       "Description": "Deals damage-over-time to enemies in the designated area for 8s. Enemies that are hit have 50% decreased movement speed and 50% reduced HP recovery effects for 1.75s. Recovery effects are weakened within the zone and cannot be cleansed while in the zone. Leaving the zone will have the weakened HP recovery effects linger for 1.75s and may be cleansed after leaving the zone. 8s duration (ticks at 0.5s intervals).",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Delphox - Fanciful Fireworks.png"
     }
   },
   "Dhelmise": {
@@ -1422,7 +1444,8 @@
       "Cooldown": "112s",
       "Description": "Has the user throw their anchor and ensnare a designated Pokémon from the opposing team, dealing damage and leaving the target unable to act for 0.45s. The user then charges at the target, dealing damage and leaving them unable to act for 0.45s. If other Pokémon from the opposing team are hit by the anchor or the charge, they take damage and are shoved for 0.7s. Applies a cleansable damage over time effect to Pokémon on the opposing team that deals damage on hit and every 0.5s up to 9 times, healing Dhelmise with each tick based on damage dealt. The duration of the DoT is refreshed with each hit of the Unite Move.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Dhelmise - Seaweed Snare.png"
     }
   },
   "Dodrio": {
@@ -1484,7 +1507,8 @@
       "Cooldown": "134s",
       "Description": "Dodrio runs to a designated location. If Dodrio makes contact with an enemy while running, they are dealt damage and thrown into the air for 1s. When Dodrio arrives at the designated location, Dodrio gains 25% increased Attack and loses 5% Sp. Attack for 3s, is granted a 10% Max HP shield for 3s, and the sprint gauge charges faster for 6s. Damage dealt at the designated location is affected by the Attack bonus. Dodrio is unstoppable during this move.",
       "Buff Duration": "6s",
-      "Buff Stats": "80% Movement Speed, 20% Max HP Shield"
+      "Buff Stats": "80% Movement Speed, 20% Max HP Shield",
+      "Image": "Dodrio - Triple Trample.png"
     }
   },
   "Dragapult": {
@@ -1546,7 +1570,8 @@
       "Cooldown": "0s",
       "Description": "The user launches two Dreepy at up to 2 different opposing Pokémon in range, damaging them and dealing additional missing HP damage to each target. If there is only one target in range, the second Dreepy deals 30% of the full damage to the target. A maximum of 2 uses can be kept in reserve for this Unite Move; there is a 2s cooldown between uses for this move. Against wild Pokémon: additional missing HP damage is capped at 1200.",
       "Buff Duration": "3s",
-      "Buff Stats": "10% Max HP Shield, 10% Movement Speed for 3s; Has an internal cooldown of 30s to activate Energy Amplifier; Has an internal cooldown of 60s to activate Buddy Barrier;"
+      "Buff Stats": "10% Max HP Shield, 10% Movement Speed for 3s; Has an internal cooldown of 30s to activate Energy Amplifier; Has an internal cooldown of 60s to activate Buddy Barrier;",
+      "Image": "Dragapult - Dreep and Destroy.png"
     }
   },
   "Dragonite": {
@@ -1608,7 +1633,8 @@
       "Cooldown": "112s",
       "Description": "Briefly fly up in the air, becoming untargetable, before crashing down, approximately 2s after activating, with several comets on a designated area, dealing damage and throwing enemies in the area for 0.5s. The farther Dragonite flies, the more the Unite gauge is consumed (50% at min distance and 100% at max). Dragonite is unstoppable while using this move.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 35% Attack Speed, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 35% Attack Speed, 20% Max HP Shield",
+      "Image": "Dragonite - Draco Impact.png"
     }
   },
   "Duraludon": {
@@ -1670,7 +1696,8 @@
       "Cooldown": "134s",
       "Description": "Fire a beam of light at the ground in a sweeping circle around Duraludon, becoming unstoppable during the rotation. If this beam hits an enemy, it deals damage to them, grants Duraludon a shield and increases Attack by 8% for 8s. Both the shield effect and the Attack increase are strengthened for each enemy that is hit by the beam, stacking up to 5 times. Damage is dealt to any enemy in the area of effect after the beam of light is fired and enemies are shoved for 0.5s. A burning ring is also left where the beam of light touched the ground for 10s; enemies that touch this ring take additional damage every 0.5s and have their movement speed decreased by 50% for 1s. Subsequent hits after the first have the Attack stat bonus from this move applied to them.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 35% Attack Speed, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 35% Attack Speed, 20% Max HP Shield",
+      "Image": "Duraludon - Revolving Ruin.png"
     }
   },
   "Eldegoss": {
@@ -1732,7 +1759,8 @@
       "Cooldown": "100s",
       "Description": "The user becomes invincible as they float into the air for up to 3s, moving freely over obstacles and increasing their movement speed by 10% while in the air. If used again or after 3s, the user pounds the ground, restoring the HP of the user and teammates in the area of effect, damaging opposing Pokémon in the area of effect and shoving opposing Pokémon hit for 0.7s.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% Max HP Shield",
+      "Image": "Eldegoss - Cotton Cloud Crash.png"
     }
   },
   "Empoleon": {
@@ -1794,7 +1822,8 @@
       "Cooldown": "112s",
       "Description": "Has the user slide at high speed in the designated direction and form a whirlpool on impact, or when the maximum distance is reached, dealing damage to opposing Pokémon it hits and throwing them for 1s. The whirlpool remains centered on the user for 7s and applies a 50% slow to opposing Pokémon in the area. The slow lasts 1s when opposing Pokémon leave the area. Empoleon is unstoppable throughout this move. The longer the user slides, the faster the recovery to perform other actions. Increases Torrent gauge by 10/15/20 when the move connects. While the whirlpool is active the amount of Torrent gauge gained per second is increased to 12/18/24.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Empoleon - Sovereign Slide.png"
     }
   },
   "Espeon": {
@@ -1856,7 +1885,8 @@
       "Cooldown": "100s",
       "Description": "Espeon throws enemies in the area of effect into the air and suspends them using psychic power. After a delay, an explosion occurs that deals damage to all enemies in the area of effect and shoves them. Espeon is unstoppable during this move.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Espeon - Psychic Solare.png"
     }
   },
   "Falinks": {
@@ -1918,7 +1948,8 @@
       "Cooldown": "112s",
       "Description": "Has the five troopers run continuously around the Brass at great speed for 5s, dealing damage and slowing enemies hit by 20% for 1s. Falinks is unstoppable during the formation change for 0.25s. While this move is being used, damage taken by the troopers is reduced. While in Dust Devil formation the Troopers take 30% less damage making the Trooper's total damage reduction 93%. Moving counter to the rotation of the troopers will grant more hits against that target, and moving along the rotation will reduce the number of hits.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% Max HP Shield",
+      "Image": "Falinks - Dust Devil Formation.png"
     }
   },
   "Galarian Rapidash": {
@@ -1980,7 +2011,8 @@
       "Cooldown": "112s",
       "Description": "The user becomes unstoppable and charges at the designated opposing Pokémon, shoving opposing Pokémon in the way and stunning them for 0.8s when hit. When the charge ends, a mysterious triangular space is created around the designated opposing Pokémon if the user hits them. That Pokémon cannot leave that space. When the mysterious space is created, this move can be used again up to 3 times within 5.5s. With each additional use, the user runs at high speed forward, damaging opposing Pokémon in their path. If the path of a dash starts or ends in the mysterious space, this move can be used again immediately afterward.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Galarian Rapidash - Triad Blitz.png"
     }
   },
   "Garchomp": {
@@ -2042,7 +2074,8 @@
       "Cooldown": "112s",
       "Description": "The user goes berserk, becoming unstoppable and receiving 30% reduced damage for 5s while unleashing five powerful attacks in a row. The user dashes forward and damages opposing Pokémon in a unique designated area with each attack, taking a brief moment after each attack to aim the next dash. Every attack more damage than the last. The fifth attack throws opposing Pokémon hit and decreases their movement speed by 30% for 1s. The user is left confused for 0.5s afterward.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% Max HP Shield",
+      "Image": "Garchomp - Livid Outrage.png"
     }
   },
   "Gardevoir": {
@@ -2104,7 +2137,8 @@
       "Cooldown": "89s",
       "Description": "The user warps space in the designated area, dealing damage to opposing Pokémon and pulling them toward the center 4 times. As the warped space disappears, it deals increased damage to opposing Pokémon in the area of effect and shoves them away from the center.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Gardevoir - Fairy Singularity.png"
     }
   },
   "Gengar": {
@@ -2166,7 +2200,8 @@
       "Cooldown": "112s",
       "Description": "The user becomes unstoppable as they jump forward to the designated location, then enters stealth and increases their movement speed by 30% for 7s. The user exits stealth when they use an attack. If this Unite Move is used again, the user becomes invincible as they jump out to attack, damaging opposing Pokémon in the area of effect and decreasing their movement speed by 50% for 1.5s when it hits. The user readies a boosted attack each time this move is used.",
       "Buff Duration": "6s",
-      "Buff Stats": "80% Movement Speed, 20% Max HP Shield"
+      "Buff Stats": "80% Movement Speed, 20% Max HP Shield",
+      "Image": "Gengar - Phantom Ambush.png"
     }
   },
   "Glaceon": {
@@ -2228,7 +2263,8 @@
       "Cooldown": "100s",
       "Description": "Glaceon leaps up high, creating an ice zone in front of themself that deals damage to enemies in the area-of-effect. While Glaceon is in the ice zone, their movement speed is increased by 50% for 6s, and Glaceon gains 1 ice crystals every second while in the zone. The movement speed of enemies in the ice zone is decreased by 50% for 2s.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 35% Attack Speed, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 35% Attack Speed, 20% Max HP Shield",
+      "Image": "Glaceon - Glacial Stage.png"
     }
   },
   "Goodra": {
@@ -2290,7 +2326,8 @@
       "Cooldown": "89s",
       "Description": "Causes rain to fall around the user, gradually restoring the user’s HP over 6s. While this move is active, all of the user’s basic attacks become boosted attacks.",
       "Buff Duration": "6s",
-      "Buff Stats": "40% Max HP Shield, 50% Movement Speed"
+      "Buff Stats": "40% Max HP Shield, 50% Movement Speed",
+      "Image": "Goodra - Right as Rain.png"
     }
   },
   "Greedent": {
@@ -2352,7 +2389,8 @@
       "Cooldown": "100s",
       "Description": "Greedent eats a special berry to recover 15% max HP and then leaps to the designated area; dealing damage and throwing enemies within the area of effect for 1s. Greedent then eats another berry, allowing an unlimited amount of Oran berries to be stored for 8s and resets cooldowns of all moves. Greedent is unstoppable during this move.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 40% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 40% Max HP Shield",
+      "Image": "Greedent - Berry Belly Flop.png"
     }
   },
   "Greninja": {
@@ -2414,7 +2452,8 @@
       "Cooldown": "100s",
       "Description": "Becomes unstoppable and leaps up to throw a giant water shuriken toward the designated circular location, damaging opposing Pokémon it hits on the way to the circular area of effect (from beyond the range of the user's close range auto attacks) and decreasing the movement speed of those hit by 50% for 2s. The user then suddenly appears on top of the water shuriken which immediately bursts, damaging opposing Pokémon in the circular area of effect again and throwing them. Leaps off the burst water shuriken and becomes vulnerable to hindrances again as they jump down to the ground in the direction of their choosing.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 35% Attack Speed, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 35% Attack Speed, 20% Max HP Shield",
+      "Image": "Greninja - Waterburst Shuriken.png"
     }
   },
   "Gyarados": {
@@ -2476,7 +2515,8 @@
       "Cooldown": "112s",
       "Description": "Becomes untargetable and dives underwater for up to 4s while this Unite Move is held, increasing movement speed by 45%. When released or after 4s, forcefully leaps up and attacks, damaging opposing Pokémon hit. If the user stays underwater for at least 1s before releasing the Unite Move, strengthens to movement speed increase to 55%; deals increased damage and creates a whirlpool where they surface, dealing damage over time to opposing Pokémon in the area of effect (up to 5 times) and decreasing their movement speed for 4s when hit. If underwater for at least 2s, strengthens the movement speed increase to 65%; deals even more damage and creates a waterspout where they surface instead, throwing opposing Pokémon hit for 0.96s.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Gyarados - Dragon Current.png"
     }
   },
   "Ho-Oh": {
@@ -2538,7 +2578,8 @@
       "Cooldown": "112s",
       "Description": "When a nearby ally is knocked out, a feather is left in their place until they respawn at base. When Rekindling Flame is used, Ho-oh spreads their wings and consumes all of the Aeos energy held to revive knocked-out allies where their feathers are for 60% of their maximum HP. Rekindling Flame may only be used if there are feathers nearby. The number of available revivals are based on how much Aeos energy is consumed. One ally may be always revived. Up to two allies are revivable if at least 9 energy is consumed. Up to three allies are revivable if at least 17 Aeos energy is consumed. Up to four allies are revivable if at least 25 Aeos energy is consumed.",
       "Buff Duration": "6s",
-      "Buff Stats": "80% Movement Speed, 20% Max HP Shield"
+      "Buff Stats": "80% Movement Speed, 20% Max HP Shield",
+      "Image": "Ho-Oh - Rekindling Flame.png"
     }
   },
   "Hoopa": {
@@ -2600,7 +2641,8 @@
       "Cooldown": "112s",
       "Description": "Hoopa becomes invincible for 0.6s while transforming into Hoopa Unbound, then becomes unstoppable for 0.3s as it opens a large portal ring at a designated location. Hoopa Unbound lasts for 15s, increasing max HP by 40% and changes Hoopa's regular moves to Hyperspace Fury and Psybeam. Hoopa Unbound cannot score goals or activate the Magician ability. The portal ring created stays open for 10s, and allies can warp to that location once within the duration of the ring. This portal is indicated on the mini map where all players may see where it is.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Hoopa - Rings Unbound.png"
     }
   },
   "Inteleon": {
@@ -2662,7 +2704,8 @@
       "Cooldown": "112s",
       "Description": "For 10.5s, Inteleon can see nearby Pokémon that are in stealth or hiding in tall grass. While active, also doubles Inteleon's critical-hit rate, and gives 1 critical counter per second.",
       "Buff Duration": "6s",
-      "Buff Stats": "20% Max HP Shield, 30% Movement Speed, 35% Attack Speed"
+      "Buff Stats": "20% Max HP Shield, 30% Movement Speed, 35% Attack Speed",
+      "Image": "Inteleon - Azure Spy Vision.png"
     }
   },
   "Lapras": {
@@ -2724,7 +2767,8 @@
       "Cooldown": "100s",
       "Description": "Ride a wave quickly and continuously forward becoming Unstoppable for up to 15s. Lapras’s movement speed increases every second while riding but decreases if the user hits an obstacle. If this move is used again, the user stops and launches a wave that continues moving forward, dealing damage to Pokémon it hits and throwing them for 1.5s. If the user hits an enemy Pokémon while still riding, the user stops in place, dealing damage to and throwing the opposing Pokémon for 1.5s. While the user is riding the wave, one nearby ally Pokémon of the user’s choice within range may be picked up and can ride on its back. Ally Pokémon riding on the user’s back can dismount whenever they choose.",
       "Buff Duration": "6s",
-      "Buff Stats": "20% Max HP Shield on activation, 40% Max HP shield and 30% Movement speed after stopping."
+      "Buff Stats": "20% Max HP Shield on activation, 40% Max HP shield and 30% Movement speed after stopping.",
+      "Image": "Lapras - Lapras Express.png"
     }
   },
   "Latias": {
@@ -2786,7 +2830,8 @@
       "Cooldown": "112s",
       "Description": "Aims at the designated Pokémon from the opposing team and charges power for 1.8s before releasing a pulse, damaging all opposing Pokémon hit. Resets move cooldowns immediately after releasing the pulse, and increases cooldown reduction by 20% for 9.5s. If Latios is also aiming its Unite Move at the designated Pokémon from the opposing team, the pulses stack and explode, dealing damage around the target as well. If Mist Blast hits last then the explosion uses Latias' stats.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 20% Max HP Shield",
+      "Image": "Latias - Mist Blast.png"
     }
   },
   "Latios": {
@@ -2848,7 +2893,8 @@
       "Cooldown": "112s",
       "Description": "Aims at the designated Pokémon from the opposing team and charges power for 1.8s before releasing a pulse, damaging all opposing Pokémon hit. Resets move cooldowns immediately after releasing the pulse, and increases cooldown reduction to 60% for 9.5s. If Latias is also aiming its Unite Move at the designated Pokémon from the opposing team, the pulses stack and explode, dealing damage around the target as well. If Eon Blast hits last then the explosion uses Latios' stats.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Latios - Eon Blast.png"
     }
   },
   "Leafeon": {
@@ -2910,7 +2956,8 @@
       "Cooldown": "100s",
       "Description": "Leaps at a designated enemy, dealing damage to them and all enemies around them. These Pokémon are additionally slowed by 50% for 2s. After the initial leap, Leafeon leaps up and lands with force dealing damage to enemies in an area. Enemies hit by this area take more damage the closer they are to the center of this area. Leafeon is unstoppable during this move.",
       "Buff Duration": "6s",
-      "Buff Stats": "80% Movement Speed, 20% Max HP Shield"
+      "Buff Stats": "80% Movement Speed, 20% Max HP Shield",
+      "Image": "Leafeon - Emerald Two-Step.png"
     }
   },
   "Lucario": {
@@ -2972,7 +3019,8 @@
       "Cooldown": "100s",
       "Description": "Becomes unstoppable for 0.6s and channels aura into a huge sphere, then launches the sphere in the designated direction, dealing damage to opposing Pokémon in its path. The aura sphere picks up speed as it travels; at close range, a target can be hit up to 4 times, while at max speed a target will only be hit once. If the user learned Extreme Speed: applies an Extreme Speed marker to targets hit by this Unite Move. If the user learned Power-Up Punch: strengthens the damage of the next attack of Power-Up Punch by roughly 20% and the shove duration to 1s when Power-Up Punch is released.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Lucario - Aura Cannon.png"
     }
   },
   "Machamp": {
@@ -3034,7 +3082,8 @@
       "Cooldown": "134s",
       "Description": "Machamp gains increased movement speed by 10%, Attack by 25%, Defense by 300, and Sp. Defense by 300 for 8s before unleashing an unstoppable combo attack that continuously shoves enemies in the area of effect.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 35% Attack Speed, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 35% Attack Speed, 20% Max HP Shield",
+      "Image": "Machamp - Barrage Blow.png"
     }
   },
   "Mamoswine": {
@@ -3096,7 +3145,8 @@
       "Cooldown": "112s",
       "Description": "Mamoswine jumps to the designated location then repeatedly stomps the ground four times, dealing damage to enemies in the area of effect and decreases their movement speed for 0.5s with each stomp. The first stomp slows enemies by 30%, the two mini stomps slow them by 20%, and the final stomp slows them by 40% and throws them in the air for 1.5s. Mamoswine is unstoppable for the duration of the move.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 40% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 40% Max HP Shield",
+      "Image": "Mamoswine - Mammoth Mash.png"
     }
   },
   "Mega Charizard X": {
@@ -3142,7 +3192,8 @@
       "Cooldown": "112s",
       "Description": "The user briefly becomes unstoppable and grabs the designated Pokémon from the opposing team. The target is bound, and the user and the target become invincible as the user flies up then slams them onto the ground, damaging the target and nearby opposing Pokémon, dealing an additional 8% max HP damage to each opposing Pokémon hit. The user then mega evolves into Mega Charizard X for 20 seconds. During Mega evolution, Mega Charizard X receives 50% movement speed increase.",
       "Buff Duration": "6s",
-      "Buff Stats": "20% Max HP Shield"
+      "Buff Stats": "20% Max HP Shield",
+      "Image": "Mega Charizard X - Seismic Slam.png"
     }
   },
   "Mega Charizard Y": {
@@ -3188,7 +3239,8 @@
       "Cooldown": "112s",
       "Description": "The user briefly becomes unstoppable and grabs the designated Pokémon from the opposing team. The target is bound, and the user and the target become invincible as the user flies up then slams them onto the ground, damaging the target and nearby opposing Pokémon, dealing an additional 8% max HP damage to each opposing Pokémon hit. The user gains hindrance resistance and mega evolves into Mega Charizard Y the moment they slam into the ground and fly up into the air for 20s. While flying in the air, the user is able to use basic attacks as well as moves and is able to move freely over obstacles. Unite Move basic attacks burn opposing Pokémon for 1s (dealing damage 2 times). The user restores HP for 80% of the damage dealt with Unite Move basic attacks (excluding burns or additional damage). Damage dealt by burns from Unite Move basic attacks also benefit from regular lifesteal. The Attack of opposing Pokémon burned by this move is decreased by 5%.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 20% Max HP Shield",
+      "Image": "Mega Charizard Y - Seismic Slam.png"
     }
   },
   "Mega Gyarados": {
@@ -3234,7 +3286,8 @@
       "Cooldown": "112s",
       "Description": "Has the user dive underwater, where it can't attack or be targeted by opposing Pokémon while the Unite Move button is held down. When the button is released, the user leaps up forcefully and attacks. If the user stays underwater for 1s, Gyarados creates a whirlpool when surfacing, applying a continuous slow to opposing Pokémon hit. If the user stays underwater for 2s, they create a waterspout when surfacing, throwing opposing Pokémon hit. After using this Unite Move, the user Mega Evolves for 20 seconds.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Mega Gyarados - Dragon Current.png"
     }
   },
   "Mega Lucario": {
@@ -3280,7 +3333,8 @@
       "Cooldown": "112s",
       "Description": "The user becomes unstoppable and channels aura into a huge sphere, then launches the sphere in the designated direction, dealing damage to opposing Pokémon in its path. The aura sphere picks up speed as it travels; at close range, a target can be hit up to 4 times, while at max speed a target will only be hit once. After unleashing this move the user mega evolves for 25s adding additional effects to Close Combat and Power-Up Punch and changing the passive ability to Adaptability.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Mega Lucario - Aura Cannon.png"
     }
   },
   "Meowscarada": {
@@ -3342,7 +3396,8 @@
       "Cooldown": "112s",
       "Description": "Move instantly to the designated location, creating a whirlwind around Meowscarada for 3s that continually deals damage to enemies every 0.25s, up to 13 times. During the blink, Meowsacarda is Invincible. Then, Meowscarada will slowly walk forward with the storm. While using this move, the user cannot use other attacks or change directions without the use of Eject Button, and the move can be stopped if it is used again. Hits on enemy Pokémon reduce the cooldown of Night Slash and Flower Trick by 1 second per enemy hit.",
       "Buff Duration": "6s",
-      "Buff Stats": "80% Movement Speed, 20% Max HP Shield"
+      "Buff Stats": "80% Movement Speed, 20% Max HP Shield",
+      "Image": "Meowscarada - Floral Flourish.png"
     }
   },
   "Metagross": {
@@ -3404,7 +3459,8 @@
       "Cooldown": "112s",
       "Description": "Quickly analyzes the position of nearby enemies, granting a shield based on the number of enemies analyzed and become unstoppable. When 2 or fewer enemies are analyzed, lunge towards the enemy with the lowest HP, leaving it unable to act for 0.8s and dealing damage to it thrice, with the third hit dealing damage based on the target's missing HP. If an enemy is knocked out by this move, the user recovers 30% of its Unite Move gauge. If there are three or more analyzed, lunge toward the enemy with the lowest HP, dealing damage to nearby enemies and creating a wall around the user. If a wall is created, Compute and Crash may be used again to take down the wall.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 30% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 30% Max HP Shield",
+      "Image": "Metagross - Compute and Crush.png"
     }
   },
   "Mew": {
@@ -3422,7 +3478,8 @@
       "Cooldown": "123s",
       "Description": "Mew becomes unstoppable and floats in the air for 1s, then becoming invincible and invisible for up to 6s until using an attack or move. A field is created around Mew for 5s This field travels with Mew. Mew and all allies within the area become stealthed for 4s. After the field expires, this move deals damage to enemies within the area-of-effect.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Mew - Mystical Mirage.png"
     },
     "Move 1": {
       "Upgrade 1": {
@@ -3536,7 +3593,8 @@
       "Cooldown": "134s",
       "Description": "Mewtwo becomes unstoppable while revealing enemy players and channeling a powerful attack on the enemies' current position. After 1s, Mewtwo brings down a powerful psychic beam on their original position, dealing damage to enemies around each point of impact, leaving them unable to act for 1s and decreasing their Defense by 20% for 3s. Each Pokémon can only be hit by 1 psychic beam.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Mewtwo X - Infinite Psyburn.png"
     }
   },
   "Mewtwo Y": {
@@ -3598,7 +3656,8 @@
       "Cooldown": "134s",
       "Description": "Mewtwo becomes unstoppable while revealing enemy players and channeling a powerful attack on the enemies' current position. After 1s, Mewtwo brings down a powerful psychic beam on their original position, dealing damage to enemies around each point of impact, leaving them unable to act for 0.6s and decreasing their Sp. Defense by 15% for 3s. Each Pokémon can only be hit by 1 psychic beam.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Mewtwo Y - Infinite Psyburn.png"
     }
   },
   "Mimikyu": {
@@ -3660,7 +3719,8 @@
       "Cooldown": "112s",
       "Description": "Mimikyu leaps at an enemy and traps them inside Mimikyu's rag, dealing damage over time and granting the user a shield. The trapped enemy is only affected by this Unite Move and effects applied by Mimikyu before using this Unite Move. If Mimikyu loses their shield, or if 2.8s passes, the user stops attacking and jumps in the designated direction. The maximum number of hits is 7, hitting every 0.4s. The Unite buffs occur after the move ends. This ability counters Unstoppable.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Mimikyu - Play With Me....png"
     }
   },
   "Miraidon": {
@@ -3722,7 +3782,8 @@
       "Cooldown": "112s",
       "Description": "The user gains hindrance resistance and calls down up to 5 meteorites in a row, each at a designated area, damaging opposing Pokémon hit by each meteorite. If a meteorite hits an opposing Pokémon, it increases the damage of subsequent meteorites that hit by an additional 20% (up to 80% additional increased damage for the final meteorite if all preceding meteorites hit). The final meteorite damages opposing Pokémon in a wider area of effect and throws them for 1s when it hits. All effects related to Unite Move use activate when the first meteorite is called down. This Unite Move ends when released, consuming 10% of the Unite Move gauge. Each meteorite called down consumes at most 30% of the Unite Move gauge.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Miraidon - Bright Future Meteor Storm.png"
     }
   },
   "Mr. Mime": {
@@ -3784,7 +3845,8 @@
       "Cooldown": "100s",
       "Description": "Mr. Mime leaps forward and begins a performance; stunning enemies for 0.5s, dealing damage in a large area around him 4 times, and becomes unstoppable for the duration. The final hit deals double damage and stuns enemies for 1s.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% Max HP Shield",
+      "Image": "Mr. Mime - Showtime.png"
     }
   },
   "Pawmot": {
@@ -3846,7 +3908,8 @@
       "Cooldown": "0s",
       "Description": "Charge toward the designated Pokémon from the opposing team, dealing damage to the target and nearby opposing Pokémon. After using this move, the user enters Fighter Mode for 8s and resets the cooldown of all other moves. The Unite Move gauge will only charge when the user's basic attacks and moves hit opposing Pokémon. Basic Attacks against Pokémon from the opposing team increase Unite Move gauge by 4% and moves increase the gauge by 8%. Basic Attacks against wild Pokémon increase Unite Move gauge by 1% and moves increase the gauge by 2%. Fighter Mode: Basic attacks and move effects change, and the Unite Move gauge does not charge. Gain 30% omni-vamp while Fighter Mode is active.",
       "Buff Duration": "6s",
-      "Buff Stats": "50% Movement Speed, 35% Attack Speed, 20% Max HP Shield"
+      "Buff Stats": "50% Movement Speed, 35% Attack Speed, 20% Max HP Shield",
+      "Image": "Pawmot - Zip Zap Full-Charge Spark.png"
     }
   },
   "Pikachu": {
@@ -3908,7 +3971,8 @@
       "Cooldown": "89s",
       "Description": "Becomes unstoppable and jumps into the air, then casts down bolts of lightning 4 times over 3s in a radius around Pikachu. The first cast targets all Pokémon on the opposing team in range with 1 bolt each; these bolts damage up to 1 target each. The following 3 casts target up to 2 random Pokémon from the opposing team in range; these following bolts deal damage to opposing Pokémon in a small area around them, but targets can only be damaged once for each of the following 3 casts. Pikachu can act freely once the first bolts of lightning are cast down.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 30% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 30% Max HP Shield",
+      "Image": "Pikachu - Thunderstorm.png"
     }
   },
   "Psyduck": {
@@ -3970,7 +4034,8 @@
       "Cooldown": "112s",
       "Description": "Releases three mysterious psychic waves around themself, damaging opposing Pokémon in the area of effect and decreasing the damage dealt by them by 25% for 3s when hit. After using this Unite Move, increases the headache gauge by 50% as a consequence of Psyduck unleashing their full power.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Psyduck - Full-Power Psy-ay-ay!.png"
     }
   },
   "Sableye": {
@@ -4032,7 +4097,8 @@
       "Cooldown": "100s",
       "Description": "Sableye becomes unstoppable for 1.2s and shoots light from both eyes, dealing damage to enemies in a cone in front of themself. Enemy players hit by this move who are facing Sableye are left unable to act for 3s and start preparing to return to base. If they take damage before returning to base, the return effect is cancelled, and they are left unable to act for 1.5s. Enemies hit by this move who are not facing Sableye have their movement speed decreased by 50% for 2s.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Sableye - Chaos Glower.png"
     }
   },
   "Scizor": {
@@ -4086,7 +4152,8 @@
       "Cooldown": "112s",
       "Description": "Target an enemy and punch them, dealing an initial hit of damage, decreasing their movement speed by 40% for 3s. Then create 5 copies that dash away from Scizor. If a copy hits a non targetted enemy while dashing out, it deals damage, decreases that enemy's movement speed by 40% for 3s, then disappears. If untouched, the illusory copy will remain on the battlefield for 8 seconds. Enemies that come in contact with an illusary copy will detonate the copy, having damage dealt to them an slowing them for 40% for 3s. For 8s after activation, this move may be used again, dashing in a designated direction dealing damage to enemies hit. The enemies hit are also grabbed and carried while Scizor continues dashing. At the end of the dash, Scizor punches the ground dealing damage in an area-of-effect. If the grabbed enemy hits an illusory copy during the shove, they will be dealt damage and be left incapacitated for 2s.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Scizor - Red Illusion Dive.png"
     }
   },
   "Scyther": {
@@ -4140,7 +4207,8 @@
       "Cooldown": "112s",
       "Description": "Target an enemy, slashing through them dealing an initial hit of damage and creating 5 copies a set distance away. Copies deal damage to enemies they make contact with and apply a mark to them for 5s. After 5s, the copies return to Scyther, dealing damage to enemies they make contact with and healing Scyther for each hit. This move may be used again within 5s of activating as a dash in a designated direction dealing damage to enemies hit. The copies then dash to the end location of the user's dash. If a copy makes contact with an enemy while returning to Scyther, the copy deals damage to that enemy and disappears. If a marked enemy is knocked out, all of Scyther's move cooldowns are reset. Subsequent copies hitting the same target deal 70% reduced damage.",
       "Buff Duration": "6s",
-      "Buff Stats": "80% Movement Speed, 20% Max HP Shield"
+      "Buff Stats": "80% Movement Speed, 20% Max HP Shield",
+      "Image": "Scyther - Green Illusion Dive.png"
     }
   },
   "Slowbro": {
@@ -4202,7 +4270,8 @@
       "Cooldown": "112s",
       "Description": "Stare at an enemy and attack continually, dealing damage every .5 seconds for 3s and applying 'Bound' to them. This ability counters Unstoppable. Grants a shield (10% max HP) and makes Slowbro unstoppable while using this move.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 40% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 40% Max HP Shield",
+      "Image": "Slowbro - Slowbeam.png"
     }
   },
   "Snorlax": {
@@ -4264,7 +4333,8 @@
       "Cooldown": "89s",
       "Description": "The user becomes unstoppable and slams onto their back fast asleep, damaging opposing Pokémon in the area of effect and throwing them for 0.6s; then continues to sleep for up to 4s afterward. The user starts snoring for the remainder of the Unite Move, restoring 10% max HP over time while fast asleep (up to 9 times; maximum 90%), damaging opposing Pokémon in the area of effect with a huge snore every 1.5s and decreasing their movement speed by 30% for 1s when hit. This Unite Move can be used again before the user snores a second time to flip over in the designated sideways direction and slam the ground, dealing an extra instance of snore damage in the area of effect and throwing opposing Pokémon hit for 1s. While the user is fast asleep, opposing Pokémon cannot pass through Snorlax. After the user flips over or snores a second time, the user can use this Unite Move again to stop sleeping early, becoming vulnerable to hindrances and returning to normal.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 40% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 40% Max HP Shield",
+      "Image": "Snorlax - Power Nap.png"
     }
   },
   "Suicune": {
@@ -4326,7 +4396,8 @@
       "Cooldown": "100s",
       "Description": "Cleanses the user of status condition; then creates ice spikes in the designated direction, damaging opposing Pokémon in the area of effect and freezing those hit for 2s. After 2s, the ice spikes explode, damaging opposing Pokémon in the area of effect again. This Unite Move does not directly interact with drench marks, nor does it freeze flooded areas. Suicune can be stunned after cleansing themself and before creating the ice spikes, canceling the Unite Move and refunding 90% of the Unite Move gauge.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Suicune - Endless Ice Spikes.png"
     }
   },
   "Sylveon": {
@@ -4388,7 +4459,8 @@
       "Cooldown": "112s",
       "Description": "Jump into the air, removing most statuses and becoming invincible. The moment Sylveon lands, lose invincibility and immediately gain Fairy Frolic buff, while dealing damage to enemies in the area of effect and healing for 60% of the damage dealt. Fairy Frolic buff: for 10s, 50% of the damage dealt by Sylveon is converted into HP. No HP is recovered if the damage is dealt to shields. Against Wild Pokémon: Damage is capped at 2000.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Sylveon - Fairy Frolic.png"
     }
   },
   "Talonflame": {
@@ -4450,7 +4522,8 @@
       "Cooldown": "100s",
       "Description": "The user performs an aerial somersault and sweeps forward, becoming unstoppable, receiving 50% reduced damage, damaging opposing Pokémon in their path and shoving them toward the end of the sweep, then damaging opposing Pokémon again. This Unite Move cannot go through walls.",
       "Buff Duration": "6s",
-      "Buff Stats": "80% Movement Speed, 20% Max HP Shield"
+      "Buff Stats": "80% Movement Speed, 20% Max HP Shield",
+      "Image": "Talonflame - Flame Sweep.png"
     }
   },
   "Tinkaton": {
@@ -4512,7 +4585,8 @@
       "Cooldown": "89s",
       "Description": "The user first blows cute kisses at the designated Pokémon from the opposing team and their nearby allies, damaging and stunning them for 0.7s when Kiss Bliss hits a target. The user can then use the Unite Move again, leaping up forward and slamming their hammer down at the designated location, damaging opposing Pokémon in the area of effect of Kaboom. Unite Move buffs apply when Kiss Bliss hits a target.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Tinkaton - Kiss Bliss Kaboom.png"
     }
   },
   "Trevenant": {
@@ -4574,7 +4648,8 @@
       "Cooldown": "112s",
       "Description": "Briefly becomes unstoppable and creates a cursed forest, dealing damage to enemies in the area of effect and marking them, throwing them, and decreasing their movement speed by 50% for 2s. Trevenant and allies deal increased basic (and boosted) attack damage to enemies that were marked by this move (0.5s cd for each attacker). The mark lasts for 6s. Trevenant is also granted a shield for 6s when this move hits an enemy with the shield being strengthened for each enemy hit, up to 5 times. While Trevenant is shielded by this shield, HP recovery effects applied to Trevenant are increased by 50%.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 20% Max HP Shield",
+      "Image": "Trevenant - Phantom Forest.png"
     }
   },
   "Tsareena": {
@@ -4636,7 +4711,8 @@
       "Cooldown": "112s",
       "Description": "Tsareena leaps toward an enemy player and kicks it high into the air before showering it with a series of kicks while airborne, dealing damage to them. The moment Tsareena lands on the ground, recover HP. While airborne, the enemy that is being kicked and Tsareena are not affected by other moves.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Tsareena - Queen Ascendant.png"
     }
   },
   "Tyranitar": {
@@ -4698,7 +4774,8 @@
       "Cooldown": "112s",
       "Description": "Briefly becomes unstoppable and explodes with anger, then goes on a rampage for 10s, gaining 50% tenacity for the duration. While rampaging, changes the auto attack pattern, dealing increased damage. Damaging a Pokémon from the opposing team below 20% max HP with these auto attacks deals 40% max HP as true damage to the target (sufficient damage reduction effects can prevent the target from being knocked out).",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Tyranitar - Tyrannical Rampage.png"
     }
   },
   "Umbreon": {
@@ -4760,7 +4837,8 @@
       "Cooldown": "112s",
       "Description": "Umbreon briefly becomes unstoppable, leaping up and absorbing the shields of enemy Pokémon in the area around Umbreon, taking them for the user. Umbreon then lands, dealing damage to Pokémon in an area-of-effect, and stuns them for 1s. For 5s, enemy Pokémon in the area around Umbreon are slowed by 30%, and if an enemy Pokémon in that area is granted a shield, Umbreon absorbs 50% of the shield for themself. Additionally, after learning this move and while not in combat, Umbreon continually recovers 1% Max HP every second. Note: Umbreon cannot steal shields granted by Rayquaza or Assault Vest.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 10% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 10% Max HP Shield",
+      "Image": "Umbreon - Moonlight Prance.png"
     }
   },
   "Urshifu": {
@@ -4822,7 +4900,8 @@
       "Cooldown": "112s",
       "Description": "The user becomes unstoppable and the cooldown of Wicked Blow is reset when this Unite Move is used. The user dashes at the designated Pokémon from the opposing team, stunning them, then chooses whether to designate a direction to move or not. If no direction is chosen, the user pushes them slightly and delivers an uppercut, damaging the target, throwing them and stunning them when they land. If the user chooses a direction, the user instead delivers a more powerful blow to the target, dealing increased damage and shoving them in the designated direction. The shoved target also deals reduced damage to opposing Pokémon they collide with and throws those hit.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Urshifu - Ebon Fist.png"
     }
   },
   "Vaporeon": {
@@ -4884,7 +4963,8 @@
       "Cooldown": "89s",
       "Description": "Has the user jump up high and dive underwater, creating a current that pulls in nearby opposing Pokémon for 0.3s. Afterward, the user leaps out of the water, dealing damage to nearby opposing Pokémon and throws them for 1s.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 40% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 40% Max HP Shield",
+      "Image": "Vaporeon - Aquamarine Splash.png"
     }
   },
   "Venusaur": {
@@ -4946,7 +5026,8 @@
       "Cooldown": "112s",
       "Description": "Venusaur becomes unstoppable to hurl a massive seed to the designated location, damaging all enemies in the radius and slowing them by 35% for 1s. The seed then splits apart into 4 smaller seeds, each damaging all enemies in their radius.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Venusaur - Verdant Anger.png"
     }
   },
   "Wigglytuff": {
@@ -5008,7 +5089,8 @@
       "Cooldown": "89s",
       "Description": "Begin performing a recital and become unstoppable for 3s, granting Wigglytuff and nearby allies a shield for 3.5s as well as removing all status conditions from Wigglytuff and the affected allies and granting them immunity to hindrances for as long as the shield is active. When the shield expires, allies are healed for 50% of the remaining shield value.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Wigglytuff - Starlight Recital.png"
     }
   },
   "Zacian": {
@@ -5070,7 +5152,8 @@
       "Cooldown": "112s",
       "Description": "Has the user ready its giant sword, charge the sword with Aeos energy, and then slash in front of itself. The user becomes Unstoppable, applying a 10% self slow while the Unite Move button is held down and the user is in its ready stance. The longer the user is in this stance, the more Aeos energy is charged into the sword, and the more damage this move deals. If a set amount of Aeos energy or more is charged into the sword, the Unite Move becomes boosted, and the slash’s area of effect increases. This boosted Unite Move deals increased damage to opposing Pokémon it hits who have been buffed by their own Unite Move. This move deals 15% decreased damage per additional target hit, capping at 30% less damage from hitting 3 targets.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Zacian - Sovereign Sword.png"
     }
   },
   "Zeraora": {
@@ -5132,7 +5215,8 @@
       "Cooldown": "112s",
       "Description": "Becomes unstoppable for 0.5s and launches a bolt of lightning toward the designated target; damaging opposing Pokémon in its path toward the target and throwing them for 0.5s. Once the bolt reaches the target; damages opposing Pokémon in an area of effect and throws them once again. Creates a circular zone of plasma centered on the target's location for 5s when it hits; paralyzing opposing Pokémon inside it for 3s. While in the zone, also increases the user's auto attack range, and auto attack damage by 20%.",
       "Buff Duration": "6s",
-      "Buff Stats": "30% Movement Speed, 20% Attack Speed, 15% CDR, 20% Max HP Shield"
+      "Buff Stats": "30% Movement Speed, 20% Attack Speed, 15% CDR, 20% Max HP Shield",
+      "Image": "Zeraora - Plasma Gale.png"
     }
   },
   "Zoroark": {
@@ -5194,7 +5278,8 @@
       "Cooldown": "100s",
       "Description": "Becomes unstoppable for 1.33s, and releases dark shockwaves with increasing areas of effect around themself 3 times over the first 1s, damaging opposing Pokémon hit with each shockwave.",
       "Buff Duration": "6s",
-      "Buff Stats": "80% Movement Speed, 20% Max HP Shield"
+      "Buff Stats": "80% Movement Speed, 20% Max HP Shield",
+      "Image": "Zoroark - Nightfall Daze.png"
     }
   }
 }

@@ -60,8 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
                          .toLocaleString(undefined,{ maximumFractionDigits: 0 });
 
       document.getElementById('header-text')
-        .textContent = `Data comes from Unite API as of ${formattedDate} with ${matches} total games analyzed. Currently only working on non-mobile devices.
-        Click on a moveset winrate to see details on specific battle item winrates and pickrates for that moveset`;
+        .textContent = `Data comes from Unite API as of ${formattedDate} with ${matches} total games analyzed. Currently only working on non-mobile devices.`;
     } catch(e) {
       console.error(e);
     }
@@ -540,6 +539,17 @@ document.addEventListener("DOMContentLoaded", () => {
       // Visual feedback
       img.style.cursor = "pointer";
     });
+
+    // Pokemon image click handlers
+    document.querySelectorAll(".table-row .table-cell:first-child img").forEach(img => {
+      img.addEventListener("click", e => {
+        e.stopPropagation(); // Prevent row click events
+        showPokemonPopup(img);
+      });
+
+      // Visual feedback
+      img.style.cursor = "pointer";
+    });
   }
 
 
@@ -647,7 +657,7 @@ document.addEventListener("DOMContentLoaded", () => {
     popupContent.innerHTML = `
       <div class="move-popup-header">
         <img src="${moveImgSrc}" alt="${moveName}" class="move-popup-img">
-        <h3 class="popup-title">${pokemonName} – ${moveName}</h3>
+        <h3 class="popup-title">${moveName}</h3>
       </div>
 
       <div class="move-popup-body">
@@ -670,6 +680,91 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="move-detail-section enhanced-section">
             <h4 class="move-detail-heading">Enhanced (Level ${moveData['Enhanced Level']})</h4>
             <p class="move-description">${moveData['Enhanced Description'] || ''}</p>
+          </div>
+        ` : ''}
+      </div>
+    `;
+
+    // Show popup
+    popup.classList.remove("hidden");
+  }
+
+  function showPokemonPopup(imgElement) {
+    // Parse the Pokemon name from the image alt text
+    const pokemonName = imgElement.getAttribute('alt');
+
+    if (!pokemonName) {
+      alert('Unable to load Pokemon details: Invalid image');
+      return;
+    }
+
+    // Find Pokemon data
+    if (!moveDetailsData || !moveDetailsData[pokemonName]) {
+      alert(`Unable to load details for ${pokemonName}`);
+      return;
+    }
+
+    const pokemonData = moveDetailsData[pokemonName];
+    const pokemonImgSrc = imgElement.getAttribute('src');
+
+    // Build popup HTML
+    popupContent.innerHTML = `
+      <div class="move-popup-header">
+        <img src="${pokemonImgSrc}" alt="${pokemonName}" class="move-popup-img">
+        <h3 class="popup-title">${pokemonName}</h3>
+      </div>
+
+      <div class="move-popup-body">
+        ${pokemonData['Passive Ability'] ? `
+          <div class="move-detail-section">
+            <h4 class="move-detail-heading">Passive Ability: ${pokemonData['Passive Ability'].Name || ''}</h4>
+            <p class="move-description">${pokemonData['Passive Ability'].Description || ''}</p>
+          </div>
+        ` : ''}
+
+        ${pokemonData['Attack'] ? `
+          <div class="move-detail-section">
+            <h4 class="move-detail-heading">Attack</h4>
+            <p class="move-description">${pokemonData['Attack']}</p>
+          </div>
+        ` : ''}
+
+        ${pokemonData['Unite Move'] ? `
+          <div class="move-detail-section enhanced-section">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+              ${pokemonData['Unite Move'].Image ? `
+                <img src="static/img/Unite_Moves/${pokemonData['Unite Move'].Image}"
+                     alt="${pokemonData['Unite Move'].Name}"
+                     style="max-height: 100px; width: auto;">
+              ` : ''}
+              <h4 class="move-detail-heading" style="margin: 0;">Unite Move: ${pokemonData['Unite Move'].Name || ''}</h4>
+            </div>
+
+            <div class="move-detail-row">
+              <span class="move-detail-label">Level:</span>
+              <span class="move-detail-value">${pokemonData['Unite Move'].Level || ''}</span>
+            </div>
+
+            <div class="move-detail-row">
+              <span class="move-detail-label">Cooldown:</span>
+              <span class="move-detail-value">${pokemonData['Unite Move'].Cooldown || ''}</span>
+            </div>
+
+            ${pokemonData['Unite Move']['Buff Duration'] ? `
+              <div class="move-detail-row">
+                <span class="move-detail-label">Buff Duration:</span>
+                <span class="move-detail-value">${pokemonData['Unite Move']['Buff Duration']}</span>
+              </div>
+            ` : ''}
+
+            ${pokemonData['Unite Move']['Buff Stats'] ? `
+              <div class="move-detail-row">
+                <span class="move-detail-label">Buff Stats:</span>
+                <span class="move-detail-value">${pokemonData['Unite Move']['Buff Stats']}</span>
+              </div>
+            ` : ''}
+
+            <p class="move-description" style="margin-top: 15px;">${pokemonData['Unite Move'].Description || ''}</p>
           </div>
         ` : ''}
       </div>
