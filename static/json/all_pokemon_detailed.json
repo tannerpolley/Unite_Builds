@@ -329,7 +329,7 @@
         "Cooldown": "8.00s",
         "Description": "Has the user generate a fierce vortex of fire around themself, dealing damage to opposing Pokémon hit every 0.5s. Each time Armarouge deals damage while Fire Spin is active, gain a shield. This shield can stack up to six times.",
         "Enhanced Level": "11",
-        "Enhanced Descprition": "Upon using Fire Spin+, gain 3 stacks of shields."
+        "Enhanced Description": "Upon using Fire Spin+, gain 3 stacks of shields."
       },
       "Upgrade 2": {
         "Name": "Armor Cannon",
@@ -337,7 +337,7 @@
         "Cooldown": "7.00s",
         "Description": "Has the user combine their shoulder armor and start charging power. When charged past a minimum duration, the user then fires a blazing ball of flame. The user releases a shock wave in front of themself when firing, dealing damage to opposing Pokémon in close range.",
         "Enhanced Level": "11",
-        "Enhanced Descprition": "Increases the range of this move and auto attacks."
+        "Enhanced Description": "Increases the range of this move and auto attacks."
       }
     },
     "Move 2": {
@@ -351,7 +351,7 @@
         "Cooldown": "8.00s",
         "Description": "Has the user cloak themself in flame and charge in the designated direction, dealing damage to opposing Pokémon the user hits and shoving them for 0.45s. When this move hits an opposing Pokémon, the user is granted a shield for 3s and this move's cooldown is reduced by 20%.",
         "Enhanced Level": "13",
-        "Enhanced Descprition": "Reduces the damage the user receives by 20% for 3s after this move hits an opposing Pokémon."
+        "Enhanced Description": "Reduces the damage the user receives by 20% for 3s after this move hits an opposing Pokémon."
       },
       "Upgrade 2": {
         "Name": "Psyshock",
@@ -359,7 +359,7 @@
         "Cooldown": "7.00s",
         "Description": "Has the user materialize odd psychic waves to attack in three areas of effect in front of themself, dealing damage to opposing Pokémon hit while ignoring 35% of their Sp. Def. The third attack throws opposing Pokémon hit for 0.7s. Multiple of the areas of effect can hit the same opposing Pokémon but the second damage instance will be reduced by 25% and the third by 50%.",
         "Enhanced Level": "13",
-        "Enhanced Descprition": "Increases this move's area of effect for the third area blast."
+        "Enhanced Description": "Increases this move's area of effect for the third area blast."
       }
     },
     "Unite Move": {
@@ -1259,7 +1259,7 @@
         "Cooldown": "8.00s",
         "Description": "Summons whirling razor leaves. While active, Decidueye's auto attack is replaced by a new auto attack that targets up to 2 additional enemies in range, as well as increasing Attack by 10% and auto attack speed. This buff lasts for 5.5s.",
         "Enhanced Level": "7",
-        "Enhanced Descprition": "Adds one tick of additional damage: 2% of the main target's remaining HP and 1% for secondary targets."
+        "Enhanced Description": "Adds one tick of additional damage: 2% of the main target's remaining HP and 1% for secondary targets."
       },
       "Upgrade 2": {
         "Name": "Spirit Shackle",
@@ -1267,7 +1267,7 @@
         "Cooldown": "8.50s",
         "Description": "Charges power before firing a large arrow in the designated direction. Damage dealt increases the longer power is charged (with 6 breakpoints and a max-charge at 1.3s), but movement speed is decreased by 25% while charging. If this move hits after power is charged to the maximum, it can stitch enemies to the ground. The affected enemy has their movement speed decreased by 80% for a short time when exiting the area, and receives damage upon leaving the area. A maximum of 3 uses can be kept in reserve for this move. There is a 2s cooldown between uses.",
         "Enhanced Level": "11",
-        "Enhanced Descprition": "Deals 15% increased damage to enemies with less than 50% remaining HP."
+        "Enhanced Description": "Deals 15% increased damage to enemies with less than 50% remaining HP."
       }
     },
     "Move 2": {
@@ -1281,7 +1281,7 @@
         "Cooldown": "8.00s",
         "Description": "Creates a tempest of sharp leaves, dealing damage to enemies it hits and decreases their movement speed by 60% for 2.5s. The slow decays at 10% per 0.5s up to four times. At point-blank range, it also shoves and stuns enemies hit for 1s.",
         "Enhanced Level": "13",
-        "Enhanced Descprition": "Movement speed decrease now lasts 3.5s but still decaying up to four times at 10% per 0.5s."
+        "Enhanced Description": "Movement speed decrease now lasts 3.5s but still decaying up to four times at 10% per 0.5s."
       },
       "Upgrade 2": {
         "Name": "Shadow Sneak",
@@ -1289,7 +1289,7 @@
         "Cooldown": "12.00s",
         "Description": "Decidueye creates a shadow that lasts for up to 5s, increasing Decidueye's movement speed by 70% for 2s, decaying by 20% every 0.5s, and reveals all opposing Pokémon in range temporarily. Pokémon that are sneaking remain invisible but can be targeted by the shadow giving away their position if they were within the initial cast range. Afterwards the shadow will automatically target an enemy player that is visible to Decidueye, inflicting damage, lowering their movement speed by 30% for 1s, and decreasing their Defense by 60% for 1.5s. Wild Pokémon that are currently aggressive can also be targeted but are otherwise ignored.",
         "Enhanced Level": "13",
-        "Enhanced Descprition": "Defense reduction of enemies is increased to 80%."
+        "Enhanced Description": "Defense reduction of enemies is increased to 80%."
       }
     },
     "Unite Move": {
@@ -1507,7 +1507,7 @@
         "Cooldown": "7.00s",
         "Description": "The user exhales a mighty gust in the designated direction, damaging opposing Pokémon in the area of effect and decreasing their movement speed by 30% for 2s. The gust leaves the ground burning for 3s, dealing damage to opposing Pokémon in the area of effect every 0.5s (up to 7 times) and decreasing their movement speed by 30% for 2s.",
         "Enhanced Level": "13",
-        "Enhanced Descprition": "Increases the damage of this move and the burning ground; strengthens the movement speed decrease to 45%."
+        "Enhanced Description": "Increases the damage of this move and the burning ground; strengthens the movement speed decrease to 45%."
       },
       "Upgrade 2": {
         "Name": "Shadow Ball",
@@ -1515,7 +1515,7 @@
         "Cooldown": "7.50s",
         "Description": "The user hurls a shadowy blob in the designated direction, damaging opposing Pokémon hit and applying a marker with 4 parts to them for 5s; then dashes in the chosen direction forward. When the user hits a marked target, one part of the marker is consumed to deal additional damage. The fourth part of the mark deals increased additional damage and removes the mark when consumed, and the user restores 15% max HP.",
         "Enhanced Level": "13",
-        "Enhanced Descprition": "Increases the damage of this move and the additional damage from marks."
+        "Enhanced Description": "Increases the damage of this move and the additional damage from marks."
       }
     },
     "Move 2": {
@@ -1529,7 +1529,7 @@
         "Cooldown": "11.00s",
         "Description": "The user prepares a circular flight path in the designated direction, then moves into a direction either side to fly on the path; the flight path takes 3.5s to complete. While flying, the user increases their basic attack speed by 200% and they continuously use auto attacks, dealing 10% reduced damage to opposing Pokémon hit. If this move is used again while the user is flying, the user stops flying, becomes briefly invincible and dashes a short distance forward. If the user knocks out a Pokémon from the opposing team, this move's cooldown is reset. If the user assists in knocking out a Pokémon from the opposing team instead, this move's cooldown is reduced by 50%.",
         "Enhanced Level": "11",
-        "Enhanced Descprition": "While the user is flying, auto attacks restore the user's HP for an additional 25% of damage dealt."
+        "Enhanced Description": "While the user is flying, auto attacks restore the user's HP for an additional 25% of damage dealt."
       },
       "Upgrade 2": {
         "Name": "Phantom Force",
@@ -1537,7 +1537,7 @@
         "Cooldown": "12.00s",
         "Description": "The user enters stealth for up to 6s or until using an attack, increasing their movement speed by 30% and increasing the boosted basic attack gauge by 1 every 1s. When the user exits stealth, the user's basic attack speed is increased by 85% for 3s.",
         "Enhanced Level": "11",
-        "Enhanced Descprition": "Reduces this move's cooldown by 0.5s per opposing Pokémon hit by the user's auto attacks."
+        "Enhanced Description": "Reduces this move's cooldown by 0.5s per opposing Pokémon hit by the user's auto attacks."
       }
     },
     "Unite Move": {
@@ -2189,7 +2189,7 @@
         "Cooldown": "5.00s",
         "Description": "Glaceon launches all of its stored ice crystals in rapid succession at the designated enemy. If Glaceon has no ice crystals when this move is used, 2 ice crystals are instantly created and are launched. Launched ice crystals can hit enemies on the opposing team that are not the designated target of this move. The crystals shatter when they hit any enemy, dealing damage to all enemies in the area. Ice crystals launched by this move deal 5% increased damage each time they hit the same enemy (capped at 35%). When this move is used, Ice Shard's cooldown is reduced by 2s and Freeze Dry's cooldown is reduced by 2.5s. A maximum of 12 ice crystals may be launched.",
         "Enhanced Level": "10",
-        "Enhanced Descprition": "Each launched ice crystal also deals additional damage to enemies hit equal to 0.5% of their remaining HP."
+        "Enhanced Description": "Each launched ice crystal also deals additional damage to enemies hit equal to 0.5% of their remaining HP."
       },
       "Upgrade 2": {
         "Name": "Icy Wind",
@@ -2197,7 +2197,7 @@
         "Cooldown": "6.50s",
         "Description": "Jump a short distance in the designated direction; Glaceon's next auto attack within 5s gains increased range and launches all stored ice crystals at an enemy, dealing damage to them. Glaceon then regains the same number of ice crystals that were launched. If an enemy is hit by 4 or more ice crystals, their movement speed is decreased by 8% per shard (stacking up to 6 times) for 1s. If Glaceon has no ice crystals when this move is used, gain 2 ice crystals.",
         "Enhanced Level": "10",
-        "Enhanced Descprition": "Each launched ice crystal also deals additional damage to enemies hit equal to 1.5% of their remaining HP."
+        "Enhanced Description": "Each launched ice crystal also deals additional damage to enemies hit equal to 1.5% of their remaining HP."
       }
     },
     "Move 2": {
@@ -2211,7 +2211,7 @@
         "Cooldown": "8.50s",
         "Description": "Glaceon gains an increase in movement speed by 40% for 1s while basic attack speed is increased by 60% for 2.5s. Basic attacks change into attacks that hurl chunks of ice for 2.5s. These chunks of ice deal damage to enemies they hit and decrease their movement speed by 30% for 1s. Each time a chunk of ice hits, Glaceon gains 2 ice crystals. If this move is used while launching crystals with Icicle Spear, or if this move is used after Icy Wind but before launching all crystals with the next auto attack, gain 2 ice crystals and increase Glaceon's movement speed by 50% for 0.5s.",
         "Enhanced Level": "12",
-        "Enhanced Descprition": "Increases basic attack speed further to 100% for 2.5s."
+        "Enhanced Description": "Increases basic attack speed further to 100% for 2.5s."
       },
       "Upgrade 2": {
         "Name": "Freeze-Dry",
@@ -2219,7 +2219,7 @@
         "Cooldown": "7.50s",
         "Description": "Shoot out a freezing burst of air in a forward direction. This burst explodes upon hitting an enemy or after traveling a set distance; dealing damage to all enemies in the area. Upon hitting an enemy, increase Glaceon's Sp. Atk by 50% for 4s. For each enemy hit by the explosion, Glaceon gains 2 ice crystals. The explosion also leaves behind an ice zone which slows enemies that enter by 30% for 3s. If they remain in the ice zone for 2.5s, they become frozen for 0.6s.",
         "Enhanced Level": "12",
-        "Enhanced Descprition": "For each enemy hit by this move's explosions, Glaceon gains 1 additional ice crystal."
+        "Enhanced Description": "For each enemy hit by this move's explosions, Glaceon gains 1 additional ice crystal."
       }
     },
     "Unite Move": {
@@ -3119,7 +3119,7 @@
         "Cooldown": "5.00s",
         "Description": "The user dashes with a fiery fist forward, damaging opposing Pokémon hit and shoving them, and burning the first opposing Pokémon hit for 4s (dealing damage 5 times).",
         "Enhanced Level": "11",
-        "Enhanced Descprition": "Reduces this move's cooldown by 0.4s per target hit every time the user's basic attack hits an opposing Pokémon. (1.6s total for an entire basic attack animation on a single target)."
+        "Enhanced Description": "Reduces this move's cooldown by 0.4s per target hit every time the user's basic attack hits an opposing Pokémon. (1.6s total for an entire basic attack animation on a single target)."
       }
     },
     "Move 2": {
@@ -3133,7 +3133,7 @@
         "Cooldown": "10.00s",
         "Description": "The user charges at the designated opposing Pokémon cloaked in fire, damaging opposing Pokémon, throwing the target, and granting the user a shield for 5s when this move hits.",
         "Enhanced Level": "13",
-        "Enhanced Descprition": "Decreases the movement speed of the target by 40% for 3s when this move hits."
+        "Enhanced Description": "Decreases the movement speed of the target by 40% for 3s when this move hits."
       }
     },
     "Unite Move": {
@@ -3165,7 +3165,7 @@
         "Cooldown": "6.00s",
         "Description": "The user attacks with a blast of fire in the designated direction, damaging opposing Pokémon in a line and burning them for 4s (dealing damage 5 times). When this move hits, the user's movement speed is increased by 40% for 3s. The user is able to move freely when using this move. If the user is mega evolved, the user's movement speed is instead increased by 15% for 3s.",
         "Enhanced Level": "11",
-        "Enhanced Descprition": "Increases the damage of this move and its burns."
+        "Enhanced Description": "Increases the damage of this move and its burns."
       }
     },
     "Move 2": {
@@ -3179,7 +3179,7 @@
         "Cooldown": "6.50s",
         "Description": "The user shoots an intense blast of fire in the designated direction which explodes on the first opposing Pokémon hit or after traveling max distance, damaging opposing Pokémon in the area of effect. The blast of all-consuming fire remains on the ground for 5s, dealing damage over time to opposing Pokémon in the area of effect every 0.5s (up to 10 times) and decreasing their movement speed by 30% for 1s when hit. The user is able to move freely when using this move. If the user is mega evolved, the area of effect of this move increases.",
         "Enhanced Level": "13",
-        "Enhanced Descprition": "Increases the damage of this move and the damage over time."
+        "Enhanced Description": "Increases the damage of this move and the damage over time."
       }
     },
     "Unite Move": {
@@ -3211,7 +3211,7 @@
         "Cooldown": "5.00s",
         "Description": "Exhales a mighty gust in the designated direction, damaging opposing Pokémon in the area of effect and paralyzing them for 3s when it hits, decreasing their movement speed and basic attack speed by 30%. If this move hits, gains a buff for 5s; increasing the range and damage of auto attacks; and increasing basic attack speed by a minimum of 40%, strengthening by 15% for each additional opposing Pokémon hit (up to 2 times; maximum 70%).",
         "Enhanced Level": "10",
-        "Enhanced Descprition": "Increases the damage dealt by this move and basic attacks."
+        "Enhanced Description": "Increases the damage dealt by this move and basic attacks."
       }
     },
     "Move 2": {
@@ -3225,7 +3225,7 @@
         "Cooldown": "6.00s",
         "Description": "Charges forward up to 3 times, damaging opposing Pokémon hit with each charge; waiting for at least 0.07s before dashing forward with the next charge. The first charge is a regular dash forward; the next movement within 2s after the last charge dashes forward with the same effect. Dragon Breath can be used within the 2s duration in between charges without interrupting this move's course. Using Dragon Current ends this move early. This move's cooldown begins when the move ends. If two charges hit opposing Pokémon, grants a shield for 2s. If all three charges hit opposing Pokémon, the third charge throws opposing Pokémon hit for 0.45s.",
         "Enhanced Level": "12",
-        "Enhanced Descprition": "Reduces this move's cooldown by 1s."
+        "Enhanced Description": "Reduces this move's cooldown by 1s."
       }
     },
     "Unite Move": {
@@ -3257,7 +3257,7 @@
         "Cooldown": "7.00s",
         "Description": "The user receives 30% reduced damage and decreases their movement speed by 15% as they charge up power for up to 4s, reaching maximum charge after 1s; then dashes forward with a devastating punch when released, damaging the first opposing Pokémon hit, dealing additional missing HP damage to the target and shoving them for 0.5s. If this move hits, the user readies a boosted attack. This move's cooldown is reduced by 1s each time one of the user's moves lands a hit. If this move is canceled or not released after 4s, it goes on a 1.4s cooldown.",
         "Enhanced Level": "11",
-        "Enhanced Descprition": "Becomes unstoppable while charging this move."
+        "Enhanced Description": "Becomes unstoppable while charging this move."
       }
     },
     "Move 2": {
@@ -3271,7 +3271,7 @@
         "Cooldown": "6.50s",
         "Description": "The user becomes unstoppable and rapidly punches in the designated direction, damaging opposing Pokémon in the area in front of them (up to 11 times), and restoring the user's HP each time this move hits. The next auto attack within 5s after using this move gains increased range and causes the user to lunge at an opposing Pokémon with a kick.",
         "Enhanced Level": "13",
-        "Enhanced Descprition": "Increases the damage of this move."
+        "Enhanced Description": "Increases the damage of this move."
       }
     },
     "Unite Move": {
@@ -3807,7 +3807,7 @@
         "Cooldown": "5.50s",
         "Description": "Unleash an electrified punch in the designated direction, dealing damage, slowing opposing Pokémon hit by 40% and reducing their attack speed by 10% for 2s.",
         "Enhanced Level": "11",
-        "Enhanced Descprition": "Increases the damage dealt by this move."
+        "Enhanced Description": "Increases the damage dealt by this move."
       },
       "Upgrade 2": {
         "Name": "Supercell Slam",
@@ -3815,7 +3815,7 @@
         "Cooldown": "7.00s",
         "Description": "The user charges up receiving 30% less damage and becomes unstoppable, then dives toward the designated area after releasing, gaining a shield for 3.5s, dealing damage and slowing opposing Pokémon hit by 30% for 2s. If this move misses, the user takes 3% of their remaining HP as damage instead. When this move hits, the move can be used again; when used a second time, the user unleashes a punch in front of themself, dealing damage and shoving opposing Pokémon hit.",
         "Enhanced Level": "11",
-        "Enhanced Descprition": "Strengthens the slowing effect to 40% for 2s."
+        "Enhanced Description": "Strengthens the slowing effect to 40% for 2s."
       }
     },
     "Move 2": {
@@ -3829,7 +3829,7 @@
         "Cooldown": "7.00s",
         "Description": "The user cloaks themself in electricity and dashes at an opposing Pokémon, dealing damage and moving behind them. For a short time after using this move, this move can be used once more.",
         "Enhanced Level": "13",
-        "Enhanced Descprition": "Reduce this move's cooldown by 1s."
+        "Enhanced Description": "Reduce this move's cooldown by 1s."
       },
       "Upgrade 2": {
         "Name": "Mach Punch",
@@ -3837,7 +3837,7 @@
         "Cooldown": "7.00s",
         "Description": "Dash at blinding speed towards the designated direction, dealing damage to opposing Pokémon, shoving them, and leaving them unable to act for 0.6s. This move's cooldown is reduced every time a basic attack hits.",
         "Enhanced Level": "13",
-        "Enhanced Descprition": "Increases the length of time opposing Pokémon are left unable to act to 1s."
+        "Enhanced Description": "Increases the length of time opposing Pokémon are left unable to act to 1s."
       }
     },
     "Unite Move": {
@@ -4055,7 +4055,7 @@
         "Cooldown": "4.50s",
         "Description": "Dash in the designated direction and strike enemies, reducing this move's cooldown by 40% of its current cooldown if the attack connects and recovering a portion of HP with each hit. If Bullet Punch is used again within 8s, the number of punches increases. The number of punches increases from 3 to a maximum of 5.",
         "Enhanced Level": "11",
-        "Enhanced Descprition": "Also grants a shield for 3s if this move hits an enemy."
+        "Enhanced Description": "Also grants a shield for 3s if this move hits an enemy."
       }
     },
     "Move 2": {
@@ -4069,7 +4069,7 @@
         "Cooldown": "7.00s",
         "Description": "Jumps in the designated direction, dealing damage to enemies during the jump and applying a mark to that enemy until they leave combat. After hitting an enemy, jump again. An enhanced auto attack is prepared on landing that has increased range and charges at the enemy being attacked. This enhanced attack is available for 5s.",
         "Enhanced Level": "13",
-        "Enhanced Descprition": "Reduces cooldown by 1s."
+        "Enhanced Description": "Reduces cooldown by 1s."
       },
       "Upgrade 2": {
         "Name": "Swords Dance",
@@ -4077,7 +4077,7 @@
         "Cooldown": "8.50s",
         "Description": "Dashes a short distance, increasing Attack by 20% for 5s. While Swords Dance's attack buff is active, after basic attacks or abilities make contact 8 times, the user launches an area-of-effect attack that pierces through enemies in a line.",
         "Enhanced Level": "13",
-        "Enhanced Descprition": "Reduces the damage the user receives by 50% while dashing (0.3s)."
+        "Enhanced Description": "Reduces the damage the user receives by 50% while dashing (0.3s)."
       }
     },
     "Unite Move": {
@@ -4109,7 +4109,7 @@
         "Cooldown": "6.00s",
         "Description": "Slashes in front with scythes, dealing damage in an X-shaped area-of-effect. If the second slash deals damage to an enemy in the center, restore the user's HP. If this move hits an enemy, it can be activated again within a set amount of time. If this move is used again, the user dashes in the designated direction, dealing damage to enemies hit. The dash deals more damage the lower their HP is.",
         "Enhanced Level": "11",
-        "Enhanced Descprition": "Increases the damage dealt by this move."
+        "Enhanced Description": "Increases the damage dealt by this move."
       }
     },
     "Move 2": {
@@ -4123,7 +4123,7 @@
         "Cooldown": "7.00s",
         "Description": "Jumps in the designated direction, dealing damage to enemies during the jump and applying a mark to that enemy until they leave combat. After hitting an enemy, jump again. An enhanced auto attack is prepared on landing that has increased range and charges at the enemy being attacked. This enhanced attack is available for 5s.",
         "Enhanced Level": "13",
-        "Enhanced Descprition": "Reduces cooldown by 1s."
+        "Enhanced Description": "Reduces cooldown by 1s."
       },
       "Upgrade 2": {
         "Name": "Swords Dance",
@@ -4131,7 +4131,7 @@
         "Cooldown": "8.50s",
         "Description": "Dashes a short distance, increasing Attack by 20% for 5s. While Swords Dance's attack buff is active, after basic attacks or abilities make contact 8 times, the user launches an area-of-effect attack that pierces through enemies in a line.",
         "Enhanced Level": "13",
-        "Enhanced Descprition": "Reduces the damage the user receives by 50% while dashing (0.3s)."
+        "Enhanced Description": "Reduces the damage the user receives by 50% while dashing (0.3s)."
       }
     },
     "Unite Move": {

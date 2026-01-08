@@ -371,7 +371,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!pokemonData[moveSlot]) continue;
 
       // Search through Upgrade 1 and Upgrade 2
-      for (const upgrade of ['Upgrade 1', 'Upgrade 2', 'Upgrade 3']) {
+      for (const upgrade of ['Upgrade 1', 'Upgrade 2', 'Upgrade 3', 'Upgrade']) {
         const moveData = pokemonData[moveSlot][upgrade];
 
         if (moveData && moveData.Name === moveName) {
@@ -669,7 +669,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ${moveData['Enhanced Level'] ? `
           <div class="move-detail-section enhanced-section">
             <h4 class="move-detail-heading">Enhanced (Level ${moveData['Enhanced Level']})</h4>
-            <p class="move-description">${moveData['Enhanced Descprition'] || ''}</p>
+            <p class="move-description">${moveData['Enhanced Description'] || ''}</p>
           </div>
         ` : ''}
       </div>
