@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Load move details data
+  loadMoveDetails();
 
-  
   const tableContainer = document.getElementById("moveset-table");
   const popup = document.getElementById("popup");
   const popupContent = document.getElementById("popupContent");
@@ -9,6 +10,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const nameSearch = document.getElementById("nameSearch");
   const resetFilters = document.getElementById("resetFilters");
 
+  // Global variable for move details data
+  let moveDetailsData = null;
+
+  // Load move details JSON at page load
+  async function loadMoveDetails() {
+    try {
+      // Add timestamp to prevent caching
+      const response = await fetch(`static/json/all_pokemon_detailed.json?v=${Date.now()}`);
+      if (!response.ok) throw new Error(`Failed to load: ${response.status}`);
+      moveDetailsData = await response.json();
+      console.log('Move details loaded successfully');
+    } catch (error) {
+      console.error('Error loading move details:', error);
+      moveDetailsData = {}; // Fallback to empty object
+    }
+  }
 
   function getOrdinalSuffix(day) {
     const j = day % 10,
@@ -324,6 +341,49 @@ document.addEventListener("DOMContentLoaded", () => {
     return `<img src="static/img/${moves}" alt="${moves}" class="move-img">`;
   }
 
+  function parseMovePath(imgElement) {
+    const src = imgElement.getAttribute('src');
+    const filename = src.split('/').pop();
+    const nameWithoutExt = filename.replace('.png', '');
+    const parts = nameWithoutExt.split(' - ');
+
+    if (parts.length !== 2) {
+      console.error('Invalid move filename format:', filename);
+      return null;
+    }
+
+    return {
+      pokemonName: parts[0].trim(),
+      moveName: parts[1].trim()
+    };
+  }
+
+  function findMoveData(pokemonName, moveName) {
+    if (!moveDetailsData || !moveDetailsData[pokemonName]) {
+      console.error(`Pokemon "${pokemonName}" not found`);
+      return null;
+    }
+
+    const pokemonData = moveDetailsData[pokemonName];
+
+    // Search through Move 1 and Move 2
+    for (const moveSlot of ['Move 1', 'Move 2']) {
+      if (!pokemonData[moveSlot]) continue;
+
+      // Search through Upgrade 1 and Upgrade 2
+      for (const upgrade of ['Upgrade 1', 'Upgrade 2', 'Upgrade 3']) {
+        const moveData = pokemonData[moveSlot][upgrade];
+
+        if (moveData && moveData.Name === moveName) {
+          return moveData;
+        }
+      }
+    }
+
+    console.error(`Move "${moveName}" not found for ${pokemonName}`);
+    return null;
+  }
+
   function syncFilterWidthToTable() {
     const table = document.getElementById("moveset-table");
     const filters = document.getElementById("filters");
@@ -469,6 +529,17 @@ document.addEventListener("DOMContentLoaded", () => {
         renderRows(filterItems());
       });
     });
+
+    // Move image click handlers
+    document.querySelectorAll(".move-img").forEach(img => {
+      img.addEventListener("click", e => {
+        e.stopPropagation(); // Prevent row click events
+        showMovePopup(img);
+      });
+
+      // Visual feedback
+      img.style.cursor = "pointer";
+    });
   }
 
 
@@ -550,6 +621,61 @@ document.addEventListener("DOMContentLoaded", () => {
         </table>
       </div>
     `;
+    popup.classList.remove("hidden");
+  }
+
+  function showMovePopup(imgElement) {
+    // Parse the image path
+    const parsed = parseMovePath(imgElement);
+    if (!parsed) {
+      alert('Unable to load move details: Invalid move image format');
+      return;
+    }
+
+    const { pokemonName, moveName } = parsed;
+
+    // Find move data
+    const moveData = findMoveData(pokemonName, moveName);
+    if (!moveData) {
+      alert(`Unable to load details for ${moveName}`);
+      return;
+    }
+
+    // Build popup HTML
+    const moveImgSrc = imgElement.getAttribute('src');
+
+    popupContent.innerHTML = `
+      <div class="move-popup-header">
+        <img src="${moveImgSrc}" alt="${moveName}" class="move-popup-img">
+        <h3 class="popup-title">${pokemonName} – ${moveName}</h3>
+      </div>
+
+      <div class="move-popup-body">
+        <div class="move-detail-row">
+          <span class="move-detail-label">Level:</span>
+          <span class="move-detail-value">${moveData.Level}</span>
+        </div>
+
+        <div class="move-detail-row">
+          <span class="move-detail-label">Cooldown:</span>
+          <span class="move-detail-value">${moveData.Cooldown}</span>
+        </div>
+
+        <div class="move-detail-section">
+          <h4 class="move-detail-heading">Description</h4>
+          <p class="move-description">${moveData.Description}</p>
+        </div>
+
+        ${moveData['Enhanced Level'] ? `
+          <div class="move-detail-section enhanced-section">
+            <h4 class="move-detail-heading">Enhanced (Level ${moveData['Enhanced Level']})</h4>
+            <p class="move-description">${moveData['Enhanced Descprition'] || ''}</p>
+          </div>
+        ` : ''}
+      </div>
+    `;
+
+    // Show popup
     popup.classList.remove("hidden");
   }
 

@@ -121,9 +121,9 @@ for i, row in df.iterrows():
     win_rate_dict[i] = row['Win Rate']
     pick_rate_dict[i] = row['Pick Rate']
     ban_rate_dict[i] = row['Ban Rate']
-
-with open("../data/roles.json") as f_in:
-    role_dict = json.load(f_in)
+    
+with open("../data/all_pokemon_detailed.json") as f_in:
+    pokemon_dict = json.load(f_in)
 
 with open("../data/battle_items.json") as f_in:
     battle_items_dict = json.load(f_in)
@@ -136,8 +136,8 @@ path = r'C:\Users\Tanner\Documents\git\Unite_Builds\data\html\Pokemon_Sites'
 
 files = os.listdir(path)
 for file in files:
-    if file[35:-5] in list(role_dict.keys()) is False:
-        print(len(files), len(list(role_dict.keys())))
+    if file[35:-5] in list(pokemon_dict.keys()) is False:
+        print(len(files), len(list(pokemon_dict.keys())))
 
 #
 # #%%
@@ -156,7 +156,7 @@ for file in files:
         move_2_pic_file = 'Moves/' + Pokemon_name + ' - ' + move_2_name + '.png'
 
         moveset_i = {'Name': Pokemon_name, 'Pokemon': 'Pokemon/' + Pokemon_name + '.png',
-                   'Role': role_dict[Pokemon_name],
+                   'Role': pokemon_dict[Pokemon_name]['Role'],
                    'Pick Rate': pick_rate_dict[Pokemon_name],
                    'Win Rate': win_rate_dict[Pokemon_name], 'Move Set': move_1_name + '/' + move_2_name,
                    'Move 1': move_1_pic_file, 'Move 2': move_2_pic_file, 'Battle Items': {}}
@@ -172,7 +172,7 @@ for file in files:
         move_2_pic_file = 'Moves/' + Pokemon_name + ' - ' + move_2_name + '.png'
 
         moveset_i = {'Name': Pokemon_name, 'Pokemon': 'Pokemon/' + Pokemon_name + '.png',
-                   'Role': role_dict[Pokemon_name],
+                   'Role': pokemon_dict[Pokemon_name]['Role'],
                    'Pick Rate': pick_rate_dict[Pokemon_name],
                    'Win Rate': win_rate_dict[Pokemon_name], 'Move Set': move_1_name + '/' + move_2_name,
                    'Move 1': move_1_pic_file, 'Move 2': move_2_pic_file, 'Battle Items': {}}
@@ -188,7 +188,7 @@ for file in files:
         move_2_pic_file = 'Moves/' + Pokemon_name + ' - ' + move_2_name + '.png'
 
         moveset_i = {'Name': Pokemon_name, 'Pokemon': 'Pokemon/' + Pokemon_name + '.png',
-                   'Role': role_dict[Pokemon_name],
+                   'Role': pokemon_dict[Pokemon_name]['Role'],
                    'Pick Rate': pick_rate_dict[Pokemon_name],
                    'Win Rate': win_rate_dict[Pokemon_name], 'Move Set': move_1_name + '/' + move_2_name,
                    'Move 1': move_1_pic_file, 'Move 2': move_2_pic_file, 'Battle Items': {}}
@@ -204,7 +204,7 @@ for file in files:
         move_2_pic_file = 'Moves/' + Pokemon_name + ' - ' + move_2_name + '.png'
 
         moveset_i = {'Name': Pokemon_name, 'Pokemon': 'Pokemon/' + Pokemon_name + '.png',
-                   'Role': role_dict[Pokemon_name],
+                   'Role': pokemon_dict[Pokemon_name]['Role'],
                    'Pick Rate': pick_rate_dict[Pokemon_name],
                    'Win Rate': win_rate_dict[Pokemon_name], 'Move Set': move_1_name + '/' + move_2_name,
                    'Move 1': move_1_pic_file, 'Move 2': move_2_pic_file, 'Battle Items': {}}
@@ -225,7 +225,7 @@ for file in files:
             moveset_i = {
                 'Name': Pokemon_name,
                 'Pokemon': 'Pokemon/' + Pokemon_name + '.png',
-                'Role': role_dict[Pokemon_name],
+                'Role': pokemon_dict[Pokemon_name]['Role'],
             }
 
             # Gets all the columns of the current row for the current moveset

@@ -509,6 +509,73 @@ body {
   display: none;
 }
 
+/* Move popup specific styles */
+.move-popup-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.move-popup-img {
+  max-height: 120px;
+  width: auto;
+}
+
+.move-popup-body {
+  text-align: left;
+  line-height: 1.6;
+}
+
+.move-detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.move-detail-label {
+  font-weight: bold;
+  color: #57c1ed;
+}
+
+.move-detail-value {
+  font-weight: normal;
+}
+
+.move-detail-section {
+  margin-top: 20px;
+}
+
+.move-detail-heading {
+  color: #57c1ed;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.move-description {
+  line-height: 1.8;
+  margin: 0;
+}
+
+.enhanced-section {
+  background-color: rgba(87, 193, 237, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 3px solid #57c1ed;
+}
+
+/* Hover effect for move images */
+.move-img {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.move-img:hover {
+  transform: scale(1.05);
+}
+
 .tooltip {
   position: absolute;
   pointer-events: none;

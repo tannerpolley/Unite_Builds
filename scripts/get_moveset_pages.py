@@ -25,8 +25,8 @@ def wait_for_downloads(path, pokemon, timeout=90, poll=0.1):
 
 path = r'C:\Users\Tanner\Documents\git\Unite_Builds\data\html\Pokemon_Sites'
 
-with open("../data/roles.json") as f_in:
-    role_dict = json.load(f_in)
+with open("../data/all_pokemon_detailed.json") as f_in:
+    pokemon_dict = json.load(f_in)
 
 new_week = True
 get_pages = True
@@ -40,9 +40,7 @@ if new_week:
 else:
     files = os.listdir(path)
 
-pokemons = list(role_dict.keys())
-names = [name.lower().replace(" ", "") for name in pokemons]
-names = [name.lower().replace(".", "") for name in names]
+pokemons = list(pokemon_dict.keys())
 
 short_rest = .5
 
@@ -67,17 +65,17 @@ if get_pages:
     pyautogui.press('enter')
     wait_for_downloads(fname, "Main Meta Page")
     
-    for name, pokemon in zip(names, pokemons):
-        if name == 'scyther':
+    for name in pokemon_dict.keys():
+        if pokemon_dict[name]['uniteapi-name'] == 'scyther':
             continue
-        if name[:4] == 'mega':
+        if pokemon_dict[name]['uniteapi-name'][:4] == 'mega':
 
-            fname = os.path.join(path, f"Unite API _ Pokémon Unite Meta for {pokemon}.txt")
+            fname = os.path.join(path, f"Unite API _ Pokémon Unite Meta for {pokemon_dict[name]['uniteapi-name']}.txt")
             np.savetxt(fname, np.array([]))
             time.sleep(short_rest / 2)
             continue
         else:
-            print(pokemon)
+            print(pokemon_dict[name]['uniteapi-name'])
 
         url = r'https://uniteapi.dev/meta/pokemon-unite-meta-for-' + name
         pyperclip.copy(url)
@@ -92,12 +90,12 @@ if get_pages:
         time.sleep(short_rest)
         pyautogui.hotkey('alt', 'n')
         time.sleep(short_rest)
-        fname = os.path.join(path, f"Unite API _ Pokémon Unite Meta for {pokemon}.html")
+        fname = os.path.join(path, f"Unite API _ Pokémon Unite Meta for {pokemon_dict[name]['uniteapi-name']}.html")
         pyperclip.copy(fname)
         pyautogui.hotkey('ctrl', 'v')
         time.sleep(short_rest)
         pyautogui.press('enter')
-        wait_for_downloads(fname, pokemon)
+        wait_for_downloads(fname, pokemon_dict[name]['uniteapi-name'])
         time.sleep(short_rest/2)
 
 
@@ -106,7 +104,7 @@ files = os.listdir(path)
 for file in files:
     pokemon_list.append(file[35:-5])
 
-pokemon_list_key = role_dict.keys()
+pokemon_list_key = pokemon_dict.keys()
 for pokemon in pokemon_list_key:
     if pokemon not in pokemon_list and pokemon != 'Scyther':
         print(pokemon)
