@@ -721,6 +721,12 @@ document.addEventListener("DOMContentLoaded", () => {
             <p class="move-description">${pokemonData['Passive Ability'].Description || ''}</p>
           </div>
         ` : ''}
+        ${pokemonData['Passive Ability']['Name 2'] && pokemonData['Passive Ability']['Description 2'] ? `
+          <div class="move-detail-section">
+            <h4 class="move-detail-heading">Passive Ability: ${pokemonData['Passive Ability']['Name 2'] || ''}</h4>
+            <p class="move-description">${pokemonData['Passive Ability']['Description 2'] || ''}</p>
+          </div>
+        ` : ''}
 
         ${pokemonData['Attack'] ? `
           <div class="move-detail-section">
@@ -732,10 +738,11 @@ document.addEventListener("DOMContentLoaded", () => {
         ${pokemonData['Unite Move'] ? `
           <div class="move-detail-section enhanced-section">
             <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-              ${pokemonData['Unite Move'].Image ? `
-                <img src="static/img/Unite_Moves/${pokemonData['Unite Move'].Image}"
+              ${pokemonData['Unite Move'].Name ? `
+                <img src="static/img/Unite_Moves/${pokemonName} - ${pokemonData['Unite Move'].Name}.png"
                      alt="${pokemonData['Unite Move'].Name}"
-                     style="max-height: 100px; width: auto;">
+                     style="max-height: 100px; width: auto;"
+                     onerror="this.style.display='none'">
               ` : ''}
               <h4 class="move-detail-heading" style="margin: 0;">Unite Move: ${pokemonData['Unite Move'].Name || ''}</h4>
             </div>

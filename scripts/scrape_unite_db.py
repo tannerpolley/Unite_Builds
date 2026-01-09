@@ -34,12 +34,13 @@ class UniteDBWorkingScraper:
         self.driver = None
         self.headless = headless
         self.load_pokemon_database()
-        self.create_image_directories()
+        # self.create_image_directories()
 
     def load_pokemon_database(self):
         """Load existing Pokemon database from all_pokemon_detailed.json"""
         try:
-            with open('data/all_pokemon_detailed.json', 'r', encoding='utf-8') as f:
+            import os
+            with open('../static/json/all_pokemon_detailed.json', 'r', encoding='utf-8') as f:
                 self.pokemon_data = json.load(f)
             logger.info(f"Loaded {len(self.pokemon_data)} Pokemon from database")
         except FileNotFoundError:
@@ -51,7 +52,7 @@ class UniteDBWorkingScraper:
 
     def create_image_directories(self):
         """Create necessary image directories if they don't exist"""
-        unite_moves_dir = 'static/img/Unite_Moves'
+        unite_moves_dir = './/static/img/Unite_Moves'
         if not os.path.exists(unite_moves_dir):
             os.makedirs(unite_moves_dir)
             logger.info(f"Created directory: {unite_moves_dir}")
@@ -269,6 +270,28 @@ class UniteDBWorkingScraper:
                     if desc_elem:
                         passive["Description"] = self.clean_text(desc_elem.get_text())
 
+                    info_two_div = passive_div.find('div', class_='info two')
+                    if info_two_div:
+                        # print('hi')
+                        name_elem = info_two_div.find('h2')
+                        if name_elem:
+                            passive["Name 2"] = self.clean_text(name_elem.get_text())
+
+                        # Get the description (direct child p.description)
+                        desc_elems = passive_div.find_all('p', class_='description', recursive=False)[1:]
+                        if desc_elems:
+                            passive["Description 2"] = ''
+                            for desc_elem in desc_elems:
+                                passive["Description 2"] += self.clean_text(desc_elem.get_text()) + '\n\n'
+                    else:
+                        desc_elems = passive_div.find_all('p', class_='description', recursive=False)[1:]
+
+                        for desc_elem in desc_elems:
+                            if desc_elem:
+                                passive["Description"] += '  ' + self.clean_text(desc_elem.get_text())
+
+
+
         except Exception as e:
             logger.warning(f"Error extracting passive ability: {e}")
 
@@ -284,9 +307,12 @@ class UniteDBWorkingScraper:
                 auto_div = basic_skill.find('div', class_='auto attack')
                 if auto_div:
                     # Get the description (direct child p.description)
-                    desc_elem = auto_div.find('p', class_='description', recursive=False)
-                    if desc_elem:
-                        return self.clean_text(desc_elem.get_text())
+                    desc_elems = auto_div.find_all('p', class_='description', recursive=False)
+                    desc_text = ''
+                    for desc_elem in desc_elems:
+                        if desc_elem:
+                            desc_text += self.clean_text(desc_elem.get_text()) + '\n\n'
+                    return desc_text
 
         except Exception as e:
             logger.warning(f"Error extracting auto attack: {e}")
@@ -520,7 +546,7 @@ class UniteDBWorkingScraper:
                     "Cooldown": "",
                     "Description": "",
                     "Enhanced Level": "",
-                    "Enhanced Descprition": ""
+                    "Enhanced Description": ""
                 }
             }
         else:
@@ -535,7 +561,7 @@ class UniteDBWorkingScraper:
                     "Cooldown": "",
                     "Description": "",
                     "Enhanced Level": "",
-                    "Enhanced Descprition": ""
+                    "Enhanced Description": ""
                 },
                 "Upgrade 2": {
                     "Name": "",
@@ -543,7 +569,7 @@ class UniteDBWorkingScraper:
                     "Cooldown": "",
                     "Description": "",
                     "Enhanced Level": "",
-                    "Enhanced Descprition": ""
+                    "Enhanced Description": ""
                 }
             }
 
@@ -623,9 +649,9 @@ class UniteDBWorkingScraper:
                             if upgrade_desc_div:
                                 # Find all paragraphs with labels
                                 label_paragraphs = upgrade_desc_div.find_all('p')
-
                                 for p in label_paragraphs:
                                     label = p.find('label', class_='label')
+
                                     if label:
                                         label_text = label.get_text()
                                         level_match = re.search(r'Level\s+(\d+)', label_text, re.I)
@@ -638,15 +664,19 @@ class UniteDBWorkingScraper:
                                             if span:
                                                 desc_text = self.clean_text(span.get_text())
 
-                                                # Determine if this is base level or enhanced level
-                                                if not move_data[upgrade_key]["Level"]:
-                                                    # First level found is the base upgrade level
-                                                    move_data[upgrade_key]["Level"] = level_num
-                                                    move_data[upgrade_key]["Description"] = desc_text
-                                                else:
-                                                    # Second level found is the enhanced level
-                                                    move_data[upgrade_key]["Enhanced Level"] = level_num
-                                                    move_data[upgrade_key]["Enhanced Descprition"] = desc_text
+                                    elif 'description' in p.get('class', []):
+                                        desc_text = '  ' + p.get_text()
+                                        move_data[upgrade_key]["Description"] += '\n\n' + desc_text
+
+                                    # Determine if this is base level or enhanced level
+                                    if not move_data[upgrade_key]["Level"]:
+                                    # First level found is the base upgrade level
+                                        move_data[upgrade_key]["Level"] = level_num
+                                        move_data[upgrade_key]["Description"] += desc_text
+                                    else:
+                                    # Second level found is the enhanced level
+                                        move_data[upgrade_key]["Enhanced Level"] = level_num
+                                        move_data[upgrade_key]["Enhanced Description"] = desc_text
 
                                 # Special case: Check for Decidueye-style enhanced descriptions
                                 # where p has style="margin-bottom: 15px;" and label is inside
@@ -664,7 +694,7 @@ class UniteDBWorkingScraper:
                                         # Find the description in the next p.description sibling
                                         next_desc_p = enhanced_p.find_next_sibling('p', class_='description')
                                         if next_desc_p:
-                                            move_data[upgrade_key]["Enhanced Descprition"] = self.clean_text(next_desc_p.get_text())
+                                            move_data[upgrade_key]["Enhanced Description"] = self.clean_text(next_desc_p.get_text())
 
         except Exception as e:
             logger.warning(f"Error extracting move {move_number}: {e}")
@@ -708,11 +738,7 @@ class UniteDBWorkingScraper:
                         # Create filename: Pokemon_Name - Unite_Move_Name.png
                         if pokemon_name and unite_data["Name"]:
                             filename = f"{pokemon_name} - {unite_data['Name']}.png"
-                            save_path = os.path.join('static', 'img', 'Unite_Moves', filename)
-
-                            # Download the image
-                            if self.download_image(image_url, save_path):
-                                unite_data["Image"] = filename
+                            unite_data["Image"] = filename
 
                     if info_div:
                         # Get cooldown from p.cooldown
@@ -828,12 +854,14 @@ class UniteDBWorkingScraper:
             self.close_driver()
 
         logger.info(f"Scraping complete! Updated {len(self.pokemon_data)} Pokemon")
+        # print(self.pokemon_data['Aegislash']['Passive Ability'])
         return self.pokemon_data
 
-    def save_to_json(self, filename: str = "data/all_pokemon_detailed.json"):
+    def save_to_json(self, filename: str = "../static/json/all_pokemon_detailed.json"):
         """Save scraped data to JSON file"""
         try:
             with open(filename, 'w', encoding='utf-8') as f:
+                print(self.pokemon_data['Aegislash']['Passive Ability'])
                 json.dump(self.pokemon_data, f, indent=2, ensure_ascii=False)
             logger.info(f"Data saved to {filename}")
         except Exception as e:
@@ -845,27 +873,29 @@ def main():
     scraper = UniteDBWorkingScraper(headless=True)
 
     # Test with a few Pokemon first
-    # test_pokemon = ["absol", "pikachu"]
+    # test_pokemon = ["aegislash", "ceruledge"]
     # scraper.scrape_all_pokemon(pokemon_list=test_pokemon, delay=2.0)
+    #
+    # print(scraper.pokemon_data['Aegislash']['Passive Ability'])
 
     # Once you verify it works, scrape all Pokemon:
     scraper.scrape_all_pokemon(delay=1.0)
 
     # Save results
-    scraper.save_to_json("data/all_pokemon_detailed.json")
+    scraper.save_to_json("../static/json/all_pokemon_detailed.json")
 
     # Print summary
     print(f"\n{'='*60}")
     print(f"Scraping Summary:")
     print(f"Total Pokemon scraped: {len(scraper.pokemon_data)}")
-    print(f"Output file: static/json/all_pokemon_detailed.json")
+    print(f"Output file: ../static/json/all_pokemon_detailed.json")
     print(f"{'='*60}\n")
 
     # Print sample data
-    if scraper.pokemon_data:
-        first_pokemon = list(scraper.pokemon_data.keys())[0]
-        print(f"\nSample data for {first_pokemon}:")
-        print(json.dumps(scraper.pokemon_data[first_pokemon], indent=2))
+    # if scraper.pokemon_data:
+    #     first_pokemon = list(scraper.pokemon_data.keys())[0]
+    #     print(f"\nSample data for {first_pokemon}:")
+    #     print(json.dumps(scraper.pokemon_data[first_pokemon], indent=2))
 
 
 if __name__ == "__main__":
