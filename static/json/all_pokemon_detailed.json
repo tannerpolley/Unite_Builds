@@ -1965,7 +1965,7 @@
   "Galarian Rapidash": {
     "unite-db-name": "rapidash",
     "uniteapi-name": "galarianrapidash",
-    "Role": "Attacker",
+    "Role": "Speedster",
     "Passive Ability": {
       "Name": "Pastel Veil",
       "Description": "The Pokémon's psychic counter charges based on the distance they run (up to 10 times). When the counter is full, the Pokémon is granted a shield, becoming hindrance resistant while the shield remains.  When the Pokémon reaches an additional movement speed threshold, the damage dealt by moves is increased by 5/20/35/50/60%. The increased damage based on movement speed is calculated before dealing damage with moves.  Please visit the FAQ to learn more!"
