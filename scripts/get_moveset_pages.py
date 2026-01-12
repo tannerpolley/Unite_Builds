@@ -25,7 +25,7 @@ def wait_for_downloads(path, pokemon, timeout=90, poll=0.1):
 
 path = r'C:\Users\Tanner\Documents\git\Unite_Builds\data\html\Pokemon_Sites'
 
-with open("../data/all_pokemon_detailed.json") as f_in:
+with open("../static/json/all_pokemon_detailed.json") as f_in:
     pokemon_dict = json.load(f_in)
 
 new_week = True
@@ -70,14 +70,14 @@ if get_pages:
             continue
         if pokemon_dict[name]['uniteapi-name'][:4] == 'mega':
 
-            fname = os.path.join(path, f"Unite API _ Pokémon Unite Meta for {pokemon_dict[name]['uniteapi-name']}.txt")
+            fname = os.path.join(path, f"Unite API _ Pokémon Unite Meta for {name}.txt")
             np.savetxt(fname, np.array([]))
             time.sleep(short_rest / 2)
             continue
         else:
-            print(pokemon_dict[name]['uniteapi-name'])
+            print(name)
 
-        url = r'https://uniteapi.dev/meta/pokemon-unite-meta-for-' + name
+        url = r'https://uniteapi.dev/meta/pokemon-unite-meta-for-' + pokemon_dict[name]['uniteapi-name']
         pyperclip.copy(url)
         time.sleep(short_rest/2)
         pyautogui.hotkey('ctrl', 'l')
@@ -90,12 +90,12 @@ if get_pages:
         time.sleep(short_rest)
         pyautogui.hotkey('alt', 'n')
         time.sleep(short_rest)
-        fname = os.path.join(path, f"Unite API _ Pokémon Unite Meta for {pokemon_dict[name]['uniteapi-name']}.html")
+        fname = os.path.join(path, f"Unite API _ Pokémon Unite Meta for {name}.html")
         pyperclip.copy(fname)
         pyautogui.hotkey('ctrl', 'v')
         time.sleep(short_rest)
         pyautogui.press('enter')
-        wait_for_downloads(fname, pokemon_dict[name]['uniteapi-name'])
+        wait_for_downloads(fname, name)
         time.sleep(short_rest/2)
 
 

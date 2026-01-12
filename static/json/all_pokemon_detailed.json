@@ -2,7 +2,7 @@
   "Absol": {
     "unite-db-name": "absol",
     "uniteapi-name": "absol",
-    "role": "Speedster",
+    "Role": "Speedster",
     "Passive Ability": {
       "Name": "Super Luck",
       "Description": "This Pokémon's critical-hit rate is increased by an additional 15%."
@@ -65,7 +65,7 @@
   "Aegislash": {
     "unite-db-name": "aegislash",
     "uniteapi-name": "aegislash",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "No Guard",
       "Description": "Honedge and Doublade do not gain the stat benefits of Stance Change; their auto attacks act like Aegislash's Sword Forme auto attacks.",
@@ -130,7 +130,7 @@
   "Alcremie": {
     "unite-db-name": "alcremie",
     "uniteapi-name": "alcremie",
-    "role": "Supporter",
+    "Role": "Supporter",
     "Passive Ability": {
       "Name": "Aroma Veil",
       "Description": "When an ally is under the effect of one of Alcremie's shields or buffs, remove any hindrances that are applied or are currently affecting that ally. This ability will go on cooldown for 10s after removing a hindrance. This ability can also work on Alcremie as well.  When Milcery evolves into Alcremie, gain a Sweet Gauge. When the Sweet Gauge is filled at 15 stacks, the cooldown of one charge of Recover and Decorate will be reset. These moves will also be empowered."
@@ -193,7 +193,7 @@
   "Alolan Ninetales": {
     "unite-db-name": "ninetales",
     "uniteapi-name": "alolanninetales",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Snow Warning",
       "Description": "Causes snow to fall on an enemy, dealing damage to it and decreasing their movement speed by 30% for .75s. This ability has a 4s cooldown. Boosted attacks, Snow Warning, and all moves (except Aurora Veil) sling snow; hitting the same target with snow 4 times will freeze them for 1s."
@@ -256,7 +256,7 @@
   "Alolan Raichu": {
     "unite-db-name": "raichu",
     "uniteapi-name": "alolanraichu",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Static",
       "Description": "Upon receiving damage: paralyzes all nearby opposing Pokémon (30s CD).",
@@ -321,7 +321,7 @@
   "Armarouge": {
     "unite-db-name": "armarouge",
     "uniteapi-name": "armarouge",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Flash Fire",
       "Description": "When this Pokémon takes Sp. Atk-based damage from opposing Pokémon, the damage this Pokémon takes is reduced by 20% for 3s, and their next auto attack deals additional damage. This Ability goes on a 10s cooldown after it ends."
@@ -384,7 +384,7 @@
   "Azumarill": {
     "unite-db-name": "azumarill",
     "uniteapi-name": "azumarill",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Huge Power",
       "Description": "When this Pokémon hits only a single enemy with an auto attack, a move, or their Unite Move, the hit is always a critical hit. However, when hitting two or more enemies at once with an auto attack, a move, or its Unite Move, the hits are never critical hits.  Critical hits deal 170% rather than 200%."
@@ -447,7 +447,7 @@
   "Blastoise": {
     "unite-db-name": "blastoise",
     "uniteapi-name": "blastoise",
-    "role": "Defender",
+    "Role": "Defender",
     "Passive Ability": {
       "Name": "Torrent",
       "Description": "While at 50% max HP or below: increases Attack and Sp. Atk by 20%."
@@ -510,7 +510,7 @@
   "Blaziken": {
     "unite-db-name": "blaziken",
     "uniteapi-name": "blaziken",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Blaze",
       "Description": "When this Pokémon hits an enemy with an auto attack or move, that enemy will receive a fire fragment. Hitting an enemy that has a fire fragment 5 times with a basic attack or move will deal additional damage and restore the user's HP. When this Pokémon's HP is at half or lower, more HP is restored."
@@ -573,7 +573,7 @@
   "Blissey": {
     "unite-db-name": "blissey",
     "uniteapi-name": "blissey",
-    "role": "Supporter",
+    "Role": "Supporter",
     "Passive Ability": {
       "Name": "Natural Cure",
       "Description": "Automatically cleanses this Pokémon every 6s, even if there are no effects to cleanse."
@@ -636,7 +636,7 @@
   "Buzzwole": {
     "unite-db-name": "buzzwole",
     "uniteapi-name": "buzzwole",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Beast Boost",
       "Description": "When Buzzwole knocks out an enemy player, movement speed is increased by 100% and basic attack speed increased by 50% for 3s. When Buzzwole assists in knocking out an enemy player, movement speed is increased by 50% and basic attack speed increased by 25% for 3s. Each time Buzzwole hits an enemy with basic attacks, Mega Punch, Lunge, or Smack Down - muscle gauge increases. Conversely, when Buzzwole has been out of combat for 10s, muscle gauge depletes by 1 increment every 5s. Up to 6 muscle gauge increments can be stored."
@@ -699,7 +699,7 @@
   "Ceruledge": {
     "unite-db-name": "ceruledge",
     "uniteapi-name": "ceruledge",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Flame Body",
       "Description": "When Charcadet hits an enemy with an auto attack, Charcadet deals damage around themself with flames. This ability goes on a 4s cd after it's triggered.",
@@ -764,7 +764,7 @@
   "Chandelure": {
     "unite-db-name": "chandelure",
     "uniteapi-name": "chandelure",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Infiltrator",
       "Description": "When this Pokémon deals damage, receive a stacking buff that makes Special damage dealt by this Pokémon ignore 2.5% of Special Defense per stack. This buff lasts 4s, can stack up to 8 times, and the duration refreshes when gaining a new stack."
@@ -827,7 +827,7 @@
   "Charizard": {
     "unite-db-name": "charizard",
     "uniteapi-name": "charizard",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Blaze",
       "Description": "While at 50% max HP or below, this Pokémon's critical-hit rate is increased by 20%."
@@ -890,7 +890,7 @@
   "Cinderace": {
     "unite-db-name": "cinderace",
     "uniteapi-name": "cinderace",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Blaze",
       "Description": "When at 50% max HP or below, increases critical-hit rate by 10% and auto attack speed by 20% for 5s (30s CD).  When hitting an opposing Pokémon with an auto attack or move, places a cinder on the target for 5s; applies 2 cinders with boosted attacks and moves. When placing a 5th cinder on a target, consumes the cinders, dealing additional damage to the target."
@@ -953,7 +953,7 @@
   "Clefable": {
     "unite-db-name": "clefable",
     "uniteapi-name": "clefable",
-    "role": "Supporter",
+    "Role": "Supporter",
     "Passive Ability": {
       "Name": "Magic Guard",
       "Description": "This Pokémon receives a shield for 3s when restoring an ally Pokémon's HP. The strength of this shield is proportional to 50% of the amount of HP restored."
@@ -1016,7 +1016,7 @@
   "Comfey": {
     "unite-db-name": "comfey",
     "uniteapi-name": "comfey",
-    "role": "Supporter",
+    "Role": "Supporter",
     "Passive Ability": {
       "Name": "Triage",
       "Description": "Increases movement speed by 25% when near ally Pokémon at 50% max HP or below. Stores up to 8 flowers; consumes all flowers when using Synthesis, Floral Healing, or Sweet Kiss while attached, boosting their effects. Gains 1 flower every 1.5s. Gains 4 flowers when entering tall grass while detached (5s CD). Attaches to a designated ally Pokémon when using Synthesis, Floral Healing, or Sweet Kiss while detached, granting a Triage shield effect to the ally based on Comfey's max HP.  While attached: becomes untargetable, restores 1% max HP every 1s; takes Aeos energy gained in excess of the maximum the ally can hold, and scores the same amount of Aeos energy into a goal as the ally if not using a move while the ally channels the score. Detaches from the ally in the designated direction when the button to return to base is used (or a separate detach button on mobile). When detaching: removes the Triage shield effect from the ally; becomes invincible for 0.5s, and readies a boosted attack."
@@ -1079,7 +1079,7 @@
   "Cramorant": {
     "unite-db-name": "cramorant",
     "uniteapi-name": "cramorant",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Gulp Missile",
       "Description": "This Pokémon can catch some form of prey in their mouth when entering Whirlpool, Surf, or Dive. When receiving damage, counterattacks by spitting the prey in their mouth at an opposing Pokémon, damaging them and bouncing to 1 other opposing Pokémon nearby.  When above 50% max HP, catches Arrokuda as prey, which also decrease opposing Pokémon's Defense by 20% and Sp. Def by 5% for 3s. When below 50% max HP, instead catches Pikachu as prey, which decrease opposing Pokémon's movement speed by 50% and attack speed by 10% for 1s."
@@ -1142,7 +1142,7 @@
   "Crustle": {
     "unite-db-name": "crustle",
     "uniteapi-name": "crustle",
-    "role": "Defender",
+    "Role": "Defender",
     "Passive Ability": {
       "Name": "Sturdy",
       "Description": "For every 7% missing HP, this Pokémon's Defense and Sp. Def are increased (up to 10 times; maximum at 70% missing HP or more)."
@@ -1205,7 +1205,7 @@
   "Darkrai": {
     "unite-db-name": "darkrai",
     "uniteapi-name": "darkrai",
-    "role": "Speedster",
+    "Role": "Speedster",
     "Passive Ability": {
       "Name": "Bad Dreams",
       "Description": "When an enemy is forcibly put to sleep near Darkrai, Darkrai deals damage to the target and gains a boosted attack. When Darkrai uses this boosted, every enemy that has been marked with bad dreams in the last 2.7s is attacked simultaneously. Sleeping enemies near Darkrai take damage over time, and Darkrai deals 10% more damage to them while they remain asleep. Damage from this Ability doesn't wake up sleeping enemies."
@@ -1268,7 +1268,7 @@
   "Decidueye": {
     "unite-db-name": "decidueye",
     "uniteapi-name": "decidueye",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Long Reach",
       "Description": "Increases Decidueye's auto attack and move damage by 20% to distant enemies."
@@ -1331,7 +1331,7 @@
   "Delphox": {
     "unite-db-name": "delphox",
     "uniteapi-name": "delphox",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Blaze",
       "Description": "When using a move when below 50% max HP, that move deals additional damage with a fireball to enemies (15s CD)."
@@ -1394,7 +1394,7 @@
   "Dhelmise": {
     "unite-db-name": "dhelmise",
     "uniteapi-name": "dhelmise",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Steelworker",
       "Description": "Dhelmise is granted a shield whenever one of the user's moves deals damage to Pokémon from the opposing team (5s cd). Each time this Ability or other effects grant the Pokémon a shield, the Pokémon's next basic attack deals increased damage. This effect can stack up to 3 times. When the shield granted by this ability expires after 3s, HP proportional to the amount of remaining shields is restored."
@@ -1457,7 +1457,7 @@
   "Dodrio": {
     "unite-db-name": "dodrio",
     "uniteapi-name": "dodrio",
-    "role": "Speedster",
+    "Role": "Speedster",
     "Passive Ability": {
       "Name": "Run Away",
       "Description": "This Pokémon receives 10% increased movement speed when within a radius of enemy Pokémon. While moving, the sprint gauge charges from 0 to 10 (2% increased movement speed per increment). At full, Dodrio runs at 20% increased movement speed. If movement speed is decreased below a threshold, the sprint gauge will rapidly deplete. When Doduo scores a goal, it evenly divides its collected Aeos energy into two portions and deposits them into the goal one at a time. As Dodrio, this is split into three portions to deposit in the goal one at a time. Only goals made by a full emptying of the Aeos Ball will count towards stacking items."
@@ -1520,7 +1520,7 @@
   "Dragapult": {
     "unite-db-name": "dragapult",
     "uniteapi-name": "dragapult",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Clear Body",
       "Description": "Reduces the duration of debuffs inflicted on this Pokémon."
@@ -1583,7 +1583,7 @@
   "Dragonite": {
     "unite-db-name": "dragonite",
     "uniteapi-name": "dragonite",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Marvel Scale",
       "Description": "Increases Defense by 100 for 1.5s when afflicted by a status condition (Dratini and Dragonair only).",
@@ -1648,7 +1648,7 @@
   "Duraludon": {
     "unite-db-name": "duraludon",
     "uniteapi-name": "duraludon",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Heavy Metal",
       "Description": "Prevents Duraludon from being thrown or shoved by the first attempt to throw or shove them. This ability goes on cooldown after it's triggered (50s cd)."
@@ -1711,7 +1711,7 @@
   "Eldegoss": {
     "unite-db-name": "eldegoss",
     "uniteapi-name": "eldegoss",
-    "role": "Supporter",
+    "Role": "Supporter",
     "Passive Ability": {
       "Name": "Cotton Down",
       "Description": "When at least 5% max HP damage is received in a single attack, restores this Pokémon's HP and increases their movement speed by 15% for 1.5s; deals revenge damage to nearby opposing Pokémon and decreases their movement speed by 30% for 1.5s (10s CD)."
@@ -1774,7 +1774,7 @@
   "Empoleon": {
     "unite-db-name": "empoleon",
     "uniteapi-name": "empoleon",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Torrent",
       "Description": "When this Pokémon deals damage to opposing Pokémon, or as time passes, the Torrent gauge increases to a max of 100. If a move is used when the Torrent gauge exceeds 50, 50 points of the gauge is consumed and the move becomes boosted.  The rate at which the Torrent gauge increases depends on your current HP with thresholds at: above 66% HP, below 66% HP, and below 33% HP. Every second gain 1/2/3 Torrent gauge."
@@ -1837,7 +1837,7 @@
   "Espeon": {
     "unite-db-name": "espeon",
     "uniteapi-name": "espeon",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Anticipation",
       "Description": "When Eevee would be affected by a hindrance, the hindrance is negated and Eevee becomes immune to hindrances for a short time (35s cd). Note: Hindrances include slows; multi-layered hindrance moves such as Pikachu's Volt Tackle will only have the very first launch negated.",
@@ -1902,7 +1902,7 @@
   "Falinks": {
     "unite-db-name": "falinks",
     "uniteapi-name": "falinks",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Battle Armor",
       "Description": "The critical-hit modifier of enemies is reduced by 50% when dealing damage to Falinks. Falinks can hold 10 more Aeos Energy than other Pokémon.  Falinks is a group comprised of the Brass and five Troopers. Each member of the group has a separate hitbox and counts as a different target. The Brass always takes 10% reduced damage. Troopers will take 90% less damage while attached to the Brass. For attacks or moves that can hit multiple targets, the total damage Falinks can take from a single move or attack is 110% of that move or attack's damage.  Falinks utilize three formations: Column formation, No Retreat formation, and Dispatch formation. When a move is used in No Retreat or Dispatch formation, the effect of the move changes."
@@ -1965,7 +1965,7 @@
   "Galarian Rapidash": {
     "unite-db-name": "rapidash",
     "uniteapi-name": "galarianrapidash",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Pastel Veil",
       "Description": "The Pokémon's psychic counter charges based on the distance they run (up to 10 times). When the counter is full, the Pokémon is granted a shield, becoming hindrance resistant while the shield remains.  When the Pokémon reaches an additional movement speed threshold, the damage dealt by moves is increased by 5/20/35/50/60%. The increased damage based on movement speed is calculated before dealing damage with moves.  Please visit the FAQ to learn more!"
@@ -2028,7 +2028,7 @@
   "Garchomp": {
     "unite-db-name": "garchomp",
     "uniteapi-name": "garchomp",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Rough Skin",
       "Description": "When damaged by a nearby opposing Melee Pokémon, reflects 30% of the damage received back to that opposing Pokémon as Attack-based damage (2s CD)."
@@ -2091,7 +2091,7 @@
   "Gardevoir": {
     "unite-db-name": "gardevoir",
     "uniteapi-name": "gardevoir",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Synchronize",
       "Description": "When an opposing Pokémon decreases this Pokémon's movement speed, also decreases that opposing Pokémon's movement speed by 40% for 3s; or, when an opposing Pokémon inflicts a damage-over-time status condition on this Pokémon, also inflicts a damage-over time effect on that opposing Pokémon for 3s (8s CD)."
@@ -2154,7 +2154,7 @@
   "Gengar": {
     "unite-db-name": "gengar",
     "uniteapi-name": "gengar",
-    "role": "Speedster",
+    "Role": "Speedster",
     "Passive Ability": {
       "Name": "Levitate",
       "Description": "When this Pokémon has not been in combat for 5s, their movement speed is increased by 20%."
@@ -2217,7 +2217,7 @@
   "Glaceon": {
     "unite-db-name": "glaceon",
     "uniteapi-name": "glaceon",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Run Away",
       "Description": "When Eevee would be affected by a hindrance, the hindrance is negated and becomes invincible for 1s. This Ability goes on cooldown after it’s triggered (70s cd).",
@@ -2282,7 +2282,7 @@
   "Goodra": {
     "unite-db-name": "goodra",
     "uniteapi-name": "goodra",
-    "role": "Defender",
+    "Role": "Defender",
     "Passive Ability": {
       "Name": "Gooey",
       "Description": "When this Pokémon is hit by an attack, there is a chance it will spread slime around itself. The slime deals damage to Pokémon, Decreases their attack speed by 50% for 2s and applies a Gooey debuff. The Gooey debuff slows Pokémon by 10% for 6s and can stack up to 4 times per Pokémon. Gooey is a debuff that is applicable to Wild Pokémon and enemy players only.  When this Pokémon enters tall grass, it continually recovers HP for up to 3s, until it leaves the tall grass, uses a move, or attacks. When this Pokémon recovers HP due to Gooey, its attack gauge is progressed towards a boosted attack. This HP recovery goes on a 12s cooldown after being triggered."
@@ -2345,7 +2345,7 @@
   "Greedent": {
     "unite-db-name": "greedent",
     "uniteapi-name": "greedent",
-    "role": "Defender",
+    "Role": "Defender",
     "Passive Ability": {
       "Name": "Cheek Pouch",
       "Description": "When Greedent eats any berry, recover HP after receiving the effects of the berry. At the same time, Greedent stashes an Oran berry in its tail. Being hit by a single attack or combination of attacks will cause an Oran berry to drop from Greedent's tail (4.5s cd). Berries stay on the ground for 10s.  Oran berry or unite move berry heals Greedent for 1% Max HP + 3x(Lv-1) + 23; Sitrus or Salac berry heals Greedent for 1% Max HP + 0x(Lv-1) + 23. All other players heal from picking up an Oran berry for 2% Max HP + 5x(Level-1) + 45 (level and Max HP scaling is based on the player that ate the Oran berry)."
@@ -2408,7 +2408,7 @@
   "Greninja": {
     "unite-db-name": "greninja",
     "uniteapi-name": "greninja",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Torrent",
       "Description": "While at 50% max HP or below, increases Attack by 5% and movement speed by 12%."
@@ -2471,7 +2471,7 @@
   "Gyarados": {
     "unite-db-name": "gyarados",
     "uniteapi-name": "gyarados",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Rattled",
       "Description": "When damaged, increases movement speed by 5% for 3s (up to 5 times; maximum 25%).",
@@ -2536,7 +2536,7 @@
   "Ho-Oh": {
     "unite-db-name": "ho-oh",
     "uniteapi-name": "hooh",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Regenerator",
       "Description": "If this Pokémon doesn't take damage from enemy Pokémon (Wild Pokémon do not count) for 3s, it will recover 3% max HP every 2 seconds. Damage to shields will not deactivate Regenerator. Ho-oh additionally recovers 0.3% max HP every 2 seconds."
@@ -2599,7 +2599,7 @@
   "Hoopa": {
     "unite-db-name": "hoopa",
     "uniteapi-name": "hoopa",
-    "role": "Supporter",
+    "Role": "Supporter",
     "Passive Ability": {
       "Name": "Magician",
       "Description": "In battles where the map is divided into an ally team side and an opposing team side, this ability creates a hole under one of the berries on the opposing team's side (chosen at random) and warps it in front of Hoopa (40s cooldown). If there are no berries, but there is Aeos Energy on the ground, then some energy is warped in front of Hoopa instead. In the event that no berries from the opposing team's side are warped, the cooldown of this ability is reduced to 20s. Berries last 30 seconds and take 2 seconds to appear after magician's activation."
@@ -2662,7 +2662,7 @@
   "Inteleon": {
     "unite-db-name": "inteleon",
     "uniteapi-name": "inteleon",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Sniper",
       "Description": "When this Pokémon stays near a wall for 1s it becomes camouflaged, making opposing Pokémon unable to target it, and starts gaining critical counters. Sobble may only hold one critical counter. Drizzile may hold two. Inteleon may hold three. While camouflaged, Inteleon is slowed by 10%. A critical counter is gained as soon as Inteleon is camouflaged, with a new counter gained every 3s while camouflaged. Dealing or receiving damage breaks the camouflage and prevents Inteleon from starting to camouflage for 3s. When a critical counter is consumed, Inteleon's next attack or move that can critically strike is guaranteed to be a critical hit.  Critical hits deal 250% rather than 200% damage."
@@ -2725,7 +2725,7 @@
   "Lapras": {
     "unite-db-name": "lapras",
     "uniteapi-name": "lapras",
-    "role": "Defender",
+    "Role": "Defender",
     "Passive Ability": {
       "Name": "Shell Armor",
       "Description": "If Lapras would take a single instance of damage that would be greater than 10% of Lapras's maximum HP, this damage will be reduced by 20%."
@@ -2788,7 +2788,7 @@
   "Latias": {
     "unite-db-name": "latias",
     "uniteapi-name": "latias",
-    "role": "Supporter",
+    "Role": "Supporter",
     "Passive Ability": {
       "Name": "Levitate",
       "Description": "After using a move: increases movement speed by 50% for 2s (decaying by 5% every 0.25s).  Increases movement speed by 10% while near an ally Latios. When not in combat, this Ability can be used to fly to an allied Latios. This Ability goes on cooldown for 90s after it's triggered for both Latios and Latias. While channeling this ability the user can move around, once the 2s channel is completed the user becomes unstoppable and flies to where Latios was when this ability was activated. If Latios is at the home base, the cooldown of Levitate goes down twice as fast for Latias."
@@ -2851,7 +2851,7 @@
   "Latios": {
     "unite-db-name": "latios",
     "uniteapi-name": "latios",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Levitate",
       "Description": "After using a move: increases movement speed by 50% for 2s (decaying by 5% every 0.25s).  Increases movement speed by 10% while near an ally Latias. When not in combat, this Ability can be used to fly to an allied Latias. This Ability goes on cooldown for 90s after it's triggered for both Latios and Latias. While channeling this ability the user can move around, once the 2s channel is completed the user becomes unstoppable and flies to where Latias was when this ability was activated. If Latias is at home base, the cooldown of Levitate will go down twice as fast for Latios."
@@ -2914,7 +2914,7 @@
   "Leafeon": {
     "unite-db-name": "leafeon",
     "uniteapi-name": "leafeon",
-    "role": "Speedster",
+    "Role": "Speedster",
     "Passive Ability": {
       "Name": "Run Away",
       "Description": "Eevee has 10% increased movement speed when out of combat. (5s after leaving combat)",
@@ -2979,7 +2979,7 @@
   "Lucario": {
     "unite-db-name": "lucario",
     "uniteapi-name": "lucario",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Steadfast",
       "Description": "If at 50% max HP or below: grants this Pokémon a shield and increases their movement speed by 20% for 5s (45s CD)."
@@ -3042,7 +3042,7 @@
   "Machamp": {
     "unite-db-name": "machamp",
     "uniteapi-name": "machamp",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Guts",
       "Description": "Increases Attack by 10% for 5s when afflicted by any debuff."
@@ -3105,7 +3105,7 @@
   "Mamoswine": {
     "unite-db-name": "mamoswine",
     "uniteapi-name": "mamoswine",
-    "role": "Defender",
+    "Role": "Defender",
     "Passive Ability": {
       "Name": "Thick Fat",
       "Description": "When Mamoswine deals damage, Defense and Sp. Def are increased for 5s, stacking up to 3 times. When Mamoswine uses Ice Shard, Icicle Crash or Ice Fang, the next auto attack is boosted. If any of these moves creates a freezing area of effect inside an ally goal zone, the goal-scoring speed of enemies is decreased by 30% for 5s."
@@ -3168,7 +3168,7 @@
   "Mega Charizard X": {
     "unite-db-name": "mega-charizard-x",
     "uniteapi-name": "megacharizardx",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Solar Power",
       "Description": "When the user uses a move, it deals additional damage but loses 5% of its current HP. This Ability's effect does not trigger when the user is in tall grass. When the user deals damage with a basic attack to opposing Pokémon that have been burned by its moves, the user restores 3% of its missing HP.",
@@ -3217,7 +3217,7 @@
   "Mega Charizard Y": {
     "unite-db-name": "mega-charizard-y",
     "uniteapi-name": "megacharizardy",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Blaze",
       "Description": "Increases Attack by 20% for 5 seconds after Charizard gets hit.",
@@ -3266,7 +3266,7 @@
   "Mega Gyarados": {
     "unite-db-name": "mega-gyarados",
     "uniteapi-name": "megagyarados",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Swift Swim",
       "Description": "When the Pokémon uses a move, their movement speed increases by 30% for 3s. Each time this Pokémon knocks out an opposing Pokémon, scores a goal, or otherwise makes a contribution in battle, their effort gauge increases. Once the gauge is full, the Pokémon evolves into Gyarados.",
@@ -3315,7 +3315,7 @@
   "Mega Lucario": {
     "unite-db-name": "mega-lucario",
     "uniteapi-name": "megalucario",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Justified",
       "Description": "When the user is damaged, their attack stat increases by 8% for 4s up to 4 times.",
@@ -3361,10 +3361,73 @@
       "Image": ""
     }
   },
+  "Meowth": {
+    "unite-db-name": "meowth",
+    "uniteapi-name": "meowth",
+    "Role": "Speedster",
+    "Passive Ability": {
+      "Name": "Pickup",
+      "Description": "Attacking Pokémon from the opposing team will pilfer their battle item for 30s. Defeating a wild Pokémon will pilfer a random battle item for 30s. Once an item is pilfered this ability will go on cooldown for 30s.  Moving towards Aeos energy or gold coins increases the user's movement speed by 20%. Picking up gold coins increases the user's movement speed for 3s by 40% decaying by 5% every 0.5s to a minimum of 20%, and speeds up the rate at which Pickup's cooldown goes down by 13.5% for each gold coin picked up. Gold coins will stay on the field for 7s."
+    },
+    "Attack": "Scratches at opposing Pokémon becoming a boosted attack with every third attack dealing increased damage and dropping a gold coin.\n\n",
+    "Move 1": {
+      "Name": "Scratch",
+      "Level": "1 or 3",
+      "Cooldown": "6.00s",
+      "Description": "The user scratches a designated Pokémon with its sharp claws, dealing damage.",
+      "Upgrade 1": {
+        "Name": "Pay Day",
+        "Level": "5",
+        "Cooldown": "6.00s",
+        "Description": "The user hurls a gold coin at the designated Pokémon, dealing damage, slowing down the target by 30% for 1.5s, and dropping a gold coin.\n\n  2 uses can be kept in reserve, picking up a gold coin reduces the cooldown of a use by 4s.",
+        "Enhanced Level": "11",
+        "Enhanced Description": "Increases the damage dealt by this move."
+      },
+      "Upgrade 2": {
+        "Name": "Fury Swipes",
+        "Level": "5",
+        "Cooldown": "5.00s",
+        "Description": "The user applies a coin mark on opposing Pokémon they hit, the coin mark has up to 5 stacks and lasts for 5s. The user swipes twice with its sharp claws at the designated Pokémon, dealing damage, and granting the user a shield for 5s, and an additional shield per hit (up to 5x) for 5s. The number of swipes can be increased up to 5 if the coin mark is at 3 stacks or higher. Subsequent swipes deal half of the damage of the first hit. This attack will stun opposing Pokémon that have 1/2/3+ coin mark stacks for 0.3/0.5/0.8s respectively.\n\n  If the maximum number of swipes hit, the cooldowns for Feint, Feint Attack, and Assurance are reduced by 1s per hit, the 5th hit will fully reset the cooldown. If the coin mark is filled up, this move will consume and reset the mark.",
+        "Enhanced Level": "11",
+        "Enhanced Description": "Increases the damage dealt by this move."
+      }
+    },
+    "Move 2": {
+      "Name": "Feint",
+      "Level": "1 or 3",
+      "Cooldown": "7.00s",
+      "Description": "The user dashes at the designated Pokémon, dealing damage to opponents hit.",
+      "Upgrade 1": {
+        "Name": "Feint Attack",
+        "Level": "7",
+        "Cooldown": "7.00s",
+        "Description": "The user pounces at the designated Pokémon and scratches them with their claws, dealing damage and stunning the target for 0.6s. When this move hits the user is granted a shield for 3s and can quickly move in a chosen direction.\n\n  The user's next basic attack becomes a boosted attack. If the coin mark is filled up, this move will consume and reset the mark (although this move does not benefit from the coin mark in any fashion).",
+        "Enhanced Level": "13",
+        "Enhanced Description": "Improves the strength of the shield."
+      },
+      "Upgrade 2": {
+        "Name": "Assurance",
+        "Level": "7",
+        "Cooldown": "5.00s",
+        "Description": "The user applies a coin mark on opposing Pokémon they hit, the coin mark has up to 5 stacks and lasts for 5s. The user charges in the designated direction, dealing damage to opposing Pokémon hit and restoring the user's HP, furthermore the move will restore additional HP if the targets have a coin mark. The more stacks the coin mark has the more potent the heal.\n\n  When this move is used on a Pokémon with a coin mark that has 5 stacks, the damage is doubled. If the coin mark is filled up, this move will consume and reset the mark.",
+        "Enhanced Level": "13",
+        "Enhanced Description": "Reduces this moves cooldown by 1s."
+      }
+    },
+    "Unite Move": {
+      "Name": "Gold Coin Barrage",
+      "Level": "9",
+      "Cooldown": "100s",
+      "Description": "The user becomes unstoppable and unleashes a barrage of gold coins toward the designated Pokémon from the opposing team, dealing damage in a small area up to 10 times. If another Pokémon on the opposing team stands in the way, they will be hit instead. During the attack, up to 4 coins will periodically drop near Pokémon hit by this move. This move can be cancelled early. Meowth can move while using this move, but is slowed by 110%.",
+      "Buff Duration": "6s",
+      "Buff Stats": "80% Movement Speed, 20% Max HP Shield",
+      "Image": "Meowth - Gold Coin Barrage.png"
+    }
+  },
   "Meowscarada": {
     "unite-db-name": "meowscarada",
     "uniteapi-name": "meowscarada",
-    "role": "Speedster",
+    "Role": "Speedster",
     "Passive Ability": {
       "Name": "Overgrow",
       "Description": "When the user is at 50% max HP or less, if they would take damage they instead disappear into leaves, becoming invisible for 1.5s or until attacking (60s CD). This effect also increases the user's movement speed by 15%, damage by 15% and heals by 15% of the damage dealt for 4s."
@@ -3427,7 +3490,7 @@
   "Metagross": {
     "unite-db-name": "metagross",
     "uniteapi-name": "metagross",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Clear Body",
       "Description": "Reduces the duration of hindrance effects by 10% when enemy players are nearby. The more enemy players there are, the more the hindrance effects are reduced, up to a maximum of 5 enemy players (50% max)."
@@ -3490,7 +3553,7 @@
   "Mew": {
     "unite-db-name": "mew",
     "uniteapi-name": "mew",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Synchronize",
       "Description": "Each time Mew uses a move, Mew and nearby allies have their movement speed increased by 15% for 2s.",
@@ -3563,7 +3626,7 @@
   "Mewtwo X": {
     "unite-db-name": "mewtwox",
     "uniteapi-name": "mewtwox",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Pressure",
       "Description": "When Mewtwo deals damage to enemy players with a basic attack, the Mega gauge increases up to 8 times. As the Mega gauge increases, Mewtwo's Attack, Defense, and Sp. Def are increased by 2%, up to 10 times. If Mewtwo is level 5 or higher, and the Mega gauge has increased at least 8 times, it Mega Evolves. The Mega Evolution lasts 10s and increases Mewtwo's Attack by an additional 18%, Defense and Sp. Def by an additional 18%, max HP by 10%, movement speed by 5%, and has a fixed attack speed.  Consumes up to 30 Aeos Energy upon Mega Evolving. Mega Evolution duration is extended by 1 second for every 5 energy consumed. Energy is consumed regardless if you have the next multiple of 5. The Mega gauge does not deplete upon being KO'd."
@@ -3626,7 +3689,7 @@
   "Mewtwo Y": {
     "unite-db-name": "mewtwoy",
     "uniteapi-name": "mewtwoy",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Pressure",
       "Description": "When Mewtwo deals damage to enemy players with a basic attack, the Mega gauge increases up to 12 times. As the Mega gauge increases, Mewtwo's Sp. Atk is increased by 1.5%, and attack speed is increased by 3%, up to 10 times. If Mewtwo is level 5 or higher, and the Mega gauge has increased at least 12 times, Mewtwo Mega Evolves. The Mega Evolution lasts 10s and increases Sp. Atk by an additional 10%, attack speed by an additional 35%, max HP by 10%, and movement speed by 5%.  Consumes up to 30 Aeos Energy upon Mega Evolving. Mega Evolution duration is extended by 1 second for every 5 energy consumed. Energy is consumed regardless if you have the next multiple of 5. The Mega gauge does not deplete upon being KO'd."
@@ -3689,7 +3752,7 @@
   "Mimikyu": {
     "unite-db-name": "mimikyu",
     "uniteapi-name": "mimikyu",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Disguise",
       "Description": "Mimikyu starts the game in Disguised Form. While in Disguised Form, when Mimikyu would take damage from an enemy, Mimikyu instead takes 5% remaining HP as piercing damage, becomes Impervious for 0.5s (immune to damage but not hindrances) and changes to Busted Form. A revenge mark is applied on the enemy that broke the disguise. Mimikyu's movement speed increases by 10% when approaching revenge-marked enemies and deals 10% increased damage to them. After 50s in Busted Form, Mimikyu returns to Disguised Form. The time it takes to return to Disguised Form is reduced by 25s when Mimikyu knocks out an enemy player and is fully reset upon respawning."
@@ -3752,7 +3815,7 @@
   "Miraidon": {
     "unite-db-name": "miraidon",
     "uniteapi-name": "miraidon",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Hadron Engine",
       "Description": "Create Electric Terrain around Miraidon for 10s when hitting an enemy player with a Move. If Miraidon has Aeos Energy, up to 40 energy (in multiples of 10) will be consumed when the Electric Terrain is created, increasing the size of the Electric Terrain. Miraidon and Pokémon cannot be put to sleep on Electric Terrain. Miraidon on the Electric Terrain deals 30% additional Move damage while allies will deal 10% additional Move damage. Electric Terrain also strengthens ally team goals' healing and shielding by 30% and weakens enemy team goals' healing and shielding by 30%. This ability goes on a 30s cooldown after it's triggered."
@@ -3815,7 +3878,7 @@
   "Mr. Mime": {
     "unite-db-name": "mr.mime",
     "uniteapi-name": "mrmime",
-    "role": "Supporter",
+    "Role": "Supporter",
     "Passive Ability": {
       "Name": "Filter",
       "Description": "Upon casting a Move, Mr. Mime takes 10% less damage for 2s."
@@ -3878,7 +3941,7 @@
   "Pawmot": {
     "unite-db-name": "pawmot",
     "uniteapi-name": "pawmot",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Iron Fist",
       "Description": "After this Pokémon hits with a move, the next auto attack will be enhanced, dealing increased damage and restoring the user's HP.  Fighter Mode: After this Pokémon hits with a move, the next auto attack will be enhanced. The user lunges towards the target Pokémon, dealing increased damage and increasing the user's attack speed by 30% for 8 seconds. This effect can stack up to 2 times and the duration refreshes when gaining another stack."
@@ -3941,7 +4004,7 @@
   "Pikachu": {
     "unite-db-name": "pikachu",
     "uniteapi-name": "pikachu",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Static",
       "Description": "When damaged, paralyzes nearby opposing Pokémon (30s CD).  The movement speed of opposing Pokémon paralyzed by this Ability is decreased by 30% for 2.5s and their basic attack speed is decreased by 10% for 2s."
@@ -4004,7 +4067,7 @@
   "Psyduck": {
     "unite-db-name": "psyduck",
     "uniteapi-name": "psyduck",
-    "role": "Supporter",
+    "Role": "Supporter",
     "Passive Ability": {
       "Name": "Swift Swim",
       "Description": "When damaged by a Pokémon from the opposing team; increases movement speed by 40% for 2s, decaying by 10% every 0.5s (minimum 25% increased movement speed) (10s CD).  This Pokémon's headache gauge increases by 1% for every 0.5% max HP damage received by Psyduck or nearby ally Pokémon from Pokémon on the opposing team. This gauge fills at a rate of 30% per 1s (requiring a total of 3.33s to fully charge). When the headache gauge is full, a mysterious power is triggered, interrupting Psyduck from casting moves, cleansing status conditions on themself, becoming unstoppable and decreasing their movement speed by 30% for 1s; then shoving nearby opposing Pokémon away for 0.8s, and resetting this Pokémon's move cooldowns. The mysterious power stays active for 10s, boosting moves and giving them 20% cooldown reduction. When the mysterious power ends, Psyduck cannot use moves or attacks, or charge their headache gauge for 2.5s."
@@ -4067,7 +4130,7 @@
   "Sableye": {
     "unite-db-name": "sableye",
     "uniteapi-name": "sableye",
-    "role": "Supporter",
+    "Role": "Supporter",
     "Passive Ability": {
       "Name": "Prankster",
       "Description": "When Sableye is outside the visual range of enemy players, Sableye enters stealth and gains 10% increased movement speed. When Sableye enters the visual range of enemy players, Sableye does not immediately become visible but instead remains in stealth for 1.8s. Sableye exits stealth when attacking."
@@ -4130,7 +4193,7 @@
   "Scizor": {
     "unite-db-name": "scizor",
     "uniteapi-name": "scizor",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Technician",
       "Description": "After this Pokémon uses a move, the next auto attack will deal two consecutive auto attacks instead. The second of these deals decreased damage. Technician lasts 5s and has no internal cooldown."
@@ -4185,7 +4248,7 @@
   "Scyther": {
     "unite-db-name": "scyther",
     "uniteapi-name": "scyther",
-    "role": "Speedster",
+    "Role": "Speedster",
     "Passive Ability": {
       "Name": "Technician",
       "Description": "After this Pokémon uses a move, the next auto attack will deal two consecutive auto attacks instead. The second of these deals decreased damage. Technician lasts 5s and has no internal cooldown."
@@ -4240,7 +4303,7 @@
   "Slowbro": {
     "unite-db-name": "slowbro",
     "uniteapi-name": "slowbro",
-    "role": "Defender",
+    "Role": "Defender",
     "Passive Ability": {
       "Name": "Oblivious",
       "Description": "Slowbro stores up lost HP for a short time (blue HP). Slowbro's Oblivious health remains for 6s and then decreases by 3% max HP every second. When dealing damage to an enemy with Water Gun, Scald, Surf, or Slowbeam - decrease their Sp. Def by 4% for 5s, stacking up to 5 times."
@@ -4303,7 +4366,7 @@
   "Snorlax": {
     "unite-db-name": "snorlax",
     "uniteapi-name": "snorlax",
-    "role": "Defender",
+    "Role": "Defender",
     "Passive Ability": {
       "Name": "Gluttony",
       "Description": "When facing nearby Berries or food, increases movement speed by 25%.  Doubles the HP restored from eating Sitrus Berries. Restores an additional 1% max HP + 0 x (Lv. - 1) + 23 HP from eating Oran Berries (from Greedent Cheek Pouch). Alcremie's Recover heals 10% more HP than usual."
@@ -4366,7 +4429,7 @@
   "Suicune": {
     "unite-db-name": "suicune",
     "uniteapi-name": "suicune",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Pressure",
       "Description": "Damaging a Pokémon from the opposing team below 10% max HP and frozen by Suicune deals an additional 15% max HP as true damage to the target (sufficient damage reduction can prevent the target from being knocked out). Using a move grants a shield for 5s (up to 2 times); separately increases the crystal gauge by 1 for 5s (becoming full when increased 2 times).  Flooded areas created by Whirlpool or Surf remain for 5s; opposing Pokémon in a flooded area are marked as drenched for 3s. Freezing a flooded area with a regular move (not Unite Move) also freezes opposing Pokémon in that flooded area for 1s. Freezing an opposing Pokémon marked as drenched removes the mark; targets frozen by a regular move or by a frozen area cannot be marked as drenched for 3s afterward. Deals bonus damage when freezing opposing Pokémon with a regular move or by being in a frozen area."
@@ -4429,7 +4492,7 @@
   "Sylveon": {
     "unite-db-name": "sylveon",
     "uniteapi-name": "sylveon",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Adaptability",
       "Description": "Every time Eevee deals or receives damage, increase Sp. Attack by 5% for 1.5s, stacking up to 4 times.",
@@ -4494,7 +4557,7 @@
   "Talonflame": {
     "unite-db-name": "talonflame",
     "uniteapi-name": "talonflame",
-    "role": "Speedster",
+    "Role": "Speedster",
     "Passive Ability": {
       "Name": "Gale Wings",
       "Description": "While at 85% max HP or above, this Pokémon's movement speed is increased by 15%."
@@ -4557,7 +4620,7 @@
   "Tinkaton": {
     "unite-db-name": "tinkaton",
     "uniteapi-name": "tinkaton",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Mold Breaker",
       "Description": "When damaging an opposing Pokémon with an active shield effect, 30% of the damage dealt to the shield is dealt as additional damage to the target's HP.  This Pokémon's hammer strengthens every time they hit Pokémon from the opposing team with boosted attacks or moves, increasing this Pokémon's Attack by 0.5% per target hit (up to 60 times; maximum 30% Attack). After the hammer is strengthened 20, 40, and 60 times; Rock Smash, Gigaton Hammer, and Smack Down gain increased range."
@@ -4620,7 +4683,7 @@
   "Trevenant": {
     "unite-db-name": "trevenant",
     "uniteapi-name": "trevenant",
-    "role": "Defender",
+    "Role": "Defender",
     "Passive Ability": {
       "Name": "Natural Cure",
       "Description": "When Trevenant deals or receives damage while at or below 35% max HP, a continuous HP recovery effect is triggered every 0.5s for 4s. This effect also reduces the cooldowns of Trevenant's moves by 1s every 1s. When this HP recovery effect ends, there is a 100s cooldown. However, this cooldown is reduced by 1s each time one of Trevenant's moves damage an enemy. This cooldown reduction cannot be triggered more than once every 0.5s."
@@ -4683,7 +4746,7 @@
   "Tsareena": {
     "unite-db-name": "tsareena",
     "uniteapi-name": "tsareena",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Oblivious",
       "Description": "Reduces the duration of hindrances inflicted on the user by an increased amount.",
@@ -4748,7 +4811,7 @@
   "Tyranitar": {
     "unite-db-name": "tyranitar",
     "uniteapi-name": "tyranitar",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Guts",
       "Description": "When Larvitar receives damage equal to at least 10% of max HP, Attack is increased by 30% for 3s. This Ability goes on cooldown after it’s triggered (40s cd).",
@@ -4813,7 +4876,7 @@
   "Umbreon": {
     "unite-db-name": "umbreon",
     "uniteapi-name": "umbreon",
-    "role": "Defender",
+    "Role": "Defender",
     "Passive Ability": {
       "Name": "Anticipation",
       "Description": "When Eevee would be shoved, thrown or left unabled to act, that effect is negated. This effect goes on a 40s cooldown after being triggered and is reset after respawning.",
@@ -4878,7 +4941,7 @@
   "Urshifu": {
     "unite-db-name": "urshifu",
     "uniteapi-name": "urshifu",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Inner Focus",
       "Description": "Reduces the duration of hindrances inflicted on Kubfu by 15%.",
@@ -4943,7 +5006,7 @@
   "Vaporeon": {
     "unite-db-name": "vaporeon",
     "uniteapi-name": "vaporeon",
-    "role": "Defender",
+    "Role": "Defender",
     "Passive Ability": {
       "Name": "Run Away",
       "Description": "Restores the Pokémon's HP and nullifies damage from Pokémon from the opposing team. This Ability goes on a 30s cooldown after it's triggered.",
@@ -5008,7 +5071,7 @@
   "Venusaur": {
     "unite-db-name": "venusaur",
     "uniteapi-name": "venusaur",
-    "role": "Attacker",
+    "Role": "Attacker",
     "Passive Ability": {
       "Name": "Overgrow",
       "Description": "When HP is 30% or less; increase all damage dealt by 20%."
@@ -5071,7 +5134,7 @@
   "Wigglytuff": {
     "unite-db-name": "wigglytuff",
     "uniteapi-name": "wigglytuff",
-    "role": "Supporter",
+    "Role": "Supporter",
     "Passive Ability": {
       "Name": "Cute Charm",
       "Description": "When hit by an enemy attack at close range, make that enemy infatuated for a short time (10s CD). Infatuated enemies become enthralled and approach Wigglytuff against their will."
@@ -5134,7 +5197,7 @@
   "Zacian": {
     "unite-db-name": "zacian",
     "uniteapi-name": "zacian",
-    "role": "All-Rounder",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Intrepid Sword",
       "Description": "If the goal scoring button is held down, Zacian charges its sword with Aeos energy. For a short time, its basic attacks become boosted attacks. In addition, during this time, Zacian can use a boosted version of one of its moves once (this use does not share the same cooldown as the base move). The longer the goal scoring button is held down, the more Aeos energy is charged into the sword, lengthening the duration of the boost effect on basic attacks and moves. This Ability goes on an 8s cooldown after it’s triggered.  Minimum 5 energy is required to charge with a maximum of 10 (except for Unite Move). Duration for buff window is 3s for 5 energy, 6s for 8 energy, 10s for 10 energy. Charging occurs at a rate of 1 energy per 0.1s."
@@ -5197,7 +5260,7 @@
   "Zeraora": {
     "unite-db-name": "zeraora",
     "uniteapi-name": "zeraora",
-    "role": "Speedster",
+    "Role": "Speedster",
     "Passive Ability": {
       "Name": "Volt Absorb",
       "Description": "Gains 8% of damage received as bonus Attack for 4s (maximum 200 bonus Attack from 2,500 damage received)."
@@ -5260,7 +5323,7 @@
   "Zoroark": {
     "unite-db-name": "zoroark",
     "uniteapi-name": "zoroark",
-    "role": "Speedster",
+    "Role": "Speedster",
     "Passive Ability": {
       "Name": "Illusion",
       "Description": "When this Ability is used: cleanses status conditions and becomes unstoppable for 0.33s (15s CD); and takes the form of the nearest opposing Pokémon for up to 15s, prioritizing Pokémon from the opposing team. Returns to their original form earlier when damaged, using an auto attack or move, attempting to score, or returning to base.  The target of the illusion does not need to be in vision to take their form."

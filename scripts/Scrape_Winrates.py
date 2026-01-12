@@ -122,16 +122,13 @@ for i, row in df.iterrows():
     pick_rate_dict[i] = row['Pick Rate']
     ban_rate_dict[i] = row['Ban Rate']
     
-with open("../data/all_pokemon_detailed.json") as f_in:
+with open("../static/json/all_pokemon_detailed.json") as f_in:
     pokemon_dict = json.load(f_in)
 
 with open("../data/battle_items.json") as f_in:
     battle_items_dict = json.load(f_in)
 
-#
-# #%%
-#
-#%%
+
 path = r'C:\Users\Tanner\Documents\git\Unite_Builds\data\html\Pokemon_Sites'
 
 files = os.listdir(path)

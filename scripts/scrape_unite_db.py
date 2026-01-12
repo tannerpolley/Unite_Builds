@@ -121,6 +121,94 @@ class UniteDBWorkingScraper:
         logger.info(f"Found {len(pokemon_list)} Pokemon to scrape from database")
         return pokemon_list
 
+    def resolve_pokemon_list(self, pokemon_list: List[str]) -> List[tuple]:
+        """Resolve a custom list to (preferred_name, unite_db_name) tuples."""
+        name_lookup = {}
+        slug_lookup = {}
+
+        for preferred_name, data in self.pokemon_data.items():
+            name_lookup[preferred_name.lower()] = preferred_name
+            unite_db_name = data.get("unite-db-name")
+            if unite_db_name:
+                slug_lookup[unite_db_name.lower()] = preferred_name
+
+        resolved = []
+        for name in pokemon_list:
+            if not name:
+                continue
+            key = name.strip()
+            lowered = key.lower()
+
+            if lowered in name_lookup:
+                preferred_name = name_lookup[lowered]
+                unite_db_name = self.pokemon_data[preferred_name].get("unite-db-name", key)
+            elif lowered in slug_lookup:
+                preferred_name = slug_lookup[lowered]
+                unite_db_name = self.pokemon_data[preferred_name].get("unite-db-name", key)
+            else:
+                preferred_name = key
+                unite_db_name = key
+                logger.warning(f"'{key}' not found in database; using provided name as unite-db slug")
+
+            resolved.append((preferred_name, unite_db_name))
+
+        logger.info(f"Resolved {len(resolved)} Pokemon from custom list")
+        return resolved
+
+    def download_missing_image(self, image_url: str, save_path: str) -> bool:
+        """Download an image only if it doesn't already exist."""
+        if not image_url or not save_path:
+            return False
+
+        directory = os.path.dirname(save_path)
+        if directory and not os.path.exists(directory):
+            os.makedirs(directory)
+
+        if os.path.exists(save_path):
+            return False
+
+        return self.download_image(image_url, save_path)
+
+    def get_image_url(self, img_elem) -> str:
+        """Extract an image URL from an img tag (supports lazy-loaded data-src)."""
+        if not img_elem:
+            return ""
+        return img_elem.get("data-src") or img_elem.get("src") or ""
+
+    def resolve_pokemon_list(self, pokemon_list: List[str]) -> List[tuple]:
+        """Resolve a custom list to (preferred_name, unite_db_name) tuples."""
+        name_lookup = {}
+        slug_lookup = {}
+
+        for preferred_name, data in self.pokemon_data.items():
+            name_lookup[preferred_name.lower()] = preferred_name
+            unite_db_name = data.get("unite-db-name")
+            if unite_db_name:
+                slug_lookup[unite_db_name.lower()] = preferred_name
+
+        resolved = []
+        for name in pokemon_list:
+            if not name:
+                continue
+            key = name.strip()
+            lowered = key.lower()
+
+            if lowered in name_lookup:
+                preferred_name = name_lookup[lowered]
+                unite_db_name = self.pokemon_data[preferred_name].get("unite-db-name", key)
+            elif lowered in slug_lookup:
+                preferred_name = slug_lookup[lowered]
+                unite_db_name = self.pokemon_data[preferred_name].get("unite-db-name", key)
+            else:
+                preferred_name = key
+                unite_db_name = key
+                logger.warning(f"'{key}' not found in database; using provided name as unite-db slug")
+
+            resolved.append((preferred_name, unite_db_name))
+
+        logger.info(f"Resolved {len(resolved)} Pokemon from custom list")
+        return resolved
+
     def clean_text(self, text: Optional[str]) -> str:
         """Clean and normalize text"""
         if not text:
@@ -230,8 +318,8 @@ class UniteDBWorkingScraper:
                 pokemon_data = {
                     "Passive Ability": self.extract_passive_ability(soup),
                     "Attack": self.extract_auto_attack(soup),
-                    "Move 1": self.extract_move(soup, move_number=1, single_upgrade=has_single_upgrade.get("Move 1", False)),
-                    "Move 2": self.extract_move(soup, move_number=2, single_upgrade=has_single_upgrade.get("Move 2", False)),
+                    "Move 1": self.extract_move(soup, move_number=1, single_upgrade=has_single_upgrade.get("Move 1", False), pokemon_name=preferred_name),
+                    "Move 2": self.extract_move(soup, move_number=2, single_upgrade=has_single_upgrade.get("Move 2", False), pokemon_name=preferred_name),
                     "Unite Move": self.extract_unite_move(soup, pokemon_name=preferred_name)
                 }
 
@@ -531,7 +619,7 @@ class UniteDBWorkingScraper:
 
         return pokemon_data
 
-    def extract_move(self, soup: BeautifulSoup, move_number: int, single_upgrade: bool = False) -> Dict:
+    def extract_move(self, soup: BeautifulSoup, move_number: int, single_upgrade: bool = False, pokemon_name: str = "") -> Dict:
         """Extract move information including upgrades"""
         # Create structure based on upgrade type
         if single_upgrade:
@@ -589,6 +677,14 @@ class UniteDBWorkingScraper:
                         if name_elem:
                             move_data["Name"] = self.clean_text(name_elem.get_text())
 
+                    # Download base move image if missing
+                    if pokemon_name and move_data["Name"]:
+                        img_elem = activated_div.find('img', class_='ability-icon') or activated_div.find('img')
+                        image_url = self.get_image_url(img_elem)
+                        filename = f"{pokemon_name} - {move_data['Name']}.png"
+                        save_path = os.path.join("..", "static", "img", "Moves", filename)
+                        self.download_missing_image(image_url, save_path)
+
                         # Get cooldown from p.cooldown
                         cooldown_p = info_div.find('p', class_='cooldown')
                         if cooldown_p:
@@ -635,6 +731,14 @@ class UniteDBWorkingScraper:
                                 upgrade_name = upgrade_info.find('h2')
                                 if upgrade_name:
                                     move_data[upgrade_key]["Name"] = self.clean_text(upgrade_name.get_text())
+
+                            # Download upgrade move image if missing
+                            if pokemon_name and move_data[upgrade_key]["Name"]:
+                                upgrade_img = upgrade_div.find('img', class_='ability-icon') or upgrade_div.find('img')
+                                image_url = self.get_image_url(upgrade_img)
+                                filename = f"{pokemon_name} - {move_data[upgrade_key]['Name']}.png"
+                                save_path = os.path.join("..", "static", "img", "Moves", filename)
+                                self.download_missing_image(image_url, save_path)
 
                                 # Get upgrade cooldown
                                 upgrade_cooldown_p = upgrade_info.find('p', class_='cooldown')
@@ -731,14 +835,15 @@ class UniteDBWorkingScraper:
                             unite_data["Name"] = self.clean_text(name_elem.get_text())
 
                     # Extract and download Unite Move image
-                    img_elem = ultimate_div.find('img')
-                    if img_elem and img_elem.get('src'):
-                        image_url = img_elem['src']
+                    img_elem = ultimate_div.find('img', class_='ability-icon') or ultimate_div.find('img')
+                    image_url = self.get_image_url(img_elem)
 
-                        # Create filename: Pokemon_Name - Unite_Move_Name.png
-                        if pokemon_name and unite_data["Name"]:
-                            filename = f"{pokemon_name} - {unite_data['Name']}.png"
-                            unite_data["Image"] = filename
+                    # Create filename: Pokemon_Name - Unite_Move_Name.png
+                    if pokemon_name and unite_data["Name"]:
+                        filename = f"{pokemon_name} - {unite_data['Name']}.png"
+                        unite_data["Image"] = filename
+                        save_path = os.path.join("..", "static", "img", "Unite_Moves", filename)
+                        self.download_missing_image(image_url, save_path)
 
                     if info_div:
                         # Get cooldown from p.cooldown
@@ -815,7 +920,7 @@ class UniteDBWorkingScraper:
             pokemon_to_scrape = self.get_pokemon_to_scrape()
         else:
             # Custom list provided (for testing)
-            pokemon_to_scrape = [(name, name) for name in pokemon_list]
+            pokemon_to_scrape = self.resolve_pokemon_list(pokemon_list)
 
         self.setup_driver()
 
@@ -836,7 +941,7 @@ class UniteDBWorkingScraper:
                     updated_entry = {
                         "unite-db-name": existing_data.get("unite-db-name", unite_db_name),
                         "uniteapi-name": existing_data.get("uniteapi-name", ""),
-                        "role": existing_data.get("role", "")
+                        "Role": existing_data.get("Role", existing_data.get("role", ""))
                     }
 
                     # Add scraped move data
@@ -873,13 +978,13 @@ def main():
     scraper = UniteDBWorkingScraper(headless=True)
 
     # Test with a few Pokemon first
-    # test_pokemon = ["aegislash", "ceruledge"]
-    # scraper.scrape_all_pokemon(pokemon_list=test_pokemon, delay=2.0)
+    test_pokemon = ["Meowth"]
+    scraper.scrape_all_pokemon(pokemon_list=test_pokemon, delay=2.0)
     #
     # print(scraper.pokemon_data['Aegislash']['Passive Ability'])
 
     # Once you verify it works, scrape all Pokemon:
-    scraper.scrape_all_pokemon(delay=1.0)
+    # scraper.scrape_all_pokemon(delay=1.0)
 
     # Save results
     scraper.save_to_json("../static/json/all_pokemon_detailed.json")
