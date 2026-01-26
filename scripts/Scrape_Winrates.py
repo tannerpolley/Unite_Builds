@@ -34,10 +34,17 @@ with open('../data/html/Unite API _ Pokémon Unite Meta Tierlist.html', 'r') as 
     pick_rate_num = []
     win_rate_num = []
     ban_rate_num = []
+
+    if ban_rate_block.find_all('div', class_=class_str) == []:
+        ban_rate_block = pick_rate_block
+
     for pokemon_pick_rate, pokemon_win_rate, pokemon_ban_rate in zip(pick_rate_block.find_all('div', class_=class_str),
                                                                      win_rate_block.find_all('div', class_=class_str),
                                                                      ban_rate_block.find_all('div', class_=class_str)
                                                                      ):
+
+
+
         pick_rate_num.append(float(pokemon_pick_rate.div.text[:-2]))
         win_rate_num.append(float(pokemon_win_rate.div.text[:-2]))
         ban_rate_num.append(float(pokemon_ban_rate.div.text[:-2]))
@@ -52,6 +59,7 @@ with open('../data/html/Unite API _ Pokémon Unite Meta Tierlist.html', 'r') as 
         pick_rate_name.append(pick_mon_name['src'][39:-14])
         win_rate_name.append(win_mon_name['src'][39:-14])
         ban_rate_name.append(ban_mon_name['src'][39:-14])
+
 
 pick_rate_dict = {}
 for k, v in zip(pick_rate_name, pick_rate_num):
