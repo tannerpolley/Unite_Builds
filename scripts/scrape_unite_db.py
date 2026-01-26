@@ -60,6 +60,10 @@ class UniteDBWorkingScraper:
     def download_image(self, image_url: str, save_path: str) -> bool:
         """Download an image from URL and save to local path"""
         try:
+            if save_path and os.path.exists(save_path):
+                logger.info(f"Image already exists, skipping download: {save_path}")
+                return False
+
             # Make sure the URL is absolute
             if not image_url.startswith('http'):
                 image_url = urljoin(self.BASE_URL, image_url)
@@ -978,13 +982,13 @@ def main():
     scraper = UniteDBWorkingScraper(headless=True)
 
     # Test with a few Pokemon first
-    test_pokemon = ["Meowth"]
-    scraper.scrape_all_pokemon(pokemon_list=test_pokemon, delay=2.0)
+    # test_pokemon = ["Meowth"]
+    # scraper.scrape_all_pokemon(pokemon_list=test_pokemon, delay=2.0)
     #
     # print(scraper.pokemon_data['Aegislash']['Passive Ability'])
 
     # Once you verify it works, scrape all Pokemon:
-    # scraper.scrape_all_pokemon(delay=1.0)
+    scraper.scrape_all_pokemon(delay=1.0)
 
     # Save results
     scraper.save_to_json("../static/json/all_pokemon_detailed.json")
