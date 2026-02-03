@@ -716,7 +716,7 @@
         "Name": "Bitter Blade",
         "Level": "5",
         "Cooldown": "6.00s",
-        "Description": "Ceruledge focuses bitter feelings towards the world of the living into a slashing attack. The user recovers HP equals to 50% of the damage dealt with this move. Damage dealt to wild Pokémon only heals for half of the normal amount. Any HP recovered that exceeds the user's max HP is converted into a shield.",
+        "Description": "Ceruledge focuses bitter feelings towards the world of the living into a slashing attack. The user recovers HP equals to 50% of the damage dealt with this move. Damage dealt to wild Pokémon only heals for half of the normal amount. Any leftover healing from the move that exceeds the user's max HP is converted into a shield (effects that alter healing directly are ignored). The shield lasts 2s, the duration is refreshed with each application, and can stack up to 10x. The maximum capacity of the shield is determined by the life steal amount.",
         "Enhanced Level": "11",
         "Enhanced Description": "Increases the amount of HP recovered to 70% of damage dealt."
       },
@@ -3387,7 +3387,7 @@
         "Name": "Fury Swipes",
         "Level": "5",
         "Cooldown": "5.00s",
-        "Description": "The user applies a coin mark on opposing Pokémon they hit, the coin mark has up to 5 stacks and lasts for 5s. The user swipes twice with its sharp claws at the designated Pokémon, dealing damage, and granting the user a shield for 5s, and an additional shield per hit (up to 5x) for 5s. The number of swipes can be increased up to 5 if the coin mark is at 3 stacks or higher. Subsequent swipes deal half of the damage of the first hit. This attack will stun opposing Pokémon that have 1/2/3+ coin mark stacks for 0.3/0.5/0.8s respectively.\n\n  If the maximum number of swipes hit, the cooldowns for Feint, Feint Attack, and Assurance are reduced by 1s per hit, the 5th hit will fully reset the cooldown. If the coin mark is filled up, this move will consume and reset the mark.",
+        "Description": "The user applies a coin mark on opposing Pokémon they hit, the coin mark has up to 5 stacks and lasts for 5s. The user swipes twice with its sharp claws at the designated Pokémon, dealing damage, and granting the user a shield for 5s, and an additional shield per hit (up to 5x) for 5s. The number of swipes can be increased up to 5 if the coin mark is at 3 stacks or higher. Subsequent swipes deal half of the damage of the first hit. This attack will stun opposing Pokémon that have 1/2/3+ coin mark stacks for 0.3/0.5/0.8s respectively.\n\n  If the maximum number of swipes hit, the cooldowns for Feint, Feint Attack, and Assurance are reduced by 7.5% of the max cooldown per hit, the 5th hit will fully reset the cooldown. If the coin mark is filled up, this move will consume and reset the mark.",
         "Enhanced Level": "11",
         "Enhanced Description": "Increases the damage dealt by this move."
       }
@@ -4300,6 +4300,69 @@
       "Image": "Scyther - Green Illusion Dive.png"
     }
   },
+  "Sirfetch'd": {
+    "unite-db-name": "sirfetchd",
+    "uniteapi-name": "sirfetch'd",
+    "Role": "",
+    "Passive Ability": {
+      "Name": "Steadfast",
+      "Description": "Tenacity is increased by 50% while the user has a shield. When the user hits an opposing Pokémon with a basic attack or move, the user's critical-hit rate increases by 5% up to 5 times for a maximum of 25%. This enhanced critical-hit rate remains for up to 8s after the user last dealt damage with a basic attack or move.  As a Farfetch'd, the user will gain 10 Exp. Points when landing critical hits. This Exp. can trigger evolution. Critical hits deal 160% damage rather than 200%."
+    },
+    "Attack": "The user attacks by slashing with a leek.\n\nThis Pokémon has no boosted attack.\n\n",
+    "Move 1": {
+      "Name": "Dual Wingbeat",
+      "Level": "1 or 3",
+      "Cooldown": "5.00s",
+      "Description": "The user slashes in the designated direction, if the first hit lands then the user can use this move again within 5s to slam the leek in the designated spot.",
+      "Upgrade 1": {
+        "Name": "Fury Cutter",
+        "Level": "5",
+        "Cooldown": "6.00s",
+        "Description": "The user unleashes a flurry of jabs in the designated direction, with the damage increasing by 3% each time the move deals damage up to 2 times (6% max). The final hit stuns opposing Pokémon for 0.75s.\n\n  Sirfetch'd can move while unleashing the flurry of jabs.",
+        "Enhanced Level": "11",
+        "Enhanced Description": "Increases the damage of this move."
+      },
+      "Upgrade 2": {
+        "Name": "Leaf Blade",
+        "Level": "5",
+        "Cooldown": "6.00s",
+        "Description": "The user jabs in the designated direction, if the first hit lands then the user can use this move again within 10s to dash and slash in a designated direction, throwing opposing Pokémon hit for 0.5s.\n\n  If the first hit of this move misses, the cooldown is instead 2s.",
+        "Enhanced Level": "11",
+        "Enhanced Description": "Increases the damage of this move."
+      }
+    },
+    "Move 2": {
+      "Name": "Quick Attack",
+      "Level": "1 or 3",
+      "Cooldown": "5.00s",
+      "Description": "The user dashes towards the designated Pokémon, dealing damage and gaining a shield for 3s.",
+      "Upgrade 1": {
+        "Name": "Brutal Swing",
+        "Level": "7",
+        "Cooldown": "7.00s",
+        "Description": "The user throws the leek-leaf shield in an arc, dealing damage to opposing Pokémon hit. When the leek-leaf shield returns the user gains a shield for 4s. While the leek-leaf shield is mid-flight it can continuously inflict damage to the same opponent every 0.5s.\n\n  Alternatively, this move can be used again within 1.5s while the leek-leaf shield is mid-flight causing the user to leap to where the shield is and slam it into the ground dealing damage in an area, applying a 70% slow for 3s, and granting the user a shield for 4s.",
+        "Enhanced Level": "13",
+        "Enhanced Description": "Improves the strength of the shield."
+      },
+      "Upgrade 2": {
+        "Name": "Detect",
+        "Level": "7",
+        "Cooldown": "7.00s",
+        "Description": "Has the user ready the leek-leaf shield while the move button is held down, for 0.6s the user is Impervious, negating damage received, afterwards the user instead reduces damage received by 30% for up to 2.4s. When the move button is released the user dashes in the designated direction dealing damage.\n\n  If the user blocks an attack, the second stage of the move will apply a 50% slow for 2.5s, and grant a shield for 4s. If an attack is blocked while the user is Impervious, the cooldowns for Fury Cutter and Leaf Blade are reduced by 50% of their max cooldown.",
+        "Enhanced Level": "13",
+        "Enhanced Description": "Reduces this moves cooldown by 1s."
+      }
+    },
+    "Unite Move": {
+      "Name": "Lunging Leek Nova Blast",
+      "Level": "9",
+      "Cooldown": "89s",
+      "Description": "The user becomes Unstoppable and charges in the designated direction, shoving any opposing Pokémon along the way for up to 1s, dealing damage to them up to 5 times. If this move does damage near the end of the dash an explosion occurs dealing double damage and stunning opponents in the area for 0.4s. This move can go through walls if there is enough distance left.",
+      "Buff Duration": "6s",
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Sirfetch'd - Lunging Leek Nova Blast.png"
+    }
+  },
   "Slowbro": {
     "unite-db-name": "slowbro",
     "uniteapi-name": "slowbro",
@@ -5045,7 +5108,7 @@
         "Name": "Aqua Ring",
         "Level": "6",
         "Cooldown": "8.00s",
-        "Description": "Jump in a designated direction, creating continuous waves centered on self for 2.25s. Ally Pokémon who come in contact with the a wave are enveloped by a veil of water that continually restores HP.\n\n  The veil of water lasts 1.5s and heals 3 times. Touching a wave refreshes the veil.",
+        "Description": "Vaporeon jumps in a designated direction, creating continuous waves centered around herself for 2.25s. Vaporeon and any ally Pokémon that come in contact with a wave gains a buff that lasts 1.5s, healing once every 0.5s. This buff on an ally can be refreshed every time they come in contact with a wave, healing up to a maximum of 7 times.",
         "Enhanced Level": "12",
         "Enhanced Description": "Increases the amount of HP restored."
       },

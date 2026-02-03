@@ -30,3 +30,5 @@
 ## Data & Scraping Notes
 - Scraping/refresh scripts live in `scripts/` and generally update `data/` and `static/json/` outputs.
 - Keep generated assets (images/JSON) in their existing folders to avoid breaking `static/js/` lookups.
+
+Local IDE note: assume PyCharm IDE and PyCharm Markdown preview; use  ...  for LaTeX (not `math).

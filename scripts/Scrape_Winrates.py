@@ -110,6 +110,8 @@ for k, v in win_rate_dict.items():
         k3 = 'Mewtwo Y'
     elif k == 'MewtwoX':
         k3 = 'Mewtwo X'
+    elif k == 'Sirfetch':
+        k3 = "Sirfetch'd"
     else:
         k3 = k
     names.append(k3)
