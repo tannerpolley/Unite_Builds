@@ -4303,7 +4303,7 @@
   "Sirfetch'd": {
     "unite-db-name": "sirfetchd",
     "uniteapi-name": "sirfetch'd",
-    "Role": "",
+    "Role": "All-Rounder",
     "Passive Ability": {
       "Name": "Steadfast",
       "Description": "Tenacity is increased by 50% while the user has a shield. When the user hits an opposing Pokémon with a basic attack or move, the user's critical-hit rate increases by 5% up to 5 times for a maximum of 25%. This enhanced critical-hit rate remains for up to 8s after the user last dealt damage with a basic attack or move.  As a Farfetch'd, the user will gain 10 Exp. Points when landing critical hits. This Exp. can trigger evolution. Critical hits deal 160% damage rather than 200%."
