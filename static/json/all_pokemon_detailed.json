@@ -738,7 +738,7 @@
         "Name": "Phantom Force",
         "Level": "7",
         "Cooldown": "9.00s",
-        "Description": "Dash and disappear into darkness, where Ceruledge hides for 1s. While hiding, Ceruledge cannot move. When this move is used again or after 1s has passed, the user appears in the designated direction while slashing around themself, dealing damage that ignores Defense and shields of enemies and applies a 60% slow to them. If this move hits an enemy, this move's cooldown is reduced by 40% of the max cooldown.",
+        "Description": "Dash and disappear into darkness, where Ceruledge hides for 1s. While hiding, Ceruledge cannot move. When this move is used again or after 1s has passed, the user appears in the designated direction while slashing around themself, dealing damage that ignores Defense and shields of enemies and applies a 60% slow for 1s to them. If this move hits an enemy, this move's cooldown is reduced by 40% of the max cooldown.",
         "Enhanced Level": "13",
         "Enhanced Description": "Reduces this move's cooldown by 2s."
       },
@@ -1573,7 +1573,7 @@
     "Unite Move": {
       "Name": "Dreep and Destroy",
       "Level": "9",
-      "Cooldown": "0s",
+      "Cooldown": "10s",
       "Description": "The user launches two Dreepy at up to 2 different opposing Pokémon in range, damaging them and dealing additional missing HP damage to each target. If there is only one target in range, the second Dreepy deals 30% of the full damage to the target. A maximum of 2 uses can be kept in reserve for this Unite Move; there is a 2s cooldown between uses for this move. Against wild Pokémon: additional missing HP damage is capped at 1200.",
       "Buff Duration": "3s",
       "Buff Stats": "10% Max HP Shield, 10% Movement Speed for 3s; Has an internal cooldown of 30s to activate Energy Amplifier; Has an internal cooldown of 60s to activate Buddy Barrier;",
@@ -1779,7 +1779,7 @@
       "Name": "Torrent",
       "Description": "When this Pokémon deals damage to opposing Pokémon, or as time passes, the Torrent gauge increases to a max of 100. If a move is used when the Torrent gauge exceeds 50, 50 points of the gauge is consumed and the move becomes boosted.  The rate at which the Torrent gauge increases depends on your current HP with thresholds at: above 66% HP, below 66% HP, and below 33% HP. Every second gain 1/2/3 Torrent gauge."
     },
-    "Attack": "Piplup shoots a blast of water, becoming a boosted attack with every third attack dealing increased damage. Basic and Boosted attacks increase Torrent gauge by 2/3/4.\n\nWhen evolved into Prinplup or Empoleon, basic attacks become melee ranged. The user slices with their wings, becoming a boosted attack with every third attack dealing increased damage. Boosted attack increases Torrent gauge by 10/15/20.\n\n",
+    "Attack": "Piplup shoots a blast of water, becoming a boosted attack with every third attack dealing increased damage. Basic and Boosted attacks increase Torrent gauge by 2/3/4.\n\nWhen evolved into Prinplup or Empoleon, basic attacks become melee ranged. The user slices with their wings, becoming a boosted attack with every third attack dealing increased damage. Boosted attack increases Torrent gauge by 10/15/20. This Pokémon heals 15% of damage dealt with basic and boosted attacks.\n\n",
     "Move 1": {
       "Name": "Water Gun",
       "Level": "1 or 3",
@@ -2631,7 +2631,7 @@
       "Name": "Confusion",
       "Level": "1 or 3",
       "Cooldown": "9.00s",
-      "Description": "Unleash a telekinetic force in the designated direction, dealing damage to the first enemy hit. The telekinetic force clings to that enemy and then causes a delayed explosion. The explosion deals damage to enemies in the area of effect and decreases their movement speed for a short time.",
+      "Description": "Unleash a telekinetic force in the designated direction, dealing damage to the first enemy hit. The telekinetic force clings to that enemy and then causes a delayed explosion. The explosion deals damage to enemies in the area of effect and decreases their movement speed by 50% for 0.5s.",
       "Upgrade 1": {
         "Name": "Hyperspace Hole",
         "Level": "4",
@@ -3712,7 +3712,7 @@
         "Name": "Psystrike",
         "Level": "5",
         "Cooldown": "9.00s",
-        "Description": "Mewtwo becomes unstoppable and starts directing psychic waves at the designated enemy, each hit dealing damage and decreasing their movement speed by 10% for 1s, stacking up to 5 times. Psystrike damage is increased based on distance from the target enemy; the farther the projectile travels, the more damage it deals. At the end of the move, Mewtwo sends a final hit, dealing damage to the designated enemy and nearby enemies then throws them for 0.6s.\n\n  If Psystrike is intercepted by an enemy that isn't the intended target, there's no explosion and the enemy hit is shoved instead.",
+        "Description": "Mewtwo becomes unstoppable and starts directing psychic waves at the designated enemy, each hit dealing damage and decreasing their movement speed by 10% for 1s, stacking up to 5 times. Psystrike damage is increased based on distance from the target enemy; dealing up to 40% increased damage when Mewtwo is attacking from slightly beyond its basic attack range. At the end of the move, Mewtwo sends a final hit, dealing damage to the designated enemy and nearby enemies then throws them for 0.6s.\n\n  If Psystrike is intercepted by an enemy that isn't the intended target, there's no explosion and the enemy hit is shoved instead.",
         "Enhanced Level": "11",
         "Enhanced Description": "Movement speed reduction on enemies is increased to 15% for 1s, stacking up to 5 times."
       }
@@ -3986,7 +3986,7 @@
         "Name": "Mach Punch",
         "Level": "7",
         "Cooldown": "7.00s",
-        "Description": "Dash at blinding speed towards the designated direction, dealing damage to opposing Pokémon, shoving them, and leaving them unable to act for 0.6s. This move's cooldown is reduced every time a basic attack hits.\n\n  Fighter Mode: This move no longer shoves or leaves opposing Pokémon unable to act, but the number of attacks for this move is increased.\n\n  Fighter Mode: Increases damage dealt by this move.",
+        "Description": "Dash at blinding speed towards the designated direction, dealing damage to opposing Pokémon, shoving them, and leaving them unable to act for 0.6s. This move's cooldown is reduced by 0.5s every time a basic attack hits.\n\n  Fighter Mode: This move no longer shoves or leaves opposing Pokémon unable to act, but the number of attacks for this move is increased to 3 hits.\n\n  Fighter Mode: Increases damage dealt by this move.",
         "Enhanced Level": "13",
         "Enhanced Description": "  Fighter Mode: Increases damage dealt by this move."
       }
@@ -4357,7 +4357,7 @@
       "Name": "Lunging Leek Nova Blast",
       "Level": "9",
       "Cooldown": "89s",
-      "Description": "The user becomes Unstoppable and charges in the designated direction, shoving any opposing Pokémon along the way for up to 1s, dealing damage to them up to 5 times. If this move does damage near the end of the dash an explosion occurs dealing double damage and stunning opponents in the area for 0.4s. This move can go through walls if there is enough distance left.",
+      "Description": "The user becomes Unstoppable, as well as maxing out the Steadfast gauge, and charges in the designated direction, shoving any opposing Pokémon along the way for up to 1s, dealing damage to them up to 5 times. If this move does damage near the end of the dash an explosion occurs dealing double damage and stunning opponents in the area for 0.4s. This move can go through walls if there is enough distance left.",
       "Buff Duration": "6s",
       "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
       "Image": "Sirfetch'd - Lunging Leek Nova Blast.png"
@@ -5318,6 +5318,69 @@
       "Buff Duration": "6s",
       "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
       "Image": "Zacian - Sovereign Sword.png"
+    }
+  },
+  "Zapdos": {
+    "unite-db-name": "zapdos",
+    "uniteapi-name": "zapdos",
+    "Role": "Attacker",
+    "Passive Ability": {
+      "Name": "Static",
+      "Description": "When the user receives damage from nearby Pokémon from the opposing team, the damaging Pokémon becomes paralyzed. This Ability goes on a 15s cooldown when triggered. When the user hits with a boosted attack, Thunder Shock, or Thunderbolt, they create an electric field. This field will remain for 3s, dealing damage and slowing opposing Pokémon in it by 30%.  The movement speed of opposing Pokémon paralyzed by this Ability is decreased by 30% and their basic attack speed is decreased by 10% for 2.5s."
+    },
+    "Attack": "Gains a Boosted Attack every 8s, launching a powerful electric orb and dealing damage to opposing Pokémon. If this move hits Pokémon from the opposing team, the user's boosted attack cooldowns are reduced.\n\n",
+    "Move 1": {
+      "Name": "Thunder Shock",
+      "Level": "1 or 3",
+      "Cooldown": "5.00s",
+      "Description": "Attack with a jolt of electricity. If this move hits an opposing Pokémon, it also zaps a nearby opposing Pokémon, dealing damage to them.",
+      "Upgrade 1": {
+        "Name": "Thunderbolt",
+        "Level": "5",
+        "Cooldown": "6.00s",
+        "Description": "Unleash a strong electric blast to the designated area, dealing damage and paralyzing opposing Pokémon.\n\n  The movement speed of opposing Pokémon paralyzed by this Ability is decreased by 30% and their basic attack speed is decreased by 10% for 2.5s.",
+        "Enhanced Level": "11",
+        "Enhanced Description": "Reduces this move's cooldown based on the number of Pokémon hit."
+      },
+      "Upgrade 2": {
+        "Name": "",
+        "Level": "",
+        "Cooldown": "",
+        "Description": "",
+        "Enhanced Level": "",
+        "Enhanced Description": ""
+      }
+    },
+    "Move 2": {
+      "Name": "Discharge",
+      "Level": "1 or 3",
+      "Cooldown": "7.00s",
+      "Description": "Has the user let loose 2 waves of electricity from their feathers, dealing damage to nearby opposing Pokémon and leaving them paralyzed. If there is an electric field within this move's area of effect, the electric field is absorbed, increasing this move's area of effect and releasing a third wave of electricity. The second and third waves deal a stacking 15% increased damage to Pokémon hit by the preceeding waves. The movement speed of opposing Pokémon paralyzed by this Ability is decreased by 30% and their basic attack speed is decreased by 10% for 2.5s.",
+      "Upgrade 1": {
+        "Name": "Zap Cannon",
+        "Level": "7",
+        "Cooldown": "5.00s",
+        "Description": "Fire an electric cannon-like blast that explodes on contact, dealing damage to opposing Pokémon caught in the explosion's area of effect. When the electric orb passes through an electric field, it absorbs the field, increasing its size, travel distance, and damage dealt. Opposing Pokémon caught in the explosion are also left unable to act for 0.3s. A maximum of 2 uses can be kept in reserve for this move, and there is a 1s cooldown between uses.",
+        "Enhanced Level": "13",
+        "Enhanced Description": "When the electric orb passes through an electric field, the orb's size increases, along with the duration opposing Pokémon are left unable to act."
+      },
+      "Upgrade 2": {
+        "Name": "",
+        "Level": "",
+        "Cooldown": "",
+        "Description": "",
+        "Enhanced Level": "",
+        "Enhanced Description": ""
+      }
+    },
+    "Unite Move": {
+      "Name": "High-Voltage Siege",
+      "Level": "9",
+      "Cooldown": "89s",
+      "Description": "Has the user continuously drop lightning bolts in the designated area, creating an electric field where the lightning strikes. The lightning bolts paralyze and deal damage to opposing Pokémon they hit. If lightning bolts hit the same Pokémon 3 consecutive times, that Pokémon will be left unable to act. If lightning bolts hit on of the opposing team's goal zones 5 times, that goal zone will become defenseless (scoring is instant) for 5s or until a goal is scored. The movement speed of opposing Pokémon paralyzed by this Ability is decreased by 30% and their basic attack speed is decreased by 10% for 2.5s.",
+      "Buff Duration": "6s",
+      "Buff Stats": "30% Movement Speed, 30% CDR, 20% Max HP Shield",
+      "Image": "Zapdos - High-Voltage Siege.png"
     }
   },
   "Zeraora": {
