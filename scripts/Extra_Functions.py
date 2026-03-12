@@ -3,6 +3,11 @@ import pandas as pd
 from collections import defaultdict
 import json
 import ast
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+MOVESETS_CSV_PATH = REPO_ROOT / "data" / "csv" / "movesets.csv"
+DATA_JS_PATH = REPO_ROOT / "static" / "js" / "data.js"
 
 def organize_df(df, column_titles):
 
@@ -13,12 +18,12 @@ def organize_df(df, column_titles):
 
     df = df.reindex(columns=column_titles)
 
-    df.to_csv('../data/csv/movesets.csv',
+    df.to_csv(MOVESETS_CSV_PATH,
               index=False,
               quoting=1,
               )
 
-    df = pd.read_csv('../data/csv/movesets.csv')
+    df = pd.read_csv(MOVESETS_CSV_PATH)
 
     df['Battle Items'] = df['Battle Items'].apply(ast.literal_eval)
 
@@ -38,13 +43,13 @@ def organize_df(df, column_titles):
         df_final.loc[i, 'Battle Item'] = f'Battle_Items/{row["Battle Item"]}.png'
 
     # df = df[df['Pick Rate'] >= .75]
-    df_final.to_csv("../data/csv/movesets.csv",
+    df_final.to_csv(MOVESETS_CSV_PATH,
                     index=False,
                     quoting=1,
                     )
 
     # Load and process the CSV b
-    df = pd.read_csv("../data/csv/movesets.csv")
+    df = pd.read_csv(MOVESETS_CSV_PATH)
     df["Move 1"] = df["Move 1"].apply(ensure_list)
     df["Move 2"] = df["Move 2"].apply(ensure_list)
 
@@ -65,7 +70,7 @@ def organize_df(df, column_titles):
         final_data.append(moveset_entry)
 
     # Export to data.js
-    with open("../static/js/data.js", "w", encoding="utf-8") as f:
+    with open(DATA_JS_PATH, "w", encoding="utf-8") as f:
         f.write("const items = ")
         json.dump(final_data, f, indent=2)
         f.write(";")

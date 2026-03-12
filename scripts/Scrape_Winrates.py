@@ -1,29 +1,81 @@
 from bs4 import BeautifulSoup
 import os
 import json
+import quopri
+import sys
 import pandas as pd
 import numpy as np
 from pprint import pprint
+from pathlib import Path
+from urllib.parse import unquote
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
 from scripts.Extra_Functions import fix_special_cases, organize_df
 
 
 np.set_printoptions(legacy='1.25')
 
+META_HTML_PATH = REPO_ROOT / "data" / "html" / "Unite API _ Pokémon Unite Meta Tierlist.html"
+DATE_PATH = REPO_ROOT / "data" / "txt" / "date.txt"
+MATCHES_PATH = REPO_ROOT / "data" / "txt" / "matches.txt"
+UNITE_META_CSV_PATH = REPO_ROOT / "data" / "csv" / "Unite_Meta.csv"
+POKEMON_DETAILS_PATH = REPO_ROOT / "static" / "json" / "all_pokemon_detailed.json"
+BATTLE_ITEMS_PATH = REPO_ROOT / "data" / "battle_items.json"
+POKEMON_SITES_PATH = REPO_ROOT / "data" / "html" / "Pokemon_Sites"
+def get_simple_stat_value(soup, label_fragments):
+    for stat_block in soup.select("div[class*='simpleStat_stat__']"): 
+        paragraphs = [p.get_text(strip=True) for p in stat_block.find_all("p")]
+        if len(paragraphs) < 2:
+            continue
+
+        value = paragraphs[0]
+        label = " ".join(paragraphs[1:]).lower()
+        if any(fragment in label for fragment in label_fragments):
+            return value
+
+    for paragraph in soup.find_all("p"):
+        label = paragraph.get_text(" ", strip=True).lower()
+        if not any(fragment in label for fragment in label_fragments):
+            continue
+
+        value_node = paragraph.find_previous_sibling("p")
+        if value_node is None:
+            continue
+
+        value = value_node.get_text(strip=True)
+        if value:
+            return value
+
+    raise ValueError(f"Could not find simple stat for labels: {label_fragments}")
+
+
+def extract_image_key(src, prefix):
+    decoded_src = unquote(src)
+    if "url=" in decoded_src:
+        decoded_src = decoded_src.split("url=", 1)[1].split("&", 1)[0]
+
+    filename = decoded_src.split("/")[-1]
+    stem = filename.rsplit(".", 1)[0]
+    if stem.startswith(prefix):
+        return stem[len(prefix):]
+    return stem
+
+
 # Gather overall Win Rate and Pick Rate data from main meta page
 
-with open('../data/html/Unite API _ Pokémon Unite Meta Tierlist.html', 'r') as fp:
-    soup = BeautifulSoup(fp, "html.parser")
+with open(META_HTML_PATH, "rb") as fp:
+    soup = BeautifulSoup(quopri.decodestring(fp.read()).decode("utf-8", errors="ignore"), "html.parser")
 
-    date, matches = soup.find_all('div', class_="simpleStat_stat__o0Y7q")
+    date = get_simple_stat_value(soup, ["last updated", "updated"])
+    matches = float(get_simple_stat_value(soup, ["total games analyzed", "games analyzed"]).replace(",", ""))
 
-    date = date.find('p', class_="mantine-focus-auto simpleStat_count__dG_xB m_b6d8b162 mantine-Text-root").text
-    matches = float(
-        matches.find('p', class_="mantine-focus-auto simpleStat_count__dG_xB m_b6d8b162 mantine-Text-root").text)
-
-    with open("../data/txt/date.txt", "w") as f:
+    with open(DATE_PATH, "w", encoding="utf-8") as f:
         f.write(date)
 
-    with open("../data/txt/matches.txt", "w") as f:
+    with open(MATCHES_PATH, "w", encoding="utf-8") as f:
         f.write(str(matches))
 
     class_str = "sc-d5d8a548-1 jXtpKR"
@@ -56,9 +108,9 @@ with open('../data/html/Unite API _ Pokémon Unite Meta Tierlist.html', 'r') as 
                                                          win_rate_block.find_all('img'),
                                                          ban_rate_block.find_all('img')
                                                          ):
-        pick_rate_name.append(pick_mon_name['src'][39:-14])
-        win_rate_name.append(win_mon_name['src'][39:-14])
-        ban_rate_name.append(ban_mon_name['src'][39:-14])
+        pick_rate_name.append(extract_image_key(pick_mon_name["src"], "t_Square_"))
+        win_rate_name.append(extract_image_key(win_mon_name["src"], "t_Square_"))
+        ban_rate_name.append(extract_image_key(ban_mon_name["src"], "t_Square_"))
 
 
 pick_rate_dict = {}
@@ -118,11 +170,11 @@ for k, v in win_rate_dict.items():
 
 df = pd.DataFrame(combined_dict, index=names)
 
-df.to_csv('../data/csv/Unite_Meta.csv')
+df.to_csv(UNITE_META_CSV_PATH)
 #
 # #%%
 #
-df = pd.read_csv('../data/csv/Unite_Meta.csv', index_col=0)
+df = pd.read_csv(UNITE_META_CSV_PATH, index_col=0)
 
 win_rate_dict = {}
 pick_rate_dict = {}
@@ -132,14 +184,14 @@ for i, row in df.iterrows():
     pick_rate_dict[i] = row['Pick Rate']
     ban_rate_dict[i] = row['Ban Rate']
     
-with open("../static/json/all_pokemon_detailed.json") as f_in:
+with open(POKEMON_DETAILS_PATH, encoding="utf-8") as f_in:
     pokemon_dict = json.load(f_in)
 
-with open("../data/battle_items.json") as f_in:
+with open(BATTLE_ITEMS_PATH, encoding="utf-8") as f_in:
     battle_items_dict = json.load(f_in)
 
 
-path = r'C:\Users\Tanner\Documents\git\Unite_Builds\data\html\Pokemon_Sites'
+path = str(POKEMON_SITES_PATH)
 
 files = os.listdir(path)
 for file in files:
@@ -220,9 +272,9 @@ for file in files:
 
         continue
 
-    with open(path + '\\' + file, 'r') as fp:
+    with open(path + '\\' + file, 'rb') as fp:
 
-        soup = BeautifulSoup(fp, "html.parser")
+        soup = BeautifulSoup(quopri.decodestring(fp.read()).decode("utf-8", errors="ignore"), "html.parser")
 
         # Gets all the rows of the existing movesets for the current pokemon
         moveset_rows = soup.find_all('div', class_='sc-a9315c2e-0 dNgHcB')
@@ -267,7 +319,7 @@ for file in files:
             for j, item_column in enumerate(item_columns):
                 # Contains both the pick rate and win rate for each item
                 pick_rate, win_rate = item_column.find_all('p', class_='sc-6d6ea15e-3 LHyXa')
-                item_name = battle_items_dict[item_column.find('img')['src'][37:-15]]
+                item_name = battle_items_dict[extract_image_key(item_column.find("img")["src"], "t_prop_")]
 
                 pick_rate = float(pick_rate.text[:-2])
                 win_rate = float(win_rate.text[:-2])
