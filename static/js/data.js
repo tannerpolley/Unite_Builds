@@ -3293,7 +3293,7 @@ const items = [
   {
     "Name": "Ho-Oh",
     "Pokemon": "Pokemon/Ho-Oh.png",
-    "Role": "Attacker",
+    "Role": "Defender",
     "Move Set": "Fire Spin/Sky Attack",
     "Move 1": [
       "Moves/Ho-Oh - Fire Spin.png"
@@ -3316,7 +3316,7 @@ const items = [
   {
     "Name": "Ho-Oh",
     "Pokemon": "Pokemon/Ho-Oh.png",
-    "Role": "Attacker",
+    "Role": "Defender",
     "Move Set": "Sacred Fire/Flamethrower",
     "Move 1": [
       "Moves/Ho-Oh - Sacred Fire.png"
@@ -3339,7 +3339,7 @@ const items = [
   {
     "Name": "Ho-Oh",
     "Pokemon": "Pokemon/Ho-Oh.png",
-    "Role": "Attacker",
+    "Role": "Defender",
     "Move Set": "Fire Spin/Flamethrower",
     "Move 1": [
       "Moves/Ho-Oh - Fire Spin.png"
@@ -3362,7 +3362,7 @@ const items = [
   {
     "Name": "Ho-Oh",
     "Pokemon": "Pokemon/Ho-Oh.png",
-    "Role": "Attacker",
+    "Role": "Defender",
     "Move Set": "Sacred Fire/Sky Attack",
     "Move 1": [
       "Moves/Ho-Oh - Sacred Fire.png"

@@ -2536,7 +2536,7 @@
   "Ho-Oh": {
     "unite-db-name": "ho-oh",
     "uniteapi-name": "ho-oh",
-    "Role": "Attacker",
+    "Role": "Defender",
     "Passive Ability": {
       "Name": "Regenerator",
       "Description": "If this Pokémon doesn't take damage from enemy Pokémon (Wild Pokémon do not count) for 3s, it will recover 3% max HP every 2 seconds. Damage to shields will not deactivate Regenerator. Ho-oh additionally recovers 0.3% max HP every 2 seconds."
