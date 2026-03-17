@@ -3875,6 +3875,11 @@
       "Image": "Miraidon - Bright Future Meteor Storm.png"
     }
   },
+  "Moltres": {
+    "unite-db-name": "moltres",
+    "uniteapi-name": "moltres",
+    "Role": "All-Rounder"
+  },
   "Mr. Mime": {
     "unite-db-name": "mr.mime",
     "uniteapi-name": "mrmime",

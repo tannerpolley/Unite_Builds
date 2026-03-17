@@ -14,6 +14,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from scripts.Extra_Functions import fix_special_cases, organize_df
+from scripts.format_images import format_static_images
 
 
 np.set_printoptions(legacy='1.25')
@@ -340,3 +341,5 @@ column_titles = ["Name", "Pokemon", "Move Set", "Win Rate", "Pick Rate", "Role",
 
 df = fix_special_cases(movesets, matches, pick_rate_dict, win_rate_dict)
 organize_df(df, column_titles)
+
+format_static_images()
