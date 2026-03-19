@@ -24,8 +24,36 @@ DATE_PATH = REPO_ROOT / "data" / "txt" / "date.txt"
 MATCHES_PATH = REPO_ROOT / "data" / "txt" / "matches.txt"
 UNITE_META_CSV_PATH = REPO_ROOT / "data" / "csv" / "Unite_Meta.csv"
 POKEMON_DETAILS_PATH = REPO_ROOT / "static" / "json" / "all_pokemon_detailed.json"
-BATTLE_ITEMS_PATH = REPO_ROOT / "data" / "battle_items.json"
+SITE_METADATA_PATH = REPO_ROOT / "static" / "json" / "site_metadata.json"
+BATTLE_ITEMS_PATH = REPO_ROOT / "data" / "json" / "unite_db_battle_items.json"
 POKEMON_SITES_PATH = REPO_ROOT / "data" / "html" / "Pokemon_Sites"
+
+BATTLE_ITEM_IMAGE_KEY_ALIASES = {
+    "Purify": "Full Heal",
+    "Gear": "Slow Smoke",
+    "Ganrao": "Goal Getter",
+    "Controller": "Goal Hacker",
+    "Tail": "Fluffy Tail",
+}
+
+
+def normalize_battle_item_name(name):
+    return name.replace(" ", "").replace(".", "").replace("-", "")
+
+
+def build_battle_item_lookup(items_payload):
+    lookup = {}
+
+    for item in items_payload:
+        display_name = item.get("display_name") or item["name"]
+        lookup[normalize_battle_item_name(item["name"])] = display_name
+        lookup[normalize_battle_item_name(display_name)] = display_name
+
+    for image_key, display_name in BATTLE_ITEM_IMAGE_KEY_ALIASES.items():
+        lookup[normalize_battle_item_name(image_key)] = display_name
+    return lookup
+
+
 def get_simple_stat_value(soup, label_fragments):
     for stat_block in soup.select("div[class*='simpleStat_stat__']"): 
         paragraphs = [p.get_text(strip=True) for p in stat_block.find_all("p")]
@@ -78,6 +106,14 @@ with open(META_HTML_PATH, "rb") as fp:
 
     with open(MATCHES_PATH, "w", encoding="utf-8") as f:
         f.write(str(matches))
+
+    SITE_METADATA_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with open(SITE_METADATA_PATH, "w", encoding="utf-8") as f:
+        json.dump({
+            "date": date,
+            "matches": matches,
+        }, f, indent=2)
+        f.write("\n")
 
     class_str = "sc-d5d8a548-1 jXtpKR"
     # print(len(soup.find_all('div', class_=class_str)))
@@ -189,7 +225,7 @@ with open(POKEMON_DETAILS_PATH, encoding="utf-8") as f_in:
     pokemon_dict = json.load(f_in)
 
 with open(BATTLE_ITEMS_PATH, encoding="utf-8") as f_in:
-    battle_items_dict = json.load(f_in)
+    battle_items_dict = build_battle_item_lookup(json.load(f_in))
 
 
 path = str(POKEMON_SITES_PATH)

@@ -2,8 +2,9 @@
   "name": "unite_builds",
   "version": "1.0.0",
   "description": "",
-  "main": "static/js/data.js",
+  "main": "scripts/screenshot.js",
   "scripts": {
+    "build:patch-history": "node scripts/build_patch_history.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "preview": "node scripts/screenshot.js"
   },

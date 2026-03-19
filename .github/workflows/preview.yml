@@ -12,6 +12,7 @@ on:
       - '**/*.css'
       - 'static/js/**'
       - 'static/css/**'
+      - 'static/json/**'
       - 'scripts/screenshot.js'
 
 jobs:

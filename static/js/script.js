@@ -1,7 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Load move details data
-  loadMoveDetails();
-
+document.addEventListener("DOMContentLoaded", async () => {
   const tableContainer = document.getElementById("moveset-table");
   const popup = document.getElementById("popup");
   const popupContent = document.getElementById("popupContent");
@@ -9,24 +6,297 @@ document.addEventListener("DOMContentLoaded", () => {
   const minPickRate = document.getElementById("minPickRate");
   const nameSearch = document.getElementById("nameSearch");
   const resetFilters = document.getElementById("resetFilters");
+  const assetVersion = Date.now();
 
-  // Global variable for move details data
+  let tableItems = [];
+  let tableItemsPromise = null;
   let moveDetailsData = null;
+  let moveDetailsPromise = null;
+  let siteMetadata = null;
+  let siteMetadataPromise = null;
+  let patchHistoryData = null;
+  let patchHistoryPromise = null;
+  let movePatchHistoryData = null;
+  let movePatchHistoryPromise = null;
 
-  // Load move details JSON at page load
-  async function loadMoveDetails() {
+  async function fetchJsonAsset(path, fallbackValue, label) {
     try {
-      // Add timestamp to prevent caching
-      const response = await fetch(`static/json/all_pokemon_detailed.json?v=${Date.now()}`);
-      if (!response.ok) throw new Error(`Failed to load: ${response.status}`);
-      moveDetailsData = await response.json();
-      console.log('Move details loaded successfully');
+      const response = await fetch(`${path}?v=${assetVersion}`);
+      if (!response.ok) {
+        throw new Error(`Failed to load: ${response.status}`);
+      }
+      return await response.json();
     } catch (error) {
-      console.error('Error loading move details:', error);
-      moveDetailsData = {}; // Fallback to empty object
+      console.error(`Error loading ${label}:`, error);
+      return fallbackValue;
     }
   }
 
+  async function loadTableItems() {
+    if (tableItems.length > 0) {
+      return tableItems;
+    }
+
+    if (!tableItemsPromise) {
+      tableItemsPromise = (async () => {
+        tableItems = await fetchJsonAsset("static/json/moveset_rows.json", [], "table rows");
+        return tableItems;
+      })();
+    }
+
+    return tableItemsPromise;
+  }
+
+  async function loadMoveDetails() {
+    if (moveDetailsData) {
+      return moveDetailsData;
+    }
+
+    if (!moveDetailsPromise) {
+      moveDetailsPromise = (async () => {
+        moveDetailsData = await fetchJsonAsset("static/json/all_pokemon_detailed.json", {}, "move details");
+        return moveDetailsData;
+      })();
+    }
+
+    return moveDetailsPromise;
+  }
+
+  async function loadSiteMetadata() {
+    if (siteMetadata) {
+      return siteMetadata;
+    }
+
+    if (!siteMetadataPromise) {
+      siteMetadataPromise = (async () => {
+        siteMetadata = await fetchJsonAsset("static/json/site_metadata.json", {}, "site metadata");
+        return siteMetadata;
+      })();
+    }
+
+    return siteMetadataPromise;
+  }
+
+  async function loadPatchHistory() {
+    if (patchHistoryData) {
+      return patchHistoryData;
+    }
+
+    if (patchHistoryPromise) {
+      return patchHistoryPromise;
+    }
+
+    patchHistoryPromise = (async () => {
+      try {
+        const response = await fetch(`static/json/pokemon_patch_history.json?v=${assetVersion}`);
+        if (!response.ok) throw new Error(`Failed to load: ${response.status}`);
+        patchHistoryData = await response.json();
+        console.log('Patch history loaded successfully');
+      } catch (error) {
+        console.error('Error loading patch history:', error);
+        patchHistoryData = {};
+      }
+
+      return patchHistoryData;
+    })();
+
+    return patchHistoryPromise;
+  }
+
+  async function loadMovePatchHistory() {
+    if (movePatchHistoryData) {
+      return movePatchHistoryData;
+    }
+
+    if (movePatchHistoryPromise) {
+      return movePatchHistoryPromise;
+    }
+
+    movePatchHistoryPromise = (async () => {
+      try {
+        const response = await fetch(`static/json/pokemon_move_patch_history.json?v=${assetVersion}`);
+        if (!response.ok) throw new Error(`Failed to load: ${response.status}`);
+        movePatchHistoryData = await response.json();
+        console.log('Move patch history loaded successfully');
+      } catch (error) {
+        console.error('Error loading move patch history:', error);
+        movePatchHistoryData = {};
+      }
+
+      return movePatchHistoryData;
+    })();
+
+    return movePatchHistoryPromise;
+  }
+
+  function escapeHtml(value) {
+    return String(value ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function normalizePatchText(value) {
+    return String(value ?? '')
+      .replace(/\\([\[\]_*`])/g, '$1')
+      .replace(/\n?\*\*\*\s*$/g, '')
+      .trim();
+  }
+
+  function formatPatchDate(value) {
+    if (!value) {
+      return '';
+    }
+
+    const parsed = new Date(`${value}T00:00:00`);
+    if (Number.isNaN(parsed.getTime())) {
+      return value;
+    }
+
+    return parsed.toLocaleDateString(undefined, {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  }
+
+  function getPatchDisplay(patch) {
+    const fullTitle = normalizePatchText(patch.title || patch.version || '');
+    const versionLabel = patch.version ? `Patch ${patch.version}` : fullTitle;
+    let subtitle = '';
+
+    if (patch.version && fullTitle.toLowerCase().startsWith(versionLabel.toLowerCase())) {
+      subtitle = fullTitle.slice(versionLabel.length).trim();
+    } else if (fullTitle !== versionLabel) {
+      subtitle = fullTitle;
+    }
+
+    return {
+      versionLabel,
+      subtitle,
+      formattedDate: formatPatchDate(patch.patchDate)
+    };
+  }
+
+  function formatPercentChange(beforeValue, afterValue) {
+    if (!Number.isFinite(beforeValue) || !Number.isFinite(afterValue) || beforeValue === 0) {
+      return null;
+    }
+
+    const percentChange = ((afterValue - beforeValue) / beforeValue) * 100;
+    if (Math.abs(percentChange) < 0.5) {
+      return 'about unchanged';
+    }
+
+    const rounded = Math.round(percentChange);
+    return `${rounded > 0 ? '+' : ''}${rounded}%`;
+  }
+
+  function summarizeLevelSeries(body) {
+    const normalizedBody = normalizePatchText(body);
+    const summaries = [];
+    const sectionRegex = /\*\*([^*]+)\*\*:\s*\n([\s\S]*?)(?=\n\*\*[^*]+\*\*:\s*\n|$)/g;
+    let sectionMatch;
+
+    while ((sectionMatch = sectionRegex.exec(normalizedBody)) !== null) {
+      const statName = sectionMatch[1].trim();
+      const parsedLevels = sectionMatch[2]
+        .split('\n')
+        .map((line) => line.trim())
+        .filter((line) => /^Lv(?:l)?\s*\d+/i.test(line))
+        .map((line) => {
+          const levelMatch = line.replace(/,/g, '').match(/^Lv(?:l)?\s*(\d+).*?(-?\d+(?:\.\d+)?)\s*(?:->|→)\s*(-?\d+(?:\.\d+)?)/i);
+          if (!levelMatch) {
+            return null;
+          }
+
+          return {
+            level: Number(levelMatch[1]),
+            before: Number(levelMatch[2]),
+            after: Number(levelMatch[3])
+          };
+        })
+        .filter(Boolean);
+
+      if (parsedLevels.length < 2) {
+        continue;
+      }
+
+      const first = parsedLevels[0];
+      const last = parsedLevels[parsedLevels.length - 1];
+      const firstPercent = formatPercentChange(first.before, first.after);
+      const lastPercent = formatPercentChange(last.before, last.after);
+
+      if (!firstPercent || !lastPercent) {
+        continue;
+      }
+
+      let summary = '';
+      if (firstPercent === 'about unchanged' && lastPercent === 'about unchanged') {
+        continue;
+      } else if (firstPercent === lastPercent) {
+        summary = `${statName} ${lastPercent} across Lv ${first.level}-${last.level}`;
+      } else if (firstPercent === 'about unchanged') {
+        summary = `${statName} is about unchanged at Lv ${first.level} and ${lastPercent} by Lv ${last.level}`;
+      } else if (lastPercent === 'about unchanged') {
+        summary = `${statName} ${firstPercent} at Lv ${first.level} and is about unchanged by Lv ${last.level}`;
+      } else {
+        summary = `${statName} ${firstPercent} at Lv ${first.level} and ${lastPercent} by Lv ${last.level}`;
+      }
+
+      summaries.push(summary);
+    }
+
+    return summaries;
+  }
+
+  function renderStatSummary(body) {
+    const summaries = summarizeLevelSeries(body);
+    if (summaries.length === 0) {
+      return '';
+    }
+
+    return `
+      <div class="patch-stat-summary">
+        ${summaries.map((summary) => `<span class="patch-stat-pill">${escapeHtml(summary)}</span>`).join('')}
+      </div>
+    `;
+  }
+
+  function renderPatchHistorySection(pokemonName, patchHistory) {
+    const historyMarkup = patchHistory.length > 0
+      ? patchHistory.map((patch) => {
+          const patchDisplay = getPatchDisplay(patch);
+          return `
+            <article class="patch-history-card">
+              <div class="patch-history-meta">
+                <div class="patch-history-version">${escapeHtml(patchDisplay.versionLabel)}</div>
+                ${patchDisplay.subtitle ? `<h5 class="patch-history-title">${escapeHtml(patchDisplay.subtitle)}</h5>` : ''}
+                ${patchDisplay.formattedDate ? `<div class="patch-history-date">${escapeHtml(patchDisplay.formattedDate)}</div>` : ''}
+              </div>
+              <div class="patch-history-changes">
+                ${patch.changes.map((change) => `
+                  <div class="patch-change">
+                    <h6 class="patch-change-heading">${escapeHtml(normalizePatchText(change.heading || 'General'))}</h6>
+                    ${renderStatSummary(change.body || '')}
+                    <div class="patch-change-body">${escapeHtml(normalizePatchText(change.body || ''))}</div>
+                  </div>
+                `).join('')}
+              </div>
+            </article>
+          `;
+        }).join('')
+      : `<p class="patch-history-empty">No patch history available for ${escapeHtml(pokemonName)}.</p>`;
+
+    return `
+      <div class="move-detail-section patch-history-section">
+        <h4 class="move-detail-heading">Patches</h4>
+        ${historyMarkup}
+      </div>
+    `;
+  }
   function getOrdinalSuffix(day) {
     const j = day % 10,
           k = day % 100;
@@ -35,26 +305,27 @@ document.addEventListener("DOMContentLoaded", () => {
     if (j === 3 && k !== 13) return "rd";
     return "th";
 }
-
-    // utility to fetch a text file and trim any trailing newline
-  async function fetchText(path) {
-    const res = await fetch(path);
-    if (!res.ok) throw new Error(`Couldn’t load ${path}: ${res.status}`);
-    return (await res.text()).trim();
-  }
-
   async function injectHeaderText() {
     try {
-      const [rawDate, matchesRaw] = await Promise.all([
-        fetchText('data/txt/date.txt'),
-        fetchText('data/txt/matches.txt')
-      ]);
-      const d = new Date(rawDate);            // parse “2025-05-22” or “May 22, 2025”
+      const metadata = await loadSiteMetadata();
+      const rawDate = metadata.date;
+      const matchesRaw = metadata.matches;
+
+      if (!rawDate || matchesRaw == null) {
+        return;
+      }
+
+      const d = new Date(rawDate);
       const day   = d.getDate();
       const month = d.toLocaleString('default',{ month: 'long' });
       const year  = d.getFullYear();
       const suffix = getOrdinalSuffix(day);
-      const formattedDate = `${month} ${day}${suffix}`;
+      const hasExplicitYear = /\b\d{4}\b/.test(String(rawDate));
+      const formattedDate = Number.isNaN(d.getTime())
+        ? rawDate
+        : hasExplicitYear
+          ? `${month} ${day}${suffix}, ${year}`
+          : `${month} ${day}${suffix}`;
 
       const matches = Number(matchesRaw)
                          .toLocaleString(undefined,{ maximumFractionDigits: 0 });
@@ -66,12 +337,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // run it once the DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', injectHeaderText);
-  } else {
-    injectHeaderText();
-  }
+  await Promise.all([
+    loadMoveDetails(),
+    loadTableItems(),
+    injectHeaderText()
+  ]);
 
   
   // Desktop-only mode - no mobile detection needed
@@ -192,7 +462,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let minEntry = null;
     
     // Process all items to get the absolute min and max
-    items.forEach(entry => {
+    tableItems.forEach(entry => {
       const rate = parseFloat(entry["Win Rate"]);
       if (!isNaN(rate)) {
         if (rate < min) {
@@ -455,7 +725,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <span class="move-wrapper">${renderMoves(entry["Move 2"])}</span>
         </div>
         <div class="table-cell">
-          <button class="view-items" data-index="${items.indexOf(entry)}" 
+          <button class="view-items" data-index="${tableItems.indexOf(entry)}" 
                   style="color: ${winRateColor}; font-weight: bold; background: none; border: none;" 
                   data-win-rate="${entry["Win Rate"]}">
             ${format(entry["Win Rate"])}
@@ -489,7 +759,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       button.addEventListener("click", e => {
         const index = parseInt(e.target.dataset.index);
-        showPopup(items[index]);
+        showPopup(tableItems[index]);
       });
     });
 
@@ -500,7 +770,7 @@ document.addEventListener("DOMContentLoaded", () => {
       el.addEventListener("click", (e) => {
         e.stopPropagation(); // Prevent document click from immediately clearing
         activeNameFilter = el.dataset.name;
-        activeRoleFilter = null; // Clear role filter when setting name filter
+        activeRoleFilters = []; // Clear role filters when setting name filter
         renderRows(filterItems());
       });
     });
@@ -634,7 +904,7 @@ document.addEventListener("DOMContentLoaded", () => {
     popup.classList.remove("hidden");
   }
 
-  function showMovePopup(imgElement) {
+  async function showMovePopup(imgElement) {
     // Parse the image path
     const parsed = parseMovePath(imgElement);
     if (!parsed) {
@@ -650,6 +920,9 @@ document.addEventListener("DOMContentLoaded", () => {
       alert(`Unable to load details for ${moveName}`);
       return;
     }
+
+    const allMovePatchHistory = await loadMovePatchHistory();
+    const movePatchHistory = (allMovePatchHistory[pokemonName] && allMovePatchHistory[pokemonName][moveName]) || [];
 
     // Build popup HTML
     const moveImgSrc = imgElement.getAttribute('src');
@@ -682,6 +955,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <p class="move-description">${moveData['Enhanced Description'] || ''}</p>
           </div>
         ` : ''}
+
+        ${renderPatchHistorySection(moveName, movePatchHistory)}
       </div>
     `;
 
@@ -689,7 +964,7 @@ document.addEventListener("DOMContentLoaded", () => {
     popup.classList.remove("hidden");
   }
 
-  function showPokemonPopup(imgElement) {
+  async function showPokemonPopup(imgElement) {
     // Parse the Pokemon name from the image alt text
     const pokemonName = imgElement.getAttribute('alt');
 
@@ -706,6 +981,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const pokemonData = moveDetailsData[pokemonName];
     const pokemonImgSrc = imgElement.getAttribute('src');
+    const allPatchHistory = await loadPatchHistory();
+    const pokemonPatchHistory = allPatchHistory[pokemonName] || [];
 
     // Build popup HTML
     popupContent.innerHTML = `
@@ -774,6 +1051,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <p class="move-description" style="margin-top: 15px;">${pokemonData['Unite Move'].Description || ''}</p>
           </div>
         ` : ''}
+
+        ${renderPatchHistorySection(pokemonName, pokemonPatchHistory)}
       </div>
     `;
 
@@ -847,11 +1126,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function filterItems() {
     // Split search query into individual terms and remove empty strings
     const searchTerms = nameSearch.value.toLowerCase().split(/\s+/).filter(term => term.length > 0);
-    const selectedRoles = Array.from(document.querySelectorAll('input[name="role"]:checked'))
-      .map(checkbox => checkbox.value);
     const minRate = parseFloat(minPickRate.value) || 0;
   
-    return items.filter(entry => {
+    return tableItems.filter(entry => {
       // If there's an active name filter, only show entries matching that name
       if (activeNameFilter && entry["Name"] !== activeNameFilter) {
         return false;
@@ -999,3 +1276,8 @@ document.addEventListener("DOMContentLoaded", () => {
   attachSortHandlers();
   renderRows(filterItems());
 });
+
+
+
+
+

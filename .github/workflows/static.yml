@@ -33,11 +33,22 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Stage site artifact
+        run: |
+          rm -rf _site
+          mkdir -p _site
+          cp index.html _site/
+          cp -R static _site/static
+          cp preview.png _site/
+          cp favicon.ico _site/
+          cp CNAME _site/
+          if [ -f googlef8110ce2996a7ffd.html ]; then
+            cp googlef8110ce2996a7ffd.html _site/
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          path: '_site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

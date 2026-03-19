@@ -626,6 +626,109 @@ body {
   border-left: 3px solid #57c1ed;
 }
 
+.patch-history-section {
+  margin-top: 28px;
+}
+
+.patch-history-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(87, 193, 237, 0.18);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-top: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+}
+
+.patch-history-meta {
+  display: grid;
+  gap: 6px;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.patch-history-version {
+  color: #ffffff;
+  font-size: 1.16rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.patch-history-title {
+  margin: 0;
+  color: #57c1ed;
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.patch-history-date {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.98rem;
+}
+
+.patch-change + .patch-change {
+  margin-top: 20px;
+}
+
+.patch-change-heading {
+  margin: 0 0 10px;
+  color: #f9c74f;
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+
+.patch-stat-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.patch-stat-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background-color: rgba(87, 193, 237, 0.14);
+  border: 1px solid rgba(87, 193, 237, 0.24);
+  color: #dff7ff;
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.patch-change-body {
+  white-space: pre-wrap;
+  line-height: 1.7;
+  font-size: 0.94rem;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.patch-history-empty {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+}
+.move-popup-body .patch-history-section {
+  margin-top: 20px;
+}
+
+.move-popup-body .patch-history-card {
+  padding: 14px 16px;
+  margin-top: 12px;
+}
+
+.move-popup-body .patch-history-version {
+  font-size: 1.04rem;
+}
+
+.move-popup-body .patch-history-title {
+  font-size: 0.95rem;
+}
+
+.move-popup-body .patch-history-date {
+  font-size: 0.9rem;
+}
+
 /* Hover effect for move images */
 .move-img {
   cursor: pointer;
@@ -679,3 +782,4 @@ body {
 .popup-content::-webkit-scrollbar-thumb:hover {
   background: #6ed1ff;
 }
+

@@ -1,0 +1,15 @@
+name: Unite_Builds
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - beautifulsoup4
+  - numpy
+  - pandas
+  - pillow
+  - requests
+  - selenium
+  - pip
+  - pip:
+      - pyautogui
+      - pyperclip

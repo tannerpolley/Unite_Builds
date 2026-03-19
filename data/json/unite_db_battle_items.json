@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Eject Button",
+    "display_name": "Eject Button",
+    "description": "Quickly moves forward.",
+    "tier": "S",
+    "cooldown": 80,
+    "level": 11
+  },
+  {
+    "name": "Fluffy Tail",
+    "display_name": "Fluffy Tail",
+    "description": "Applies a debuff to the designated wild Pok\u00e9mon for 3s; disabling the target's attacks. When damaging the debuffed target: deals 100 + 100% Atk + 60% SpAtk + 10 \u00d7 (Lv. - 1) as additional damage (0.5s CD).",
+    "tier": "D",
+    "cooldown": 22,
+    "level": 10
+  },
+  {
+    "name": "Full Heal",
+    "display_name": "Full Heal",
+    "description": "Cleanses status conditions, and becomes unstoppable for 1.5s.",
+    "tier": "S",
+    "cooldown": 60,
+    "level": 14
+  },
+  {
+    "name": "Goal Getter",
+    "display_name": "Goal Getter",
+    "description": "Doubles goal-scoring speed for 10s.",
+    "tier": "D",
+    "cooldown": 60,
+    "level": 17
+  },
+  {
+    "name": "Goal Hacker",
+    "display_name": "Goal Hacker",
+    "description": "Tampers with 1 goal zone in range for 4s. If used on an ally goal zone: doubles any shield provided by the goal zone, and strengthens the goal zone's HP restoration rate (restoring HP every 0.5s) for the duration of the effect. If used on an opposing goal zone: disables shield effects and HP restoration from that goal zone for the duration of the effect. Additional applications on an affected goal zone overrides the previous effects and refreshes the duration.",
+    "tier": "D",
+    "cooldown": 80
+  },
+  {
+    "name": "Potion",
+    "display_name": "Potion",
+    "description": "Restores HP equal to 160 + 20% max HP.",
+    "tier": "A",
+    "cooldown": 30,
+    "level": 3
+  },
+  {
+    "name": "Slow Smoke",
+    "display_name": "Slow Smoke",
+    "description": "Creates a cloud of smoke in an area of effect around the user for 3.5s; decreasing the movement speed of opposing Pok\u00e9mon in the area of effect by 80%, and their basic attack speed by 50%.",
+    "tier": "C",
+    "cooldown": 35,
+    "level": 13
+  },
+  {
+    "name": "X Attack",
+    "display_name": "X Attack",
+    "description": "Increases Attack and Sp. Attack by 20%, and basic attack speed by 25% for 6.5s.",
+    "tier": "A",
+    "cooldown": 40,
+    "level": 7
+  },
+  {
+    "name": "X Speed",
+    "display_name": "X Speed",
+    "description": "Increases movement speed by 45%, and prevents movement speed from being decreased for 6s.",
+    "tier": "A",
+    "cooldown": 50,
+    "level": 8
+  },
+  {
+    "name": "Shedinja Doll",
+    "display_name": "Shedinja Doll",
+    "description": "Makes the user impervious to damage, immune to status conditions, and unable to act for 2s.",
+    "tier": "B",
+    "cooldown": 45
+  }
+]

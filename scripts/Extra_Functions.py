@@ -7,7 +7,20 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 MOVESETS_CSV_PATH = REPO_ROOT / "data" / "csv" / "movesets.csv"
-DATA_JS_PATH = REPO_ROOT / "static" / "js" / "data.js"
+MOVESET_ROWS_JSON_PATH = REPO_ROOT / "static" / "json" / "moveset_rows.json"
+
+
+def sanitize_for_json(value):
+    if isinstance(value, dict):
+        return {key: sanitize_for_json(inner_value) for key, inner_value in value.items()}
+    if isinstance(value, list):
+        return [sanitize_for_json(inner_value) for inner_value in value]
+    if isinstance(value, tuple):
+        return [sanitize_for_json(inner_value) for inner_value in value]
+    if isinstance(value, (float, np.floating)) and pd.isna(value):
+        return None
+    return value
+
 
 def organize_df(df, column_titles):
 
@@ -69,11 +82,12 @@ def organize_df(df, column_titles):
 
         final_data.append(moveset_entry)
 
-    # Export to data.js
-    with open(DATA_JS_PATH, "w", encoding="utf-8") as f:
-        f.write("const items = ")
-        json.dump(final_data, f, indent=2)
-        f.write(";")
+    json_ready_data = [sanitize_for_json(entry) for entry in final_data]
+
+    MOVESET_ROWS_JSON_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with open(MOVESET_ROWS_JSON_PATH, "w", encoding="utf-8") as f:
+        json.dump(json_ready_data, f, indent=2, allow_nan=False)
+        f.write("\n")
 
 
 
@@ -112,7 +126,7 @@ def fix_special_cases(movesets, matches, pick_rate_dict, win_rate_dict):
 
 def ensure_list(cell):
     try:
-        parsed = eval(cell)
+        parsed = ast.literal_eval(cell)
         return parsed if isinstance(parsed, list) else [cell]
     except:
         return [cell]

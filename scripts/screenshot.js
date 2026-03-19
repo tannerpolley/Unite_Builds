@@ -1,4 +1,7 @@
-const puppeteer = require('puppeteer');
+const path = require("path");
+const puppeteer = require("puppeteer");
+
+const previewPath = path.join(__dirname, "..", "preview.png");
 
 ;(async () => {
   const browser = await puppeteer.launch({
@@ -22,7 +25,7 @@ const puppeteer = require('puppeteer');
 });
   const { setTimeout } = require('node:timers/promises');
   await setTimeout(200);
-  await page.screenshot({ path: '../preview.png' });
+  await page.screenshot({ path: previewPath });
   await browser.close();
   console.log('✅ preview.png generated');
 })();
