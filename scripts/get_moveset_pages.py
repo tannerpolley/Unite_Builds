@@ -48,7 +48,7 @@ if get_pages:
     wait_for_download(META_HTML_PATH, 'Main Meta Page')
 
     sync_result = sync_missing_pokemon_entries(META_HTML_PATH)
-    pokemon_dict = sync_result['pokemon_dict']
+    pokemon_dict = sync_result['roster_dict']
     meta_entry_map = sync_result['meta_entry_map']
 
     for name, pokemon_data in pokemon_dict.items():
@@ -56,7 +56,7 @@ if get_pages:
         if ensure_pokemon_square_image(name, meta_entry):
             new_images_downloaded = True
 
-        uniteapi_name = pokemon_data['uniteapi-name']
+        uniteapi_name = pokemon_data['uniteapi_name']
         if uniteapi_name == 'scyther':
             continue
         if uniteapi_name.startswith('mega'):
@@ -92,7 +92,7 @@ if get_pages:
         time.sleep(short_rest / 2)
 else:
     sync_result = sync_missing_pokemon_entries(META_HTML_PATH)
-    pokemon_dict = sync_result['pokemon_dict']
+    pokemon_dict = sync_result['roster_dict']
     meta_entry_map = sync_result['meta_entry_map']
 
 if new_images_downloaded:

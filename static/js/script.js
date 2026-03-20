@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (!moveDetailsPromise) {
       moveDetailsPromise = (async () => {
-        moveDetailsData = await fetchJsonAsset("static/json/all_pokemon_detailed.json", {}, "move details");
+        moveDetailsData = await fetchJsonAsset("static/json/pokemon_popup_details.json", {}, "move details");
         return moveDetailsData;
       })();
     }

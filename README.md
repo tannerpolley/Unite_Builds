@@ -10,7 +10,8 @@ Static Pokemon Unite site for GitHub Pages, with local Python and Node tooling t
 
 ## Source vs generated vs published
 - Source/operator files: `scripts/`, `data/`, workflow files, manifests, and local `.codex/` notes.
-- Generated site data: `static/json/moveset_rows.json`, `static/json/all_pokemon_detailed.json`, `static/json/pokemon_patch_history.json`, `static/json/pokemon_move_patch_history.json`, `static/json/site_metadata.json`.
+- Generated site data: `static/json/moveset_rows.json`, `static/json/pokemon_popup_details.json`, `static/json/pokemon_patch_history.json`, `static/json/pokemon_move_patch_history.json`, `static/json/site_metadata.json`.
+- Build metadata: `data/json/uniteapi_roster.json` is the local roster contract for the manual Unite API saver and the moveset build.
 - Local-only caches: large raw UniteDB snapshots such as `data/json/unite_db_pokemon.json`, `data/json/unite_db_held_items.json`, `data/json/unite_db_stats.json`, and `data/json/unite_db_patch_notes_raw.json` are useful for local refresh work but are not required to be committed.
 - Published artifact: `index.html`, `static/`, `preview.png`, `favicon.ico`, `CNAME`, and the Google verification HTML file.
 
@@ -31,27 +32,31 @@ Use the repo-named Conda environment when available.
 ```powershell
 conda run -n Unite_Builds python scripts/get_moveset_pages.py
 ```
-2. Run the standard post-scrape build with:
+2. Refresh the local UniteDB JSON snapshots when popup details need updating:
+```powershell
+conda run -n Unite_Builds python scripts/fetch_unite_db_snapshots.py
+```
+3. Run the standard post-scrape build with:
 ```powershell
 conda run -n Unite_Builds python scripts/build_site.py
 ```
-3. If you only want the Python-side rebuild, run:
+4. If you only want the Unite API table rebuild, run:
 ```powershell
 conda run -n Unite_Builds python scripts/Scrape_Winrates.py
 ```
-4. Refresh UniteDB-enriched Pokemon detail data when needed with:
+5. If you only want to rebuild popup detail data from the cached UniteDB snapshot, run:
 ```powershell
 conda run -n Unite_Builds python scripts/scrape_unite_db.py
 ```
-5. Refresh patch-history JSON with:
+6. Refresh patch-history JSON with:
 ```powershell
 npm run build:patch-history
 ```
-6. Run the local smoke test with:
+7. Run the local smoke test with:
 ```powershell
 npm test
 ```
-7. Refresh the social/share preview image with:
+8. Refresh the social/share preview image with:
 ```powershell
 npm run preview
 ```

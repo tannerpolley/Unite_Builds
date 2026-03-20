@@ -17,13 +17,14 @@ if str(REPO_ROOT) not in sys.path:
 
 from scripts.Extra_Functions import fix_special_cases, organize_df
 from scripts.format_images import format_static_images
+from scripts.sync_missing_pokemon import DEFAULT_ROSTER_JSON_PATH, sync_missing_pokemon_entries
 
 
 META_HTML_PATH = REPO_ROOT / "data" / "html" / "Unite API _ Pokémon Unite Meta Tierlist.html"
 DATE_PATH = REPO_ROOT / "data" / "txt" / "date.txt"
 MATCHES_PATH = REPO_ROOT / "data" / "txt" / "matches.txt"
 UNITE_META_CSV_PATH = REPO_ROOT / "data" / "csv" / "Unite_Meta.csv"
-POKEMON_DETAILS_PATH = REPO_ROOT / "static" / "json" / "all_pokemon_detailed.json"
+UNITEAPI_ROSTER_PATH = DEFAULT_ROSTER_JSON_PATH
 SITE_METADATA_PATH = REPO_ROOT / "static" / "json" / "site_metadata.json"
 BATTLE_ITEMS_PATH = REPO_ROOT / "data" / "json" / "unite_db_battle_items.json"
 POKEMON_SITES_PATH = REPO_ROOT / "data" / "html" / "Pokemon_Sites"
@@ -158,6 +159,7 @@ def ensure_output_dirs() -> None:
         DATE_PATH.parent,
         MATCHES_PATH.parent,
         UNITE_META_CSV_PATH.parent,
+        UNITEAPI_ROSTER_PATH.parent,
         SITE_METADATA_PATH.parent,
     ):
         directory.mkdir(parents=True, exist_ok=True)
@@ -168,7 +170,6 @@ def validate_required_inputs() -> list[str]:
 
     required_files = [
         META_HTML_PATH,
-        POKEMON_DETAILS_PATH,
         BATTLE_ITEMS_PATH,
     ]
 
@@ -288,7 +289,7 @@ def build_special_case_moveset(
     return {
         "Name": pokemon_name,
         "Pokemon": f"Pokemon/{pokemon_name}.png",
-        "Role": pokemon_dict[pokemon_name]["Role"],
+        "Role": pokemon_dict[pokemon_name]["role"],
         "Pick Rate": pick_rate_dict[pokemon_name],
         "Win Rate": win_rate_dict[pokemon_name],
         "Move Set": f"{move_1_name}/{move_2_name}",
@@ -336,7 +337,7 @@ def extract_movesets(
             moveset_entry = {
                 "Name": pokemon_name,
                 "Pokemon": f"Pokemon/{pokemon_name}.png",
-                "Role": pokemon_dict[pokemon_name]["Role"],
+                "Role": pokemon_dict[pokemon_name]["role"],
             }
 
             move_names = []
@@ -382,7 +383,7 @@ def extract_movesets(
 
     if unknown_saved_pages:
         raise ValueError(
-            "Saved Pokemon pages are missing metadata entries in all_pokemon_detailed.json: "
+            "Saved Pokemon pages are missing metadata entries in data/json/uniteapi_roster.json: "
             + ", ".join(sorted(set(unknown_saved_pages)))
         )
 
@@ -403,7 +404,8 @@ def run_build(skip_image_formatting: bool = False, skip_preflight: bool = False)
     write_supporting_outputs(date, matches, generated_at)
     write_unite_meta_csv(pick_rate_dict, win_rate_dict, ban_rate_dict)
 
-    pokemon_dict = load_json(POKEMON_DETAILS_PATH, "Pokemon details")
+    sync_result = sync_missing_pokemon_entries(META_HTML_PATH, UNITEAPI_ROSTER_PATH)
+    pokemon_dict = sync_result["roster_dict"]
     battle_items_dict = build_battle_item_lookup(load_json(BATTLE_ITEMS_PATH, "battle items"))
 
     movesets = extract_movesets(pokemon_dict, pick_rate_dict, win_rate_dict, battle_items_dict)

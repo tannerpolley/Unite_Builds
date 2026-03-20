@@ -1,0 +1,530 @@
+{
+  "Meowth": {
+    "display_name": "Meowth",
+    "uniteapi_name": "meowth",
+    "role": "Speedster",
+    "square_image_key": "Meowth"
+  },
+  "Sirfetch'd": {
+    "display_name": "Sirfetch'd",
+    "uniteapi_name": "sirfetchd",
+    "role": "All-Rounder",
+    "square_image_key": "Sirfetch"
+  },
+  "Greninja": {
+    "display_name": "Greninja",
+    "uniteapi_name": "greninja",
+    "role": "Attacker",
+    "square_image_key": "Greninja"
+  },
+  "Moltres": {
+    "display_name": "Moltres",
+    "uniteapi_name": "moltres",
+    "role": "All-Rounder",
+    "square_image_key": "Moltres"
+  },
+  "Greedent": {
+    "display_name": "Greedent",
+    "uniteapi_name": "greedent",
+    "role": "Defender",
+    "square_image_key": "Greedent"
+  },
+  "Mega Charizard Y": {
+    "display_name": "Mega Charizard Y",
+    "uniteapi_name": "charizardy",
+    "role": "All-Rounder",
+    "square_image_key": "CharizardY"
+  },
+  "Zapdos": {
+    "display_name": "Zapdos",
+    "uniteapi_name": "zapdos",
+    "role": "Attacker",
+    "square_image_key": "Zapdos"
+  },
+  "Mega Lucario": {
+    "display_name": "Mega Lucario",
+    "uniteapi_name": "megalucario",
+    "role": "All-Rounder",
+    "square_image_key": "MEGALucario"
+  },
+  "Galarian Rapidash": {
+    "display_name": "Galarian Rapidash",
+    "uniteapi_name": "galarianrapidash",
+    "role": "Speedster",
+    "square_image_key": "Rapidash"
+  },
+  "Vaporeon": {
+    "display_name": "Vaporeon",
+    "uniteapi_name": "vaporeon",
+    "role": "Defender",
+    "square_image_key": "Vaporeon"
+  },
+  "Psyduck": {
+    "display_name": "Psyduck",
+    "uniteapi_name": "psyduck",
+    "role": "Supporter",
+    "square_image_key": "Psyduck"
+  },
+  "Garchomp": {
+    "display_name": "Garchomp",
+    "uniteapi_name": "garchomp",
+    "role": "All-Rounder",
+    "square_image_key": "Garchomp"
+  },
+  "Ceruledge": {
+    "display_name": "Ceruledge",
+    "uniteapi_name": "ceruledge",
+    "role": "All-Rounder",
+    "square_image_key": "Ceruledge"
+  },
+  "Mega Gyarados": {
+    "display_name": "Mega Gyarados",
+    "uniteapi_name": "megagyarados",
+    "role": "All-Rounder",
+    "square_image_key": "MegaGyarados"
+  },
+  "Mr. Mime": {
+    "display_name": "Mr. Mime",
+    "uniteapi_name": "mrmime",
+    "role": "Supporter",
+    "square_image_key": "MrMime"
+  },
+  "Urshifu": {
+    "display_name": "Urshifu",
+    "uniteapi_name": "urshifu",
+    "role": "All-Rounder",
+    "square_image_key": "Urshifu_Single"
+  },
+  "Blastoise": {
+    "display_name": "Blastoise",
+    "uniteapi_name": "blastoise",
+    "role": "Defender",
+    "square_image_key": "Blastoise"
+  },
+  "Ho-Oh": {
+    "display_name": "Ho-Oh",
+    "uniteapi_name": "hooh",
+    "role": "Defender",
+    "square_image_key": "HoOh"
+  },
+  "Latias": {
+    "display_name": "Latias",
+    "uniteapi_name": "latias",
+    "role": "Supporter",
+    "square_image_key": "Latias"
+  },
+  "Cramorant": {
+    "display_name": "Cramorant",
+    "uniteapi_name": "cramorant",
+    "role": "Attacker",
+    "square_image_key": "Cramorant"
+  },
+  "Gengar": {
+    "display_name": "Gengar",
+    "uniteapi_name": "gengar",
+    "role": "Speedster",
+    "square_image_key": "Gengar"
+  },
+  "Cinderace": {
+    "display_name": "Cinderace",
+    "uniteapi_name": "cinderace",
+    "role": "Attacker",
+    "square_image_key": "Cinderace"
+  },
+  "Zacian": {
+    "display_name": "Zacian",
+    "uniteapi_name": "zacian",
+    "role": "All-Rounder",
+    "square_image_key": "Zacian"
+  },
+  "Machamp": {
+    "display_name": "Machamp",
+    "uniteapi_name": "machamp",
+    "role": "All-Rounder",
+    "square_image_key": "Machamp"
+  },
+  "Decidueye": {
+    "display_name": "Decidueye",
+    "uniteapi_name": "decidueye",
+    "role": "Attacker",
+    "square_image_key": "Decidueye"
+  },
+  "Blissey": {
+    "display_name": "Blissey",
+    "uniteapi_name": "blissey",
+    "role": "Supporter",
+    "square_image_key": "Blissey"
+  },
+  "Charizard": {
+    "display_name": "Charizard",
+    "uniteapi_name": "charizard",
+    "role": "All-Rounder",
+    "square_image_key": "Charizard"
+  },
+  "Dodrio": {
+    "display_name": "Dodrio",
+    "uniteapi_name": "dodrio",
+    "role": "Speedster",
+    "square_image_key": "Dodrio"
+  },
+  "Pawmot": {
+    "display_name": "Pawmot",
+    "uniteapi_name": "pawmot",
+    "role": "All-Rounder",
+    "square_image_key": "Pawmot"
+  },
+  "Inteleon": {
+    "display_name": "Inteleon",
+    "uniteapi_name": "inteleon",
+    "role": "Attacker",
+    "square_image_key": "Inteleon"
+  },
+  "Latios": {
+    "display_name": "Latios",
+    "uniteapi_name": "latios",
+    "role": "Attacker",
+    "square_image_key": "Latios"
+  },
+  "Wigglytuff": {
+    "display_name": "Wigglytuff",
+    "uniteapi_name": "wigglytuff",
+    "role": "Supporter",
+    "square_image_key": "Wigglytuff"
+  },
+  "Alcremie": {
+    "display_name": "Alcremie",
+    "uniteapi_name": "alcremie",
+    "role": "Supporter",
+    "square_image_key": "Alcremie"
+  },
+  "Darkrai": {
+    "display_name": "Darkrai",
+    "uniteapi_name": "darkrai",
+    "role": "Speedster",
+    "square_image_key": "Darkrai"
+  },
+  "Dhelmise": {
+    "display_name": "Dhelmise",
+    "uniteapi_name": "dhelmise",
+    "role": "All-Rounder",
+    "square_image_key": "Dhelmise"
+  },
+  "Duraludon": {
+    "display_name": "Duraludon",
+    "uniteapi_name": "duraludon",
+    "role": "Attacker",
+    "square_image_key": "Duraludon"
+  },
+  "Blaziken": {
+    "display_name": "Blaziken",
+    "uniteapi_name": "blaziken",
+    "role": "All-Rounder",
+    "square_image_key": "Blaziken"
+  },
+  "Umbreon": {
+    "display_name": "Umbreon",
+    "uniteapi_name": "umbreon",
+    "role": "Defender",
+    "square_image_key": "Umbreon"
+  },
+  "Gardevoir": {
+    "display_name": "Gardevoir",
+    "uniteapi_name": "gardevoir",
+    "role": "Attacker",
+    "square_image_key": "Gardevoir"
+  },
+  "Meowscarada": {
+    "display_name": "Meowscarada",
+    "uniteapi_name": "meowscarada",
+    "role": "Speedster",
+    "square_image_key": "Meowscara"
+  },
+  "Mega Charizard X": {
+    "display_name": "Mega Charizard X",
+    "uniteapi_name": "charizardx",
+    "role": "All-Rounder",
+    "square_image_key": "CharizardX"
+  },
+  "Crustle": {
+    "display_name": "Crustle",
+    "uniteapi_name": "crustle",
+    "role": "Defender",
+    "square_image_key": "Crustle"
+  },
+  "Mew": {
+    "display_name": "Mew",
+    "uniteapi_name": "mew",
+    "role": "Attacker",
+    "square_image_key": "Mew"
+  },
+  "Falinks": {
+    "display_name": "Falinks",
+    "uniteapi_name": "falinks",
+    "role": "All-Rounder",
+    "square_image_key": "Falinks"
+  },
+  "Mamoswine": {
+    "display_name": "Mamoswine",
+    "uniteapi_name": "mamoswine",
+    "role": "Defender",
+    "square_image_key": "Mamoswine"
+  },
+  "Trevenant": {
+    "display_name": "Trevenant",
+    "uniteapi_name": "trevenant",
+    "role": "Defender",
+    "square_image_key": "Trevenant"
+  },
+  "Hoopa": {
+    "display_name": "Hoopa",
+    "uniteapi_name": "hoopa",
+    "role": "Supporter",
+    "square_image_key": "Hoopa"
+  },
+  "Tyranitar": {
+    "display_name": "Tyranitar",
+    "uniteapi_name": "tyranitar",
+    "role": "All-Rounder",
+    "square_image_key": "Tyranitar"
+  },
+  "Comfey": {
+    "display_name": "Comfey",
+    "uniteapi_name": "comfey",
+    "role": "Supporter",
+    "square_image_key": "Comfey"
+  },
+  "Lucario": {
+    "display_name": "Lucario",
+    "uniteapi_name": "lucario",
+    "role": "All-Rounder",
+    "square_image_key": "Lucario"
+  },
+  "Tsareena": {
+    "display_name": "Tsareena",
+    "uniteapi_name": "tsareena",
+    "role": "All-Rounder",
+    "square_image_key": "Tsareena"
+  },
+  "Empoleon": {
+    "display_name": "Empoleon",
+    "uniteapi_name": "empoleon",
+    "role": "All-Rounder",
+    "square_image_key": "Empoleon"
+  },
+  "Miraidon": {
+    "display_name": "Miraidon",
+    "uniteapi_name": "miraidon",
+    "role": "Attacker",
+    "square_image_key": "Miraidon"
+  },
+  "Dragonite": {
+    "display_name": "Dragonite",
+    "uniteapi_name": "dragonite",
+    "role": "All-Rounder",
+    "square_image_key": "Dragonite"
+  },
+  "Delphox": {
+    "display_name": "Delphox",
+    "uniteapi_name": "delphox",
+    "role": "Attacker",
+    "square_image_key": "Delphox"
+  },
+  "Scizor": {
+    "display_name": "Scizor",
+    "uniteapi_name": "scizor",
+    "role": "All-Rounder",
+    "square_image_key": "Scizor"
+  },
+  "Slowbro": {
+    "display_name": "Slowbro",
+    "uniteapi_name": "slowbro",
+    "role": "Defender",
+    "square_image_key": "Slowbro"
+  },
+  "Eldegoss": {
+    "display_name": "Eldegoss",
+    "uniteapi_name": "eldegoss",
+    "role": "Supporter",
+    "square_image_key": "Eldegoss"
+  },
+  "Snorlax": {
+    "display_name": "Snorlax",
+    "uniteapi_name": "snorlax",
+    "role": "Defender",
+    "square_image_key": "Snorlax"
+  },
+  "Mimikyu": {
+    "display_name": "Mimikyu",
+    "uniteapi_name": "mimikyu",
+    "role": "All-Rounder",
+    "square_image_key": "Mimikyu"
+  },
+  "Tinkaton": {
+    "display_name": "Tinkaton",
+    "uniteapi_name": "tinkaton",
+    "role": "All-Rounder",
+    "square_image_key": "Tinkaton"
+  },
+  "Talonflame": {
+    "display_name": "Talonflame",
+    "uniteapi_name": "talonflame",
+    "role": "Speedster",
+    "square_image_key": "Talonflame"
+  },
+  "Lapras": {
+    "display_name": "Lapras",
+    "uniteapi_name": "lapras",
+    "role": "Defender",
+    "square_image_key": "Lapras"
+  },
+  "Dragapult": {
+    "display_name": "Dragapult",
+    "uniteapi_name": "dragapult",
+    "role": "Attacker",
+    "square_image_key": "Dragapult"
+  },
+  "Espeon": {
+    "display_name": "Espeon",
+    "uniteapi_name": "espeon",
+    "role": "Attacker",
+    "square_image_key": "Espeon"
+  },
+  "Leafeon": {
+    "display_name": "Leafeon",
+    "uniteapi_name": "leafeon",
+    "role": "Speedster",
+    "square_image_key": "Leafeon"
+  },
+  "Glaceon": {
+    "display_name": "Glaceon",
+    "uniteapi_name": "glaceon",
+    "role": "Attacker",
+    "square_image_key": "Glaceon"
+  },
+  "Clefable": {
+    "display_name": "Clefable",
+    "uniteapi_name": "clefable",
+    "role": "Supporter",
+    "square_image_key": "Clefable"
+  },
+  "Alolan Raichu": {
+    "display_name": "Alolan Raichu",
+    "uniteapi_name": "alolanraichu",
+    "role": "Attacker",
+    "square_image_key": "Raichu"
+  },
+  "Pikachu": {
+    "display_name": "Pikachu",
+    "uniteapi_name": "pikachu",
+    "role": "Attacker",
+    "square_image_key": "Pikachu"
+  },
+  "Mewtwo Y": {
+    "display_name": "Mewtwo Y",
+    "uniteapi_name": "mewtwoy",
+    "role": "Attacker",
+    "square_image_key": "MewtwoY"
+  },
+  "Armarouge": {
+    "display_name": "Armarouge",
+    "uniteapi_name": "armarouge",
+    "role": "Attacker",
+    "square_image_key": "Armarouge"
+  },
+  "Chandelure": {
+    "display_name": "Chandelure",
+    "uniteapi_name": "chandelure",
+    "role": "Attacker",
+    "square_image_key": "Chandelure"
+  },
+  "Sableye": {
+    "display_name": "Sableye",
+    "uniteapi_name": "sableye",
+    "role": "Supporter",
+    "square_image_key": "Sableye"
+  },
+  "Mewtwo X": {
+    "display_name": "Mewtwo X",
+    "uniteapi_name": "mewtwox",
+    "role": "All-Rounder",
+    "square_image_key": "MewtwoX"
+  },
+  "Aegislash": {
+    "display_name": "Aegislash",
+    "uniteapi_name": "aegislash",
+    "role": "All-Rounder",
+    "square_image_key": "Aegislash"
+  },
+  "Suicune": {
+    "display_name": "Suicune",
+    "uniteapi_name": "suicune",
+    "role": "All-Rounder",
+    "square_image_key": "Suicune"
+  },
+  "Gyarados": {
+    "display_name": "Gyarados",
+    "uniteapi_name": "gyarados",
+    "role": "All-Rounder",
+    "square_image_key": "Gyarados"
+  },
+  "Metagross": {
+    "display_name": "Metagross",
+    "uniteapi_name": "metagross",
+    "role": "All-Rounder",
+    "square_image_key": "Metagross"
+  },
+  "Buzzwole": {
+    "display_name": "Buzzwole",
+    "uniteapi_name": "buzzwole",
+    "role": "All-Rounder",
+    "square_image_key": "Buzzwole"
+  },
+  "Goodra": {
+    "display_name": "Goodra",
+    "uniteapi_name": "goodra",
+    "role": "Defender",
+    "square_image_key": "Goodra"
+  },
+  "Azumarill": {
+    "display_name": "Azumarill",
+    "uniteapi_name": "azumarill",
+    "role": "All-Rounder",
+    "square_image_key": "Azumarill"
+  },
+  "Zeraora": {
+    "display_name": "Zeraora",
+    "uniteapi_name": "zeraora",
+    "role": "Speedster",
+    "square_image_key": "Zeraora"
+  },
+  "Sylveon": {
+    "display_name": "Sylveon",
+    "uniteapi_name": "sylveon",
+    "role": "Attacker",
+    "square_image_key": "Sylveon"
+  },
+  "Venusaur": {
+    "display_name": "Venusaur",
+    "uniteapi_name": "venusaur",
+    "role": "Attacker",
+    "square_image_key": "Venusaur"
+  },
+  "Alolan Ninetales": {
+    "display_name": "Alolan Ninetales",
+    "uniteapi_name": "alolanninetales",
+    "role": "Attacker",
+    "square_image_key": "Ninetales"
+  },
+  "Absol": {
+    "display_name": "Absol",
+    "uniteapi_name": "absol",
+    "role": "Speedster",
+    "square_image_key": "Absol"
+  },
+  "Zoroark": {
+    "display_name": "Zoroark",
+    "uniteapi_name": "zoroark",
+    "role": "Speedster",
+    "square_image_key": "Zoroark"
+  }
+}

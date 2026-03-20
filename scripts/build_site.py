@@ -24,6 +24,11 @@ def parse_args() -> argparse.Namespace:
         help="Skip refreshing patch history JSON via the Node helper.",
     )
     parser.add_argument(
+        "--skip-popup-details",
+        action="store_true",
+        help="Skip rebuilding popup detail JSON from the UniteDB snapshot.",
+    )
+    parser.add_argument(
         "--skip-image-formatting",
         action="store_true",
         help="Pass through to scripts/Scrape_Winrates.py.",
@@ -38,6 +43,11 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
+
+    if args.skip_popup_details:
+        print("[build_site] Skipped popup detail refresh")
+    else:
+        run_step([sys.executable, str(REPO_ROOT / "scripts" / "scrape_unite_db.py")], "Refreshing popup detail data")
 
     scrape_command = [sys.executable, str(REPO_ROOT / "scripts" / "Scrape_Winrates.py")]
     if args.skip_image_formatting:

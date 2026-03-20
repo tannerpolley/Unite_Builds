@@ -5,7 +5,7 @@ const vm = require("vm");
 
 const REPO_ROOT = path.resolve(__dirname, "..");
 const PATCH_NOTES_URL = "https://unite-db.com/patch-notes";
-const SOURCE_JSON_PATH = path.join(REPO_ROOT, "static", "json", "all_pokemon_detailed.json");
+const SOURCE_JSON_PATH = path.join(REPO_ROOT, "static", "json", "pokemon_popup_details.json");
 const BATTLE_ITEMS_JSON_PATH = path.join(REPO_ROOT, "data", "json", "unite_db_battle_items.json");
 const HELD_ITEMS_JSON_PATH = path.join(REPO_ROOT, "data", "json", "unite_db_held_items.json");
 const RAW_OUTPUT_PATH = path.join(REPO_ROOT, "data", "json", "unite_db_patch_notes_raw.json");
@@ -314,10 +314,14 @@ function loadOptionalItemHeadingKeys() {
 function buildPokemonNameMap(pokemonDetails) {
   const nameMap = new Map();
   const manualAliases = {
-    galarianrapidash: "Rapidash",
-    rapidashgalarian: "Rapidash",
-    alolanraichu: "Raichu",
-    raichualolan: "Raichu",
+    ninetales: "Alolan Ninetales",
+    alolanninetales: "Alolan Ninetales",
+    galarianrapidash: "Galarian Rapidash",
+    rapidashgalarian: "Galarian Rapidash",
+    rapidash: "Galarian Rapidash",
+    raichu: "Alolan Raichu",
+    alolanraichu: "Alolan Raichu",
+    raichualolan: "Alolan Raichu",
     megamewtwox: "Mewtwo X",
     megamewtwoy: "Mewtwo Y",
     mewtwowhy: "Mewtwo Y"
@@ -325,12 +329,6 @@ function buildPokemonNameMap(pokemonDetails) {
 
   for (const [siteName, details] of Object.entries(pokemonDetails)) {
     const candidateNames = new Set([siteName]);
-    const uniteDbName = details["unite-db-name"];
-
-    if (uniteDbName) {
-      candidateNames.add(uniteDbName);
-      candidateNames.add(titleCaseFromSlug(uniteDbName));
-    }
 
     for (const candidateName of candidateNames) {
       nameMap.set(normalizeName(candidateName), siteName);

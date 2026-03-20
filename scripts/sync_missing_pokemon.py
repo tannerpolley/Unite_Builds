@@ -1,79 +1,73 @@
-from pathlib import Path
+from __future__ import annotations
+
+import argparse
 import json
 import quopri
 import re
-import time
-from urllib.parse import unquote, urljoin
+from pathlib import Path
+from urllib.parse import unquote
 
-import requests
 from bs4 import BeautifulSoup
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_META_HTML_PATH = REPO_ROOT / 'data' / 'html' / 'Unite API _ Pokémon Unite Meta Tierlist.html'
-DEFAULT_POKEMON_JSON_PATH = REPO_ROOT / 'static' / 'json' / 'all_pokemon_detailed.json'
-ROLE_NAMES = ('Attacker', 'Defender', 'Speedster', 'All-Rounder', 'Supporter')
+DEFAULT_META_HTML_PATH = REPO_ROOT / "data" / "html" / "Unite API _ Pokémon Unite Meta Tierlist.html"
+DEFAULT_ROSTER_JSON_PATH = REPO_ROOT / "data" / "json" / "uniteapi_roster.json"
+DEFAULT_UNITE_DB_POKEMON_PATH = REPO_ROOT / "data" / "json" / "unite_db_pokemon.json"
+
+ROLE_NAMES = ("Attacker", "Defender", "Speedster", "All-Rounder", "Supporter")
 DISPLAY_NAME_OVERRIDES = {
-    'Ninetales': 'Alolan Ninetales',
-    'Raichu': 'Alolan Raichu',
-    'MrMime': 'Mr. Mime',
-    'Urshifu_Single': 'Urshifu',
-    'HoOh': 'Ho-Oh',
-    'Meowscara': 'Meowscarada',
-    'Rapidash': 'Galarian Rapidash',
-    'MEGALucario': 'Mega Lucario',
-    'CharizardX': 'Mega Charizard X',
-    'CharizardY': 'Mega Charizard Y',
-    'MegaGyarados': 'Mega Gyarados',
-    'MewtwoY': 'Mewtwo Y',
-    'MewtwoX': 'Mewtwo X',
-    'Sirfetch': "Sirfetch'd",
+    "Ninetales": "Alolan Ninetales",
+    "Raichu": "Alolan Raichu",
+    "MrMime": "Mr. Mime",
+    "Urshifu_Single": "Urshifu",
+    "HoOh": "Ho-Oh",
+    "Meowscara": "Meowscarada",
+    "Rapidash": "Galarian Rapidash",
+    "MEGALucario": "Mega Lucario",
+    "CharizardX": "Mega Charizard X",
+    "CharizardY": "Mega Charizard Y",
+    "MegaGyarados": "Mega Gyarados",
+    "MewtwoY": "Mewtwo Y",
+    "MewtwoX": "Mewtwo X",
+    "Mega Mewtwo Y": "Mewtwo Y",
+    "Mega Mewtwo X": "Mewtwo X",
+    "Sirfetch": "Sirfetch'd",
 }
 UNITEAPI_SLUG_OVERRIDES = {
-    'Ninetales': 'alolanninetales',
-    'Raichu': 'alolanraichu',
-    'MrMime': 'mrmime',
-    'Urshifu_Single': 'urshifu',
-    'HoOh': 'hooh',
-    'Rapidash': 'galarianrapidash',
-    'MEGALucario': 'megalucario',
-    'CharizardX': 'charizardx',
-    'CharizardY': 'charizardy',
-    'MegaGyarados': 'megagyarados',
-    'MewtwoY': 'mewtwoy',
-    'MewtwoX': 'mewtwox',
-    'Sirfetch': 'sirfetchd',
-}
-REQUEST_HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36',
+    "Ninetales": "alolanninetales",
+    "Raichu": "alolanraichu",
+    "MrMime": "mrmime",
+    "Urshifu_Single": "urshifu",
+    "HoOh": "hooh",
+    "Rapidash": "galarianrapidash",
+    "MEGALucario": "megalucario",
+    "CharizardX": "charizardx",
+    "CharizardY": "charizardy",
+    "MegaGyarados": "megagyarados",
+    "MewtwoY": "mewtwoy",
+    "MewtwoX": "mewtwox",
+    "Sirfetch": "sirfetchd",
 }
 
 
 def normalize_lookup_key(value: str) -> str:
-    return re.sub(r'[^a-z0-9]+', '', value.lower())
-
-
-def clean_candidate_name(value: str) -> str:
-    value = value or ''
-    value = re.sub(r'avatar of (the )?pokemon', '', value, flags=re.IGNORECASE)
-    value = re.sub(r'pokemon unite', '', value, flags=re.IGNORECASE)
-    value = re.sub(r'\s+', ' ', value).strip(' -')
-    return value
+    return re.sub(r"[^a-z0-9]+", "", (value or "").lower())
 
 
 def extract_image_key(src: str, prefix: str) -> str:
-    decoded_src = unquote(src or '')
-    if 'url=' in decoded_src:
-        decoded_src = decoded_src.split('url=', 1)[1].split('&', 1)[0]
+    decoded_src = unquote(src or "")
+    if "url=" in decoded_src:
+        decoded_src = decoded_src.split("url=", 1)[1].split("&", 1)[0]
 
-    filename = decoded_src.split('/')[-1]
-    stem = filename.rsplit('.', 1)[0]
+    filename = decoded_src.split("/")[-1]
+    stem = filename.rsplit(".", 1)[0]
     if stem.startswith(prefix):
         return stem[len(prefix):]
     return stem
 
 
-def build_uniteapi_image_url(image_key: str, prefix: str = 't_Square_') -> str:
-    return f'https://uniteapi.dev/Sprites/{prefix}{image_key}.png'
+def build_uniteapi_image_url(image_key: str, prefix: str = "t_Square_") -> str:
+    return f"https://uniteapi.dev/Sprites/{prefix}{image_key}.png"
 
 
 def normalize_display_name(raw_name: str) -> str:
@@ -83,45 +77,52 @@ def normalize_display_name(raw_name: str) -> str:
 def build_uniteapi_slug(raw_name: str, display_name: str) -> str:
     if raw_name in UNITEAPI_SLUG_OVERRIDES:
         return UNITEAPI_SLUG_OVERRIDES[raw_name]
-    return re.sub(r'[^a-z0-9]+', '', display_name.lower())
+    return re.sub(r"[^a-z0-9]+", "", display_name.lower())
 
 
-def build_unite_db_slug(display_name: str) -> str:
-    return re.sub(r'[^a-z0-9]+', '-', display_name.lower()).strip('-')
+def load_json_dict(path: Path | str) -> dict:
+    path = Path(path)
+    if not path.exists():
+        return {}
+    with open(path, "r", encoding="utf-8") as file_handle:
+        return json.load(file_handle)
 
 
-def load_pokemon_json(pokemon_json_path: Path) -> dict:
-    with open(pokemon_json_path, 'r', encoding='utf-8') as file:
-        return json.load(file)
+def save_json_dict(path: Path | str, payload: dict) -> None:
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as file_handle:
+        json.dump(payload, file_handle, indent=2, ensure_ascii=False)
+        file_handle.write("\n")
 
 
-def save_pokemon_json(pokemon_json_path: Path, pokemon_dict: dict) -> None:
-    with open(pokemon_json_path, 'w', encoding='utf-8') as file:
-        json.dump(pokemon_dict, file, indent=2, ensure_ascii=False)
+def decode_saved_html(path: Path | str) -> str:
+    path = Path(path)
+    return quopri.decodestring(path.read_bytes()).decode("utf-8", errors="ignore")
 
 
-def extract_meta_page_entries(meta_html_path: Path) -> list[dict[str, str]]:
-    soup = BeautifulSoup(quopri.decodestring(meta_html_path.read_bytes()).decode('utf-8', errors='ignore'), 'html.parser')
-    entries = []
-    seen = set()
-    class_str = 'sc-d5d8a548-1 jXtpKR'
-    blocks = soup.find_all('div', class_=class_str)
+def extract_meta_page_entries(meta_html_path: Path | str) -> list[dict[str, str]]:
+    meta_html_path = Path(meta_html_path)
+    soup = BeautifulSoup(decode_saved_html(meta_html_path), "html.parser")
+    entries: list[dict[str, str]] = []
+    seen: set[str] = set()
+    blocks = soup.find_all("div", class_="sc-d5d8a548-1 jXtpKR")
 
     if len(blocks) >= 4:
         try:
             win_rate_block, pick_rate_block = blocks[2], blocks[3]
-            table_images = list(win_rate_block.find_all('img')) + list(pick_rate_block.find_all('img'))
+            table_images = list(win_rate_block.find_all("img")) + list(pick_rate_block.find_all("img"))
         except Exception:
             table_images = []
     else:
         table_images = []
 
     for image in table_images:
-        src = unquote(image.get('src', ''))
-        if 't_Square_' not in src:
+        src = unquote(image.get("src", ""))
+        if "t_Square_" not in src:
             continue
 
-        raw_name = extract_image_key(src, 't_Square_')
+        raw_name = extract_image_key(src, "t_Square_")
         if not raw_name:
             continue
 
@@ -130,245 +131,153 @@ def extract_meta_page_entries(meta_html_path: Path) -> list[dict[str, str]]:
             continue
 
         seen.add(display_name)
-        entries.append({
-            'display_name': display_name,
-            'raw_name': raw_name,
-            'uniteapi-name': build_uniteapi_slug(raw_name, display_name),
-            'square_image_url': build_uniteapi_image_url(raw_name),
-        })
+        entries.append(
+            {
+                "display_name": display_name,
+                "raw_name": raw_name,
+                "uniteapi_name": build_uniteapi_slug(raw_name, display_name),
+                "square_image_key": raw_name,
+                "square_image_url": build_uniteapi_image_url(raw_name),
+            }
+        )
 
     return entries
 
 
-def fetch_html(url: str, timeout: float = 20.0) -> str:
-    response = requests.get(url, headers=REQUEST_HEADERS, timeout=timeout)
-    response.raise_for_status()
-    return response.text
+def load_unite_db_snapshot(path: Path | str) -> list[dict]:
+    path = Path(path)
+    if not path.exists():
+        return []
+    with open(path, "r", encoding="utf-8") as file_handle:
+        payload = json.load(file_handle)
+    if not isinstance(payload, list):
+        raise ValueError(f"Expected a top-level array in {path}")
+    return payload
 
 
-def count_unite_db_links(html: str) -> int:
-    return len(set(re.findall(r'/pokemon/([^"\'?#/]+)', html or '')))
+def build_unite_db_role_index(snapshot: list[dict]) -> dict[str, dict[str, str]]:
+    index: dict[str, dict[str, str]] = {}
 
-
-def fetch_rendered_html(url: str) -> str:
-    from selenium import webdriver
-
-    options = webdriver.ChromeOptions()
-    options.add_argument('--headless=new')
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-dev-shm-usage')
-    options.add_argument('--disable-gpu')
-    options.add_argument('--window-size=1920,1080')
-    options.add_argument('user-agent=' + REQUEST_HEADERS['User-Agent'])
-
-    driver = webdriver.Chrome(options=options)
-    try:
-        driver.get(url)
-        time.sleep(2)
-        return driver.page_source
-    finally:
-        driver.quit()
-
-
-def get_unite_db_listing_html() -> str:
-    urls = ('https://unite-db.com/', 'https://unite-db.com/pokemon')
-    last_html = ''
-
-    for url in urls:
-        try:
-            html = fetch_html(url)
-            last_html = html
-            if count_unite_db_links(html) >= 5:
-                return html
-        except Exception:
+    for record in snapshot:
+        raw_display_name = record.get("display_name") or record.get("name")
+        if not raw_display_name:
             continue
 
-    for url in urls:
-        try:
-            html = fetch_rendered_html(url)
-            last_html = html
-            if count_unite_db_links(html) >= 5:
-                return html
-        except Exception:
-            continue
-
-    return last_html
-
-
-def extract_role_from_text(texts: list[str]) -> str:
-    joined_text = ' '.join(texts)
-    for role in ROLE_NAMES:
-        if re.search(rf'\b{re.escape(role)}\b', joined_text, re.IGNORECASE):
-            return role
-    return ''
-
-
-def is_valid_name_candidate(value: str) -> bool:
-    value = clean_candidate_name(value)
-    if not value or len(value) > 40:
-        return False
-    if value in ROLE_NAMES:
-        return False
-    return any(character.isalpha() for character in value)
-
-
-def choose_display_name(text_candidates: list[str], slug: str) -> str:
-    for candidate in text_candidates:
-        cleaned = clean_candidate_name(candidate)
-        if not is_valid_name_candidate(cleaned):
-            continue
-        return cleaned
-
-    return slug.replace('-', ' ').title()
-
-
-def build_unite_db_index(html: str) -> dict[str, dict[str, str]]:
-    soup = BeautifulSoup(html, 'html.parser')
-    index = {}
-
-    for anchor in soup.find_all('a', href=True):
-        href = urljoin('https://unite-db.com', anchor['href'])
-        if '/pokemon/' not in href:
-            continue
-
-        slug = href.split('/pokemon/', 1)[1].split('?', 1)[0].split('#', 1)[0].strip('/')
-        if not slug or '/' in slug:
-            continue
-
-        container = anchor.find_parent(['article', 'li', 'section', 'div']) or anchor
-        text_candidates = []
-        for image in container.find_all('img')[:3]:
-            alt_text = clean_candidate_name(image.get('alt', ''))
-            if alt_text:
-                text_candidates.append(alt_text)
-
-        for text in container.stripped_strings:
-            cleaned = clean_candidate_name(text)
-            if cleaned:
-                text_candidates.append(cleaned)
-
-        role = extract_role_from_text(text_candidates)
-        display_name = choose_display_name(text_candidates, slug)
-        data = {
-            'display_name': display_name,
-            'unite-db-name': slug,
-            'Role': role,
+        site_display_name = normalize_display_name(raw_display_name)
+        role = ((record.get("tags") or {}).get("role") or "").strip()
+        entry = {
+            "display_name": site_display_name,
+            "role": role,
         }
 
-        index.setdefault(normalize_lookup_key(slug), data)
-        index.setdefault(normalize_lookup_key(display_name), data)
+        candidate_names = {
+            site_display_name,
+            raw_display_name,
+            record.get("name", ""),
+        }
+
+        for candidate_name in candidate_names:
+            lookup_key = normalize_lookup_key(candidate_name)
+            if lookup_key:
+                index[lookup_key] = entry
 
     return index
 
 
-def fetch_unite_db_detail(slug: str) -> dict[str, str]:
-    detail_url = f'https://unite-db.com/pokemon/{slug}'
-    html = ''
-
-    try:
-        html = fetch_html(detail_url)
-    except Exception:
-        try:
-            html = fetch_rendered_html(detail_url)
-        except Exception:
-            return {'display_name': slug.replace('-', ' ').title(), 'Role': ''}
-
-    soup = BeautifulSoup(html, 'html.parser')
-    text_candidates = []
-    for image in soup.find_all('img')[:5]:
-        alt_text = clean_candidate_name(image.get('alt', ''))
-        if alt_text:
-            text_candidates.append(alt_text)
-
-    text_candidates.extend(list(soup.stripped_strings)[:120])
-    return {
-        'display_name': choose_display_name(text_candidates, slug),
-        'Role': extract_role_from_text(text_candidates),
-    }
-
-
-def match_unite_db_entry(meta_entry: dict[str, str], unite_db_index: dict[str, dict[str, str]]) -> dict[str, str]:
+def match_unite_db_role(meta_entry: dict[str, str], role_index: dict[str, dict[str, str]]) -> dict[str, str]:
     lookup_keys = [
-        normalize_lookup_key(meta_entry['display_name']),
-        normalize_lookup_key(meta_entry['raw_name']),
-        normalize_lookup_key(meta_entry['uniteapi-name']),
+        normalize_lookup_key(meta_entry["display_name"]),
+        normalize_lookup_key(meta_entry["raw_name"]),
+        normalize_lookup_key(meta_entry["uniteapi_name"]),
     ]
 
     for lookup_key in lookup_keys:
-        if lookup_key in unite_db_index:
-            return unite_db_index[lookup_key]
-
-    for data in unite_db_index.values():
-        slug_key = normalize_lookup_key(data['unite-db-name'])
-        if any(lookup_key and (lookup_key in slug_key or slug_key in lookup_key) for lookup_key in lookup_keys):
-            return data
+        if lookup_key in role_index:
+            return role_index[lookup_key]
 
     return {}
 
 
 def sync_missing_pokemon_entries(
     meta_html_path: Path | str = DEFAULT_META_HTML_PATH,
-    pokemon_json_path: Path | str = DEFAULT_POKEMON_JSON_PATH,
+    roster_json_path: Path | str = DEFAULT_ROSTER_JSON_PATH,
+    unite_db_pokemon_path: Path | str = DEFAULT_UNITE_DB_POKEMON_PATH,
 ) -> dict:
     meta_html_path = Path(meta_html_path)
-    pokemon_json_path = Path(pokemon_json_path)
+    roster_json_path = Path(roster_json_path)
+    unite_db_pokemon_path = Path(unite_db_pokemon_path)
 
-    pokemon_dict = load_pokemon_json(pokemon_json_path)
+    existing_roster = load_json_dict(roster_json_path)
     if not meta_html_path.exists():
         return {
-            'pokemon_dict': pokemon_dict,
-            'meta_entries': [],
-            'meta_entry_map': {},
-            'added_entries': [],
+            "roster_dict": existing_roster,
+            "meta_entries": [],
+            "meta_entry_map": {},
+            "added_entries": [],
         }
 
     meta_entries = extract_meta_page_entries(meta_html_path)
-    meta_entry_map = {entry['display_name']: entry for entry in meta_entries}
-    missing_entries = [entry for entry in meta_entries if entry['display_name'] not in pokemon_dict]
-    if not missing_entries:
-        return {
-            'pokemon_dict': pokemon_dict,
-            'meta_entries': meta_entries,
-            'meta_entry_map': meta_entry_map,
-            'added_entries': [],
-        }
+    meta_entry_map = {entry["display_name"]: entry for entry in meta_entries}
+    role_index = build_unite_db_role_index(load_unite_db_snapshot(unite_db_pokemon_path))
 
-    unite_db_index = build_unite_db_index(get_unite_db_listing_html())
+    roster_dict = {}
     added_entries = []
 
-    for entry in missing_entries:
-        unite_db_entry = match_unite_db_entry(entry, unite_db_index)
-        unite_db_name = unite_db_entry.get('unite-db-name', build_unite_db_slug(entry['display_name']))
-        role = unite_db_entry.get('Role', '')
+    for entry in meta_entries:
+        display_name = entry["display_name"]
+        existing_entry = existing_roster.get(display_name, {})
+        matched_unite_db_entry = match_unite_db_role(entry, role_index)
+        role = matched_unite_db_entry.get("role") or existing_entry.get("role", "")
 
-        if not role:
-            detail_entry = fetch_unite_db_detail(unite_db_name)
-            role = detail_entry.get('Role', role)
-
-        if not role:
-            print(f"Could not resolve Role for {entry['display_name']}; leaving Role blank")
-
-        pokemon_dict[entry['display_name']] = {
-            'unite-db-name': unite_db_name,
-            'uniteapi-name': entry['uniteapi-name'],
-            'Role': role,
+        roster_dict[display_name] = {
+            "display_name": display_name,
+            "uniteapi_name": entry["uniteapi_name"],
+            "role": role,
+            "square_image_key": entry["square_image_key"],
         }
-        added_entries.append(entry)
+
+        if display_name not in existing_roster:
+            added_entries.append(entry)
+
+    if roster_dict != existing_roster:
+        save_json_dict(roster_json_path, roster_dict)
 
     if added_entries:
-        save_pokemon_json(pokemon_json_path, pokemon_dict)
-        print('Added missing Pokemon entries: ' + ', '.join(entry['display_name'] for entry in added_entries))
+        print("Added missing Pokemon entries: " + ", ".join(entry["display_name"] for entry in added_entries))
 
     return {
-        'pokemon_dict': pokemon_dict,
-        'meta_entries': meta_entries,
-        'meta_entry_map': meta_entry_map,
-        'added_entries': added_entries,
+        "roster_dict": roster_dict,
+        "meta_entries": meta_entries,
+        "meta_entry_map": meta_entry_map,
+        "added_entries": added_entries,
     }
 
 
 def ensure_missing_pokemon_entries(
     meta_html_path: Path | str = DEFAULT_META_HTML_PATH,
-    pokemon_json_path: Path | str = DEFAULT_POKEMON_JSON_PATH,
+    roster_json_path: Path | str = DEFAULT_ROSTER_JSON_PATH,
+    unite_db_pokemon_path: Path | str = DEFAULT_UNITE_DB_POKEMON_PATH,
 ) -> dict:
-    return sync_missing_pokemon_entries(meta_html_path, pokemon_json_path)['pokemon_dict']
+    return sync_missing_pokemon_entries(meta_html_path, roster_json_path, unite_db_pokemon_path)["roster_dict"]
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Build the UniteAPI roster metadata JSON from the saved meta page.")
+    parser.add_argument("--meta-html-path", type=Path, default=DEFAULT_META_HTML_PATH)
+    parser.add_argument("--output-path", type=Path, default=DEFAULT_ROSTER_JSON_PATH)
+    parser.add_argument("--unite-db-pokemon-path", type=Path, default=DEFAULT_UNITE_DB_POKEMON_PATH)
+    return parser.parse_args()
+
+
+def main() -> None:
+    args = parse_args()
+    result = sync_missing_pokemon_entries(
+        meta_html_path=args.meta_html_path,
+        roster_json_path=args.output_path,
+        unite_db_pokemon_path=args.unite_db_pokemon_path,
+    )
+    print(f"Synced {len(result['roster_dict'])} UniteAPI roster entries to {args.output_path}")
+
+
+if __name__ == "__main__":
+    main()
