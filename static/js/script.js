@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const minPickRate = document.getElementById("minPickRate");
   const nameSearch = document.getElementById("nameSearch");
   const resetFilters = document.getElementById("resetFilters");
-  const assetVersion = Date.now();
+  let assetVersion = "";
 
   let tableItems = [];
   let tableItemsPromise = null;
@@ -19,9 +19,21 @@ document.addEventListener("DOMContentLoaded", async () => {
   let movePatchHistoryData = null;
   let movePatchHistoryPromise = null;
 
-  async function fetchJsonAsset(path, fallbackValue, label) {
+  async function fetchJsonAsset(path, fallbackValue, label, options = {}) {
+    const { noStore = false, versioned = true } = options;
+
     try {
-      const response = await fetch(`${path}?v=${assetVersion}`);
+      const url = new URL(path, window.location.href);
+      if (versioned) {
+        const version = await getAssetVersion();
+        if (version) {
+          url.searchParams.set("v", version);
+        }
+      }
+
+      const response = await fetch(url.toString(), {
+        cache: noStore ? "no-store" : "default"
+      });
       if (!response.ok) {
         throw new Error(`Failed to load: ${response.status}`);
       }
@@ -30,6 +42,16 @@ document.addEventListener("DOMContentLoaded", async () => {
       console.error(`Error loading ${label}:`, error);
       return fallbackValue;
     }
+  }
+
+  async function getAssetVersion() {
+    if (assetVersion) {
+      return assetVersion;
+    }
+
+    const metadata = await loadSiteMetadata();
+    assetVersion = metadata.assetVersion || metadata.generatedAt || "";
+    return assetVersion;
   }
 
   async function loadTableItems() {
@@ -69,7 +91,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (!siteMetadataPromise) {
       siteMetadataPromise = (async () => {
-        siteMetadata = await fetchJsonAsset("static/json/site_metadata.json", {}, "site metadata");
+        siteMetadata = await fetchJsonAsset(
+          "static/json/site_metadata.json",
+          {},
+          "site metadata",
+          { noStore: true, versioned: false }
+        );
         return siteMetadata;
       })();
     }
@@ -87,16 +114,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     patchHistoryPromise = (async () => {
-      try {
-        const response = await fetch(`static/json/pokemon_patch_history.json?v=${assetVersion}`);
-        if (!response.ok) throw new Error(`Failed to load: ${response.status}`);
-        patchHistoryData = await response.json();
-        console.log('Patch history loaded successfully');
-      } catch (error) {
-        console.error('Error loading patch history:', error);
-        patchHistoryData = {};
-      }
-
+      patchHistoryData = await fetchJsonAsset(
+        "static/json/pokemon_patch_history.json",
+        {},
+        "patch history"
+      );
       return patchHistoryData;
     })();
 
@@ -113,16 +135,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     movePatchHistoryPromise = (async () => {
-      try {
-        const response = await fetch(`static/json/pokemon_move_patch_history.json?v=${assetVersion}`);
-        if (!response.ok) throw new Error(`Failed to load: ${response.status}`);
-        movePatchHistoryData = await response.json();
-        console.log('Move patch history loaded successfully');
-      } catch (error) {
-        console.error('Error loading move patch history:', error);
-        movePatchHistoryData = {};
-      }
-
+      movePatchHistoryData = await fetchJsonAsset(
+        "static/json/pokemon_move_patch_history.json",
+        {},
+        "move patch history"
+      );
       return movePatchHistoryData;
     })();
 

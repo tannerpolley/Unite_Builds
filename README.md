@@ -31,19 +31,27 @@ Use the repo-named Conda environment when available.
 ```powershell
 conda run -n Unite_Builds python scripts/get_moveset_pages.py
 ```
-2. Rebuild moveset rows, site metadata, and image normalization with:
+2. Run the standard post-scrape build with:
+```powershell
+conda run -n Unite_Builds python scripts/build_site.py
+```
+3. If you only want the Python-side rebuild, run:
 ```powershell
 conda run -n Unite_Builds python scripts/Scrape_Winrates.py
 ```
-3. Refresh UniteDB-enriched Pokemon detail data when needed with:
+4. Refresh UniteDB-enriched Pokemon detail data when needed with:
 ```powershell
 conda run -n Unite_Builds python scripts/scrape_unite_db.py
 ```
-4. Refresh patch-history JSON with:
+5. Refresh patch-history JSON with:
 ```powershell
 npm run build:patch-history
 ```
-5. Refresh the social/share preview image with:
+6. Run the local smoke test with:
+```powershell
+npm test
+```
+7. Refresh the social/share preview image with:
 ```powershell
 npm run preview
 ```
@@ -53,6 +61,7 @@ npm run preview
 ## Local environment
 - Python dependencies are declared in `environment.yml`.
 - Node is only used for local helper scripts such as patch-history generation and `preview.png` capture.
+- `npm test` now runs a Puppeteer smoke test that serves the repo locally, verifies the table renders, and opens both move and Pokemon popups.
 - Because the frontend uses `fetch()` for JSON assets, serve the repo over HTTP for local browser testing instead of relying on `file://`.
 
 Example:
@@ -64,3 +73,5 @@ conda run -n Unite_Builds python -m http.server 8000
 GitHub Pages is deployed by Actions from a staged site-only artifact.
 
 The deploy workflow uploads only the files the site actually needs, instead of publishing the entire repository. Source folders like `data/` and `scripts/` stay in the repo but are not included in the Pages artifact.
+
+The Pages workflow now also runs the local Puppeteer smoke test before staging the site artifact, so a broken table or popup render will block deployment.

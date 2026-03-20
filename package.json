@@ -5,7 +5,8 @@
   "main": "scripts/screenshot.js",
   "scripts": {
     "build:patch-history": "node scripts/build_patch_history.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "smoke": "node scripts/smoke_test.js",
+    "test": "npm run smoke",
     "preview": "node scripts/screenshot.js"
   },
   "repository": {
