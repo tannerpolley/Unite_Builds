@@ -15,3 +15,9 @@ Thumbs.db
 
 # Local build/deploy staging
 _site/
+
+# Local UniteDB snapshot caches
+/data/json/unite_db_held_items.json
+/data/json/unite_db_patch_notes_raw.json
+/data/json/unite_db_pokemon.json
+/data/json/unite_db_stats.json

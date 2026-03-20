@@ -11,6 +11,7 @@ Static Pokemon Unite site for GitHub Pages, with local Python and Node tooling t
 ## Source vs generated vs published
 - Source/operator files: `scripts/`, `data/`, workflow files, manifests, and local `.codex/` notes.
 - Generated site data: `static/json/moveset_rows.json`, `static/json/all_pokemon_detailed.json`, `static/json/pokemon_patch_history.json`, `static/json/pokemon_move_patch_history.json`, `static/json/site_metadata.json`.
+- Local-only caches: large raw UniteDB snapshots such as `data/json/unite_db_pokemon.json`, `data/json/unite_db_held_items.json`, `data/json/unite_db_stats.json`, and `data/json/unite_db_patch_notes_raw.json` are useful for local refresh work but are not required to be committed.
 - Published artifact: `index.html`, `static/`, `preview.png`, `favicon.ico`, `CNAME`, and the Google verification HTML file.
 
 ## Manual Unite API workflow
@@ -46,6 +47,8 @@ npm run build:patch-history
 ```powershell
 npm run preview
 ```
+
+`data/json/unite_db_battle_items.json` stays committed because `scripts/Scrape_Winrates.py` currently reads it directly.
 
 ## Local environment
 - Python dependencies are declared in `environment.yml`.
