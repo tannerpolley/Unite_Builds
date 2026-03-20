@@ -6,6 +6,8 @@ const vm = require("vm");
 const REPO_ROOT = path.resolve(__dirname, "..");
 const PATCH_NOTES_URL = "https://unite-db.com/patch-notes";
 const SOURCE_JSON_PATH = path.join(REPO_ROOT, "static", "json", "all_pokemon_detailed.json");
+const BATTLE_ITEMS_JSON_PATH = path.join(REPO_ROOT, "data", "json", "unite_db_battle_items.json");
+const HELD_ITEMS_JSON_PATH = path.join(REPO_ROOT, "data", "json", "unite_db_held_items.json");
 const RAW_OUTPUT_PATH = path.join(REPO_ROOT, "data", "json", "unite_db_patch_notes_raw.json");
 const GROUPED_OUTPUT_PATH = path.join(REPO_ROOT, "static", "json", "pokemon_patch_history.json");
 const MOVE_OUTPUT_PATH = path.join(REPO_ROOT, "static", "json", "pokemon_move_patch_history.json");
@@ -29,6 +31,61 @@ const GENERAL_POKEMON_HEADING_KEYS = new Set([
 const CHANGE_HEADING_ALIASES = {
   watershiriken: "watershuriken",
   watershiruken: "watershuriken"
+};
+
+const EXPLICIT_NON_POKEMON_HEADING_KEYS = new Set([
+  "allpokemon",
+  "autoattacks",
+  "battleitems",
+  "battlereports",
+  "bossrushreturns",
+  "bugfixes",
+  "communication",
+  "draft",
+  "draftbattles",
+  "draftmode",
+  "emblems",
+  "exp",
+  "expshare",
+  "experienceshare",
+  "experiencesystemadjustments",
+  "goalzones",
+  "helditems",
+  "holditems",
+  "items",
+  "map",
+  "maptheiaskyruins",
+  "matchmaking",
+  "miscellaneous",
+  "othernotes",
+  "objectives",
+  "pokemon",
+  "qualityoflife",
+  "rankingsystem",
+  "remoatstadium",
+  "replays",
+  "scavengerhunt",
+  "snowballbattleinshivrecity",
+  "surrendervote",
+  "theiaskyruins",
+  "uiimprovements",
+  "uniteclubmembership",
+  "unitesquads",
+  "wildpokemon"
+]);
+
+const NON_ROSTER_ENTITY_KEYS = new Set([
+  "corphish",
+  "groudon",
+  "kyogre",
+  "lugia",
+  "regidrago"
+]);
+
+const MULTI_POKEMON_HEADING_ALIASES = {
+  mewtwoxy: ["Mewtwo X", "Mewtwo Y"],
+  scizorscyther: ["Scizor", "Scyther"],
+  scytherscizor: ["Scyther", "Scizor"]
 };
 
 function fetchText(url, redirectCount = 0) {
@@ -205,6 +262,13 @@ function normalizeChangeHeading(heading) {
     .trim();
 }
 
+function normalizePokemonHeading(heading) {
+  return normalizeChangeHeading(heading)
+    .replace(/^pok[eé]mon\s*:\s*/i, "")
+    .replace(/^map\s*:\s*/i, "Map ")
+    .trim();
+}
+
 function resolveHeadingKey(heading) {
   const headingKey = normalizeName(heading);
   return CHANGE_HEADING_ALIASES[headingKey] || headingKey;
@@ -218,6 +282,35 @@ function titleCaseFromSlug(slug) {
     .join(" ");
 }
 
+function loadOptionalItemHeadingKeys() {
+  const itemHeadingKeys = new Set();
+
+  for (const filePath of [BATTLE_ITEMS_JSON_PATH, HELD_ITEMS_JSON_PATH]) {
+    if (!fs.existsSync(filePath)) {
+      continue;
+    }
+
+    try {
+      const items = JSON.parse(fs.readFileSync(filePath, "utf8"));
+      if (!Array.isArray(items)) {
+        continue;
+      }
+
+      for (const item of items) {
+        for (const candidateName of [item?.name, item?.display_name]) {
+          if (candidateName) {
+            itemHeadingKeys.add(normalizeName(candidateName));
+          }
+        }
+      }
+    } catch (error) {
+      console.warn(`Unable to load optional item headings from ${filePath}: ${error.message}`);
+    }
+  }
+
+  return itemHeadingKeys;
+}
+
 function buildPokemonNameMap(pokemonDetails) {
   const nameMap = new Map();
   const manualAliases = {
@@ -226,7 +319,8 @@ function buildPokemonNameMap(pokemonDetails) {
     alolanraichu: "Raichu",
     raichualolan: "Raichu",
     megamewtwox: "Mewtwo X",
-    megamewtwoy: "Mewtwo Y"
+    megamewtwoy: "Mewtwo Y",
+    mewtwowhy: "Mewtwo Y"
   };
 
   for (const [siteName, details] of Object.entries(pokemonDetails)) {
@@ -349,6 +443,82 @@ function buildPokemonMetadata(pokemonDetails) {
   return metadata;
 }
 
+function buildMoveHeadingKeySet(pokemonMetadata) {
+  const moveHeadingKeys = new Set();
+
+  for (const metadata of Object.values(pokemonMetadata)) {
+    for (const headingKey of Object.keys(metadata.headingToFamilyNames || {})) {
+      moveHeadingKeys.add(headingKey);
+    }
+  }
+
+  return moveHeadingKeys;
+}
+
+function shouldIgnorePokemonHeading(heading, ignoredHeadingKeys, moveHeadingKeys) {
+  const normalizedHeading = normalizePokemonHeading(heading);
+  const headingKey = normalizeName(normalizedHeading);
+
+  if (!headingKey) {
+    return true;
+  }
+
+  if (ignoredHeadingKeys.has(headingKey) || NON_ROSTER_ENTITY_KEYS.has(headingKey)) {
+    return true;
+  }
+
+  if (moveHeadingKeys.has(headingKey)) {
+    return true;
+  }
+
+  if (/^if ko'?d by/i.test(normalizedHeading)) {
+    return true;
+  }
+
+  if (/^visual effects/i.test(normalizedHeading)) {
+    return true;
+  }
+
+  return false;
+}
+
+function resolvePokemonHeadingTargets(heading, nameMap, ignoredHeadingKeys, moveHeadingKeys) {
+  const normalizedHeading = normalizePokemonHeading(heading);
+  const headingKey = normalizeName(normalizedHeading);
+
+  if (!headingKey) {
+    return { targets: [], ignored: true };
+  }
+
+  const directMatch = nameMap.get(headingKey);
+  if (directMatch) {
+    return { targets: [directMatch], ignored: false };
+  }
+
+  const aliasedTargets = MULTI_POKEMON_HEADING_ALIASES[headingKey];
+  if (aliasedTargets) {
+    return { targets: aliasedTargets, ignored: false };
+  }
+
+  const splitParts = normalizedHeading
+    .split(/\s*(?:\/|&|,|\band\b)\s*/i)
+    .map((part) => normalizePokemonHeading(part))
+    .filter(Boolean);
+
+  if (splitParts.length > 1) {
+    const resolvedTargets = splitParts.map((part) => nameMap.get(normalizeName(part)));
+    if (resolvedTargets.every(Boolean)) {
+      return { targets: Array.from(new Set(resolvedTargets)), ignored: false };
+    }
+  }
+
+  if (shouldIgnorePokemonHeading(normalizedHeading, ignoredHeadingKeys, moveHeadingKeys)) {
+    return { targets: [], ignored: true };
+  }
+
+  return { targets: [], ignored: false };
+}
+
 function buildRawArchive(posts) {
   return posts.map((post) => {
     const fields = post.fields || {};
@@ -387,6 +557,11 @@ function isPokemonLevelHeading(pokemonMeta, normalizedHeading, headingKey) {
 function buildGroupedPatchHistories(rawArchive, pokemonDetails) {
   const nameMap = buildPokemonNameMap(pokemonDetails);
   const pokemonMetadata = buildPokemonMetadata(pokemonDetails);
+  const moveHeadingKeys = buildMoveHeadingKeySet(pokemonMetadata);
+  const ignoredHeadingKeys = new Set([
+    ...EXPLICIT_NON_POKEMON_HEADING_KEYS,
+    ...loadOptionalItemHeadingKeys()
+  ]);
   const groupedPokemonHistory = {};
   const groupedMoveHistory = {};
   const unmatchedPokemon = new Set();
@@ -395,67 +570,76 @@ function buildGroupedPatchHistories(rawArchive, pokemonDetails) {
     const pokemonEntries = parsePokemonEntries(patch.patchNoteDetails);
 
     for (const pokemonEntry of pokemonEntries) {
-      const sitePokemonName = nameMap.get(normalizeName(pokemonEntry.pokemon));
-      if (!sitePokemonName) {
-        unmatchedPokemon.add(pokemonEntry.pokemon);
+      const resolution = resolvePokemonHeadingTargets(
+        pokemonEntry.pokemon,
+        nameMap,
+        ignoredHeadingKeys,
+        moveHeadingKeys
+      );
+      if (resolution.targets.length === 0) {
+        if (!resolution.ignored) {
+          unmatchedPokemon.add(normalizePokemonHeading(pokemonEntry.pokemon));
+        }
         continue;
       }
 
-      const pokemonMeta = pokemonMetadata[sitePokemonName] || {
-        passiveNameKeys: new Set(),
-        uniteNameKeys: new Set(),
-        moveFamilies: {},
-        headingToFamilyNames: {}
-      };
-      const pokemonChanges = [];
-      const moveBuckets = {};
+      for (const sitePokemonName of resolution.targets) {
+        const pokemonMeta = pokemonMetadata[sitePokemonName] || {
+          passiveNameKeys: new Set(),
+          uniteNameKeys: new Set(),
+          moveFamilies: {},
+          headingToFamilyNames: {}
+        };
+        const pokemonChanges = [];
+        const moveBuckets = {};
 
-      for (const change of pokemonEntry.changes) {
-        const normalizedHeading = normalizeChangeHeading(change.heading);
-        const headingKey = resolveHeadingKey(normalizedHeading);
-        const matchedFamilyNames = pokemonMeta.headingToFamilyNames[headingKey] || [];
+        for (const change of pokemonEntry.changes) {
+          const normalizedHeading = normalizeChangeHeading(change.heading);
+          const headingKey = resolveHeadingKey(normalizedHeading);
+          const matchedFamilyNames = pokemonMeta.headingToFamilyNames[headingKey] || [];
 
-        if (matchedFamilyNames.length > 0 && !isPokemonLevelHeading(pokemonMeta, normalizedHeading, headingKey)) {
-          for (const familyName of matchedFamilyNames) {
-            if (!moveBuckets[familyName]) {
-              moveBuckets[familyName] = [];
+          if (matchedFamilyNames.length > 0 && !isPokemonLevelHeading(pokemonMeta, normalizedHeading, headingKey)) {
+            for (const familyName of matchedFamilyNames) {
+              if (!moveBuckets[familyName]) {
+                moveBuckets[familyName] = [];
+              }
+              moveBuckets[familyName].push(change);
             }
-            moveBuckets[familyName].push(change);
+          } else {
+            pokemonChanges.push(change);
           }
-        } else {
-          pokemonChanges.push(change);
-        }
-      }
-
-      if (pokemonChanges.length > 0) {
-        if (!groupedPokemonHistory[sitePokemonName]) {
-          groupedPokemonHistory[sitePokemonName] = [];
         }
 
-        groupedPokemonHistory[sitePokemonName].push({
-          version: patch.version,
-          title: patch.title,
-          slug: patch.slug,
-          patchDate: patch.patchDate,
-          changes: pokemonChanges
-        });
-      }
+        if (pokemonChanges.length > 0) {
+          if (!groupedPokemonHistory[sitePokemonName]) {
+            groupedPokemonHistory[sitePokemonName] = [];
+          }
 
-      for (const [moveName, changes] of Object.entries(moveBuckets)) {
-        if (!groupedMoveHistory[sitePokemonName]) {
-          groupedMoveHistory[sitePokemonName] = {};
-        }
-        if (!groupedMoveHistory[sitePokemonName][moveName]) {
-          groupedMoveHistory[sitePokemonName][moveName] = [];
+          groupedPokemonHistory[sitePokemonName].push({
+            version: patch.version,
+            title: patch.title,
+            slug: patch.slug,
+            patchDate: patch.patchDate,
+            changes: pokemonChanges
+          });
         }
 
-        groupedMoveHistory[sitePokemonName][moveName].push({
-          version: patch.version,
-          title: patch.title,
-          slug: patch.slug,
-          patchDate: patch.patchDate,
-          changes
-        });
+        for (const [moveName, changes] of Object.entries(moveBuckets)) {
+          if (!groupedMoveHistory[sitePokemonName]) {
+            groupedMoveHistory[sitePokemonName] = {};
+          }
+          if (!groupedMoveHistory[sitePokemonName][moveName]) {
+            groupedMoveHistory[sitePokemonName][moveName] = [];
+          }
+
+          groupedMoveHistory[sitePokemonName][moveName].push({
+            version: patch.version,
+            title: patch.title,
+            slug: patch.slug,
+            patchDate: patch.patchDate,
+            changes
+          });
+        }
       }
     }
   }

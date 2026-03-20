@@ -11286,6 +11286,18 @@
         ]
       },
       {
+        "version": "1.16.2.8",
+        "title": "Patch 1.16.2.8 Freezing Rush Part 2",
+        "slug": "1-16-2-8-freezing-rush-part-2",
+        "patchDate": "2024-11-01",
+        "changes": [
+          {
+            "heading": "Teleport \\[BUFFED\\]",
+            "body": "**Cooldown** decreased\n12s -> 11s"
+          }
+        ]
+      },
+      {
         "version": "1.14.1.5",
         "title": "Patch 1.14.1.5",
         "slug": "patch-1-14-1-5",
@@ -11332,6 +11344,22 @@
         ]
       },
       {
+        "version": "1.16.2.8",
+        "title": "Patch 1.16.2.8 Freezing Rush Part 2",
+        "slug": "1-16-2-8-freezing-rush-part-2",
+        "patchDate": "2024-11-01",
+        "changes": [
+          {
+            "heading": "Recover \\[BUFFED\\]",
+            "body": "**Cooldown** decreased\n12s -> 11s\n**Healing** increased\n20% of damage dealt -> 30% of damage dealt"
+          },
+          {
+            "heading": "Recover+ \\[BUFFED\\]",
+            "body": "**Healing** increased\n30% of damage dealt -> 40% of damage dealt"
+          }
+        ]
+      },
+      {
         "version": "1.12.1.5",
         "title": "Patch 1.12.1.5",
         "slug": "patch-1-12-1-5",
@@ -11366,6 +11394,18 @@
           {
             "heading": "Future Sight \\[BUGFIX?\\]",
             "body": "After 3s, Mewtwo deals damage to the locked-on enemy a second time, and additional damage equal to 50% of any damage they received ~~from Mewtwo~~ while locked-on. \n(Allies damage contributes once again)"
+          }
+        ]
+      },
+      {
+        "version": "1.16.2.8",
+        "title": "Patch 1.16.2.8 Freezing Rush Part 2",
+        "slug": "1-16-2-8-freezing-rush-part-2",
+        "patchDate": "2024-11-01",
+        "changes": [
+          {
+            "heading": "Future Sight \\[BUFFED\\]",
+            "body": "**Movement Speed Reduction** increased\n25% -> 35%\n**Cooldown** decreased\n10s -> 8.5s"
           }
         ]
       },
@@ -12724,6 +12764,42 @@
             "body": "**Cooldown** increased: 7s -> 8.5s"
           }
         ]
+      },
+      {
+        "version": "1.14.1.4",
+        "title": "Patch 1.14.1.4",
+        "slug": "patch-1-14-1-4",
+        "patchDate": "2024-03-12",
+        "changes": [
+          {
+            "heading": "Swords Dance \\[BUFFED\\]",
+            "body": "**Attack increase** increased: 12% -> 20%"
+          }
+        ]
+      },
+      {
+        "version": "1.8.1.6",
+        "title": "Patch 1.8.1.6",
+        "slug": "patch-1-8-1-6",
+        "patchDate": "2023-01-31",
+        "changes": [
+          {
+            "heading": "Swords Dance \\[NERFED\\]",
+            "body": "**Cooldown** increased: 6s -> 7s \n\n**Attack Buff** reduced: 15% -> 12%"
+          }
+        ]
+      },
+      {
+        "version": "1.7.1.8",
+        "title": "Patch 1.7.1.8",
+        "slug": "patch-1-7-1-8",
+        "patchDate": "2022-10-13",
+        "changes": [
+          {
+            "heading": "Swords Dance",
+            "body": "Cooldown 9s -> 6s\nBuff Duration 7s -> 5s"
+          }
+        ]
       }
     ],
     "Bullet Punch": [
@@ -12748,6 +12824,32 @@
           {
             "heading": "Bullet Punch \\[BUFFED\\]",
             "body": "**Cooldown** reduced: 6s -> 5s"
+          }
+        ]
+      }
+    ],
+    "Double Hit": [
+      {
+        "version": "1.14.1.4",
+        "title": "Patch 1.14.1.4",
+        "slug": "patch-1-14-1-4",
+        "patchDate": "2024-03-12",
+        "changes": [
+          {
+            "heading": "Double Hit \\[BUFFED\\]",
+            "body": "Ratio: 115% Atk -> 130% Atk\nSlider: 12 -> 12\nBase: 340 -> 375"
+          }
+        ]
+      },
+      {
+        "version": "1.7.1.8",
+        "title": "Patch 1.7.1.8",
+        "slug": "patch-1-7-1-8",
+        "patchDate": "2022-10-13",
+        "changes": [
+          {
+            "heading": "Double Hit",
+            "body": "Damage: \nRatio: 97% -> 115%\nPer Level: 10 -> 12 \nBase: 280 -> 340"
           }
         ]
       }
@@ -12776,6 +12878,30 @@
           {
             "heading": "Dual Wingbeat \\[BUFFED\\]",
             "body": "**Healing**:\nRatio: 115% Atk -> 127% Atk\nSlider: 0 -> 0\nBase: 345 -> 380"
+          }
+        ]
+      },
+      {
+        "version": "1.17.1.2",
+        "title": "Patch 1.17.1.2 The Next Step",
+        "slug": "patch-1-17-1-2-the-next-step",
+        "patchDate": "2024-12-04",
+        "changes": [
+          {
+            "heading": "Dual Wingbeat \\[BUFFED\\]",
+            "body": "**Healing**:\nRatio: 100% Atk -> 115% Atk\nSlider: 0 -> 0\nBase: 300 -> 345"
+          }
+        ]
+      },
+      {
+        "version": "1.8.1.6",
+        "title": "Patch 1.8.1.6",
+        "slug": "patch-1-8-1-6",
+        "patchDate": "2023-01-31",
+        "changes": [
+          {
+            "heading": "Dual Wingbeat \\[NERFED\\]",
+            "body": "**Cooldown** increased: 5s -> 6s "
           }
         ]
       },
@@ -12818,6 +12944,68 @@
           {
             "heading": "Swords Dance  \\[NERFED\\]",
             "body": "**Cooldown** increased: 7s -> 8.5s"
+          }
+        ]
+      },
+      {
+        "version": "1.14.1.4",
+        "title": "Patch 1.14.1.4",
+        "slug": "patch-1-14-1-4",
+        "patchDate": "2024-03-12",
+        "changes": [
+          {
+            "heading": "Swords Dance \\[BUFFED\\]",
+            "body": "**Attack increase** increased: 12% -> 20%"
+          }
+        ]
+      },
+      {
+        "version": "1.8.1.6",
+        "title": "Patch 1.8.1.6",
+        "slug": "patch-1-8-1-6",
+        "patchDate": "2023-01-31",
+        "changes": [
+          {
+            "heading": "Swords Dance \\[NERFED\\]",
+            "body": "**Cooldown** increased: 6s -> 7s \n\n**Attack Buff** reduced: 15% -> 12%"
+          }
+        ]
+      },
+      {
+        "version": "1.7.1.8",
+        "title": "Patch 1.7.1.8",
+        "slug": "patch-1-7-1-8",
+        "patchDate": "2022-10-13",
+        "changes": [
+          {
+            "heading": "Swords Dance",
+            "body": "Cooldown 9s -> 6s\nBuff Duration 7s -> 5s"
+          }
+        ]
+      }
+    ],
+    "Double Hit": [
+      {
+        "version": "1.14.1.4",
+        "title": "Patch 1.14.1.4",
+        "slug": "patch-1-14-1-4",
+        "patchDate": "2024-03-12",
+        "changes": [
+          {
+            "heading": "Double Hit \\[BUFFED\\]",
+            "body": "Ratio: 115% Atk -> 130% Atk\nSlider: 12 -> 12\nBase: 340 -> 375"
+          }
+        ]
+      },
+      {
+        "version": "1.7.1.8",
+        "title": "Patch 1.7.1.8",
+        "slug": "patch-1-7-1-8",
+        "patchDate": "2022-10-13",
+        "changes": [
+          {
+            "heading": "Double Hit",
+            "body": "Damage: \nRatio: 97% -> 115%\nPer Level: 10 -> 12 \nBase: 280 -> 340"
           }
         ]
       }
