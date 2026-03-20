@@ -4,12 +4,8 @@
     "Pokemon": "Pokemon/Absol.png",
     "Role": "Speedster",
     "Move Set": "Pursuit/Sucker Punch",
-    "Move 1": [
-      "Moves/Absol - Pursuit.png"
-    ],
-    "Move 2": [
-      "Moves/Absol - Sucker Punch.png"
-    ],
+    "Move 1": "Moves/Absol - Pursuit.png",
+    "Move 2": "Moves/Absol - Sucker Punch.png",
     "Win Rate": 47.61,
     "Pick Rate": 2.48,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -27,12 +23,8 @@
     "Pokemon": "Pokemon/Absol.png",
     "Role": "Speedster",
     "Move Set": "Night Slash/Psycho Cut",
-    "Move 1": [
-      "Moves/Absol - Night Slash.png"
-    ],
-    "Move 2": [
-      "Moves/Absol - Psycho Cut.png"
-    ],
+    "Move 1": "Moves/Absol - Night Slash.png",
+    "Move 2": "Moves/Absol - Psycho Cut.png",
     "Win Rate": 44.54,
     "Pick Rate": 2.41,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -50,12 +42,8 @@
     "Pokemon": "Pokemon/Absol.png",
     "Role": "Speedster",
     "Move Set": "Pursuit/Psycho Cut",
-    "Move 1": [
-      "Moves/Absol - Pursuit.png"
-    ],
-    "Move 2": [
-      "Moves/Absol - Psycho Cut.png"
-    ],
+    "Move 1": "Moves/Absol - Pursuit.png",
+    "Move 2": "Moves/Absol - Psycho Cut.png",
     "Win Rate": 47.44,
     "Pick Rate": 1.8,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -73,12 +61,8 @@
     "Pokemon": "Pokemon/Absol.png",
     "Role": "Speedster",
     "Move Set": "Night Slash/Sucker Punch",
-    "Move 1": [
-      "Moves/Absol - Night Slash.png"
-    ],
-    "Move 2": [
-      "Moves/Absol - Sucker Punch.png"
-    ],
+    "Move 1": "Moves/Absol - Night Slash.png",
+    "Move 2": "Moves/Absol - Sucker Punch.png",
     "Win Rate": 44.96,
     "Pick Rate": 0.43,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -96,12 +80,8 @@
     "Pokemon": "Pokemon/Aegislash.png",
     "Role": "All-Rounder",
     "Move Set": "Sacred Sword/Wide Guard",
-    "Move 1": [
-      "Moves/Aegislash - Sacred Sword.png"
-    ],
-    "Move 2": [
-      "Moves/Aegislash - Wide Guard.png"
-    ],
+    "Move 1": "Moves/Aegislash - Sacred Sword.png",
+    "Move 2": "Moves/Aegislash - Wide Guard.png",
     "Win Rate": 47.8,
     "Pick Rate": 2.92,
     "Item 1": "Battle_Items/Potion.png",
@@ -119,12 +99,8 @@
     "Pokemon": "Pokemon/Aegislash.png",
     "Role": "All-Rounder",
     "Move Set": "Shadow Claw/Wide Guard",
-    "Move 1": [
-      "Moves/Aegislash - Shadow Claw.png"
-    ],
-    "Move 2": [
-      "Moves/Aegislash - Wide Guard.png"
-    ],
+    "Move 1": "Moves/Aegislash - Shadow Claw.png",
+    "Move 2": "Moves/Aegislash - Wide Guard.png",
     "Win Rate": 46.09,
     "Pick Rate": 1.62,
     "Item 1": "Battle_Items/Potion.png",
@@ -142,12 +118,8 @@
     "Pokemon": "Pokemon/Aegislash.png",
     "Role": "All-Rounder",
     "Move Set": "Shadow Claw/Iron Head",
-    "Move 1": [
-      "Moves/Aegislash - Shadow Claw.png"
-    ],
-    "Move 2": [
-      "Moves/Aegislash - Iron Head.png"
-    ],
+    "Move 1": "Moves/Aegislash - Shadow Claw.png",
+    "Move 2": "Moves/Aegislash - Iron Head.png",
     "Win Rate": 47.01,
     "Pick Rate": 0.76,
     "Item 1": "Battle_Items/Potion.png",
@@ -165,12 +137,8 @@
     "Pokemon": "Pokemon/Aegislash.png",
     "Role": "All-Rounder",
     "Move Set": "Sacred Sword/Iron Head",
-    "Move 1": [
-      "Moves/Aegislash - Sacred Sword.png"
-    ],
-    "Move 2": [
-      "Moves/Aegislash - Iron Head.png"
-    ],
+    "Move 1": "Moves/Aegislash - Sacred Sword.png",
+    "Move 2": "Moves/Aegislash - Iron Head.png",
     "Win Rate": 53.13,
     "Pick Rate": 0.17,
     "Item 1": "Battle_Items/Potion.png",
@@ -188,12 +156,8 @@
     "Pokemon": "Pokemon/Alcremie.png",
     "Role": "Supporter",
     "Move Set": "Decorate/Sweet Scent",
-    "Move 1": [
-      "Moves/Alcremie - Decorate.png"
-    ],
-    "Move 2": [
-      "Moves/Alcremie - Sweet Scent.png"
-    ],
+    "Move 1": "Moves/Alcremie - Decorate.png",
+    "Move 2": "Moves/Alcremie - Sweet Scent.png",
     "Win Rate": 35.0,
     "Pick Rate": 0.11,
     "Item 1": "Battle_Items/X Speed.png",
@@ -211,12 +175,8 @@
     "Pokemon": "Pokemon/Alcremie.png",
     "Role": "Supporter",
     "Move Set": "Recover/Dazzling Gleam",
-    "Move 1": [
-      "Moves/Alcremie - Recover.png"
-    ],
-    "Move 2": [
-      "Moves/Alcremie - Dazzling Gleam.png"
-    ],
+    "Move 1": "Moves/Alcremie - Recover.png",
+    "Move 2": "Moves/Alcremie - Dazzling Gleam.png",
     "Win Rate": 43.46,
     "Pick Rate": 0.22,
     "Item 1": "Battle_Items/X Speed.png",
@@ -234,12 +194,8 @@
     "Pokemon": "Pokemon/Alcremie.png",
     "Role": "Supporter",
     "Move Set": "Recover/Sweet Scent",
-    "Move 1": [
-      "Moves/Alcremie - Recover.png"
-    ],
-    "Move 2": [
-      "Moves/Alcremie - Sweet Scent.png"
-    ],
+    "Move 1": "Moves/Alcremie - Recover.png",
+    "Move 2": "Moves/Alcremie - Sweet Scent.png",
     "Win Rate": 50.34,
     "Pick Rate": 6.73,
     "Item 1": "Battle_Items/X Speed.png",
@@ -257,12 +213,8 @@
     "Pokemon": "Pokemon/Alcremie.png",
     "Role": "Supporter",
     "Move Set": "Decorate/Dazzling Gleam",
-    "Move 1": [
-      "Moves/Alcremie - Decorate.png"
-    ],
-    "Move 2": [
-      "Moves/Alcremie - Dazzling Gleam.png"
-    ],
+    "Move 1": "Moves/Alcremie - Decorate.png",
+    "Move 2": "Moves/Alcremie - Dazzling Gleam.png",
     "Win Rate": 49.59,
     "Pick Rate": 0.83,
     "Item 1": "Battle_Items/X Speed.png",
@@ -280,12 +232,8 @@
     "Pokemon": "Pokemon/Alolan Ninetales.png",
     "Role": "Attacker",
     "Move Set": "Avalanche/Aurora Veil",
-    "Move 1": [
-      "Moves/Alolan Ninetales - Avalanche.png"
-    ],
-    "Move 2": [
-      "Moves/Alolan Ninetales - Aurora Veil.png"
-    ],
+    "Move 1": "Moves/Alolan Ninetales - Avalanche.png",
+    "Move 2": "Moves/Alolan Ninetales - Aurora Veil.png",
     "Win Rate": 55.45,
     "Pick Rate": 0.08,
     "Item 1": "Battle_Items/X Speed.png",
@@ -303,12 +251,8 @@
     "Pokemon": "Pokemon/Alolan Ninetales.png",
     "Role": "Attacker",
     "Move Set": "Avalanche/Blizzard",
-    "Move 1": [
-      "Moves/Alolan Ninetales - Avalanche.png"
-    ],
-    "Move 2": [
-      "Moves/Alolan Ninetales - Blizzard.png"
-    ],
+    "Move 1": "Moves/Alolan Ninetales - Avalanche.png",
+    "Move 2": "Moves/Alolan Ninetales - Blizzard.png",
     "Win Rate": 45.99,
     "Pick Rate": 4.92,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -326,12 +270,8 @@
     "Pokemon": "Pokemon/Alolan Ninetales.png",
     "Role": "Attacker",
     "Move Set": "Dazzling Gleam/Aurora Veil",
-    "Move 1": [
-      "Moves/Alolan Ninetales - Dazzling Gleam.png"
-    ],
-    "Move 2": [
-      "Moves/Alolan Ninetales - Aurora Veil.png"
-    ],
+    "Move 1": "Moves/Alolan Ninetales - Dazzling Gleam.png",
+    "Move 2": "Moves/Alolan Ninetales - Aurora Veil.png",
     "Win Rate": 50.25,
     "Pick Rate": 0.6,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -349,12 +289,8 @@
     "Pokemon": "Pokemon/Alolan Ninetales.png",
     "Role": "Attacker",
     "Move Set": "Dazzling Gleam/Blizzard",
-    "Move 1": [
-      "Moves/Alolan Ninetales - Dazzling Gleam.png"
-    ],
-    "Move 2": [
-      "Moves/Alolan Ninetales - Blizzard.png"
-    ],
+    "Move 1": "Moves/Alolan Ninetales - Dazzling Gleam.png",
+    "Move 2": "Moves/Alolan Ninetales - Blizzard.png",
     "Win Rate": 39.11,
     "Pick Rate": 0.15,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -372,12 +308,8 @@
     "Pokemon": "Pokemon/Alolan Raichu.png",
     "Role": "Attacker",
     "Move Set": "Electro Ball/Thunderbolt",
-    "Move 1": [
-      "Moves/Alolan Raichu - Electro Ball.png"
-    ],
-    "Move 2": [
-      "Moves/Alolan Raichu - Thunderbolt.png"
-    ],
+    "Move 1": "Moves/Alolan Raichu - Electro Ball.png",
+    "Move 2": "Moves/Alolan Raichu - Thunderbolt.png",
     "Win Rate": 49.58,
     "Pick Rate": 1.53,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -395,12 +327,8 @@
     "Pokemon": "Pokemon/Alolan Raichu.png",
     "Role": "Attacker",
     "Move Set": "Electro Ball/Psychic",
-    "Move 1": [
-      "Moves/Alolan Raichu - Electro Ball.png"
-    ],
-    "Move 2": [
-      "Moves/Alolan Raichu - Psychic.png"
-    ],
+    "Move 1": "Moves/Alolan Raichu - Electro Ball.png",
+    "Move 2": "Moves/Alolan Raichu - Psychic.png",
     "Win Rate": 44.24,
     "Pick Rate": 0.21,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -418,12 +346,8 @@
     "Pokemon": "Pokemon/Alolan Raichu.png",
     "Role": "Attacker",
     "Move Set": "Stored Power/Psychic",
-    "Move 1": [
-      "Moves/Alolan Raichu - Stored Power.png"
-    ],
-    "Move 2": [
-      "Moves/Alolan Raichu - Psychic.png"
-    ],
+    "Move 1": "Moves/Alolan Raichu - Stored Power.png",
+    "Move 2": "Moves/Alolan Raichu - Psychic.png",
     "Win Rate": 48.37,
     "Pick Rate": 1.99,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -441,12 +365,8 @@
     "Pokemon": "Pokemon/Alolan Raichu.png",
     "Role": "Attacker",
     "Move Set": "Stored Power/Thunderbolt",
-    "Move 1": [
-      "Moves/Alolan Raichu - Stored Power.png"
-    ],
-    "Move 2": [
-      "Moves/Alolan Raichu - Thunderbolt.png"
-    ],
+    "Move 1": "Moves/Alolan Raichu - Stored Power.png",
+    "Move 2": "Moves/Alolan Raichu - Thunderbolt.png",
     "Win Rate": 46.05,
     "Pick Rate": 1.65,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -464,12 +384,8 @@
     "Pokemon": "Pokemon/Armarouge.png",
     "Role": "Attacker",
     "Move Set": "Fire Spin/Psyshock",
-    "Move 1": [
-      "Moves/Armarouge - Fire Spin.png"
-    ],
-    "Move 2": [
-      "Moves/Armarouge - Psyshock.png"
-    ],
+    "Move 1": "Moves/Armarouge - Fire Spin.png",
+    "Move 2": "Moves/Armarouge - Psyshock.png",
     "Win Rate": 48.88,
     "Pick Rate": 0.85,
     "Item 1": "Battle_Items/X Speed.png",
@@ -487,12 +403,8 @@
     "Pokemon": "Pokemon/Armarouge.png",
     "Role": "Attacker",
     "Move Set": "Armor Cannon/Psyshock",
-    "Move 1": [
-      "Moves/Armarouge - Armor Cannon.png"
-    ],
-    "Move 2": [
-      "Moves/Armarouge - Psyshock.png"
-    ],
+    "Move 1": "Moves/Armarouge - Armor Cannon.png",
+    "Move 2": "Moves/Armarouge - Psyshock.png",
     "Win Rate": 47.52,
     "Pick Rate": 0.63,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -510,12 +422,8 @@
     "Pokemon": "Pokemon/Armarouge.png",
     "Role": "Attacker",
     "Move Set": "Fire Spin/Flame Charge",
-    "Move 1": [
-      "Moves/Armarouge - Fire Spin.png"
-    ],
-    "Move 2": [
-      "Moves/Armarouge - Flame Charge.png"
-    ],
+    "Move 1": "Moves/Armarouge - Fire Spin.png",
+    "Move 2": "Moves/Armarouge - Flame Charge.png",
     "Win Rate": 46.1,
     "Pick Rate": 0.6,
     "Item 1": "Battle_Items/X Speed.png",
@@ -533,12 +441,8 @@
     "Pokemon": "Pokemon/Armarouge.png",
     "Role": "Attacker",
     "Move Set": "Armor Cannon/Flame Charge",
-    "Move 1": [
-      "Moves/Armarouge - Armor Cannon.png"
-    ],
-    "Move 2": [
-      "Moves/Armarouge - Flame Charge.png"
-    ],
+    "Move 1": "Moves/Armarouge - Armor Cannon.png",
+    "Move 2": "Moves/Armarouge - Flame Charge.png",
     "Win Rate": 50.85,
     "Pick Rate": 0.05,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -556,12 +460,8 @@
     "Pokemon": "Pokemon/Azumarill.png",
     "Role": "All-Rounder",
     "Move Set": "Play Rough/Whirlpool",
-    "Move 1": [
-      "Moves/Azumarill - Play Rough.png"
-    ],
-    "Move 2": [
-      "Moves/Azumarill - Whirlpool.png"
-    ],
+    "Move 1": "Moves/Azumarill - Play Rough.png",
+    "Move 2": "Moves/Azumarill - Whirlpool.png",
     "Win Rate": 45.15,
     "Pick Rate": 3.14,
     "Item 1": "Battle_Items/X Speed.png",
@@ -579,12 +479,8 @@
     "Pokemon": "Pokemon/Azumarill.png",
     "Role": "All-Rounder",
     "Move Set": "Water Pulse/Aqua Tail",
-    "Move 1": [
-      "Moves/Azumarill - Water Pulse.png"
-    ],
-    "Move 2": [
-      "Moves/Azumarill - Aqua Tail.png"
-    ],
+    "Move 1": "Moves/Azumarill - Water Pulse.png",
+    "Move 2": "Moves/Azumarill - Aqua Tail.png",
     "Win Rate": 51.02,
     "Pick Rate": 1.55,
     "Item 1": "Battle_Items/X Speed.png",
@@ -602,12 +498,8 @@
     "Pokemon": "Pokemon/Azumarill.png",
     "Role": "All-Rounder",
     "Move Set": "Play Rough/Aqua Tail",
-    "Move 1": [
-      "Moves/Azumarill - Play Rough.png"
-    ],
-    "Move 2": [
-      "Moves/Azumarill - Aqua Tail.png"
-    ],
+    "Move 1": "Moves/Azumarill - Play Rough.png",
+    "Move 2": "Moves/Azumarill - Aqua Tail.png",
     "Win Rate": 40.35,
     "Pick Rate": 0.22,
     "Item 1": "Battle_Items/X Speed.png",
@@ -625,12 +517,8 @@
     "Pokemon": "Pokemon/Azumarill.png",
     "Role": "All-Rounder",
     "Move Set": "Water Pulse/Whirlpool",
-    "Move 1": [
-      "Moves/Azumarill - Water Pulse.png"
-    ],
-    "Move 2": [
-      "Moves/Azumarill - Whirlpool.png"
-    ],
+    "Move 1": "Moves/Azumarill - Water Pulse.png",
+    "Move 2": "Moves/Azumarill - Whirlpool.png",
     "Win Rate": 44.29,
     "Pick Rate": 0.11,
     "Item 1": "Battle_Items/X Speed.png",
@@ -648,12 +536,8 @@
     "Pokemon": "Pokemon/Blastoise.png",
     "Role": "Defender",
     "Move Set": "Hydro Pump/Rapid Spin",
-    "Move 1": [
-      "Moves/Blastoise - Hydro Pump.png"
-    ],
-    "Move 2": [
-      "Moves/Blastoise - Rapid Spin.png"
-    ],
+    "Move 1": "Moves/Blastoise - Hydro Pump.png",
+    "Move 2": "Moves/Blastoise - Rapid Spin.png",
     "Win Rate": 52.16,
     "Pick Rate": 0.69,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -671,12 +555,8 @@
     "Pokemon": "Pokemon/Blastoise.png",
     "Role": "Defender",
     "Move Set": "Hydro Pump/Surf",
-    "Move 1": [
-      "Moves/Blastoise - Hydro Pump.png"
-    ],
-    "Move 2": [
-      "Moves/Blastoise - Surf.png"
-    ],
+    "Move 1": "Moves/Blastoise - Hydro Pump.png",
+    "Move 2": "Moves/Blastoise - Surf.png",
     "Win Rate": 50.83,
     "Pick Rate": 44.64,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -719,12 +599,8 @@
     "Pokemon": "Pokemon/Blissey.png",
     "Role": "Supporter",
     "Move Set": "Egg Bomb/Soft-Boiled",
-    "Move 1": [
-      "Moves/Blissey - Egg Bomb.png"
-    ],
-    "Move 2": [
-      "Moves/Blissey - Soft-Boiled.png"
-    ],
+    "Move 1": "Moves/Blissey - Egg Bomb.png",
+    "Move 2": "Moves/Blissey - Soft-Boiled.png",
     "Win Rate": 49.72,
     "Pick Rate": 7.16,
     "Item 1": "Battle_Items/X Speed.png",
@@ -742,12 +618,8 @@
     "Pokemon": "Pokemon/Blissey.png",
     "Role": "Supporter",
     "Move Set": "Helping Hand/Safeguard",
-    "Move 1": [
-      "Moves/Blissey - Helping Hand.png"
-    ],
-    "Move 2": [
-      "Moves/Blissey - Safeguard.png"
-    ],
+    "Move 1": "Moves/Blissey - Helping Hand.png",
+    "Move 2": "Moves/Blissey - Safeguard.png",
     "Win Rate": 51.37,
     "Pick Rate": 6.27,
     "Item 1": "Battle_Items/X Speed.png",
@@ -765,12 +637,8 @@
     "Pokemon": "Pokemon/Blissey.png",
     "Role": "Supporter",
     "Move Set": "Helping Hand/Soft-Boiled",
-    "Move 1": [
-      "Moves/Blissey - Helping Hand.png"
-    ],
-    "Move 2": [
-      "Moves/Blissey - Soft-Boiled.png"
-    ],
+    "Move 1": "Moves/Blissey - Helping Hand.png",
+    "Move 2": "Moves/Blissey - Soft-Boiled.png",
     "Win Rate": 41.22,
     "Pick Rate": 0.21,
     "Item 1": "Battle_Items/X Speed.png",
@@ -788,12 +656,8 @@
     "Pokemon": "Pokemon/Buzzwole.png",
     "Role": "All-Rounder",
     "Move Set": "Smack Down/Superpower",
-    "Move 1": [
-      "Moves/Buzzwole - Smack Down.png"
-    ],
-    "Move 2": [
-      "Moves/Buzzwole - Superpower.png"
-    ],
+    "Move 1": "Moves/Buzzwole - Smack Down.png",
+    "Move 2": "Moves/Buzzwole - Superpower.png",
     "Win Rate": 46.9,
     "Pick Rate": 6.8,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -811,12 +675,8 @@
     "Pokemon": "Pokemon/Buzzwole.png",
     "Role": "All-Rounder",
     "Move Set": "Smack Down/Leech Life",
-    "Move 1": [
-      "Moves/Buzzwole - Smack Down.png"
-    ],
-    "Move 2": [
-      "Moves/Buzzwole - Leech Life.png"
-    ],
+    "Move 1": "Moves/Buzzwole - Smack Down.png",
+    "Move 2": "Moves/Buzzwole - Leech Life.png",
     "Win Rate": 45.66,
     "Pick Rate": 5.28,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -834,12 +694,8 @@
     "Pokemon": "Pokemon/Buzzwole.png",
     "Role": "All-Rounder",
     "Move Set": "Lunge/Leech Life",
-    "Move 1": [
-      "Moves/Buzzwole - Lunge.png"
-    ],
-    "Move 2": [
-      "Moves/Buzzwole - Leech Life.png"
-    ],
+    "Move 1": "Moves/Buzzwole - Lunge.png",
+    "Move 2": "Moves/Buzzwole - Leech Life.png",
     "Win Rate": 48.75,
     "Pick Rate": 2.03,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -857,12 +713,8 @@
     "Pokemon": "Pokemon/Buzzwole.png",
     "Role": "All-Rounder",
     "Move Set": "Lunge/Superpower",
-    "Move 1": [
-      "Moves/Buzzwole - Lunge.png"
-    ],
-    "Move 2": [
-      "Moves/Buzzwole - Superpower.png"
-    ],
+    "Move 1": "Moves/Buzzwole - Lunge.png",
+    "Move 2": "Moves/Buzzwole - Superpower.png",
     "Win Rate": 51.24,
     "Pick Rate": 0.31,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -880,12 +732,8 @@
     "Pokemon": "Pokemon/Ceruledge.png",
     "Role": "All-Rounder",
     "Move Set": "Bitter Blade/Flame Charge",
-    "Move 1": [
-      "Moves/Ceruledge - Bitter Blade.png"
-    ],
-    "Move 2": [
-      "Moves/Ceruledge - Flame Charge.png"
-    ],
+    "Move 1": "Moves/Ceruledge - Bitter Blade.png",
+    "Move 2": "Moves/Ceruledge - Flame Charge.png",
     "Win Rate": 47.74,
     "Pick Rate": 0.3,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -903,12 +751,8 @@
     "Pokemon": "Pokemon/Ceruledge.png",
     "Role": "All-Rounder",
     "Move Set": "Bitter Blade/Phantom Force",
-    "Move 1": [
-      "Moves/Ceruledge - Bitter Blade.png"
-    ],
-    "Move 2": [
-      "Moves/Ceruledge - Phantom Force.png"
-    ],
+    "Move 1": "Moves/Ceruledge - Bitter Blade.png",
+    "Move 2": "Moves/Ceruledge - Phantom Force.png",
     "Win Rate": 51.66,
     "Pick Rate": 14.37,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -926,12 +770,8 @@
     "Pokemon": "Pokemon/Ceruledge.png",
     "Role": "All-Rounder",
     "Move Set": "Psycho Cut/Flame Charge",
-    "Move 1": [
-      "Moves/Ceruledge - Psycho Cut.png"
-    ],
-    "Move 2": [
-      "Moves/Ceruledge - Flame Charge.png"
-    ],
+    "Move 1": "Moves/Ceruledge - Psycho Cut.png",
+    "Move 2": "Moves/Ceruledge - Flame Charge.png",
     "Win Rate": 50.79,
     "Pick Rate": 3.44,
     "Item 1": "Battle_Items/X Attack.png",
@@ -949,12 +789,8 @@
     "Pokemon": "Pokemon/Ceruledge.png",
     "Role": "All-Rounder",
     "Move Set": "Psycho Cut/Phantom Force",
-    "Move 1": [
-      "Moves/Ceruledge - Psycho Cut.png"
-    ],
-    "Move 2": [
-      "Moves/Ceruledge - Phantom Force.png"
-    ],
+    "Move 1": "Moves/Ceruledge - Psycho Cut.png",
+    "Move 2": "Moves/Ceruledge - Phantom Force.png",
     "Win Rate": 49.0,
     "Pick Rate": 3.28,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -972,12 +808,8 @@
     "Pokemon": "Pokemon/Chandelure.png",
     "Role": "Attacker",
     "Move Set": "Overheat/Imprison",
-    "Move 1": [
-      "Moves/Chandelure - Overheat.png"
-    ],
-    "Move 2": [
-      "Moves/Chandelure - Imprison.png"
-    ],
+    "Move 1": "Moves/Chandelure - Overheat.png",
+    "Move 2": "Moves/Chandelure - Imprison.png",
     "Win Rate": 48.44,
     "Pick Rate": 0.44,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -995,12 +827,8 @@
     "Pokemon": "Pokemon/Chandelure.png",
     "Role": "Attacker",
     "Move Set": "Overheat/Poltergeist",
-    "Move 1": [
-      "Moves/Chandelure - Overheat.png"
-    ],
-    "Move 2": [
-      "Moves/Chandelure - Poltergeist.png"
-    ],
+    "Move 1": "Moves/Chandelure - Overheat.png",
+    "Move 2": "Moves/Chandelure - Poltergeist.png",
     "Win Rate": 48.16,
     "Pick Rate": 0.37,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1018,12 +846,8 @@
     "Pokemon": "Pokemon/Chandelure.png",
     "Role": "Attacker",
     "Move Set": "Flamethrower/Imprison",
-    "Move 1": [
-      "Moves/Chandelure - Flamethrower.png"
-    ],
-    "Move 2": [
-      "Moves/Chandelure - Imprison.png"
-    ],
+    "Move 1": "Moves/Chandelure - Flamethrower.png",
+    "Move 2": "Moves/Chandelure - Imprison.png",
     "Win Rate": 47.83,
     "Pick Rate": 0.35,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1041,12 +865,8 @@
     "Pokemon": "Pokemon/Chandelure.png",
     "Role": "Attacker",
     "Move Set": "Flamethrower/Poltergeist",
-    "Move 1": [
-      "Moves/Chandelure - Flamethrower.png"
-    ],
-    "Move 2": [
-      "Moves/Chandelure - Poltergeist.png"
-    ],
+    "Move 1": "Moves/Chandelure - Flamethrower.png",
+    "Move 2": "Moves/Chandelure - Poltergeist.png",
     "Win Rate": 46.85,
     "Pick Rate": 0.58,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1064,12 +884,8 @@
     "Pokemon": "Pokemon/Charizard.png",
     "Role": "All-Rounder",
     "Move Set": "Fire Punch/Flare Blitz",
-    "Move 1": [
-      "Moves/Charizard - Fire Punch.png"
-    ],
-    "Move 2": [
-      "Moves/Charizard - Flare Blitz.png"
-    ],
+    "Move 1": "Moves/Charizard - Fire Punch.png",
+    "Move 2": "Moves/Charizard - Flare Blitz.png",
     "Win Rate": 51.47,
     "Pick Rate": 2.52,
     "Item 1": "Battle_Items/X Speed.png",
@@ -1087,12 +903,8 @@
     "Pokemon": "Pokemon/Charizard.png",
     "Role": "All-Rounder",
     "Move Set": "Flamethrower/Fire Blast",
-    "Move 1": [
-      "Moves/Charizard - Flamethrower.png"
-    ],
-    "Move 2": [
-      "Moves/Charizard - Fire Blast.png"
-    ],
+    "Move 1": "Moves/Charizard - Flamethrower.png",
+    "Move 2": "Moves/Charizard - Fire Blast.png",
     "Win Rate": 49.74,
     "Pick Rate": 1.93,
     "Item 1": "Battle_Items/X Speed.png",
@@ -1110,12 +922,8 @@
     "Pokemon": "Pokemon/Charizard.png",
     "Role": "All-Rounder",
     "Move Set": "Fire Punch/Fire Blast",
-    "Move 1": [
-      "Moves/Charizard - Fire Punch.png"
-    ],
-    "Move 2": [
-      "Moves/Charizard - Fire Blast.png"
-    ],
+    "Move 1": "Moves/Charizard - Fire Punch.png",
+    "Move 2": "Moves/Charizard - Fire Blast.png",
     "Win Rate": 47.8,
     "Pick Rate": 0.61,
     "Item 1": "Battle_Items/X Speed.png",
@@ -1133,12 +941,8 @@
     "Pokemon": "Pokemon/Charizard.png",
     "Role": "All-Rounder",
     "Move Set": "Flamethrower/Flare Blitz",
-    "Move 1": [
-      "Moves/Charizard - Flamethrower.png"
-    ],
-    "Move 2": [
-      "Moves/Charizard - Flare Blitz.png"
-    ],
+    "Move 1": "Moves/Charizard - Flamethrower.png",
+    "Move 2": "Moves/Charizard - Flare Blitz.png",
     "Win Rate": 48.91,
     "Pick Rate": 0.42,
     "Item 1": "Battle_Items/X Attack.png",
@@ -1156,12 +960,8 @@
     "Pokemon": "Pokemon/Cinderace.png",
     "Role": "Attacker",
     "Move Set": "Blaze Kick/Feint",
-    "Move 1": [
-      "Moves/Cinderace - Blaze Kick.png"
-    ],
-    "Move 2": [
-      "Moves/Cinderace - Feint.png"
-    ],
+    "Move 1": "Moves/Cinderace - Blaze Kick.png",
+    "Move 2": "Moves/Cinderace - Feint.png",
     "Win Rate": 52.2,
     "Pick Rate": 12.37,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1179,12 +979,8 @@
     "Pokemon": "Pokemon/Cinderace.png",
     "Role": "Attacker",
     "Move Set": "Pyro Ball/Feint",
-    "Move 1": [
-      "Moves/Cinderace - Pyro Ball.png"
-    ],
-    "Move 2": [
-      "Moves/Cinderace - Feint.png"
-    ],
+    "Move 1": "Moves/Cinderace - Pyro Ball.png",
+    "Move 2": "Moves/Cinderace - Feint.png",
     "Win Rate": 48.28,
     "Pick Rate": 8.76,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1202,12 +998,8 @@
     "Pokemon": "Pokemon/Cinderace.png",
     "Role": "Attacker",
     "Move Set": "Pyro Ball/Flame Charge",
-    "Move 1": [
-      "Moves/Cinderace - Pyro Ball.png"
-    ],
-    "Move 2": [
-      "Moves/Cinderace - Flame Charge.png"
-    ],
+    "Move 1": "Moves/Cinderace - Pyro Ball.png",
+    "Move 2": "Moves/Cinderace - Flame Charge.png",
     "Win Rate": 49.15,
     "Pick Rate": 7.54,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1225,12 +1017,8 @@
     "Pokemon": "Pokemon/Cinderace.png",
     "Role": "Attacker",
     "Move Set": "Blaze Kick/Flame Charge",
-    "Move 1": [
-      "Moves/Cinderace - Blaze Kick.png"
-    ],
-    "Move 2": [
-      "Moves/Cinderace - Flame Charge.png"
-    ],
+    "Move 1": "Moves/Cinderace - Blaze Kick.png",
+    "Move 2": "Moves/Cinderace - Flame Charge.png",
     "Win Rate": 53.39,
     "Pick Rate": 3.1,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1248,12 +1036,8 @@
     "Pokemon": "Pokemon/Clefable.png",
     "Role": "Supporter",
     "Move Set": "Moonlight/Gravity",
-    "Move 1": [
-      "Moves/Clefable - Moonlight.png"
-    ],
-    "Move 2": [
-      "Moves/Clefable - Gravity.png"
-    ],
+    "Move 1": "Moves/Clefable - Moonlight.png",
+    "Move 2": "Moves/Clefable - Gravity.png",
     "Win Rate": 47.77,
     "Pick Rate": 6.03,
     "Item 1": "Battle_Items/X Speed.png",
@@ -1271,12 +1055,8 @@
     "Pokemon": "Pokemon/Clefable.png",
     "Role": "Supporter",
     "Move Set": "Moonlight/Follow Me",
-    "Move 1": [
-      "Moves/Clefable - Moonlight.png"
-    ],
-    "Move 2": [
-      "Moves/Clefable - Follow Me.png"
-    ],
+    "Move 1": "Moves/Clefable - Moonlight.png",
+    "Move 2": "Moves/Clefable - Follow Me.png",
     "Win Rate": 48.44,
     "Pick Rate": 2.92,
     "Item 1": "Battle_Items/X Speed.png",
@@ -1294,12 +1074,8 @@
     "Pokemon": "Pokemon/Clefable.png",
     "Role": "Supporter",
     "Move Set": "Draining Kiss/Follow Me",
-    "Move 1": [
-      "Moves/Clefable - Draining Kiss.png"
-    ],
-    "Move 2": [
-      "Moves/Clefable - Follow Me.png"
-    ],
+    "Move 1": "Moves/Clefable - Draining Kiss.png",
+    "Move 2": "Moves/Clefable - Follow Me.png",
     "Win Rate": 45.31,
     "Pick Rate": 0.19,
     "Item 1": "Battle_Items/X Speed.png",
@@ -1317,12 +1093,8 @@
     "Pokemon": "Pokemon/Comfey.png",
     "Role": "Supporter",
     "Move Set": "Sweet Kiss/Magical Leaf",
-    "Move 1": [
-      "Moves/Comfey - Sweet Kiss.png"
-    ],
-    "Move 2": [
-      "Moves/Comfey - Magical Leaf.png"
-    ],
+    "Move 1": "Moves/Comfey - Sweet Kiss.png",
+    "Move 2": "Moves/Comfey - Magical Leaf.png",
     "Win Rate": 42.32,
     "Pick Rate": 0.34,
     "Item 1": "Battle_Items/Slow Smoke.png",
@@ -1340,12 +1112,8 @@
     "Pokemon": "Pokemon/Comfey.png",
     "Role": "Supporter",
     "Move Set": "Sweet Kiss/Grass Knot",
-    "Move 1": [
-      "Moves/Comfey - Sweet Kiss.png"
-    ],
-    "Move 2": [
-      "Moves/Comfey - Grass Knot.png"
-    ],
+    "Move 1": "Moves/Comfey - Sweet Kiss.png",
+    "Move 2": "Moves/Comfey - Grass Knot.png",
     "Win Rate": 53.96,
     "Pick Rate": 3.98,
     "Item 1": "Battle_Items/Slow Smoke.png",
@@ -1363,12 +1131,8 @@
     "Pokemon": "Pokemon/Comfey.png",
     "Role": "Supporter",
     "Move Set": "Floral Healing/Magical Leaf",
-    "Move 1": [
-      "Moves/Comfey - Floral Healing.png"
-    ],
-    "Move 2": [
-      "Moves/Comfey - Magical Leaf.png"
-    ],
+    "Move 1": "Moves/Comfey - Floral Healing.png",
+    "Move 2": "Moves/Comfey - Magical Leaf.png",
     "Win Rate": 44.71,
     "Pick Rate": 6.15,
     "Item 1": "Battle_Items/Slow Smoke.png",
@@ -1386,12 +1150,8 @@
     "Pokemon": "Pokemon/Comfey.png",
     "Role": "Supporter",
     "Move Set": "Floral Healing/Grass Knot",
-    "Move 1": [
-      "Moves/Comfey - Floral Healing.png"
-    ],
-    "Move 2": [
-      "Moves/Comfey - Grass Knot.png"
-    ],
+    "Move 1": "Moves/Comfey - Floral Healing.png",
+    "Move 2": "Moves/Comfey - Grass Knot.png",
     "Win Rate": 48.23,
     "Pick Rate": 2.61,
     "Item 1": "Battle_Items/Slow Smoke.png",
@@ -1409,12 +1169,8 @@
     "Pokemon": "Pokemon/Cramorant.png",
     "Role": "Attacker",
     "Move Set": "Dive/Air Slash",
-    "Move 1": [
-      "Moves/Cramorant - Dive.png"
-    ],
-    "Move 2": [
-      "Moves/Cramorant - Air Slash.png"
-    ],
+    "Move 1": "Moves/Cramorant - Dive.png",
+    "Move 2": "Moves/Cramorant - Air Slash.png",
     "Win Rate": 51.05,
     "Pick Rate": 4.81,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1432,12 +1188,8 @@
     "Pokemon": "Pokemon/Cramorant.png",
     "Role": "Attacker",
     "Move Set": "Surf/Hurricane",
-    "Move 1": [
-      "Moves/Cramorant - Surf.png"
-    ],
-    "Move 2": [
-      "Moves/Cramorant - Hurricane.png"
-    ],
+    "Move 1": "Moves/Cramorant - Surf.png",
+    "Move 2": "Moves/Cramorant - Hurricane.png",
     "Win Rate": 49.62,
     "Pick Rate": 4.14,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1455,12 +1207,8 @@
     "Pokemon": "Pokemon/Cramorant.png",
     "Role": "Attacker",
     "Move Set": "Dive/Hurricane",
-    "Move 1": [
-      "Moves/Cramorant - Dive.png"
-    ],
-    "Move 2": [
-      "Moves/Cramorant - Hurricane.png"
-    ],
+    "Move 1": "Moves/Cramorant - Dive.png",
+    "Move 2": "Moves/Cramorant - Hurricane.png",
     "Win Rate": 51.69,
     "Pick Rate": 2.31,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1478,12 +1226,8 @@
     "Pokemon": "Pokemon/Crustle.png",
     "Role": "Defender",
     "Move Set": "Rock Tomb/X-Scissor",
-    "Move 1": [
-      "Moves/Crustle - Rock Tomb.png"
-    ],
-    "Move 2": [
-      "Moves/Crustle - X-Scissor.png"
-    ],
+    "Move 1": "Moves/Crustle - Rock Tomb.png",
+    "Move 2": "Moves/Crustle - X-Scissor.png",
     "Win Rate": 50.99,
     "Pick Rate": 5.13,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1501,12 +1245,8 @@
     "Pokemon": "Pokemon/Crustle.png",
     "Role": "Defender",
     "Move Set": "Shell Smash/X-Scissor",
-    "Move 1": [
-      "Moves/Crustle - Shell Smash.png"
-    ],
-    "Move 2": [
-      "Moves/Crustle - X-Scissor.png"
-    ],
+    "Move 1": "Moves/Crustle - Shell Smash.png",
+    "Move 2": "Moves/Crustle - X-Scissor.png",
     "Win Rate": 47.64,
     "Pick Rate": 1.68,
     "Item 1": "Battle_Items/Potion.png",
@@ -1524,12 +1264,8 @@
     "Pokemon": "Pokemon/Crustle.png",
     "Role": "Defender",
     "Move Set": "Rock Tomb/Stealth Rock",
-    "Move 1": [
-      "Moves/Crustle - Rock Tomb.png"
-    ],
-    "Move 2": [
-      "Moves/Crustle - Stealth Rock.png"
-    ],
+    "Move 1": "Moves/Crustle - Rock Tomb.png",
+    "Move 2": "Moves/Crustle - Stealth Rock.png",
     "Win Rate": 47.09,
     "Pick Rate": 1.31,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1547,12 +1283,8 @@
     "Pokemon": "Pokemon/Crustle.png",
     "Role": "Defender",
     "Move Set": "Shell Smash/Stealth Rock",
-    "Move 1": [
-      "Moves/Crustle - Shell Smash.png"
-    ],
-    "Move 2": [
-      "Moves/Crustle - Stealth Rock.png"
-    ],
+    "Move 1": "Moves/Crustle - Shell Smash.png",
+    "Move 2": "Moves/Crustle - Stealth Rock.png",
     "Win Rate": 45.79,
     "Pick Rate": 0.87,
     "Item 1": "Battle_Items/Fluffy Tail.png",
@@ -1570,12 +1302,8 @@
     "Pokemon": "Pokemon/Darkrai.png",
     "Role": "Speedster",
     "Move Set": "Dark Void/Dark Pulse",
-    "Move 1": [
-      "Moves/Darkrai - Dark Void.png"
-    ],
-    "Move 2": [
-      "Moves/Darkrai - Dark Pulse.png"
-    ],
+    "Move 1": "Moves/Darkrai - Dark Void.png",
+    "Move 2": "Moves/Darkrai - Dark Pulse.png",
     "Win Rate": 49.88,
     "Pick Rate": 0.31,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1593,12 +1321,8 @@
     "Pokemon": "Pokemon/Darkrai.png",
     "Role": "Speedster",
     "Move Set": "Shadow Claw/Dark Pulse",
-    "Move 1": [
-      "Moves/Darkrai - Shadow Claw.png"
-    ],
-    "Move 2": [
-      "Moves/Darkrai - Dark Pulse.png"
-    ],
+    "Move 1": "Moves/Darkrai - Shadow Claw.png",
+    "Move 2": "Moves/Darkrai - Dark Pulse.png",
     "Win Rate": 52.13,
     "Pick Rate": 4.46,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1616,12 +1340,8 @@
     "Pokemon": "Pokemon/Darkrai.png",
     "Role": "Speedster",
     "Move Set": "Dark Void/Nasty Plot",
-    "Move 1": [
-      "Moves/Darkrai - Dark Void.png"
-    ],
-    "Move 2": [
-      "Moves/Darkrai - Nasty Plot.png"
-    ],
+    "Move 1": "Moves/Darkrai - Dark Void.png",
+    "Move 2": "Moves/Darkrai - Nasty Plot.png",
     "Win Rate": 46.89,
     "Pick Rate": 4.0,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1639,12 +1359,8 @@
     "Pokemon": "Pokemon/Decidueye.png",
     "Role": "Attacker",
     "Move Set": "Spirit Shackle/Shadow Sneak",
-    "Move 1": [
-      "Moves/Decidueye - Spirit Shackle.png"
-    ],
-    "Move 2": [
-      "Moves/Decidueye - Shadow Sneak.png"
-    ],
+    "Move 1": "Moves/Decidueye - Spirit Shackle.png",
+    "Move 2": "Moves/Decidueye - Shadow Sneak.png",
     "Win Rate": 50.93,
     "Pick Rate": 17.51,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1662,12 +1378,8 @@
     "Pokemon": "Pokemon/Decidueye.png",
     "Role": "Attacker",
     "Move Set": "Razor Leaf/Leaf Storm",
-    "Move 1": [
-      "Moves/Decidueye - Razor Leaf.png"
-    ],
-    "Move 2": [
-      "Moves/Decidueye - Leaf Storm.png"
-    ],
+    "Move 1": "Moves/Decidueye - Razor Leaf.png",
+    "Move 2": "Moves/Decidueye - Leaf Storm.png",
     "Win Rate": 48.37,
     "Pick Rate": 5.05,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1685,12 +1397,8 @@
     "Pokemon": "Pokemon/Decidueye.png",
     "Role": "Attacker",
     "Move Set": "Spirit Shackle/Leaf Storm",
-    "Move 1": [
-      "Moves/Decidueye - Spirit Shackle.png"
-    ],
-    "Move 2": [
-      "Moves/Decidueye - Leaf Storm.png"
-    ],
+    "Move 1": "Moves/Decidueye - Spirit Shackle.png",
+    "Move 2": "Moves/Decidueye - Leaf Storm.png",
     "Win Rate": 50.93,
     "Pick Rate": 2.46,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1708,12 +1416,8 @@
     "Pokemon": "Pokemon/Decidueye.png",
     "Role": "Attacker",
     "Move Set": "Razor Leaf/Shadow Sneak",
-    "Move 1": [
-      "Moves/Decidueye - Razor Leaf.png"
-    ],
-    "Move 2": [
-      "Moves/Decidueye - Shadow Sneak.png"
-    ],
+    "Move 1": "Moves/Decidueye - Razor Leaf.png",
+    "Move 2": "Moves/Decidueye - Shadow Sneak.png",
     "Win Rate": 49.0,
     "Pick Rate": 2.18,
     "Item 1": "Battle_Items/X Attack.png",
@@ -1731,12 +1435,8 @@
     "Pokemon": "Pokemon/Delphox.png",
     "Role": "Attacker",
     "Move Set": "Mystical Fire/Fire Spin",
-    "Move 1": [
-      "Moves/Delphox - Mystical Fire.png"
-    ],
-    "Move 2": [
-      "Moves/Delphox - Fire Spin.png"
-    ],
+    "Move 1": "Moves/Delphox - Mystical Fire.png",
+    "Move 2": "Moves/Delphox - Fire Spin.png",
     "Win Rate": 47.79,
     "Pick Rate": 1.47,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1754,12 +1454,8 @@
     "Pokemon": "Pokemon/Delphox.png",
     "Role": "Attacker",
     "Move Set": "Fire Blast/Fire Spin",
-    "Move 1": [
-      "Moves/Delphox - Fire Blast.png"
-    ],
-    "Move 2": [
-      "Moves/Delphox - Fire Spin.png"
-    ],
+    "Move 1": "Moves/Delphox - Fire Blast.png",
+    "Move 2": "Moves/Delphox - Fire Spin.png",
     "Win Rate": 47.89,
     "Pick Rate": 4.25,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1777,12 +1473,8 @@
     "Pokemon": "Pokemon/Delphox.png",
     "Role": "Attacker",
     "Move Set": "Mystical Fire/Flame Charge",
-    "Move 1": [
-      "Moves/Delphox - Mystical Fire.png"
-    ],
-    "Move 2": [
-      "Moves/Delphox - Flame Charge.png"
-    ],
+    "Move 1": "Moves/Delphox - Mystical Fire.png",
+    "Move 2": "Moves/Delphox - Flame Charge.png",
     "Win Rate": 51.26,
     "Pick Rate": 1.73,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1800,12 +1492,8 @@
     "Pokemon": "Pokemon/Dhelmise.png",
     "Role": "All-Rounder",
     "Move Set": "Power Whip/Heavy Slam",
-    "Move 1": [
-      "Moves/Dhelmise - Power Whip.png"
-    ],
-    "Move 2": [
-      "Moves/Dhelmise - Heavy Slam.png"
-    ],
+    "Move 1": "Moves/Dhelmise - Power Whip.png",
+    "Move 2": "Moves/Dhelmise - Heavy Slam.png",
     "Win Rate": 47.2,
     "Pick Rate": 0.1,
     "Item 1": "Battle_Items/X Speed.png",
@@ -1823,12 +1511,8 @@
     "Pokemon": "Pokemon/Dhelmise.png",
     "Role": "All-Rounder",
     "Move Set": "Power Whip/Anchor Shot",
-    "Move 1": [
-      "Moves/Dhelmise - Power Whip.png"
-    ],
-    "Move 2": [
-      "Moves/Dhelmise - Anchor Shot.png"
-    ],
+    "Move 1": "Moves/Dhelmise - Power Whip.png",
+    "Move 2": "Moves/Dhelmise - Anchor Shot.png",
     "Win Rate": 49.39,
     "Pick Rate": 2.26,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1846,12 +1530,8 @@
     "Pokemon": "Pokemon/Dhelmise.png",
     "Role": "All-Rounder",
     "Move Set": "Whirlpool/Anchor Shot",
-    "Move 1": [
-      "Moves/Dhelmise - Whirlpool.png"
-    ],
-    "Move 2": [
-      "Moves/Dhelmise - Anchor Shot.png"
-    ],
+    "Move 1": "Moves/Dhelmise - Whirlpool.png",
+    "Move 2": "Moves/Dhelmise - Anchor Shot.png",
     "Win Rate": 50.3,
     "Pick Rate": 1.14,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -1869,12 +1549,8 @@
     "Pokemon": "Pokemon/Dhelmise.png",
     "Role": "All-Rounder",
     "Move Set": "Whirlpool/Heavy Slam",
-    "Move 1": [
-      "Moves/Dhelmise - Whirlpool.png"
-    ],
-    "Move 2": [
-      "Moves/Dhelmise - Heavy Slam.png"
-    ],
+    "Move 1": "Moves/Dhelmise - Whirlpool.png",
+    "Move 2": "Moves/Dhelmise - Heavy Slam.png",
     "Win Rate": 49.69,
     "Pick Rate": 0.12,
     "Item 1": "Battle_Items/X Speed.png",
@@ -1892,12 +1568,8 @@
     "Pokemon": "Pokemon/Dodrio.png",
     "Role": "Speedster",
     "Move Set": "Tri Attack/Jump Kick",
-    "Move 1": [
-      "Moves/Dodrio - Tri Attack.png"
-    ],
-    "Move 2": [
-      "Moves/Dodrio - Jump Kick.png"
-    ],
+    "Move 1": "Moves/Dodrio - Tri Attack.png",
+    "Move 2": "Moves/Dodrio - Jump Kick.png",
     "Win Rate": 51.61,
     "Pick Rate": 3.43,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -1915,12 +1587,8 @@
     "Pokemon": "Pokemon/Dodrio.png",
     "Role": "Speedster",
     "Move Set": "Drill Peck/Jump Kick",
-    "Move 1": [
-      "Moves/Dodrio - Drill Peck.png"
-    ],
-    "Move 2": [
-      "Moves/Dodrio - Jump Kick.png"
-    ],
+    "Move 1": "Moves/Dodrio - Drill Peck.png",
+    "Move 2": "Moves/Dodrio - Jump Kick.png",
     "Win Rate": 48.15,
     "Pick Rate": 1.03,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -1938,12 +1606,8 @@
     "Pokemon": "Pokemon/Dodrio.png",
     "Role": "Speedster",
     "Move Set": "Tri Attack/Agility",
-    "Move 1": [
-      "Moves/Dodrio - Tri Attack.png"
-    ],
-    "Move 2": [
-      "Moves/Dodrio - Agility.png"
-    ],
+    "Move 1": "Moves/Dodrio - Tri Attack.png",
+    "Move 2": "Moves/Dodrio - Agility.png",
     "Win Rate": 45.83,
     "Pick Rate": 0.31,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -1961,12 +1625,8 @@
     "Pokemon": "Pokemon/Dodrio.png",
     "Role": "Speedster",
     "Move Set": "Drill Peck/Agility",
-    "Move 1": [
-      "Moves/Dodrio - Drill Peck.png"
-    ],
-    "Move 2": [
-      "Moves/Dodrio - Agility.png"
-    ],
+    "Move 1": "Moves/Dodrio - Drill Peck.png",
+    "Move 2": "Moves/Dodrio - Agility.png",
     "Win Rate": 40.43,
     "Pick Rate": 0.11,
     "Item 1": "Battle_Items/X Speed.png",
@@ -1984,12 +1644,8 @@
     "Pokemon": "Pokemon/Dragapult.png",
     "Role": "Attacker",
     "Move Set": "Shadow Ball/Phantom Force",
-    "Move 1": [
-      "Moves/Dragapult - Shadow Ball.png"
-    ],
-    "Move 2": [
-      "Moves/Dragapult - Phantom Force.png"
-    ],
+    "Move 1": "Moves/Dragapult - Shadow Ball.png",
+    "Move 2": "Moves/Dragapult - Phantom Force.png",
     "Win Rate": 46.78,
     "Pick Rate": 2.28,
     "Item 1": "Battle_Items/X Attack.png",
@@ -2007,12 +1663,8 @@
     "Pokemon": "Pokemon/Dragapult.png",
     "Role": "Attacker",
     "Move Set": "Dragon Breath/Dragon Dance",
-    "Move 1": [
-      "Moves/Dragapult - Dragon Breath.png"
-    ],
-    "Move 2": [
-      "Moves/Dragapult - Dragon Dance.png"
-    ],
+    "Move 1": "Moves/Dragapult - Dragon Breath.png",
+    "Move 2": "Moves/Dragapult - Dragon Dance.png",
     "Win Rate": 49.38,
     "Pick Rate": 1.8,
     "Item 1": "Battle_Items/X Attack.png",
@@ -2030,12 +1682,8 @@
     "Pokemon": "Pokemon/Dragapult.png",
     "Role": "Attacker",
     "Move Set": "Shadow Ball/Dragon Dance",
-    "Move 1": [
-      "Moves/Dragapult - Shadow Ball.png"
-    ],
-    "Move 2": [
-      "Moves/Dragapult - Dragon Dance.png"
-    ],
+    "Move 1": "Moves/Dragapult - Shadow Ball.png",
+    "Move 2": "Moves/Dragapult - Dragon Dance.png",
     "Win Rate": 49.07,
     "Pick Rate": 0.41,
     "Item 1": "Battle_Items/X Attack.png",
@@ -2053,12 +1701,8 @@
     "Pokemon": "Pokemon/Dragapult.png",
     "Role": "Attacker",
     "Move Set": "Dragon Breath/Phantom Force",
-    "Move 1": [
-      "Moves/Dragapult - Dragon Breath.png"
-    ],
-    "Move 2": [
-      "Moves/Dragapult - Phantom Force.png"
-    ],
+    "Move 1": "Moves/Dragapult - Dragon Breath.png",
+    "Move 2": "Moves/Dragapult - Phantom Force.png",
     "Win Rate": 50.49,
     "Pick Rate": 0.31,
     "Item 1": "Battle_Items/X Attack.png",
@@ -2076,12 +1720,8 @@
     "Pokemon": "Pokemon/Dragonite.png",
     "Role": "All-Rounder",
     "Move Set": "Extreme Speed/Outrage",
-    "Move 1": [
-      "Moves/Dragonite - Extreme Speed.png"
-    ],
-    "Move 2": [
-      "Moves/Dragonite - Outrage.png"
-    ],
+    "Move 1": "Moves/Dragonite - Extreme Speed.png",
+    "Move 2": "Moves/Dragonite - Outrage.png",
     "Win Rate": 48.68,
     "Pick Rate": 0.93,
     "Item 1": "Battle_Items/X Attack.png",
@@ -2099,12 +1739,8 @@
     "Pokemon": "Pokemon/Dragonite.png",
     "Role": "All-Rounder",
     "Move Set": "Dragon Dance/Hyper Beam",
-    "Move 1": [
-      "Moves/Dragonite - Dragon Dance.png"
-    ],
-    "Move 2": [
-      "Moves/Dragonite - Hyper Beam.png"
-    ],
+    "Move 1": "Moves/Dragonite - Dragon Dance.png",
+    "Move 2": "Moves/Dragonite - Hyper Beam.png",
     "Win Rate": 49.38,
     "Pick Rate": 0.92,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -2122,12 +1758,8 @@
     "Pokemon": "Pokemon/Dragonite.png",
     "Role": "All-Rounder",
     "Move Set": "Dragon Dance/Outrage",
-    "Move 1": [
-      "Moves/Dragonite - Dragon Dance.png"
-    ],
-    "Move 2": [
-      "Moves/Dragonite - Outrage.png"
-    ],
+    "Move 1": "Moves/Dragonite - Dragon Dance.png",
+    "Move 2": "Moves/Dragonite - Outrage.png",
     "Win Rate": 48.13,
     "Pick Rate": 0.84,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -2145,12 +1777,8 @@
     "Pokemon": "Pokemon/Duraludon.png",
     "Role": "Attacker",
     "Move Set": "Dragon Pulse/Stealth Rock",
-    "Move 1": [
-      "Moves/Duraludon - Dragon Pulse.png"
-    ],
-    "Move 2": [
-      "Moves/Duraludon - Stealth Rock.png"
-    ],
+    "Move 1": "Moves/Duraludon - Dragon Pulse.png",
+    "Move 2": "Moves/Duraludon - Stealth Rock.png",
     "Win Rate": 49.36,
     "Pick Rate": 0.24,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -2168,12 +1796,8 @@
     "Pokemon": "Pokemon/Duraludon.png",
     "Role": "Attacker",
     "Move Set": "Dragon Pulse/Dragon Tail",
-    "Move 1": [
-      "Moves/Duraludon - Dragon Pulse.png"
-    ],
-    "Move 2": [
-      "Moves/Duraludon - Dragon Tail.png"
-    ],
+    "Move 1": "Moves/Duraludon - Dragon Pulse.png",
+    "Move 2": "Moves/Duraludon - Dragon Tail.png",
     "Win Rate": 49.33,
     "Pick Rate": 0.06,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -2191,12 +1815,8 @@
     "Pokemon": "Pokemon/Duraludon.png",
     "Role": "Attacker",
     "Move Set": "Flash Cannon/Dragon Tail",
-    "Move 1": [
-      "Moves/Duraludon - Flash Cannon.png"
-    ],
-    "Move 2": [
-      "Moves/Duraludon - Dragon Tail.png"
-    ],
+    "Move 1": "Moves/Duraludon - Flash Cannon.png",
+    "Move 2": "Moves/Duraludon - Dragon Tail.png",
     "Win Rate": 49.81,
     "Pick Rate": 0.61,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -2214,12 +1834,8 @@
     "Pokemon": "Pokemon/Duraludon.png",
     "Role": "Attacker",
     "Move Set": "Flash Cannon/Stealth Rock",
-    "Move 1": [
-      "Moves/Duraludon - Flash Cannon.png"
-    ],
-    "Move 2": [
-      "Moves/Duraludon - Stealth Rock.png"
-    ],
+    "Move 1": "Moves/Duraludon - Flash Cannon.png",
+    "Move 2": "Moves/Duraludon - Stealth Rock.png",
     "Win Rate": 49.5,
     "Pick Rate": 0.3,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -2237,12 +1853,8 @@
     "Pokemon": "Pokemon/Eldegoss.png",
     "Role": "Supporter",
     "Move Set": "Pollen Puff/Cotton Guard",
-    "Move 1": [
-      "Moves/Eldegoss - Pollen Puff.png"
-    ],
-    "Move 2": [
-      "Moves/Eldegoss - Cotton Guard.png"
-    ],
+    "Move 1": "Moves/Eldegoss - Pollen Puff.png",
+    "Move 2": "Moves/Eldegoss - Cotton Guard.png",
     "Win Rate": 48.28,
     "Pick Rate": 3.37,
     "Item 1": "Battle_Items/X Speed.png",
@@ -2260,12 +1872,8 @@
     "Pokemon": "Pokemon/Eldegoss.png",
     "Role": "Supporter",
     "Move Set": "Pollen Puff/Cotton Spore",
-    "Move 1": [
-      "Moves/Eldegoss - Pollen Puff.png"
-    ],
-    "Move 2": [
-      "Moves/Eldegoss - Cotton Spore.png"
-    ],
+    "Move 1": "Moves/Eldegoss - Pollen Puff.png",
+    "Move 2": "Moves/Eldegoss - Cotton Spore.png",
     "Win Rate": 48.44,
     "Pick Rate": 2.62,
     "Item 1": "Battle_Items/X Speed.png",
@@ -2283,12 +1891,8 @@
     "Pokemon": "Pokemon/Eldegoss.png",
     "Role": "Supporter",
     "Move Set": "Leaf Tornado/Cotton Spore",
-    "Move 1": [
-      "Moves/Eldegoss - Leaf Tornado.png"
-    ],
-    "Move 2": [
-      "Moves/Eldegoss - Cotton Spore.png"
-    ],
+    "Move 1": "Moves/Eldegoss - Leaf Tornado.png",
+    "Move 2": "Moves/Eldegoss - Cotton Spore.png",
     "Win Rate": 49.19,
     "Pick Rate": 0.52,
     "Item 1": "Battle_Items/X Speed.png",
@@ -2306,12 +1910,8 @@
     "Pokemon": "Pokemon/Eldegoss.png",
     "Role": "Supporter",
     "Move Set": "Leaf Tornado/Cotton Guard",
-    "Move 1": [
-      "Moves/Eldegoss - Leaf Tornado.png"
-    ],
-    "Move 2": [
-      "Moves/Eldegoss - Cotton Guard.png"
-    ],
+    "Move 1": "Moves/Eldegoss - Leaf Tornado.png",
+    "Move 2": "Moves/Eldegoss - Cotton Guard.png",
     "Win Rate": 49.48,
     "Pick Rate": 0.37,
     "Item 1": "Battle_Items/Potion.png",
@@ -2329,12 +1929,8 @@
     "Pokemon": "Pokemon/Empoleon.png",
     "Role": "All-Rounder",
     "Move Set": "Hydro Cannon/Aqua Jet",
-    "Move 1": [
-      "Moves/Empoleon - Hydro Cannon.png"
-    ],
-    "Move 2": [
-      "Moves/Empoleon - Aqua Jet.png"
-    ],
+    "Move 1": "Moves/Empoleon - Hydro Cannon.png",
+    "Move 2": "Moves/Empoleon - Aqua Jet.png",
     "Win Rate": 49.13,
     "Pick Rate": 3.33,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -2352,12 +1948,8 @@
     "Pokemon": "Pokemon/Empoleon.png",
     "Role": "All-Rounder",
     "Move Set": "Hydro Cannon/Metal Claw",
-    "Move 1": [
-      "Moves/Empoleon - Hydro Cannon.png"
-    ],
-    "Move 2": [
-      "Moves/Empoleon - Metal Claw.png"
-    ],
+    "Move 1": "Moves/Empoleon - Hydro Cannon.png",
+    "Move 2": "Moves/Empoleon - Metal Claw.png",
     "Win Rate": 48.43,
     "Pick Rate": 1.51,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -2375,12 +1967,8 @@
     "Pokemon": "Pokemon/Empoleon.png",
     "Role": "All-Rounder",
     "Move Set": "Whirlpool/Aqua Jet",
-    "Move 1": [
-      "Moves/Empoleon - Whirlpool.png"
-    ],
-    "Move 2": [
-      "Moves/Empoleon - Aqua Jet.png"
-    ],
+    "Move 1": "Moves/Empoleon - Whirlpool.png",
+    "Move 2": "Moves/Empoleon - Aqua Jet.png",
     "Win Rate": 43.78,
     "Pick Rate": 0.19,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -2398,12 +1986,8 @@
     "Pokemon": "Pokemon/Empoleon.png",
     "Role": "All-Rounder",
     "Move Set": "Whirlpool/Metal Claw",
-    "Move 1": [
-      "Moves/Empoleon - Whirlpool.png"
-    ],
-    "Move 2": [
-      "Moves/Empoleon - Metal Claw.png"
-    ],
+    "Move 1": "Moves/Empoleon - Whirlpool.png",
+    "Move 2": "Moves/Empoleon - Metal Claw.png",
     "Win Rate": 48.21,
     "Pick Rate": 0.17,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -2421,12 +2005,8 @@
     "Pokemon": "Pokemon/Espeon.png",
     "Role": "Attacker",
     "Move Set": "Stored Power/Psybeam",
-    "Move 1": [
-      "Moves/Espeon - Stored Power.png"
-    ],
-    "Move 2": [
-      "Moves/Espeon - Psybeam.png"
-    ],
+    "Move 1": "Moves/Espeon - Stored Power.png",
+    "Move 2": "Moves/Espeon - Psybeam.png",
     "Win Rate": 47.93,
     "Pick Rate": 2.46,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -2444,12 +2024,8 @@
     "Pokemon": "Pokemon/Espeon.png",
     "Role": "Attacker",
     "Move Set": "Stored Power/Future Sight",
-    "Move 1": [
-      "Moves/Espeon - Stored Power.png"
-    ],
-    "Move 2": [
-      "Moves/Espeon - Future Sight.png"
-    ],
+    "Move 1": "Moves/Espeon - Stored Power.png",
+    "Move 2": "Moves/Espeon - Future Sight.png",
     "Win Rate": 47.94,
     "Pick Rate": 4.93,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -2467,12 +2043,8 @@
     "Pokemon": "Pokemon/Espeon.png",
     "Role": "Attacker",
     "Move Set": "Psyshock/Psybeam",
-    "Move 1": [
-      "Moves/Espeon - Psyshock.png"
-    ],
-    "Move 2": [
-      "Moves/Espeon - Psybeam.png"
-    ],
+    "Move 1": "Moves/Espeon - Psyshock.png",
+    "Move 2": "Moves/Espeon - Psybeam.png",
     "Win Rate": 47.88,
     "Pick Rate": 4.18,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -2490,12 +2062,8 @@
     "Pokemon": "Pokemon/Espeon.png",
     "Role": "Attacker",
     "Move Set": "Psyshock/Future Sight",
-    "Move 1": [
-      "Moves/Espeon - Psyshock.png"
-    ],
-    "Move 2": [
-      "Moves/Espeon - Future Sight.png"
-    ],
+    "Move 1": "Moves/Espeon - Psyshock.png",
+    "Move 2": "Moves/Espeon - Future Sight.png",
     "Win Rate": 48.62,
     "Pick Rate": 4.15,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -2513,12 +2081,8 @@
     "Pokemon": "Pokemon/Falinks.png",
     "Role": "All-Rounder",
     "Move Set": "Iron Head/Beat Up",
-    "Move 1": [
-      "Moves/Falinks - Iron Head.png"
-    ],
-    "Move 2": [
-      "Moves/Falinks - Beat Up.png"
-    ],
+    "Move 1": "Moves/Falinks - Iron Head.png",
+    "Move 2": "Moves/Falinks - Beat Up.png",
     "Win Rate": 50.11,
     "Pick Rate": 0.68,
     "Item 1": "Battle_Items/X Speed.png",
@@ -2536,12 +2100,8 @@
     "Pokemon": "Pokemon/Falinks.png",
     "Role": "All-Rounder",
     "Move Set": "Megahorn/No Retreat",
-    "Move 1": [
-      "Moves/Falinks - Megahorn.png"
-    ],
-    "Move 2": [
-      "Moves/Falinks - No Retreat.png"
-    ],
+    "Move 1": "Moves/Falinks - Megahorn.png",
+    "Move 2": "Moves/Falinks - No Retreat.png",
     "Win Rate": 45.69,
     "Pick Rate": 0.15,
     "Item 1": "Battle_Items/X Speed.png",
@@ -2559,12 +2119,8 @@
     "Pokemon": "Pokemon/Falinks.png",
     "Role": "All-Rounder",
     "Move Set": "Megahorn/Beat Up",
-    "Move 1": [
-      "Moves/Falinks - Megahorn.png"
-    ],
-    "Move 2": [
-      "Moves/Falinks - Beat Up.png"
-    ],
+    "Move 1": "Moves/Falinks - Megahorn.png",
+    "Move 2": "Moves/Falinks - Beat Up.png",
     "Win Rate": 54.24,
     "Pick Rate": 0.04,
     "Item 1": "Battle_Items/X Speed.png",
@@ -2582,12 +2138,8 @@
     "Pokemon": "Pokemon/Falinks.png",
     "Role": "All-Rounder",
     "Move Set": "Iron Head/No Retreat",
-    "Move 1": [
-      "Moves/Falinks - Iron Head.png"
-    ],
-    "Move 2": [
-      "Moves/Falinks - No Retreat.png"
-    ],
+    "Move 1": "Moves/Falinks - Iron Head.png",
+    "Move 2": "Moves/Falinks - No Retreat.png",
     "Win Rate": 41.03,
     "Pick Rate": 0.03,
     "Item 1": "Battle_Items/Potion.png",
@@ -2605,12 +2157,8 @@
     "Pokemon": "Pokemon/Galarian Rapidash.png",
     "Role": "Speedster",
     "Move Set": "Fairy Wind/Smart Strike",
-    "Move 1": [
-      "Moves/Galarian Rapidash - Fairy Wind.png"
-    ],
-    "Move 2": [
-      "Moves/Galarian Rapidash - Smart Strike.png"
-    ],
+    "Move 1": "Moves/Galarian Rapidash - Fairy Wind.png",
+    "Move 2": "Moves/Galarian Rapidash - Smart Strike.png",
     "Win Rate": 51.67,
     "Pick Rate": 0.16,
     "Item 1": "Battle_Items/X Speed.png",
@@ -2628,12 +2176,8 @@
     "Pokemon": "Pokemon/Galarian Rapidash.png",
     "Role": "Speedster",
     "Move Set": "Dazzling Gleam/Agility",
-    "Move 1": [
-      "Moves/Galarian Rapidash - Dazzling Gleam.png"
-    ],
-    "Move 2": [
-      "Moves/Galarian Rapidash - Agility.png"
-    ],
+    "Move 1": "Moves/Galarian Rapidash - Dazzling Gleam.png",
+    "Move 2": "Moves/Galarian Rapidash - Agility.png",
     "Win Rate": 45.72,
     "Pick Rate": 0.61,
     "Item 1": "Battle_Items/X Speed.png",
@@ -2651,12 +2195,8 @@
     "Pokemon": "Pokemon/Galarian Rapidash.png",
     "Role": "Speedster",
     "Move Set": "Dazzling Gleam/Smart Strike",
-    "Move 1": [
-      "Moves/Galarian Rapidash - Dazzling Gleam.png"
-    ],
-    "Move 2": [
-      "Moves/Galarian Rapidash - Smart Strike.png"
-    ],
+    "Move 1": "Moves/Galarian Rapidash - Dazzling Gleam.png",
+    "Move 2": "Moves/Galarian Rapidash - Smart Strike.png",
     "Win Rate": 52.35,
     "Pick Rate": 3.19,
     "Item 1": "Battle_Items/X Speed.png",
@@ -2674,12 +2214,8 @@
     "Pokemon": "Pokemon/Galarian Rapidash.png",
     "Role": "Speedster",
     "Move Set": "Fairy Wind/Agility",
-    "Move 1": [
-      "Moves/Galarian Rapidash - Fairy Wind.png"
-    ],
-    "Move 2": [
-      "Moves/Galarian Rapidash - Agility.png"
-    ],
+    "Move 1": "Moves/Galarian Rapidash - Fairy Wind.png",
+    "Move 2": "Moves/Galarian Rapidash - Agility.png",
     "Win Rate": 51.54,
     "Pick Rate": 0.22,
     "Item 1": "Battle_Items/X Speed.png",
@@ -2697,12 +2233,8 @@
     "Pokemon": "Pokemon/Garchomp.png",
     "Role": "All-Rounder",
     "Move Set": "Dig/Earthquake",
-    "Move 1": [
-      "Moves/Garchomp - Dig.png"
-    ],
-    "Move 2": [
-      "Moves/Garchomp - Earthquake.png"
-    ],
+    "Move 1": "Moves/Garchomp - Dig.png",
+    "Move 2": "Moves/Garchomp - Earthquake.png",
     "Win Rate": 49.97,
     "Pick Rate": 1.42,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -2720,12 +2252,8 @@
     "Pokemon": "Pokemon/Garchomp.png",
     "Role": "All-Rounder",
     "Move Set": "Dragon Rush/Dragon Claw",
-    "Move 1": [
-      "Moves/Garchomp - Dragon Rush.png"
-    ],
-    "Move 2": [
-      "Moves/Garchomp - Dragon Claw.png"
-    ],
+    "Move 1": "Moves/Garchomp - Dragon Rush.png",
+    "Move 2": "Moves/Garchomp - Dragon Claw.png",
     "Win Rate": 51.4,
     "Pick Rate": 9.84,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -2743,12 +2271,8 @@
     "Pokemon": "Pokemon/Gardevoir.png",
     "Role": "Attacker",
     "Move Set": "Psychic/Psyshock",
-    "Move 1": [
-      "Moves/Gardevoir - Psychic.png"
-    ],
-    "Move 2": [
-      "Moves/Gardevoir - Psyshock.png"
-    ],
+    "Move 1": "Moves/Gardevoir - Psychic.png",
+    "Move 2": "Moves/Gardevoir - Psyshock.png",
     "Win Rate": 50.59,
     "Pick Rate": 5.63,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -2766,12 +2290,8 @@
     "Pokemon": "Pokemon/Gardevoir.png",
     "Role": "Attacker",
     "Move Set": "Moonblast/Future Sight",
-    "Move 1": [
-      "Moves/Gardevoir - Moonblast.png"
-    ],
-    "Move 2": [
-      "Moves/Gardevoir - Future Sight.png"
-    ],
+    "Move 1": "Moves/Gardevoir - Moonblast.png",
+    "Move 2": "Moves/Gardevoir - Future Sight.png",
     "Win Rate": 48.26,
     "Pick Rate": 3.79,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -2789,12 +2309,8 @@
     "Pokemon": "Pokemon/Gardevoir.png",
     "Role": "Attacker",
     "Move Set": "Moonblast/Psyshock",
-    "Move 1": [
-      "Moves/Gardevoir - Moonblast.png"
-    ],
-    "Move 2": [
-      "Moves/Gardevoir - Psyshock.png"
-    ],
+    "Move 1": "Moves/Gardevoir - Moonblast.png",
+    "Move 2": "Moves/Gardevoir - Psyshock.png",
     "Win Rate": 49.02,
     "Pick Rate": 3.04,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -2812,12 +2328,8 @@
     "Pokemon": "Pokemon/Gardevoir.png",
     "Role": "Attacker",
     "Move Set": "Psychic/Future Sight",
-    "Move 1": [
-      "Moves/Gardevoir - Psychic.png"
-    ],
-    "Move 2": [
-      "Moves/Gardevoir - Future Sight.png"
-    ],
+    "Move 1": "Moves/Gardevoir - Psychic.png",
+    "Move 2": "Moves/Gardevoir - Future Sight.png",
     "Win Rate": 48.97,
     "Pick Rate": 1.67,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -2835,12 +2347,8 @@
     "Pokemon": "Pokemon/Gengar.png",
     "Role": "Speedster",
     "Move Set": "Sludge Bomb/Hex",
-    "Move 1": [
-      "Moves/Gengar - Sludge Bomb.png"
-    ],
-    "Move 2": [
-      "Moves/Gengar - Hex.png"
-    ],
+    "Move 1": "Moves/Gengar - Sludge Bomb.png",
+    "Move 2": "Moves/Gengar - Hex.png",
     "Win Rate": 52.1,
     "Pick Rate": 6.34,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -2858,12 +2366,8 @@
     "Pokemon": "Pokemon/Gengar.png",
     "Role": "Speedster",
     "Move Set": "Shadow Ball/Dream Eater",
-    "Move 1": [
-      "Moves/Gengar - Shadow Ball.png"
-    ],
-    "Move 2": [
-      "Moves/Gengar - Dream Eater.png"
-    ],
+    "Move 1": "Moves/Gengar - Shadow Ball.png",
+    "Move 2": "Moves/Gengar - Dream Eater.png",
     "Win Rate": 48.87,
     "Pick Rate": 5.14,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -2881,12 +2385,8 @@
     "Pokemon": "Pokemon/Glaceon.png",
     "Role": "Attacker",
     "Move Set": "Icicle Spear/Ice Shard",
-    "Move 1": [
-      "Moves/Glaceon - Icicle Spear.png"
-    ],
-    "Move 2": [
-      "Moves/Glaceon - Ice Shard.png"
-    ],
+    "Move 1": "Moves/Glaceon - Icicle Spear.png",
+    "Move 2": "Moves/Glaceon - Ice Shard.png",
     "Win Rate": 47.76,
     "Pick Rate": 8.45,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -2904,12 +2404,8 @@
     "Pokemon": "Pokemon/Glaceon.png",
     "Role": "Attacker",
     "Move Set": "Icy Wind/Freeze-Dry",
-    "Move 1": [
-      "Moves/Glaceon - Icy Wind.png"
-    ],
-    "Move 2": [
-      "Moves/Glaceon - Freeze-Dry.png"
-    ],
+    "Move 1": "Moves/Glaceon - Icy Wind.png",
+    "Move 2": "Moves/Glaceon - Freeze-Dry.png",
     "Win Rate": 50.48,
     "Pick Rate": 0.95,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -2927,12 +2423,8 @@
     "Pokemon": "Pokemon/Goodra.png",
     "Role": "Defender",
     "Move Set": "Dragon Pulse/Power Whip",
-    "Move 1": [
-      "Moves/Goodra - Dragon Pulse.png"
-    ],
-    "Move 2": [
-      "Moves/Goodra - Power Whip.png"
-    ],
+    "Move 1": "Moves/Goodra - Dragon Pulse.png",
+    "Move 2": "Moves/Goodra - Power Whip.png",
     "Win Rate": 46.57,
     "Pick Rate": 1.77,
     "Item 1": "Battle_Items/Potion.png",
@@ -2950,12 +2442,8 @@
     "Pokemon": "Pokemon/Goodra.png",
     "Role": "Defender",
     "Move Set": "Dragon Pulse/Acid Spray",
-    "Move 1": [
-      "Moves/Goodra - Dragon Pulse.png"
-    ],
-    "Move 2": [
-      "Moves/Goodra - Acid Spray.png"
-    ],
+    "Move 1": "Moves/Goodra - Dragon Pulse.png",
+    "Move 2": "Moves/Goodra - Acid Spray.png",
     "Win Rate": 47.21,
     "Pick Rate": 0.98,
     "Item 1": "Battle_Items/Potion.png",
@@ -2973,12 +2461,8 @@
     "Pokemon": "Pokemon/Goodra.png",
     "Role": "Defender",
     "Move Set": "Muddy Water/Power Whip",
-    "Move 1": [
-      "Moves/Goodra - Muddy Water.png"
-    ],
-    "Move 2": [
-      "Moves/Goodra - Power Whip.png"
-    ],
+    "Move 1": "Moves/Goodra - Muddy Water.png",
+    "Move 2": "Moves/Goodra - Power Whip.png",
     "Win Rate": 44.07,
     "Pick Rate": 0.46,
     "Item 1": "Battle_Items/Potion.png",
@@ -2996,12 +2480,8 @@
     "Pokemon": "Pokemon/Goodra.png",
     "Role": "Defender",
     "Move Set": "Muddy Water/Acid Spray",
-    "Move 1": [
-      "Moves/Goodra - Muddy Water.png"
-    ],
-    "Move 2": [
-      "Moves/Goodra - Acid Spray.png"
-    ],
+    "Move 1": "Moves/Goodra - Muddy Water.png",
+    "Move 2": "Moves/Goodra - Acid Spray.png",
     "Win Rate": 50.74,
     "Pick Rate": 0.31,
     "Item 1": "Battle_Items/Potion.png",
@@ -3019,12 +2499,8 @@
     "Pokemon": "Pokemon/Greedent.png",
     "Role": "Defender",
     "Move Set": "Bullet Seed/Covet",
-    "Move 1": [
-      "Moves/Greedent - Bullet Seed.png"
-    ],
-    "Move 2": [
-      "Moves/Greedent - Covet.png"
-    ],
+    "Move 1": "Moves/Greedent - Bullet Seed.png",
+    "Move 2": "Moves/Greedent - Covet.png",
     "Win Rate": 34.62,
     "Pick Rate": 0.04,
     "Item 1": "Battle_Items/X Speed.png",
@@ -3042,12 +2518,8 @@
     "Pokemon": "Pokemon/Greedent.png",
     "Role": "Defender",
     "Move Set": "Belch/Stuff Cheeks",
-    "Move 1": [
-      "Moves/Greedent - Belch.png"
-    ],
-    "Move 2": [
-      "Moves/Greedent - Stuff Cheeks.png"
-    ],
+    "Move 1": "Moves/Greedent - Belch.png",
+    "Move 2": "Moves/Greedent - Stuff Cheeks.png",
     "Win Rate": 40.0,
     "Pick Rate": 0.09,
     "Item 1": "Battle_Items/X Speed.png",
@@ -3065,12 +2537,8 @@
     "Pokemon": "Pokemon/Greedent.png",
     "Role": "Defender",
     "Move Set": "Belch/Covet",
-    "Move 1": [
-      "Moves/Greedent - Belch.png"
-    ],
-    "Move 2": [
-      "Moves/Greedent - Covet.png"
-    ],
+    "Move 1": "Moves/Greedent - Belch.png",
+    "Move 2": "Moves/Greedent - Covet.png",
     "Win Rate": 54.74,
     "Pick Rate": 1.58,
     "Item 1": "Battle_Items/Potion.png",
@@ -3088,12 +2556,8 @@
     "Pokemon": "Pokemon/Greedent.png",
     "Role": "Defender",
     "Move Set": "Bullet Seed/Stuff Cheeks",
-    "Move 1": [
-      "Moves/Greedent - Bullet Seed.png"
-    ],
-    "Move 2": [
-      "Moves/Greedent - Stuff Cheeks.png"
-    ],
+    "Move 1": "Moves/Greedent - Bullet Seed.png",
+    "Move 2": "Moves/Greedent - Stuff Cheeks.png",
     "Win Rate": 50.44,
     "Pick Rate": 0.61,
     "Item 1": "Battle_Items/X Speed.png",
@@ -3111,12 +2575,8 @@
     "Pokemon": "Pokemon/Greninja.png",
     "Role": "Attacker",
     "Move Set": "Surf/Smokescreen",
-    "Move 1": [
-      "Moves/Greninja - Surf.png"
-    ],
-    "Move 2": [
-      "Moves/Greninja - Smokescreen.png"
-    ],
+    "Move 1": "Moves/Greninja - Surf.png",
+    "Move 2": "Moves/Greninja - Smokescreen.png",
     "Win Rate": 54.43,
     "Pick Rate": 16.82,
     "Item 1": "Battle_Items/X Attack.png",
@@ -3134,12 +2594,8 @@
     "Pokemon": "Pokemon/Greninja.png",
     "Role": "Attacker",
     "Move Set": "Water Shuriken/Double Team",
-    "Move 1": [
-      "Moves/Greninja - Water Shuriken.png"
-    ],
-    "Move 2": [
-      "Moves/Greninja - Double Team.png"
-    ],
+    "Move 1": "Moves/Greninja - Water Shuriken.png",
+    "Move 2": "Moves/Greninja - Double Team.png",
     "Win Rate": 51.18,
     "Pick Rate": 14.35,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3157,12 +2613,8 @@
     "Pokemon": "Pokemon/Greninja.png",
     "Role": "Attacker",
     "Move Set": "Surf/Double Team",
-    "Move 1": [
-      "Moves/Greninja - Surf.png"
-    ],
-    "Move 2": [
-      "Moves/Greninja - Double Team.png"
-    ],
+    "Move 1": "Moves/Greninja - Surf.png",
+    "Move 2": "Moves/Greninja - Double Team.png",
     "Win Rate": 54.11,
     "Pick Rate": 10.36,
     "Item 1": "Battle_Items/X Attack.png",
@@ -3180,12 +2632,8 @@
     "Pokemon": "Pokemon/Greninja.png",
     "Role": "Attacker",
     "Move Set": "Water Shuriken/Smokescreen",
-    "Move 1": [
-      "Moves/Greninja - Water Shuriken.png"
-    ],
-    "Move 2": [
-      "Moves/Greninja - Smokescreen.png"
-    ],
+    "Move 1": "Moves/Greninja - Water Shuriken.png",
+    "Move 2": "Moves/Greninja - Smokescreen.png",
     "Win Rate": 48.3,
     "Pick Rate": 0.54,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3203,12 +2651,8 @@
     "Pokemon": "Pokemon/Gyarados.png",
     "Role": "All-Rounder",
     "Move Set": "Aqua Tail/Bounce",
-    "Move 1": [
-      "Moves/Gyarados - Aqua Tail.png"
-    ],
-    "Move 2": [
-      "Moves/Gyarados - Bounce.png"
-    ],
+    "Move 1": "Moves/Gyarados - Aqua Tail.png",
+    "Move 2": "Moves/Gyarados - Bounce.png",
     "Win Rate": 46.15,
     "Pick Rate": 0.12,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3226,12 +2670,8 @@
     "Pokemon": "Pokemon/Gyarados.png",
     "Role": "All-Rounder",
     "Move Set": "Aqua Tail/Waterfall",
-    "Move 1": [
-      "Moves/Gyarados - Aqua Tail.png"
-    ],
-    "Move 2": [
-      "Moves/Gyarados - Waterfall.png"
-    ],
+    "Move 1": "Moves/Gyarados - Aqua Tail.png",
+    "Move 2": "Moves/Gyarados - Waterfall.png",
     "Win Rate": 51.11,
     "Pick Rate": 0.07,
     "Item 1": "Battle_Items/Potion.png",
@@ -3249,12 +2689,8 @@
     "Pokemon": "Pokemon/Gyarados.png",
     "Role": "All-Rounder",
     "Move Set": "Dragon Breath/Waterfall",
-    "Move 1": [
-      "Moves/Gyarados - Dragon Breath.png"
-    ],
-    "Move 2": [
-      "Moves/Gyarados - Waterfall.png"
-    ],
+    "Move 1": "Moves/Gyarados - Dragon Breath.png",
+    "Move 2": "Moves/Gyarados - Waterfall.png",
     "Win Rate": 46.56,
     "Pick Rate": 0.85,
     "Item 1": "Battle_Items/Potion.png",
@@ -3272,12 +2708,8 @@
     "Pokemon": "Pokemon/Gyarados.png",
     "Role": "All-Rounder",
     "Move Set": "Dragon Breath/Bounce",
-    "Move 1": [
-      "Moves/Gyarados - Dragon Breath.png"
-    ],
-    "Move 2": [
-      "Moves/Gyarados - Bounce.png"
-    ],
+    "Move 1": "Moves/Gyarados - Dragon Breath.png",
+    "Move 2": "Moves/Gyarados - Bounce.png",
     "Win Rate": 47.43,
     "Pick Rate": 0.57,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3295,12 +2727,8 @@
     "Pokemon": "Pokemon/Ho-Oh.png",
     "Role": "Defender",
     "Move Set": "Fire Spin/Sky Attack",
-    "Move 1": [
-      "Moves/Ho-Oh - Fire Spin.png"
-    ],
-    "Move 2": [
-      "Moves/Ho-Oh - Sky Attack.png"
-    ],
+    "Move 1": "Moves/Ho-Oh - Fire Spin.png",
+    "Move 2": "Moves/Ho-Oh - Sky Attack.png",
     "Win Rate": 51.56,
     "Pick Rate": 1.74,
     "Item 1": "Battle_Items/X Speed.png",
@@ -3318,12 +2746,8 @@
     "Pokemon": "Pokemon/Ho-Oh.png",
     "Role": "Defender",
     "Move Set": "Sacred Fire/Flamethrower",
-    "Move 1": [
-      "Moves/Ho-Oh - Sacred Fire.png"
-    ],
-    "Move 2": [
-      "Moves/Ho-Oh - Flamethrower.png"
-    ],
+    "Move 1": "Moves/Ho-Oh - Sacred Fire.png",
+    "Move 2": "Moves/Ho-Oh - Flamethrower.png",
     "Win Rate": 50.15,
     "Pick Rate": 1.57,
     "Item 1": "Battle_Items/X Speed.png",
@@ -3341,12 +2765,8 @@
     "Pokemon": "Pokemon/Ho-Oh.png",
     "Role": "Defender",
     "Move Set": "Fire Spin/Flamethrower",
-    "Move 1": [
-      "Moves/Ho-Oh - Fire Spin.png"
-    ],
-    "Move 2": [
-      "Moves/Ho-Oh - Flamethrower.png"
-    ],
+    "Move 1": "Moves/Ho-Oh - Fire Spin.png",
+    "Move 2": "Moves/Ho-Oh - Flamethrower.png",
     "Win Rate": 48.26,
     "Pick Rate": 0.42,
     "Item 1": "Battle_Items/X Speed.png",
@@ -3364,12 +2784,8 @@
     "Pokemon": "Pokemon/Ho-Oh.png",
     "Role": "Defender",
     "Move Set": "Sacred Fire/Sky Attack",
-    "Move 1": [
-      "Moves/Ho-Oh - Sacred Fire.png"
-    ],
-    "Move 2": [
-      "Moves/Ho-Oh - Sky Attack.png"
-    ],
+    "Move 1": "Moves/Ho-Oh - Sacred Fire.png",
+    "Move 2": "Moves/Ho-Oh - Sky Attack.png",
     "Win Rate": 51.7,
     "Pick Rate": 0.38,
     "Item 1": "Battle_Items/X Speed.png",
@@ -3387,12 +2803,8 @@
     "Pokemon": "Pokemon/Hoopa.png",
     "Role": "Supporter",
     "Move Set": "Shadow Ball/Trick",
-    "Move 1": [
-      "Moves/Hoopa - Shadow Ball.png"
-    ],
-    "Move 2": [
-      "Moves/Hoopa - Trick.png"
-    ],
+    "Move 1": "Moves/Hoopa - Shadow Ball.png",
+    "Move 2": "Moves/Hoopa - Trick.png",
     "Win Rate": 51.21,
     "Pick Rate": 0.92,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3410,12 +2822,8 @@
     "Pokemon": "Pokemon/Hoopa.png",
     "Role": "Supporter",
     "Move Set": "Phantom Force/Hyperspace Hole",
-    "Move 1": [
-      "Moves/Hoopa - Phantom Force.png"
-    ],
-    "Move 2": [
-      "Moves/Hoopa - Hyperspace Hole.png"
-    ],
+    "Move 1": "Moves/Hoopa - Phantom Force.png",
+    "Move 2": "Moves/Hoopa - Hyperspace Hole.png",
     "Win Rate": 48.38,
     "Pick Rate": 3.16,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3433,12 +2841,8 @@
     "Pokemon": "Pokemon/Hoopa.png",
     "Role": "Supporter",
     "Move Set": "Phantom Force/Trick",
-    "Move 1": [
-      "Moves/Hoopa - Phantom Force.png"
-    ],
-    "Move 2": [
-      "Moves/Hoopa - Trick.png"
-    ],
+    "Move 1": "Moves/Hoopa - Phantom Force.png",
+    "Move 2": "Moves/Hoopa - Trick.png",
     "Win Rate": 50.57,
     "Pick Rate": 0.87,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3456,12 +2860,8 @@
     "Pokemon": "Pokemon/Hoopa.png",
     "Role": "Supporter",
     "Move Set": "Shadow Ball/Hyperspace Hole",
-    "Move 1": [
-      "Moves/Hoopa - Shadow Ball.png"
-    ],
-    "Move 2": [
-      "Moves/Hoopa - Hyperspace Hole.png"
-    ],
+    "Move 1": "Moves/Hoopa - Shadow Ball.png",
+    "Move 2": "Moves/Hoopa - Hyperspace Hole.png",
     "Win Rate": 42.08,
     "Pick Rate": 0.09,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3476,12 +2876,8 @@
     "Pokemon": "Pokemon/Inteleon.png",
     "Role": "Attacker",
     "Move Set": "Acrobatics/Liquidation",
-    "Move 1": [
-      "Moves/Inteleon - Acrobatics.png"
-    ],
-    "Move 2": [
-      "Moves/Inteleon - Liquidation.png"
-    ],
+    "Move 1": "Moves/Inteleon - Acrobatics.png",
+    "Move 2": "Moves/Inteleon - Liquidation.png",
     "Win Rate": 51.15,
     "Pick Rate": 10.8,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3499,12 +2895,8 @@
     "Pokemon": "Pokemon/Inteleon.png",
     "Role": "Attacker",
     "Move Set": "Acrobatics/Snipe Shot",
-    "Move 1": [
-      "Moves/Inteleon - Acrobatics.png"
-    ],
-    "Move 2": [
-      "Moves/Inteleon - Snipe Shot.png"
-    ],
+    "Move 1": "Moves/Inteleon - Acrobatics.png",
+    "Move 2": "Moves/Inteleon - Snipe Shot.png",
     "Win Rate": 41.57,
     "Pick Rate": 0.2,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3522,12 +2914,8 @@
     "Pokemon": "Pokemon/Inteleon.png",
     "Role": "Attacker",
     "Move Set": "Fell Stinger/Snipe Shot",
-    "Move 1": [
-      "Moves/Inteleon - Fell Stinger.png"
-    ],
-    "Move 2": [
-      "Moves/Inteleon - Snipe Shot.png"
-    ],
+    "Move 1": "Moves/Inteleon - Fell Stinger.png",
+    "Move 2": "Moves/Inteleon - Snipe Shot.png",
     "Win Rate": 48.24,
     "Pick Rate": 3.79,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3545,12 +2933,8 @@
     "Pokemon": "Pokemon/Inteleon.png",
     "Role": "Attacker",
     "Move Set": "Fell Stinger/Liquidation",
-    "Move 1": [
-      "Moves/Inteleon - Fell Stinger.png"
-    ],
-    "Move 2": [
-      "Moves/Inteleon - Liquidation.png"
-    ],
+    "Move 1": "Moves/Inteleon - Fell Stinger.png",
+    "Move 2": "Moves/Inteleon - Liquidation.png",
     "Win Rate": 38.83,
     "Pick Rate": 0.24,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3568,12 +2952,8 @@
     "Pokemon": "Pokemon/Lapras.png",
     "Role": "Defender",
     "Move Set": "Perish Song/Bubble Beam",
-    "Move 1": [
-      "Moves/Lapras - Perish Song.png"
-    ],
-    "Move 2": [
-      "Moves/Lapras - Bubble Beam.png"
-    ],
+    "Move 1": "Moves/Lapras - Perish Song.png",
+    "Move 2": "Moves/Lapras - Bubble Beam.png",
     "Win Rate": 46.79,
     "Pick Rate": 1.85,
     "Item 1": "Battle_Items/X Speed.png",
@@ -3591,12 +2971,8 @@
     "Pokemon": "Pokemon/Lapras.png",
     "Role": "Defender",
     "Move Set": "Water Pulse/Bubble Beam",
-    "Move 1": [
-      "Moves/Lapras - Water Pulse.png"
-    ],
-    "Move 2": [
-      "Moves/Lapras - Bubble Beam.png"
-    ],
+    "Move 1": "Moves/Lapras - Water Pulse.png",
+    "Move 2": "Moves/Lapras - Bubble Beam.png",
     "Win Rate": 48.73,
     "Pick Rate": 3.04,
     "Item 1": "Battle_Items/X Speed.png",
@@ -3614,12 +2990,8 @@
     "Pokemon": "Pokemon/Lapras.png",
     "Role": "Defender",
     "Move Set": "Water Pulse/Ice Beam",
-    "Move 1": [
-      "Moves/Lapras - Water Pulse.png"
-    ],
-    "Move 2": [
-      "Moves/Lapras - Ice Beam.png"
-    ],
+    "Move 1": "Moves/Lapras - Water Pulse.png",
+    "Move 2": "Moves/Lapras - Ice Beam.png",
     "Win Rate": 49.93,
     "Pick Rate": 1.12,
     "Item 1": "Battle_Items/X Speed.png",
@@ -3637,12 +3009,8 @@
     "Pokemon": "Pokemon/Lapras.png",
     "Role": "Defender",
     "Move Set": "Perish Song/Ice Beam",
-    "Move 1": [
-      "Moves/Lapras - Perish Song.png"
-    ],
-    "Move 2": [
-      "Moves/Lapras - Ice Beam.png"
-    ],
+    "Move 1": "Moves/Lapras - Perish Song.png",
+    "Move 2": "Moves/Lapras - Ice Beam.png",
     "Win Rate": 47.63,
     "Pick Rate": 1.79,
     "Item 1": "Battle_Items/X Speed.png",
@@ -3660,12 +3028,8 @@
     "Pokemon": "Pokemon/Latias.png",
     "Role": "Supporter",
     "Move Set": "Dragon Cheer/Dragon Pulse",
-    "Move 1": [
-      "Moves/Latias - Dragon Cheer.png"
-    ],
-    "Move 2": [
-      "Moves/Latias - Dragon Pulse.png"
-    ],
+    "Move 1": "Moves/Latias - Dragon Cheer.png",
+    "Move 2": "Moves/Latias - Dragon Pulse.png",
     "Win Rate": 53.29,
     "Pick Rate": 3.09,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3683,12 +3047,8 @@
     "Pokemon": "Pokemon/Latias.png",
     "Role": "Supporter",
     "Move Set": "Mist Ball/Dragon Pulse",
-    "Move 1": [
-      "Moves/Latias - Mist Ball.png"
-    ],
-    "Move 2": [
-      "Moves/Latias - Dragon Pulse.png"
-    ],
+    "Move 1": "Moves/Latias - Mist Ball.png",
+    "Move 2": "Moves/Latias - Dragon Pulse.png",
     "Win Rate": 48.85,
     "Pick Rate": 4.81,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3706,12 +3066,8 @@
     "Pokemon": "Pokemon/Latias.png",
     "Role": "Supporter",
     "Move Set": "Dragon Cheer/Dragon Breath",
-    "Move 1": [
-      "Moves/Latias - Dragon Cheer.png"
-    ],
-    "Move 2": [
-      "Moves/Latias - Dragon Breath.png"
-    ],
+    "Move 1": "Moves/Latias - Dragon Cheer.png",
+    "Move 2": "Moves/Latias - Dragon Breath.png",
     "Win Rate": 52.37,
     "Pick Rate": 2.41,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3729,12 +3085,8 @@
     "Pokemon": "Pokemon/Latias.png",
     "Role": "Supporter",
     "Move Set": "Mist Ball/Dragon Breath",
-    "Move 1": [
-      "Moves/Latias - Mist Ball.png"
-    ],
-    "Move 2": [
-      "Moves/Latias - Dragon Breath.png"
-    ],
+    "Move 1": "Moves/Latias - Mist Ball.png",
+    "Move 2": "Moves/Latias - Dragon Breath.png",
     "Win Rate": 48.07,
     "Pick Rate": 1.58,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3752,12 +3104,8 @@
     "Pokemon": "Pokemon/Latios.png",
     "Role": "Attacker",
     "Move Set": "Telekinesis/Draco Meteor",
-    "Move 1": [
-      "Moves/Latios - Telekinesis.png"
-    ],
-    "Move 2": [
-      "Moves/Latios - Draco Meteor.png"
-    ],
+    "Move 1": "Moves/Latios - Telekinesis.png",
+    "Move 2": "Moves/Latios - Draco Meteor.png",
     "Win Rate": 50.7,
     "Pick Rate": 17.03,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3775,12 +3123,8 @@
     "Pokemon": "Pokemon/Latios.png",
     "Role": "Attacker",
     "Move Set": "Telekinesis/Dragon Pulse",
-    "Move 1": [
-      "Moves/Latios - Telekinesis.png"
-    ],
-    "Move 2": [
-      "Moves/Latios - Dragon Pulse.png"
-    ],
+    "Move 1": "Moves/Latios - Telekinesis.png",
+    "Move 2": "Moves/Latios - Dragon Pulse.png",
     "Win Rate": 47.44,
     "Pick Rate": 1.85,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3798,12 +3142,8 @@
     "Pokemon": "Pokemon/Latios.png",
     "Role": "Attacker",
     "Move Set": "Luster Purge/Draco Meteor",
-    "Move 1": [
-      "Moves/Latios - Luster Purge.png"
-    ],
-    "Move 2": [
-      "Moves/Latios - Draco Meteor.png"
-    ],
+    "Move 1": "Moves/Latios - Luster Purge.png",
+    "Move 2": "Moves/Latios - Draco Meteor.png",
     "Win Rate": 49.88,
     "Pick Rate": 6.31,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3821,12 +3161,8 @@
     "Pokemon": "Pokemon/Latios.png",
     "Role": "Attacker",
     "Move Set": "Luster Purge/Dragon Pulse",
-    "Move 1": [
-      "Moves/Latios - Luster Purge.png"
-    ],
-    "Move 2": [
-      "Moves/Latios - Dragon Pulse.png"
-    ],
+    "Move 1": "Moves/Latios - Luster Purge.png",
+    "Move 2": "Moves/Latios - Dragon Pulse.png",
     "Win Rate": 49.17,
     "Pick Rate": 9.97,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3844,12 +3180,8 @@
     "Pokemon": "Pokemon/Leafeon.png",
     "Role": "Speedster",
     "Move Set": "Razor Leaf/Aerial Ace",
-    "Move 1": [
-      "Moves/Leafeon - Razor Leaf.png"
-    ],
-    "Move 2": [
-      "Moves/Leafeon - Aerial Ace.png"
-    ],
+    "Move 1": "Moves/Leafeon - Razor Leaf.png",
+    "Move 2": "Moves/Leafeon - Aerial Ace.png",
     "Win Rate": 48.7,
     "Pick Rate": 6.72,
     "Item 1": "Battle_Items/X Attack.png",
@@ -3867,12 +3199,8 @@
     "Pokemon": "Pokemon/Leafeon.png",
     "Role": "Speedster",
     "Move Set": "Razor Leaf/Leaf Blade",
-    "Move 1": [
-      "Moves/Leafeon - Razor Leaf.png"
-    ],
-    "Move 2": [
-      "Moves/Leafeon - Leaf Blade.png"
-    ],
+    "Move 1": "Moves/Leafeon - Razor Leaf.png",
+    "Move 2": "Moves/Leafeon - Leaf Blade.png",
     "Win Rate": 46.37,
     "Pick Rate": 1.06,
     "Item 1": "Battle_Items/X Speed.png",
@@ -3890,12 +3218,8 @@
     "Pokemon": "Pokemon/Leafeon.png",
     "Role": "Speedster",
     "Move Set": "Solar Blade/Leaf Blade",
-    "Move 1": [
-      "Moves/Leafeon - Solar Blade.png"
-    ],
-    "Move 2": [
-      "Moves/Leafeon - Leaf Blade.png"
-    ],
+    "Move 1": "Moves/Leafeon - Solar Blade.png",
+    "Move 2": "Moves/Leafeon - Leaf Blade.png",
     "Win Rate": 43.15,
     "Pick Rate": 0.53,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3913,12 +3237,8 @@
     "Pokemon": "Pokemon/Leafeon.png",
     "Role": "Speedster",
     "Move Set": "Solar Blade/Aerial Ace",
-    "Move 1": [
-      "Moves/Leafeon - Solar Blade.png"
-    ],
-    "Move 2": [
-      "Moves/Leafeon - Aerial Ace.png"
-    ],
+    "Move 1": "Moves/Leafeon - Solar Blade.png",
+    "Move 2": "Moves/Leafeon - Aerial Ace.png",
     "Win Rate": 44.44,
     "Pick Rate": 0.12,
     "Item 1": "Battle_Items/X Attack.png",
@@ -3936,12 +3256,8 @@
     "Pokemon": "Pokemon/Lucario.png",
     "Role": "All-Rounder",
     "Move Set": "Power-Up Punch/Bone Rush",
-    "Move 1": [
-      "Moves/Lucario - Power-Up Punch.png"
-    ],
-    "Move 2": [
-      "Moves/Lucario - Bone Rush.png"
-    ],
+    "Move 1": "Moves/Lucario - Power-Up Punch.png",
+    "Move 2": "Moves/Lucario - Bone Rush.png",
     "Win Rate": 48.92,
     "Pick Rate": 0.46,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -3959,12 +3275,8 @@
     "Pokemon": "Pokemon/Lucario.png",
     "Role": "All-Rounder",
     "Move Set": "Extreme Speed/Bone Rush",
-    "Move 1": [
-      "Moves/Lucario - Extreme Speed.png"
-    ],
-    "Move 2": [
-      "Moves/Lucario - Bone Rush.png"
-    ],
+    "Move 1": "Moves/Lucario - Extreme Speed.png",
+    "Move 2": "Moves/Lucario - Bone Rush.png",
     "Win Rate": 49.78,
     "Pick Rate": 5.96,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -3982,12 +3294,8 @@
     "Pokemon": "Pokemon/Lucario.png",
     "Role": "All-Rounder",
     "Move Set": "Extreme Speed/Close Combat",
-    "Move 1": [
-      "Moves/Lucario - Extreme Speed.png"
-    ],
-    "Move 2": [
-      "Moves/Lucario - Close Combat.png"
-    ],
+    "Move 1": "Moves/Lucario - Extreme Speed.png",
+    "Move 2": "Moves/Lucario - Close Combat.png",
     "Win Rate": 42.36,
     "Pick Rate": 0.16,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -4005,12 +3313,8 @@
     "Pokemon": "Pokemon/Lucario.png",
     "Role": "All-Rounder",
     "Move Set": "Power-Up Punch/Close Combat",
-    "Move 1": [
-      "Moves/Lucario - Power-Up Punch.png"
-    ],
-    "Move 2": [
-      "Moves/Lucario - Close Combat.png"
-    ],
+    "Move 1": "Moves/Lucario - Power-Up Punch.png",
+    "Move 2": "Moves/Lucario - Close Combat.png",
     "Win Rate": 45.64,
     "Pick Rate": 1.22,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -4028,12 +3332,8 @@
     "Pokemon": "Pokemon/Machamp.png",
     "Role": "All-Rounder",
     "Move Set": "Cross Chop/Submission",
-    "Move 1": [
-      "Moves/Machamp - Cross Chop.png"
-    ],
-    "Move 2": [
-      "Moves/Machamp - Submission.png"
-    ],
+    "Move 1": "Moves/Machamp - Cross Chop.png",
+    "Move 2": "Moves/Machamp - Submission.png",
     "Win Rate": 51.4,
     "Pick Rate": 8.64,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -4051,12 +3351,8 @@
     "Pokemon": "Pokemon/Machamp.png",
     "Role": "All-Rounder",
     "Move Set": "Close Combat/Dynamic Punch",
-    "Move 1": [
-      "Moves/Machamp - Close Combat.png"
-    ],
-    "Move 2": [
-      "Moves/Machamp - Dynamic Punch.png"
-    ],
+    "Move 1": "Moves/Machamp - Close Combat.png",
+    "Move 2": "Moves/Machamp - Dynamic Punch.png",
     "Win Rate": 49.88,
     "Pick Rate": 1.99,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -4074,12 +3370,8 @@
     "Pokemon": "Pokemon/Machamp.png",
     "Role": "All-Rounder",
     "Move Set": "Close Combat/Submission",
-    "Move 1": [
-      "Moves/Machamp - Close Combat.png"
-    ],
-    "Move 2": [
-      "Moves/Machamp - Submission.png"
-    ],
+    "Move 1": "Moves/Machamp - Close Combat.png",
+    "Move 2": "Moves/Machamp - Submission.png",
     "Win Rate": 44.1,
     "Pick Rate": 1.32,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -4097,12 +3389,8 @@
     "Pokemon": "Pokemon/Machamp.png",
     "Role": "All-Rounder",
     "Move Set": "Cross Chop/Dynamic Punch",
-    "Move 1": [
-      "Moves/Machamp - Cross Chop.png"
-    ],
-    "Move 2": [
-      "Moves/Machamp - Dynamic Punch.png"
-    ],
+    "Move 1": "Moves/Machamp - Cross Chop.png",
+    "Move 2": "Moves/Machamp - Dynamic Punch.png",
     "Win Rate": 52.52,
     "Pick Rate": 0.58,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -4120,12 +3408,8 @@
     "Pokemon": "Pokemon/Mamoswine.png",
     "Role": "Defender",
     "Move Set": "Ice Fang/Earthquake",
-    "Move 1": [
-      "Moves/Mamoswine - Ice Fang.png"
-    ],
-    "Move 2": [
-      "Moves/Mamoswine - Earthquake.png"
-    ],
+    "Move 1": "Moves/Mamoswine - Ice Fang.png",
+    "Move 2": "Moves/Mamoswine - Earthquake.png",
     "Win Rate": 49.87,
     "Pick Rate": 12.47,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -4143,12 +3427,8 @@
     "Pokemon": "Pokemon/Mamoswine.png",
     "Role": "Defender",
     "Move Set": "Ice Fang/High Horsepower",
-    "Move 1": [
-      "Moves/Mamoswine - Ice Fang.png"
-    ],
-    "Move 2": [
-      "Moves/Mamoswine - High Horsepower.png"
-    ],
+    "Move 1": "Moves/Mamoswine - Ice Fang.png",
+    "Move 2": "Moves/Mamoswine - High Horsepower.png",
     "Win Rate": 47.55,
     "Pick Rate": 3.39,
     "Item 1": "Battle_Items/Potion.png",
@@ -4166,12 +3446,8 @@
     "Pokemon": "Pokemon/Mamoswine.png",
     "Role": "Defender",
     "Move Set": "Icicle Crash/High Horsepower",
-    "Move 1": [
-      "Moves/Mamoswine - Icicle Crash.png"
-    ],
-    "Move 2": [
-      "Moves/Mamoswine - High Horsepower.png"
-    ],
+    "Move 1": "Moves/Mamoswine - Icicle Crash.png",
+    "Move 2": "Moves/Mamoswine - High Horsepower.png",
     "Win Rate": 48.02,
     "Pick Rate": 2.57,
     "Item 1": "Battle_Items/Potion.png",
@@ -4189,12 +3465,8 @@
     "Pokemon": "Pokemon/Mamoswine.png",
     "Role": "Defender",
     "Move Set": "Icicle Crash/Earthquake",
-    "Move 1": [
-      "Moves/Mamoswine - Icicle Crash.png"
-    ],
-    "Move 2": [
-      "Moves/Mamoswine - Earthquake.png"
-    ],
+    "Move 1": "Moves/Mamoswine - Icicle Crash.png",
+    "Move 2": "Moves/Mamoswine - Earthquake.png",
     "Win Rate": 52.07,
     "Pick Rate": 0.54,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -4212,80 +3484,48 @@
     "Pokemon": "Pokemon/Mega Charizard X.png",
     "Role": "All-Rounder",
     "Move Set": "Fire Punch/Flare Blitz",
-    "Move 1": [
-      "Moves/Mega Charizard X - Fire Punch.png"
-    ],
-    "Move 2": [
-      "Moves/Mega Charizard X - Flare Blitz.png"
-    ],
+    "Move 1": "Moves/Mega Charizard X - Fire Punch.png",
+    "Move 2": "Moves/Mega Charizard X - Flare Blitz.png",
     "Win Rate": 49.31,
-    "Pick Rate": 13.7,
-    "Item 1": "Battle_Items/nan.png",
-    "Win Rate 1": null,
-    "Pick Rate 1": null
+    "Pick Rate": 13.7
   },
   {
     "Name": "Mega Charizard Y",
     "Pokemon": "Pokemon/Mega Charizard Y.png",
     "Role": "All-Rounder",
     "Move Set": "Flamethrower/Fire Blast",
-    "Move 1": [
-      "Moves/Mega Charizard Y - Flamethrower.png"
-    ],
-    "Move 2": [
-      "Moves/Mega Charizard Y - Fire Blast.png"
-    ],
+    "Move 1": "Moves/Mega Charizard Y - Flamethrower.png",
+    "Move 2": "Moves/Mega Charizard Y - Fire Blast.png",
     "Win Rate": 52.61,
-    "Pick Rate": 18.71,
-    "Item 1": "Battle_Items/nan.png",
-    "Win Rate 1": null,
-    "Pick Rate 1": null
+    "Pick Rate": 18.71
   },
   {
     "Name": "Mega Gyarados",
     "Pokemon": "Pokemon/Mega Gyarados.png",
     "Role": "All-Rounder",
     "Move Set": "Dragon Breath/Waterfall",
-    "Move 1": [
-      "Moves/Mega Gyarados - Dragon Breath.png"
-    ],
-    "Move 2": [
-      "Moves/Mega Gyarados - Waterfall.png"
-    ],
+    "Move 1": "Moves/Mega Gyarados - Dragon Breath.png",
+    "Move 2": "Moves/Mega Gyarados - Waterfall.png",
     "Win Rate": 51.03,
-    "Pick Rate": 5.35,
-    "Item 1": "Battle_Items/nan.png",
-    "Win Rate 1": null,
-    "Pick Rate 1": null
+    "Pick Rate": 5.35
   },
   {
     "Name": "Mega Lucario",
     "Pokemon": "Pokemon/Mega Lucario.png",
     "Role": "All-Rounder",
     "Move Set": "Power-Up Punch/Close Combat",
-    "Move 1": [
-      "Moves/Mega Lucario - Power-Up Punch.png"
-    ],
-    "Move 2": [
-      "Moves/Mega Lucario - Close Combat.png"
-    ],
+    "Move 1": "Moves/Mega Lucario - Power-Up Punch.png",
+    "Move 2": "Moves/Mega Lucario - Close Combat.png",
     "Win Rate": 51.8,
-    "Pick Rate": 18.36,
-    "Item 1": "Battle_Items/nan.png",
-    "Win Rate 1": null,
-    "Pick Rate 1": null
+    "Pick Rate": 18.36
   },
   {
     "Name": "Meowscarada",
     "Pokemon": "Pokemon/Meowscarada.png",
     "Role": "Speedster",
     "Move Set": "Night Slash/Double Team",
-    "Move 1": [
-      "Moves/Meowscarada - Night Slash.png"
-    ],
-    "Move 2": [
-      "Moves/Meowscarada - Double Team.png"
-    ],
+    "Move 1": "Moves/Meowscarada - Night Slash.png",
+    "Move 2": "Moves/Meowscarada - Double Team.png",
     "Win Rate": 53.17,
     "Pick Rate": 0.1,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -4303,12 +3543,8 @@
     "Pokemon": "Pokemon/Meowscarada.png",
     "Role": "Speedster",
     "Move Set": "Flower Trick/Double Team",
-    "Move 1": [
-      "Moves/Meowscarada - Flower Trick.png"
-    ],
-    "Move 2": [
-      "Moves/Meowscarada - Double Team.png"
-    ],
+    "Move 1": "Moves/Meowscarada - Flower Trick.png",
+    "Move 2": "Moves/Meowscarada - Double Team.png",
     "Win Rate": 51.57,
     "Pick Rate": 2.08,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -4326,12 +3562,8 @@
     "Pokemon": "Pokemon/Meowscarada.png",
     "Role": "Speedster",
     "Move Set": "Night Slash/Trailblaze",
-    "Move 1": [
-      "Moves/Meowscarada - Night Slash.png"
-    ],
-    "Move 2": [
-      "Moves/Meowscarada - Trailblaze.png"
-    ],
+    "Move 1": "Moves/Meowscarada - Night Slash.png",
+    "Move 2": "Moves/Meowscarada - Trailblaze.png",
     "Win Rate": 47.94,
     "Pick Rate": 2.69,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -4349,12 +3581,8 @@
     "Pokemon": "Pokemon/Meowscarada.png",
     "Role": "Speedster",
     "Move Set": "Flower Trick/Trailblaze",
-    "Move 1": [
-      "Moves/Meowscarada - Flower Trick.png"
-    ],
-    "Move 2": [
-      "Moves/Meowscarada - Trailblaze.png"
-    ],
+    "Move 1": "Moves/Meowscarada - Flower Trick.png",
+    "Move 2": "Moves/Meowscarada - Trailblaze.png",
     "Win Rate": 39.89,
     "Pick Rate": 0.14,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -4372,12 +3600,8 @@
     "Pokemon": "Pokemon/Meowth.png",
     "Role": "Speedster",
     "Move Set": "Fury Swipes/Assurance",
-    "Move 1": [
-      "Moves/Meowth - Fury Swipes.png"
-    ],
-    "Move 2": [
-      "Moves/Meowth - Assurance.png"
-    ],
+    "Move 1": "Moves/Meowth - Fury Swipes.png",
+    "Move 2": "Moves/Meowth - Assurance.png",
     "Win Rate": 50.03,
     "Pick Rate": 8.09,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -4395,12 +3619,8 @@
     "Pokemon": "Pokemon/Meowth.png",
     "Role": "Speedster",
     "Move Set": "Pay Day/Feint Attack",
-    "Move 1": [
-      "Moves/Meowth - Pay Day.png"
-    ],
-    "Move 2": [
-      "Moves/Meowth - Feint Attack.png"
-    ],
+    "Move 1": "Moves/Meowth - Pay Day.png",
+    "Move 2": "Moves/Meowth - Feint Attack.png",
     "Win Rate": 55.24,
     "Pick Rate": 2.98,
     "Item 1": "Battle_Items/X Speed.png",
@@ -4418,12 +3638,8 @@
     "Pokemon": "Pokemon/Meowth.png",
     "Role": "Speedster",
     "Move Set": "Pay Day/Assurance",
-    "Move 1": [
-      "Moves/Meowth - Pay Day.png"
-    ],
-    "Move 2": [
-      "Moves/Meowth - Assurance.png"
-    ],
+    "Move 1": "Moves/Meowth - Pay Day.png",
+    "Move 2": "Moves/Meowth - Assurance.png",
     "Win Rate": 46.04,
     "Pick Rate": 0.51,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -4441,12 +3657,8 @@
     "Pokemon": "Pokemon/Meowth.png",
     "Role": "Speedster",
     "Move Set": "Fury Swipes/Feint Attack",
-    "Move 1": [
-      "Moves/Meowth - Fury Swipes.png"
-    ],
-    "Move 2": [
-      "Moves/Meowth - Feint Attack.png"
-    ],
+    "Move 1": "Moves/Meowth - Fury Swipes.png",
+    "Move 2": "Moves/Meowth - Feint Attack.png",
     "Win Rate": 58.96,
     "Pick Rate": 15.0,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -4464,12 +3676,8 @@
     "Pokemon": "Pokemon/Metagross.png",
     "Role": "All-Rounder",
     "Move Set": "Meteor Mash/Zen Headbutt",
-    "Move 1": [
-      "Moves/Metagross - Meteor Mash.png"
-    ],
-    "Move 2": [
-      "Moves/Metagross - Zen Headbutt.png"
-    ],
+    "Move 1": "Moves/Metagross - Meteor Mash.png",
+    "Move 2": "Moves/Metagross - Zen Headbutt.png",
     "Win Rate": 46.68,
     "Pick Rate": 1.22,
     "Item 1": "Battle_Items/X Speed.png",
@@ -4487,12 +3695,8 @@
     "Pokemon": "Pokemon/Metagross.png",
     "Role": "All-Rounder",
     "Move Set": "Gyro Ball/Magnet Rise",
-    "Move 1": [
-      "Moves/Metagross - Gyro Ball.png"
-    ],
-    "Move 2": [
-      "Moves/Metagross - Magnet Rise.png"
-    ],
+    "Move 1": "Moves/Metagross - Gyro Ball.png",
+    "Move 2": "Moves/Metagross - Magnet Rise.png",
     "Win Rate": 47.26,
     "Pick Rate": 1.03,
     "Item 1": "Battle_Items/X Speed.png",
@@ -4510,12 +3714,8 @@
     "Pokemon": "Pokemon/Metagross.png",
     "Role": "All-Rounder",
     "Move Set": "Meteor Mash/Magnet Rise",
-    "Move 1": [
-      "Moves/Metagross - Meteor Mash.png"
-    ],
-    "Move 2": [
-      "Moves/Metagross - Magnet Rise.png"
-    ],
+    "Move 1": "Moves/Metagross - Meteor Mash.png",
+    "Move 2": "Moves/Metagross - Magnet Rise.png",
     "Win Rate": 46.9,
     "Pick Rate": 0.33,
     "Item 1": "Battle_Items/X Speed.png",
@@ -4533,12 +3733,8 @@
     "Pokemon": "Pokemon/Metagross.png",
     "Role": "All-Rounder",
     "Move Set": "Gyro Ball/Zen Headbutt",
-    "Move 1": [
-      "Moves/Metagross - Gyro Ball.png"
-    ],
-    "Move 2": [
-      "Moves/Metagross - Zen Headbutt.png"
-    ],
+    "Move 1": "Moves/Metagross - Gyro Ball.png",
+    "Move 2": "Moves/Metagross - Zen Headbutt.png",
     "Win Rate": 45.23,
     "Pick Rate": 0.18,
     "Item 1": "Battle_Items/X Speed.png",
@@ -4583,12 +3779,8 @@
     "Pokemon": "Pokemon/Mewtwo X.png",
     "Role": "All-Rounder",
     "Move Set": "Future Sight/Teleport",
-    "Move 1": [
-      "Moves/Mewtwo X - Future Sight.png"
-    ],
-    "Move 2": [
-      "Moves/Mewtwo X - Teleport.png"
-    ],
+    "Move 1": "Moves/Mewtwo X - Future Sight.png",
+    "Move 2": "Moves/Mewtwo X - Teleport.png",
     "Win Rate": 46.41,
     "Pick Rate": 1.34,
     "Item 1": "Battle_Items/Potion.png",
@@ -4606,12 +3798,8 @@
     "Pokemon": "Pokemon/Mewtwo X.png",
     "Role": "All-Rounder",
     "Move Set": "Future Sight/Recover",
-    "Move 1": [
-      "Moves/Mewtwo X - Future Sight.png"
-    ],
-    "Move 2": [
-      "Moves/Mewtwo X - Recover.png"
-    ],
+    "Move 1": "Moves/Mewtwo X - Future Sight.png",
+    "Move 2": "Moves/Mewtwo X - Recover.png",
     "Win Rate": 48.28,
     "Pick Rate": 2.56,
     "Item 1": "Battle_Items/Potion.png",
@@ -4629,12 +3817,8 @@
     "Pokemon": "Pokemon/Mewtwo X.png",
     "Role": "All-Rounder",
     "Move Set": "Psystrike/Teleport",
-    "Move 1": [
-      "Moves/Mewtwo X - Psystrike.png"
-    ],
-    "Move 2": [
-      "Moves/Mewtwo X - Teleport.png"
-    ],
+    "Move 1": "Moves/Mewtwo X - Psystrike.png",
+    "Move 2": "Moves/Mewtwo X - Teleport.png",
     "Win Rate": 46.16,
     "Pick Rate": 1.04,
     "Item 1": "Battle_Items/Potion.png",
@@ -4652,12 +3836,8 @@
     "Pokemon": "Pokemon/Mewtwo X.png",
     "Role": "All-Rounder",
     "Move Set": "Psystrike/Recover",
-    "Move 1": [
-      "Moves/Mewtwo X - Psystrike.png"
-    ],
-    "Move 2": [
-      "Moves/Mewtwo X - Recover.png"
-    ],
+    "Move 1": "Moves/Mewtwo X - Psystrike.png",
+    "Move 2": "Moves/Mewtwo X - Recover.png",
     "Win Rate": 48.1,
     "Pick Rate": 0.92,
     "Item 1": "Battle_Items/Potion.png",
@@ -4675,12 +3855,8 @@
     "Pokemon": "Pokemon/Mewtwo Y.png",
     "Role": "Attacker",
     "Move Set": "Psystrike/Recover",
-    "Move 1": [
-      "Moves/Mewtwo Y - Psystrike.png"
-    ],
-    "Move 2": [
-      "Moves/Mewtwo Y - Recover.png"
-    ],
+    "Move 1": "Moves/Mewtwo Y - Psystrike.png",
+    "Move 2": "Moves/Mewtwo Y - Recover.png",
     "Win Rate": 45.17,
     "Pick Rate": 0.32,
     "Item 1": "Battle_Items/X Attack.png",
@@ -4698,12 +3874,8 @@
     "Pokemon": "Pokemon/Mewtwo Y.png",
     "Role": "Attacker",
     "Move Set": "Future Sight/Teleport",
-    "Move 1": [
-      "Moves/Mewtwo Y - Future Sight.png"
-    ],
-    "Move 2": [
-      "Moves/Mewtwo Y - Teleport.png"
-    ],
+    "Move 1": "Moves/Mewtwo Y - Future Sight.png",
+    "Move 2": "Moves/Mewtwo Y - Teleport.png",
     "Win Rate": 48.39,
     "Pick Rate": 0.97,
     "Item 1": "Battle_Items/X Attack.png",
@@ -4721,12 +3893,8 @@
     "Pokemon": "Pokemon/Mewtwo Y.png",
     "Role": "Attacker",
     "Move Set": "Future Sight/Recover",
-    "Move 1": [
-      "Moves/Mewtwo Y - Future Sight.png"
-    ],
-    "Move 2": [
-      "Moves/Mewtwo Y - Recover.png"
-    ],
+    "Move 1": "Moves/Mewtwo Y - Future Sight.png",
+    "Move 2": "Moves/Mewtwo Y - Recover.png",
     "Win Rate": 50.76,
     "Pick Rate": 0.71,
     "Item 1": "Battle_Items/X Attack.png",
@@ -4744,12 +3912,8 @@
     "Pokemon": "Pokemon/Mewtwo Y.png",
     "Role": "Attacker",
     "Move Set": "Psystrike/Teleport",
-    "Move 1": [
-      "Moves/Mewtwo Y - Psystrike.png"
-    ],
-    "Move 2": [
-      "Moves/Mewtwo Y - Teleport.png"
-    ],
+    "Move 1": "Moves/Mewtwo Y - Psystrike.png",
+    "Move 2": "Moves/Mewtwo Y - Teleport.png",
     "Win Rate": 47.24,
     "Pick Rate": 3.69,
     "Item 1": "Battle_Items/X Attack.png",
@@ -4767,12 +3931,8 @@
     "Pokemon": "Pokemon/Mimikyu.png",
     "Role": "All-Rounder",
     "Move Set": "Play Rough/Shadow Sneak",
-    "Move 1": [
-      "Moves/Mimikyu - Play Rough.png"
-    ],
-    "Move 2": [
-      "Moves/Mimikyu - Shadow Sneak.png"
-    ],
+    "Move 1": "Moves/Mimikyu - Play Rough.png",
+    "Move 2": "Moves/Mimikyu - Shadow Sneak.png",
     "Win Rate": 48.01,
     "Pick Rate": 12.56,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -4790,12 +3950,8 @@
     "Pokemon": "Pokemon/Mimikyu.png",
     "Role": "All-Rounder",
     "Move Set": "Shadow Claw/Shadow Sneak",
-    "Move 1": [
-      "Moves/Mimikyu - Shadow Claw.png"
-    ],
-    "Move 2": [
-      "Moves/Mimikyu - Shadow Sneak.png"
-    ],
+    "Move 1": "Moves/Mimikyu - Shadow Claw.png",
+    "Move 2": "Moves/Mimikyu - Shadow Sneak.png",
     "Win Rate": 46.98,
     "Pick Rate": 4.92,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -4813,12 +3969,8 @@
     "Pokemon": "Pokemon/Mimikyu.png",
     "Role": "All-Rounder",
     "Move Set": "Shadow Claw/Trick Room",
-    "Move 1": [
-      "Moves/Mimikyu - Shadow Claw.png"
-    ],
-    "Move 2": [
-      "Moves/Mimikyu - Trick Room.png"
-    ],
+    "Move 1": "Moves/Mimikyu - Shadow Claw.png",
+    "Move 2": "Moves/Mimikyu - Trick Room.png",
     "Win Rate": 52.7,
     "Pick Rate": 2.51,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -4836,12 +3988,8 @@
     "Pokemon": "Pokemon/Miraidon.png",
     "Role": "Attacker",
     "Move Set": "Electro Drift/Parabolic Charge",
-    "Move 1": [
-      "Moves/Miraidon - Electro Drift.png"
-    ],
-    "Move 2": [
-      "Moves/Miraidon - Parabolic Charge.png"
-    ],
+    "Move 1": "Moves/Miraidon - Electro Drift.png",
+    "Move 2": "Moves/Miraidon - Parabolic Charge.png",
     "Win Rate": 47.96,
     "Pick Rate": 0.94,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -4859,12 +4007,8 @@
     "Pokemon": "Pokemon/Miraidon.png",
     "Role": "Attacker",
     "Move Set": "Charge Beam/Parabolic Charge",
-    "Move 1": [
-      "Moves/Miraidon - Charge Beam.png"
-    ],
-    "Move 2": [
-      "Moves/Miraidon - Parabolic Charge.png"
-    ],
+    "Move 1": "Moves/Miraidon - Charge Beam.png",
+    "Move 2": "Moves/Miraidon - Parabolic Charge.png",
     "Win Rate": 43.61,
     "Pick Rate": 0.1,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -4882,12 +4026,8 @@
     "Pokemon": "Pokemon/Miraidon.png",
     "Role": "Attacker",
     "Move Set": "Charge Beam/Thunder",
-    "Move 1": [
-      "Moves/Miraidon - Charge Beam.png"
-    ],
-    "Move 2": [
-      "Moves/Miraidon - Thunder.png"
-    ],
+    "Move 1": "Moves/Miraidon - Charge Beam.png",
+    "Move 2": "Moves/Miraidon - Thunder.png",
     "Win Rate": 49.14,
     "Pick Rate": 3.01,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -4905,12 +4045,8 @@
     "Pokemon": "Pokemon/Moltres.png",
     "Role": "All-Rounder",
     "Move Set": "Sky Attack/Heat Wave",
-    "Move 1": [
-      "Moves/Moltres - Sky Attack.png"
-    ],
-    "Move 2": [
-      "Moves/Moltres - Heat Wave.png"
-    ],
+    "Move 1": "Moves/Moltres - Sky Attack.png",
+    "Move 2": "Moves/Moltres - Heat Wave.png",
     "Win Rate": 52.77,
     "Pick Rate": 5.76,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -4928,12 +4064,8 @@
     "Pokemon": "Pokemon/Mr. Mime.png",
     "Role": "Supporter",
     "Move Set": "Confusion/Barrier",
-    "Move 1": [
-      "Moves/Mr. Mime - Confusion.png"
-    ],
-    "Move 2": [
-      "Moves/Mr. Mime - Barrier.png"
-    ],
+    "Move 1": "Moves/Mr. Mime - Confusion.png",
+    "Move 2": "Moves/Mr. Mime - Barrier.png",
     "Win Rate": 51.61,
     "Pick Rate": 7.52,
     "Item 1": "Battle_Items/X Speed.png",
@@ -4951,12 +4083,8 @@
     "Pokemon": "Pokemon/Mr. Mime.png",
     "Role": "Supporter",
     "Move Set": "Psychic/Power Swap",
-    "Move 1": [
-      "Moves/Mr. Mime - Psychic.png"
-    ],
-    "Move 2": [
-      "Moves/Mr. Mime - Power Swap.png"
-    ],
+    "Move 1": "Moves/Mr. Mime - Psychic.png",
+    "Move 2": "Moves/Mr. Mime - Power Swap.png",
     "Win Rate": 48.36,
     "Pick Rate": 1.16,
     "Item 1": "Battle_Items/X Speed.png",
@@ -4974,12 +4102,8 @@
     "Pokemon": "Pokemon/Mr. Mime.png",
     "Role": "Supporter",
     "Move Set": "Confusion/Power Swap",
-    "Move 1": [
-      "Moves/Mr. Mime - Confusion.png"
-    ],
-    "Move 2": [
-      "Moves/Mr. Mime - Power Swap.png"
-    ],
+    "Move 1": "Moves/Mr. Mime - Confusion.png",
+    "Move 2": "Moves/Mr. Mime - Power Swap.png",
     "Win Rate": 48.24,
     "Pick Rate": 0.5,
     "Item 1": "Battle_Items/X Speed.png",
@@ -4997,12 +4121,8 @@
     "Pokemon": "Pokemon/Pawmot.png",
     "Role": "All-Rounder",
     "Move Set": "Supercell Slam/Volt Switch",
-    "Move 1": [
-      "Moves/Pawmot - Supercell Slam.png"
-    ],
-    "Move 2": [
-      "Moves/Pawmot - Volt Switch.png"
-    ],
+    "Move 1": "Moves/Pawmot - Supercell Slam.png",
+    "Move 2": "Moves/Pawmot - Volt Switch.png",
     "Win Rate": 52.24,
     "Pick Rate": 3.87,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -5020,12 +4140,8 @@
     "Pokemon": "Pokemon/Pawmot.png",
     "Role": "All-Rounder",
     "Move Set": "Supercell Slam/Mach Punch",
-    "Move 1": [
-      "Moves/Pawmot - Supercell Slam.png"
-    ],
-    "Move 2": [
-      "Moves/Pawmot - Mach Punch.png"
-    ],
+    "Move 1": "Moves/Pawmot - Supercell Slam.png",
+    "Move 2": "Moves/Pawmot - Mach Punch.png",
     "Win Rate": 48.42,
     "Pick Rate": 1.82,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -5043,12 +4159,8 @@
     "Pokemon": "Pokemon/Pawmot.png",
     "Role": "All-Rounder",
     "Move Set": "Thunder Punch/Volt Switch",
-    "Move 1": [
-      "Moves/Pawmot - Thunder Punch.png"
-    ],
-    "Move 2": [
-      "Moves/Pawmot - Volt Switch.png"
-    ],
+    "Move 1": "Moves/Pawmot - Thunder Punch.png",
+    "Move 2": "Moves/Pawmot - Volt Switch.png",
     "Win Rate": 45.29,
     "Pick Rate": 0.74,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -5066,12 +4178,8 @@
     "Pokemon": "Pokemon/Pawmot.png",
     "Role": "All-Rounder",
     "Move Set": "Thunder Punch/Mach Punch",
-    "Move 1": [
-      "Moves/Pawmot - Thunder Punch.png"
-    ],
-    "Move 2": [
-      "Moves/Pawmot - Mach Punch.png"
-    ],
+    "Move 1": "Moves/Pawmot - Thunder Punch.png",
+    "Move 2": "Moves/Pawmot - Mach Punch.png",
     "Win Rate": 47.62,
     "Pick Rate": 0.34,
     "Item 1": "Battle_Items/X Speed.png",
@@ -5089,12 +4197,8 @@
     "Pokemon": "Pokemon/Pikachu.png",
     "Role": "Attacker",
     "Move Set": "Thunder/Volt Tackle",
-    "Move 1": [
-      "Moves/Pikachu - Thunder.png"
-    ],
-    "Move 2": [
-      "Moves/Pikachu - Volt Tackle.png"
-    ],
+    "Move 1": "Moves/Pikachu - Thunder.png",
+    "Move 2": "Moves/Pikachu - Volt Tackle.png",
     "Win Rate": 48.42,
     "Pick Rate": 2.6,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -5112,12 +4216,8 @@
     "Pokemon": "Pokemon/Pikachu.png",
     "Role": "Attacker",
     "Move Set": "Electro Ball/Thunderbolt",
-    "Move 1": [
-      "Moves/Pikachu - Electro Ball.png"
-    ],
-    "Move 2": [
-      "Moves/Pikachu - Thunderbolt.png"
-    ],
+    "Move 1": "Moves/Pikachu - Electro Ball.png",
+    "Move 2": "Moves/Pikachu - Thunderbolt.png",
     "Win Rate": 41.31,
     "Pick Rate": 0.27,
     "Item 1": "Battle_Items/X Speed.png",
@@ -5135,12 +4235,8 @@
     "Pokemon": "Pokemon/Pikachu.png",
     "Role": "Attacker",
     "Move Set": "Thunder/Thunderbolt",
-    "Move 1": [
-      "Moves/Pikachu - Thunder.png"
-    ],
-    "Move 2": [
-      "Moves/Pikachu - Thunderbolt.png"
-    ],
+    "Move 1": "Moves/Pikachu - Thunder.png",
+    "Move 2": "Moves/Pikachu - Thunderbolt.png",
     "Win Rate": 47.4,
     "Pick Rate": 2.07,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -5158,12 +4254,8 @@
     "Pokemon": "Pokemon/Pikachu.png",
     "Role": "Attacker",
     "Move Set": "Electro Ball/Volt Tackle",
-    "Move 1": [
-      "Moves/Pikachu - Electro Ball.png"
-    ],
-    "Move 2": [
-      "Moves/Pikachu - Volt Tackle.png"
-    ],
+    "Move 1": "Moves/Pikachu - Electro Ball.png",
+    "Move 2": "Moves/Pikachu - Volt Tackle.png",
     "Win Rate": 47.96,
     "Pick Rate": 9.55,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -5181,12 +4273,8 @@
     "Pokemon": "Pokemon/Psyduck.png",
     "Role": "Supporter",
     "Move Set": "Surf/Psychic",
-    "Move 1": [
-      "Moves/Psyduck - Surf.png"
-    ],
-    "Move 2": [
-      "Moves/Psyduck - Psychic.png"
-    ],
+    "Move 1": "Moves/Psyduck - Surf.png",
+    "Move 2": "Moves/Psyduck - Psychic.png",
     "Win Rate": 52.25,
     "Pick Rate": 1.58,
     "Item 1": "Battle_Items/Potion.png",
@@ -5204,12 +4292,8 @@
     "Pokemon": "Pokemon/Psyduck.png",
     "Role": "Supporter",
     "Move Set": "Bubble Beam/Disable",
-    "Move 1": [
-      "Moves/Psyduck - Bubble Beam.png"
-    ],
-    "Move 2": [
-      "Moves/Psyduck - Disable.png"
-    ],
+    "Move 1": "Moves/Psyduck - Bubble Beam.png",
+    "Move 2": "Moves/Psyduck - Disable.png",
     "Win Rate": 51.09,
     "Pick Rate": 5.69,
     "Item 1": "Battle_Items/Potion.png",
@@ -5227,12 +4311,8 @@
     "Pokemon": "Pokemon/Psyduck.png",
     "Role": "Supporter",
     "Move Set": "Surf/Disable",
-    "Move 1": [
-      "Moves/Psyduck - Surf.png"
-    ],
-    "Move 2": [
-      "Moves/Psyduck - Disable.png"
-    ],
+    "Move 1": "Moves/Psyduck - Surf.png",
+    "Move 2": "Moves/Psyduck - Disable.png",
     "Win Rate": 53.34,
     "Pick Rate": 2.36,
     "Item 1": "Battle_Items/Potion.png",
@@ -5250,12 +4330,8 @@
     "Pokemon": "Pokemon/Psyduck.png",
     "Role": "Supporter",
     "Move Set": "Bubble Beam/Psychic",
-    "Move 1": [
-      "Moves/Psyduck - Bubble Beam.png"
-    ],
-    "Move 2": [
-      "Moves/Psyduck - Psychic.png"
-    ],
+    "Move 1": "Moves/Psyduck - Bubble Beam.png",
+    "Move 2": "Moves/Psyduck - Psychic.png",
     "Win Rate": 50.37,
     "Pick Rate": 6.74,
     "Item 1": "Battle_Items/Potion.png",
@@ -5273,12 +4349,8 @@
     "Pokemon": "Pokemon/Sableye.png",
     "Role": "Supporter",
     "Move Set": "Knock Off/Confuse Ray",
-    "Move 1": [
-      "Moves/Sableye - Knock Off.png"
-    ],
-    "Move 2": [
-      "Moves/Sableye - Confuse Ray.png"
-    ],
+    "Move 1": "Moves/Sableye - Knock Off.png",
+    "Move 2": "Moves/Sableye - Confuse Ray.png",
     "Win Rate": 49.14,
     "Pick Rate": 3.15,
     "Item 1": "Battle_Items/X Speed.png",
@@ -5296,12 +4368,8 @@
     "Pokemon": "Pokemon/Sableye.png",
     "Role": "Supporter",
     "Move Set": "Knock Off/Feint Attack",
-    "Move 1": [
-      "Moves/Sableye - Knock Off.png"
-    ],
-    "Move 2": [
-      "Moves/Sableye - Feint Attack.png"
-    ],
+    "Move 1": "Moves/Sableye - Knock Off.png",
+    "Move 2": "Moves/Sableye - Feint Attack.png",
     "Win Rate": 45.26,
     "Pick Rate": 1.91,
     "Item 1": "Battle_Items/X Speed.png",
@@ -5319,12 +4387,8 @@
     "Pokemon": "Pokemon/Sableye.png",
     "Role": "Supporter",
     "Move Set": "Shadow Sneak/Confuse Ray",
-    "Move 1": [
-      "Moves/Sableye - Shadow Sneak.png"
-    ],
-    "Move 2": [
-      "Moves/Sableye - Confuse Ray.png"
-    ],
+    "Move 1": "Moves/Sableye - Shadow Sneak.png",
+    "Move 2": "Moves/Sableye - Confuse Ray.png",
     "Win Rate": 46.75,
     "Pick Rate": 0.59,
     "Item 1": "Battle_Items/X Speed.png",
@@ -5342,12 +4406,8 @@
     "Pokemon": "Pokemon/Sableye.png",
     "Role": "Supporter",
     "Move Set": "Shadow Sneak/Feint Attack",
-    "Move 1": [
-      "Moves/Sableye - Shadow Sneak.png"
-    ],
-    "Move 2": [
-      "Moves/Sableye - Feint Attack.png"
-    ],
+    "Move 1": "Moves/Sableye - Shadow Sneak.png",
+    "Move 2": "Moves/Sableye - Feint Attack.png",
     "Win Rate": 44.48,
     "Pick Rate": 0.22,
     "Item 1": "Battle_Items/X Speed.png",
@@ -5365,12 +4425,8 @@
     "Pokemon": "Pokemon/Scizor.png",
     "Role": "All-Rounder",
     "Move Set": "Bullet Punch/Double Hit",
-    "Move 1": [
-      "Moves/Scizor - Bullet Punch.png"
-    ],
-    "Move 2": [
-      "Moves/Scizor - Double Hit.png"
-    ],
+    "Move 1": "Moves/Scizor - Bullet Punch.png",
+    "Move 2": "Moves/Scizor - Double Hit.png",
     "Win Rate": 50.62,
     "Pick Rate": 3.69,
     "Item 1": "Battle_Items/Potion.png",
@@ -5388,12 +4444,8 @@
     "Pokemon": "Pokemon/Scizor.png",
     "Role": "All-Rounder",
     "Move Set": "Bullet Punch/Swords Dance",
-    "Move 1": [
-      "Moves/Scizor - Bullet Punch.png"
-    ],
-    "Move 2": [
-      "Moves/Scizor - Swords Dance.png"
-    ],
+    "Move 1": "Moves/Scizor - Bullet Punch.png",
+    "Move 2": "Moves/Scizor - Swords Dance.png",
     "Win Rate": 47.67,
     "Pick Rate": 5.62,
     "Item 1": "Battle_Items/Potion.png",
@@ -5411,12 +4463,8 @@
     "Pokemon": "Pokemon/Scyther.png",
     "Role": "Speedster",
     "Move Set": "Dual Wingbeat/Double Hit",
-    "Move 1": [
-      "Moves/Scyther - Dual Wingbeat.png"
-    ],
-    "Move 2": [
-      "Moves/Scyther - Double Hit.png"
-    ],
+    "Move 1": "Moves/Scyther - Dual Wingbeat.png",
+    "Move 2": "Moves/Scyther - Double Hit.png",
     "Win Rate": 48.0,
     "Pick Rate": 3.39,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -5434,12 +4482,8 @@
     "Pokemon": "Pokemon/Scyther.png",
     "Role": "Speedster",
     "Move Set": "Dual Wingbeat/Swords Dance",
-    "Move 1": [
-      "Moves/Scyther - Dual Wingbeat.png"
-    ],
-    "Move 2": [
-      "Moves/Scyther - Swords Dance.png"
-    ],
+    "Move 1": "Moves/Scyther - Dual Wingbeat.png",
+    "Move 2": "Moves/Scyther - Swords Dance.png",
     "Win Rate": 48.61,
     "Pick Rate": 1.46,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -5457,12 +4501,8 @@
     "Pokemon": "Pokemon/Sirfetch'd.png",
     "Role": "All-Rounder",
     "Move Set": "Leaf Blade/Detect",
-    "Move 1": [
-      "Moves/Sirfetch'd - Leaf Blade.png"
-    ],
-    "Move 2": [
-      "Moves/Sirfetch'd - Detect.png"
-    ],
+    "Move 1": "Moves/Sirfetch'd - Leaf Blade.png",
+    "Move 2": "Moves/Sirfetch'd - Detect.png",
     "Win Rate": 55.8,
     "Pick Rate": 17.59,
     "Item 1": "Battle_Items/Potion.png",
@@ -5480,12 +4520,8 @@
     "Pokemon": "Pokemon/Sirfetch'd.png",
     "Role": "All-Rounder",
     "Move Set": "Fury Cutter/Detect",
-    "Move 1": [
-      "Moves/Sirfetch'd - Fury Cutter.png"
-    ],
-    "Move 2": [
-      "Moves/Sirfetch'd - Detect.png"
-    ],
+    "Move 1": "Moves/Sirfetch'd - Fury Cutter.png",
+    "Move 2": "Moves/Sirfetch'd - Detect.png",
     "Win Rate": 50.09,
     "Pick Rate": 6.87,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -5503,12 +4539,8 @@
     "Pokemon": "Pokemon/Sirfetch'd.png",
     "Role": "All-Rounder",
     "Move Set": "Fury Cutter/Brutal Swing",
-    "Move 1": [
-      "Moves/Sirfetch'd - Fury Cutter.png"
-    ],
-    "Move 2": [
-      "Moves/Sirfetch'd - Brutal Swing.png"
-    ],
+    "Move 1": "Moves/Sirfetch'd - Fury Cutter.png",
+    "Move 2": "Moves/Sirfetch'd - Brutal Swing.png",
     "Win Rate": 47.9,
     "Pick Rate": 1.15,
     "Item 1": "Battle_Items/X Speed.png",
@@ -5526,12 +4558,8 @@
     "Pokemon": "Pokemon/Slowbro.png",
     "Role": "Defender",
     "Move Set": "Surf/Telekinesis",
-    "Move 1": [
-      "Moves/Slowbro - Surf.png"
-    ],
-    "Move 2": [
-      "Moves/Slowbro - Telekinesis.png"
-    ],
+    "Move 1": "Moves/Slowbro - Surf.png",
+    "Move 2": "Moves/Slowbro - Telekinesis.png",
     "Win Rate": 48.73,
     "Pick Rate": 9.67,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -5549,12 +4577,8 @@
     "Pokemon": "Pokemon/Slowbro.png",
     "Role": "Defender",
     "Move Set": "Scald/Amnesia",
-    "Move 1": [
-      "Moves/Slowbro - Scald.png"
-    ],
-    "Move 2": [
-      "Moves/Slowbro - Amnesia.png"
-    ],
+    "Move 1": "Moves/Slowbro - Scald.png",
+    "Move 2": "Moves/Slowbro - Amnesia.png",
     "Win Rate": 48.56,
     "Pick Rate": 3.35,
     "Item 1": "Battle_Items/Potion.png",
@@ -5572,12 +4596,8 @@
     "Pokemon": "Pokemon/Slowbro.png",
     "Role": "Defender",
     "Move Set": "Surf/Amnesia",
-    "Move 1": [
-      "Moves/Slowbro - Surf.png"
-    ],
-    "Move 2": [
-      "Moves/Slowbro - Amnesia.png"
-    ],
+    "Move 1": "Moves/Slowbro - Surf.png",
+    "Move 2": "Moves/Slowbro - Amnesia.png",
     "Win Rate": 49.48,
     "Pick Rate": 3.54,
     "Item 1": "Battle_Items/Potion.png",
@@ -5595,12 +4615,8 @@
     "Pokemon": "Pokemon/Slowbro.png",
     "Role": "Defender",
     "Move Set": "Scald/Telekinesis",
-    "Move 1": [
-      "Moves/Slowbro - Scald.png"
-    ],
-    "Move 2": [
-      "Moves/Slowbro - Telekinesis.png"
-    ],
+    "Move 1": "Moves/Slowbro - Scald.png",
+    "Move 2": "Moves/Slowbro - Telekinesis.png",
     "Win Rate": 46.35,
     "Pick Rate": 2.05,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -5618,12 +4634,8 @@
     "Pokemon": "Pokemon/Snorlax.png",
     "Role": "Defender",
     "Move Set": "Flail/Yawn",
-    "Move 1": [
-      "Moves/Snorlax - Flail.png"
-    ],
-    "Move 2": [
-      "Moves/Snorlax - Yawn.png"
-    ],
+    "Move 1": "Moves/Snorlax - Flail.png",
+    "Move 2": "Moves/Snorlax - Yawn.png",
     "Win Rate": 47.37,
     "Pick Rate": 0.82,
     "Item 1": "Battle_Items/Potion.png",
@@ -5641,12 +4653,8 @@
     "Pokemon": "Pokemon/Snorlax.png",
     "Role": "Defender",
     "Move Set": "Heavy Slam/Yawn",
-    "Move 1": [
-      "Moves/Snorlax - Heavy Slam.png"
-    ],
-    "Move 2": [
-      "Moves/Snorlax - Yawn.png"
-    ],
+    "Move 1": "Moves/Snorlax - Heavy Slam.png",
+    "Move 2": "Moves/Snorlax - Yawn.png",
     "Win Rate": 50.13,
     "Pick Rate": 2.92,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -5664,12 +4672,8 @@
     "Pokemon": "Pokemon/Snorlax.png",
     "Role": "Defender",
     "Move Set": "Flail/Block",
-    "Move 1": [
-      "Moves/Snorlax - Flail.png"
-    ],
-    "Move 2": [
-      "Moves/Snorlax - Block.png"
-    ],
+    "Move 1": "Moves/Snorlax - Flail.png",
+    "Move 2": "Moves/Snorlax - Block.png",
     "Win Rate": 48.56,
     "Pick Rate": 3.31,
     "Item 1": "Battle_Items/X Speed.png",
@@ -5687,12 +4691,8 @@
     "Pokemon": "Pokemon/Snorlax.png",
     "Role": "Defender",
     "Move Set": "Heavy Slam/Block",
-    "Move 1": [
-      "Moves/Snorlax - Heavy Slam.png"
-    ],
-    "Move 2": [
-      "Moves/Snorlax - Block.png"
-    ],
+    "Move 1": "Moves/Snorlax - Heavy Slam.png",
+    "Move 2": "Moves/Snorlax - Block.png",
     "Win Rate": 47.84,
     "Pick Rate": 7.87,
     "Item 1": "Battle_Items/X Speed.png",
@@ -5710,12 +4710,8 @@
     "Pokemon": "Pokemon/Suicune.png",
     "Role": "All-Rounder",
     "Move Set": "Whirlpool/Ice Beam",
-    "Move 1": [
-      "Moves/Suicune - Whirlpool.png"
-    ],
-    "Move 2": [
-      "Moves/Suicune - Ice Beam.png"
-    ],
+    "Move 1": "Moves/Suicune - Whirlpool.png",
+    "Move 2": "Moves/Suicune - Ice Beam.png",
     "Win Rate": 47.6,
     "Pick Rate": 6.12,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -5733,12 +4729,8 @@
     "Pokemon": "Pokemon/Suicune.png",
     "Role": "All-Rounder",
     "Move Set": "Surf/Icy Wind",
-    "Move 1": [
-      "Moves/Suicune - Surf.png"
-    ],
-    "Move 2": [
-      "Moves/Suicune - Icy Wind.png"
-    ],
+    "Move 1": "Moves/Suicune - Surf.png",
+    "Move 2": "Moves/Suicune - Icy Wind.png",
     "Win Rate": 46.41,
     "Pick Rate": 2.59,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -5756,12 +4748,8 @@
     "Pokemon": "Pokemon/Suicune.png",
     "Role": "All-Rounder",
     "Move Set": "Surf/Ice Beam",
-    "Move 1": [
-      "Moves/Suicune - Surf.png"
-    ],
-    "Move 2": [
-      "Moves/Suicune - Ice Beam.png"
-    ],
+    "Move 1": "Moves/Suicune - Surf.png",
+    "Move 2": "Moves/Suicune - Ice Beam.png",
     "Win Rate": 46.14,
     "Pick Rate": 0.36,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -5779,12 +4767,8 @@
     "Pokemon": "Pokemon/Suicune.png",
     "Role": "All-Rounder",
     "Move Set": "Whirlpool/Icy Wind",
-    "Move 1": [
-      "Moves/Suicune - Whirlpool.png"
-    ],
-    "Move 2": [
-      "Moves/Suicune - Icy Wind.png"
-    ],
+    "Move 1": "Moves/Suicune - Whirlpool.png",
+    "Move 2": "Moves/Suicune - Icy Wind.png",
     "Win Rate": 41.26,
     "Pick Rate": 0.11,
     "Item 1": "Battle_Items/X Speed.png",
@@ -5802,12 +4786,8 @@
     "Pokemon": "Pokemon/Sylveon.png",
     "Role": "Attacker",
     "Move Set": "Hyper Voice/Draining Kiss",
-    "Move 1": [
-      "Moves/Sylveon - Hyper Voice.png"
-    ],
-    "Move 2": [
-      "Moves/Sylveon - Draining Kiss.png"
-    ],
+    "Move 1": "Moves/Sylveon - Hyper Voice.png",
+    "Move 2": "Moves/Sylveon - Draining Kiss.png",
     "Win Rate": 44.21,
     "Pick Rate": 0.22,
     "Item 1": "Battle_Items/X Speed.png",
@@ -5825,12 +4805,8 @@
     "Pokemon": "Pokemon/Sylveon.png",
     "Role": "Attacker",
     "Move Set": "Mystical Fire/Calm Mind",
-    "Move 1": [
-      "Moves/Sylveon - Mystical Fire.png"
-    ],
-    "Move 2": [
-      "Moves/Sylveon - Calm Mind.png"
-    ],
+    "Move 1": "Moves/Sylveon - Mystical Fire.png",
+    "Move 2": "Moves/Sylveon - Calm Mind.png",
     "Win Rate": 44.68,
     "Pick Rate": 0.11,
     "Item 1": "Battle_Items/Potion.png",
@@ -5848,12 +4824,8 @@
     "Pokemon": "Pokemon/Sylveon.png",
     "Role": "Attacker",
     "Move Set": "Mystical Fire/Draining Kiss",
-    "Move 1": [
-      "Moves/Sylveon - Mystical Fire.png"
-    ],
-    "Move 2": [
-      "Moves/Sylveon - Draining Kiss.png"
-    ],
+    "Move 1": "Moves/Sylveon - Mystical Fire.png",
+    "Move 2": "Moves/Sylveon - Draining Kiss.png",
     "Win Rate": 46.79,
     "Pick Rate": 3.76,
     "Item 1": "Battle_Items/Potion.png",
@@ -5871,12 +4843,8 @@
     "Pokemon": "Pokemon/Sylveon.png",
     "Role": "Attacker",
     "Move Set": "Hyper Voice/Calm Mind",
-    "Move 1": [
-      "Moves/Sylveon - Hyper Voice.png"
-    ],
-    "Move 2": [
-      "Moves/Sylveon - Calm Mind.png"
-    ],
+    "Move 1": "Moves/Sylveon - Hyper Voice.png",
+    "Move 2": "Moves/Sylveon - Calm Mind.png",
     "Win Rate": 46.42,
     "Pick Rate": 0.72,
     "Item 1": "Battle_Items/X Speed.png",
@@ -5894,12 +4862,8 @@
     "Pokemon": "Pokemon/Talonflame.png",
     "Role": "Speedster",
     "Move Set": "Flame Charge/Fly",
-    "Move 1": [
-      "Moves/Talonflame - Flame Charge.png"
-    ],
-    "Move 2": [
-      "Moves/Talonflame - Fly.png"
-    ],
+    "Move 1": "Moves/Talonflame - Flame Charge.png",
+    "Move 2": "Moves/Talonflame - Fly.png",
     "Win Rate": 48.84,
     "Pick Rate": 11.55,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -5917,12 +4881,8 @@
     "Pokemon": "Pokemon/Talonflame.png",
     "Role": "Speedster",
     "Move Set": "Aerial Ace/Brave Bird",
-    "Move 1": [
-      "Moves/Talonflame - Aerial Ace.png"
-    ],
-    "Move 2": [
-      "Moves/Talonflame - Brave Bird.png"
-    ],
+    "Move 1": "Moves/Talonflame - Aerial Ace.png",
+    "Move 2": "Moves/Talonflame - Brave Bird.png",
     "Win Rate": 48.26,
     "Pick Rate": 5.38,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -5940,12 +4900,8 @@
     "Pokemon": "Pokemon/Talonflame.png",
     "Role": "Speedster",
     "Move Set": "Aerial Ace/Fly",
-    "Move 1": [
-      "Moves/Talonflame - Aerial Ace.png"
-    ],
-    "Move 2": [
-      "Moves/Talonflame - Fly.png"
-    ],
+    "Move 1": "Moves/Talonflame - Aerial Ace.png",
+    "Move 2": "Moves/Talonflame - Fly.png",
     "Win Rate": 44.74,
     "Pick Rate": 1.4,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -5963,12 +4919,8 @@
     "Pokemon": "Pokemon/Talonflame.png",
     "Role": "Speedster",
     "Move Set": "Flame Charge/Brave Bird",
-    "Move 1": [
-      "Moves/Talonflame - Flame Charge.png"
-    ],
-    "Move 2": [
-      "Moves/Talonflame - Brave Bird.png"
-    ],
+    "Move 1": "Moves/Talonflame - Flame Charge.png",
+    "Move 2": "Moves/Talonflame - Brave Bird.png",
     "Win Rate": 42.21,
     "Pick Rate": 0.32,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -5986,12 +4938,8 @@
     "Pokemon": "Pokemon/Tinkaton.png",
     "Role": "All-Rounder",
     "Move Set": "Gigaton Hammer/Thief",
-    "Move 1": [
-      "Moves/Tinkaton - Gigaton Hammer.png"
-    ],
-    "Move 2": [
-      "Moves/Tinkaton - Thief.png"
-    ],
+    "Move 1": "Moves/Tinkaton - Gigaton Hammer.png",
+    "Move 2": "Moves/Tinkaton - Thief.png",
     "Win Rate": 48.7,
     "Pick Rate": 1.03,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -6009,12 +4957,8 @@
     "Pokemon": "Pokemon/Tinkaton.png",
     "Role": "All-Rounder",
     "Move Set": "Gigaton Hammer/Ice Hammer",
-    "Move 1": [
-      "Moves/Tinkaton - Gigaton Hammer.png"
-    ],
-    "Move 2": [
-      "Moves/Tinkaton - Ice Hammer.png"
-    ],
+    "Move 1": "Moves/Tinkaton - Gigaton Hammer.png",
+    "Move 2": "Moves/Tinkaton - Ice Hammer.png",
     "Win Rate": 47.72,
     "Pick Rate": 0.37,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -6032,12 +4976,8 @@
     "Pokemon": "Pokemon/Tinkaton.png",
     "Role": "All-Rounder",
     "Move Set": "Smack Down/Ice Hammer",
-    "Move 1": [
-      "Moves/Tinkaton - Smack Down.png"
-    ],
-    "Move 2": [
-      "Moves/Tinkaton - Ice Hammer.png"
-    ],
+    "Move 1": "Moves/Tinkaton - Smack Down.png",
+    "Move 2": "Moves/Tinkaton - Ice Hammer.png",
     "Win Rate": 50.69,
     "Pick Rate": 0.22,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -6055,12 +4995,8 @@
     "Pokemon": "Pokemon/Tinkaton.png",
     "Role": "All-Rounder",
     "Move Set": "Smack Down/Thief",
-    "Move 1": [
-      "Moves/Tinkaton - Smack Down.png"
-    ],
-    "Move 2": [
-      "Moves/Tinkaton - Thief.png"
-    ],
+    "Move 1": "Moves/Tinkaton - Smack Down.png",
+    "Move 2": "Moves/Tinkaton - Thief.png",
     "Win Rate": 43.95,
     "Pick Rate": 0.17,
     "Item 1": "Battle_Items/X Speed.png",
@@ -6078,12 +5014,8 @@
     "Pokemon": "Pokemon/Trevenant.png",
     "Role": "Defender",
     "Move Set": "Wood Hammer/Pain Split",
-    "Move 1": [
-      "Moves/Trevenant - Wood Hammer.png"
-    ],
-    "Move 2": [
-      "Moves/Trevenant - Pain Split.png"
-    ],
+    "Move 1": "Moves/Trevenant - Wood Hammer.png",
+    "Move 2": "Moves/Trevenant - Pain Split.png",
     "Win Rate": 47.58,
     "Pick Rate": 0.35,
     "Item 1": "Battle_Items/Potion.png",
@@ -6101,12 +5033,8 @@
     "Pokemon": "Pokemon/Trevenant.png",
     "Role": "Defender",
     "Move Set": "Curse/Pain Split",
-    "Move 1": [
-      "Moves/Trevenant - Curse.png"
-    ],
-    "Move 2": [
-      "Moves/Trevenant - Pain Split.png"
-    ],
+    "Move 1": "Moves/Trevenant - Curse.png",
+    "Move 2": "Moves/Trevenant - Pain Split.png",
     "Win Rate": 49.4,
     "Pick Rate": 2.75,
     "Item 1": "Battle_Items/Potion.png",
@@ -6124,12 +5052,8 @@
     "Pokemon": "Pokemon/Trevenant.png",
     "Role": "Defender",
     "Move Set": "Wood Hammer/Horn Leech",
-    "Move 1": [
-      "Moves/Trevenant - Wood Hammer.png"
-    ],
-    "Move 2": [
-      "Moves/Trevenant - Horn Leech.png"
-    ],
+    "Move 1": "Moves/Trevenant - Wood Hammer.png",
+    "Move 2": "Moves/Trevenant - Horn Leech.png",
     "Win Rate": 48.69,
     "Pick Rate": 3.7,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -6147,12 +5071,8 @@
     "Pokemon": "Pokemon/Trevenant.png",
     "Role": "Defender",
     "Move Set": "Curse/Horn Leech",
-    "Move 1": [
-      "Moves/Trevenant - Curse.png"
-    ],
-    "Move 2": [
-      "Moves/Trevenant - Horn Leech.png"
-    ],
+    "Move 1": "Moves/Trevenant - Curse.png",
+    "Move 2": "Moves/Trevenant - Horn Leech.png",
     "Win Rate": 49.58,
     "Pick Rate": 4.96,
     "Item 1": "Battle_Items/X Speed.png",
@@ -6170,12 +5090,8 @@
     "Pokemon": "Pokemon/Tsareena.png",
     "Role": "All-Rounder",
     "Move Set": "Triple Axel/Grassy Glide",
-    "Move 1": [
-      "Moves/Tsareena - Triple Axel.png"
-    ],
-    "Move 2": [
-      "Moves/Tsareena - Grassy Glide.png"
-    ],
+    "Move 1": "Moves/Tsareena - Triple Axel.png",
+    "Move 2": "Moves/Tsareena - Grassy Glide.png",
     "Win Rate": 39.73,
     "Pick Rate": 0.17,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -6193,12 +5109,8 @@
     "Pokemon": "Pokemon/Tsareena.png",
     "Role": "All-Rounder",
     "Move Set": "Triple Axel/Trop Kick",
-    "Move 1": [
-      "Moves/Tsareena - Triple Axel.png"
-    ],
-    "Move 2": [
-      "Moves/Tsareena - Trop Kick.png"
-    ],
+    "Move 1": "Moves/Tsareena - Triple Axel.png",
+    "Move 2": "Moves/Tsareena - Trop Kick.png",
     "Win Rate": 47.86,
     "Pick Rate": 1.02,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -6216,12 +5128,8 @@
     "Pokemon": "Pokemon/Tsareena.png",
     "Role": "All-Rounder",
     "Move Set": "Stomp/Trop Kick",
-    "Move 1": [
-      "Moves/Tsareena - Stomp.png"
-    ],
-    "Move 2": [
-      "Moves/Tsareena - Trop Kick.png"
-    ],
+    "Move 1": "Moves/Tsareena - Stomp.png",
+    "Move 2": "Moves/Tsareena - Trop Kick.png",
     "Win Rate": 49.69,
     "Pick Rate": 4.0,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -6239,12 +5147,8 @@
     "Pokemon": "Pokemon/Tsareena.png",
     "Role": "All-Rounder",
     "Move Set": "Stomp/Grassy Glide",
-    "Move 1": [
-      "Moves/Tsareena - Stomp.png"
-    ],
-    "Move 2": [
-      "Moves/Tsareena - Grassy Glide.png"
-    ],
+    "Move 1": "Moves/Tsareena - Stomp.png",
+    "Move 2": "Moves/Tsareena - Grassy Glide.png",
     "Win Rate": 47.75,
     "Pick Rate": 0.95,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -6262,12 +5166,8 @@
     "Pokemon": "Pokemon/Tyranitar.png",
     "Role": "All-Rounder",
     "Move Set": "Dark Pulse/Ancient Power",
-    "Move 1": [
-      "Moves/Tyranitar - Dark Pulse.png"
-    ],
-    "Move 2": [
-      "Moves/Tyranitar - Ancient Power.png"
-    ],
+    "Move 1": "Moves/Tyranitar - Dark Pulse.png",
+    "Move 2": "Moves/Tyranitar - Ancient Power.png",
     "Win Rate": 49.52,
     "Pick Rate": 1.5,
     "Item 1": "Battle_Items/X Speed.png",
@@ -6285,12 +5185,8 @@
     "Pokemon": "Pokemon/Tyranitar.png",
     "Role": "All-Rounder",
     "Move Set": "Stone Edge/Sand Tomb",
-    "Move 1": [
-      "Moves/Tyranitar - Stone Edge.png"
-    ],
-    "Move 2": [
-      "Moves/Tyranitar - Sand Tomb.png"
-    ],
+    "Move 1": "Moves/Tyranitar - Stone Edge.png",
+    "Move 2": "Moves/Tyranitar - Sand Tomb.png",
     "Win Rate": 48.58,
     "Pick Rate": 0.94,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -6308,12 +5204,8 @@
     "Pokemon": "Pokemon/Tyranitar.png",
     "Role": "All-Rounder",
     "Move Set": "Dark Pulse/Sand Tomb",
-    "Move 1": [
-      "Moves/Tyranitar - Dark Pulse.png"
-    ],
-    "Move 2": [
-      "Moves/Tyranitar - Sand Tomb.png"
-    ],
+    "Move 1": "Moves/Tyranitar - Dark Pulse.png",
+    "Move 2": "Moves/Tyranitar - Sand Tomb.png",
     "Win Rate": 49.42,
     "Pick Rate": 0.33,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -6331,12 +5223,8 @@
     "Pokemon": "Pokemon/Tyranitar.png",
     "Role": "All-Rounder",
     "Move Set": "Stone Edge/Ancient Power",
-    "Move 1": [
-      "Moves/Tyranitar - Stone Edge.png"
-    ],
-    "Move 2": [
-      "Moves/Tyranitar - Ancient Power.png"
-    ],
+    "Move 1": "Moves/Tyranitar - Stone Edge.png",
+    "Move 2": "Moves/Tyranitar - Ancient Power.png",
     "Win Rate": 45.35,
     "Pick Rate": 0.07,
     "Item 1": "Battle_Items/Potion.png",
@@ -6354,12 +5242,8 @@
     "Pokemon": "Pokemon/Umbreon.png",
     "Role": "Defender",
     "Move Set": "Foul Play/Wish",
-    "Move 1": [
-      "Moves/Umbreon - Foul Play.png"
-    ],
-    "Move 2": [
-      "Moves/Umbreon - Wish.png"
-    ],
+    "Move 1": "Moves/Umbreon - Foul Play.png",
+    "Move 2": "Moves/Umbreon - Wish.png",
     "Win Rate": 49.17,
     "Pick Rate": 1.2,
     "Item 1": "Battle_Items/X Speed.png",
@@ -6377,12 +5261,8 @@
     "Pokemon": "Pokemon/Umbreon.png",
     "Role": "Defender",
     "Move Set": "Mean Look/Wish",
-    "Move 1": [
-      "Moves/Umbreon - Mean Look.png"
-    ],
-    "Move 2": [
-      "Moves/Umbreon - Wish.png"
-    ],
+    "Move 1": "Moves/Umbreon - Mean Look.png",
+    "Move 2": "Moves/Umbreon - Wish.png",
     "Win Rate": 48.86,
     "Pick Rate": 10.7,
     "Item 1": "Battle_Items/X Speed.png",
@@ -6400,12 +5280,8 @@
     "Pokemon": "Pokemon/Umbreon.png",
     "Role": "Defender",
     "Move Set": "Foul Play/Snarl",
-    "Move 1": [
-      "Moves/Umbreon - Foul Play.png"
-    ],
-    "Move 2": [
-      "Moves/Umbreon - Snarl.png"
-    ],
+    "Move 1": "Moves/Umbreon - Foul Play.png",
+    "Move 2": "Moves/Umbreon - Snarl.png",
     "Win Rate": 51.28,
     "Pick Rate": 5.93,
     "Item 1": "Battle_Items/X Speed.png",
@@ -6423,12 +5299,8 @@
     "Pokemon": "Pokemon/Umbreon.png",
     "Role": "Defender",
     "Move Set": "Mean Look/Snarl",
-    "Move 1": [
-      "Moves/Umbreon - Mean Look.png"
-    ],
-    "Move 2": [
-      "Moves/Umbreon - Snarl.png"
-    ],
+    "Move 1": "Moves/Umbreon - Mean Look.png",
+    "Move 2": "Moves/Umbreon - Snarl.png",
     "Win Rate": 47.74,
     "Pick Rate": 1.64,
     "Item 1": "Battle_Items/X Speed.png",
@@ -6446,12 +5318,8 @@
     "Pokemon": "Pokemon/Urshifu_Rapid.png",
     "Role": "All-Rounder",
     "Move Set": "Surging Strikes/Liquidation",
-    "Move 1": [
-      "Moves/Urshifu - Surging Strikes.png"
-    ],
-    "Move 2": [
-      "Moves/Urshifu - Liquidation.png"
-    ],
+    "Move 1": "Moves/Urshifu - Surging Strikes.png",
+    "Move 2": "Moves/Urshifu - Liquidation.png",
     "Win Rate": 51.55,
     "Pick Rate": 3.07,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -6469,12 +5337,8 @@
     "Pokemon": "Pokemon/Urshifu_Single.png",
     "Role": "All-Rounder",
     "Move Set": "Wicked Blow/Throat Chop",
-    "Move 1": [
-      "Moves/Urshifu - Wicked Blow.png"
-    ],
-    "Move 2": [
-      "Moves/Urshifu - Throat Chop.png"
-    ],
+    "Move 1": "Moves/Urshifu - Wicked Blow.png",
+    "Move 2": "Moves/Urshifu - Throat Chop.png",
     "Win Rate": 48.88,
     "Pick Rate": 0.89,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -6492,12 +5356,8 @@
     "Pokemon": "Pokemon/Vaporeon.png",
     "Role": "Defender",
     "Move Set": "Hydro Pump/Aqua Ring",
-    "Move 1": [
-      "Moves/Vaporeon - Hydro Pump.png"
-    ],
-    "Move 2": [
-      "Moves/Vaporeon - Aqua Ring.png"
-    ],
+    "Move 1": "Moves/Vaporeon - Hydro Pump.png",
+    "Move 2": "Moves/Vaporeon - Aqua Ring.png",
     "Win Rate": 51.97,
     "Pick Rate": 17.78,
     "Item 1": "Battle_Items/X Speed.png",
@@ -6515,12 +5375,8 @@
     "Pokemon": "Pokemon/Vaporeon.png",
     "Role": "Defender",
     "Move Set": "Muddy Water/Aqua Ring",
-    "Move 1": [
-      "Moves/Vaporeon - Muddy Water.png"
-    ],
-    "Move 2": [
-      "Moves/Vaporeon - Aqua Ring.png"
-    ],
+    "Move 1": "Moves/Vaporeon - Muddy Water.png",
+    "Move 2": "Moves/Vaporeon - Aqua Ring.png",
     "Win Rate": 50.67,
     "Pick Rate": 7.64,
     "Item 1": "Battle_Items/X Speed.png",
@@ -6538,12 +5394,8 @@
     "Pokemon": "Pokemon/Vaporeon.png",
     "Role": "Defender",
     "Move Set": "Hydro Pump/Flip Turn",
-    "Move 1": [
-      "Moves/Vaporeon - Hydro Pump.png"
-    ],
-    "Move 2": [
-      "Moves/Vaporeon - Flip Turn.png"
-    ],
+    "Move 1": "Moves/Vaporeon - Hydro Pump.png",
+    "Move 2": "Moves/Vaporeon - Flip Turn.png",
     "Win Rate": 50.68,
     "Pick Rate": 5.8,
     "Item 1": "Battle_Items/X Speed.png",
@@ -6561,12 +5413,8 @@
     "Pokemon": "Pokemon/Vaporeon.png",
     "Role": "Defender",
     "Move Set": "Muddy Water/Flip Turn",
-    "Move 1": [
-      "Moves/Vaporeon - Muddy Water.png"
-    ],
-    "Move 2": [
-      "Moves/Vaporeon - Flip Turn.png"
-    ],
+    "Move 1": "Moves/Vaporeon - Muddy Water.png",
+    "Move 2": "Moves/Vaporeon - Flip Turn.png",
     "Win Rate": 50.29,
     "Pick Rate": 4.04,
     "Item 1": "Battle_Items/X Speed.png",
@@ -6584,12 +5432,8 @@
     "Pokemon": "Pokemon/Venusaur.png",
     "Role": "Attacker",
     "Move Set": "Sludge Bomb/Solar Beam",
-    "Move 1": [
-      "Moves/Venusaur - Sludge Bomb.png"
-    ],
-    "Move 2": [
-      "Moves/Venusaur - Solar Beam.png"
-    ],
+    "Move 1": "Moves/Venusaur - Sludge Bomb.png",
+    "Move 2": "Moves/Venusaur - Solar Beam.png",
     "Win Rate": 46.69,
     "Pick Rate": 6.73,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -6607,12 +5451,8 @@
     "Pokemon": "Pokemon/Venusaur.png",
     "Role": "Attacker",
     "Move Set": "Sludge Bomb/Petal Dance",
-    "Move 1": [
-      "Moves/Venusaur - Sludge Bomb.png"
-    ],
-    "Move 2": [
-      "Moves/Venusaur - Petal Dance.png"
-    ],
+    "Move 1": "Moves/Venusaur - Sludge Bomb.png",
+    "Move 2": "Moves/Venusaur - Petal Dance.png",
     "Win Rate": 45.58,
     "Pick Rate": 0.35,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -6630,12 +5470,8 @@
     "Pokemon": "Pokemon/Venusaur.png",
     "Role": "Attacker",
     "Move Set": "Giga Drain/Petal Dance",
-    "Move 1": [
-      "Moves/Venusaur - Giga Drain.png"
-    ],
-    "Move 2": [
-      "Moves/Venusaur - Petal Dance.png"
-    ],
+    "Move 1": "Moves/Venusaur - Giga Drain.png",
+    "Move 2": "Moves/Venusaur - Petal Dance.png",
     "Win Rate": 46.3,
     "Pick Rate": 2.54,
     "Item 1": "Battle_Items/Potion.png",
@@ -6653,12 +5489,8 @@
     "Pokemon": "Pokemon/Venusaur.png",
     "Role": "Attacker",
     "Move Set": "Giga Drain/Solar Beam",
-    "Move 1": [
-      "Moves/Venusaur - Giga Drain.png"
-    ],
-    "Move 2": [
-      "Moves/Venusaur - Solar Beam.png"
-    ],
+    "Move 1": "Moves/Venusaur - Giga Drain.png",
+    "Move 2": "Moves/Venusaur - Solar Beam.png",
     "Win Rate": 44.97,
     "Pick Rate": 0.26,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -6676,12 +5508,8 @@
     "Pokemon": "Pokemon/Wigglytuff.png",
     "Role": "Supporter",
     "Move Set": "Double Slap/Sing",
-    "Move 1": [
-      "Moves/Wigglytuff - Double Slap.png"
-    ],
-    "Move 2": [
-      "Moves/Wigglytuff - Sing.png"
-    ],
+    "Move 1": "Moves/Wigglytuff - Double Slap.png",
+    "Move 2": "Moves/Wigglytuff - Sing.png",
     "Win Rate": 48.69,
     "Pick Rate": 4.83,
     "Item 1": "Battle_Items/X Speed.png",
@@ -6699,12 +5527,8 @@
     "Pokemon": "Pokemon/Wigglytuff.png",
     "Role": "Supporter",
     "Move Set": "Dazzling Gleam/Sing",
-    "Move 1": [
-      "Moves/Wigglytuff - Dazzling Gleam.png"
-    ],
-    "Move 2": [
-      "Moves/Wigglytuff - Sing.png"
-    ],
+    "Move 1": "Moves/Wigglytuff - Dazzling Gleam.png",
+    "Move 2": "Moves/Wigglytuff - Sing.png",
     "Win Rate": 51.63,
     "Pick Rate": 1.97,
     "Item 1": "Battle_Items/X Speed.png",
@@ -6722,12 +5546,8 @@
     "Pokemon": "Pokemon/Wigglytuff.png",
     "Role": "Supporter",
     "Move Set": "Double Slap/Rollout",
-    "Move 1": [
-      "Moves/Wigglytuff - Double Slap.png"
-    ],
-    "Move 2": [
-      "Moves/Wigglytuff - Rollout.png"
-    ],
+    "Move 1": "Moves/Wigglytuff - Double Slap.png",
+    "Move 2": "Moves/Wigglytuff - Rollout.png",
     "Win Rate": 51.75,
     "Pick Rate": 0.87,
     "Item 1": "Battle_Items/X Speed.png",
@@ -6745,12 +5565,8 @@
     "Pokemon": "Pokemon/Wigglytuff.png",
     "Role": "Supporter",
     "Move Set": "Dazzling Gleam/Rollout",
-    "Move 1": [
-      "Moves/Wigglytuff - Dazzling Gleam.png"
-    ],
-    "Move 2": [
-      "Moves/Wigglytuff - Rollout.png"
-    ],
+    "Move 1": "Moves/Wigglytuff - Dazzling Gleam.png",
+    "Move 2": "Moves/Wigglytuff - Rollout.png",
     "Win Rate": 55.25,
     "Pick Rate": 0.17,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -6768,12 +5584,8 @@
     "Pokemon": "Pokemon/Zacian.png",
     "Role": "All-Rounder",
     "Move Set": "Sacred Sword/Play Rough",
-    "Move 1": [
-      "Moves/Zacian - Sacred Sword.png"
-    ],
-    "Move 2": [
-      "Moves/Zacian - Play Rough.png"
-    ],
+    "Move 1": "Moves/Zacian - Sacred Sword.png",
+    "Move 2": "Moves/Zacian - Play Rough.png",
     "Win Rate": 43.1,
     "Pick Rate": 0.22,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -6791,12 +5603,8 @@
     "Pokemon": "Pokemon/Zacian.png",
     "Role": "All-Rounder",
     "Move Set": "Sacred Sword/Agility",
-    "Move 1": [
-      "Moves/Zacian - Sacred Sword.png"
-    ],
-    "Move 2": [
-      "Moves/Zacian - Agility.png"
-    ],
+    "Move 1": "Moves/Zacian - Sacred Sword.png",
+    "Move 2": "Moves/Zacian - Agility.png",
     "Win Rate": 48.9,
     "Pick Rate": 0.24,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -6814,12 +5622,8 @@
     "Pokemon": "Pokemon/Zacian.png",
     "Role": "All-Rounder",
     "Move Set": "Metal Claw/Play Rough",
-    "Move 1": [
-      "Moves/Zacian - Metal Claw.png"
-    ],
-    "Move 2": [
-      "Moves/Zacian - Play Rough.png"
-    ],
+    "Move 1": "Moves/Zacian - Metal Claw.png",
+    "Move 2": "Moves/Zacian - Play Rough.png",
     "Win Rate": 47.22,
     "Pick Rate": 1.55,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -6837,12 +5641,8 @@
     "Pokemon": "Pokemon/Zacian.png",
     "Role": "All-Rounder",
     "Move Set": "Metal Claw/Agility",
-    "Move 1": [
-      "Moves/Zacian - Metal Claw.png"
-    ],
-    "Move 2": [
-      "Moves/Zacian - Agility.png"
-    ],
+    "Move 1": "Moves/Zacian - Metal Claw.png",
+    "Move 2": "Moves/Zacian - Agility.png",
     "Win Rate": 51.33,
     "Pick Rate": 8.12,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -6860,12 +5660,8 @@
     "Pokemon": "Pokemon/Zapdos.png",
     "Role": "Attacker",
     "Move Set": "Thunderbolt/Zap Cannon",
-    "Move 1": [
-      "Moves/Zapdos - Thunderbolt.png"
-    ],
-    "Move 2": [
-      "Moves/Zapdos - Zap Cannon.png"
-    ],
+    "Move 1": "Moves/Zapdos - Thunderbolt.png",
+    "Move 2": "Moves/Zapdos - Zap Cannon.png",
     "Win Rate": 52.04,
     "Pick Rate": 31.95,
     "Item 1": "Battle_Items/Eject Button.png",
@@ -6883,12 +5679,8 @@
     "Pokemon": "Pokemon/Zeraora.png",
     "Role": "Speedster",
     "Move Set": "Spark/Wild Charge",
-    "Move 1": [
-      "Moves/Zeraora - Spark.png"
-    ],
-    "Move 2": [
-      "Moves/Zeraora - Wild Charge.png"
-    ],
+    "Move 1": "Moves/Zeraora - Spark.png",
+    "Move 2": "Moves/Zeraora - Wild Charge.png",
     "Win Rate": 47.07,
     "Pick Rate": 6.4,
     "Item 1": "Battle_Items/X Attack.png",
@@ -6906,12 +5698,8 @@
     "Pokemon": "Pokemon/Zeraora.png",
     "Role": "Speedster",
     "Move Set": "Volt Switch/Wild Charge",
-    "Move 1": [
-      "Moves/Zeraora - Volt Switch.png"
-    ],
-    "Move 2": [
-      "Moves/Zeraora - Wild Charge.png"
-    ],
+    "Move 1": "Moves/Zeraora - Volt Switch.png",
+    "Move 2": "Moves/Zeraora - Wild Charge.png",
     "Win Rate": 40.97,
     "Pick Rate": 0.42,
     "Item 1": "Battle_Items/Potion.png",
@@ -6929,12 +5717,8 @@
     "Pokemon": "Pokemon/Zeraora.png",
     "Role": "Speedster",
     "Move Set": "Volt Switch/Discharge",
-    "Move 1": [
-      "Moves/Zeraora - Volt Switch.png"
-    ],
-    "Move 2": [
-      "Moves/Zeraora - Discharge.png"
-    ],
+    "Move 1": "Moves/Zeraora - Volt Switch.png",
+    "Move 2": "Moves/Zeraora - Discharge.png",
     "Win Rate": 45.69,
     "Pick Rate": 1.95,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -6952,12 +5736,8 @@
     "Pokemon": "Pokemon/Zeraora.png",
     "Role": "Speedster",
     "Move Set": "Spark/Discharge",
-    "Move 1": [
-      "Moves/Zeraora - Spark.png"
-    ],
-    "Move 2": [
-      "Moves/Zeraora - Discharge.png"
-    ],
+    "Move 1": "Moves/Zeraora - Spark.png",
+    "Move 2": "Moves/Zeraora - Discharge.png",
     "Win Rate": 48.3,
     "Pick Rate": 1.08,
     "Item 1": "Battle_Items/X Attack.png",
@@ -6975,12 +5755,8 @@
     "Pokemon": "Pokemon/Zoroark.png",
     "Role": "Speedster",
     "Move Set": "Shadow Claw/Feint Attack",
-    "Move 1": [
-      "Moves/Zoroark - Shadow Claw.png"
-    ],
-    "Move 2": [
-      "Moves/Zoroark - Feint Attack.png"
-    ],
+    "Move 1": "Moves/Zoroark - Shadow Claw.png",
+    "Move 2": "Moves/Zoroark - Feint Attack.png",
     "Win Rate": 46.85,
     "Pick Rate": 4.98,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -6998,12 +5774,8 @@
     "Pokemon": "Pokemon/Zoroark.png",
     "Role": "Speedster",
     "Move Set": "Cut/Feint Attack",
-    "Move 1": [
-      "Moves/Zoroark - Cut.png"
-    ],
-    "Move 2": [
-      "Moves/Zoroark - Feint Attack.png"
-    ],
+    "Move 1": "Moves/Zoroark - Cut.png",
+    "Move 2": "Moves/Zoroark - Feint Attack.png",
     "Win Rate": 46.27,
     "Pick Rate": 0.63,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -7021,12 +5793,8 @@
     "Pokemon": "Pokemon/Zoroark.png",
     "Role": "Speedster",
     "Move Set": "Cut/Night Slash",
-    "Move 1": [
-      "Moves/Zoroark - Cut.png"
-    ],
-    "Move 2": [
-      "Moves/Zoroark - Night Slash.png"
-    ],
+    "Move 1": "Moves/Zoroark - Cut.png",
+    "Move 2": "Moves/Zoroark - Night Slash.png",
     "Win Rate": 46.68,
     "Pick Rate": 0.61,
     "Item 1": "Battle_Items/Full Heal.png",
@@ -7044,12 +5812,8 @@
     "Pokemon": "Pokemon/Zoroark.png",
     "Role": "Speedster",
     "Move Set": "Shadow Claw/Night Slash",
-    "Move 1": [
-      "Moves/Zoroark - Shadow Claw.png"
-    ],
-    "Move 2": [
-      "Moves/Zoroark - Night Slash.png"
-    ],
+    "Move 1": "Moves/Zoroark - Shadow Claw.png",
+    "Move 2": "Moves/Zoroark - Night Slash.png",
     "Win Rate": 37.93,
     "Pick Rate": 0.4,
     "Item 1": "Battle_Items/Full Heal.png",

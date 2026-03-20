@@ -16,11 +16,16 @@ import re
 import os
 from typing import Dict, List, Optional
 import logging
+from pathlib import Path
 from urllib.parse import urljoin
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+DETAILS_JSON_PATH = REPO_ROOT / "static" / "json" / "all_pokemon_detailed.json"
+UNITE_MOVES_IMG_DIR = REPO_ROOT / "static" / "img" / "Unite_Moves"
 
 
 class UniteDBWorkingScraper:
@@ -39,8 +44,7 @@ class UniteDBWorkingScraper:
     def load_pokemon_database(self):
         """Load existing Pokemon database from all_pokemon_detailed.json"""
         try:
-            import os
-            with open('../static/json/all_pokemon_detailed.json', 'r', encoding='utf-8') as f:
+            with open(DETAILS_JSON_PATH, 'r', encoding='utf-8') as f:
                 self.pokemon_data = json.load(f)
             logger.info(f"Loaded {len(self.pokemon_data)} Pokemon from database")
         except FileNotFoundError:
@@ -52,10 +56,9 @@ class UniteDBWorkingScraper:
 
     def create_image_directories(self):
         """Create necessary image directories if they don't exist"""
-        unite_moves_dir = './/static/img/Unite_Moves'
-        if not os.path.exists(unite_moves_dir):
-            os.makedirs(unite_moves_dir)
-            logger.info(f"Created directory: {unite_moves_dir}")
+        if not UNITE_MOVES_IMG_DIR.exists():
+            UNITE_MOVES_IMG_DIR.mkdir(parents=True, exist_ok=True)
+            logger.info(f"Created directory: {UNITE_MOVES_IMG_DIR}")
 
     def download_image(self, image_url: str, save_path: str) -> bool:
         """Download an image from URL and save to local path"""
@@ -124,40 +127,6 @@ class UniteDBWorkingScraper:
 
         logger.info(f"Found {len(pokemon_list)} Pokemon to scrape from database")
         return pokemon_list
-
-    def resolve_pokemon_list(self, pokemon_list: List[str]) -> List[tuple]:
-        """Resolve a custom list to (preferred_name, unite_db_name) tuples."""
-        name_lookup = {}
-        slug_lookup = {}
-
-        for preferred_name, data in self.pokemon_data.items():
-            name_lookup[preferred_name.lower()] = preferred_name
-            unite_db_name = data.get("unite-db-name")
-            if unite_db_name:
-                slug_lookup[unite_db_name.lower()] = preferred_name
-
-        resolved = []
-        for name in pokemon_list:
-            if not name:
-                continue
-            key = name.strip()
-            lowered = key.lower()
-
-            if lowered in name_lookup:
-                preferred_name = name_lookup[lowered]
-                unite_db_name = self.pokemon_data[preferred_name].get("unite-db-name", key)
-            elif lowered in slug_lookup:
-                preferred_name = slug_lookup[lowered]
-                unite_db_name = self.pokemon_data[preferred_name].get("unite-db-name", key)
-            else:
-                preferred_name = key
-                unite_db_name = key
-                logger.warning(f"'{key}' not found in database; using provided name as unite-db slug")
-
-            resolved.append((preferred_name, unite_db_name))
-
-        logger.info(f"Resolved {len(resolved)} Pokemon from custom list")
-        return resolved
 
     def download_missing_image(self, image_url: str, save_path: str) -> bool:
         """Download an image only if it doesn't already exist."""
@@ -846,7 +815,7 @@ class UniteDBWorkingScraper:
                     if pokemon_name and unite_data["Name"]:
                         filename = f"{pokemon_name} - {unite_data['Name']}.png"
                         unite_data["Image"] = filename
-                        save_path = os.path.join("..", "static", "img", "Unite_Moves", filename)
+                        save_path = str(UNITE_MOVES_IMG_DIR / filename)
                         self.download_missing_image(image_url, save_path)
 
                     if info_div:
@@ -966,13 +935,14 @@ class UniteDBWorkingScraper:
         # print(self.pokemon_data['Aegislash']['Passive Ability'])
         return self.pokemon_data
 
-    def save_to_json(self, filename: str = "../static/json/all_pokemon_detailed.json"):
+    def save_to_json(self, filename: str | Path = DETAILS_JSON_PATH):
         """Save scraped data to JSON file"""
         try:
-            with open(filename, 'w', encoding='utf-8') as f:
-                print(self.pokemon_data['Aegislash']['Passive Ability'])
+            output_path = Path(filename)
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            with open(output_path, 'w', encoding='utf-8') as f:
                 json.dump(self.pokemon_data, f, indent=2, ensure_ascii=False)
-            logger.info(f"Data saved to {filename}")
+            logger.info(f"Data saved to {output_path}")
         except Exception as e:
             logger.error(f"Error saving to file: {e}")
 
@@ -991,13 +961,13 @@ def main():
     scraper.scrape_all_pokemon(delay=1.0)
 
     # Save results
-    scraper.save_to_json("../static/json/all_pokemon_detailed.json")
+    scraper.save_to_json(DETAILS_JSON_PATH)
 
     # Print summary
     print(f"\n{'='*60}")
     print(f"Scraping Summary:")
     print(f"Total Pokemon scraped: {len(scraper.pokemon_data)}")
-    print(f"Output file: ../static/json/all_pokemon_detailed.json")
+    print(f"Output file: {DETAILS_JSON_PATH}")
     print(f"{'='*60}\n")
 
     # Print sample data

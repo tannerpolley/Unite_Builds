@@ -1,9 +1,9 @@
+import json
+from collections import defaultdict
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
-from collections import defaultdict
-import json
-import ast
-from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 MOVESETS_CSV_PATH = REPO_ROOT / "data" / "csv" / "movesets.csv"
@@ -17,79 +17,64 @@ def sanitize_for_json(value):
         return [sanitize_for_json(inner_value) for inner_value in value]
     if isinstance(value, tuple):
         return [sanitize_for_json(inner_value) for inner_value in value]
+    if isinstance(value, np.ndarray):
+        return [sanitize_for_json(inner_value) for inner_value in value.tolist()]
+    if isinstance(value, np.integer):
+        return int(value)
+    if isinstance(value, np.bool_):
+        return bool(value)
     if isinstance(value, (float, np.floating)) and pd.isna(value):
         return None
     return value
 
 
-def organize_df(df, column_titles):
-
+def build_moveset_rows(df):
     df = df.sort_values(by='Name').reset_index(drop=True)
-
     df['Pick Rate'] = df['Pick Rate'].round(2)
     df['Win Rate'] = df['Win Rate'].round(2)
-
-    df = df.reindex(columns=column_titles)
-
-    df.to_csv(MOVESETS_CSV_PATH,
-              index=False,
-              quoting=1,
-              )
-
-    df = pd.read_csv(MOVESETS_CSV_PATH)
-
-    df['Battle Items'] = df['Battle Items'].apply(ast.literal_eval)
-
-    # 3. Explode so each dict becomes its own row
-    df_exploded = df.explode('Battle Items').reset_index(drop=True)
-
-    # 4. Normalize those dicts into separate columns
-    item_details = pd.json_normalize(df_exploded['Battle Items'])
-
-    # 5. Drop the old list-column and concat the new fields
-    df_final = pd.concat([
-        df_exploded.drop(columns=['Battle Items']),
-        item_details
-    ], axis=1)
-
-    for i, row in df_final.iterrows():
-        df_final.loc[i, 'Battle Item'] = f'Battle_Items/{row["Battle Item"]}.png'
-
-    # df = df[df['Pick Rate'] >= .75]
-    df_final.to_csv(MOVESETS_CSV_PATH,
-                    index=False,
-                    quoting=1,
-                    )
-
-    # Load and process the CSV b
-    df = pd.read_csv(MOVESETS_CSV_PATH)
-    df["Move 1"] = df["Move 1"].apply(ensure_list)
-    df["Move 2"] = df["Move 2"].apply(ensure_list)
-
-    group_keys = ["Name", "Move Set"]
     static_columns = ["Name", "Pokemon", "Role", "Move Set", "Move 1", "Move 2", "Win Rate", "Pick Rate"]
-
-    # Group by Name + Move Set
     final_data = []
-    for (name, moveset), group in df.groupby(group_keys, sort=False):
-        row = group.iloc[0]
+
+    for _, row in df.iterrows():
         moveset_entry = {col: row[col] for col in static_columns}
+        battle_items = row["Battle Items"] if isinstance(row["Battle Items"], list) else []
 
-        for idx, (_, item_row) in enumerate(group.iterrows(), 1):
-            moveset_entry[f"Item {idx}"] = item_row["Battle Item"]
-            moveset_entry[f"Win Rate {idx}"] = item_row["Win Rate.1"]
-            moveset_entry[f"Pick Rate {idx}"] = item_row["Pick Rate.1"]
+        for idx, item_row in enumerate(battle_items, 1):
+            item_name = item_row.get("Battle Item")
+            moveset_entry[f"Item {idx}"] = f"Battle_Items/{item_name}.png" if item_name else None
+            moveset_entry[f"Win Rate {idx}"] = item_row.get("Win Rate")
+            moveset_entry[f"Pick Rate {idx}"] = item_row.get("Pick Rate")
 
-        final_data.append(moveset_entry)
+        final_data.append(sanitize_for_json(moveset_entry))
 
-    json_ready_data = [sanitize_for_json(entry) for entry in final_data]
+    return final_data
+
+
+def organize_df(df, column_titles):
+    df = df.reindex(columns=column_titles)
+    json_ready_data = build_moveset_rows(df)
+
+    csv_static_columns = ["Name", "Pokemon", "Role", "Move Set", "Move 1", "Move 2", "Win Rate", "Pick Rate"]
+    item_columns = []
+    max_items = max((len(row.get("Battle Items", [])) for _, row in df.iterrows()), default=0)
+    for idx in range(1, max_items + 1):
+        item_columns.extend([f"Item {idx}", f"Win Rate {idx}", f"Pick Rate {idx}"])
+
+    csv_columns = csv_static_columns + item_columns
+    csv_df = pd.DataFrame(json_ready_data).reindex(columns=csv_columns)
+
+    MOVESETS_CSV_PATH.parent.mkdir(parents=True, exist_ok=True)
+    csv_df.to_csv(
+        MOVESETS_CSV_PATH,
+        index=False,
+        quoting=1,
+    )
 
     MOVESET_ROWS_JSON_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(MOVESET_ROWS_JSON_PATH, "w", encoding="utf-8") as f:
         json.dump(json_ready_data, f, indent=2, allow_nan=False)
         f.write("\n")
-
-
+    return json_ready_data
 
 def fix_special_cases(movesets, matches, pick_rate_dict, win_rate_dict):
 
