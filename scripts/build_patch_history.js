@@ -2,13 +2,16 @@ const fs = require("fs");
 const path = require("path");
 const https = require("https");
 const vm = require("vm");
+const { createPatchNoteTranslator } = require("./patch_note_translator");
 
 const REPO_ROOT = path.resolve(__dirname, "..");
 const PATCH_NOTES_URL = "https://unite-db.com/patch-notes";
 const SOURCE_JSON_PATH = path.join(REPO_ROOT, "static", "json", "pokemon_popup_details.json");
 const BATTLE_ITEMS_JSON_PATH = path.join(REPO_ROOT, "data", "json", "unite_db_battle_items.json");
 const HELD_ITEMS_JSON_PATH = path.join(REPO_ROOT, "data", "json", "unite_db_held_items.json");
+const STATS_JSON_PATH = path.join(REPO_ROOT, "data", "json", "unite_db_stats.json");
 const RAW_OUTPUT_PATH = path.join(REPO_ROOT, "data", "json", "unite_db_patch_notes_raw.json");
+const REPORT_OUTPUT_PATH = path.join(REPO_ROOT, "data", "json", "patch_note_translation_report.json");
 const GROUPED_OUTPUT_PATH = path.join(REPO_ROOT, "static", "json", "pokemon_patch_history.json");
 const MOVE_OUTPUT_PATH = path.join(REPO_ROOT, "static", "json", "pokemon_move_patch_history.json");
 
@@ -681,8 +684,67 @@ function writeJson(filePath, data) {
   fs.writeFileSync(filePath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
 }
 
+function loadOptionalJsonArray(filePath) {
+  if (!fs.existsSync(filePath)) {
+    return [];
+  }
+
+  try {
+    const parsed = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (error) {
+    console.warn(`Unable to load optional JSON array from ${filePath}: ${error.message}`);
+    return [];
+  }
+}
+
+function translateGroupedHistoryMap(historyMap, translator, isMoveHistory = false) {
+  const translatedHistory = {};
+
+  for (const [pokemonName, entry] of Object.entries(historyMap || {})) {
+    if (isMoveHistory) {
+      const translatedMoveHistory = {};
+
+      for (const [moveName, patches] of Object.entries(entry || {})) {
+        const translatedPatches = patches
+          .map((patch) => ({
+            ...patch,
+            changes: (patch.changes || [])
+              .map((change) => translator.translateChange(pokemonName, change, { familyName: moveName }))
+              .filter((change) => Array.isArray(change.lines) && change.lines.length > 0)
+          }))
+          .filter((patch) => patch.changes.length > 0);
+
+        if (translatedPatches.length > 0) {
+          translatedMoveHistory[moveName] = translatedPatches;
+        }
+      }
+
+      if (Object.keys(translatedMoveHistory).length > 0) {
+        translatedHistory[pokemonName] = translatedMoveHistory;
+      }
+    } else {
+      const translatedPatches = (entry || [])
+        .map((patch) => ({
+          ...patch,
+          changes: (patch.changes || [])
+            .map((change) => translator.translateChange(pokemonName, change))
+            .filter((change) => Array.isArray(change.lines) && change.lines.length > 0)
+        }))
+        .filter((patch) => patch.changes.length > 0);
+
+      if (translatedPatches.length > 0) {
+        translatedHistory[pokemonName] = translatedPatches;
+      }
+    }
+  }
+
+  return translatedHistory;
+}
+
 async function main() {
   const pokemonDetails = JSON.parse(fs.readFileSync(SOURCE_JSON_PATH, "utf8"));
+  const statsEntries = loadOptionalJsonArray(STATS_JSON_PATH);
   const patchNotesHtml = await fetchText(PATCH_NOTES_URL);
   const payloadUrl = extractPayloadUrl(patchNotesHtml);
   const payloadSource = await fetchText(payloadUrl);
@@ -695,14 +757,20 @@ async function main() {
 
   const rawArchive = buildRawArchive(posts);
   const groupedHistories = buildGroupedPatchHistories(rawArchive, pokemonDetails);
+  const translator = createPatchNoteTranslator({ pokemonDetails, statsEntries });
+  const translatedPokemonHistory = translateGroupedHistoryMap(groupedHistories.pokemonHistory, translator, false);
+  const translatedMoveHistory = translateGroupedHistoryMap(groupedHistories.moveHistory, translator, true);
+  const translationReport = translator.getReport();
 
   writeJson(RAW_OUTPUT_PATH, rawArchive);
-  writeJson(GROUPED_OUTPUT_PATH, groupedHistories.pokemonHistory);
-  writeJson(MOVE_OUTPUT_PATH, groupedHistories.moveHistory);
+  writeJson(REPORT_OUTPUT_PATH, translationReport);
+  writeJson(GROUPED_OUTPUT_PATH, translatedPokemonHistory);
+  writeJson(MOVE_OUTPUT_PATH, translatedMoveHistory);
 
   console.log(`Saved ${rawArchive.length} raw patch entries to ${RAW_OUTPUT_PATH}`);
-  console.log(`Saved ${Object.keys(groupedHistories.pokemonHistory).length} Pokemon patch histories to ${GROUPED_OUTPUT_PATH}`);
-  console.log(`Saved ${Object.keys(groupedHistories.moveHistory).length} Pokemon move patch histories to ${MOVE_OUTPUT_PATH}`);
+  console.log(`Saved ${translationReport.length} patch translation debug entries to ${REPORT_OUTPUT_PATH}`);
+  console.log(`Saved ${Object.keys(translatedPokemonHistory).length} Pokemon patch histories to ${GROUPED_OUTPUT_PATH}`);
+  console.log(`Saved ${Object.keys(translatedMoveHistory).length} Pokemon move patch histories to ${MOVE_OUTPUT_PATH}`);
 }
 
 main().catch((error) => {

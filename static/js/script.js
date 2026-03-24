@@ -19,6 +19,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   let movePatchHistoryData = null;
   let movePatchHistoryPromise = null;
 
+  function resetPopupScrollPosition() {
+    popup.scrollTop = 0;
+    popupContent.scrollTop = 0;
+    popupContent.querySelectorAll(".move-popup-body, .popup-tab-panel, .popup-table-container").forEach((node) => {
+      node.scrollTop = 0;
+    });
+  }
+
   async function fetchJsonAsset(path, fallbackValue, label, options = {}) {
     const { noStore = false, versioned = true } = options;
 
@@ -162,6 +170,13 @@ document.addEventListener("DOMContentLoaded", async () => {
       .trim();
   }
 
+  function normalizePatchHeading(value) {
+    return normalizePatchText(value)
+      .replace(/\s*\[(?:BUFFED|NERFED|ADJUSTED|BUGFIX(?:ED)?|REWORKED?|NEW)\]\s*$/i, '')
+      .replace(/\s*:\s*$/g, '')
+      .trim();
+  }
+
   function formatPatchDate(value) {
     if (!value) {
       return '';
@@ -179,137 +194,319 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  function getPatchDisplay(patch) {
-    const fullTitle = normalizePatchText(patch.title || patch.version || '');
-    const versionLabel = patch.version ? `Patch ${patch.version}` : fullTitle;
-    let subtitle = '';
+  function normalizePatchKey(value) {
+    return normalizePatchHeading(value)
+      .normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "");
+  }
 
-    if (patch.version && fullTitle.toLowerCase().startsWith(versionLabel.toLowerCase())) {
-      subtitle = fullTitle.slice(versionLabel.length).trim();
-    } else if (fullTitle !== versionLabel) {
-      subtitle = fullTitle;
+  function extractPatchTone(value) {
+    const text = normalizePatchText(value);
+    const match = text.match(/\[(BUFFED|NERFED|ADJUSTED|BUGFIX(?:ED)?|REWORKED?|NEW)\]\s*$/i);
+    const tag = match ? match[1].toUpperCase() : "";
+
+    if (tag === "BUFFED" || tag === "NEW") {
+      return "buff";
+    }
+    if (tag === "NERFED") {
+      return "nerf";
+    }
+    if (tag.startsWith("BUGFIX")) {
+      return "bugfix";
+    }
+    if (tag === "ADJUSTED" || tag.startsWith("REWORK")) {
+      return "adjusted";
     }
 
+    return "neutral";
+  }
+
+  function isBaseStatPatchHeading(value) {
+    return /^(general|stats|natural stats|attack|attacks|auto attack|auto attacks|basic attack|basic attacks|boosted attack|boosted attacks)$/i
+      .test(normalizePatchHeading(value));
+  }
+
+  function parsePatchHeading(value, options = {}) {
+    const rawHeading = normalizePatchHeading(value || 'General') || 'General';
+    const tone = extractPatchTone(value);
+    const uniteMoveMatch = rawHeading.match(/^Unite Move\s*:\s*(.+)$/i);
+    const passiveMatch = rawHeading.match(/^Passive(?: Ability)?\s*[,:\-]\s*(.+)$/i);
+    const genericUniteMoveName = /^Unite Move$/i.test(rawHeading) ? normalizePatchText(options.uniteMoveName || '') : '';
+    const genericPassiveName = /^Passive(?: Ability)?$/i.test(rawHeading) ? normalizePatchText(options.passiveName || '') : '';
+    const resolvedUniteMoveName = uniteMoveMatch ? uniteMoveMatch[1].trim() : genericUniteMoveName;
+    const resolvedPassiveName = passiveMatch ? passiveMatch[1].trim() : genericPassiveName;
+    const visibleHeading = resolvedUniteMoveName
+      ? `${resolvedUniteMoveName} (Unite Move)`
+      : (passiveMatch
+        ? `${resolvedPassiveName} (Passive)`
+        : (resolvedPassiveName
+          ? `${resolvedPassiveName} (Passive)`
+          : rawHeading));
+    const isUniteMove = Boolean(resolvedUniteMoveName);
+    const isPassive = Boolean(resolvedPassiveName) || /^Passive(?: Ability)?$/i.test(rawHeading);
+    const isPlusVariant = !isUniteMove && /\+\s*$/.test(visibleHeading);
+    const baseHeading = isPlusVariant ? visibleHeading.replace(/\+\s*$/, '').trim() : visibleHeading;
+
     return {
-      versionLabel,
-      subtitle,
-      formattedDate: formatPatchDate(patch.patchDate)
+      tone,
+      visibleHeading,
+      baseHeading: baseHeading || visibleHeading,
+      key: normalizePatchKey(baseHeading || visibleHeading || 'General'),
+      groupKey: `${normalizePatchKey(baseHeading || visibleHeading || 'General')}::${isPlusVariant ? 'plus' : 'base'}`,
+      variantKey: isPlusVariant ? 'plus' : 'base',
+      variantLabel: isPlusVariant ? '+ Version' : 'Base',
+      isUniteMove,
+      isPassive,
+      iconHeading: resolvedUniteMoveName
+        ? resolvedUniteMoveName
+        : (resolvedPassiveName
+          ? resolvedPassiveName
+          : (baseHeading || visibleHeading || 'General'))
     };
   }
 
-  function formatPercentChange(beforeValue, afterValue) {
-    if (!Number.isFinite(beforeValue) || !Number.isFinite(afterValue) || beforeValue === 0) {
-      return null;
-    }
+  function getPatchDisplay(patch) {
+    const versionLabel = normalizePatchText(patch.version || patch.title || 'Patch');
+    const formattedDate = formatPatchDate(patch.patchDate);
 
-    const percentChange = ((afterValue - beforeValue) / beforeValue) * 100;
-    if (Math.abs(percentChange) < 0.5) {
-      return 'about unchanged';
-    }
-
-    const rounded = Math.round(percentChange);
-    return `${rounded > 0 ? '+' : ''}${rounded}%`;
+    return formattedDate ? `${versionLabel} (${formattedDate})` : versionLabel;
   }
 
-  function summarizeLevelSeries(body) {
-    const normalizedBody = normalizePatchText(body);
-    const summaries = [];
-    const sectionRegex = /\*\*([^*]+)\*\*:\s*\n([\s\S]*?)(?=\n\*\*[^*]+\*\*:\s*\n|$)/g;
-    let sectionMatch;
+  function getPatchGroupHeadingTone(items) {
+    const sectionTones = new Set(
+      items
+        .map((item) => item.tone)
+        .filter((tone) => tone === 'buff' || tone === 'nerf')
+    );
 
-    while ((sectionMatch = sectionRegex.exec(normalizedBody)) !== null) {
-      const statName = sectionMatch[1].trim();
-      const parsedLevels = sectionMatch[2]
-        .split('\n')
-        .map((line) => line.trim())
-        .filter((line) => /^Lv(?:l)?\s*\d+/i.test(line))
-        .map((line) => {
-          const levelMatch = line.replace(/,/g, '').match(/^Lv(?:l)?\s*(\d+).*?(-?\d+(?:\.\d+)?)\s*(?:->|→)\s*(-?\d+(?:\.\d+)?)/i);
-          if (!levelMatch) {
-            return null;
-          }
-
-          return {
-            level: Number(levelMatch[1]),
-            before: Number(levelMatch[2]),
-            after: Number(levelMatch[3])
-          };
-        })
-        .filter(Boolean);
-
-      if (parsedLevels.length < 2) {
-        continue;
-      }
-
-      const first = parsedLevels[0];
-      const last = parsedLevels[parsedLevels.length - 1];
-      const firstPercent = formatPercentChange(first.before, first.after);
-      const lastPercent = formatPercentChange(last.before, last.after);
-
-      if (!firstPercent || !lastPercent) {
-        continue;
-      }
-
-      let summary = '';
-      if (firstPercent === 'about unchanged' && lastPercent === 'about unchanged') {
-        continue;
-      } else if (firstPercent === lastPercent) {
-        summary = `${statName} ${lastPercent} across Lv ${first.level}-${last.level}`;
-      } else if (firstPercent === 'about unchanged') {
-        summary = `${statName} is about unchanged at Lv ${first.level} and ${lastPercent} by Lv ${last.level}`;
-      } else if (lastPercent === 'about unchanged') {
-        summary = `${statName} ${firstPercent} at Lv ${first.level} and is about unchanged by Lv ${last.level}`;
-      } else {
-        summary = `${statName} ${firstPercent} at Lv ${first.level} and ${lastPercent} by Lv ${last.level}`;
-      }
-
-      summaries.push(summary);
+    if (sectionTones.size === 1) {
+      return Array.from(sectionTones)[0];
     }
 
-    return summaries;
+    return 'neutral';
   }
 
-  function renderStatSummary(body) {
-    const summaries = summarizeLevelSeries(body);
-    if (summaries.length === 0) {
+  function isNegativePatchMetric(label, text) {
+    const value = `${label} ${text}`.toLowerCase();
+    return /(cooldown|energy requirement|energy required|unite gauge|distance travel required|distance required|evolution level|aeos energy required|required for reviving)/i
+      .test(value);
+  }
+
+  function inferPatchToneFromLine(text) {
+    const normalized = normalizePatchText(text);
+    const lower = normalized.toLowerCase();
+
+    if (!normalized || /^bugfix:/i.test(normalized) || /^bug fix:/i.test(normalized) || /\bbug ?fix(?:ed|es)?\b/i.test(normalized) || /^fixed a bug/i.test(normalized)) {
+      return 'neutral';
+    }
+
+    if (/harder to accumulate|harder to gain|slower/i.test(lower)) {
+      return 'nerf';
+    }
+    if (/easier to accumulate|faster|increased responsiveness|more responsive/i.test(lower)) {
+      return 'buff';
+    }
+
+    const label = normalized.includes(':') ? normalized.split(':', 1)[0] : '';
+    const isNegativeMetric = isNegativePatchMetric(label, normalized);
+    const numbers = Array.from(normalized.matchAll(/-?\d+(?:\.\d+)?/g)).map((match) => Number(match[0]));
+
+    if ((normalized.includes('→') || normalized.includes('->')) && numbers.length >= 2 && numbers[0] !== numbers[1]) {
+      const increased = numbers[1] > numbers[0];
+      if (isNegativeMetric) {
+        return increased ? 'nerf' : 'buff';
+      }
+      return increased ? 'buff' : 'nerf';
+    }
+
+    if (/\b(increase|increased|longer|more)\b/i.test(lower) && !/\b(decrease|decreased|reduced|less)\b/i.test(lower)) {
+      return isNegativeMetric ? 'nerf' : 'buff';
+    }
+
+    if (/\b(decrease|decreased|reduced|shorter|less)\b/i.test(lower)) {
+      return isNegativeMetric ? 'buff' : 'nerf';
+    }
+
+    return 'neutral';
+  }
+
+  function buildPatchGroups(patch, options = {}) {
+    const groups = [];
+    const groupsByKey = new Map();
+
+    (patch.changes || []).forEach((change, changeIndex) => {
+      const heading = parsePatchHeading(change.heading || 'General', options);
+      const groupKey = heading.groupKey || `general-${changeIndex}`;
+
+      let group = groupsByKey.get(groupKey);
+      if (!group) {
+        group = {
+          key: groupKey,
+          baseKey: heading.key,
+          iconHeading: heading.iconHeading || heading.baseHeading || 'General',
+          displayHeading: heading.visibleHeading || 'General',
+          isUniteMove: heading.isUniteMove,
+          isPassive: heading.isPassive,
+          items: []
+        };
+        groupsByKey.set(groupKey, group);
+        groups.push(group);
+      }
+
+      (Array.isArray(change.lines) ? change.lines : []).forEach((rawLine) => {
+        const text = normalizePatchText(rawLine);
+        if (!text) {
+          return;
+        }
+
+        group.items.push({
+          text,
+          sectionTone: heading.tone,
+          tone: /^BUGFIX:/i.test(text) || /^Bug fix:/i.test(text) || /^Fixed a bug/i.test(text) || /\bbug ?fix(?:ed|es)?\b/i.test(text)
+            ? 'neutral'
+            : (heading.tone === 'bugfix'
+              ? 'neutral'
+            : (heading.tone === 'neutral' || heading.tone === 'adjusted'
+              ? inferPatchToneFromLine(text)
+              : heading.tone)),
+          variantKey: heading.variantKey,
+          variantLabel: heading.variantLabel
+        });
+      });
+    });
+
+    const allowedHeadingKeys = options.allowedPatchHeadingKeys || null;
+
+    return groups
+      .map((group) => {
+        return {
+          ...group,
+          headingTone: getPatchGroupHeadingTone(group.items),
+          items: group.items.map((item) => ({
+            ...item,
+            displayText: item.text
+          }))
+        };
+      })
+      .filter((group) => !allowedHeadingKeys || allowedHeadingKeys.has(group.baseKey))
+      .filter((group) => group.items.length > 0);
+  }
+
+  function shouldShowPatchMoveIcon(groupHeading, options) {
+    if (options.forceShowUniteIcons && options.isUniteMoveGroup) {
+      return true;
+    }
+
+    if (!options.showMoveIcons) {
+      return false;
+    }
+
+    return !isBaseStatPatchHeading(groupHeading);
+  }
+
+  function getPatchMoveIconSrc(pokemonName, group, options) {
+    if (!shouldShowPatchMoveIcon(group.iconHeading, {
+      ...options,
+      isUniteMoveGroup: group.isUniteMove
+    })) {
       return '';
     }
 
+    if (group.isUniteMove) {
+      return `static/img/Unite_Moves/${pokemonName} - ${group.iconHeading}.png`;
+    }
+
+    return `static/img/Moves/${pokemonName} - ${group.iconHeading}.png`;
+  }
+
+  let popupTabGroupCounter = 0;
+
+  function renderPopupPanels(panels, options = {}) {
+    const validPanels = (panels || []).filter((panel) => panel && panel.label && panel.content != null);
+    if (validPanels.length === 0) {
+      return '';
+    }
+
+    if (validPanels.length === 1) {
+      return validPanels[0].content;
+    }
+
+    popupTabGroupCounter += 1;
+    const groupId = `popup-tab-group-${popupTabGroupCounter}`;
+    const groupLabel = escapeHtml(options.ariaLabel || 'Popup sections');
+
     return `
-      <div class="patch-stat-summary">
-        ${summaries.map((summary) => `<span class="patch-stat-pill">${escapeHtml(summary)}</span>`).join('')}
+      <div class="popup-tab-group" data-popup-tab-group="${groupId}">
+        <div class="popup-tab-list" role="tablist" aria-label="${groupLabel}">
+          ${validPanels.map((panel, index) => `
+            <button
+              type="button"
+              class="popup-tab-button${index === 0 ? ' active' : ''}"
+              role="tab"
+              aria-selected="${index === 0 ? 'true' : 'false'}"
+              data-popup-tab-target="${panel.id}"
+            >
+              ${escapeHtml(panel.label)}
+            </button>
+          `).join('')}
+        </div>
+        ${validPanels.map((panel, index) => `
+          <section
+            class="popup-tab-panel${index === 0 ? ' active' : ''}"
+            data-popup-tab-panel="${panel.id}"
+            ${index === 0 ? '' : 'hidden'}
+          >
+            ${panel.content}
+          </section>
+        `).join('')}
       </div>
     `;
   }
 
-  function renderPatchHistorySection(pokemonName, patchHistory) {
-    const historyMarkup = patchHistory.length > 0
-      ? patchHistory.map((patch) => {
+  function renderPatchHistorySection(pokemonName, patchHistory, options = {}) {
+    const renderedPatches = (patchHistory || [])
+      .map((patch) => {
           const patchDisplay = getPatchDisplay(patch);
+          const groupedChanges = buildPatchGroups(patch, options);
+          if (groupedChanges.length === 0) {
+            return '';
+          }
           return `
             <article class="patch-history-card">
               <div class="patch-history-meta">
-                <div class="patch-history-version">${escapeHtml(patchDisplay.versionLabel)}</div>
-                ${patchDisplay.subtitle ? `<h5 class="patch-history-title">${escapeHtml(patchDisplay.subtitle)}</h5>` : ''}
-                ${patchDisplay.formattedDate ? `<div class="patch-history-date">${escapeHtml(patchDisplay.formattedDate)}</div>` : ''}
+                <div class="patch-history-version">${escapeHtml(patchDisplay)}</div>
               </div>
               <div class="patch-history-changes">
-                ${patch.changes.map((change) => `
-                  <div class="patch-change">
-                    <h6 class="patch-change-heading">${escapeHtml(normalizePatchText(change.heading || 'General'))}</h6>
-                    ${renderStatSummary(change.body || '')}
-                    <div class="patch-change-body">${escapeHtml(normalizePatchText(change.body || ''))}</div>
+                ${groupedChanges.map((group) => `
+                  <div class="patch-change patch-change--${group.headingTone}">
+                    <div class="patch-change-heading-row">
+                      ${getPatchMoveIconSrc(pokemonName, group, options) ? `
+                        <img src="${escapeHtml(getPatchMoveIconSrc(pokemonName, group, options))}" alt="${escapeHtml(group.displayHeading)}" class="patch-change-icon" onerror="this.style.display='none'">
+                      ` : ''}
+                      <h6 class="patch-change-heading">${escapeHtml(group.displayHeading || 'General')}</h6>
+                    </div>
+                    <ul class="patch-change-list">
+                      ${group.items.map((item) => `
+                        <li class="patch-change-line patch-change-line--${item.tone}">${escapeHtml(item.displayText)}</li>
+                      `).join('')}
+                    </ul>
                   </div>
                 `).join('')}
               </div>
             </article>
           `;
-        }).join('')
-      : `<p class="patch-history-empty">No patch history available for ${escapeHtml(pokemonName)}.</p>`;
+        })
+      .filter(Boolean);
+
+    const historyMarkup = renderedPatches.length > 0
+      ? renderedPatches.join('')
+      : `<p class="patch-history-empty">${escapeHtml(options.emptyMessage || `No patch history available for ${pokemonName}.`)}</p>`;
 
     return `
       <div class="move-detail-section patch-history-section">
-        <h4 class="move-detail-heading">Patches</h4>
+        ${options.sectionHeading === null ? '' : `<h4 class="move-detail-heading">${escapeHtml(options.sectionHeading || 'Patches')}</h4>`}
         ${historyMarkup}
       </div>
     `;
@@ -918,6 +1115,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         </table>
       </div>
     `;
+    resetPopupScrollPosition();
     popup.classList.remove("hidden");
   }
 
@@ -940,6 +1138,41 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const allMovePatchHistory = await loadMovePatchHistory();
     const movePatchHistory = (allMovePatchHistory[pokemonName] && allMovePatchHistory[pokemonName][moveName]) || [];
+    const pokemonUniteMoveName = moveDetailsData?.[pokemonName]?.['Unite Move']?.Name || '';
+    const normalizedMoveHeading = parsePatchHeading(moveName, {
+      uniteMoveName: pokemonUniteMoveName
+    });
+    const patchPanelMarkup = renderPatchHistorySection(pokemonName, movePatchHistory, {
+      showMoveIcons: true,
+      forceShowUniteIcons: true,
+      uniteMoveName: pokemonUniteMoveName,
+      allowedPatchHeadingKeys: new Set([normalizedMoveHeading.key]),
+      sectionHeading: null,
+      emptyMessage: `No patch notes available for ${moveName} yet.`
+    });
+    const descriptionPanelMarkup = `
+      <div class="move-detail-row">
+        <span class="move-detail-label">Level:</span>
+        <span class="move-detail-value">${moveData.Level}</span>
+      </div>
+
+      <div class="move-detail-row">
+        <span class="move-detail-label">Cooldown:</span>
+        <span class="move-detail-value">${moveData.Cooldown}</span>
+      </div>
+
+      <div class="move-detail-section">
+        <h4 class="move-detail-heading">Description</h4>
+        <p class="move-description">${moveData.Description}</p>
+      </div>
+
+      ${moveData['Enhanced Level'] ? `
+        <div class="move-detail-section enhanced-section">
+          <h4 class="move-detail-heading">Enhanced (Level ${moveData['Enhanced Level']})</h4>
+          <p class="move-description">${moveData['Enhanced Description'] || ''}</p>
+        </div>
+      ` : ''}
+    `;
 
     // Build popup HTML
     const moveImgSrc = imgElement.getAttribute('src');
@@ -951,33 +1184,17 @@ document.addEventListener("DOMContentLoaded", async () => {
       </div>
 
       <div class="move-popup-body">
-        <div class="move-detail-row">
-          <span class="move-detail-label">Level:</span>
-          <span class="move-detail-value">${moveData.Level}</span>
-        </div>
-
-        <div class="move-detail-row">
-          <span class="move-detail-label">Cooldown:</span>
-          <span class="move-detail-value">${moveData.Cooldown}</span>
-        </div>
-
-        <div class="move-detail-section">
-          <h4 class="move-detail-heading">Description</h4>
-          <p class="move-description">${moveData.Description}</p>
-        </div>
-
-        ${moveData['Enhanced Level'] ? `
-          <div class="move-detail-section enhanced-section">
-            <h4 class="move-detail-heading">Enhanced (Level ${moveData['Enhanced Level']})</h4>
-            <p class="move-description">${moveData['Enhanced Description'] || ''}</p>
-          </div>
-        ` : ''}
-
-        ${renderPatchHistorySection(moveName, movePatchHistory)}
+        ${renderPopupPanels([
+          { id: 'description', label: 'Description', content: descriptionPanelMarkup },
+          { id: 'patches', label: 'Patches', content: patchPanelMarkup }
+        ], {
+          ariaLabel: `${moveName} popup sections`
+        })}
       </div>
     `;
 
     // Show popup
+    resetPopupScrollPosition();
     popup.classList.remove("hidden");
   }
 
@@ -1000,6 +1217,74 @@ document.addEventListener("DOMContentLoaded", async () => {
     const pokemonImgSrc = imgElement.getAttribute('src');
     const allPatchHistory = await loadPatchHistory();
     const pokemonPatchHistory = allPatchHistory[pokemonName] || [];
+    const overviewPanelMarkup = `
+      ${pokemonData['Passive Ability'] ? `
+        <div class="move-detail-section">
+          <h4 class="move-detail-heading">Passive Ability: ${pokemonData['Passive Ability'].Name || ''}</h4>
+          <p class="move-description">${pokemonData['Passive Ability'].Description || ''}</p>
+        </div>
+      ` : ''}
+      ${pokemonData['Passive Ability']['Name 2'] && pokemonData['Passive Ability']['Description 2'] ? `
+        <div class="move-detail-section">
+          <h4 class="move-detail-heading">Passive Ability: ${pokemonData['Passive Ability']['Name 2'] || ''}</h4>
+          <p class="move-description">${pokemonData['Passive Ability']['Description 2'] || ''}</p>
+        </div>
+      ` : ''}
+
+      ${pokemonData['Attack'] ? `
+        <div class="move-detail-section">
+          <h4 class="move-detail-heading">Attack</h4>
+          <p class="move-description">${pokemonData['Attack']}</p>
+        </div>
+      ` : ''}
+
+      ${pokemonData['Unite Move'] ? `
+        <div class="move-detail-section enhanced-section">
+          <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+            ${pokemonData['Unite Move'].Name ? `
+              <img src="static/img/Unite_Moves/${pokemonName} - ${pokemonData['Unite Move'].Name}.png"
+                   alt="${pokemonData['Unite Move'].Name}"
+                   style="max-height: 100px; width: auto;"
+                   onerror="this.style.display='none'">
+            ` : ''}
+            <h4 class="move-detail-heading" style="margin: 0;">Unite Move: ${pokemonData['Unite Move'].Name || ''}</h4>
+          </div>
+
+          <div class="move-detail-row">
+            <span class="move-detail-label">Level:</span>
+            <span class="move-detail-value">${pokemonData['Unite Move'].Level || ''}</span>
+          </div>
+
+          <div class="move-detail-row">
+            <span class="move-detail-label">Cooldown:</span>
+            <span class="move-detail-value">${pokemonData['Unite Move'].Cooldown || ''}</span>
+          </div>
+
+          ${pokemonData['Unite Move']['Buff Duration'] ? `
+            <div class="move-detail-row">
+              <span class="move-detail-label">Buff Duration:</span>
+              <span class="move-detail-value">${pokemonData['Unite Move']['Buff Duration']}</span>
+            </div>
+          ` : ''}
+
+          ${pokemonData['Unite Move']['Buff Stats'] ? `
+            <div class="move-detail-row">
+              <span class="move-detail-label">Buff Stats:</span>
+              <span class="move-detail-value">${pokemonData['Unite Move']['Buff Stats']}</span>
+            </div>
+          ` : ''}
+
+          <p class="move-description" style="margin-top: 15px;">${pokemonData['Unite Move'].Description || ''}</p>
+        </div>
+      ` : ''}
+    `;
+    const pokemonPatchMarkup = renderPatchHistorySection(pokemonName, pokemonPatchHistory, {
+      forceShowUniteIcons: true,
+      uniteMoveName: pokemonData['Unite Move']?.Name || '',
+      passiveName: pokemonData['Passive Ability']?.Name || '',
+      sectionHeading: null,
+      emptyMessage: `No patch notes available for ${pokemonName} yet.`
+    });
 
     // Build popup HTML
     popupContent.innerHTML = `
@@ -1009,80 +1294,56 @@ document.addEventListener("DOMContentLoaded", async () => {
       </div>
 
       <div class="move-popup-body">
-        ${pokemonData['Passive Ability'] ? `
-          <div class="move-detail-section">
-            <h4 class="move-detail-heading">Passive Ability: ${pokemonData['Passive Ability'].Name || ''}</h4>
-            <p class="move-description">${pokemonData['Passive Ability'].Description || ''}</p>
-          </div>
-        ` : ''}
-        ${pokemonData['Passive Ability']['Name 2'] && pokemonData['Passive Ability']['Description 2'] ? `
-          <div class="move-detail-section">
-            <h4 class="move-detail-heading">Passive Ability: ${pokemonData['Passive Ability']['Name 2'] || ''}</h4>
-            <p class="move-description">${pokemonData['Passive Ability']['Description 2'] || ''}</p>
-          </div>
-        ` : ''}
-
-        ${pokemonData['Attack'] ? `
-          <div class="move-detail-section">
-            <h4 class="move-detail-heading">Attack</h4>
-            <p class="move-description">${pokemonData['Attack']}</p>
-          </div>
-        ` : ''}
-
-        ${pokemonData['Unite Move'] ? `
-          <div class="move-detail-section enhanced-section">
-            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-              ${pokemonData['Unite Move'].Name ? `
-                <img src="static/img/Unite_Moves/${pokemonName} - ${pokemonData['Unite Move'].Name}.png"
-                     alt="${pokemonData['Unite Move'].Name}"
-                     style="max-height: 100px; width: auto;"
-                     onerror="this.style.display='none'">
-              ` : ''}
-              <h4 class="move-detail-heading" style="margin: 0;">Unite Move: ${pokemonData['Unite Move'].Name || ''}</h4>
-            </div>
-
-            <div class="move-detail-row">
-              <span class="move-detail-label">Level:</span>
-              <span class="move-detail-value">${pokemonData['Unite Move'].Level || ''}</span>
-            </div>
-
-            <div class="move-detail-row">
-              <span class="move-detail-label">Cooldown:</span>
-              <span class="move-detail-value">${pokemonData['Unite Move'].Cooldown || ''}</span>
-            </div>
-
-            ${pokemonData['Unite Move']['Buff Duration'] ? `
-              <div class="move-detail-row">
-                <span class="move-detail-label">Buff Duration:</span>
-                <span class="move-detail-value">${pokemonData['Unite Move']['Buff Duration']}</span>
-              </div>
-            ` : ''}
-
-            ${pokemonData['Unite Move']['Buff Stats'] ? `
-              <div class="move-detail-row">
-                <span class="move-detail-label">Buff Stats:</span>
-                <span class="move-detail-value">${pokemonData['Unite Move']['Buff Stats']}</span>
-              </div>
-            ` : ''}
-
-            <p class="move-description" style="margin-top: 15px;">${pokemonData['Unite Move'].Description || ''}</p>
-          </div>
-        ` : ''}
-
-        ${renderPatchHistorySection(pokemonName, pokemonPatchHistory)}
+        ${renderPopupPanels([
+          { id: 'overview', label: 'Overview', content: overviewPanelMarkup },
+          { id: 'patches', label: 'Patches', content: pokemonPatchMarkup }
+        ], {
+          ariaLabel: `${pokemonName} popup sections`
+        })}
       </div>
     `;
 
     // Show popup
+    resetPopupScrollPosition();
     popup.classList.remove("hidden");
   }
 
   popup.addEventListener("click", (e) => {
     if (e.target === popup) {
+      resetPopupScrollPosition();
       popup.classList.add("hidden");
       // Stop propagation to prevent the document click handler from triggering
       e.stopPropagation();
     }
+  });
+
+  popupContent.addEventListener("click", (event) => {
+    const tabButton = event.target.closest(".popup-tab-button");
+    if (!tabButton) {
+      return;
+    }
+
+    const tabGroup = tabButton.closest(".popup-tab-group");
+    if (!tabGroup) {
+      return;
+    }
+
+    const targetPanelId = tabButton.dataset.popupTabTarget;
+    if (!targetPanelId) {
+      return;
+    }
+
+    tabGroup.querySelectorAll(".popup-tab-button").forEach((button) => {
+      const isActive = button === tabButton;
+      button.classList.toggle("active", isActive);
+      button.setAttribute("aria-selected", isActive ? "true" : "false");
+    });
+
+    tabGroup.querySelectorAll(".popup-tab-panel").forEach((panel) => {
+      const isActive = panel.dataset.popupTabPanel === targetPanelId;
+      panel.classList.toggle("active", isActive);
+      panel.hidden = !isActive;
+    });
   });
 
   // Add event listener for resetting all filters

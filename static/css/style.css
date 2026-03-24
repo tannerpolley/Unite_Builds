@@ -587,6 +587,50 @@ body {
   line-height: 1.6;
 }
 
+.popup-tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.popup-tab-button {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.78);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 9px 16px;
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.popup-tab-button:hover {
+  color: #ffffff;
+  border-color: rgba(87, 193, 237, 0.5);
+}
+
+.popup-tab-button.active {
+  background: rgba(87, 193, 237, 0.16);
+  border-color: rgba(87, 193, 237, 0.72);
+  color: #ffffff;
+}
+
+.popup-tab-panel[hidden] {
+  display: none !important;
+}
+
+.popup-tab-panel.active > .move-detail-row:first-child,
+.popup-tab-panel.active > .move-detail-section:first-child,
+.popup-tab-panel.active > .patch-history-section:first-child {
+  margin-top: 0;
+}
+
 .move-detail-row {
   display: flex;
   justify-content: space-between;
@@ -631,102 +675,126 @@ body {
 }
 
 .patch-history-card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
-  border: 1px solid rgba(87, 193, 237, 0.18);
-  border-radius: 12px;
-  padding: 18px 20px;
-  margin-top: 16px;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+  margin-top: 18px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.patch-history-card + .patch-history-card {
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .patch-history-meta {
-  display: grid;
-  gap: 6px;
-  padding-bottom: 12px;
-  margin-bottom: 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 .patch-history-version {
   color: #ffffff;
-  font-size: 1.16rem;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.02em;
 }
 
 .patch-history-title {
-  margin: 0;
-  color: #57c1ed;
-  font-size: 1.02rem;
-  font-weight: 600;
+  display: none;
 }
 
 .patch-history-date {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.98rem;
+  display: none;
 }
 
 .patch-change + .patch-change {
-  margin-top: 20px;
+  margin-top: 14px;
+}
+
+.patch-change-heading-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.patch-change-icon {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex: 0 0 auto;
 }
 
 .patch-change-heading {
-  margin: 0 0 10px;
-  color: #f9c74f;
-  font-size: 1.08rem;
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.44rem;
   font-weight: 700;
 }
 
-.patch-stat-summary {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 12px;
+.patch-change-list {
+  margin: 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 6px;
 }
 
-.patch-stat-pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background-color: rgba(87, 193, 237, 0.14);
-  border: 1px solid rgba(87, 193, 237, 0.24);
-  color: #dff7ff;
-  font-size: 0.86rem;
-  font-weight: 600;
-  line-height: 1.3;
+.patch-change-line {
+  line-height: 1.62;
+  font-size: 1.34rem;
+  color: rgba(255, 255, 255, 0.92);
 }
 
-.patch-change-body {
-  white-space: pre-wrap;
-  line-height: 1.7;
-  font-size: 0.94rem;
+.patch-change-line--buff {
+  color: #cdeed4;
+}
+
+.patch-change-line--nerf {
+  color: #f0c4c4;
+}
+
+.patch-change-line--neutral,
+.patch-change-line--adjusted,
+.patch-change-line--bugfix {
   color: rgba(255, 255, 255, 0.92);
 }
 
 .patch-history-empty {
   margin: 0;
   color: rgba(255, 255, 255, 0.72);
+  font-size: 1.08rem;
+  line-height: 1.7;
 }
 .move-popup-body .patch-history-section {
-  margin-top: 20px;
+  margin-top: 0;
 }
 
 .move-popup-body .patch-history-card {
-  padding: 14px 16px;
   margin-top: 12px;
 }
 
 .move-popup-body .patch-history-version {
-  font-size: 1.04rem;
+  font-size: 1.5rem;
 }
 
 .move-popup-body .patch-history-title {
-  font-size: 0.95rem;
+  display: none;
 }
 
 .move-popup-body .patch-history-date {
-  font-size: 0.9rem;
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .popup-tab-list {
+    gap: 8px;
+  }
+
+  .popup-tab-button {
+    font-size: 0.94rem;
+    padding: 8px 14px;
+  }
 }
 
 /* Hover effect for move images */
