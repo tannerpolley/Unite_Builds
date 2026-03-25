@@ -460,29 +460,8 @@ body {
   overflow-y: auto; /* Add vertical scrolling */
 }
 
-.popup-header {
-  display: flex;
-  align-items: center;
-}
-
-/* Popup table styles for desktop */
-.popup-table-container {
-  width: 85%;
-}
-
-.popup-table .item-col {
-  width: 25%;
-}
-
-.popup-table .rate-col {
-  width: 37.5%;
-}
-
-.item-img {
-  height: 60px;
-}
-
-.popup-header {
+.popup-header,
+.build-popup-header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -493,6 +472,22 @@ body {
 .popup-pokemon-img {
   max-height: 100px;
   margin-right: 10px;
+}
+
+.build-popup-title-wrap {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.build-popup-subtitle {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .popup-move-container {
@@ -512,48 +507,24 @@ body {
   font-size: 1.6em;
 }
 
-/* Popup table styling */
-.popup-table-container {
-  width: 85%; /* Wider table */
-  margin: 0 auto;
+.build-popup-title-inline {
+  width: 100%;
+  flex: unset;
+  text-align: left;
+  font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  line-height: 1.15;
 }
 
-.popup-table {
-  width: 70%;
-  border-collapse: collapse;
-  text-align: center;
-  margin: 0 auto;
-  border-radius: 3px;
-  border: 3px solid #FFFFFF; /* ✨ thick solid white */
-  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 5);
-}
-
-.popup-table td {
-  padding: 1px 0; /* Minimal vertical padding */
-  vertical-align: middle;
-}
-
-.popup-table th {
-  border-bottom: 3px solid #ffffff;
-  font-weight: bold;
-  padding-bottom: 5px;
-  vertical-align: middle;
-}
-
-.popup-table .item-col {
-  width: 25%; /* Narrower item column */
-}
-
-.popup-table .rate-col {
-  width: 37.5%;
-}
-
-.item-img {
-  height: 90px; /* Maintain item image size */
-  image-rendering: crisp-edges;
-  margin: 0 auto;
-  display: block; /* Center images */
-  padding: 0; /* Remove padding */
+.build-popup-inline-move {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  min-width: 0;
 }
 
 .win-rate {
@@ -561,6 +532,268 @@ body {
   transition: color 0.2s;
   background: transparent;
   white-space: nowrap;
+}
+
+.build-popup-shell {
+  background: #3B4A6A;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 18px 20px;
+}
+
+.popup-content.build-popup-content {
+  width: min(96%, 980px);
+  max-width: 980px;
+  padding: 26px 28px 30px;
+}
+
+.build-popup-header {
+  gap: 0;
+  margin-bottom: 20px;
+}
+
+.build-popup-top-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(240px, 0.78fr);
+  gap: 20px;
+  width: 100%;
+  align-items: stretch;
+}
+
+.build-popup-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.build-popup-identity {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  width: auto;
+  max-width: 100%;
+}
+
+.build-popup-identity .popup-pokemon-img {
+  margin-right: 0;
+}
+
+.build-popup-move-icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 22px;
+  flex-wrap: wrap;
+  width: auto;
+  max-width: 100%;
+}
+
+.build-popup-moveset {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.build-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  align-items: stretch;
+  margin: 0;
+}
+
+.build-metric-card {
+  min-height: 88px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 12px;
+  background: #1F2537;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.build-metric-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: clamp(0.72rem, 1.2vw, 0.82rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.build-metric-value {
+  font-size: clamp(1.2rem, 2.1vw, 1.56rem);
+  font-weight: 800;
+  line-height: 1.05;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.build-summary-move-img {
+  width: clamp(64px, 7vw, 78px);
+  height: clamp(64px, 7vw, 78px);
+  object-fit: contain;
+}
+
+.build-summary-move-label {
+  color: #ffffff;
+  font-size: clamp(0.84rem, 1.35vw, 0.98rem);
+  font-weight: 700;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.build-popup-section {
+  margin-top: 18px;
+}
+
+.build-popup-section-title {
+  margin: 0 0 10px;
+  color: #57c1ed;
+  font-size: clamp(1rem, 1.8vw, 1.14rem);
+  font-weight: 800;
+}
+
+.battle-item-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.battle-item-card {
+  padding: 7px 6px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: #1F2537;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.battle-item-card-img {
+  width: clamp(52px, 5.8vw, 66px);
+  height: clamp(52px, 5.8vw, 66px);
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.battle-item-card-body {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+  flex: 1 1 auto;
+}
+
+.battle-item-card-title {
+  color: #ffffff;
+  font-size: clamp(0.88rem, 1.45vw, 1rem);
+  font-weight: 700;
+  line-height: 1.18;
+  min-height: 2em;
+}
+
+.battle-item-card-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.battle-item-card-label {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: clamp(0.76rem, 1.2vw, 0.88rem);
+}
+
+.battle-item-card-value {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+}
+
+.held-item-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 0.38fr);
+  gap: 16px;
+}
+
+.held-item-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.held-item-group-label {
+  color: #ffd76f;
+  font-size: clamp(0.88rem, 1.45vw, 1rem);
+  font-weight: 800;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.held-item-strip {
+  min-height: 122px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border-radius: 12px;
+  background: #1F2537;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.held-item-strip--alt {
+  justify-content: center;
+}
+
+.held-item-slot {
+  width: 82px;
+  height: 82px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+}
+
+.held-item-slot--empty {
+  width: 100%;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.96rem;
+  font-weight: 700;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.held-item-img {
+  width: clamp(54px, 6vw, 64px);
+  height: clamp(54px, 6vw, 64px);
+  object-fit: contain;
+}
+
+.build-empty-state {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: clamp(0.88rem, 1.35vw, 0.98rem);
+  font-weight: 700;
+  text-align: center;
 }
 
 
@@ -668,6 +901,26 @@ body {
   padding: 15px;
   border-radius: 8px;
   border-left: 3px solid #57c1ed;
+}
+
+@media (max-width: 1100px) {
+  .popup-content.build-popup-content {
+    width: 96%;
+    padding: 22px 20px 24px;
+  }
+
+  .build-popup-top-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .build-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .battle-item-grid,
+  .held-item-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 .patch-history-section {
@@ -787,6 +1040,24 @@ body {
 }
 
 @media (max-width: 700px) {
+  .build-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .build-popup-identity {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .build-popup-title-inline {
+    text-align: center;
+  }
+
+  .build-popup-move-icons {
+    justify-content: center;
+  }
+
   .popup-tab-list {
     gap: 8px;
   }

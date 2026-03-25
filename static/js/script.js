@@ -746,6 +746,62 @@ document.addEventListener("DOMContentLoaded", async () => {
     const num = parseFloat(val);
     return isNaN(num) ? "?" : `${num.toFixed(2)}%`;
   }
+
+  function getAssetFileName(assetPath) {
+    return String(assetPath || "").split("/").pop() || "";
+  }
+
+  function getAssetLabel(assetPath) {
+    return getAssetFileName(assetPath).replace(/\.[^.]+$/, "").trim();
+  }
+
+  function getMoveLabelFromAsset(assetPath, pokemonName) {
+    const label = getAssetLabel(assetPath);
+    const prefix = `${pokemonName} - `;
+    return label.startsWith(prefix) ? label.slice(prefix.length) : label;
+  }
+
+  function renderWinrateMetricCard(label, value, valueColor = "#ffffff") {
+    return `
+      <div class="build-metric-card">
+        <div class="build-metric-label">${escapeHtml(label)}</div>
+        <div class="build-metric-value" style="color: ${escapeHtml(valueColor)};">${escapeHtml(value)}</div>
+      </div>
+    `;
+  }
+
+  function renderBattleItemCard(item) {
+    const itemWinRateColor = getWinRateColor(item.winRate);
+    return `
+      <article class="battle-item-card">
+        <img src="static/img/${escapeHtml(item.item)}" class="battle-item-card-img" alt="${escapeHtml(item.name)}">
+        <div class="battle-item-card-body">
+          <div class="battle-item-card-title">${escapeHtml(item.name)}</div>
+          <div class="battle-item-card-metric">
+            <span class="battle-item-card-label">Win Rate</span>
+            <span class="battle-item-card-value" style="color: ${escapeHtml(itemWinRateColor)};">${escapeHtml(format(item.winRate))}</span>
+          </div>
+          <div class="battle-item-card-metric">
+            <span class="battle-item-card-label">Pick Rate</span>
+            <span class="battle-item-card-value">${escapeHtml(format(item.pickRate))}</span>
+          </div>
+        </div>
+      </article>
+    `;
+  }
+
+  function renderHeldItemIcon(itemName) {
+    return `
+      <div class="held-item-slot" title="${escapeHtml(itemName)}" aria-label="${escapeHtml(itemName)}">
+        <img
+          src="static/img/Held_Items/${escapeHtml(itemName)}.png"
+          alt="${escapeHtml(itemName)}"
+          class="held-item-img"
+          loading="lazy"
+        >
+      </div>
+    `;
+  }
   
   // Calculate color based on win rate with EXACTLY 50% as white
   // Using an exponential scale to make small deviations visible
@@ -1038,82 +1094,93 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
   function showPopup(entry) {
-    // Create an array of items to sort
     const items = [];
     for (let i = 1; i <= 3; i++) {
       if (entry[`Item ${i}`]) {
         items.push({
           item: entry[`Item ${i}`],
+          name: getAssetLabel(entry[`Item ${i}`]),
           pickRate: parseFloat(entry[`Pick Rate ${i}`]) || 0,
           winRate: parseFloat(entry[`Win Rate ${i}`]) || 0,
           index: i
         });
       }
     }
-    
-    // Always use desktop layout
+
     popup.classList.remove('mobile-popup');
-    
-    // Sort items by pick rate (highest first)
     items.sort((a, b) => b.pickRate - a.pickRate);
-    
-    // Color the main win rate using the global range
+
     const winRate = parseFloat(entry["Win Rate"]);
+    const pickRate = parseFloat(entry["Pick Rate"]);
     const mainWinRateColor = getWinRateColor(winRate);
-    
-    // Log the popup win rate for debugging
-    console.log(`Popup win rate: ${winRate.toFixed(2)}%, color: ${mainWinRateColor}`);
-    
-    // Prepare move images for popup
+
     const move1Img = Array.isArray(entry["Move 1"]) ? entry["Move 1"][0] : entry["Move 1"];
     const move2Img = Array.isArray(entry["Move 2"]) ? entry["Move 2"][0] : entry["Move 2"];
-    
+    const move1Label = getMoveLabelFromAsset(move1Img, entry["Name"]);
+    const move2Label = getMoveLabelFromAsset(move2Img, entry["Name"]);
+    const recommendedBuild = entry.recommendedBuild || {};
+    const heldItems = Array.isArray(recommendedBuild.heldItems) ? recommendedBuild.heldItems.filter(Boolean) : [];
+    const altHeldItems = Array.isArray(recommendedBuild.altHeldItems)
+      ? recommendedBuild.altHeldItems.filter(Boolean)
+      : (recommendedBuild.altHeldItem ? [recommendedBuild.altHeldItem] : []);
+    const heldItemsMarkup = heldItems.length > 0
+      ? heldItems.map(renderHeldItemIcon).join("")
+      : '<p class="build-empty-state">No recommended held items available for this build yet.</p>';
+    const altHeldItemMarkup = altHeldItems.length > 0
+      ? altHeldItems.map(renderHeldItemIcon).join("")
+      : '<div class="held-item-slot held-item-slot--empty">No alt item</div>';
+
+    popupContent.classList.add("build-popup-content");
     popupContent.innerHTML = `
-      <div class="popup-header">
-        <img src="static/img/${entry["Pokemon"]}" alt="${entry["Name"]}" class="popup-pokemon-img">
-        <h3 class="popup-title">${entry["Name"]} – ${entry["Move Set"]}</h3>
-        <div class="popup-move-container">
-          <img src="static/img/${move1Img}" alt="Move 1" class="popup-move-img">
-          <img src="static/img/${move2Img}" alt="Move 2" class="popup-move-img">
+      <div class="build-popup-header build-popup-shell">
+        <div class="build-popup-top-grid">
+          <div class="build-popup-main">
+            <div class="build-popup-identity">
+              <img src="static/img/${entry["Pokemon"]}" alt="${entry["Name"]}" class="popup-pokemon-img">
+              <h3 class="popup-title build-popup-title-inline">${entry["Name"]}</h3>
+            </div>
+            <div class="build-popup-move-icons">
+              <div class="build-popup-inline-move">
+                <img src="static/img/${move1Img}" alt="${escapeHtml(move1Label)}" class="build-summary-move-img">
+                <span class="build-summary-move-label">${escapeHtml(move1Label)}</span>
+              </div>
+              <div class="build-popup-inline-move">
+                <img src="static/img/${move2Img}" alt="${escapeHtml(move2Label)}" class="build-summary-move-img">
+                <span class="build-summary-move-label">${escapeHtml(move2Label)}</span>
+              </div>
+            </div>
+          </div>
+          <div class="build-summary-grid">
+            ${renderWinrateMetricCard("Win Rate", format(winRate), mainWinRateColor)}
+            ${renderWinrateMetricCard("Pick Rate", format(pickRate))}
+          </div>
         </div>
       </div>
-      <p style="text-align: center; margin-top: 0; margin-bottom: 15px;">
-        Overall Win Rate: <span style="color: ${mainWinRateColor}; font-weight: bold; transition: color 0.2s; background: transparent;"
-                                onmouseout="this.style.color='${mainWinRateColor}';">
-                            ${format(entry["Win Rate"])}
-                          </span>
-      </p>
-      <div class="popup-table-container">
-        <table class="popup-table">
-          <thead>
-            <tr>
-              <th class="item-col">Item</th>
-              <th class="rate-col">Win Rate</th>
-              <th class="rate-col">Pick Rate</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${items.map((item, index) => {
-              const itemWinRateColor = getWinRateColor(item.winRate);
-              const rowBgColor = index % 2 === 0 ? "#3B4A6A" : "#1F2537";
-              return `
-              <tr style="background-color: ${rowBgColor}; height: 60px;">
-                <td class="item-col" style="padding: 0;">
-                  <img src="static/img/${item.item}" class="item-img" alt="Item ${index+1}" style="max-width: 100%;">
-                </td>
-                <td class="rate-col" style="padding-left: 5px; padding-right: 5px;">
-                  <span class="win-rate" style="color: ${itemWinRateColor}; display: block;"
-                        onmouseout="this.style.color='${itemWinRateColor}';">
-                    ${format(item.winRate)}
-                  </span>
-                </td>
-                <td class="rate-col" style="padding-left: 5px; padding-right: 5px;"><span style="font-weight: bold; display: block;">${format(item.pickRate)}</span></td>
-              </tr>
-            `;
-            }).join('')}
-          </tbody>
-        </table>
-      </div>
+
+      <section class="build-popup-section build-popup-shell">
+        <h4 class="build-popup-section-title">Battle Items</h4>
+        <div class="battle-item-grid">
+          ${items.map((item) => renderBattleItemCard(item)).join("")}
+        </div>
+      </section>
+
+      <section class="build-popup-section build-popup-shell">
+        <h4 class="build-popup-section-title">Recommended Held Items</h4>
+        <div class="held-item-layout">
+          <div class="held-item-group">
+            <div class="held-item-group-label">Held</div>
+            <div class="held-item-strip">
+              ${heldItemsMarkup}
+            </div>
+          </div>
+          <div class="held-item-group held-item-group--alt">
+            <div class="held-item-group-label">Alt</div>
+            <div class="held-item-strip held-item-strip--alt">
+              ${altHeldItemMarkup}
+            </div>
+          </div>
+        </div>
+      </section>
     `;
     resetPopupScrollPosition();
     popup.classList.remove("hidden");
@@ -1177,6 +1244,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Build popup HTML
     const moveImgSrc = imgElement.getAttribute('src');
 
+    popupContent.classList.remove("build-popup-content");
     popupContent.innerHTML = `
       <div class="move-popup-header">
         <img src="${moveImgSrc}" alt="${moveName}" class="move-popup-img">
@@ -1287,6 +1355,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     // Build popup HTML
+    popupContent.classList.remove("build-popup-content");
     popupContent.innerHTML = `
       <div class="move-popup-header">
         <img src="${pokemonImgSrc}" alt="${pokemonName}" class="move-popup-img">

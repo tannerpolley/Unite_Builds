@@ -8,6 +8,158 @@ import pandas as pd
 REPO_ROOT = Path(__file__).resolve().parents[1]
 MOVESETS_CSV_PATH = REPO_ROOT / "data" / "csv" / "movesets.csv"
 MOVESET_ROWS_JSON_PATH = REPO_ROOT / "static" / "json" / "moveset_rows.json"
+UNITE_DB_POKEMON_JSON_PATH = REPO_ROOT / "data" / "json" / "unite_db_pokemon.json"
+MAIN_MOVE_FALLBACKS_PATH = REPO_ROOT / "data" / "json" / "main_move_fallbacks.json"
+HELD_ITEM_NAME_ALIASES = {
+    "EXP Share": "Exp Share",
+}
+ALL_MAIN_MOVE_TOKEN = "all"
+
+
+def normalize_build_key(value):
+    return "".join(character.lower() for character in str(value or "") if character.isalnum())
+
+
+def normalize_held_item_name(value):
+    item_name = str(value or "").strip()
+    return HELD_ITEM_NAME_ALIASES.get(item_name, item_name)
+
+
+def empty_recommended_build():
+    return {
+        "name": None,
+        "heldItems": [],
+        "altHeldItem": None,
+        "altHeldItems": [],
+    }
+
+
+def finalize_recommended_build(build_variants):
+    if not build_variants:
+        return empty_recommended_build()
+
+    primary_variant = build_variants[0]
+    primary_items = [normalize_held_item_name(item) for item in primary_variant.get("held_items", []) if item][:3]
+    alt_items = []
+
+    def add_alt_item(item_name):
+        normalized = normalize_held_item_name(item_name)
+        if not normalized or normalized in primary_items or normalized in alt_items:
+            return
+        alt_items.append(normalized)
+
+    add_alt_item(primary_variant.get("held_items_optional"))
+
+    for variant in build_variants[1:]:
+        for item_name in variant.get("held_items", []) or []:
+            add_alt_item(item_name)
+        add_alt_item(variant.get("held_items_optional"))
+
+    return {
+        "name": primary_variant.get("name") or None,
+        "heldItems": primary_items,
+        "altHeldItem": alt_items[0] if alt_items else None,
+        "altHeldItems": alt_items,
+    }
+
+
+def load_main_move_fallbacks():
+    if not MAIN_MOVE_FALLBACKS_PATH.exists():
+        return {}
+
+    with open(MAIN_MOVE_FALLBACKS_PATH, "r", encoding="utf-8") as handle:
+        fallback_entries = json.load(handle)
+
+    normalized_fallbacks = {}
+    for pokemon_name, move_names in fallback_entries.items():
+        if isinstance(move_names, str):
+            move_names = [move_names]
+
+        normalized_fallbacks[normalize_build_key(pokemon_name)] = [
+            normalize_build_key(move_name)
+            for move_name in move_names
+            if normalize_build_key(move_name)
+        ]
+
+    return normalized_fallbacks
+
+
+def load_unite_db_build_lookup():
+    if not UNITE_DB_POKEMON_JSON_PATH.exists():
+        return {}, {}, {}
+
+    with open(UNITE_DB_POKEMON_JSON_PATH, "r", encoding="utf-8") as handle:
+        pokemon_entries = json.load(handle)
+
+    pair_variants_lookup = defaultdict(list)
+    pokemon_build_lookup = defaultdict(list)
+    for pokemon_entry in pokemon_entries:
+        pokemon_names = {
+            normalize_build_key(pokemon_entry.get("display_name")),
+            normalize_build_key(pokemon_entry.get("name")),
+        }
+        pokemon_names.discard("")
+
+        for build in pokemon_entry.get("builds", []):
+            upgrade_pair = tuple(normalize_build_key(move_name) for move_name in build.get("upgrade", []))
+            if len(upgrade_pair) != 2 or any(not move_name for move_name in upgrade_pair):
+                continue
+
+            for pokemon_name in pokemon_names:
+                pair_variants_lookup[(pokemon_name, upgrade_pair)].append(build)
+
+    build_lookup = {}
+    unordered_build_lookup = {}
+    for (pokemon_name, upgrade_pair), build_variants in pair_variants_lookup.items():
+        recommended_build = finalize_recommended_build(build_variants)
+        build_lookup[(pokemon_name, upgrade_pair)] = recommended_build
+        unordered_build_lookup.setdefault(
+            (pokemon_name, tuple(sorted(upgrade_pair))),
+            recommended_build,
+        )
+        pokemon_build_lookup[pokemon_name].append({
+            "upgradePair": upgrade_pair,
+            "recommendedBuild": recommended_build,
+        })
+
+    return build_lookup, unordered_build_lookup, pokemon_build_lookup
+
+
+def get_recommended_build(
+    move_set_name,
+    pokemon_name,
+    build_lookup,
+    unordered_build_lookup,
+    pokemon_build_lookup,
+    main_move_fallbacks,
+):
+    move_names = [normalize_build_key(part) for part in str(move_set_name or "").split("/") if normalize_build_key(part)]
+
+    pokemon_key = normalize_build_key(pokemon_name)
+    candidate_builds = pokemon_build_lookup.get(pokemon_key, [])
+    pokemon_main_moves = main_move_fallbacks.get(pokemon_key, [])
+
+    if ALL_MAIN_MOVE_TOKEN in pokemon_main_moves and candidate_builds:
+        return candidate_builds[0]["recommendedBuild"]
+
+    if len(move_names) != 2:
+        return empty_recommended_build()
+
+    exact_match = build_lookup.get((pokemon_key, tuple(move_names)))
+    if exact_match:
+        return exact_match
+
+    unordered_match = unordered_build_lookup.get((pokemon_key, tuple(sorted(move_names))))
+    if unordered_match:
+        return unordered_match
+
+    row_main_moves = [move_name for move_name in move_names if move_name in pokemon_main_moves]
+    for main_move in row_main_moves:
+        for candidate in candidate_builds:
+            if main_move in candidate["upgradePair"]:
+                return candidate["recommendedBuild"]
+
+    return empty_recommended_build()
 
 
 def sanitize_for_json(value):
@@ -29,6 +181,8 @@ def sanitize_for_json(value):
 
 
 def build_moveset_rows(df):
+    build_lookup, unordered_build_lookup, pokemon_build_lookup = load_unite_db_build_lookup()
+    main_move_fallbacks = load_main_move_fallbacks()
     df = df.sort_values(by='Name').reset_index(drop=True)
     df['Pick Rate'] = df['Pick Rate'].round(2)
     df['Win Rate'] = df['Win Rate'].round(2)
@@ -38,6 +192,14 @@ def build_moveset_rows(df):
     for _, row in df.iterrows():
         moveset_entry = {col: row[col] for col in static_columns}
         battle_items = row["Battle Items"] if isinstance(row["Battle Items"], list) else []
+        moveset_entry["recommendedBuild"] = get_recommended_build(
+            row.get("Move Set"),
+            row.get("Name"),
+            build_lookup,
+            unordered_build_lookup,
+            pokemon_build_lookup,
+            main_move_fallbacks,
+        )
 
         for idx, item_row in enumerate(battle_items, 1):
             item_name = item_row.get("Battle Item")

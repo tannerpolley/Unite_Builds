@@ -5,6 +5,7 @@
   "main": "scripts/screenshot.js",
   "scripts": {
     "build:patch-history": "node scripts/build_patch_history.js",
+    "sync:held-icons": "node scripts/sync_held_item_icons.js",
     "sync:move-icons": "node scripts/sync_move_icons.js",
     "smoke": "node scripts/smoke_test.js",
     "test": "npm run smoke",

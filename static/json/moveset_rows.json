@@ -8,6 +8,18 @@
     "Move 2": "Moves/Absol - Sucker Punch.png",
     "Win Rate": 47.61,
     "Pick Rate": 2.48,
+    "recommendedBuild": {
+      "name": "Pursuit Punch",
+      "heldItems": [
+        "Razor Claw",
+        "Scope Lens",
+        "Accel Bracer"
+      ],
+      "altHeldItem": "Charging Charm",
+      "altHeldItems": [
+        "Charging Charm"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 47.91,
     "Pick Rate 1": 35.34,
@@ -27,6 +39,18 @@
     "Move 2": "Moves/Absol - Psycho Cut.png",
     "Win Rate": 44.54,
     "Pick Rate": 2.41,
+    "recommendedBuild": {
+      "name": "Night Cut",
+      "heldItems": [
+        "Scope Lens",
+        "Razor Claw",
+        "Accel Bracer"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 47.48,
     "Pick Rate 1": 33.5,
@@ -46,6 +70,18 @@
     "Move 2": "Moves/Absol - Psycho Cut.png",
     "Win Rate": 47.44,
     "Pick Rate": 1.8,
+    "recommendedBuild": {
+      "name": "Psycho Pursuit",
+      "heldItems": [
+        "Razor Claw",
+        "Scope Lens",
+        "Accel Bracer"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 45.68,
     "Pick Rate 1": 29.56,
@@ -65,6 +101,18 @@
     "Move 2": "Moves/Absol - Sucker Punch.png",
     "Win Rate": 44.96,
     "Pick Rate": 0.43,
+    "recommendedBuild": {
+      "name": "Night Punch",
+      "heldItems": [
+        "Razor Claw",
+        "Scope Lens",
+        "Accel Bracer"
+      ],
+      "altHeldItem": "Attack Weight",
+      "altHeldItems": [
+        "Attack Weight"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 45.12,
     "Pick Rate 1": 29.03,
@@ -84,6 +132,18 @@
     "Move 2": "Moves/Aegislash - Wide Guard.png",
     "Win Rate": 47.8,
     "Pick Rate": 2.92,
+    "recommendedBuild": {
+      "name": "Sacred Guard",
+      "heldItems": [
+        "Attack Weight",
+        "Weakness Policy",
+        "Charging Charm"
+      ],
+      "altHeldItem": "Accel Bracer",
+      "altHeldItems": [
+        "Accel Bracer"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 48.28,
     "Pick Rate 1": 48.11,
@@ -103,6 +163,18 @@
     "Move 2": "Moves/Aegislash - Wide Guard.png",
     "Win Rate": 46.09,
     "Pick Rate": 1.62,
+    "recommendedBuild": {
+      "name": "Shadow Guard",
+      "heldItems": [
+        "Attack Weight",
+        "Razor Claw",
+        "Weakness Policy"
+      ],
+      "altHeldItem": "Scope Lens",
+      "altHeldItems": [
+        "Scope Lens"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 46.67,
     "Pick Rate 1": 39.12,
@@ -122,6 +194,19 @@
     "Move 2": "Moves/Aegislash - Iron Head.png",
     "Win Rate": 47.01,
     "Pick Rate": 0.76,
+    "recommendedBuild": {
+      "name": "Iron Claw",
+      "heldItems": [
+        "Attack Weight",
+        "Razor Claw",
+        "Weakness Policy"
+      ],
+      "altHeldItem": "Muscle Band",
+      "altHeldItems": [
+        "Muscle Band",
+        "Scope Lens"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 47.26,
     "Pick Rate 1": 44.38,
@@ -141,6 +226,18 @@
     "Move 2": "Moves/Aegislash - Iron Head.png",
     "Win Rate": 53.13,
     "Pick Rate": 0.17,
+    "recommendedBuild": {
+      "name": "Sacred Guard",
+      "heldItems": [
+        "Attack Weight",
+        "Weakness Policy",
+        "Charging Charm"
+      ],
+      "altHeldItem": "Accel Bracer",
+      "altHeldItems": [
+        "Accel Bracer"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 50.88,
     "Pick Rate 1": 25.45,
@@ -160,6 +257,18 @@
     "Move 2": "Moves/Alcremie - Sweet Scent.png",
     "Win Rate": 35.0,
     "Pick Rate": 0.11,
+    "recommendedBuild": {
+      "name": "Decorating Scent",
+      "heldItems": [
+        "Exp Share",
+        "Buddy Barrier",
+        "Wise Glasses"
+      ],
+      "altHeldItem": "Curse Incense",
+      "altHeldItems": [
+        "Curse Incense"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 32.43,
     "Pick Rate 1": 52.86,
@@ -179,6 +288,18 @@
     "Move 2": "Moves/Alcremie - Dazzling Gleam.png",
     "Win Rate": 43.46,
     "Pick Rate": 0.22,
+    "recommendedBuild": {
+      "name": "Recovery Scent",
+      "heldItems": [
+        "Exp Share",
+        "Buddy Barrier",
+        "Rescue Hood"
+      ],
+      "altHeldItem": "Curse Incense",
+      "altHeldItems": [
+        "Curse Incense"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 49.08,
     "Pick Rate 1": 57.6,
@@ -198,6 +319,18 @@
     "Move 2": "Moves/Alcremie - Sweet Scent.png",
     "Win Rate": 50.34,
     "Pick Rate": 6.73,
+    "recommendedBuild": {
+      "name": "Recovery Scent",
+      "heldItems": [
+        "Exp Share",
+        "Buddy Barrier",
+        "Rescue Hood"
+      ],
+      "altHeldItem": "Curse Incense",
+      "altHeldItems": [
+        "Curse Incense"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 49.84,
     "Pick Rate 1": 65.63,
@@ -217,6 +350,18 @@
     "Move 2": "Moves/Alcremie - Dazzling Gleam.png",
     "Win Rate": 49.59,
     "Pick Rate": 0.83,
+    "recommendedBuild": {
+      "name": "Decorating Gleam",
+      "heldItems": [
+        "Exp Share",
+        "Buddy Barrier",
+        "Wise Glasses"
+      ],
+      "altHeldItem": "Rescue Hood",
+      "altHeldItems": [
+        "Rescue Hood"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 49.84,
     "Pick Rate 1": 59.25,
@@ -236,6 +381,12 @@
     "Move 2": "Moves/Alolan Ninetales - Aurora Veil.png",
     "Win Rate": 55.45,
     "Pick Rate": 0.08,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 47.22,
     "Pick Rate 1": 35.64,
@@ -255,6 +406,12 @@
     "Move 2": "Moves/Alolan Ninetales - Blizzard.png",
     "Win Rate": 45.99,
     "Pick Rate": 4.92,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 47.65,
     "Pick Rate 1": 49.89,
@@ -274,6 +431,12 @@
     "Move 2": "Moves/Alolan Ninetales - Aurora Veil.png",
     "Win Rate": 50.25,
     "Pick Rate": 0.6,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 53.33,
     "Pick Rate 1": 45.69,
@@ -293,6 +456,12 @@
     "Move 2": "Moves/Alolan Ninetales - Blizzard.png",
     "Win Rate": 39.11,
     "Pick Rate": 0.15,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 35.23,
     "Pick Rate 1": 43.56,
@@ -312,6 +481,12 @@
     "Move 2": "Moves/Alolan Raichu - Thunderbolt.png",
     "Win Rate": 49.58,
     "Pick Rate": 1.53,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 50.1,
     "Pick Rate 1": 76.16,
@@ -331,6 +506,12 @@
     "Move 2": "Moves/Alolan Raichu - Psychic.png",
     "Win Rate": 44.24,
     "Pick Rate": 0.21,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 44.86,
     "Pick Rate 1": 39.78,
@@ -350,6 +531,12 @@
     "Move 2": "Moves/Alolan Raichu - Psychic.png",
     "Win Rate": 48.37,
     "Pick Rate": 1.99,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 46.35,
     "Pick Rate 1": 44.64,
@@ -369,6 +556,12 @@
     "Move 2": "Moves/Alolan Raichu - Thunderbolt.png",
     "Win Rate": 46.05,
     "Pick Rate": 1.65,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 45.7,
     "Pick Rate 1": 42.7,
@@ -388,6 +581,18 @@
     "Move 2": "Moves/Armarouge - Psyshock.png",
     "Win Rate": 48.88,
     "Pick Rate": 0.85,
+    "recommendedBuild": {
+      "name": "Fire Shock",
+      "heldItems": [
+        "Shell Bell",
+        "Curse Incense",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Wise Glasses",
+      "altHeldItems": [
+        "Wise Glasses"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 45.41,
     "Pick Rate 1": 40.16,
@@ -407,6 +612,18 @@
     "Move 2": "Moves/Armarouge - Psyshock.png",
     "Win Rate": 47.52,
     "Pick Rate": 0.63,
+    "recommendedBuild": {
+      "name": "Armor Shock",
+      "heldItems": [
+        "Drive Lens",
+        "Wise Glasses",
+        "Slick Spoon"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 44.36,
     "Pick Rate 1": 50.42,
@@ -426,6 +643,18 @@
     "Move 2": "Moves/Armarouge - Flame Charge.png",
     "Win Rate": 46.1,
     "Pick Rate": 0.6,
+    "recommendedBuild": {
+      "name": "Fire Charge",
+      "heldItems": [
+        "Shell Bell",
+        "Curse Incense",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Wise Glasses",
+      "altHeldItems": [
+        "Wise Glasses"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 44.27,
     "Pick Rate 1": 40.1,
@@ -445,6 +674,18 @@
     "Move 2": "Moves/Armarouge - Flame Charge.png",
     "Win Rate": 50.85,
     "Pick Rate": 0.05,
+    "recommendedBuild": {
+      "name": "Armor Shock",
+      "heldItems": [
+        "Drive Lens",
+        "Wise Glasses",
+        "Slick Spoon"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 50.0,
     "Pick Rate 1": 61.02,
@@ -464,6 +705,18 @@
     "Move 2": "Moves/Azumarill - Whirlpool.png",
     "Win Rate": 45.15,
     "Pick Rate": 3.14,
+    "recommendedBuild": {
+      "name": "Pool Play",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Scope Lens"
+      ],
+      "altHeldItem": "Weakness Policy",
+      "altHeldItems": [
+        "Weakness Policy"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 46.74,
     "Pick Rate 1": 43.83,
@@ -483,6 +736,18 @@
     "Move 2": "Moves/Azumarill - Aqua Tail.png",
     "Win Rate": 51.02,
     "Pick Rate": 1.55,
+    "recommendedBuild": {
+      "name": "Aqua Pulse",
+      "heldItems": [
+        "Attack Weight",
+        "Scope Lens",
+        "Accel Bracer"
+      ],
+      "altHeldItem": "Muscle Band",
+      "altHeldItems": [
+        "Muscle Band"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 52.15,
     "Pick Rate 1": 69.04,
@@ -502,6 +767,18 @@
     "Move 2": "Moves/Azumarill - Aqua Tail.png",
     "Win Rate": 40.35,
     "Pick Rate": 0.22,
+    "recommendedBuild": {
+      "name": "Aqua Pulse",
+      "heldItems": [
+        "Attack Weight",
+        "Scope Lens",
+        "Accel Bracer"
+      ],
+      "altHeldItem": "Muscle Band",
+      "altHeldItems": [
+        "Muscle Band"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 41.38,
     "Pick Rate 1": 61.05,
@@ -521,6 +798,18 @@
     "Move 2": "Moves/Azumarill - Whirlpool.png",
     "Win Rate": 44.29,
     "Pick Rate": 0.11,
+    "recommendedBuild": {
+      "name": "Whirl Pulse",
+      "heldItems": [
+        "Attack Weight",
+        "Weakness Policy",
+        "Scope Lens"
+      ],
+      "altHeldItem": "Accel Bracer",
+      "altHeldItems": [
+        "Accel Bracer"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 41.18,
     "Pick Rate 1": 36.43,
@@ -540,6 +829,18 @@
     "Move 2": "Moves/Blastoise - Rapid Spin.png",
     "Win Rate": 52.16,
     "Pick Rate": 0.69,
+    "recommendedBuild": {
+      "name": "Pump Spin (Bulk Emblems or none)",
+      "heldItems": [
+        "Muscle Band",
+        "Slick Spoon",
+        "Focus Band"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 52.51,
     "Pick Rate 1": 88.35,
@@ -559,6 +860,20 @@
     "Move 2": "Moves/Blastoise - Surf.png",
     "Win Rate": 50.83,
     "Pick Rate": 44.64,
+    "recommendedBuild": {
+      "name": "Surf Pump",
+      "heldItems": [
+        "Focus Band",
+        "Energy Amplifier",
+        "Resonant Guard"
+      ],
+      "altHeldItem": "Exp Share",
+      "altHeldItems": [
+        "Exp Share",
+        "Shell Bell",
+        "Drive Lens"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 51.46,
     "Pick Rate 1": 78.29,
@@ -584,6 +899,12 @@
     ],
     "Win Rate": 50.85,
     "Pick Rate": 9.25,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 51.48,
     "Pick Rate 1": 78.44,
@@ -603,6 +924,18 @@
     "Move 2": "Moves/Blissey - Soft-Boiled.png",
     "Win Rate": 49.72,
     "Pick Rate": 7.16,
+    "recommendedBuild": {
+      "name": "Soft Bomb",
+      "heldItems": [
+        "Exp Share",
+        "Buddy Barrier",
+        "Energy Amplifier"
+      ],
+      "altHeldItem": "Sp. Atk Specs",
+      "altHeldItems": [
+        "Sp. Atk Specs"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 50.42,
     "Pick Rate 1": 83.82,
@@ -622,6 +955,18 @@
     "Move 2": "Moves/Blissey - Safeguard.png",
     "Win Rate": 51.37,
     "Pick Rate": 6.27,
+    "recommendedBuild": {
+      "name": "Helping Guard",
+      "heldItems": [
+        "Exp Share",
+        "Buddy Barrier",
+        "Energy Amplifier"
+      ],
+      "altHeldItem": "Leftovers",
+      "altHeldItems": [
+        "Leftovers"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 52.38,
     "Pick Rate 1": 76.57,
@@ -641,6 +986,18 @@
     "Move 2": "Moves/Blissey - Soft-Boiled.png",
     "Win Rate": 41.22,
     "Pick Rate": 0.21,
+    "recommendedBuild": {
+      "name": "Soft Bomb",
+      "heldItems": [
+        "Exp Share",
+        "Buddy Barrier",
+        "Energy Amplifier"
+      ],
+      "altHeldItem": "Sp. Atk Specs",
+      "altHeldItems": [
+        "Sp. Atk Specs"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 41.55,
     "Pick Rate 1": 50.9,
@@ -660,6 +1017,18 @@
     "Move 2": "Moves/Buzzwole - Superpower.png",
     "Win Rate": 46.9,
     "Pick Rate": 6.8,
+    "recommendedBuild": {
+      "name": "Super Smack",
+      "heldItems": [
+        "Attack Weight",
+        "Weakness Policy",
+        "Focus Band"
+      ],
+      "altHeldItem": "Resonant Guard",
+      "altHeldItems": [
+        "Resonant Guard"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 46.99,
     "Pick Rate 1": 85.05,
@@ -679,6 +1048,18 @@
     "Move 2": "Moves/Buzzwole - Leech Life.png",
     "Win Rate": 45.66,
     "Pick Rate": 5.28,
+    "recommendedBuild": {
+      "name": "Smack Life",
+      "heldItems": [
+        "Accel Bracer",
+        "Attack Weight",
+        "Focus Band"
+      ],
+      "altHeldItem": "Weakness Policy",
+      "altHeldItems": [
+        "Weakness Policy"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 46.67,
     "Pick Rate 1": 50.41,
@@ -698,6 +1079,18 @@
     "Move 2": "Moves/Buzzwole - Leech Life.png",
     "Win Rate": 48.75,
     "Pick Rate": 2.03,
+    "recommendedBuild": {
+      "name": "Leech Lunge",
+      "heldItems": [
+        "Accel Bracer",
+        "Attack Weight",
+        "Focus Band"
+      ],
+      "altHeldItem": "Weakness Policy",
+      "altHeldItems": [
+        "Weakness Policy"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.03,
     "Pick Rate 1": 46.75,
@@ -717,6 +1110,18 @@
     "Move 2": "Moves/Buzzwole - Superpower.png",
     "Win Rate": 51.24,
     "Pick Rate": 0.31,
+    "recommendedBuild": {
+      "name": "Super Lunge",
+      "heldItems": [
+        "Attack Weight",
+        "Muscle Band",
+        "Weakness Policy"
+      ],
+      "altHeldItem": "Focus Band",
+      "altHeldItems": [
+        "Focus Band"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 52.79,
     "Pick Rate 1": 57.96,
@@ -736,6 +1141,16 @@
     "Move 2": "Moves/Ceruledge - Flame Charge.png",
     "Win Rate": 47.74,
     "Pick Rate": 0.3,
+    "recommendedBuild": {
+      "name": "Bitter Charge",
+      "heldItems": [
+        "Muscle Band",
+        "Razor Claw",
+        "Curse Bangle"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 45.83,
     "Pick Rate 1": 30.15,
@@ -755,6 +1170,18 @@
     "Move 2": "Moves/Ceruledge - Phantom Force.png",
     "Win Rate": 51.66,
     "Pick Rate": 14.37,
+    "recommendedBuild": {
+      "name": "Bitter Force",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Razor Claw"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 52.2,
     "Pick Rate 1": 60.23,
@@ -774,6 +1201,18 @@
     "Move 2": "Moves/Ceruledge - Flame Charge.png",
     "Win Rate": 50.79,
     "Pick Rate": 3.44,
+    "recommendedBuild": {
+      "name": "Psycho Charge",
+      "heldItems": [
+        "Muscle Band",
+        "Razor Claw",
+        "Curse Bangle"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/X Attack.png",
     "Win Rate 1": 52.31,
     "Pick Rate 1": 39.06,
@@ -793,6 +1232,18 @@
     "Move 2": "Moves/Ceruledge - Phantom Force.png",
     "Win Rate": 49.0,
     "Pick Rate": 3.28,
+    "recommendedBuild": {
+      "name": "Psycho Force",
+      "heldItems": [
+        "Muscle Band",
+        "Razor Claw",
+        "Curse Bangle"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 50.03,
     "Pick Rate 1": 36.84,
@@ -812,6 +1263,18 @@
     "Move 2": "Moves/Chandelure - Imprison.png",
     "Win Rate": 48.44,
     "Pick Rate": 0.44,
+    "recommendedBuild": {
+      "name": "Heat Prison",
+      "heldItems": [
+        "Slick Spoon",
+        "Curse Incense",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 50.57,
     "Pick Rate 1": 60.55,
@@ -831,6 +1294,18 @@
     "Move 2": "Moves/Chandelure - Poltergeist.png",
     "Win Rate": 48.16,
     "Pick Rate": 0.37,
+    "recommendedBuild": {
+      "name": "Heat Geist",
+      "heldItems": [
+        "Slick Spoon",
+        "Curse Incense",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 50.91,
     "Pick Rate 1": 44.9,
@@ -850,6 +1325,18 @@
     "Move 2": "Moves/Chandelure - Imprison.png",
     "Win Rate": 47.83,
     "Pick Rate": 0.35,
+    "recommendedBuild": {
+      "name": "Flame Prison",
+      "heldItems": [
+        "Slick Spoon",
+        "Curse Incense",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 48.99,
     "Pick Rate 1": 64.35,
@@ -869,6 +1356,18 @@
     "Move 2": "Moves/Chandelure - Poltergeist.png",
     "Win Rate": 46.85,
     "Pick Rate": 0.58,
+    "recommendedBuild": {
+      "name": "Flame Geist",
+      "heldItems": [
+        "Slick Spoon",
+        "Curse Incense",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 48.63,
     "Pick Rate 1": 57.48,
@@ -888,6 +1387,18 @@
     "Move 2": "Moves/Charizard - Flare Blitz.png",
     "Win Rate": 51.47,
     "Pick Rate": 2.52,
+    "recommendedBuild": {
+      "name": "Fire Blitz",
+      "heldItems": [
+        "Scope Lens",
+        "Accel Bracer",
+        "Attack Weight"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 52.96,
     "Pick Rate 1": 41.95,
@@ -907,6 +1418,18 @@
     "Move 2": "Moves/Charizard - Fire Blast.png",
     "Win Rate": 49.74,
     "Pick Rate": 1.93,
+    "recommendedBuild": {
+      "name": "Flame Blast",
+      "heldItems": [
+        "Scope Lens",
+        "Accel Bracer",
+        "Attack Weight"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 49.71,
     "Pick Rate 1": 40.46,
@@ -926,6 +1449,18 @@
     "Move 2": "Moves/Charizard - Fire Blast.png",
     "Win Rate": 47.8,
     "Pick Rate": 0.61,
+    "recommendedBuild": {
+      "name": "Fire Blitz",
+      "heldItems": [
+        "Scope Lens",
+        "Accel Bracer",
+        "Attack Weight"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 50.0,
     "Pick Rate 1": 47.3,
@@ -945,6 +1480,18 @@
     "Move 2": "Moves/Charizard - Flare Blitz.png",
     "Win Rate": 48.91,
     "Pick Rate": 0.42,
+    "recommendedBuild": {
+      "name": "Flame Blitz",
+      "heldItems": [
+        "Scope Lens",
+        "Attack Weight",
+        "Accel Bracer"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/X Attack.png",
     "Win Rate 1": 45.16,
     "Pick Rate 1": 33.82,
@@ -964,6 +1511,16 @@
     "Move 2": "Moves/Cinderace - Feint.png",
     "Win Rate": 52.2,
     "Pick Rate": 12.37,
+    "recommendedBuild": {
+      "name": "Blazing Feint",
+      "heldItems": [
+        "Scope Lens",
+        "Muscle Band",
+        "Rapid Fire Scarf"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 51.88,
     "Pick Rate 1": 69.07,
@@ -983,6 +1540,18 @@
     "Move 2": "Moves/Cinderace - Feint.png",
     "Win Rate": 48.28,
     "Pick Rate": 8.76,
+    "recommendedBuild": {
+      "name": "Pyro Feint",
+      "heldItems": [
+        "Scope Lens",
+        "Muscle Band",
+        "Rapid Fire Scarf"
+      ],
+      "altHeldItem": "Attack Weight",
+      "altHeldItems": [
+        "Attack Weight"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.65,
     "Pick Rate 1": 50.58,
@@ -1002,6 +1571,18 @@
     "Move 2": "Moves/Cinderace - Flame Charge.png",
     "Win Rate": 49.15,
     "Pick Rate": 7.54,
+    "recommendedBuild": {
+      "name": "Pyro Charge",
+      "heldItems": [
+        "Scope Lens",
+        "Muscle Band",
+        "Rapid Fire Scarf"
+      ],
+      "altHeldItem": "Attack Weight",
+      "altHeldItems": [
+        "Attack Weight"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 50.21,
     "Pick Rate 1": 45.85,
@@ -1021,6 +1602,16 @@
     "Move 2": "Moves/Cinderace - Flame Charge.png",
     "Win Rate": 53.39,
     "Pick Rate": 3.1,
+    "recommendedBuild": {
+      "name": "Flame Kick",
+      "heldItems": [
+        "Scope Lens",
+        "Muscle Band",
+        "Rapid Fire Scarf"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 54.77,
     "Pick Rate 1": 62.54,
@@ -1040,6 +1631,12 @@
     "Move 2": "Moves/Clefable - Gravity.png",
     "Win Rate": 47.77,
     "Pick Rate": 6.03,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 48.27,
     "Pick Rate 1": 75.6,
@@ -1059,6 +1656,12 @@
     "Move 2": "Moves/Clefable - Follow Me.png",
     "Win Rate": 48.44,
     "Pick Rate": 2.92,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 48.87,
     "Pick Rate 1": 84.89,
@@ -1078,6 +1681,16 @@
     "Move 2": "Moves/Clefable - Follow Me.png",
     "Win Rate": 45.31,
     "Pick Rate": 0.19,
+    "recommendedBuild": {
+      "name": "Kiss Me",
+      "heldItems": [
+        "Drive Lens",
+        "Shell Bell",
+        "Energy Amplifier"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 46.62,
     "Pick Rate 1": 54.29,
@@ -1097,6 +1710,18 @@
     "Move 2": "Moves/Comfey - Magical Leaf.png",
     "Win Rate": 42.32,
     "Pick Rate": 0.34,
+    "recommendedBuild": {
+      "name": "Sweet Knot",
+      "heldItems": [
+        "Exp Share",
+        "Buddy Barrier",
+        "Resonant Guard"
+      ],
+      "altHeldItem": "Rescue Hood",
+      "altHeldItems": [
+        "Rescue Hood"
+      ]
+    },
     "Item 1": "Battle_Items/Slow Smoke.png",
     "Win Rate 1": 43.23,
     "Pick Rate 1": 93.76,
@@ -1116,6 +1741,18 @@
     "Move 2": "Moves/Comfey - Grass Knot.png",
     "Win Rate": 53.96,
     "Pick Rate": 3.98,
+    "recommendedBuild": {
+      "name": "Sweet Knot",
+      "heldItems": [
+        "Exp Share",
+        "Buddy Barrier",
+        "Resonant Guard"
+      ],
+      "altHeldItem": "Rescue Hood",
+      "altHeldItems": [
+        "Rescue Hood"
+      ]
+    },
     "Item 1": "Battle_Items/Slow Smoke.png",
     "Win Rate 1": 54.61,
     "Pick Rate 1": 92.9,
@@ -1135,6 +1772,18 @@
     "Move 2": "Moves/Comfey - Magical Leaf.png",
     "Win Rate": 44.71,
     "Pick Rate": 6.15,
+    "recommendedBuild": {
+      "name": "Floral Leaf",
+      "heldItems": [
+        "Exp Share",
+        "Buddy Barrier",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Rescue Hood",
+      "altHeldItems": [
+        "Rescue Hood"
+      ]
+    },
     "Item 1": "Battle_Items/Slow Smoke.png",
     "Win Rate 1": 45.15,
     "Pick Rate 1": 95.08,
@@ -1154,6 +1803,19 @@
     "Move 2": "Moves/Comfey - Grass Knot.png",
     "Win Rate": 48.23,
     "Pick Rate": 2.61,
+    "recommendedBuild": {
+      "name": "Floral Knot",
+      "heldItems": [
+        "Buddy Barrier",
+        "Resonant Guard",
+        "Exp Share"
+      ],
+      "altHeldItem": "Rescue Hood",
+      "altHeldItems": [
+        "Rescue Hood",
+        "Drive Lens"
+      ]
+    },
     "Item 1": "Battle_Items/Slow Smoke.png",
     "Win Rate 1": 48.72,
     "Pick Rate 1": 96.39,
@@ -1173,6 +1835,18 @@
     "Move 2": "Moves/Cramorant - Air Slash.png",
     "Win Rate": 51.05,
     "Pick Rate": 4.81,
+    "recommendedBuild": {
+      "name": "Dive Slash",
+      "heldItems": [
+        "Energy Amplifier",
+        "Drive Lens",
+        "Shell Bell"
+      ],
+      "altHeldItem": "Slick Spoon",
+      "altHeldItems": [
+        "Slick Spoon"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 51.23,
     "Pick Rate 1": 90.78,
@@ -1192,6 +1866,18 @@
     "Move 2": "Moves/Cramorant - Hurricane.png",
     "Win Rate": 49.62,
     "Pick Rate": 4.14,
+    "recommendedBuild": {
+      "name": "Surficane",
+      "heldItems": [
+        "Energy Amplifier",
+        "Drive Lens",
+        "Shell Bell"
+      ],
+      "altHeldItem": "Slick Spoon",
+      "altHeldItems": [
+        "Slick Spoon"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 50.78,
     "Pick Rate 1": 76.91,
@@ -1211,6 +1897,18 @@
     "Move 2": "Moves/Cramorant - Hurricane.png",
     "Win Rate": 51.69,
     "Pick Rate": 2.31,
+    "recommendedBuild": {
+      "name": "Diveicane",
+      "heldItems": [
+        "Energy Amplifier",
+        "Drive Lens",
+        "Shell Bell"
+      ],
+      "altHeldItem": "Slick Spoon",
+      "altHeldItems": [
+        "Slick Spoon"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 51.86,
     "Pick Rate 1": 92.59,
@@ -1230,6 +1928,18 @@
     "Move 2": "Moves/Crustle - X-Scissor.png",
     "Win Rate": 50.99,
     "Pick Rate": 5.13,
+    "recommendedBuild": {
+      "name": "Scissor Tomb",
+      "heldItems": [
+        "Resonant Guard",
+        "Focus Band",
+        "Exp Share"
+      ],
+      "altHeldItem": "Buddy Barrier",
+      "altHeldItems": [
+        "Buddy Barrier"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 51.75,
     "Pick Rate 1": 79.25,
@@ -1249,6 +1959,18 @@
     "Move 2": "Moves/Crustle - X-Scissor.png",
     "Win Rate": 47.64,
     "Pick Rate": 1.68,
+    "recommendedBuild": {
+      "name": "Scissor Smash",
+      "heldItems": [
+        "Accel Bracer",
+        "Rocky Helmet",
+        "Razor Claw"
+      ],
+      "altHeldItem": "Focus Band",
+      "altHeldItems": [
+        "Focus Band"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 45.94,
     "Pick Rate 1": 33.05,
@@ -1268,6 +1990,18 @@
     "Move 2": "Moves/Crustle - Stealth Rock.png",
     "Win Rate": 47.09,
     "Pick Rate": 1.31,
+    "recommendedBuild": {
+      "name": "Rocks",
+      "heldItems": [
+        "Resonant Guard",
+        "Focus Band",
+        "Exp Share"
+      ],
+      "altHeldItem": "Buddy Barrier",
+      "altHeldItems": [
+        "Buddy Barrier"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 51.13,
     "Pick Rate 1": 33.35,
@@ -1287,6 +2021,18 @@
     "Move 2": "Moves/Crustle - Stealth Rock.png",
     "Win Rate": 45.79,
     "Pick Rate": 0.87,
+    "recommendedBuild": {
+      "name": "Rocks",
+      "heldItems": [
+        "Resonant Guard",
+        "Focus Band",
+        "Exp Share"
+      ],
+      "altHeldItem": "Buddy Barrier",
+      "altHeldItems": [
+        "Buddy Barrier"
+      ]
+    },
     "Item 1": "Battle_Items/Fluffy Tail.png",
     "Win Rate 1": 46.64,
     "Pick Rate 1": 67.89,
@@ -1306,6 +2052,18 @@
     "Move 2": "Moves/Darkrai - Dark Pulse.png",
     "Win Rate": 49.88,
     "Pick Rate": 0.31,
+    "recommendedBuild": {
+      "name": "Dark Dark",
+      "heldItems": [
+        "Slick Spoon",
+        "Wise Glasses",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 51.01,
     "Pick Rate 1": 36.79,
@@ -1325,6 +2083,18 @@
     "Move 2": "Moves/Darkrai - Dark Pulse.png",
     "Win Rate": 52.13,
     "Pick Rate": 4.46,
+    "recommendedBuild": {
+      "name": "Shadow Pulse",
+      "heldItems": [
+        "Slick Spoon",
+        "Wise Glasses",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 52.14,
     "Pick Rate 1": 48.85,
@@ -1344,6 +2114,20 @@
     "Move 2": "Moves/Darkrai - Nasty Plot.png",
     "Win Rate": 46.89,
     "Pick Rate": 4.0,
+    "recommendedBuild": {
+      "name": "Dark Plot (Opportunity Burst)",
+      "heldItems": [
+        "Slick Spoon",
+        "Drive Lens",
+        "Wise Glasses"
+      ],
+      "altHeldItem": "Sp. Atk Specs",
+      "altHeldItems": [
+        "Sp. Atk Specs",
+        "Shell Bell",
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 45.41,
     "Pick Rate 1": 36.42,
@@ -1363,6 +2147,16 @@
     "Move 2": "Moves/Decidueye - Shadow Sneak.png",
     "Win Rate": 50.93,
     "Pick Rate": 17.51,
+    "recommendedBuild": {
+      "name": "Shadow Shackle",
+      "heldItems": [
+        "Muscle Band",
+        "Accel Bracer",
+        "Attack Weight"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 51.97,
     "Pick Rate 1": 55.19,
@@ -1382,6 +2176,16 @@
     "Move 2": "Moves/Decidueye - Leaf Storm.png",
     "Win Rate": 48.37,
     "Pick Rate": 5.05,
+    "recommendedBuild": {
+      "name": "Razor Storm",
+      "heldItems": [
+        "Muscle Band",
+        "Scope Lens",
+        "Rapid Fire Scarf"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 50.16,
     "Pick Rate 1": 42.57,
@@ -1401,6 +2205,16 @@
     "Move 2": "Moves/Decidueye - Leaf Storm.png",
     "Win Rate": 50.93,
     "Pick Rate": 2.46,
+    "recommendedBuild": {
+      "name": "Shackle Storm",
+      "heldItems": [
+        "Muscle Band",
+        "Accel Bracer",
+        "Attack Weight"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.46,
     "Pick Rate 1": 51.78,
@@ -1420,6 +2234,16 @@
     "Move 2": "Moves/Decidueye - Shadow Sneak.png",
     "Win Rate": 49.0,
     "Pick Rate": 2.18,
+    "recommendedBuild": {
+      "name": "Razor Storm",
+      "heldItems": [
+        "Muscle Band",
+        "Scope Lens",
+        "Rapid Fire Scarf"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Attack.png",
     "Win Rate 1": 49.65,
     "Pick Rate 1": 35.13,
@@ -1439,6 +2263,16 @@
     "Move 2": "Moves/Delphox - Fire Spin.png",
     "Win Rate": 47.79,
     "Pick Rate": 1.47,
+    "recommendedBuild": {
+      "name": "Mystical Spin",
+      "heldItems": [
+        "Energy Amplifier",
+        "Drive Lens",
+        "Shell Bell"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.43,
     "Pick Rate 1": 58.88,
@@ -1458,6 +2292,18 @@
     "Move 2": "Moves/Delphox - Fire Spin.png",
     "Win Rate": 47.89,
     "Pick Rate": 4.25,
+    "recommendedBuild": {
+      "name": "Blast Spin",
+      "heldItems": [
+        "Energy Amplifier",
+        "Drive Lens",
+        "Shell Bell"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 47.9,
     "Pick Rate 1": 51.91,
@@ -1477,6 +2323,16 @@
     "Move 2": "Moves/Delphox - Flame Charge.png",
     "Win Rate": 51.26,
     "Pick Rate": 1.73,
+    "recommendedBuild": {
+      "name": "Mystical Charge",
+      "heldItems": [
+        "Energy Amplifier",
+        "Drive Lens",
+        "Shell Bell"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 52.23,
     "Pick Rate 1": 76.41,
@@ -1496,6 +2352,12 @@
     "Move 2": "Moves/Dhelmise - Heavy Slam.png",
     "Win Rate": 47.2,
     "Pick Rate": 0.1,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 52.08,
     "Pick Rate 1": 38.4,
@@ -1515,6 +2377,12 @@
     "Move 2": "Moves/Dhelmise - Anchor Shot.png",
     "Win Rate": 49.39,
     "Pick Rate": 2.26,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.51,
     "Pick Rate 1": 45.07,
@@ -1534,6 +2402,12 @@
     "Move 2": "Moves/Dhelmise - Anchor Shot.png",
     "Win Rate": 50.3,
     "Pick Rate": 1.14,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.46,
     "Pick Rate 1": 43.97,
@@ -1553,6 +2427,12 @@
     "Move 2": "Moves/Dhelmise - Heavy Slam.png",
     "Win Rate": 49.69,
     "Pick Rate": 0.12,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 50.98,
     "Pick Rate 1": 32.08,
@@ -1572,6 +2452,18 @@
     "Move 2": "Moves/Dodrio - Jump Kick.png",
     "Win Rate": 51.61,
     "Pick Rate": 3.43,
+    "recommendedBuild": {
+      "name": "Tri Jump",
+      "heldItems": [
+        "Attack Weight",
+        "Razor Claw",
+        "Charging Charm"
+      ],
+      "altHeldItem": "Accel Bracer",
+      "altHeldItems": [
+        "Accel Bracer"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 51.96,
     "Pick Rate 1": 97.65,
@@ -1591,6 +2483,18 @@
     "Move 2": "Moves/Dodrio - Jump Kick.png",
     "Win Rate": 48.15,
     "Pick Rate": 1.03,
+    "recommendedBuild": {
+      "name": "Drill Kick",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Charging Charm"
+      ],
+      "altHeldItem": "Float Stone",
+      "altHeldItems": [
+        "Float Stone"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 49.94,
     "Pick Rate 1": 62.35,
@@ -1610,6 +2514,18 @@
     "Move 2": "Moves/Dodrio - Agility.png",
     "Win Rate": 45.83,
     "Pick Rate": 0.31,
+    "recommendedBuild": {
+      "name": "Agility Attack",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Razor Claw"
+      ],
+      "altHeldItem": "Charging Charm",
+      "altHeldItems": [
+        "Charging Charm"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 50.36,
     "Pick Rate 1": 68.63,
@@ -1629,6 +2545,18 @@
     "Move 2": "Moves/Dodrio - Agility.png",
     "Win Rate": 40.43,
     "Pick Rate": 0.11,
+    "recommendedBuild": {
+      "name": "Drill Kick",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Charging Charm"
+      ],
+      "altHeldItem": "Float Stone",
+      "altHeldItems": [
+        "Float Stone"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 41.3,
     "Pick Rate 1": 32.62,
@@ -1648,6 +2576,18 @@
     "Move 2": "Moves/Dragapult - Phantom Force.png",
     "Win Rate": 46.78,
     "Pick Rate": 2.28,
+    "recommendedBuild": {
+      "name": "Shadow Force",
+      "heldItems": [
+        "Muscle Band",
+        "Scope Lens",
+        "Razor Claw"
+      ],
+      "altHeldItem": "Charging Charm",
+      "altHeldItems": [
+        "Charging Charm"
+      ]
+    },
     "Item 1": "Battle_Items/X Attack.png",
     "Win Rate 1": 46.98,
     "Pick Rate 1": 68.42,
@@ -1667,6 +2607,18 @@
     "Move 2": "Moves/Dragapult - Dragon Dance.png",
     "Win Rate": 49.38,
     "Pick Rate": 1.8,
+    "recommendedBuild": {
+      "name": "Double Dragon",
+      "heldItems": [
+        "Muscle Band",
+        "Scope Lens",
+        "Charging Charm"
+      ],
+      "altHeldItem": "Rapid Fire Scarf",
+      "altHeldItems": [
+        "Rapid Fire Scarf"
+      ]
+    },
     "Item 1": "Battle_Items/X Attack.png",
     "Win Rate 1": 49.08,
     "Pick Rate 1": 50.92,
@@ -1686,6 +2638,18 @@
     "Move 2": "Moves/Dragapult - Dragon Dance.png",
     "Win Rate": 49.07,
     "Pick Rate": 0.41,
+    "recommendedBuild": {
+      "name": "Double Dragon",
+      "heldItems": [
+        "Muscle Band",
+        "Scope Lens",
+        "Charging Charm"
+      ],
+      "altHeldItem": "Rapid Fire Scarf",
+      "altHeldItems": [
+        "Rapid Fire Scarf"
+      ]
+    },
     "Item 1": "Battle_Items/X Attack.png",
     "Win Rate 1": 52.08,
     "Pick Rate 1": 53.73,
@@ -1705,6 +2669,18 @@
     "Move 2": "Moves/Dragapult - Phantom Force.png",
     "Win Rate": 50.49,
     "Pick Rate": 0.31,
+    "recommendedBuild": {
+      "name": "Shadow Force",
+      "heldItems": [
+        "Muscle Band",
+        "Scope Lens",
+        "Razor Claw"
+      ],
+      "altHeldItem": "Charging Charm",
+      "altHeldItems": [
+        "Charging Charm"
+      ]
+    },
     "Item 1": "Battle_Items/X Attack.png",
     "Win Rate 1": 48.77,
     "Pick Rate 1": 50.0,
@@ -1724,6 +2700,16 @@
     "Move 2": "Moves/Dragonite - Outrage.png",
     "Win Rate": 48.68,
     "Pick Rate": 0.93,
+    "recommendedBuild": {
+      "name": "Extreme Outrage",
+      "heldItems": [
+        "Rapid Fire Scarf",
+        "Focus Band",
+        "Choice Scarf"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Attack.png",
     "Win Rate 1": 45.84,
     "Pick Rate 1": 32.65,
@@ -1743,6 +2729,18 @@
     "Move 2": "Moves/Dragonite - Hyper Beam.png",
     "Win Rate": 49.38,
     "Pick Rate": 0.92,
+    "recommendedBuild": {
+      "name": "Dragon Beam",
+      "heldItems": [
+        "Muscle Band",
+        "Scope Lens",
+        "Razor Claw"
+      ],
+      "altHeldItem": "Focus Band",
+      "altHeldItems": [
+        "Focus Band"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 50.8,
     "Pick Rate 1": 46.64,
@@ -1762,6 +2760,16 @@
     "Move 2": "Moves/Dragonite - Outrage.png",
     "Win Rate": 48.13,
     "Pick Rate": 0.84,
+    "recommendedBuild": {
+      "name": "Extreme Outrage",
+      "heldItems": [
+        "Rapid Fire Scarf",
+        "Focus Band",
+        "Choice Scarf"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 47.89,
     "Pick Rate 1": 30.32,
@@ -1781,6 +2789,16 @@
     "Move 2": "Moves/Duraludon - Stealth Rock.png",
     "Win Rate": 49.36,
     "Pick Rate": 0.24,
+    "recommendedBuild": {
+      "name": "Dragon Rocks",
+      "heldItems": [
+        "Muscle Band",
+        "Attack Weight",
+        "Accel Bracer"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 50.78,
     "Pick Rate 1": 61.86,
@@ -1800,6 +2818,16 @@
     "Move 2": "Moves/Duraludon - Dragon Tail.png",
     "Win Rate": 49.33,
     "Pick Rate": 0.06,
+    "recommendedBuild": {
+      "name": "Dragon Rocks",
+      "heldItems": [
+        "Muscle Band",
+        "Attack Weight",
+        "Accel Bracer"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 40.0,
     "Pick Rate 1": 53.33,
@@ -1819,6 +2847,18 @@
     "Move 2": "Moves/Duraludon - Dragon Tail.png",
     "Win Rate": 49.81,
     "Pick Rate": 0.61,
+    "recommendedBuild": {
+      "name": "Flash Tail",
+      "heldItems": [
+        "Muscle Band",
+        "Scope Lens",
+        "Rapid Fire Scarf"
+      ],
+      "altHeldItem": "Accel Bracer",
+      "altHeldItems": [
+        "Accel Bracer"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.33,
     "Pick Rate 1": 47.05,
@@ -1838,6 +2878,18 @@
     "Move 2": "Moves/Duraludon - Stealth Rock.png",
     "Win Rate": 49.5,
     "Pick Rate": 0.3,
+    "recommendedBuild": {
+      "name": "Flash Rocks",
+      "heldItems": [
+        "Muscle Band",
+        "Scope Lens",
+        "Rapid Fire Scarf"
+      ],
+      "altHeldItem": "Accel Bracer",
+      "altHeldItems": [
+        "Accel Bracer"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 51.4,
     "Pick Rate 1": 44.97,
@@ -1857,6 +2909,19 @@
     "Move 2": "Moves/Eldegoss - Cotton Guard.png",
     "Win Rate": 48.28,
     "Pick Rate": 3.37,
+    "recommendedBuild": {
+      "name": "Pollen Guard",
+      "heldItems": [
+        "Buddy Barrier",
+        "Resonant Guard",
+        "Muscle Band"
+      ],
+      "altHeldItem": "Curse Incense",
+      "altHeldItems": [
+        "Curse Incense",
+        "Rescue Hood"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 49.2,
     "Pick Rate 1": 51.26,
@@ -1876,6 +2941,18 @@
     "Move 2": "Moves/Eldegoss - Cotton Spore.png",
     "Win Rate": 48.44,
     "Pick Rate": 2.62,
+    "recommendedBuild": {
+      "name": "Pollen Spore",
+      "heldItems": [
+        "Buddy Barrier",
+        "Resonant Guard",
+        "Muscle Band"
+      ],
+      "altHeldItem": "Curse Incense",
+      "altHeldItems": [
+        "Curse Incense"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 47.71,
     "Pick Rate 1": 46.59,
@@ -1895,6 +2972,18 @@
     "Move 2": "Moves/Eldegoss - Cotton Spore.png",
     "Win Rate": 49.19,
     "Pick Rate": 0.52,
+    "recommendedBuild": {
+      "name": "Tornado Spore",
+      "heldItems": [
+        "Muscle Band",
+        "Curse Incense",
+        "Buddy Barrier"
+      ],
+      "altHeldItem": "Resonant Guard",
+      "altHeldItems": [
+        "Resonant Guard"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 50.0,
     "Pick Rate 1": 34.37,
@@ -1914,6 +3003,18 @@
     "Move 2": "Moves/Eldegoss - Cotton Guard.png",
     "Win Rate": 49.48,
     "Pick Rate": 0.37,
+    "recommendedBuild": {
+      "name": "Tornado Guard",
+      "heldItems": [
+        "Muscle Band",
+        "Curse Incense",
+        "Buddy Barrier"
+      ],
+      "altHeldItem": "Resonant Guard",
+      "altHeldItems": [
+        "Resonant Guard"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 48.21,
     "Pick Rate 1": 34.78,
@@ -1933,6 +3034,21 @@
     "Move 2": "Moves/Empoleon - Aqua Jet.png",
     "Win Rate": 49.13,
     "Pick Rate": 3.33,
+    "recommendedBuild": {
+      "name": "Aqua Cannon",
+      "heldItems": [
+        "Sp. Atk Specs",
+        "Curse Incense",
+        "Wise Glasses"
+      ],
+      "altHeldItem": "Focus Band",
+      "altHeldItems": [
+        "Focus Band",
+        "Shell Bell",
+        "Energy Amplifier",
+        "Drive Lens"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 51.3,
     "Pick Rate 1": 45.11,
@@ -1952,6 +3068,21 @@
     "Move 2": "Moves/Empoleon - Metal Claw.png",
     "Win Rate": 48.43,
     "Pick Rate": 1.51,
+    "recommendedBuild": {
+      "name": "Aqua Cannon",
+      "heldItems": [
+        "Sp. Atk Specs",
+        "Curse Incense",
+        "Wise Glasses"
+      ],
+      "altHeldItem": "Focus Band",
+      "altHeldItems": [
+        "Focus Band",
+        "Shell Bell",
+        "Energy Amplifier",
+        "Drive Lens"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 52.72,
     "Pick Rate 1": 25.2,
@@ -1971,6 +3102,12 @@
     "Move 2": "Moves/Empoleon - Aqua Jet.png",
     "Win Rate": 43.78,
     "Pick Rate": 0.19,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 43.48,
     "Pick Rate 1": 27.71,
@@ -1990,6 +3127,12 @@
     "Move 2": "Moves/Empoleon - Metal Claw.png",
     "Win Rate": 48.21,
     "Pick Rate": 0.17,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 47.3,
     "Pick Rate 1": 33.04,
@@ -2009,6 +3152,18 @@
     "Move 2": "Moves/Espeon - Psybeam.png",
     "Win Rate": 47.93,
     "Pick Rate": 2.46,
+    "recommendedBuild": {
+      "name": "Stored Beam",
+      "heldItems": [
+        "Slick Spoon",
+        "Wise Glasses",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.34,
     "Pick Rate 1": 66.0,
@@ -2028,6 +3183,18 @@
     "Move 2": "Moves/Espeon - Future Sight.png",
     "Win Rate": 47.94,
     "Pick Rate": 4.93,
+    "recommendedBuild": {
+      "name": "Stored Sight",
+      "heldItems": [
+        "Slick Spoon",
+        "Wise Glasses",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 48.0,
     "Pick Rate 1": 48.43,
@@ -2047,6 +3214,18 @@
     "Move 2": "Moves/Espeon - Psybeam.png",
     "Win Rate": 47.88,
     "Pick Rate": 4.18,
+    "recommendedBuild": {
+      "name": "Shock Beam",
+      "heldItems": [
+        "Slick Spoon",
+        "Wise Glasses",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.37,
     "Pick Rate 1": 55.56,
@@ -2066,6 +3245,18 @@
     "Move 2": "Moves/Espeon - Future Sight.png",
     "Win Rate": 48.62,
     "Pick Rate": 4.15,
+    "recommendedBuild": {
+      "name": "Shock Sight",
+      "heldItems": [
+        "Slick Spoon",
+        "Wise Glasses",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.8,
     "Pick Rate 1": 49.54,
@@ -2085,6 +3276,18 @@
     "Move 2": "Moves/Falinks - Beat Up.png",
     "Win Rate": 50.11,
     "Pick Rate": 0.68,
+    "recommendedBuild": {
+      "name": "Heads Up",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Muscle Band"
+      ],
+      "altHeldItem": "Weakness Policy",
+      "altHeldItems": [
+        "Weakness Policy"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 53.29,
     "Pick Rate 1": 32.62,
@@ -2104,6 +3307,18 @@
     "Move 2": "Moves/Falinks - No Retreat.png",
     "Win Rate": 45.69,
     "Pick Rate": 0.15,
+    "recommendedBuild": {
+      "name": "No Horny",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Weakness Policy"
+      ],
+      "altHeldItem": "Razor Claw",
+      "altHeldItems": [
+        "Razor Claw"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 48.53,
     "Pick Rate 1": 34.52,
@@ -2123,6 +3338,18 @@
     "Move 2": "Moves/Falinks - Beat Up.png",
     "Win Rate": 54.24,
     "Pick Rate": 0.04,
+    "recommendedBuild": {
+      "name": "Heads Up",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Muscle Band"
+      ],
+      "altHeldItem": "Weakness Policy",
+      "altHeldItems": [
+        "Weakness Policy"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 52.63,
     "Pick Rate 1": 32.2,
@@ -2142,6 +3369,18 @@
     "Move 2": "Moves/Falinks - No Retreat.png",
     "Win Rate": 41.03,
     "Pick Rate": 0.03,
+    "recommendedBuild": {
+      "name": "No Head",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Weakness Policy"
+      ],
+      "altHeldItem": "Razor Claw",
+      "altHeldItems": [
+        "Razor Claw"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 20.0,
     "Pick Rate 1": 25.64,
@@ -2161,6 +3400,12 @@
     "Move 2": "Moves/Galarian Rapidash - Smart Strike.png",
     "Win Rate": 51.67,
     "Pick Rate": 0.16,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 50.64,
     "Pick Rate 1": 74.64,
@@ -2180,6 +3425,12 @@
     "Move 2": "Moves/Galarian Rapidash - Agility.png",
     "Win Rate": 45.72,
     "Pick Rate": 0.61,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 47.37,
     "Pick Rate 1": 64.61,
@@ -2199,6 +3450,12 @@
     "Move 2": "Moves/Galarian Rapidash - Smart Strike.png",
     "Win Rate": 52.35,
     "Pick Rate": 3.19,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 51.85,
     "Pick Rate 1": 46.06,
@@ -2218,6 +3475,12 @@
     "Move 2": "Moves/Galarian Rapidash - Agility.png",
     "Win Rate": 51.54,
     "Pick Rate": 0.22,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 49.7,
     "Pick Rate 1": 56.31,
@@ -2237,6 +3500,21 @@
     "Move 2": "Moves/Garchomp - Earthquake.png",
     "Win Rate": 49.97,
     "Pick Rate": 1.42,
+    "recommendedBuild": {
+      "name": "Earthquake Dig",
+      "heldItems": [
+        "Scope Lens",
+        "Rapid Fire Scarf",
+        "Choice Scarf"
+      ],
+      "altHeldItem": "Muscle Band",
+      "altHeldItems": [
+        "Muscle Band",
+        "Weakness Policy",
+        "Energy Amplifier",
+        "Attack Weight"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 51.85,
     "Pick Rate 1": 48.03,
@@ -2256,6 +3534,19 @@
     "Move 2": "Moves/Garchomp - Dragon Claw.png",
     "Win Rate": 51.4,
     "Pick Rate": 9.84,
+    "recommendedBuild": {
+      "name": "Full Dragon",
+      "heldItems": [
+        "Scope Lens",
+        "Choice Scarf",
+        "Rapid Fire Scarf"
+      ],
+      "altHeldItem": "Muscle Band",
+      "altHeldItems": [
+        "Muscle Band",
+        "Focus Band"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 52.31,
     "Pick Rate 1": 80.76,
@@ -2275,6 +3566,18 @@
     "Move 2": "Moves/Gardevoir - Psyshock.png",
     "Win Rate": 50.59,
     "Pick Rate": 5.63,
+    "recommendedBuild": {
+      "name": "Psychic Shock",
+      "heldItems": [
+        "Drive Lens",
+        "Wise Glasses",
+        "Choice Specs"
+      ],
+      "altHeldItem": "Curse Incense",
+      "altHeldItems": [
+        "Curse Incense"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 51.55,
     "Pick Rate 1": 53.5,
@@ -2294,6 +3597,18 @@
     "Move 2": "Moves/Gardevoir - Future Sight.png",
     "Win Rate": 48.26,
     "Pick Rate": 3.79,
+    "recommendedBuild": {
+      "name": "Future Moon",
+      "heldItems": [
+        "Slick Spoon",
+        "Drive Lens",
+        "Wise Glasses"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 47.91,
     "Pick Rate 1": 67.28,
@@ -2313,6 +3628,18 @@
     "Move 2": "Moves/Gardevoir - Psyshock.png",
     "Win Rate": 49.02,
     "Pick Rate": 3.04,
+    "recommendedBuild": {
+      "name": "Psyblast",
+      "heldItems": [
+        "Slick Spoon",
+        "Drive Lens",
+        "Wise Glasses"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.63,
     "Pick Rate 1": 61.71,
@@ -2332,6 +3659,18 @@
     "Move 2": "Moves/Gardevoir - Future Sight.png",
     "Win Rate": 48.97,
     "Pick Rate": 1.67,
+    "recommendedBuild": {
+      "name": "Future Psychic",
+      "heldItems": [
+        "Drive Lens",
+        "Wise Glasses",
+        "Choice Specs"
+      ],
+      "altHeldItem": "Curse Incense",
+      "altHeldItems": [
+        "Curse Incense"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 51.03,
     "Pick Rate 1": 57.57,
@@ -2351,6 +3690,18 @@
     "Move 2": "Moves/Gengar - Hex.png",
     "Win Rate": 52.1,
     "Pick Rate": 6.34,
+    "recommendedBuild": {
+      "name": "Sludge Hex",
+      "heldItems": [
+        "Drive Lens",
+        "Wise Glasses",
+        "Sp. Atk Specs"
+      ],
+      "altHeldItem": "Shell Bell",
+      "altHeldItems": [
+        "Shell Bell"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 54.09,
     "Pick Rate 1": 58.36,
@@ -2370,6 +3721,16 @@
     "Move 2": "Moves/Gengar - Dream Eater.png",
     "Win Rate": 48.87,
     "Pick Rate": 5.14,
+    "recommendedBuild": {
+      "name": "Shadow Eater",
+      "heldItems": [
+        "Wise Glasses",
+        "Drive Lens",
+        "Choice Specs"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 50.47,
     "Pick Rate 1": 46.41,
@@ -2389,6 +3750,18 @@
     "Move 2": "Moves/Glaceon - Ice Shard.png",
     "Win Rate": 47.76,
     "Pick Rate": 8.45,
+    "recommendedBuild": {
+      "name": "Spear Shard",
+      "heldItems": [
+        "Wise Glasses",
+        "Curse Incense",
+        "Slick Spoon"
+      ],
+      "altHeldItem": "Drive Lens",
+      "altHeldItems": [
+        "Drive Lens"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.65,
     "Pick Rate 1": 47.01,
@@ -2408,6 +3781,20 @@
     "Move 2": "Moves/Glaceon - Freeze-Dry.png",
     "Win Rate": 50.48,
     "Pick Rate": 0.95,
+    "recommendedBuild": {
+      "name": "Freeze Wind",
+      "heldItems": [
+        "Slick Spoon",
+        "Drive Lens",
+        "Shell Bell"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier",
+        "Wise Glasses",
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 52.05,
     "Pick Rate 1": 82.55,
@@ -2427,6 +3814,12 @@
     "Move 2": "Moves/Goodra - Power Whip.png",
     "Win Rate": 46.57,
     "Pick Rate": 1.77,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 47.33,
     "Pick Rate 1": 58.32,
@@ -2446,6 +3839,12 @@
     "Move 2": "Moves/Goodra - Acid Spray.png",
     "Win Rate": 47.21,
     "Pick Rate": 0.98,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 47.98,
     "Pick Rate 1": 62.22,
@@ -2465,6 +3864,12 @@
     "Move 2": "Moves/Goodra - Power Whip.png",
     "Win Rate": 44.07,
     "Pick Rate": 0.46,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 42.11,
     "Pick Rate 1": 50.75,
@@ -2484,6 +3889,12 @@
     "Move 2": "Moves/Goodra - Acid Spray.png",
     "Win Rate": 50.74,
     "Pick Rate": 0.31,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 53.15,
     "Pick Rate 1": 54.41,
@@ -2503,6 +3914,18 @@
     "Move 2": "Moves/Greedent - Covet.png",
     "Win Rate": 34.62,
     "Pick Rate": 0.04,
+    "recommendedBuild": {
+      "name": "Bullet Stuff",
+      "heldItems": [
+        "Attack Weight",
+        "Weakness Policy",
+        "Focus Band"
+      ],
+      "altHeldItem": "Accel Bracer",
+      "altHeldItems": [
+        "Accel Bracer"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 35.48,
     "Pick Rate 1": 59.62,
@@ -2522,6 +3945,19 @@
     "Move 2": "Moves/Greedent - Stuff Cheeks.png",
     "Win Rate": 40.0,
     "Pick Rate": 0.09,
+    "recommendedBuild": {
+      "name": "Covet Belch",
+      "heldItems": [
+        "Attack Weight",
+        "Weakness Policy",
+        "Focus Band"
+      ],
+      "altHeldItem": "Resonant Guard",
+      "altHeldItems": [
+        "Resonant Guard",
+        "Accel Bracer"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 36.36,
     "Pick Rate 1": 38.26,
@@ -2541,6 +3977,19 @@
     "Move 2": "Moves/Greedent - Covet.png",
     "Win Rate": 54.74,
     "Pick Rate": 1.58,
+    "recommendedBuild": {
+      "name": "Covet Belch",
+      "heldItems": [
+        "Attack Weight",
+        "Weakness Policy",
+        "Focus Band"
+      ],
+      "altHeldItem": "Resonant Guard",
+      "altHeldItems": [
+        "Resonant Guard",
+        "Accel Bracer"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 52.54,
     "Pick Rate 1": 32.4,
@@ -2560,6 +4009,18 @@
     "Move 2": "Moves/Greedent - Stuff Cheeks.png",
     "Win Rate": 50.44,
     "Pick Rate": 0.61,
+    "recommendedBuild": {
+      "name": "Bullet Stuff",
+      "heldItems": [
+        "Attack Weight",
+        "Weakness Policy",
+        "Focus Band"
+      ],
+      "altHeldItem": "Accel Bracer",
+      "altHeldItems": [
+        "Accel Bracer"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 52.12,
     "Pick Rate 1": 47.31,
@@ -2579,6 +4040,20 @@
     "Move 2": "Moves/Greninja - Smokescreen.png",
     "Win Rate": 54.43,
     "Pick Rate": 16.82,
+    "recommendedBuild": {
+      "name": "Surf Screen",
+      "heldItems": [
+        "Muscle Band",
+        "Scope Lens",
+        "Charging Charm"
+      ],
+      "altHeldItem": "Accel Bracer",
+      "altHeldItems": [
+        "Accel Bracer",
+        "Attack Weight",
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/X Attack.png",
     "Win Rate 1": 55.73,
     "Pick Rate 1": 75.41,
@@ -2598,6 +4073,16 @@
     "Move 2": "Moves/Greninja - Double Team.png",
     "Win Rate": 51.18,
     "Pick Rate": 14.35,
+    "recommendedBuild": {
+      "name": "Double Shuriken",
+      "heldItems": [
+        "Attack Weight",
+        "Muscle Band",
+        "Accel Bracer"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 52.41,
     "Pick Rate 1": 43.19,
@@ -2617,6 +4102,20 @@
     "Move 2": "Moves/Greninja - Double Team.png",
     "Win Rate": 54.11,
     "Pick Rate": 10.36,
+    "recommendedBuild": {
+      "name": "Surf Screen",
+      "heldItems": [
+        "Muscle Band",
+        "Scope Lens",
+        "Charging Charm"
+      ],
+      "altHeldItem": "Accel Bracer",
+      "altHeldItems": [
+        "Accel Bracer",
+        "Attack Weight",
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/X Attack.png",
     "Win Rate 1": 55.36,
     "Pick Rate 1": 65.63,
@@ -2636,6 +4135,16 @@
     "Move 2": "Moves/Greninja - Smokescreen.png",
     "Win Rate": 48.3,
     "Pick Rate": 0.54,
+    "recommendedBuild": {
+      "name": "Double Shuriken",
+      "heldItems": [
+        "Attack Weight",
+        "Muscle Band",
+        "Accel Bracer"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.65,
     "Pick Rate 1": 40.06,
@@ -2655,6 +4164,16 @@
     "Move 2": "Moves/Gyarados - Bounce.png",
     "Win Rate": 46.15,
     "Pick Rate": 0.12,
+    "recommendedBuild": {
+      "name": "Aqua Bounce",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Energy Amplifier"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 48.31,
     "Pick Rate 1": 57.05,
@@ -2674,6 +4193,16 @@
     "Move 2": "Moves/Gyarados - Waterfall.png",
     "Win Rate": 51.11,
     "Pick Rate": 0.07,
+    "recommendedBuild": {
+      "name": "Aqua Bounce",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Energy Amplifier"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 57.45,
     "Pick Rate 1": 52.22,
@@ -2693,6 +4222,16 @@
     "Move 2": "Moves/Gyarados - Waterfall.png",
     "Win Rate": 46.56,
     "Pick Rate": 0.85,
+    "recommendedBuild": {
+      "name": "Water Breath",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Energy Amplifier"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 45.84,
     "Pick Rate 1": 53.25,
@@ -2712,6 +4251,16 @@
     "Move 2": "Moves/Gyarados - Bounce.png",
     "Win Rate": 47.43,
     "Pick Rate": 0.57,
+    "recommendedBuild": {
+      "name": "Bounce Breath",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Energy Amplifier"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.05,
     "Pick Rate 1": 49.59,
@@ -2731,6 +4280,19 @@
     "Move 2": "Moves/Ho-Oh - Sky Attack.png",
     "Win Rate": 51.56,
     "Pick Rate": 1.74,
+    "recommendedBuild": {
+      "name": "Sky Spin",
+      "heldItems": [
+        "Resonant Guard",
+        "Curse Bangle",
+        "Exp Share"
+      ],
+      "altHeldItem": "Attack Weight",
+      "altHeldItems": [
+        "Attack Weight",
+        "Weakness Policy"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 52.55,
     "Pick Rate 1": 46.55,
@@ -2750,6 +4312,16 @@
     "Move 2": "Moves/Ho-Oh - Flamethrower.png",
     "Win Rate": 50.15,
     "Pick Rate": 1.57,
+    "recommendedBuild": {
+      "name": "Flame Fire",
+      "heldItems": [
+        "Attack Weight",
+        "Curse Bangle",
+        "Weakness Policy"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 49.53,
     "Pick Rate 1": 52.2,
@@ -2769,6 +4341,18 @@
     "Move 2": "Moves/Ho-Oh - Flamethrower.png",
     "Win Rate": 48.26,
     "Pick Rate": 0.42,
+    "recommendedBuild": {
+      "name": "Flame Spin",
+      "heldItems": [
+        "Resonant Guard",
+        "Curse Bangle",
+        "Exp Share"
+      ],
+      "altHeldItem": "Rocky Helmet",
+      "altHeldItems": [
+        "Rocky Helmet"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 45.21,
     "Pick Rate 1": 53.38,
@@ -2788,6 +4372,16 @@
     "Move 2": "Moves/Ho-Oh - Sky Attack.png",
     "Win Rate": 51.7,
     "Pick Rate": 0.38,
+    "recommendedBuild": {
+      "name": "Sky Fire",
+      "heldItems": [
+        "Attack Weight",
+        "Curse Bangle",
+        "Weakness Policy"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 53.62,
     "Pick Rate 1": 41.32,
@@ -2807,6 +4401,18 @@
     "Move 2": "Moves/Hoopa - Trick.png",
     "Win Rate": 51.21,
     "Pick Rate": 0.92,
+    "recommendedBuild": {
+      "name": "Shadow Trick (Item options: READ DESCRIPTION)",
+      "heldItems": [
+        "Muscle Band",
+        "Resonant Guard",
+        "Exp Share"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 52.62,
     "Pick Rate 1": 21.87,
@@ -2826,6 +4432,18 @@
     "Move 2": "Moves/Hoopa - Hyperspace Hole.png",
     "Win Rate": 48.38,
     "Pick Rate": 3.16,
+    "recommendedBuild": {
+      "name": "Hyperspace Force (Item Options: READ DESCRIPTION)",
+      "heldItems": [
+        "Resonant Guard",
+        "Muscle Band",
+        "Exp Share"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 48.58,
     "Pick Rate 1": 35.04,
@@ -2845,6 +4463,21 @@
     "Move 2": "Moves/Hoopa - Trick.png",
     "Win Rate": 50.57,
     "Pick Rate": 0.87,
+    "recommendedBuild": {
+      "name": "Phantom Trick (Item options: READ DESCRIPTION)",
+      "heldItems": [
+        "Resonant Guard",
+        "Muscle Band",
+        "Exp Share"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs",
+        "Shell Bell",
+        "Rescue Hood",
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 55.03,
     "Pick Rate 1": 32.36,
@@ -2864,6 +4497,18 @@
     "Move 2": "Moves/Hoopa - Hyperspace Hole.png",
     "Win Rate": 42.08,
     "Pick Rate": 0.09,
+    "recommendedBuild": {
+      "name": "Hyperspace Force (Item Options: READ DESCRIPTION)",
+      "heldItems": [
+        "Resonant Guard",
+        "Muscle Band",
+        "Exp Share"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 43.53,
     "Pick Rate 1": 29.83,
@@ -2880,6 +4525,16 @@
     "Move 2": "Moves/Inteleon - Liquidation.png",
     "Win Rate": 51.15,
     "Pick Rate": 10.8,
+    "recommendedBuild": {
+      "name": "Acrobatics Liquidation",
+      "heldItems": [
+        "Slick Spoon",
+        "Wise Glasses",
+        "Drive Lens"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 51.74,
     "Pick Rate 1": 82.84,
@@ -2899,6 +4554,18 @@
     "Move 2": "Moves/Inteleon - Snipe Shot.png",
     "Win Rate": 41.57,
     "Pick Rate": 0.2,
+    "recommendedBuild": {
+      "name": "Snipe Stinger",
+      "heldItems": [
+        "Choice Specs",
+        "Wise Glasses",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Slick Spoon",
+      "altHeldItems": [
+        "Slick Spoon"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 44.33,
     "Pick Rate 1": 79.61,
@@ -2918,6 +4585,18 @@
     "Move 2": "Moves/Inteleon - Snipe Shot.png",
     "Win Rate": 48.24,
     "Pick Rate": 3.79,
+    "recommendedBuild": {
+      "name": "Snipe Stinger",
+      "heldItems": [
+        "Choice Specs",
+        "Wise Glasses",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Slick Spoon",
+      "altHeldItems": [
+        "Slick Spoon"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 48.35,
     "Pick Rate 1": 92.18,
@@ -2937,6 +4616,16 @@
     "Move 2": "Moves/Inteleon - Liquidation.png",
     "Win Rate": 38.83,
     "Pick Rate": 0.24,
+    "recommendedBuild": {
+      "name": "Liquidation Stinger",
+      "heldItems": [
+        "Slick Spoon",
+        "Wise Glasses",
+        "Drive Lens"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 39.13,
     "Pick Rate 1": 66.99,
@@ -2956,6 +4645,12 @@
     "Move 2": "Moves/Lapras - Bubble Beam.png",
     "Win Rate": 46.79,
     "Pick Rate": 1.85,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 47.61,
     "Pick Rate 1": 49.28,
@@ -2975,6 +4670,12 @@
     "Move 2": "Moves/Lapras - Bubble Beam.png",
     "Win Rate": 48.73,
     "Pick Rate": 3.04,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 49.71,
     "Pick Rate 1": 51.67,
@@ -2994,6 +4695,12 @@
     "Move 2": "Moves/Lapras - Ice Beam.png",
     "Win Rate": 49.93,
     "Pick Rate": 1.12,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 49.94,
     "Pick Rate 1": 57.31,
@@ -3013,6 +4720,12 @@
     "Move 2": "Moves/Lapras - Ice Beam.png",
     "Win Rate": 47.63,
     "Pick Rate": 1.79,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 48.71,
     "Pick Rate 1": 54.73,
@@ -3032,6 +4745,18 @@
     "Move 2": "Moves/Latias - Dragon Pulse.png",
     "Win Rate": 53.29,
     "Pick Rate": 3.09,
+    "recommendedBuild": {
+      "name": "Cheer Pulse",
+      "heldItems": [
+        "Drive Lens",
+        "Sp. Atk Specs",
+        "Resonant Guard"
+      ],
+      "altHeldItem": "Shell Bell",
+      "altHeldItems": [
+        "Shell Bell"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 55.26,
     "Pick Rate 1": 45.05,
@@ -3051,6 +4776,18 @@
     "Move 2": "Moves/Latias - Dragon Pulse.png",
     "Win Rate": 48.85,
     "Pick Rate": 4.81,
+    "recommendedBuild": {
+      "name": "Mist Pulse",
+      "heldItems": [
+        "Shell Bell",
+        "Curse Incense",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Resonant Guard",
+      "altHeldItems": [
+        "Resonant Guard"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 50.09,
     "Pick Rate 1": 44.47,
@@ -3070,6 +4807,18 @@
     "Move 2": "Moves/Latias - Dragon Breath.png",
     "Win Rate": 52.37,
     "Pick Rate": 2.41,
+    "recommendedBuild": {
+      "name": "Cheer Breath",
+      "heldItems": [
+        "Shell Bell",
+        "Exp Share",
+        "Resonant Guard"
+      ],
+      "altHeldItem": "Drive Lens",
+      "altHeldItems": [
+        "Drive Lens"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 54.12,
     "Pick Rate 1": 64.0,
@@ -3089,6 +4838,18 @@
     "Move 2": "Moves/Latias - Dragon Breath.png",
     "Win Rate": 48.07,
     "Pick Rate": 1.58,
+    "recommendedBuild": {
+      "name": "Mist Breath",
+      "heldItems": [
+        "Curse Incense",
+        "Shell Bell",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Resonant Guard",
+      "altHeldItems": [
+        "Resonant Guard"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 47.17,
     "Pick Rate 1": 51.26,
@@ -3108,6 +4869,18 @@
     "Move 2": "Moves/Latios - Draco Meteor.png",
     "Win Rate": 50.7,
     "Pick Rate": 17.03,
+    "recommendedBuild": {
+      "name": "Draco-kinesis",
+      "heldItems": [
+        "Slick Spoon",
+        "Curse Incense",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Wise Glasses",
+      "altHeldItems": [
+        "Wise Glasses"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 51.27,
     "Pick Rate 1": 82.08,
@@ -3127,6 +4900,16 @@
     "Move 2": "Moves/Latios - Dragon Pulse.png",
     "Win Rate": 47.44,
     "Pick Rate": 1.85,
+    "recommendedBuild": {
+      "name": "Dragon-kinesis",
+      "heldItems": [
+        "Slick Spoon",
+        "Wise Glasses",
+        "Drive Lens"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 48.12,
     "Pick Rate 1": 83.46,
@@ -3146,6 +4929,18 @@
     "Move 2": "Moves/Latios - Draco Meteor.png",
     "Win Rate": 49.88,
     "Pick Rate": 6.31,
+    "recommendedBuild": {
+      "name": "Draco Purge",
+      "heldItems": [
+        "Slick Spoon",
+        "Curse Incense",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Wise Glasses",
+      "altHeldItems": [
+        "Wise Glasses"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 50.57,
     "Pick Rate 1": 83.48,
@@ -3165,6 +4960,16 @@
     "Move 2": "Moves/Latios - Dragon Pulse.png",
     "Win Rate": 49.17,
     "Pick Rate": 9.97,
+    "recommendedBuild": {
+      "name": "Dragon-kinesis",
+      "heldItems": [
+        "Slick Spoon",
+        "Wise Glasses",
+        "Drive Lens"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.47,
     "Pick Rate 1": 88.69,
@@ -3184,6 +4989,18 @@
     "Move 2": "Moves/Leafeon - Aerial Ace.png",
     "Win Rate": 48.7,
     "Pick Rate": 6.72,
+    "recommendedBuild": {
+      "name": "Razor Ace",
+      "heldItems": [
+        "Razor Claw",
+        "Energy Amplifier",
+        "Attack Weight"
+      ],
+      "altHeldItem": "Accel Bracer",
+      "altHeldItems": [
+        "Accel Bracer"
+      ]
+    },
     "Item 1": "Battle_Items/X Attack.png",
     "Win Rate 1": 50.58,
     "Pick Rate 1": 70.38,
@@ -3203,6 +5020,18 @@
     "Move 2": "Moves/Leafeon - Leaf Blade.png",
     "Win Rate": 46.37,
     "Pick Rate": 1.06,
+    "recommendedBuild": {
+      "name": "Razor Ace",
+      "heldItems": [
+        "Razor Claw",
+        "Energy Amplifier",
+        "Attack Weight"
+      ],
+      "altHeldItem": "Accel Bracer",
+      "altHeldItems": [
+        "Accel Bracer"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 44.61,
     "Pick Rate 1": 33.36,
@@ -3222,6 +5051,16 @@
     "Move 2": "Moves/Leafeon - Leaf Blade.png",
     "Win Rate": 43.15,
     "Pick Rate": 0.53,
+    "recommendedBuild": {
+      "name": "Solar Leaf",
+      "heldItems": [
+        "Attack Weight",
+        "Energy Amplifier",
+        "Accel Bracer"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 45.68,
     "Pick Rate 1": 40.12,
@@ -3241,6 +5080,16 @@
     "Move 2": "Moves/Leafeon - Aerial Ace.png",
     "Win Rate": 44.44,
     "Pick Rate": 0.12,
+    "recommendedBuild": {
+      "name": "Solar Leaf",
+      "heldItems": [
+        "Attack Weight",
+        "Energy Amplifier",
+        "Accel Bracer"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Attack.png",
     "Win Rate 1": 47.76,
     "Pick Rate 1": 41.36,
@@ -3260,6 +5109,19 @@
     "Move 2": "Moves/Lucario - Bone Rush.png",
     "Win Rate": 48.92,
     "Pick Rate": 0.46,
+    "recommendedBuild": {
+      "name": "Power-Up Rush",
+      "heldItems": [
+        "Attack Weight",
+        "Weakness Policy",
+        "Razor Claw"
+      ],
+      "altHeldItem": "Accel Bracer",
+      "altHeldItems": [
+        "Accel Bracer",
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 45.34,
     "Pick Rate 1": 66.06,
@@ -3279,6 +5141,18 @@
     "Move 2": "Moves/Lucario - Bone Rush.png",
     "Win Rate": 49.78,
     "Pick Rate": 5.96,
+    "recommendedBuild": {
+      "name": "Extreme Rush",
+      "heldItems": [
+        "Attack Weight",
+        "Weakness Policy",
+        "Razor Claw"
+      ],
+      "altHeldItem": "Muscle Band",
+      "altHeldItems": [
+        "Muscle Band"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 50.84,
     "Pick Rate 1": 85.47,
@@ -3298,6 +5172,18 @@
     "Move 2": "Moves/Lucario - Close Combat.png",
     "Win Rate": 42.36,
     "Pick Rate": 0.16,
+    "recommendedBuild": {
+      "name": "Extreme Rush",
+      "heldItems": [
+        "Attack Weight",
+        "Weakness Policy",
+        "Razor Claw"
+      ],
+      "altHeldItem": "Muscle Band",
+      "altHeldItems": [
+        "Muscle Band"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 40.0,
     "Pick Rate 1": 29.56,
@@ -3317,6 +5203,16 @@
     "Move 2": "Moves/Lucario - Close Combat.png",
     "Win Rate": 45.64,
     "Pick Rate": 1.22,
+    "recommendedBuild": {
+      "name": "Power-Up Combat",
+      "heldItems": [
+        "Attack Weight",
+        "Weakness Policy",
+        "Accel Bracer"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 46.07,
     "Pick Rate 1": 60.56,
@@ -3336,6 +5232,18 @@
     "Move 2": "Moves/Machamp - Submission.png",
     "Win Rate": 51.4,
     "Pick Rate": 8.64,
+    "recommendedBuild": {
+      "name": "Cross Submission",
+      "heldItems": [
+        "Attack Weight",
+        "Razor Claw",
+        "Scope Lens"
+      ],
+      "altHeldItem": "Accel Bracer",
+      "altHeldItems": [
+        "Accel Bracer"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 52.53,
     "Pick Rate 1": 72.42,
@@ -3355,6 +5263,18 @@
     "Move 2": "Moves/Machamp - Dynamic Punch.png",
     "Win Rate": 49.88,
     "Pick Rate": 1.99,
+    "recommendedBuild": {
+      "name": "Dynamic Combat",
+      "heldItems": [
+        "Accel Bracer",
+        "Energy Amplifier",
+        "Attack Weight"
+      ],
+      "altHeldItem": "Razor Claw",
+      "altHeldItems": [
+        "Razor Claw"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 50.67,
     "Pick Rate 1": 66.07,
@@ -3374,6 +5294,16 @@
     "Move 2": "Moves/Machamp - Submission.png",
     "Win Rate": 44.1,
     "Pick Rate": 1.32,
+    "recommendedBuild": {
+      "name": "Submission Combat",
+      "heldItems": [
+        "Accel Bracer",
+        "Energy Amplifier",
+        "Attack Weight"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 44.85,
     "Pick Rate 1": 39.87,
@@ -3393,6 +5323,18 @@
     "Move 2": "Moves/Machamp - Dynamic Punch.png",
     "Win Rate": 52.52,
     "Pick Rate": 0.58,
+    "recommendedBuild": {
+      "name": "Cross Punch",
+      "heldItems": [
+        "Razor Claw",
+        "Attack Weight",
+        "Accel Bracer"
+      ],
+      "altHeldItem": "Scope Lens",
+      "altHeldItems": [
+        "Scope Lens"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 52.73,
     "Pick Rate 1": 70.42,
@@ -3412,6 +5354,18 @@
     "Move 2": "Moves/Mamoswine - Earthquake.png",
     "Win Rate": 49.87,
     "Pick Rate": 12.47,
+    "recommendedBuild": {
+      "name": "Ice Quake",
+      "heldItems": [
+        "Focus Band",
+        "Resonant Guard",
+        "Exp Share"
+      ],
+      "altHeldItem": "Vanguard Bell",
+      "altHeldItems": [
+        "Vanguard Bell"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 50.54,
     "Pick Rate 1": 80.48,
@@ -3431,6 +5385,18 @@
     "Move 2": "Moves/Mamoswine - High Horsepower.png",
     "Win Rate": 47.55,
     "Pick Rate": 3.39,
+    "recommendedBuild": {
+      "name": "Ice Quake",
+      "heldItems": [
+        "Focus Band",
+        "Resonant Guard",
+        "Exp Share"
+      ],
+      "altHeldItem": "Vanguard Bell",
+      "altHeldItems": [
+        "Vanguard Bell"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 48.38,
     "Pick Rate 1": 37.61,
@@ -3450,6 +5416,18 @@
     "Move 2": "Moves/Mamoswine - High Horsepower.png",
     "Win Rate": 48.02,
     "Pick Rate": 2.57,
+    "recommendedBuild": {
+      "name": "Icicle Horsepower",
+      "heldItems": [
+        "Focus Band",
+        "Resonant Guard",
+        "Exp Share"
+      ],
+      "altHeldItem": "Vanguard Bell",
+      "altHeldItems": [
+        "Vanguard Bell"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 49.26,
     "Pick Rate 1": 38.23,
@@ -3469,6 +5447,18 @@
     "Move 2": "Moves/Mamoswine - Earthquake.png",
     "Win Rate": 52.07,
     "Pick Rate": 0.54,
+    "recommendedBuild": {
+      "name": "Icicle Quake",
+      "heldItems": [
+        "Focus Band",
+        "Resonant Guard",
+        "Exp Share"
+      ],
+      "altHeldItem": "Vanguard Bell",
+      "altHeldItems": [
+        "Vanguard Bell"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 57.68,
     "Pick Rate 1": 38.09,
@@ -3487,7 +5477,17 @@
     "Move 1": "Moves/Mega Charizard X - Fire Punch.png",
     "Move 2": "Moves/Mega Charizard X - Flare Blitz.png",
     "Win Rate": 49.31,
-    "Pick Rate": 13.7
+    "Pick Rate": 13.7,
+    "recommendedBuild": {
+      "name": "Fire Blitz",
+      "heldItems": [
+        "Charizardite X",
+        "Scope Lens",
+        "Attack Weight"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    }
   },
   {
     "Name": "Mega Charizard Y",
@@ -3497,7 +5497,19 @@
     "Move 1": "Moves/Mega Charizard Y - Flamethrower.png",
     "Move 2": "Moves/Mega Charizard Y - Fire Blast.png",
     "Win Rate": 52.61,
-    "Pick Rate": 18.71
+    "Pick Rate": 18.71,
+    "recommendedBuild": {
+      "name": "Flame Blast",
+      "heldItems": [
+        "Charizardite Y",
+        "Attack Weight",
+        "Curse Bangle"
+      ],
+      "altHeldItem": "Scope Lens",
+      "altHeldItems": [
+        "Scope Lens"
+      ]
+    }
   },
   {
     "Name": "Mega Gyarados",
@@ -3507,7 +5519,21 @@
     "Move 1": "Moves/Mega Gyarados - Dragon Breath.png",
     "Move 2": "Moves/Mega Gyarados - Waterfall.png",
     "Win Rate": 51.03,
-    "Pick Rate": 5.35
+    "Pick Rate": 5.35,
+    "recommendedBuild": {
+      "name": "Water Breath (Hyper offense)",
+      "heldItems": [
+        "Gyaradosite",
+        "Attack Weight",
+        "Accel Bracer"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier",
+        "Focus Band",
+        "Rocky Helmet"
+      ]
+    }
   },
   {
     "Name": "Mega Lucario",
@@ -3517,7 +5543,19 @@
     "Move 1": "Moves/Mega Lucario - Power-Up Punch.png",
     "Move 2": "Moves/Mega Lucario - Close Combat.png",
     "Win Rate": 51.8,
-    "Pick Rate": 18.36
+    "Pick Rate": 18.36,
+    "recommendedBuild": {
+      "name": "Items Only",
+      "heldItems": [
+        "Lucarionite",
+        "Attack Weight",
+        "Weakness Policy"
+      ],
+      "altHeldItem": "Razor Claw",
+      "altHeldItems": [
+        "Razor Claw"
+      ]
+    }
   },
   {
     "Name": "Meowscarada",
@@ -3528,6 +5566,18 @@
     "Move 2": "Moves/Meowscarada - Double Team.png",
     "Win Rate": 53.17,
     "Pick Rate": 0.1,
+    "recommendedBuild": {
+      "name": "Night Blaze",
+      "heldItems": [
+        "Scope Lens",
+        "Razor Claw",
+        "Attack Weight"
+      ],
+      "altHeldItem": "Accel Bracer",
+      "altHeldItems": [
+        "Accel Bracer"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 66.67,
     "Pick Rate 1": 28.57,
@@ -3547,6 +5597,18 @@
     "Move 2": "Moves/Meowscarada - Double Team.png",
     "Win Rate": 51.57,
     "Pick Rate": 2.08,
+    "recommendedBuild": {
+      "name": "Double Trick",
+      "heldItems": [
+        "Razor Claw",
+        "Energy Amplifier",
+        "Accel Bracer"
+      ],
+      "altHeldItem": "Attack Weight",
+      "altHeldItems": [
+        "Attack Weight"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 52.62,
     "Pick Rate 1": 72.45,
@@ -3566,6 +5628,18 @@
     "Move 2": "Moves/Meowscarada - Trailblaze.png",
     "Win Rate": 47.94,
     "Pick Rate": 2.69,
+    "recommendedBuild": {
+      "name": "Night Blaze",
+      "heldItems": [
+        "Scope Lens",
+        "Razor Claw",
+        "Attack Weight"
+      ],
+      "altHeldItem": "Accel Bracer",
+      "altHeldItems": [
+        "Accel Bracer"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 48.58,
     "Pick Rate 1": 43.9,
@@ -3585,6 +5659,18 @@
     "Move 2": "Moves/Meowscarada - Trailblaze.png",
     "Win Rate": 39.89,
     "Pick Rate": 0.14,
+    "recommendedBuild": {
+      "name": "Flower Blaze",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Energy Amplifier"
+      ],
+      "altHeldItem": "Razor Claw",
+      "altHeldItems": [
+        "Razor Claw"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 36.47,
     "Pick Rate 1": 46.45,
@@ -3604,6 +5690,19 @@
     "Move 2": "Moves/Meowth - Assurance.png",
     "Win Rate": 50.03,
     "Pick Rate": 8.09,
+    "recommendedBuild": {
+      "name": "Fury Assurance",
+      "heldItems": [
+        "Attack Weight",
+        "Muscle Band",
+        "Razor Claw"
+      ],
+      "altHeldItem": "Accel Bracer",
+      "altHeldItems": [
+        "Accel Bracer",
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 50.57,
     "Pick Rate 1": 41.67,
@@ -3623,6 +5722,16 @@
     "Move 2": "Moves/Meowth - Feint Attack.png",
     "Win Rate": 55.24,
     "Pick Rate": 2.98,
+    "recommendedBuild": {
+      "name": "Pay Attack",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Energy Amplifier"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 54.86,
     "Pick Rate 1": 30.11,
@@ -3642,6 +5751,16 @@
     "Move 2": "Moves/Meowth - Assurance.png",
     "Win Rate": 46.04,
     "Pick Rate": 0.51,
+    "recommendedBuild": {
+      "name": "Pay Attack",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Energy Amplifier"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.74,
     "Pick Rate 1": 28.55,
@@ -3661,6 +5780,18 @@
     "Move 2": "Moves/Meowth - Feint Attack.png",
     "Win Rate": 58.96,
     "Pick Rate": 15.0,
+    "recommendedBuild": {
+      "name": "Fury Attack",
+      "heldItems": [
+        "Attack Weight",
+        "Razor Claw",
+        "Accel Bracer"
+      ],
+      "altHeldItem": "Muscle Band",
+      "altHeldItems": [
+        "Muscle Band"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 58.69,
     "Pick Rate 1": 27.61,
@@ -3680,6 +5811,16 @@
     "Move 2": "Moves/Metagross - Zen Headbutt.png",
     "Win Rate": 46.68,
     "Pick Rate": 1.22,
+    "recommendedBuild": {
+      "name": "Meteor Zen",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Weakness Policy"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 46.31,
     "Pick Rate 1": 36.53,
@@ -3699,6 +5840,18 @@
     "Move 2": "Moves/Metagross - Magnet Rise.png",
     "Win Rate": 47.26,
     "Pick Rate": 1.03,
+    "recommendedBuild": {
+      "name": "Gyro Rise",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Weakness Policy"
+      ],
+      "altHeldItem": "Razor Claw",
+      "altHeldItems": [
+        "Razor Claw"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 45.63,
     "Pick Rate 1": 53.33,
@@ -3718,6 +5871,16 @@
     "Move 2": "Moves/Metagross - Magnet Rise.png",
     "Win Rate": 46.9,
     "Pick Rate": 0.33,
+    "recommendedBuild": {
+      "name": "Meteor Zen",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Weakness Policy"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 45.09,
     "Pick Rate 1": 39.77,
@@ -3737,6 +5900,18 @@
     "Move 2": "Moves/Metagross - Zen Headbutt.png",
     "Win Rate": 45.23,
     "Pick Rate": 0.18,
+    "recommendedBuild": {
+      "name": "Gyro Zen",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Weakness Policy"
+      ],
+      "altHeldItem": "Razor Claw",
+      "altHeldItems": [
+        "Razor Claw"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 48.39,
     "Pick Rate 1": 38.59,
@@ -3764,6 +5939,12 @@
     ],
     "Win Rate": 49.28,
     "Pick Rate": 9.24,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.72,
     "Pick Rate 1": 94.07,
@@ -3783,6 +5964,18 @@
     "Move 2": "Moves/Mewtwo X - Teleport.png",
     "Win Rate": 46.41,
     "Pick Rate": 1.34,
+    "recommendedBuild": {
+      "name": "Future Teleport",
+      "heldItems": [
+        "Mewtwonite X",
+        "Attack Weight",
+        "Weakness Policy"
+      ],
+      "altHeldItem": "Focus Band",
+      "altHeldItems": [
+        "Focus Band"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 48.46,
     "Pick Rate 1": 51.88,
@@ -3802,6 +5995,18 @@
     "Move 2": "Moves/Mewtwo X - Recover.png",
     "Win Rate": 48.28,
     "Pick Rate": 2.56,
+    "recommendedBuild": {
+      "name": "Future Recover",
+      "heldItems": [
+        "Mewtwonite X",
+        "Attack Weight",
+        "Weakness Policy"
+      ],
+      "altHeldItem": "Focus Band",
+      "altHeldItems": [
+        "Focus Band"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 48.67,
     "Pick Rate 1": 48.13,
@@ -3821,6 +6026,18 @@
     "Move 2": "Moves/Mewtwo X - Teleport.png",
     "Win Rate": 46.16,
     "Pick Rate": 1.04,
+    "recommendedBuild": {
+      "name": "Psystrike Teleport",
+      "heldItems": [
+        "Mewtwonite X",
+        "Attack Weight",
+        "Weakness Policy"
+      ],
+      "altHeldItem": "Focus Band",
+      "altHeldItems": [
+        "Focus Band"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 45.14,
     "Pick Rate 1": 42.54,
@@ -3840,6 +6057,18 @@
     "Move 2": "Moves/Mewtwo X - Recover.png",
     "Win Rate": 48.1,
     "Pick Rate": 0.92,
+    "recommendedBuild": {
+      "name": "Psystrike Recover",
+      "heldItems": [
+        "Mewtwonite X",
+        "Attack Weight",
+        "Weakness Policy"
+      ],
+      "altHeldItem": "Focus Band",
+      "altHeldItems": [
+        "Focus Band"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 50.56,
     "Pick Rate 1": 59.6,
@@ -3859,6 +6088,12 @@
     "Move 2": "Moves/Mewtwo Y - Recover.png",
     "Win Rate": 45.17,
     "Pick Rate": 0.32,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Attack.png",
     "Win Rate 1": 44.97,
     "Pick Rate 1": 35.99,
@@ -3878,6 +6113,12 @@
     "Move 2": "Moves/Mewtwo Y - Teleport.png",
     "Win Rate": 48.39,
     "Pick Rate": 0.97,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Attack.png",
     "Win Rate 1": 47.97,
     "Pick Rate 1": 83.22,
@@ -3897,6 +6138,12 @@
     "Move 2": "Moves/Mewtwo Y - Recover.png",
     "Win Rate": 50.76,
     "Pick Rate": 0.71,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Attack.png",
     "Win Rate 1": 51.61,
     "Pick Rate 1": 57.03,
@@ -3916,6 +6163,12 @@
     "Move 2": "Moves/Mewtwo Y - Teleport.png",
     "Win Rate": 47.24,
     "Pick Rate": 3.69,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Attack.png",
     "Win Rate 1": 47.58,
     "Pick Rate 1": 80.55,
@@ -3935,6 +6188,18 @@
     "Move 2": "Moves/Mimikyu - Shadow Sneak.png",
     "Win Rate": 48.01,
     "Pick Rate": 12.56,
+    "recommendedBuild": {
+      "name": "Sneaky Play",
+      "heldItems": [
+        "Attack Weight",
+        "Accel Bracer",
+        "Curse Bangle"
+      ],
+      "altHeldItem": "Razor Claw",
+      "altHeldItems": [
+        "Razor Claw"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 48.58,
     "Pick Rate 1": 31.35,
@@ -3954,6 +6219,18 @@
     "Move 2": "Moves/Mimikyu - Shadow Sneak.png",
     "Win Rate": 46.98,
     "Pick Rate": 4.92,
+    "recommendedBuild": {
+      "name": "Shadows",
+      "heldItems": [
+        "Razor Claw",
+        "Muscle Band",
+        "Attack Weight"
+      ],
+      "altHeldItem": "Curse Bangle",
+      "altHeldItems": [
+        "Curse Bangle"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 48.91,
     "Pick Rate 1": 42.7,
@@ -3973,6 +6250,18 @@
     "Move 2": "Moves/Mimikyu - Trick Room.png",
     "Win Rate": 52.7,
     "Pick Rate": 2.51,
+    "recommendedBuild": {
+      "name": "Trick Claw",
+      "heldItems": [
+        "Razor Claw",
+        "Muscle Band",
+        "Accel Bracer"
+      ],
+      "altHeldItem": "Attack Weight",
+      "altHeldItems": [
+        "Attack Weight"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 53.92,
     "Pick Rate 1": 84.43,
@@ -3992,6 +6281,18 @@
     "Move 2": "Moves/Miraidon - Parabolic Charge.png",
     "Win Rate": 47.96,
     "Pick Rate": 0.94,
+    "recommendedBuild": {
+      "name": "Parabolic Drift",
+      "heldItems": [
+        "Shell Bell",
+        "Wise Glasses",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 47.2,
     "Pick Rate 1": 36.46,
@@ -4011,6 +6312,18 @@
     "Move 2": "Moves/Miraidon - Parabolic Charge.png",
     "Win Rate": 43.61,
     "Pick Rate": 0.1,
+    "recommendedBuild": {
+      "name": "Thunder Beam",
+      "heldItems": [
+        "Curse Incense",
+        "Wise Glasses",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 46.46,
     "Pick Rate 1": 74.44,
@@ -4030,6 +6343,18 @@
     "Move 2": "Moves/Miraidon - Thunder.png",
     "Win Rate": 49.14,
     "Pick Rate": 3.01,
+    "recommendedBuild": {
+      "name": "Thunder Beam",
+      "heldItems": [
+        "Curse Incense",
+        "Wise Glasses",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.97,
     "Pick Rate 1": 75.23,
@@ -4049,6 +6374,12 @@
     "Move 2": "Moves/Moltres - Heat Wave.png",
     "Win Rate": 52.77,
     "Pick Rate": 5.76,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 55.89,
     "Pick Rate 1": 50.96,
@@ -4068,6 +6399,18 @@
     "Move 2": "Moves/Mr. Mime - Barrier.png",
     "Win Rate": 51.61,
     "Pick Rate": 7.52,
+    "recommendedBuild": {
+      "name": "Confusion Barrier",
+      "heldItems": [
+        "Resonant Guard",
+        "Focus Band",
+        "Exp Share"
+      ],
+      "altHeldItem": "Buddy Barrier",
+      "altHeldItems": [
+        "Buddy Barrier"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 51.01,
     "Pick Rate 1": 61.74,
@@ -4087,6 +6430,18 @@
     "Move 2": "Moves/Mr. Mime - Power Swap.png",
     "Win Rate": 48.36,
     "Pick Rate": 1.16,
+    "recommendedBuild": {
+      "name": "Psychic Swap",
+      "heldItems": [
+        "Resonant Guard",
+        "Sp. Atk Specs",
+        "Exp Share"
+      ],
+      "altHeldItem": "Vanguard Bell",
+      "altHeldItems": [
+        "Vanguard Bell"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 47.99,
     "Pick Rate 1": 47.57,
@@ -4106,6 +6461,18 @@
     "Move 2": "Moves/Mr. Mime - Power Swap.png",
     "Win Rate": 48.24,
     "Pick Rate": 0.5,
+    "recommendedBuild": {
+      "name": "Confusion Swap",
+      "heldItems": [
+        "Resonant Guard",
+        "Slick Spoon",
+        "Exp Share"
+      ],
+      "altHeldItem": "Sp. Atk Specs",
+      "altHeldItems": [
+        "Sp. Atk Specs"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 47.02,
     "Pick Rate 1": 51.3,
@@ -4125,6 +6492,12 @@
     "Move 2": "Moves/Pawmot - Volt Switch.png",
     "Win Rate": 52.24,
     "Pick Rate": 3.87,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 52.14,
     "Pick Rate 1": 60.03,
@@ -4144,6 +6517,12 @@
     "Move 2": "Moves/Pawmot - Mach Punch.png",
     "Win Rate": 48.42,
     "Pick Rate": 1.82,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 52.9,
     "Pick Rate 1": 42.79,
@@ -4163,6 +6542,12 @@
     "Move 2": "Moves/Pawmot - Volt Switch.png",
     "Win Rate": 45.29,
     "Pick Rate": 0.74,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 49.06,
     "Pick Rate 1": 32.89,
@@ -4182,6 +6567,12 @@
     "Move 2": "Moves/Pawmot - Mach Punch.png",
     "Win Rate": 47.62,
     "Pick Rate": 0.34,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 51.61,
     "Pick Rate 1": 28.12,
@@ -4201,6 +6592,18 @@
     "Move 2": "Moves/Pikachu - Volt Tackle.png",
     "Win Rate": 48.42,
     "Pick Rate": 2.6,
+    "recommendedBuild": {
+      "name": "Thunder Tackle",
+      "heldItems": [
+        "Energy Amplifier",
+        "Curse Incense",
+        "Slick Spoon"
+      ],
+      "altHeldItem": "Buddy Barrier",
+      "altHeldItems": [
+        "Buddy Barrier"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.16,
     "Pick Rate 1": 40.38,
@@ -4220,6 +6623,18 @@
     "Move 2": "Moves/Pikachu - Thunderbolt.png",
     "Win Rate": 41.31,
     "Pick Rate": 0.27,
+    "recommendedBuild": {
+      "name": "Electro Bolt",
+      "heldItems": [
+        "Energy Amplifier",
+        "Slick Spoon",
+        "Shell Bell"
+      ],
+      "altHeldItem": "Drive Lens",
+      "altHeldItems": [
+        "Drive Lens"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 44.53,
     "Pick Rate 1": 36.47,
@@ -4239,6 +6654,18 @@
     "Move 2": "Moves/Pikachu - Thunderbolt.png",
     "Win Rate": 47.4,
     "Pick Rate": 2.07,
+    "recommendedBuild": {
+      "name": "Full Thunder",
+      "heldItems": [
+        "Energy Amplifier",
+        "Curse Incense",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.25,
     "Pick Rate 1": 51.68,
@@ -4258,6 +6685,18 @@
     "Move 2": "Moves/Pikachu - Volt Tackle.png",
     "Win Rate": 47.96,
     "Pick Rate": 9.55,
+    "recommendedBuild": {
+      "name": "Electro Tackle",
+      "heldItems": [
+        "Energy Amplifier",
+        "Slick Spoon",
+        "Buddy Barrier"
+      ],
+      "altHeldItem": "Shell Bell",
+      "altHeldItems": [
+        "Shell Bell"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 48.01,
     "Pick Rate 1": 46.65,
@@ -4277,6 +6716,18 @@
     "Move 2": "Moves/Psyduck - Psychic.png",
     "Win Rate": 52.25,
     "Pick Rate": 1.58,
+    "recommendedBuild": {
+      "name": "Disable- READ EXPLANATION",
+      "heldItems": [
+        "Exp Share",
+        "Resonant Guard",
+        "Buddy Barrier"
+      ],
+      "altHeldItem": "Curse Incense",
+      "altHeldItems": [
+        "Curse Incense"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 54.64,
     "Pick Rate 1": 66.6,
@@ -4296,6 +6747,18 @@
     "Move 2": "Moves/Psyduck - Disable.png",
     "Win Rate": 51.09,
     "Pick Rate": 5.69,
+    "recommendedBuild": {
+      "name": "Psychic- READ EXPLANATION",
+      "heldItems": [
+        "Exp Share",
+        "Curse Incense",
+        "Shell Bell"
+      ],
+      "altHeldItem": "Resonant Guard",
+      "altHeldItems": [
+        "Resonant Guard"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 52.3,
     "Pick Rate 1": 60.14,
@@ -4315,6 +6778,18 @@
     "Move 2": "Moves/Psyduck - Disable.png",
     "Win Rate": 53.34,
     "Pick Rate": 2.36,
+    "recommendedBuild": {
+      "name": "Disable- READ EXPLANATION",
+      "heldItems": [
+        "Exp Share",
+        "Resonant Guard",
+        "Buddy Barrier"
+      ],
+      "altHeldItem": "Curse Incense",
+      "altHeldItems": [
+        "Curse Incense"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 54.69,
     "Pick Rate 1": 66.45,
@@ -4334,6 +6809,18 @@
     "Move 2": "Moves/Psyduck - Psychic.png",
     "Win Rate": 50.37,
     "Pick Rate": 6.74,
+    "recommendedBuild": {
+      "name": "Psychic- READ EXPLANATION",
+      "heldItems": [
+        "Exp Share",
+        "Curse Incense",
+        "Shell Bell"
+      ],
+      "altHeldItem": "Resonant Guard",
+      "altHeldItems": [
+        "Resonant Guard"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 50.97,
     "Pick Rate 1": 65.83,
@@ -4353,6 +6840,18 @@
     "Move 2": "Moves/Sableye - Confuse Ray.png",
     "Win Rate": 49.14,
     "Pick Rate": 3.15,
+    "recommendedBuild": {
+      "name": "Confuse Knock",
+      "heldItems": [
+        "Float Stone",
+        "Resonant Guard",
+        "Exp Share"
+      ],
+      "altHeldItem": "Vanguard Bell",
+      "altHeldItems": [
+        "Vanguard Bell"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 49.43,
     "Pick Rate 1": 78.92,
@@ -4372,6 +6871,18 @@
     "Move 2": "Moves/Sableye - Feint Attack.png",
     "Win Rate": 45.26,
     "Pick Rate": 1.91,
+    "recommendedBuild": {
+      "name": "Feint Off",
+      "heldItems": [
+        "Float Stone",
+        "Curse Bangle",
+        "Exp Share"
+      ],
+      "altHeldItem": "Vanguard Bell",
+      "altHeldItems": [
+        "Vanguard Bell"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 46.28,
     "Pick Rate 1": 64.77,
@@ -4391,6 +6902,18 @@
     "Move 2": "Moves/Sableye - Confuse Ray.png",
     "Win Rate": 46.75,
     "Pick Rate": 0.59,
+    "recommendedBuild": {
+      "name": "Shadow Ray",
+      "heldItems": [
+        "Float Stone",
+        "Resonant Guard",
+        "Exp Share"
+      ],
+      "altHeldItem": "Vanguard Bell",
+      "altHeldItems": [
+        "Vanguard Bell"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 45.78,
     "Pick Rate 1": 64.68,
@@ -4410,6 +6933,18 @@
     "Move 2": "Moves/Sableye - Feint Attack.png",
     "Win Rate": 44.48,
     "Pick Rate": 0.22,
+    "recommendedBuild": {
+      "name": "Sneak Attack",
+      "heldItems": [
+        "Float Stone",
+        "Curse Bangle",
+        "Exp Share"
+      ],
+      "altHeldItem": "Vanguard Bell",
+      "altHeldItems": [
+        "Vanguard Bell"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 42.86,
     "Pick Rate 1": 60.34,
@@ -4429,6 +6964,18 @@
     "Move 2": "Moves/Scizor - Double Hit.png",
     "Win Rate": 50.62,
     "Pick Rate": 3.69,
+    "recommendedBuild": {
+      "name": "Bullet Hit",
+      "heldItems": [
+        "Accel Bracer",
+        "Attack Weight",
+        "Energy Amplifier"
+      ],
+      "altHeldItem": "Razor Claw",
+      "altHeldItems": [
+        "Razor Claw"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 50.7,
     "Pick Rate 1": 45.8,
@@ -4448,6 +6995,18 @@
     "Move 2": "Moves/Scizor - Swords Dance.png",
     "Win Rate": 47.67,
     "Pick Rate": 5.62,
+    "recommendedBuild": {
+      "name": "Bullet Dance",
+      "heldItems": [
+        "Accel Bracer",
+        "Attack Weight",
+        "Energy Amplifier"
+      ],
+      "altHeldItem": "Razor Claw",
+      "altHeldItems": [
+        "Razor Claw"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 45.61,
     "Pick Rate 1": 35.78,
@@ -4467,6 +7026,20 @@
     "Move 2": "Moves/Scyther - Double Hit.png",
     "Win Rate": 48.0,
     "Pick Rate": 3.39,
+    "recommendedBuild": {
+      "name": "Double Wingbeat",
+      "heldItems": [
+        "Accel Bracer",
+        "Attack Weight",
+        "Energy Amplifier"
+      ],
+      "altHeldItem": "Charging Charm",
+      "altHeldItems": [
+        "Charging Charm",
+        "Muscle Band",
+        "Razor Claw"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 49.89,
     "Pick Rate 1": 73.43,
@@ -4486,6 +7059,20 @@
     "Move 2": "Moves/Scyther - Swords Dance.png",
     "Win Rate": 48.61,
     "Pick Rate": 1.46,
+    "recommendedBuild": {
+      "name": "Double Wingbeat",
+      "heldItems": [
+        "Accel Bracer",
+        "Attack Weight",
+        "Energy Amplifier"
+      ],
+      "altHeldItem": "Charging Charm",
+      "altHeldItems": [
+        "Charging Charm",
+        "Muscle Band",
+        "Razor Claw"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 49.44,
     "Pick Rate 1": 93.56,
@@ -4505,6 +7092,18 @@
     "Move 2": "Moves/Sirfetch'd - Detect.png",
     "Win Rate": 55.8,
     "Pick Rate": 17.59,
+    "recommendedBuild": {
+      "name": "Detect Blade",
+      "heldItems": [
+        "Attack Weight",
+        "Scope Lens",
+        "Razor Claw"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 56.46,
     "Pick Rate 1": 32.05,
@@ -4524,6 +7123,18 @@
     "Move 2": "Moves/Sirfetch'd - Detect.png",
     "Win Rate": 50.09,
     "Pick Rate": 6.87,
+    "recommendedBuild": {
+      "name": "Detect Cutter",
+      "heldItems": [
+        "Attack Weight",
+        "Scope Lens",
+        "Razor Claw"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 51.41,
     "Pick Rate 1": 31.92,
@@ -4543,6 +7154,18 @@
     "Move 2": "Moves/Sirfetch'd - Brutal Swing.png",
     "Win Rate": 47.9,
     "Pick Rate": 1.15,
+    "recommendedBuild": {
+      "name": "Detect Cutter",
+      "heldItems": [
+        "Attack Weight",
+        "Scope Lens",
+        "Razor Claw"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 47.17,
     "Pick Rate 1": 27.12,
@@ -4562,6 +7185,18 @@
     "Move 2": "Moves/Slowbro - Telekinesis.png",
     "Win Rate": 48.73,
     "Pick Rate": 9.67,
+    "recommendedBuild": {
+      "name": "Tele Surf",
+      "heldItems": [
+        "Exp Share",
+        "Resonant Guard",
+        "Focus Band"
+      ],
+      "altHeldItem": "Buddy Barrier",
+      "altHeldItems": [
+        "Buddy Barrier"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 48.21,
     "Pick Rate 1": 54.39,
@@ -4581,6 +7216,22 @@
     "Move 2": "Moves/Slowbro - Amnesia.png",
     "Win Rate": 48.56,
     "Pick Rate": 3.35,
+    "recommendedBuild": {
+      "name": "Scald ???",
+      "heldItems": [
+        "Exp Share",
+        "Resonant Guard",
+        "Focus Band"
+      ],
+      "altHeldItem": "Buddy Barrier",
+      "altHeldItems": [
+        "Buddy Barrier",
+        "Curse Incense",
+        "Slick Spoon",
+        "Choice Specs",
+        "Sp. Atk Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 47.52,
     "Pick Rate 1": 39.71,
@@ -4600,6 +7251,18 @@
     "Move 2": "Moves/Slowbro - Amnesia.png",
     "Win Rate": 49.48,
     "Pick Rate": 3.54,
+    "recommendedBuild": {
+      "name": "Surf ???",
+      "heldItems": [
+        "Exp Share",
+        "Resonant Guard",
+        "Focus Band"
+      ],
+      "altHeldItem": "Buddy Barrier",
+      "altHeldItems": [
+        "Buddy Barrier"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 48.79,
     "Pick Rate 1": 42.1,
@@ -4619,6 +7282,22 @@
     "Move 2": "Moves/Slowbro - Telekinesis.png",
     "Win Rate": 46.35,
     "Pick Rate": 2.05,
+    "recommendedBuild": {
+      "name": "Scald ???",
+      "heldItems": [
+        "Exp Share",
+        "Resonant Guard",
+        "Focus Band"
+      ],
+      "altHeldItem": "Buddy Barrier",
+      "altHeldItems": [
+        "Buddy Barrier",
+        "Curse Incense",
+        "Slick Spoon",
+        "Choice Specs",
+        "Sp. Atk Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.21,
     "Pick Rate 1": 42.51,
@@ -4638,6 +7317,18 @@
     "Move 2": "Moves/Snorlax - Yawn.png",
     "Win Rate": 47.37,
     "Pick Rate": 0.82,
+    "recommendedBuild": {
+      "name": "Flail Yawn",
+      "heldItems": [
+        "Aeos Cookie",
+        "Rapid Fire Scarf",
+        "Focus Band"
+      ],
+      "altHeldItem": "Big Root",
+      "altHeldItems": [
+        "Big Root"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 48.37,
     "Pick Rate 1": 37.43,
@@ -4657,6 +7348,18 @@
     "Move 2": "Moves/Snorlax - Yawn.png",
     "Win Rate": 50.13,
     "Pick Rate": 2.92,
+    "recommendedBuild": {
+      "name": "Heavy Yawn",
+      "heldItems": [
+        "Exp Share",
+        "Resonant Guard",
+        "Focus Band"
+      ],
+      "altHeldItem": "Buddy Barrier",
+      "altHeldItems": [
+        "Buddy Barrier"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 50.63,
     "Pick Rate 1": 83.9,
@@ -4676,6 +7379,18 @@
     "Move 2": "Moves/Snorlax - Block.png",
     "Win Rate": 48.56,
     "Pick Rate": 3.31,
+    "recommendedBuild": {
+      "name": "Flail Block",
+      "heldItems": [
+        "Aeos Cookie",
+        "Big Root",
+        "Resonant Guard"
+      ],
+      "altHeldItem": "Buddy Barrier",
+      "altHeldItems": [
+        "Buddy Barrier"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 50.04,
     "Pick Rate 1": 59.81,
@@ -4695,6 +7410,18 @@
     "Move 2": "Moves/Snorlax - Block.png",
     "Win Rate": 47.84,
     "Pick Rate": 7.87,
+    "recommendedBuild": {
+      "name": "Heavy Block",
+      "heldItems": [
+        "Exp Share",
+        "Resonant Guard",
+        "Buddy Barrier"
+      ],
+      "altHeldItem": "Focus Band",
+      "altHeldItems": [
+        "Focus Band"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 48.38,
     "Pick Rate 1": 47.08,
@@ -4714,6 +7441,16 @@
     "Move 2": "Moves/Suicune - Ice Beam.png",
     "Win Rate": 47.6,
     "Pick Rate": 6.12,
+    "recommendedBuild": {
+      "name": "Whirl Beam (Utility Oriented)",
+      "heldItems": [
+        "Curse Incense",
+        "Resonant Guard",
+        "Buddy Barrier"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 48.75,
     "Pick Rate 1": 70.77,
@@ -4733,6 +7470,19 @@
     "Move 2": "Moves/Suicune - Icy Wind.png",
     "Win Rate": 46.41,
     "Pick Rate": 2.59,
+    "recommendedBuild": {
+      "name": "Surf Wind (CDR)",
+      "heldItems": [
+        "Energy Amplifier",
+        "Drive Lens",
+        "Shell Bell"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs",
+        "Curse Incense"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 48.29,
     "Pick Rate 1": 52.8,
@@ -4752,6 +7502,19 @@
     "Move 2": "Moves/Suicune - Ice Beam.png",
     "Win Rate": 46.14,
     "Pick Rate": 0.36,
+    "recommendedBuild": {
+      "name": "Surf Wind (CDR)",
+      "heldItems": [
+        "Energy Amplifier",
+        "Drive Lens",
+        "Shell Bell"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs",
+        "Curse Incense"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 48.42,
     "Pick Rate 1": 40.77,
@@ -4771,6 +7534,16 @@
     "Move 2": "Moves/Suicune - Icy Wind.png",
     "Win Rate": 41.26,
     "Pick Rate": 0.11,
+    "recommendedBuild": {
+      "name": "Whirl Beam (Utility Oriented)",
+      "heldItems": [
+        "Curse Incense",
+        "Resonant Guard",
+        "Buddy Barrier"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 45.45,
     "Pick Rate 1": 46.15,
@@ -4790,6 +7563,19 @@
     "Move 2": "Moves/Sylveon - Draining Kiss.png",
     "Win Rate": 44.21,
     "Pick Rate": 0.22,
+    "recommendedBuild": {
+      "name": "Hyper Mind",
+      "heldItems": [
+        "Curse Incense",
+        "Shell Bell",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Wise Glasses",
+      "altHeldItems": [
+        "Wise Glasses",
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 41.84,
     "Pick Rate 1": 49.47,
@@ -4809,6 +7595,19 @@
     "Move 2": "Moves/Sylveon - Calm Mind.png",
     "Win Rate": 44.68,
     "Pick Rate": 0.11,
+    "recommendedBuild": {
+      "name": "Drain Fire",
+      "heldItems": [
+        "Shell Bell",
+        "Drive Lens",
+        "Choice Specs"
+      ],
+      "altHeldItem": "Muscle Band",
+      "altHeldItems": [
+        "Muscle Band",
+        "Focus Band"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 42.0,
     "Pick Rate 1": 35.46,
@@ -4828,6 +7627,19 @@
     "Move 2": "Moves/Sylveon - Draining Kiss.png",
     "Win Rate": 46.79,
     "Pick Rate": 3.76,
+    "recommendedBuild": {
+      "name": "Drain Fire",
+      "heldItems": [
+        "Shell Bell",
+        "Drive Lens",
+        "Choice Specs"
+      ],
+      "altHeldItem": "Muscle Band",
+      "altHeldItems": [
+        "Muscle Band",
+        "Focus Band"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 48.06,
     "Pick Rate 1": 37.82,
@@ -4847,6 +7659,19 @@
     "Move 2": "Moves/Sylveon - Calm Mind.png",
     "Win Rate": 46.42,
     "Pick Rate": 0.72,
+    "recommendedBuild": {
+      "name": "Hyper Mind",
+      "heldItems": [
+        "Curse Incense",
+        "Shell Bell",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Wise Glasses",
+      "altHeldItems": [
+        "Wise Glasses",
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 48.11,
     "Pick Rate 1": 65.13,
@@ -4866,6 +7691,18 @@
     "Move 2": "Moves/Talonflame - Fly.png",
     "Win Rate": 48.84,
     "Pick Rate": 11.55,
+    "recommendedBuild": {
+      "name": "Fly Charge",
+      "heldItems": [
+        "Attack Weight",
+        "Charging Charm",
+        "Razor Claw"
+      ],
+      "altHeldItem": "Float Stone",
+      "altHeldItems": [
+        "Float Stone"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 50.02,
     "Pick Rate 1": 70.94,
@@ -4885,6 +7722,18 @@
     "Move 2": "Moves/Talonflame - Brave Bird.png",
     "Win Rate": 48.26,
     "Pick Rate": 5.38,
+    "recommendedBuild": {
+      "name": "Brave Ace",
+      "heldItems": [
+        "Attack Weight",
+        "Razor Claw",
+        "Charging Charm"
+      ],
+      "altHeldItem": "Accel Bracer",
+      "altHeldItems": [
+        "Accel Bracer"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 48.81,
     "Pick Rate 1": 52.05,
@@ -4904,6 +7753,18 @@
     "Move 2": "Moves/Talonflame - Fly.png",
     "Win Rate": 44.74,
     "Pick Rate": 1.4,
+    "recommendedBuild": {
+      "name": "Fly Charge",
+      "heldItems": [
+        "Attack Weight",
+        "Charging Charm",
+        "Razor Claw"
+      ],
+      "altHeldItem": "Float Stone",
+      "altHeldItems": [
+        "Float Stone"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 44.44,
     "Pick Rate 1": 37.46,
@@ -4923,6 +7784,18 @@
     "Move 2": "Moves/Talonflame - Brave Bird.png",
     "Win Rate": 42.21,
     "Pick Rate": 0.32,
+    "recommendedBuild": {
+      "name": "Brave Ace",
+      "heldItems": [
+        "Attack Weight",
+        "Razor Claw",
+        "Charging Charm"
+      ],
+      "altHeldItem": "Accel Bracer",
+      "altHeldItems": [
+        "Accel Bracer"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 43.98,
     "Pick Rate 1": 39.81,
@@ -4942,6 +7815,18 @@
     "Move 2": "Moves/Tinkaton - Thief.png",
     "Win Rate": 48.7,
     "Pick Rate": 1.03,
+    "recommendedBuild": {
+      "name": "Gigaton Thief",
+      "heldItems": [
+        "Attack Weight",
+        "Focus Band",
+        "Aeos Cookie"
+      ],
+      "altHeldItem": "Resonant Guard",
+      "altHeldItems": [
+        "Resonant Guard"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 48.5,
     "Pick Rate 1": 67.34,
@@ -4961,6 +7846,18 @@
     "Move 2": "Moves/Tinkaton - Ice Hammer.png",
     "Win Rate": 47.72,
     "Pick Rate": 0.37,
+    "recommendedBuild": {
+      "name": "Hammer Time",
+      "heldItems": [
+        "Attack Weight",
+        "Razor Claw",
+        "Focus Band"
+      ],
+      "altHeldItem": "Resonant Guard",
+      "altHeldItems": [
+        "Resonant Guard"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.06,
     "Pick Rate 1": 66.39,
@@ -4980,6 +7877,18 @@
     "Move 2": "Moves/Tinkaton - Ice Hammer.png",
     "Win Rate": 50.69,
     "Pick Rate": 0.22,
+    "recommendedBuild": {
+      "name": "Ice Down",
+      "heldItems": [
+        "Attack Weight",
+        "Float Stone",
+        "Resonant Guard"
+      ],
+      "altHeldItem": "Charging Charm",
+      "altHeldItems": [
+        "Charging Charm"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 46.46,
     "Pick Rate 1": 34.14,
@@ -4999,6 +7908,18 @@
     "Move 2": "Moves/Tinkaton - Thief.png",
     "Win Rate": 43.95,
     "Pick Rate": 0.17,
+    "recommendedBuild": {
+      "name": "Smack Thief",
+      "heldItems": [
+        "Attack Weight",
+        "Float Stone",
+        "Charging Charm"
+      ],
+      "altHeldItem": "Resonant Guard",
+      "altHeldItems": [
+        "Resonant Guard"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 49.3,
     "Pick Rate 1": 31.84,
@@ -5018,6 +7939,12 @@
     "Move 2": "Moves/Trevenant - Pain Split.png",
     "Win Rate": 47.58,
     "Pick Rate": 0.35,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 45.11,
     "Pick Rate 1": 51.76,
@@ -5037,6 +7964,12 @@
     "Move 2": "Moves/Trevenant - Pain Split.png",
     "Win Rate": 49.4,
     "Pick Rate": 2.75,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 49.34,
     "Pick Rate 1": 48.71,
@@ -5056,6 +7989,12 @@
     "Move 2": "Moves/Trevenant - Horn Leech.png",
     "Win Rate": 48.69,
     "Pick Rate": 3.7,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 50.22,
     "Pick Rate 1": 52.18,
@@ -5075,6 +8014,12 @@
     "Move 2": "Moves/Trevenant - Horn Leech.png",
     "Win Rate": 49.58,
     "Pick Rate": 4.96,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 50.04,
     "Pick Rate 1": 43.6,
@@ -5094,6 +8039,12 @@
     "Move 2": "Moves/Tsareena - Grassy Glide.png",
     "Win Rate": 39.73,
     "Pick Rate": 0.17,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 40.32,
     "Pick Rate 1": 55.36,
@@ -5113,6 +8064,12 @@
     "Move 2": "Moves/Tsareena - Trop Kick.png",
     "Win Rate": 47.86,
     "Pick Rate": 1.02,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 52.38,
     "Pick Rate 1": 44.18,
@@ -5132,6 +8089,12 @@
     "Move 2": "Moves/Tsareena - Trop Kick.png",
     "Win Rate": 49.69,
     "Pick Rate": 4.0,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 50.38,
     "Pick Rate 1": 80.31,
@@ -5151,6 +8114,12 @@
     "Move 2": "Moves/Tsareena - Grassy Glide.png",
     "Win Rate": 47.75,
     "Pick Rate": 0.95,
+    "recommendedBuild": {
+      "name": null,
+      "heldItems": [],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 49.3,
     "Pick Rate 1": 74.64,
@@ -5170,6 +8139,18 @@
     "Move 2": "Moves/Tyranitar - Ancient Power.png",
     "Win Rate": 49.52,
     "Pick Rate": 1.5,
+    "recommendedBuild": {
+      "name": "Ancient Pulse",
+      "heldItems": [
+        "Attack Weight",
+        "Muscle Band",
+        "Weakness Policy"
+      ],
+      "altHeldItem": "Focus Band",
+      "altHeldItems": [
+        "Focus Band"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 52.87,
     "Pick Rate 1": 47.84,
@@ -5189,6 +8170,18 @@
     "Move 2": "Moves/Tyranitar - Sand Tomb.png",
     "Win Rate": 48.58,
     "Pick Rate": 0.94,
+    "recommendedBuild": {
+      "name": "Sand Stone",
+      "heldItems": [
+        "Muscle Band",
+        "Razor Claw",
+        "Focus Band"
+      ],
+      "altHeldItem": "Resonant Guard",
+      "altHeldItems": [
+        "Resonant Guard"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 50.14,
     "Pick Rate 1": 28.3,
@@ -5208,6 +8201,18 @@
     "Move 2": "Moves/Tyranitar - Sand Tomb.png",
     "Win Rate": 49.42,
     "Pick Rate": 0.33,
+    "recommendedBuild": {
+      "name": "Dark Tomb",
+      "heldItems": [
+        "Attack Weight",
+        "Muscle Band",
+        "Focus Band"
+      ],
+      "altHeldItem": "Resonant Guard",
+      "altHeldItems": [
+        "Resonant Guard"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 47.32,
     "Pick Rate 1": 26.11,
@@ -5227,6 +8232,18 @@
     "Move 2": "Moves/Tyranitar - Ancient Power.png",
     "Win Rate": 45.35,
     "Pick Rate": 0.07,
+    "recommendedBuild": {
+      "name": "Ancient Pulse",
+      "heldItems": [
+        "Attack Weight",
+        "Muscle Band",
+        "Weakness Policy"
+      ],
+      "altHeldItem": "Focus Band",
+      "altHeldItems": [
+        "Focus Band"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 29.03,
     "Pick Rate 1": 36.05,
@@ -5246,6 +8263,18 @@
     "Move 2": "Moves/Umbreon - Wish.png",
     "Win Rate": 49.17,
     "Pick Rate": 1.2,
+    "recommendedBuild": {
+      "name": "Foul Wish (PLEASE READ DESCRIPTION)",
+      "heldItems": [
+        "Resonant Guard",
+        "Buddy Barrier",
+        "Attack Weight"
+      ],
+      "altHeldItem": "Focus Band",
+      "altHeldItems": [
+        "Focus Band"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 50.42,
     "Pick Rate 1": 68.43,
@@ -5265,6 +8294,18 @@
     "Move 2": "Moves/Umbreon - Wish.png",
     "Win Rate": 48.86,
     "Pick Rate": 10.7,
+    "recommendedBuild": {
+      "name": "Mean Wish (PLEASE READ DESCRIPTION)",
+      "heldItems": [
+        "Resonant Guard",
+        "Buddy Barrier",
+        "Attack Weight"
+      ],
+      "altHeldItem": "Focus Band",
+      "altHeldItems": [
+        "Focus Band"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 49.09,
     "Pick Rate 1": 65.09,
@@ -5284,6 +8325,18 @@
     "Move 2": "Moves/Umbreon - Snarl.png",
     "Win Rate": 51.28,
     "Pick Rate": 5.93,
+    "recommendedBuild": {
+      "name": "Foul Snarl (PLEASE READ DESCRIPTION)",
+      "heldItems": [
+        "Resonant Guard",
+        "Focus Band",
+        "Buddy Barrier"
+      ],
+      "altHeldItem": "Vanguard Bell",
+      "altHeldItems": [
+        "Vanguard Bell"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 51.62,
     "Pick Rate 1": 82.74,
@@ -5303,6 +8356,18 @@
     "Move 2": "Moves/Umbreon - Snarl.png",
     "Win Rate": 47.74,
     "Pick Rate": 1.64,
+    "recommendedBuild": {
+      "name": "Mean Snarl (PLEASE READ DESCRIPTION)",
+      "heldItems": [
+        "Resonant Guard",
+        "Focus Band",
+        "Buddy Barrier"
+      ],
+      "altHeldItem": "Vanguard Bell",
+      "altHeldItems": [
+        "Vanguard Bell"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 48.48,
     "Pick Rate 1": 70.58,
@@ -5322,6 +8387,18 @@
     "Move 2": "Moves/Urshifu - Liquidation.png",
     "Win Rate": 51.55,
     "Pick Rate": 3.07,
+    "recommendedBuild": {
+      "name": "Rapid Strike Style",
+      "heldItems": [
+        "Muscle Band",
+        "Accel Bracer",
+        "Razor Claw"
+      ],
+      "altHeldItem": "Charging Charm",
+      "altHeldItems": [
+        "Charging Charm"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 52.72,
     "Pick Rate 1": 85.24,
@@ -5341,6 +8418,18 @@
     "Move 2": "Moves/Urshifu - Throat Chop.png",
     "Win Rate": 48.88,
     "Pick Rate": 0.89,
+    "recommendedBuild": {
+      "name": "Single Strike Style",
+      "heldItems": [
+        "Muscle Band",
+        "Attack Weight",
+        "Razor Claw"
+      ],
+      "altHeldItem": "Charging Charm",
+      "altHeldItems": [
+        "Charging Charm"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 48.61,
     "Pick Rate 1": 65.2,
@@ -5360,6 +8449,16 @@
     "Move 2": "Moves/Vaporeon - Aqua Ring.png",
     "Win Rate": 51.97,
     "Pick Rate": 17.78,
+    "recommendedBuild": {
+      "name": "Hydro Ring",
+      "heldItems": [
+        "Sp. Atk Specs",
+        "Drive Lens",
+        "Wise Glasses"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 52.6,
     "Pick Rate 1": 72.88,
@@ -5379,6 +8478,21 @@
     "Move 2": "Moves/Vaporeon - Aqua Ring.png",
     "Win Rate": 50.67,
     "Pick Rate": 7.64,
+    "recommendedBuild": {
+      "name": "Muddy Turn (Supportive)",
+      "heldItems": [
+        "Resonant Guard",
+        "Curse Incense",
+        "Buddy Barrier"
+      ],
+      "altHeldItem": "Sp. Atk Specs",
+      "altHeldItems": [
+        "Sp. Atk Specs",
+        "Drive Lens",
+        "Wise Glasses",
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 50.81,
     "Pick Rate 1": 57.23,
@@ -5398,6 +8512,16 @@
     "Move 2": "Moves/Vaporeon - Flip Turn.png",
     "Win Rate": 50.68,
     "Pick Rate": 5.8,
+    "recommendedBuild": {
+      "name": "Hydro Turn",
+      "heldItems": [
+        "Resonant Guard",
+        "Curse Incense",
+        "Buddy Barrier"
+      ],
+      "altHeldItem": null,
+      "altHeldItems": []
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 51.6,
     "Pick Rate 1": 66.3,
@@ -5417,6 +8541,21 @@
     "Move 2": "Moves/Vaporeon - Flip Turn.png",
     "Win Rate": 50.29,
     "Pick Rate": 4.04,
+    "recommendedBuild": {
+      "name": "Muddy Turn (Supportive)",
+      "heldItems": [
+        "Resonant Guard",
+        "Curse Incense",
+        "Buddy Barrier"
+      ],
+      "altHeldItem": "Sp. Atk Specs",
+      "altHeldItems": [
+        "Sp. Atk Specs",
+        "Drive Lens",
+        "Wise Glasses",
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 50.93,
     "Pick Rate 1": 47.65,
@@ -5436,6 +8575,18 @@
     "Move 2": "Moves/Venusaur - Solar Beam.png",
     "Win Rate": 46.69,
     "Pick Rate": 6.73,
+    "recommendedBuild": {
+      "name": "Sludge Beam",
+      "heldItems": [
+        "Energy Amplifier",
+        "Slick Spoon",
+        "Curse Incense"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 47.63,
     "Pick Rate 1": 55.73,
@@ -5455,6 +8606,18 @@
     "Move 2": "Moves/Venusaur - Petal Dance.png",
     "Win Rate": 45.58,
     "Pick Rate": 0.35,
+    "recommendedBuild": {
+      "name": "Giga Dance",
+      "heldItems": [
+        "Slick Spoon",
+        "Drive Lens",
+        "Shell Bell"
+      ],
+      "altHeldItem": "Focus Band",
+      "altHeldItems": [
+        "Focus Band"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 48.47,
     "Pick Rate 1": 57.96,
@@ -5474,6 +8637,18 @@
     "Move 2": "Moves/Venusaur - Petal Dance.png",
     "Win Rate": 46.3,
     "Pick Rate": 2.54,
+    "recommendedBuild": {
+      "name": "Giga Dance",
+      "heldItems": [
+        "Slick Spoon",
+        "Drive Lens",
+        "Shell Bell"
+      ],
+      "altHeldItem": "Focus Band",
+      "altHeldItems": [
+        "Focus Band"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 48.42,
     "Pick Rate 1": 31.54,
@@ -5493,6 +8668,18 @@
     "Move 2": "Moves/Venusaur - Solar Beam.png",
     "Win Rate": 44.97,
     "Pick Rate": 0.26,
+    "recommendedBuild": {
+      "name": "Giga Beam",
+      "heldItems": [
+        "Energy Amplifier",
+        "Slick Spoon",
+        "Drive Lens"
+      ],
+      "altHeldItem": "Choice Specs",
+      "altHeldItems": [
+        "Choice Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 43.56,
     "Pick Rate 1": 59.76,
@@ -5512,6 +8699,18 @@
     "Move 2": "Moves/Wigglytuff - Sing.png",
     "Win Rate": 48.69,
     "Pick Rate": 4.83,
+    "recommendedBuild": {
+      "name": "Roll Slap",
+      "heldItems": [
+        "Resonant Guard",
+        "Focus Band",
+        "Buddy Barrier"
+      ],
+      "altHeldItem": "Vanguard Bell",
+      "altHeldItems": [
+        "Vanguard Bell"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 49.63,
     "Pick Rate 1": 48.65,
@@ -5531,6 +8730,20 @@
     "Move 2": "Moves/Wigglytuff - Sing.png",
     "Win Rate": 51.63,
     "Pick Rate": 1.97,
+    "recommendedBuild": {
+      "name": "Dazzling Song (Disruptor)",
+      "heldItems": [
+        "Focus Band",
+        "Resonant Guard",
+        "Muscle Band"
+      ],
+      "altHeldItem": "Vanguard Bell",
+      "altHeldItems": [
+        "Vanguard Bell",
+        "Exp Share",
+        "Buddy Barrier"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 51.44,
     "Pick Rate 1": 52.6,
@@ -5550,6 +8763,18 @@
     "Move 2": "Moves/Wigglytuff - Rollout.png",
     "Win Rate": 51.75,
     "Pick Rate": 0.87,
+    "recommendedBuild": {
+      "name": "Roll Slap",
+      "heldItems": [
+        "Resonant Guard",
+        "Focus Band",
+        "Buddy Barrier"
+      ],
+      "altHeldItem": "Vanguard Bell",
+      "altHeldItems": [
+        "Vanguard Bell"
+      ]
+    },
     "Item 1": "Battle_Items/X Speed.png",
     "Win Rate 1": 51.46,
     "Pick Rate 1": 36.01,
@@ -5569,6 +8794,20 @@
     "Move 2": "Moves/Wigglytuff - Rollout.png",
     "Win Rate": 55.25,
     "Pick Rate": 0.17,
+    "recommendedBuild": {
+      "name": "Dazzling Song (Disruptor)",
+      "heldItems": [
+        "Focus Band",
+        "Resonant Guard",
+        "Muscle Band"
+      ],
+      "altHeldItem": "Vanguard Bell",
+      "altHeldItems": [
+        "Vanguard Bell",
+        "Exp Share",
+        "Buddy Barrier"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 57.46,
     "Pick Rate 1": 61.19,
@@ -5588,6 +8827,18 @@
     "Move 2": "Moves/Zacian - Play Rough.png",
     "Win Rate": 43.1,
     "Pick Rate": 0.22,
+    "recommendedBuild": {
+      "name": "Sacred Rough",
+      "heldItems": [
+        "Rusted Sword",
+        "Muscle Band",
+        "Charging Charm"
+      ],
+      "altHeldItem": "Razor Claw",
+      "altHeldItems": [
+        "Razor Claw"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 47.83,
     "Pick Rate 1": 31.72,
@@ -5607,6 +8858,18 @@
     "Move 2": "Moves/Zacian - Agility.png",
     "Win Rate": 48.9,
     "Pick Rate": 0.24,
+    "recommendedBuild": {
+      "name": "Sacred Rough",
+      "heldItems": [
+        "Rusted Sword",
+        "Muscle Band",
+        "Charging Charm"
+      ],
+      "altHeldItem": "Razor Claw",
+      "altHeldItems": [
+        "Razor Claw"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 49.1,
     "Pick Rate 1": 52.35,
@@ -5626,6 +8889,18 @@
     "Move 2": "Moves/Zacian - Play Rough.png",
     "Win Rate": 47.22,
     "Pick Rate": 1.55,
+    "recommendedBuild": {
+      "name": "Metal Rough",
+      "heldItems": [
+        "Rusted Sword",
+        "Muscle Band",
+        "Rapid Fire Scarf"
+      ],
+      "altHeldItem": "Charging Charm",
+      "altHeldItems": [
+        "Charging Charm"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 48.42,
     "Pick Rate 1": 60.67,
@@ -5645,6 +8920,18 @@
     "Move 2": "Moves/Zacian - Agility.png",
     "Win Rate": 51.33,
     "Pick Rate": 8.12,
+    "recommendedBuild": {
+      "name": "Metal Agility",
+      "heldItems": [
+        "Rusted Sword",
+        "Muscle Band",
+        "Rapid Fire Scarf"
+      ],
+      "altHeldItem": "Charging Charm",
+      "altHeldItems": [
+        "Charging Charm"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 52.46,
     "Pick Rate 1": 87.73,
@@ -5664,6 +8951,18 @@
     "Move 2": "Moves/Zapdos - Zap Cannon.png",
     "Win Rate": 52.04,
     "Pick Rate": 31.95,
+    "recommendedBuild": {
+      "name": "Bolt Cannon",
+      "heldItems": [
+        "Energy Amplifier",
+        "Drive Lens",
+        "Wise Glasses"
+      ],
+      "altHeldItem": "Sp. Atk Specs",
+      "altHeldItems": [
+        "Sp. Atk Specs"
+      ]
+    },
     "Item 1": "Battle_Items/Eject Button.png",
     "Win Rate 1": 53.47,
     "Pick Rate 1": 61.6,
@@ -5683,6 +8982,18 @@
     "Move 2": "Moves/Zeraora - Wild Charge.png",
     "Win Rate": 47.07,
     "Pick Rate": 6.4,
+    "recommendedBuild": {
+      "name": "Spark Charge",
+      "heldItems": [
+        "Weakness Policy",
+        "Razor Claw",
+        "Accel Bracer"
+      ],
+      "altHeldItem": "Attack Weight",
+      "altHeldItems": [
+        "Attack Weight"
+      ]
+    },
     "Item 1": "Battle_Items/X Attack.png",
     "Win Rate 1": 48.82,
     "Pick Rate 1": 42.09,
@@ -5702,6 +9013,18 @@
     "Move 2": "Moves/Zeraora - Wild Charge.png",
     "Win Rate": 40.97,
     "Pick Rate": 0.42,
+    "recommendedBuild": {
+      "name": "Spark Charge",
+      "heldItems": [
+        "Weakness Policy",
+        "Razor Claw",
+        "Accel Bracer"
+      ],
+      "altHeldItem": "Attack Weight",
+      "altHeldItems": [
+        "Attack Weight"
+      ]
+    },
     "Item 1": "Battle_Items/Potion.png",
     "Win Rate 1": 36.49,
     "Pick Rate 1": 26.71,
@@ -5721,6 +9044,20 @@
     "Move 2": "Moves/Zeraora - Discharge.png",
     "Win Rate": 45.69,
     "Pick Rate": 1.95,
+    "recommendedBuild": {
+      "name": "Discharge Switch",
+      "heldItems": [
+        "Weakness Policy",
+        "Razor Claw",
+        "Accel Bracer"
+      ],
+      "altHeldItem": "Attack Weight",
+      "altHeldItems": [
+        "Attack Weight",
+        "Energy Amplifier",
+        "Charging Charm"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 45.47,
     "Pick Rate 1": 40.21,
@@ -5740,6 +9077,20 @@
     "Move 2": "Moves/Zeraora - Discharge.png",
     "Win Rate": 48.3,
     "Pick Rate": 1.08,
+    "recommendedBuild": {
+      "name": "Spark Discharge",
+      "heldItems": [
+        "Weakness Policy",
+        "Razor Claw",
+        "Buddy Barrier"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier",
+        "Accel Bracer",
+        "Attack Weight"
+      ]
+    },
     "Item 1": "Battle_Items/X Attack.png",
     "Win Rate 1": 49.46,
     "Pick Rate 1": 52.83,
@@ -5759,6 +9110,18 @@
     "Move 2": "Moves/Zoroark - Feint Attack.png",
     "Win Rate": 46.85,
     "Pick Rate": 4.98,
+    "recommendedBuild": {
+      "name": "Feint Claw",
+      "heldItems": [
+        "Attack Weight",
+        "Weakness Policy",
+        "Accel Bracer"
+      ],
+      "altHeldItem": "Focus Band",
+      "altHeldItems": [
+        "Focus Band"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 47.63,
     "Pick Rate 1": 84.65,
@@ -5778,6 +9141,18 @@
     "Move 2": "Moves/Zoroark - Feint Attack.png",
     "Win Rate": 46.27,
     "Pick Rate": 0.63,
+    "recommendedBuild": {
+      "name": "Feint Claw",
+      "heldItems": [
+        "Attack Weight",
+        "Weakness Policy",
+        "Accel Bracer"
+      ],
+      "altHeldItem": "Focus Band",
+      "altHeldItems": [
+        "Focus Band"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 44.53,
     "Pick Rate 1": 46.27,
@@ -5797,6 +9172,18 @@
     "Move 2": "Moves/Zoroark - Night Slash.png",
     "Win Rate": 46.68,
     "Pick Rate": 0.61,
+    "recommendedBuild": {
+      "name": "Night Cut",
+      "heldItems": [
+        "Attack Weight",
+        "Weakness Policy",
+        "Razor Claw"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 46.4,
     "Pick Rate 1": 88.96,
@@ -5816,6 +9203,18 @@
     "Move 2": "Moves/Zoroark - Night Slash.png",
     "Win Rate": 37.93,
     "Pick Rate": 0.4,
+    "recommendedBuild": {
+      "name": "Night Cut",
+      "heldItems": [
+        "Attack Weight",
+        "Weakness Policy",
+        "Razor Claw"
+      ],
+      "altHeldItem": "Energy Amplifier",
+      "altHeldItems": [
+        "Energy Amplifier"
+      ]
+    },
     "Item 1": "Battle_Items/Full Heal.png",
     "Win Rate 1": 38.15,
     "Pick Rate 1": 76.82,

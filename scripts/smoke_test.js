@@ -138,8 +138,97 @@ async function main() {
       );
     }
 
-    await page.click(".view-items");
-    await page.waitForSelector("#popup:not(.hidden) .popup-table", { timeout: 30000 });
+    await page.evaluate(() => {
+      const input = document.getElementById("nameSearch");
+      input.value = "Absol";
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+    });
+    await page.waitForFunction(() => {
+      const rows = Array.from(document.querySelectorAll(".table-row-group .table-row"));
+      return rows.some((row) => {
+        const nameCell = row.querySelector(".table-cell:nth-child(2)");
+        return nameCell && nameCell.textContent.trim() === "Absol";
+      });
+    }, { timeout: 30000 });
+
+    const absolRowPickRate = await page.evaluate(() => {
+      const rows = Array.from(document.querySelectorAll(".table-row-group .table-row"));
+      const absolRow = rows.find((row) => {
+        const nameCell = row.querySelector(".table-cell:nth-child(2)");
+        return nameCell && nameCell.textContent.trim() === "Absol";
+      });
+      if (!absolRow) {
+        throw new Error("Smoke test failed: could not find Absol row");
+      }
+      const pickRateCell = absolRow.querySelector(".table-cell:nth-child(7)");
+      return pickRateCell ? pickRateCell.textContent.trim() : "";
+    });
+
+    await page.evaluate(() => {
+      const rows = Array.from(document.querySelectorAll(".table-row-group .table-row"));
+      const absolRow = rows.find((row) => {
+        const nameCell = row.querySelector(".table-cell:nth-child(2)");
+        return nameCell && nameCell.textContent.trim() === "Absol";
+      });
+      const button = absolRow && absolRow.querySelector(".view-items");
+      if (!button) {
+        throw new Error("Smoke test failed: could not find Absol winrate button");
+      }
+      button.click();
+    });
+    await page.waitForSelector("#popup:not(.hidden) .build-summary-grid", { timeout: 30000 });
+    const metricLabels = await page.$$eval(
+      "#popup:not(.hidden) .build-metric-label",
+      (nodes) => nodes.map((node) => node.textContent.trim())
+    );
+    if (metricLabels.length < 2 || metricLabels[0] !== "Win Rate" || metricLabels[1] !== "Pick Rate") {
+      throw new Error(`Smoke test failed: winrate popup metric order is incorrect (${metricLabels.join(", ")})`);
+    }
+    const summaryPickRate = await page.$eval(
+      "#popup:not(.hidden) .build-metric-card:nth-child(2) .build-metric-value",
+      (node) => node.textContent.trim()
+    );
+    if (summaryPickRate !== absolRowPickRate) {
+      throw new Error(`Smoke test failed: popup pick rate "${summaryPickRate}" did not match table value "${absolRowPickRate}"`);
+    }
+    const battleCardCount = await page.$$eval(
+      "#popup:not(.hidden) .battle-item-card",
+      (nodes) => nodes.length
+    );
+    if (battleCardCount !== 3) {
+      throw new Error(`Smoke test failed: expected 3 battle item cards, found ${battleCardCount}`);
+    }
+    const battleMetricLabels = await page.$$eval(
+      "#popup:not(.hidden) .battle-item-card:first-of-type .battle-item-card-label",
+      (nodes) => nodes.map((node) => node.textContent.trim())
+    );
+    if (battleMetricLabels.join("|") !== "Win Rate|Pick Rate") {
+      throw new Error(`Smoke test failed: battle item metrics rendered in the wrong order (${battleMetricLabels.join(", ")})`);
+    }
+    const heldItemNames = await page.$$eval(
+      "#popup:not(.hidden) .held-item-img",
+      (nodes) => nodes.map((node) => node.getAttribute("alt")).filter(Boolean)
+    );
+    const expectedHeldItems = ["Razor Claw", "Scope Lens", "Accel Bracer", "Charging Charm"];
+    for (const itemName of expectedHeldItems) {
+      if (!heldItemNames.includes(itemName)) {
+        throw new Error(`Smoke test failed: expected held item "${itemName}" was not rendered`);
+      }
+    }
+    await page.waitForFunction(
+      () => {
+        const nodes = Array.from(document.querySelectorAll("#popup:not(.hidden) .held-item-img"));
+        return nodes.length > 0 && nodes.every((node) => node.complete && node.naturalWidth > 0);
+      },
+      { timeout: 30000 }
+    );
+    const heldImagesLoaded = await page.$$eval(
+      "#popup:not(.hidden) .held-item-img",
+      (nodes) => nodes.every((node) => node.complete && node.naturalWidth > 0)
+    );
+    if (!heldImagesLoaded) {
+      throw new Error("Smoke test failed: one or more held item icons failed to load");
+    }
     await closePopup();
 
     await page.click(".move-img");
@@ -322,7 +411,8 @@ async function main() {
       input.value = "";
       input.dispatchEvent(new Event("input", { bubbles: true }));
 
-      const patchHistory = await fetch("static/json/pokemon_move_patch_history.json", { cache: "no-store" }).then((response) => response.json());
+      const patchHistoryUrl = new URL("static/json/pokemon_move_patch_history.json", window.location.href).toString();
+      const patchHistory = await fetch(patchHistoryUrl, { cache: "no-store" }).then((response) => response.json());
       const rows = Array.from(document.querySelectorAll(".table-row-group .table-row"));
 
       for (const row of rows) {

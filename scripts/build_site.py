@@ -57,6 +57,12 @@ def main() -> None:
 
     run_step(scrape_command, "Rebuilding moveset data")
 
+    node = shutil.which("node")
+    if node:
+        run_step([node, str(REPO_ROOT / "scripts" / "sync_held_item_icons.js")], "Syncing held item icons")
+    else:
+        print("[build_site] Skipped held item icon sync (node not found)")
+
     if args.skip_patch_history:
         print("[build_site] Skipped patch history refresh")
         return
