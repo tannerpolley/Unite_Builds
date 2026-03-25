@@ -37,86 +37,147 @@
   gtag('config', 'G-EQ3L23JSHS');
 </script>
 <body>
-  <div class="features-box">
-    <h3>Features:</h3>
-    <ul>
-      <li>Click <strong>Pokemon images</strong> for passive/attack/unite move</li>
-      <li>Click <strong>move images</strong> for descriptions</li>
-      <li>Click <strong>win rates</strong> for battle item stats</li>
-      <li>Click <strong>column headers</strong> to sort</li>
-      <li>Click <strong>Pokemon names or roles</strong> to filter</li>
-    </ul>
-  </div>
-
   <div class="main-container">
     <div class="main-header">
       <h1>Pokemon Unite Moveset Tierlist</h1>
       <div id="header-text" class="subheading"></div>
     </div>
 
-    <div id="filters">
-      <input id="nameSearch" placeholder="Search Name or Moves..." />
+    <aside class="features-box desktop-features-box">
+      <h3>How To Use</h3>
+      <ul>
+        <li>Tap <strong>Pokemon</strong> for passive, attack, Unite Move, and patches</li>
+        <li>Tap <strong>moves</strong> for descriptions and move patch history</li>
+        <li>Tap <strong>Win Rate</strong> for build, battle item, and held item details</li>
+        <li>Use <strong>Sort</strong> and <strong>Filters</strong> to refine the list</li>
+        <li>Tap <strong>names</strong> or <strong>roles</strong> on desktop to quick-filter</li>
+      </ul>
+    </aside>
 
-      <div class="pick-rate-container">
-        <label for="minPickRate" class="pick-rate-label">Min Pick Rate:</label>
-        <input type="number" id="minPickRate" value="1" min="0" max="100">
-        <span class="percentage-sign">%</span>
-      </div>
-
-      <div class="role-filters">
-        <label class="role-option">
-          <input type="checkbox" name="role" value="Attacker">
-          <span class="role-label">Attacker</span>
-        </label>
-        <label class="role-option">
-          <input type="checkbox" name="role" value="Defender">
-          <span class="role-label">Defender</span>
-        </label>
-        <label class="role-option">
-          <input type="checkbox" name="role" value="All-Rounder">
-          <span class="role-label">All-Rounder</span>
-        </label>
-        <label class="role-option">
-          <input type="checkbox" name="role" value="Speedster">
-          <span class="role-label">Speedster</span>
-        </label>
-        <label class="role-option">
-          <input type="checkbox" name="role" value="Supporter">
-          <span class="role-label">Supporter</span>
-        </label>
-      </div>
-
-      <button id="resetFilters" class="reset-button">Reset</button>
-    </div>
-
-    <div id="moveset-table">
-      <!-- Column definitions -->
-      <div class="table-column-group">
-        <div class="table-column col-pokemon"></div>
-        <div class="table-column col-name"></div>
-        <div class="table-column col-role"></div>
-        <div class="table-column col-moveset"></div>
-        <div class="table-column col-moves"></div>
-        <div class="table-column col-winrate"></div>
-        <div class="table-column col-pickrate"></div>
-      </div>
-
-      <!-- Header -->
-      <div class="table-header-group">
-        <div class="table-row">
-          <div class="table-cell">Pokemon</div>
-          <div class="table-cell" data-sort="Name">Name <span id="arrow-Name"></span></div>
-          <div class="table-cell">Role</div>
-          <div class="table-cell">Move Set</div>
-          <div class="table-cell">Moves</div>
-          <div class="table-cell" data-sort="Win Rate">Win Rate <span id="arrow-Win Rate"></span></div>
-          <div class="table-cell" data-sort="Pick Rate">Pick Rate <span id="arrow-Pick Rate"></span></div>
+    <div class="controls-shell">
+      <div class="mobile-toolbar">
+        <div class="mobile-toolbar-search">
+          <input id="nameSearch" placeholder="Search Name or Moves..." />
+        </div>
+        <div class="mobile-toolbar-actions">
+          <button id="mobileSortButton" class="mobile-toolbar-button" type="button">Sort</button>
+          <button id="mobileFiltersButton" class="mobile-toolbar-button" type="button">Filters</button>
+          <button id="mobileHelpButton" class="mobile-toolbar-button" type="button">Help</button>
         </div>
       </div>
 
-      <!-- Body (will be filled by JavaScript) -->
-      <div class="table-row-group"></div>
+      <div id="filters">
+        <div class="mobile-panel-header">
+          <h3>Filters</h3>
+          <button id="closeFiltersPanel" class="mobile-panel-close" type="button" aria-label="Close filters">×</button>
+        </div>
+
+        <div class="pick-rate-container">
+          <label for="minPickRate" class="pick-rate-label">Min Pick Rate:</label>
+          <input type="number" id="minPickRate" value="1" min="0" max="100">
+          <span class="percentage-sign">%</span>
+        </div>
+
+        <div class="role-filters">
+          <label class="role-option">
+            <input type="checkbox" name="role" value="Attacker">
+            <span class="role-label">Attacker</span>
+          </label>
+          <label class="role-option">
+            <input type="checkbox" name="role" value="Defender">
+            <span class="role-label">Defender</span>
+          </label>
+          <label class="role-option">
+            <input type="checkbox" name="role" value="All-Rounder">
+            <span class="role-label">All-Rounder</span>
+          </label>
+          <label class="role-option">
+            <input type="checkbox" name="role" value="Speedster">
+            <span class="role-label">Speedster</span>
+          </label>
+          <label class="role-option">
+            <input type="checkbox" name="role" value="Supporter">
+            <span class="role-label">Supporter</span>
+          </label>
+        </div>
+
+        <div class="filter-actions">
+          <button id="resetFilters" class="reset-button" type="button">Reset</button>
+        </div>
+      </div>
+
+      <div id="mobileSortPanel" class="mobile-sheet" aria-hidden="true">
+        <div class="mobile-panel-header">
+          <h3>Sort</h3>
+          <button id="closeSortPanel" class="mobile-panel-close" type="button" aria-label="Close sort panel">×</button>
+        </div>
+        <div class="mobile-sheet-content">
+          <label class="mobile-field">
+            <span class="mobile-field-label">Sort By</span>
+            <select id="mobileSortColumn" class="mobile-select">
+              <option value="Win Rate">Win Rate</option>
+              <option value="Pick Rate">Pick Rate</option>
+              <option value="Name">Name</option>
+            </select>
+          </label>
+          <label class="mobile-field">
+            <span class="mobile-field-label">Direction</span>
+            <select id="mobileSortDirection" class="mobile-select">
+              <option value="desc">Descending</option>
+              <option value="asc">Ascending</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div id="mobileHelpPanel" class="mobile-sheet" aria-hidden="true">
+        <div class="mobile-panel-header">
+          <h3>How To Use</h3>
+          <button id="closeHelpPanel" class="mobile-panel-close" type="button" aria-label="Close help panel">×</button>
+        </div>
+        <div class="mobile-sheet-content">
+          <ul class="mobile-help-list">
+            <li>Tap <strong>Pokemon</strong> for passive, attack, Unite Move, and patches</li>
+            <li>Tap <strong>moves</strong> for descriptions and move patch history</li>
+            <li>Tap <strong>Win Rate</strong> for build, battle item, and held item details</li>
+            <li>Use <strong>Sort</strong> and <strong>Filters</strong> to refine the list</li>
+            <li>Swipe and scroll within popups to explore details on mobile</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="mobilePanelScrim" class="mobile-panel-scrim hidden" aria-hidden="true"></div>
     </div>
+
+    <div class="table-scroll-shell">
+      <div id="moveset-table">
+        <div class="table-column-group">
+          <div class="table-column col-pokemon"></div>
+          <div class="table-column col-name"></div>
+          <div class="table-column col-role"></div>
+          <div class="table-column col-moveset"></div>
+          <div class="table-column col-moves"></div>
+          <div class="table-column col-winrate"></div>
+          <div class="table-column col-pickrate"></div>
+        </div>
+
+        <div class="table-header-group">
+          <div class="table-row">
+            <div class="table-cell">Pokemon</div>
+            <div class="table-cell" data-sort="Name">Name <span id="arrow-Name"></span></div>
+            <div class="table-cell">Role</div>
+            <div class="table-cell">Move Set</div>
+            <div class="table-cell">Moves</div>
+            <div class="table-cell" data-sort="Win Rate">Win Rate <span id="arrow-Win Rate"></span></div>
+            <div class="table-cell" data-sort="Pick Rate">Pick Rate <span id="arrow-Pick Rate"></span></div>
+          </div>
+        </div>
+
+        <div class="table-row-group"></div>
+      </div>
+    </div>
+
+    <div id="moveset-cards" class="moveset-card-list" aria-live="polite"></div>
 
     <div id="popup" class="popup hidden">
       <div class="popup-content" id="popupContent"></div>
@@ -128,5 +189,4 @@
   </div>
 </body>
 </html>
-
 

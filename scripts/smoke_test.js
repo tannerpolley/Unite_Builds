@@ -68,6 +68,7 @@ async function main() {
     });
 
     const page = await browser.newPage();
+    await page.setViewport({ width: 1440, height: 1200, deviceScaleFactor: 1 });
     const pageErrors = [];
     page.on("pageerror", (error) => pageErrors.push(error.message));
 
@@ -83,20 +84,28 @@ async function main() {
     if (!headerText) {
       throw new Error("Smoke test failed: header text did not load");
     }
+    if (/non-mobile devices/i.test(headerText)) {
+      throw new Error(`Smoke test failed: header still includes desktop-only messaging ("${headerText}")`);
+    }
 
-    async function closePopup() {
-      await page.evaluate(() => {
+    async function closePopup(pageRef = page) {
+      await pageRef.evaluate(() => {
+        const closeButton = document.querySelector("#popup:not(.hidden) .popup-close-button");
+        if (closeButton) {
+          closeButton.click();
+          return;
+        }
         const popup = document.getElementById("popup");
         popup.dispatchEvent(new MouseEvent("click", { bubbles: true }));
       });
-      await page.waitForFunction(
+      await pageRef.waitForFunction(
         () => document.getElementById("popup").classList.contains("hidden"),
         { timeout: 30000 }
       );
     }
 
-    async function assertPopupTabs(expectedLabels, expectedActiveLabel) {
-      const tabLabels = await page.$$eval(
+    async function assertPopupTabs(expectedLabels, expectedActiveLabel, pageRef = page) {
+      const tabLabels = await pageRef.$$eval(
         "#popup:not(.hidden) .popup-tab-button",
         (nodes) => nodes.map((node) => node.textContent.trim()).filter(Boolean)
       );
@@ -104,7 +113,7 @@ async function main() {
         throw new Error(`Smoke test failed: expected popup tabs ${expectedLabels.join(", ")} but found ${tabLabels.join(", ")}`);
       }
 
-      const activeLabel = await page.$eval(
+      const activeLabel = await pageRef.$eval(
         "#popup:not(.hidden) .popup-tab-button.active",
         (node) => node.textContent.trim()
       );
@@ -113,8 +122,8 @@ async function main() {
       }
     }
 
-    async function openPopupTab(label) {
-      const clicked = await page.evaluate((targetLabel) => {
+    async function openPopupTab(label, pageRef = page) {
+      const clicked = await pageRef.evaluate((targetLabel) => {
         const buttons = Array.from(document.querySelectorAll("#popup:not(.hidden) .popup-tab-button"));
         const target = buttons.find((button) => button.textContent.trim() === targetLabel);
         if (!target) {
@@ -128,7 +137,7 @@ async function main() {
         throw new Error(`Smoke test failed: could not find popup tab "${label}"`);
       }
 
-      await page.waitForFunction(
+      await pageRef.waitForFunction(
         (targetLabel) => {
           const active = document.querySelector("#popup:not(.hidden) .popup-tab-button.active");
           return active && active.textContent.trim() === targetLabel;
@@ -519,8 +528,160 @@ async function main() {
       throw new Error("Smoke test failed: Pokemon popup still shows raw patch math");
     }
 
+    await closePopup();
+
+    const mobilePage = await browser.newPage();
+    const mobileErrors = [];
+    mobilePage.on("pageerror", (error) => mobileErrors.push(error.message));
+    await mobilePage.setViewport({ width: 390, height: 844, isMobile: true, hasTouch: true, deviceScaleFactor: 2 });
+    await mobilePage.goto(baseUrl, { waitUntil: "networkidle2", timeout: 120000 });
+    await mobilePage.waitForSelector("#moveset-cards .mobile-card", { timeout: 120000 });
+
+    const mobileLayout = await mobilePage.evaluate(() => {
+      const cards = document.getElementById("moveset-cards");
+      const tableShell = document.querySelector(".table-scroll-shell");
+      const mobileToolbar = document.querySelector(".mobile-toolbar");
+      return {
+        viewportWidth: window.innerWidth,
+        docScrollWidth: document.documentElement.scrollWidth,
+        cardsVisible: !!cards && getComputedStyle(cards).display !== "none",
+        tableHidden: !!tableShell && getComputedStyle(tableShell).display === "none",
+        toolbarButtons: Array.from(document.querySelectorAll(".mobile-toolbar-actions .mobile-toolbar-button")).map((node) => node.textContent.trim()),
+        headerText: document.getElementById("header-text")?.textContent?.trim() || "",
+      };
+    });
+    if (!mobileLayout.cardsVisible || !mobileLayout.tableHidden) {
+      throw new Error(`Smoke test failed: phone layout did not switch to cards (${JSON.stringify(mobileLayout)})`);
+    }
+    if (mobileLayout.docScrollWidth > mobileLayout.viewportWidth + 2) {
+      throw new Error(`Smoke test failed: phone layout still has horizontal page overflow (${JSON.stringify(mobileLayout)})`);
+    }
+    if (!mobileLayout.toolbarButtons.includes("Sort") || !mobileLayout.toolbarButtons.includes("Filters") || !mobileLayout.toolbarButtons.includes("Help")) {
+      throw new Error(`Smoke test failed: mobile toolbar buttons are missing (${mobileLayout.toolbarButtons.join(", ")})`);
+    }
+    if (/non-mobile devices/i.test(mobileLayout.headerText)) {
+      throw new Error("Smoke test failed: mobile header still includes desktop-only messaging");
+    }
+
+    await mobilePage.evaluate(() => {
+      document.getElementById("nameSearch").value = "Absol";
+      document.getElementById("nameSearch").dispatchEvent(new Event("input", { bubbles: true }));
+    });
+    await mobilePage.waitForFunction(() => {
+      const cards = Array.from(document.querySelectorAll("#moveset-cards .mobile-card-name"));
+      return cards.some((node) => node.textContent.trim() === "Absol");
+    }, { timeout: 30000 });
+
+    const absolMobileRates = await mobilePage.evaluate(() => {
+      const firstCard = Array.from(document.querySelectorAll("#moveset-cards .mobile-card")).find((card) => {
+        const name = card.querySelector(".mobile-card-name");
+        return name && name.textContent.trim() === "Absol";
+      });
+      if (!firstCard) {
+        throw new Error("Smoke test failed: could not find Absol mobile card");
+      }
+      const values = Array.from(firstCard.querySelectorAll(".mobile-card-metric-value")).map((node) => node.textContent.trim());
+      return {
+        pickRate: values[1] || ""
+      };
+    });
+    if (!absolMobileRates.pickRate) {
+      throw new Error("Smoke test failed: mobile card metrics did not render");
+    }
+
+    await mobilePage.click("#mobileSortButton");
+    await mobilePage.waitForFunction(() => document.body.classList.contains("mobile-panel-sort-open"), { timeout: 30000 });
+    await mobilePage.select("#mobileSortColumn", "Win Rate");
+    await mobilePage.select("#mobileSortDirection", "asc");
+    await mobilePage.waitForFunction(() => {
+      const card = document.querySelector("#moveset-cards .mobile-card");
+      return !!card;
+    }, { timeout: 30000 });
+    await mobilePage.evaluate(() => document.getElementById("closeSortPanel").click());
+    await mobilePage.waitForFunction(() => !document.body.classList.contains("mobile-panel-open"), { timeout: 30000 });
+
+    await mobilePage.click("#mobileFiltersButton");
+    await mobilePage.waitForFunction(() => document.body.classList.contains("mobile-panel-filters-open"), { timeout: 30000 });
+    await mobilePage.evaluate(() => {
+      const minPickRate = document.getElementById("minPickRate");
+      minPickRate.value = "5";
+      minPickRate.dispatchEvent(new Event("input", { bubbles: true }));
+    });
+    await mobilePage.evaluate(() => document.getElementById("closeFiltersPanel").click());
+    await mobilePage.waitForFunction(() => !document.body.classList.contains("mobile-panel-open"), { timeout: 30000 });
+    await mobilePage.evaluate(() => {
+      const minPickRate = document.getElementById("minPickRate");
+      minPickRate.value = "1";
+      minPickRate.dispatchEvent(new Event("input", { bubbles: true }));
+    });
+    await mobilePage.waitForFunction(() => document.querySelectorAll("#moveset-cards .mobile-card").length > 0, { timeout: 30000 });
+
+    await mobilePage.click("#mobileHelpButton");
+    await mobilePage.waitForFunction(() => document.body.classList.contains("mobile-panel-help-open"), { timeout: 30000 });
+    const helpItemCount = await mobilePage.$$eval("#mobileHelpPanel .mobile-help-list li", (items) => items.length);
+    if (helpItemCount < 4) {
+      throw new Error("Smoke test failed: mobile help sheet did not render expected content");
+    }
+    await mobilePage.evaluate(() => document.getElementById("closeHelpPanel").click());
+    await mobilePage.waitForFunction(() => !document.body.classList.contains("mobile-panel-open"), { timeout: 30000 });
+
+    await mobilePage.click("#moveset-cards .mobile-view-items");
+    await mobilePage.waitForSelector("#popup:not(.hidden) .build-summary-grid", { timeout: 30000 });
+    const mobilePopupState = await mobilePage.evaluate(() => ({
+      popupOpen: !document.getElementById("popup").classList.contains("hidden"),
+      bodyLocked: document.body.classList.contains("popup-open"),
+      heldIcons: document.querySelectorAll("#popup:not(.hidden) .held-item-img").length,
+    }));
+    if (!mobilePopupState.popupOpen || !mobilePopupState.bodyLocked || mobilePopupState.heldIcons === 0) {
+      throw new Error(`Smoke test failed: mobile build popup state is invalid (${JSON.stringify(mobilePopupState)})`);
+    }
+    await closePopup(mobilePage);
+
+    await mobilePage.click("#moveset-cards .mobile-move-button");
+    await mobilePage.waitForSelector("#popup:not(.hidden) .popup-tab-button", { timeout: 30000 });
+    await assertPopupTabs(["Description", "Patches"], "Description", mobilePage);
+    await openPopupTab("Patches", mobilePage);
+    await mobilePage.waitForSelector("#popup:not(.hidden) .patch-history-section", { timeout: 30000 });
+    await closePopup(mobilePage);
+
+    await mobilePage.click("#moveset-cards .mobile-card-pokemon-button");
+    await mobilePage.waitForSelector("#popup:not(.hidden) .popup-tab-button", { timeout: 30000 });
+    await assertPopupTabs(["Overview", "Patches"], "Overview", mobilePage);
+    await openPopupTab("Patches", mobilePage);
+    await mobilePage.waitForSelector("#popup:not(.hidden) .patch-history-section", { timeout: 30000 });
+    await closePopup(mobilePage);
+
+    const tabletPage = await browser.newPage();
+    const tabletErrors = [];
+    tabletPage.on("pageerror", (error) => tabletErrors.push(error.message));
+    await tabletPage.setViewport({ width: 768, height: 1024, isMobile: true, hasTouch: true, deviceScaleFactor: 2 });
+    await tabletPage.goto(baseUrl, { waitUntil: "networkidle2", timeout: 120000 });
+    await tabletPage.waitForSelector(".table-row-group .table-row", { timeout: 120000 });
+    const tabletLayout = await tabletPage.evaluate(() => {
+      const tableShell = document.querySelector(".table-scroll-shell");
+      const cards = document.getElementById("moveset-cards");
+      return {
+        viewportWidth: window.innerWidth,
+        docScrollWidth: document.documentElement.scrollWidth,
+        tableVisible: !!tableShell && getComputedStyle(tableShell).display !== "none",
+        cardsHidden: !!cards && getComputedStyle(cards).display === "none",
+      };
+    });
+    if (!tabletLayout.tableVisible || !tabletLayout.cardsHidden) {
+      throw new Error(`Smoke test failed: tablet layout should keep the table visible (${JSON.stringify(tabletLayout)})`);
+    }
+    if (tabletLayout.docScrollWidth > tabletLayout.viewportWidth + 2) {
+      throw new Error(`Smoke test failed: tablet page shell still overflows horizontally (${JSON.stringify(tabletLayout)})`);
+    }
+
     if (pageErrors.length > 0) {
       throw new Error(`Smoke test failed with page errors: ${pageErrors.join(" | ")}`);
+    }
+    if (mobileErrors.length > 0) {
+      throw new Error(`Smoke test failed with mobile page errors: ${mobileErrors.join(" | ")}`);
+    }
+    if (tabletErrors.length > 0) {
+      throw new Error(`Smoke test failed with tablet page errors: ${tabletErrors.join(" | ")}`);
     }
 
     console.log(`Smoke test passed against ${baseUrl}`);

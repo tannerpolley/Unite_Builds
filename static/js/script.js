@@ -1,11 +1,25 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const tableContainer = document.getElementById("moveset-table");
+  const movesetCards = document.getElementById("moveset-cards");
   const popup = document.getElementById("popup");
   const popupContent = document.getElementById("popupContent");
+  const body = document.body;
   const roleFilters = document.querySelectorAll('input[name="role"]');
   const minPickRate = document.getElementById("minPickRate");
   const nameSearch = document.getElementById("nameSearch");
   const resetFilters = document.getElementById("resetFilters");
+  const filters = document.getElementById("filters");
+  const mobileSortButton = document.getElementById("mobileSortButton");
+  const mobileFiltersButton = document.getElementById("mobileFiltersButton");
+  const mobileHelpButton = document.getElementById("mobileHelpButton");
+  const mobileSortPanel = document.getElementById("mobileSortPanel");
+  const mobileHelpPanel = document.getElementById("mobileHelpPanel");
+  const mobilePanelScrim = document.getElementById("mobilePanelScrim");
+  const closeFiltersPanel = document.getElementById("closeFiltersPanel");
+  const closeSortPanel = document.getElementById("closeSortPanel");
+  const closeHelpPanel = document.getElementById("closeHelpPanel");
+  const mobileSortColumn = document.getElementById("mobileSortColumn");
+  const mobileSortDirection = document.getElementById("mobileSortDirection");
   let assetVersion = "";
 
   let tableItems = [];
@@ -25,6 +39,40 @@ document.addEventListener("DOMContentLoaded", async () => {
     popupContent.querySelectorAll(".move-popup-body, .popup-tab-panel, .popup-table-container").forEach((node) => {
       node.scrollTop = 0;
     });
+  }
+
+  function isPhoneView() {
+    return window.matchMedia("(max-width: 700px)").matches;
+  }
+
+  function syncMobileSortControls() {
+    if (mobileSortColumn) {
+      mobileSortColumn.value = currentSort.column;
+    }
+    if (mobileSortDirection) {
+      mobileSortDirection.value = currentSort.order;
+    }
+  }
+
+  function closeMobilePanels() {
+    body.classList.remove("mobile-panel-open", "mobile-panel-filters-open", "mobile-panel-sort-open", "mobile-panel-help-open");
+    if (mobilePanelScrim) {
+      mobilePanelScrim.classList.add("hidden");
+    }
+  }
+
+  function openMobilePanel(panelName) {
+    if (!isPhoneView()) {
+      return;
+    }
+
+    closeMobilePanels();
+    body.classList.add("mobile-panel-open");
+    body.classList.add(`mobile-panel-${panelName}-open`);
+    if (mobilePanelScrim) {
+      mobilePanelScrim.classList.remove("hidden");
+    }
+    syncMobileSortControls();
   }
 
   async function fetchJsonAsset(path, fallbackValue, label, options = {}) {
@@ -545,7 +593,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                          .toLocaleString(undefined,{ maximumFractionDigits: 0 });
 
       document.getElementById('header-text')
-        .textContent = `Data comes from Unite API as of ${formattedDate} with ${matches} total games analyzed. Currently only working on non-mobile devices.`;
+        .textContent = `Data comes from Unite API as of ${formattedDate} with ${matches} total games analyzed.`;
     } catch(e) {
       console.error(e);
     }
@@ -557,75 +605,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     injectHeaderText()
   ]);
 
-  
-  // Desktop-only mode - no mobile detection needed
-  console.log("Desktop view mode active");
-  
-  const filters = document.getElementById("filters");
-  if (filters) {
-    // Set filter box to black background and center its contents
-    const existingStyles = filters.getAttribute("style") || "";
-    const newStyles = existingStyles + "background-color: #111111 !important; color: white !important; display: flex !important; justify-content: center !important; align-items: center !important; flex-wrap: wrap !important;";
-    filters.setAttribute("style", newStyles);
-    console.log("Setting filters background color to black and centering contents");
-    
-    // Create a container to hold all filter elements centered
-    const nameSearch = document.getElementById("nameSearch");
-    const pickRateContainer = document.querySelector(".pick-rate-container");
-    const minPickRateInput = document.getElementById("minPickRate");
-    const roleFilters = document.querySelector(".role-filters");
-    const resetButton = document.getElementById("resetFilters");
-    
-    // Set appropriate widths for the elements for better layout
-    if (nameSearch) {
-      nameSearch.style.width = "240px";
-    }
-    
-    // Style the min pick rate input
-    if (minPickRateInput) {
-      minPickRateInput.style.backgroundColor = "#333";
-      minPickRateInput.style.color = "white";
-      minPickRateInput.style.border = "none";
-      minPickRateInput.style.borderRadius = "4px";
-      minPickRateInput.style.padding = "4px";
-      minPickRateInput.style.width = "40px";
-      minPickRateInput.style.textAlign = "right";
-    }
-    
-    // Make the percentage sign visible with inline styling
-    const percentageSign = document.querySelector(".percentage-sign");
-    if (percentageSign) {
-      percentageSign.style.color = "white";
-      percentageSign.style.fontWeight = "bold";
-      percentageSign.style.fontSize = "14px";
-      percentageSign.style.display = "inline-block";
-      percentageSign.style.marginLeft = "4px";
-      percentageSign.textContent = "%"; // Explicitly set content
-      console.log("Applied styling to percentage sign");
-    }
-    
-    // Ensure proper alignment and centering
-    if (roleFilters) {
-      roleFilters.style.display = "flex";
-      roleFilters.style.justifyContent = "center";
-      roleFilters.style.flexWrap = "wrap";
-      roleFilters.style.margin = "0";
-    }
-    
-    if (pickRateContainer) {
-      pickRateContainer.style.display = "flex";
-      pickRateContainer.style.alignItems = "center";
-      pickRateContainer.style.justifyContent = "center";
-    }
-    
-    // Ensure the filters container is properly centered
-    if (filters) {
-      filters.style.justifyContent = "center";
-      filters.style.textAlign = "center";
-    }
-  }
-  
-  // Keep Win Rate as the default sort column, now it's the 7th column
+  // Keep Win Rate as the default sort column
   let currentSort = { column: "Win Rate", order: 'desc' };
   let activeNameFilter = null;
   let activeRoleFilters = []; // Change to array to store multiple roles
@@ -790,6 +770,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     `;
   }
 
+  function renderPopupCloseButton(label = "Close popup") {
+    return `<button class="popup-close-button" type="button" aria-label="${escapeHtml(label)}">×</button>`;
+  }
+
   function renderHeldItemIcon(itemName) {
     return `
       <div class="held-item-slot" title="${escapeHtml(itemName)}" aria-label="${escapeHtml(itemName)}">
@@ -923,56 +907,86 @@ document.addEventListener("DOMContentLoaded", async () => {
     return null;
   }
 
-  function syncFilterWidthToTable() {
-    const table = document.getElementById("moveset-table");
-    const filters = document.getElementById("filters");
-    if (table && filters) {
-        // For table layout, we need to measure the full table width
-        const tableWidth = table.scrollWidth || table.offsetWidth;
+  function renderMobileCard(entry) {
+    const entryIndex = tableItems.indexOf(entry);
+    const winRate = parseFloat(entry["Win Rate"]);
+    const winRateColor = getWinRateColor(winRate);
+    const move1Img = Array.isArray(entry["Move 1"]) ? entry["Move 1"][0] : entry["Move 1"];
+    const move2Img = Array.isArray(entry["Move 2"]) ? entry["Move 2"][0] : entry["Move 2"];
+    const move1Label = getMoveLabelFromAsset(move1Img, entry["Name"]);
+    const move2Label = getMoveLabelFromAsset(move2Img, entry["Name"]);
 
-        // Ensure minimum width for filters to match table
-        const minWidth = 940; // Match the min-width setting in CSS
-        const targetWidth = Math.max(tableWidth, minWidth);
+    return `
+      <article class="mobile-card">
+        <div class="mobile-card-top">
+          <button class="mobile-card-pokemon-button" type="button">
+            <img src="static/img/${entry["Pokemon"]}" alt="${escapeHtml(entry["Name"])}" class="mobile-card-pokemon-img">
+            <div class="mobile-card-pokemon-meta">
+              <span class="mobile-card-name">${escapeHtml(entry["Name"])}</span>
+              <span class="mobile-card-role">${escapeHtml(entry["Role"])}</span>
+            </div>
+          </button>
+          <div class="mobile-card-metrics">
+            <button class="mobile-view-items" type="button" data-index="${entryIndex}" data-win-rate="${entry["Win Rate"]}" style="color: ${winRateColor};">
+              <span class="mobile-card-metric-label">Win Rate</span>
+              <span class="mobile-card-metric-value">${escapeHtml(format(entry["Win Rate"]))}</span>
+            </button>
+            <div class="mobile-card-metric">
+              <span class="mobile-card-metric-label">Pick Rate</span>
+              <span class="mobile-card-metric-value">${escapeHtml(format(entry["Pick Rate"]))}</span>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-card-moveset">
+          <span class="mobile-card-moveset-label">Move Set</span>
+          <div class="mobile-card-moveset-value">${escapeHtml(entry["Move Set"])}</div>
+        </div>
+        <div class="mobile-card-move-buttons">
+          <button class="mobile-move-button" type="button">
+            <img src="static/img/${move1Img}" alt="${escapeHtml(move1Label)}" class="mobile-card-move-img">
+            <span class="mobile-card-move-label">${escapeHtml(move1Label)}</span>
+          </button>
+          <button class="mobile-move-button" type="button">
+            <img src="static/img/${move2Img}" alt="${escapeHtml(move2Label)}" class="mobile-card-move-img">
+            <span class="mobile-card-move-label">${escapeHtml(move2Label)}</span>
+          </button>
+        </div>
+      </article>
+    `;
+  }
 
-        // Set the width and log it
-        filters.style.width = `${targetWidth}px`;
-        console.log(`Table width: ${tableWidth}px, Setting filter width to: ${targetWidth}px`);
-
-        // Also check if the last column is visible
-        const lastColumn = document.querySelector(".moveset-header > div:last-child");
-        if (lastColumn) {
-          const rect = lastColumn.getBoundingClientRect();
-          console.log(`Last column (Pick Rate) dimensions: width=${rect.width}px, right=${rect.right}px, visible=${rect.right <= window.innerWidth}`);
-        }
+  function sortItems(items) {
+    if (!currentSort.column) {
+      return items;
     }
+
+    return [...items].sort((a, b) => {
+      const col = currentSort.column;
+      const aVal = a[col] ?? "";
+      const bVal = b[col] ?? "";
+      const aNum = parseFloat(aVal);
+      const bNum = parseFloat(bVal);
+
+      if (!Number.isNaN(aNum) && !Number.isNaN(bNum)) {
+        return currentSort.order === 'asc' ? aNum - bNum : bNum - aNum;
+      }
+
+      return currentSort.order === 'asc'
+        ? aVal.toString().localeCompare(bVal)
+        : bVal.toString().localeCompare(aVal);
+    });
   }
 
   function renderRows(filteredItems) {
     const tableBody = document.querySelector('.table-row-group');
-    tableBody.innerHTML = ''; // Clear existing rows
-
-    if (currentSort.column) {
-      filteredItems.sort((a, b) => {
-        const col = currentSort.column;
-        let aVal = a[col] ?? "";
-        let bVal = b[col] ?? "";
-
-        const aNum = parseFloat(aVal);
-        const bNum = parseFloat(bVal);
-
-        if (!isNaN(aNum) && !isNaN(bNum)) {
-          return currentSort.order === 'asc' ? aNum - bNum : bNum - aNum;
-        } else {
-          return currentSort.order === 'asc'
-            ? aVal.toString().localeCompare(bVal)
-            : bVal.toString().localeCompare(aVal);
-        }
-      });
-    }
+    const sortedItems = sortItems(filteredItems);
+    tableBody.innerHTML = '';
+    movesetCards.innerHTML = '';
 
     updateSortArrows();
+    syncMobileSortControls();
 
-    filteredItems.forEach((entry, index) => {
+    sortedItems.forEach((entry) => {
       const row = document.createElement('div');
       row.className = 'table-row';
 
@@ -986,17 +1000,17 @@ document.addEventListener("DOMContentLoaded", async () => {
       const winRateColor = getWinRateColor(winRate);
 
       row.innerHTML = `
-        <div class="table-cell"><img src="static/img/${entry["Pokemon"]}" alt="${entry["Name"]}"></div>
-        <div class="table-cell"><span class="${nameClass}" data-name="${entry["Name"]}">${entry["Name"]}</span></div>
-        <div class="table-cell"><span class="${roleClass}" data-role="${entry["Role"]}">${entry["Role"]}</span></div>
-        <div class="table-cell">${entry["Move Set"]}</div>
+        <div class="table-cell"><img src="static/img/${entry["Pokemon"]}" alt="${escapeHtml(entry["Name"])}"></div>
+        <div class="table-cell"><span class="${nameClass}" data-name="${escapeHtml(entry["Name"])}">${escapeHtml(entry["Name"])}</span></div>
+        <div class="table-cell"><span class="${roleClass}" data-role="${escapeHtml(entry["Role"])}">${escapeHtml(entry["Role"])}</span></div>
+        <div class="table-cell">${escapeHtml(entry["Move Set"])}</div>
         <div class="table-cell">
           <span class="move-wrapper">${renderMoves(entry["Move 1"])}</span>
           <span class="move-wrapper">${renderMoves(entry["Move 2"])}</span>
         </div>
         <div class="table-cell">
-          <button class="view-items" data-index="${tableItems.indexOf(entry)}" 
-                  style="color: ${winRateColor}; font-weight: bold; background: none; border: none;" 
+          <button class="view-items" type="button" data-index="${tableItems.indexOf(entry)}"
+                  style="color: ${winRateColor}; font-weight: bold; background: none; border: none;"
                   data-win-rate="${entry["Win Rate"]}">
             ${format(entry["Win Rate"])}
           </button>
@@ -1007,28 +1021,20 @@ document.addEventListener("DOMContentLoaded", async () => {
       tableBody.appendChild(row);
     });
 
-    // Attach event handlers
+    movesetCards.innerHTML = sortedItems.map(renderMobileCard).join("");
     attachEventHandlers();
-    syncFilterWidthToTable();
   }
 
   function attachEventHandlers() {
-    // View items button handlers
-    document.querySelectorAll(".view-items").forEach(button => {
-      // Add hover effect that ONLY changes text color
-      button.addEventListener("mouseenter", () => {
-        // button.style.color = "#57c1ed";
-      });
-
+    document.querySelectorAll(".view-items, .mobile-view-items").forEach(button => {
       button.addEventListener("mouseleave", () => {
-        // Restore original color
         const winRate = parseFloat(button.dataset.winRate || "50");
         button.style.color = getWinRateColor(winRate);
         button.style.textShadow = "none";
       });
 
-      button.addEventListener("click", e => {
-        const index = parseInt(e.target.dataset.index);
+      button.addEventListener("click", (e) => {
+        const index = parseInt(e.currentTarget.dataset.index, 10);
         showPopup(tableItems[index]);
       });
     });
@@ -1069,26 +1075,40 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     });
 
-    // Move image click handlers
     document.querySelectorAll(".move-img").forEach(img => {
       img.addEventListener("click", e => {
-        e.stopPropagation(); // Prevent row click events
+        e.stopPropagation();
         showMovePopup(img);
       });
-
-      // Visual feedback
       img.style.cursor = "pointer";
     });
 
-    // Pokemon image click handlers
     document.querySelectorAll(".table-row .table-cell:first-child img").forEach(img => {
       img.addEventListener("click", e => {
-        e.stopPropagation(); // Prevent row click events
+        e.stopPropagation();
         showPokemonPopup(img);
       });
-
-      // Visual feedback
       img.style.cursor = "pointer";
+    });
+
+    document.querySelectorAll(".mobile-card-pokemon-button").forEach(button => {
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        const img = button.querySelector("img");
+        if (img) {
+          showPokemonPopup(img);
+        }
+      });
+    });
+
+    document.querySelectorAll(".mobile-move-button").forEach(button => {
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        const img = button.querySelector("img");
+        if (img) {
+          showMovePopup(img);
+        }
+      });
     });
   }
 
@@ -1107,7 +1127,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     }
 
-    popup.classList.remove('mobile-popup');
     items.sort((a, b) => b.pickRate - a.pickRate);
 
     const winRate = parseFloat(entry["Win Rate"]);
@@ -1132,6 +1151,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     popupContent.classList.add("build-popup-content");
     popupContent.innerHTML = `
+      ${renderPopupCloseButton("Close build popup")}
       <div class="build-popup-header build-popup-shell">
         <div class="build-popup-top-grid">
           <div class="build-popup-main">
@@ -1183,6 +1203,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       </section>
     `;
     resetPopupScrollPosition();
+    body.classList.add("popup-open");
     popup.classList.remove("hidden");
   }
 
@@ -1246,6 +1267,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     popupContent.classList.remove("build-popup-content");
     popupContent.innerHTML = `
+      ${renderPopupCloseButton(`Close ${moveName} popup`)}
       <div class="move-popup-header">
         <img src="${moveImgSrc}" alt="${moveName}" class="move-popup-img">
         <h3 class="popup-title">${moveName}</h3>
@@ -1263,6 +1285,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Show popup
     resetPopupScrollPosition();
+    body.classList.add("popup-open");
     popup.classList.remove("hidden");
   }
 
@@ -1357,6 +1380,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Build popup HTML
     popupContent.classList.remove("build-popup-content");
     popupContent.innerHTML = `
+      ${renderPopupCloseButton(`Close ${pokemonName} popup`)}
       <div class="move-popup-header">
         <img src="${pokemonImgSrc}" alt="${pokemonName}" class="move-popup-img">
         <h3 class="popup-title">${pokemonName}</h3>
@@ -1374,19 +1398,28 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Show popup
     resetPopupScrollPosition();
+    body.classList.add("popup-open");
     popup.classList.remove("hidden");
   }
 
   popup.addEventListener("click", (e) => {
     if (e.target === popup) {
       resetPopupScrollPosition();
+      body.classList.remove("popup-open");
       popup.classList.add("hidden");
-      // Stop propagation to prevent the document click handler from triggering
       e.stopPropagation();
     }
   });
 
   popupContent.addEventListener("click", (event) => {
+    const closeButton = event.target.closest(".popup-close-button");
+    if (closeButton) {
+      resetPopupScrollPosition();
+      body.classList.remove("popup-open");
+      popup.classList.add("hidden");
+      return;
+    }
+
     const tabButton = event.target.closest(".popup-tab-button");
     if (!tabButton) {
       return;
@@ -1417,46 +1450,31 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Add event listener for resetting all filters
   resetFilters.addEventListener("click", () => {
-    // Reset active filters
     activeNameFilter = null;
     activeRoleFilters = [];
-    
-    // Reset role filters
+
     roleFilters.forEach(filter => {
       filter.checked = false;
-      // Also remove any active role styling
       if (filter.closest('.role-option')) {
         filter.closest('.role-option').classList.remove('active-role');
       }
     });
-    
-    // Reset name search
+
     nameSearch.value = "";
-    
-    // Reset min pick rate to default value of 1
     minPickRate.value = 1;
-    
-    // Reset sorting to default (Win Rate descending)
     currentSort = { column: "Win Rate", order: 'desc' };
-    
-    // Re-render the table with reset filters and sorting
+    syncMobileSortControls();
+    closeMobilePanels();
     renderRows(filterItems());
   });
   
-  // Function to update role checkboxes based on activeRoleFilters
   function updateRoleCheckboxes() {
-    // Get all role checkboxes
     const checkboxes = document.querySelectorAll('input[name="role"]');
-    
-    // Update each checkbox
+
     checkboxes.forEach(checkbox => {
-      // Check if this role is in the activeRoleFilters array
       const isActive = activeRoleFilters.includes(checkbox.value);
-      
-      // Set the checkbox state
       checkbox.checked = isActive;
-      
-      // Update the role-option class
+
       const roleOption = checkbox.closest('.role-option');
       if (roleOption) {
         if (isActive) {
@@ -1466,8 +1484,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
       }
     });
-    
-    console.log("Updated role checkboxes to match:", activeRoleFilters);
   }
   
   function filterItems() {
@@ -1591,36 +1607,32 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
 
-  // Add document click handler to reset filters only when clicking outside the table
-  document.addEventListener("click", (e) => {
-    // If we're clicking on the popup or popup content, don't reset filters
-    if (e.target.closest('#popup')) {
-      return;
-    }
-    
-    // Check if the click is outside both the moveset table and filters
-    if (!e.target.closest('#moveset-table') && !e.target.closest('#filters')) {
-      // Reset active filters
-      activeNameFilter = null;
-      activeRoleFilters = [];
-      
-      // Reset role filters
-      roleFilters.forEach(filter => {
-        filter.checked = false;
-        // Also remove any active role styling
-        if (filter.closest('.role-option')) {
-          filter.closest('.role-option').classList.remove('active-role');
-        }
-      });
-      
-      // Re-render the table with reset filters
-      renderRows(filterItems());
+  mobileSortButton?.addEventListener("click", () => openMobilePanel("sort"));
+  mobileFiltersButton?.addEventListener("click", () => openMobilePanel("filters"));
+  mobileHelpButton?.addEventListener("click", () => openMobilePanel("help"));
+  closeFiltersPanel?.addEventListener("click", closeMobilePanels);
+  closeSortPanel?.addEventListener("click", closeMobilePanels);
+  closeHelpPanel?.addEventListener("click", closeMobilePanels);
+  mobilePanelScrim?.addEventListener("click", closeMobilePanels);
+
+  mobileSortColumn?.addEventListener("change", () => {
+    currentSort.column = mobileSortColumn.value;
+    renderRows(filterItems());
+  });
+
+  mobileSortDirection?.addEventListener("change", () => {
+    currentSort.order = mobileSortDirection.value;
+    renderRows(filterItems());
+  });
+
+  window.addEventListener("resize", () => {
+    if (!isPhoneView()) {
+      closeMobilePanels();
     }
   });
-  
-  // ✅ Attach everything
-  window.addEventListener("resize", syncFilterWidthToTable);
+
   attachSortHandlers();
+  syncMobileSortControls();
   renderRows(filterItems());
 });
 
