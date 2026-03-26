@@ -8471,6 +8471,20 @@
   ],
   "Venusaur": [
     {
+      "version": "1.22.1.8",
+      "title": "Patch 1.22.1.8 Long-Range Tactics Part 2",
+      "slug": "patch-1-22-1-8-long-range-tactics-part-2",
+      "patchDate": "2026-03-19",
+      "changes": [
+        {
+          "heading": "Unite Move: Verdant Anger \\[BUFFED\\]",
+          "lines": [
+            "Unite Gauge energy required: 10% Decrease"
+          ]
+        }
+      ]
+    },
+    {
       "version": "1.20.1.2",
       "title": "Patch 1.20.1.2 Celestial Rumble",
       "slug": "patch-1-20-1-2-celestial-rumble",

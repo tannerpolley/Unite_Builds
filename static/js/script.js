@@ -741,12 +741,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     return label.startsWith(prefix) ? label.slice(prefix.length) : label;
   }
 
-  function renderWinrateMetricCard(label, value, valueColor = "#ffffff") {
+  function renderMoveLabel(label, className) {
+    const words = String(label || "").trim().split(/\s+/).filter(Boolean);
+    const firstLine = words.length > 1 ? words[0] : (words[0] || "");
+    const secondLine = words.length > 1 ? words.slice(1).join(" ") : "&nbsp;";
     return `
-      <div class="build-metric-card">
-        <div class="build-metric-label">${escapeHtml(label)}</div>
-        <div class="build-metric-value" style="color: ${escapeHtml(valueColor)};">${escapeHtml(value)}</div>
-      </div>
+      <span class="${escapeHtml(className)}">
+        <span class="${escapeHtml(className)}-line">${escapeHtml(firstLine)}</span>
+        <span class="${escapeHtml(className)}-line">${secondLine === "&nbsp;" ? "&nbsp;" : escapeHtml(secondLine)}</span>
+      </span>
     `;
   }
 
@@ -756,7 +759,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       <article class="battle-item-card">
         <img src="static/img/${escapeHtml(item.item)}" class="battle-item-card-img" alt="${escapeHtml(item.name)}">
         <div class="battle-item-card-body">
-          <div class="battle-item-card-title">${escapeHtml(item.name)}</div>
           <div class="battle-item-card-metric">
             <span class="battle-item-card-label">Win Rate</span>
             <span class="battle-item-card-value" style="color: ${escapeHtml(itemWinRateColor)};">${escapeHtml(format(item.winRate))}</span>
@@ -920,14 +922,22 @@ document.addEventListener("DOMContentLoaded", async () => {
       <article class="mobile-card">
         <div class="mobile-card-top">
           <button class="mobile-card-pokemon-button" type="button">
+            <span class="mobile-card-name">${escapeHtml(entry["Name"])}</span>
             <img src="static/img/${entry["Pokemon"]}" alt="${escapeHtml(entry["Name"])}" class="mobile-card-pokemon-img">
-            <div class="mobile-card-pokemon-meta">
-              <span class="mobile-card-name">${escapeHtml(entry["Name"])}</span>
-              <span class="mobile-card-role">${escapeHtml(entry["Role"])}</span>
-            </div>
+            <span class="mobile-card-role">${escapeHtml(entry["Role"])}</span>
           </button>
+          <div class="mobile-card-move-buttons">
+            <button class="mobile-move-button" type="button">
+              <img src="static/img/${move1Img}" alt="${escapeHtml(move1Label)}" class="mobile-card-move-img">
+              ${renderMoveLabel(move1Label, "mobile-card-move-label")}
+            </button>
+            <button class="mobile-move-button" type="button">
+              <img src="static/img/${move2Img}" alt="${escapeHtml(move2Label)}" class="mobile-card-move-img">
+              ${renderMoveLabel(move2Label, "mobile-card-move-label")}
+            </button>
+          </div>
           <div class="mobile-card-metrics">
-            <button class="mobile-view-items" type="button" data-index="${entryIndex}" data-win-rate="${entry["Win Rate"]}" style="color: ${winRateColor};">
+            <button class="mobile-view-items mobile-card-metric" type="button" data-index="${entryIndex}" data-win-rate="${entry["Win Rate"]}" style="color: ${winRateColor};">
               <span class="mobile-card-metric-label">Win Rate</span>
               <span class="mobile-card-metric-value">${escapeHtml(format(entry["Win Rate"]))}</span>
             </button>
@@ -936,20 +946,6 @@ document.addEventListener("DOMContentLoaded", async () => {
               <span class="mobile-card-metric-value">${escapeHtml(format(entry["Pick Rate"]))}</span>
             </div>
           </div>
-        </div>
-        <div class="mobile-card-moveset">
-          <span class="mobile-card-moveset-label">Move Set</span>
-          <div class="mobile-card-moveset-value">${escapeHtml(entry["Move Set"])}</div>
-        </div>
-        <div class="mobile-card-move-buttons">
-          <button class="mobile-move-button" type="button">
-            <img src="static/img/${move1Img}" alt="${escapeHtml(move1Label)}" class="mobile-card-move-img">
-            <span class="mobile-card-move-label">${escapeHtml(move1Label)}</span>
-          </button>
-          <button class="mobile-move-button" type="button">
-            <img src="static/img/${move2Img}" alt="${escapeHtml(move2Label)}" class="mobile-card-move-img">
-            <span class="mobile-card-move-label">${escapeHtml(move2Label)}</span>
-          </button>
         </div>
       </article>
     `;
@@ -1129,10 +1125,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     items.sort((a, b) => b.pickRate - a.pickRate);
 
-    const winRate = parseFloat(entry["Win Rate"]);
-    const pickRate = parseFloat(entry["Pick Rate"]);
-    const mainWinRateColor = getWinRateColor(winRate);
-
     const move1Img = Array.isArray(entry["Move 1"]) ? entry["Move 1"][0] : entry["Move 1"];
     const move2Img = Array.isArray(entry["Move 2"]) ? entry["Move 2"][0] : entry["Move 2"];
     const move1Label = getMoveLabelFromAsset(move1Img, entry["Name"]);
@@ -1142,37 +1134,34 @@ document.addEventListener("DOMContentLoaded", async () => {
     const altHeldItems = Array.isArray(recommendedBuild.altHeldItems)
       ? recommendedBuild.altHeldItems.filter(Boolean)
       : (recommendedBuild.altHeldItem ? [recommendedBuild.altHeldItem] : []);
-    const heldItemsMarkup = heldItems.length > 0
-      ? heldItems.map(renderHeldItemIcon).join("")
+    const combinedHeldItems = [...heldItems, ...altHeldItems.filter((itemName) => !heldItems.includes(itemName))];
+    const heldItemsMarkup = combinedHeldItems.map((itemName) => renderHeldItemIcon(itemName));
+    const heldItemsMarkupHtml = heldItemsMarkup.length > 0
+      ? heldItemsMarkup.join("")
       : '<p class="build-empty-state">No recommended held items available for this build yet.</p>';
-    const altHeldItemMarkup = altHeldItems.length > 0
-      ? altHeldItems.map(renderHeldItemIcon).join("")
-      : '<div class="held-item-slot held-item-slot--empty">No alt item</div>';
+    const heldItemsCount = Math.max(combinedHeldItems.length, 1);
 
     popupContent.classList.add("build-popup-content");
     popupContent.innerHTML = `
       ${renderPopupCloseButton("Close build popup")}
       <div class="build-popup-header build-popup-shell">
-        <div class="build-popup-top-grid">
-          <div class="build-popup-main">
-            <div class="build-popup-identity">
-              <img src="static/img/${entry["Pokemon"]}" alt="${entry["Name"]}" class="popup-pokemon-img">
+        <div class="build-popup-top-row">
+          <div class="build-popup-identity">
+            <img src="static/img/${entry["Pokemon"]}" alt="${entry["Name"]}" class="popup-pokemon-img">
+            <div class="build-popup-title-stack">
               <h3 class="popup-title build-popup-title-inline">${entry["Name"]}</h3>
-            </div>
-            <div class="build-popup-move-icons">
-              <div class="build-popup-inline-move">
-                <img src="static/img/${move1Img}" alt="${escapeHtml(move1Label)}" class="build-summary-move-img">
-                <span class="build-summary-move-label">${escapeHtml(move1Label)}</span>
-              </div>
-              <div class="build-popup-inline-move">
-                <img src="static/img/${move2Img}" alt="${escapeHtml(move2Label)}" class="build-summary-move-img">
-                <span class="build-summary-move-label">${escapeHtml(move2Label)}</span>
-              </div>
+              <span class="build-popup-role">${escapeHtml(entry["Role"])}</span>
             </div>
           </div>
-          <div class="build-summary-grid">
-            ${renderWinrateMetricCard("Win Rate", format(winRate), mainWinRateColor)}
-            ${renderWinrateMetricCard("Pick Rate", format(pickRate))}
+          <div class="build-popup-move-icons">
+            <div class="build-popup-inline-move">
+              <img src="static/img/${move1Img}" alt="${escapeHtml(move1Label)}" class="build-summary-move-img">
+              ${renderMoveLabel(move1Label, "build-summary-move-label")}
+            </div>
+            <div class="build-popup-inline-move">
+              <img src="static/img/${move2Img}" alt="${escapeHtml(move2Label)}" class="build-summary-move-img">
+              ${renderMoveLabel(move2Label, "build-summary-move-label")}
+            </div>
           </div>
         </div>
       </div>
@@ -1186,18 +1175,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       <section class="build-popup-section build-popup-shell">
         <h4 class="build-popup-section-title">Recommended Held Items</h4>
-        <div class="held-item-layout">
-          <div class="held-item-group">
-            <div class="held-item-group-label">Held</div>
-            <div class="held-item-strip">
-              ${heldItemsMarkup}
-            </div>
-          </div>
-          <div class="held-item-group held-item-group--alt">
-            <div class="held-item-group-label">Alt</div>
-            <div class="held-item-strip held-item-strip--alt">
-              ${altHeldItemMarkup}
-            </div>
+        <div class="held-item-combined-layout">
+          <div class="held-item-strip held-item-strip--combined" style="--held-item-count: ${heldItemsCount};">
+            ${heldItemsMarkupHtml}
           </div>
         </div>
       </section>

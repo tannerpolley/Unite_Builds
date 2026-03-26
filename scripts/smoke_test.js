@@ -160,19 +160,6 @@ async function main() {
       });
     }, { timeout: 30000 });
 
-    const absolRowPickRate = await page.evaluate(() => {
-      const rows = Array.from(document.querySelectorAll(".table-row-group .table-row"));
-      const absolRow = rows.find((row) => {
-        const nameCell = row.querySelector(".table-cell:nth-child(2)");
-        return nameCell && nameCell.textContent.trim() === "Absol";
-      });
-      if (!absolRow) {
-        throw new Error("Smoke test failed: could not find Absol row");
-      }
-      const pickRateCell = absolRow.querySelector(".table-cell:nth-child(7)");
-      return pickRateCell ? pickRateCell.textContent.trim() : "";
-    });
-
     await page.evaluate(() => {
       const rows = Array.from(document.querySelectorAll(".table-row-group .table-row"));
       const absolRow = rows.find((row) => {
@@ -185,20 +172,13 @@ async function main() {
       }
       button.click();
     });
-    await page.waitForSelector("#popup:not(.hidden) .build-summary-grid", { timeout: 30000 });
-    const metricLabels = await page.$$eval(
-      "#popup:not(.hidden) .build-metric-label",
-      (nodes) => nodes.map((node) => node.textContent.trim())
+    await page.waitForSelector("#popup:not(.hidden) .build-popup-top-row", { timeout: 30000 });
+    const removedSummaryMetrics = await page.$$eval(
+      "#popup:not(.hidden) .build-summary-grid, #popup:not(.hidden) .build-metric-card",
+      (nodes) => nodes.length
     );
-    if (metricLabels.length < 2 || metricLabels[0] !== "Win Rate" || metricLabels[1] !== "Pick Rate") {
-      throw new Error(`Smoke test failed: winrate popup metric order is incorrect (${metricLabels.join(", ")})`);
-    }
-    const summaryPickRate = await page.$eval(
-      "#popup:not(.hidden) .build-metric-card:nth-child(2) .build-metric-value",
-      (node) => node.textContent.trim()
-    );
-    if (summaryPickRate !== absolRowPickRate) {
-      throw new Error(`Smoke test failed: popup pick rate "${summaryPickRate}" did not match table value "${absolRowPickRate}"`);
+    if (removedSummaryMetrics !== 0) {
+      throw new Error("Smoke test failed: legacy build summary metrics still render in the popup");
     }
     const battleCardCount = await page.$$eval(
       "#popup:not(.hidden) .battle-item-card",
@@ -213,6 +193,18 @@ async function main() {
     );
     if (battleMetricLabels.join("|") !== "Win Rate|Pick Rate") {
       throw new Error(`Smoke test failed: battle item metrics rendered in the wrong order (${battleMetricLabels.join(", ")})`);
+    }
+    const buildHeaderState = await page.evaluate(() => {
+      const row = document.querySelector("#popup:not(.hidden) .build-popup-top-row");
+      const moves = Array.from(document.querySelectorAll("#popup:not(.hidden) .build-popup-inline-move")).map((node) => node.textContent.trim());
+      return {
+        rowExists: !!row,
+        moveCount: moves.length,
+        moves,
+      };
+    });
+    if (!buildHeaderState.rowExists || buildHeaderState.moveCount !== 2) {
+      throw new Error(`Smoke test failed: build popup header layout is invalid (${JSON.stringify(buildHeaderState)})`);
     }
     const heldItemNames = await page.$$eval(
       "#popup:not(.hidden) .held-item-img",
@@ -626,13 +618,18 @@ async function main() {
     await mobilePage.waitForFunction(() => !document.body.classList.contains("mobile-panel-open"), { timeout: 30000 });
 
     await mobilePage.click("#moveset-cards .mobile-view-items");
-    await mobilePage.waitForSelector("#popup:not(.hidden) .build-summary-grid", { timeout: 30000 });
+    await mobilePage.waitForSelector("#popup:not(.hidden) .build-popup-top-row", { timeout: 30000 });
     const mobilePopupState = await mobilePage.evaluate(() => ({
       popupOpen: !document.getElementById("popup").classList.contains("hidden"),
       bodyLocked: document.body.classList.contains("popup-open"),
       heldIcons: document.querySelectorAll("#popup:not(.hidden) .held-item-img").length,
+      legacyMetrics: document.querySelectorAll("#popup:not(.hidden) .build-summary-grid, #popup:not(.hidden) .build-metric-card").length,
+      buildPopupNoScroll: (() => {
+        const popupContent = document.getElementById("popupContent");
+        return popupContent ? popupContent.scrollHeight <= popupContent.clientHeight + 1 : false;
+      })(),
     }));
-    if (!mobilePopupState.popupOpen || !mobilePopupState.bodyLocked || mobilePopupState.heldIcons === 0) {
+    if (!mobilePopupState.popupOpen || !mobilePopupState.bodyLocked || mobilePopupState.heldIcons === 0 || mobilePopupState.legacyMetrics !== 0 || !mobilePopupState.buildPopupNoScroll) {
       throw new Error(`Smoke test failed: mobile build popup state is invalid (${JSON.stringify(mobilePopupState)})`);
     }
     await closePopup(mobilePage);
