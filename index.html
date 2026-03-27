@@ -43,17 +43,6 @@
       <div id="header-text" class="subheading"></div>
     </div>
 
-    <aside class="features-box desktop-features-box">
-      <h3>How To Use</h3>
-      <ul>
-        <li>Tap <strong>Pokemon</strong> for passive, attack, Unite Move, and patches</li>
-        <li>Tap <strong>moves</strong> for descriptions and move patch history</li>
-        <li>Tap <strong>Win Rate</strong> for build, battle item, and held item details</li>
-        <li>Use <strong>Sort</strong> and <strong>Filters</strong> to refine the list</li>
-        <li>Tap <strong>names</strong> or <strong>roles</strong> on desktop to quick-filter</li>
-      </ul>
-    </aside>
-
     <div class="controls-shell">
       <div class="mobile-toolbar">
         <div class="mobile-toolbar-search">
@@ -63,6 +52,7 @@
           <button id="mobileSortButton" class="mobile-toolbar-button" type="button">Sort</button>
           <button id="mobileFiltersButton" class="mobile-toolbar-button" type="button">Filters</button>
           <button id="mobileHelpButton" class="mobile-toolbar-button" type="button">Help</button>
+          <button id="desktopMobilePreviewInlineButton" class="mobile-toolbar-button mobile-preview-inline-button" type="button">Exit Preview</button>
         </div>
       </div>
 
@@ -102,6 +92,8 @@
         </div>
 
         <div class="filter-actions">
+          <button id="desktopMobilePreviewButton" class="desktop-preview-button" type="button" aria-pressed="false">Mobile Preview</button>
+          <button id="desktopTipsButton" class="desktop-tips-button" type="button">Tips</button>
           <button id="resetFilters" class="reset-button" type="button">Reset</button>
         </div>
       </div>
@@ -132,7 +124,7 @@
 
       <div id="mobileHelpPanel" class="mobile-sheet" aria-hidden="true">
         <div class="mobile-panel-header">
-          <h3>How To Use</h3>
+          <h3>Tips</h3>
           <button id="closeHelpPanel" class="mobile-panel-close" type="button" aria-label="Close help panel">×</button>
         </div>
         <div class="mobile-sheet-content">
@@ -189,4 +181,3 @@
   </div>
 </body>
 </html>
-

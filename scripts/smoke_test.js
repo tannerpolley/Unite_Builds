@@ -88,6 +88,267 @@ async function main() {
       throw new Error(`Smoke test failed: header still includes desktop-only messaging ("${headerText}")`);
     }
 
+    const desktopControls = await page.evaluate(() => {
+      const tipsButton = document.getElementById("desktopTipsButton");
+      const helpPanel = document.getElementById("mobileHelpPanel");
+      return {
+        tipsButtonVisible: !!tipsButton && getComputedStyle(tipsButton).display !== "none",
+        helpPanelHidden: !!helpPanel && getComputedStyle(helpPanel).display === "none",
+      };
+    });
+    if (!desktopControls.tipsButtonVisible || !desktopControls.helpPanelHidden) {
+      throw new Error(`Smoke test failed: desktop controls did not initialize correctly (${JSON.stringify(desktopControls)})`);
+    }
+
+    await page.click("#desktopTipsButton");
+    await page.waitForFunction(() => document.body.classList.contains("desktop-help-open"), { timeout: 30000 });
+    const desktopHelpState = await page.evaluate(() => ({
+      panelVisible: getComputedStyle(document.getElementById("mobileHelpPanel")).display !== "none",
+      helpItems: document.querySelectorAll("#mobileHelpPanel .mobile-help-list li").length,
+      panelTitle: document.querySelector("#mobileHelpPanel .mobile-panel-header h3")?.textContent?.trim() || "",
+    }));
+    if (!desktopHelpState.panelVisible || desktopHelpState.helpItems < 4 || desktopHelpState.panelTitle !== "Tips") {
+      throw new Error(`Smoke test failed: desktop Tips popover did not render correctly (${JSON.stringify(desktopHelpState)})`);
+    }
+    await page.click("#closeHelpPanel");
+    await page.waitForFunction(() => !document.body.classList.contains("desktop-help-open"), { timeout: 30000 });
+
+    await page.click("#desktopMobilePreviewButton");
+    await page.waitForFunction(() => document.body.classList.contains("desktop-mobile-preview"), { timeout: 30000 });
+    const desktopPreviewState = await page.evaluate(() => ({
+      cardsVisible: getComputedStyle(document.getElementById("moveset-cards")).display !== "none",
+      tableHidden: getComputedStyle(document.querySelector(".table-scroll-shell")).display === "none",
+      inlineExitVisible: !document.getElementById("desktopMobilePreviewInlineButton").hidden,
+    }));
+    if (!desktopPreviewState.cardsVisible || !desktopPreviewState.tableHidden || !desktopPreviewState.inlineExitVisible) {
+      throw new Error(`Smoke test failed: desktop mobile preview did not activate correctly (${JSON.stringify(desktopPreviewState)})`);
+    }
+    await page.click("#desktopMobilePreviewInlineButton");
+    await page.waitForFunction(() => !document.body.classList.contains("desktop-mobile-preview"), { timeout: 30000 });
+
+    async function checkDesktopWidth(width, expectation) {
+      const widthPage = await browser.newPage();
+      const widthErrors = [];
+      widthPage.on("pageerror", (error) => widthErrors.push(error.message));
+      await widthPage.setViewport({ width, height: 1200, deviceScaleFactor: 1 });
+      await widthPage.goto(baseUrl, { waitUntil: "networkidle2", timeout: 120000 });
+      await widthPage.waitForSelector(".table-row-group .table-row", { timeout: 120000 });
+
+      const state = await widthPage.evaluate(() => {
+        const controls = document.querySelector(".controls-shell");
+        const filters = document.getElementById("filters");
+        const search = document.getElementById("nameSearch");
+        const roles = document.querySelector(".role-filters");
+        const pick = document.querySelector(".pick-rate-container");
+        const actions = document.querySelector(".filter-actions");
+        const roleOptions = Array.from(document.querySelectorAll(".role-filters .role-option"));
+        const roleTops = roleOptions.map((node) => Math.round(node.getBoundingClientRect().top));
+        const headerCells = Array.from(document.querySelectorAll(".table-header-group .table-cell"));
+        const headerFontSizes = headerCells.map((node) => getComputedStyle(node).fontSize);
+        const firstRow = document.querySelector(".table-row-group .table-row");
+        const moveImages = firstRow ? Array.from(firstRow.querySelectorAll(".move-img")) : [];
+        const moveImageTops = moveImages.map((node) => Math.round(node.getBoundingClientRect().top));
+        const movesetInline = firstRow?.querySelector(".moveset-label-inline");
+        const movesetStacked = firstRow?.querySelector(".moveset-label-stacked");
+        const pickRateHeader = headerCells[6];
+        const winRateHeader = headerCells[5];
+        const pickRateCell = firstRow?.querySelector(".table-cell:nth-child(7)");
+        const winRateCell = firstRow?.querySelector(".table-cell:nth-child(6)");
+        const controlsRect = controls?.getBoundingClientRect();
+        const filtersRect = filters?.getBoundingClientRect();
+        const searchRect = search?.getBoundingClientRect();
+        const rolesRect = roles?.getBoundingClientRect();
+        const pickRect = pick?.getBoundingClientRect();
+        const actionsRect = actions?.getBoundingClientRect();
+        const rects = [pickRect, rolesRect, actionsRect].filter(Boolean);
+        const groupRect = rects.length
+          ? {
+              left: Math.min(...rects.map((rect) => rect.left)),
+              right: Math.max(...rects.map((rect) => rect.right)),
+              top: Math.min(...rects.map((rect) => rect.top)),
+              bottom: Math.max(...rects.map((rect) => rect.bottom)),
+            }
+          : null;
+        const within = (rect, outer) => !!rect && !!outer &&
+          rect.left >= outer.left - 1 &&
+          rect.right <= outer.right + 1 &&
+          rect.top >= outer.top - 1 &&
+          rect.bottom <= outer.bottom + 1;
+        return {
+          cardsHidden: getComputedStyle(document.getElementById("moveset-cards")).display === "none",
+          tableVisible: getComputedStyle(document.querySelector(".table-scroll-shell")).display !== "none",
+          searchSameRowAsFilters: !!searchRect && !!filtersRect && Math.abs(searchRect.top - filtersRect.top) <= 6,
+          searchAboveFilters: !!searchRect && !!filtersRect && searchRect.top < filtersRect.top,
+          roleRowCount: Array.from(new Set(roleTops)).length,
+          roleCenterDelta: rolesRect && filtersRect ? Math.abs((rolesRect.left + rolesRect.right) / 2 - (filtersRect.left + filtersRect.right) / 2) : 999,
+          controlGroupCenterDelta: groupRect && filtersRect ? Math.abs((groupRect.left + groupRect.right) / 2 - (filtersRect.left + filtersRect.right) / 2) : 999,
+          filtersWithinShell: within(filtersRect, controlsRect),
+          filterChildrenWithinBounds: [pickRect, rolesRect, actionsRect].every((rect) => within(rect, filtersRect)),
+          uniqueHeaderFontSizes: Array.from(new Set(headerFontSizes)).length,
+          pickRateHeaderVisible: !!pickRateHeader && pickRateHeader.textContent.includes("Pick Rate") && pickRateHeader.getBoundingClientRect().width > 0,
+          winRateHeaderVisible: !!winRateHeader && winRateHeader.textContent.includes("Win Rate") && winRateHeader.getBoundingClientRect().width > 0,
+          pickRateCellVisible: !!pickRateCell && pickRateCell.getBoundingClientRect().width > 0 && pickRateCell.textContent.trim().length > 0,
+          winRateCellVisible: !!winRateCell && winRateCell.getBoundingClientRect().width > 0 && winRateCell.textContent.trim().length > 0,
+          moveImagesHorizontal: moveImageTops.length >= 2 && moveImageTops.every((top) => Math.abs(top - moveImageTops[0]) <= 2),
+          inlineMovesetVisible: !!movesetInline && getComputedStyle(movesetInline).display !== "none",
+          stackedMovesetVisible: !!movesetStacked && getComputedStyle(movesetStacked).display !== "none",
+        };
+      });
+
+      const failures = [];
+      if (!state.cardsHidden || !state.tableVisible) failures.push("desktop table visibility");
+      if (expectation.searchMode === "same-row" && !state.searchSameRowAsFilters) failures.push("search/filter row merge");
+      if (expectation.searchMode === "stacked" && !state.searchAboveFilters) failures.push("search/filter row split");
+      if (state.roleRowCount > expectation.maxRoleRows) failures.push("role row count");
+      if (state.controlGroupCenterDelta > expectation.maxControlCenterDelta) failures.push("control group centering");
+      if (!state.filtersWithinShell || !state.filterChildrenWithinBounds) failures.push("filter bounds");
+      if (state.uniqueHeaderFontSizes !== 1) failures.push("header font uniformity");
+      if (!state.pickRateHeaderVisible || !state.pickRateCellVisible) failures.push("pick rate visibility");
+      if (!state.winRateHeaderVisible || !state.winRateCellVisible) failures.push("win rate visibility");
+      if (!state.moveImagesHorizontal) failures.push("horizontal move icons");
+      if (expectation.moveset === "inline" && (!state.inlineMovesetVisible || state.stackedMovesetVisible)) failures.push("inline moveset state");
+      if (expectation.moveset === "stacked" && state.inlineMovesetVisible) failures.push("stacked moveset state");
+      if (expectation.moveset === "stacked" && !state.stackedMovesetVisible) failures.push("stacked moveset state");
+
+      await widthPage.close();
+      if (widthErrors.length > 0) {
+        throw new Error(`Smoke test failed: page errors at ${width}px (${widthErrors.join("; ")})`);
+      }
+      if (failures.length > 0) {
+        throw new Error(`Smoke test failed at ${width}px: ${failures.join(", ")} (${JSON.stringify(state)})`);
+      }
+    }
+
+    const desktopWidths = [
+      { width: 1600, searchMode: "same-row", maxRoleRows: 1, maxRoleCenterDelta: 70, maxControlCenterDelta: 40, moveset: "inline" },
+      { width: 1586, searchMode: "same-row", maxRoleRows: 1, maxRoleCenterDelta: 70, maxControlCenterDelta: 40, moveset: "inline" },
+      { width: 1540, searchMode: "stacked", maxRoleRows: 1, maxRoleCenterDelta: 24, maxControlCenterDelta: 24, moveset: "stacked" },
+      { width: 1230, searchMode: "stacked", maxRoleRows: 1, maxRoleCenterDelta: 24, maxControlCenterDelta: 24, moveset: "stacked" },
+      { width: 1180, searchMode: "stacked", maxRoleRows: 1, maxRoleCenterDelta: 24, maxControlCenterDelta: 24, moveset: "stacked" },
+      { width: 1120, searchMode: "stacked", maxRoleRows: 1, maxRoleCenterDelta: 24, maxControlCenterDelta: 24, moveset: "stacked" },
+      { width: 960, searchMode: "stacked", maxRoleRows: 1, maxRoleCenterDelta: 20, maxControlCenterDelta: 24, moveset: "stacked" },
+      { width: 890, searchMode: "stacked", maxRoleRows: 1, maxRoleCenterDelta: 20, maxControlCenterDelta: 24, moveset: "stacked" },
+      { width: 800, searchMode: "stacked", maxRoleRows: 1, maxRoleCenterDelta: 20, maxControlCenterDelta: 24, moveset: "stacked" },
+      { width: 760, searchMode: "stacked", maxRoleRows: 1, maxRoleCenterDelta: 20, maxControlCenterDelta: 24, moveset: "stacked" },
+    ];
+
+    for (const config of desktopWidths) {
+      await checkDesktopWidth(config.width, config);
+    }
+
+    async function checkMobileWidth(width, expectation) {
+      const widthPage = await browser.newPage();
+      const widthErrors = [];
+      widthPage.on("pageerror", (error) => widthErrors.push(error.message));
+      await widthPage.setViewport({ width, height: 844, isMobile: true, hasTouch: true, deviceScaleFactor: 2 });
+      await widthPage.goto(baseUrl, { waitUntil: "networkidle2", timeout: 120000 });
+      await widthPage.waitForSelector("#moveset-cards .mobile-card", { timeout: 120000 });
+
+      const state = await widthPage.evaluate(() => {
+        const cards = document.getElementById("moveset-cards");
+        const tableShell = document.querySelector(".table-scroll-shell");
+        const firstCard = document.querySelector("#moveset-cards .mobile-card");
+        const metrics = firstCard?.querySelector(".mobile-card-metrics");
+        const firstMoveButton = firstCard?.querySelector(".mobile-move-button");
+        const secondMoveButton = firstCard?.querySelector(".mobile-move-button-2");
+        const moveLabel = firstMoveButton?.querySelector(".mobile-card-move-label");
+        const moveIconShell = firstMoveButton?.querySelector(".mobile-card-move-icon-shell");
+        const pokemonText = firstCard?.querySelector(".mobile-card-pokemon-text");
+        const pokemonName = firstCard?.querySelector(".mobile-card-name");
+        const pokemonRole = firstCard?.querySelector(".mobile-card-role");
+        const labelRect = moveLabel?.getBoundingClientRect();
+        const iconRect = moveIconShell?.getBoundingClientRect();
+        const cardRect = firstCard?.getBoundingClientRect();
+        const metricsRect = metrics?.getBoundingClientRect();
+        const move1Rect = firstMoveButton?.getBoundingClientRect();
+        const move2Rect = secondMoveButton?.getBoundingClientRect();
+        const metricNodes = Array.from(firstCard?.querySelectorAll(".mobile-card-metric, .mobile-view-items") || []);
+        const metricContentWithinBounds = metricNodes.every((node) => {
+          const nodeRect = node.getBoundingClientRect();
+          return Array.from(node.children).every((child) => {
+            const childRect = child.getBoundingClientRect();
+            return childRect.left >= nodeRect.left - 1 &&
+              childRect.right <= nodeRect.right + 1 &&
+              childRect.top >= nodeRect.top - 1 &&
+              childRect.bottom <= nodeRect.bottom + 1;
+          });
+        });
+        const pokemonTextRect = pokemonText?.getBoundingClientRect();
+        const pokemonNameRect = pokemonName?.getBoundingClientRect();
+        const pokemonRoleRect = pokemonRole?.getBoundingClientRect();
+
+        return {
+          cardsVisible: !!cards && getComputedStyle(cards).display !== "none",
+          tableHidden: !!tableShell && getComputedStyle(tableShell).display === "none",
+          docScrollWidth: document.documentElement.scrollWidth,
+          viewportWidth: window.innerWidth,
+          wideCard: !!firstCard && firstCard.classList.contains("mobile-card-wide"),
+          compactCard: !!firstCard && firstCard.classList.contains("mobile-card-compact"),
+          metricsDirection: metrics ? getComputedStyle(metrics).flexDirection : "",
+          labelBelowIcon: !!labelRect && !!iconRect && labelRect.top > iconRect.top,
+          metricsWithinCard: !!cardRect && !!metricsRect && metricsRect.right <= cardRect.right + 1 && metricsRect.left >= cardRect.left - 1,
+          metricContentWithinBounds,
+          moveColumnsEqual: !!move1Rect && !!move2Rect && Math.abs(move1Rect.width - move2Rect.width) <= 2,
+          compactMoveWithinMetricsBoundary: !!move2Rect && !!metricsRect ? move2Rect.right <= metricsRect.left + 1 : true,
+          pokemonTextAligned: !!pokemonTextRect && !!pokemonNameRect && !!pokemonRoleRect &&
+            pokemonNameRect.left >= pokemonTextRect.left - 1 &&
+            pokemonRoleRect.left >= pokemonTextRect.left - 1 &&
+            Math.abs(pokemonNameRect.left - pokemonRoleRect.left) <= 2,
+        };
+      });
+
+      const failures = [];
+      if (!state.cardsVisible || !state.tableHidden) failures.push("mobile layout visibility");
+      if (state.docScrollWidth > state.viewportWidth + 2) failures.push("mobile overflow");
+      if (expectation.layout === "wide" && !state.wideCard) failures.push("wide mobile card mode");
+      if (expectation.layout === "compact" && !state.compactCard) failures.push("compact mobile card mode");
+      if (expectation.metricsDirection === "row" && state.metricsDirection !== "row") failures.push("wide mobile metrics direction");
+      if (expectation.metricsDirection === "column" && state.metricsDirection !== "column") failures.push("compact mobile metrics direction");
+      if (!state.labelBelowIcon) failures.push("mobile move label position");
+      if (!state.metricsWithinCard) failures.push("mobile metrics bounds");
+      if (!state.metricContentWithinBounds) failures.push("mobile metric content bounds");
+      if (!state.moveColumnsEqual) failures.push("mobile move column symmetry");
+      if (expectation.layout === "compact" && !state.compactMoveWithinMetricsBoundary) failures.push("compact move overlap");
+      if (expectation.layout === "wide" && !state.pokemonTextAligned) failures.push("wide mobile pokemon text alignment");
+
+      await widthPage.close();
+      if (widthErrors.length > 0) {
+        throw new Error(`Smoke test failed: mobile page errors at ${width}px (${widthErrors.join("; ")})`);
+      }
+      if (failures.length > 0) {
+        throw new Error(`Smoke test failed at mobile width ${width}px: ${failures.join(", ")} (${JSON.stringify(state)})`);
+      }
+    }
+
+    const mobileWidths = [
+      { width: 750, layout: "wide", metricsDirection: "row" },
+      { width: 680, layout: "wide", metricsDirection: "row" },
+      { width: 600, layout: "wide", metricsDirection: "row" },
+      { width: 500, layout: "wide", metricsDirection: "row" },
+      { width: 390, layout: "compact", metricsDirection: "column" },
+      { width: 360, layout: "compact", metricsDirection: "column" },
+      { width: 320, layout: "compact", metricsDirection: "column" },
+    ];
+
+    for (const config of mobileWidths) {
+      await checkMobileWidth(config.width, config);
+    }
+
+    await page.evaluate(() => {
+      const input = document.getElementById("nameSearch");
+      input.value = "Absol";
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+    });
+    await page.waitForFunction(
+      () => document.getElementById("nameSearch").value === "Absol",
+      { timeout: 30000 }
+    );
+    await page.click(".main-header h1");
+    await page.waitForFunction(
+      () => document.getElementById("nameSearch").value === "" && document.querySelectorAll(".table-row-group .table-row").length > 1,
+      { timeout: 30000 }
+    );
+
     async function closePopup(pageRef = page) {
       await pageRef.evaluate(() => {
         const closeButton = document.querySelector("#popup:not(.hidden) .popup-close-button");

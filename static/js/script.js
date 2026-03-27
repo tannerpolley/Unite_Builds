@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
+  const controlsShell = document.querySelector(".controls-shell");
+  const tableScrollShell = document.querySelector(".table-scroll-shell");
   const tableContainer = document.getElementById("moveset-table");
   const movesetCards = document.getElementById("moveset-cards");
   const popup = document.getElementById("popup");
@@ -12,6 +14,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   const mobileSortButton = document.getElementById("mobileSortButton");
   const mobileFiltersButton = document.getElementById("mobileFiltersButton");
   const mobileHelpButton = document.getElementById("mobileHelpButton");
+  const desktopMobilePreviewInlineButton = document.getElementById("desktopMobilePreviewInlineButton");
+  const desktopMobilePreviewButton = document.getElementById("desktopMobilePreviewButton");
+  const desktopTipsButton = document.getElementById("desktopTipsButton");
   const mobileSortPanel = document.getElementById("mobileSortPanel");
   const mobileHelpPanel = document.getElementById("mobileHelpPanel");
   const mobilePanelScrim = document.getElementById("mobilePanelScrim");
@@ -32,6 +37,373 @@ document.addEventListener("DOMContentLoaded", async () => {
   let patchHistoryPromise = null;
   let movePatchHistoryData = null;
   let movePatchHistoryPromise = null;
+  let mobileCardObserver = null;
+  const desktopPreviewStorageKey = "desktopMobilePreview";
+  const desktopControlLayoutClasses = ["desktop-controls-wide", "desktop-controls-stacked", "desktop-controls-compact"];
+  const desktopTableLayoutClasses = ["desktop-table-wide", "desktop-table-compact", "desktop-table-narrow"];
+  const mobileCardLayoutClasses = ["mobile-card-compact", "mobile-card-wide"];
+
+  function clampNumber(value, min, max) {
+    return Math.min(max, Math.max(min, value));
+  }
+
+  function lerp(min, max, progress) {
+    return min + ((max - min) * progress);
+  }
+
+  function setCssPixelVar(element, name, value) {
+    element?.style.setProperty(name, `${value.toFixed(2)}px`);
+  }
+
+  function setExclusiveClass(element, classNames, activeClass) {
+    if (!element) {
+      return;
+    }
+
+    classNames.forEach((className) => {
+      element.classList.toggle(className, className === activeClass);
+    });
+  }
+
+  function clearDesktopAdaptiveLayout() {
+    if (controlsShell) {
+      controlsShell.classList.remove(...desktopControlLayoutClasses);
+      [
+        "--controls-role-gap",
+        "--controls-role-pad-y",
+        "--controls-role-pad-x",
+        "--controls-role-font-size",
+        "--controls-action-gap",
+        "--controls-action-pad-y",
+        "--controls-action-pad-x",
+        "--controls-action-font-size",
+        "--controls-pick-label-size",
+        "--controls-search-font-size",
+        "--controls-pick-input-width"
+      ].forEach((name) => controlsShell.style.removeProperty(name));
+    }
+
+    if (tableScrollShell) {
+      tableScrollShell.classList.remove("desktop-table-fluid", ...desktopTableLayoutClasses);
+    }
+
+    if (tableContainer) {
+      [
+        "--table-header-size",
+        "--table-cell-pad-y",
+        "--table-cell-pad-x",
+        "--table-image-size",
+        "--table-move-gap",
+        "--table-name-size",
+        "--table-role-size",
+        "--table-moveset-size",
+        "--table-rate-size",
+        "--col-pokemon-width",
+        "--col-name-width",
+        "--col-role-width",
+        "--col-moveset-width",
+        "--col-moves-width",
+        "--col-rate-width"
+      ].forEach((name) => tableContainer.style.removeProperty(name));
+    }
+  }
+
+  function controlsOverflow(shell) {
+    if (!shell || isPhoneView()) {
+      return false;
+    }
+
+    const shellRect = shell.getBoundingClientRect();
+    const measuredNodes = [
+      shell.querySelector(".mobile-toolbar"),
+      shell.querySelector("#filters"),
+      shell.querySelector(".pick-rate-container"),
+      shell.querySelector(".role-filters"),
+      shell.querySelector(".filter-actions")
+    ].filter(Boolean);
+
+    return measuredNodes.some((node) => {
+      const rect = node.getBoundingClientRect();
+      return rect.left < shellRect.left - 1 || rect.right > shellRect.right + 1;
+    });
+  }
+
+  function distributeWidths(availableWidth, mins, targets, maxes) {
+    const widths = targets.map((target, index) => clampNumber(target, mins[index], maxes[index]));
+    const currentTotal = () => widths.reduce((sum, width) => sum + width, 0);
+    let delta = availableWidth - currentTotal();
+
+    if (Math.abs(delta) < 0.5) {
+      return widths;
+    }
+
+    const limits = delta > 0 ? maxes : mins;
+    const roomForChange = () => widths.reduce((sum, width, index) => {
+      const remaining = delta > 0 ? limits[index] - width : width - limits[index];
+      return sum + Math.max(0, remaining);
+    }, 0);
+
+    let remainingDelta = delta;
+    let remainingRoom = roomForChange();
+
+    if (remainingRoom <= 0) {
+      return widths;
+    }
+
+    widths.forEach((width, index) => {
+      if (Math.abs(remainingDelta) < 0.5) {
+        return;
+      }
+
+      const remaining = delta > 0 ? limits[index] - width : width - limits[index];
+      if (remaining <= 0) {
+        return;
+      }
+
+      const share = remaining / remainingRoom;
+      const change = Math.min(Math.abs(remainingDelta) * share, remaining);
+      widths[index] = delta > 0 ? width + change : width - change;
+      remainingDelta += delta > 0 ? -change : change;
+    });
+
+    return widths;
+  }
+
+  function applyDesktopAdaptiveLayout() {
+    if (!controlsShell || !tableContainer || !tableScrollShell) {
+      return;
+    }
+
+    if (isPhoneView()) {
+      clearDesktopAdaptiveLayout();
+      return;
+    }
+
+    const controlsWidth = controlsShell.clientWidth;
+    const tableWidth = tableScrollShell.clientWidth;
+
+    if (!controlsWidth || !tableWidth) {
+      return;
+    }
+
+    const controlsProgress = clampNumber((controlsWidth - 720) / 920, 0, 1);
+    setCssPixelVar(controlsShell, "--controls-role-gap", lerp(6, 10, controlsProgress));
+    setCssPixelVar(controlsShell, "--controls-role-pad-y", lerp(6, 8, controlsProgress));
+    setCssPixelVar(controlsShell, "--controls-role-pad-x", lerp(8, 14, controlsProgress));
+    setCssPixelVar(controlsShell, "--controls-role-font-size", lerp(12.4, 15.8, controlsProgress));
+    setCssPixelVar(controlsShell, "--controls-action-gap", lerp(6, 8, controlsProgress));
+    setCssPixelVar(controlsShell, "--controls-action-pad-y", lerp(8, 10, controlsProgress));
+    setCssPixelVar(controlsShell, "--controls-action-pad-x", lerp(10, 18, controlsProgress));
+    setCssPixelVar(controlsShell, "--controls-action-font-size", lerp(12.4, 15.6, controlsProgress));
+    setCssPixelVar(controlsShell, "--controls-pick-label-size", lerp(12.6, 16.2, controlsProgress));
+    setCssPixelVar(controlsShell, "--controls-search-font-size", lerp(15.2, 17.6, controlsProgress));
+    setCssPixelVar(controlsShell, "--controls-pick-input-width", lerp(58, 68, controlsProgress));
+
+    const controlLayoutCandidates = controlsWidth >= 1450
+      ? ["desktop-controls-wide", "desktop-controls-stacked", "desktop-controls-compact"]
+      : controlsWidth >= 1080
+        ? ["desktop-controls-stacked", "desktop-controls-compact"]
+        : ["desktop-controls-compact"];
+
+    let chosenControlLayout = controlLayoutCandidates[controlLayoutCandidates.length - 1];
+    for (const candidate of controlLayoutCandidates) {
+      setExclusiveClass(controlsShell, desktopControlLayoutClasses, candidate);
+      // Force layout before checking bounds.
+      void controlsShell.offsetWidth;
+      if (!controlsOverflow(controlsShell)) {
+        chosenControlLayout = candidate;
+        break;
+      }
+    }
+    setExclusiveClass(controlsShell, desktopControlLayoutClasses, chosenControlLayout);
+
+    const tableProgress = clampNumber((tableWidth - 760) / 840, 0, 1);
+    const easedProgress = Math.pow(tableProgress, 0.9);
+    setCssPixelVar(tableContainer, "--table-header-size", lerp(15.6, 20.6, easedProgress));
+    setCssPixelVar(tableContainer, "--table-cell-pad-y", lerp(8.4, 10.8, easedProgress));
+    setCssPixelVar(tableContainer, "--table-cell-pad-x", lerp(2.8, 7.2, easedProgress));
+    setCssPixelVar(tableContainer, "--table-image-size", lerp(44, 76, easedProgress));
+    setCssPixelVar(tableContainer, "--table-move-gap", lerp(0, 5, easedProgress));
+    setCssPixelVar(tableContainer, "--table-name-size", lerp(14.9, 19.8, easedProgress));
+    setCssPixelVar(tableContainer, "--table-role-size", lerp(14.9, 19.8, easedProgress));
+    setCssPixelVar(tableContainer, "--table-moveset-size", lerp(14.4, 18.4, easedProgress));
+    setCssPixelVar(tableContainer, "--table-rate-size", lerp(15.2, 21.6, easedProgress));
+
+    const availableTableWidth = Math.max(tableWidth - 18, 760);
+    const minimumColumnWidths = [64, 112, 98, 108, 78, 102, 102];
+    const targetColumnWidths = [
+      availableTableWidth * 0.078,
+      availableTableWidth * 0.18,
+      availableTableWidth * 0.135,
+      availableTableWidth * 0.17,
+      availableTableWidth * 0.125,
+      availableTableWidth * 0.156,
+      availableTableWidth * 0.156
+    ];
+    const maximumColumnWidths = [94, 212, 166, 206, 160, 152, 152];
+    const distributedWidths = distributeWidths(
+      availableTableWidth,
+      minimumColumnWidths,
+      targetColumnWidths,
+      maximumColumnWidths
+    );
+
+    setCssPixelVar(tableContainer, "--col-pokemon-width", distributedWidths[0]);
+    setCssPixelVar(tableContainer, "--col-name-width", distributedWidths[1]);
+    setCssPixelVar(tableContainer, "--col-role-width", distributedWidths[2]);
+    setCssPixelVar(tableContainer, "--col-moveset-width", distributedWidths[3]);
+    setCssPixelVar(tableContainer, "--col-moves-width", distributedWidths[4]);
+    setCssPixelVar(tableContainer, "--col-rate-width", distributedWidths[5]);
+
+    tableScrollShell.classList.add("desktop-table-fluid");
+    const tableLayoutClass = tableWidth >= 1320
+      ? "desktop-table-wide"
+      : tableWidth >= 900
+        ? "desktop-table-compact"
+        : "desktop-table-narrow";
+    setExclusiveClass(tableScrollShell, desktopTableLayoutClasses, tableLayoutClass);
+  }
+
+  function applyMobileCardSizing(card) {
+    if (!card) {
+      return;
+    }
+
+    const width = card.clientWidth;
+    if (!width) {
+      return;
+    }
+
+    const isWideMobileCard = width >= 460;
+    setExclusiveClass(card, mobileCardLayoutClasses, isWideMobileCard ? "mobile-card-wide" : "mobile-card-compact");
+
+    if (isWideMobileCard) {
+      const progress = clampNumber((width - 460) / 290, 0, 1);
+      const padX = lerp(10, 13, progress);
+      const gap = lerp(6, 9, progress);
+      const innerWidth = Math.max(width - (padX * 2), 320);
+      const contentWidth = Math.max(innerWidth - (gap * 3), 300);
+      const metricsMinWidth = lerp(132, 160, progress);
+      const metricsMaxWidth = lerp(160, 202, progress);
+      const pokemonMinWidth = lerp(108, 120, progress);
+      const pokemonMaxWidth = lerp(152, 176, progress);
+      const moveColMinWidth = lerp(64, 72, progress);
+      const moveColMaxWidth = lerp(96, 108, progress);
+
+      let metricsWidth = clampNumber(contentWidth * lerp(0.31, 0.33, progress), metricsMinWidth, metricsMaxWidth);
+      let remainingAfterMetrics = Math.max(contentWidth - metricsWidth, pokemonMinWidth + (moveColMinWidth * 2));
+      let pokemonWidth = clampNumber(remainingAfterMetrics * lerp(0.42, 0.4, progress), pokemonMinWidth, pokemonMaxWidth);
+      let moveColumnWidth = clampNumber((remainingAfterMetrics - pokemonWidth) / 2, moveColMinWidth, moveColMaxWidth);
+      pokemonWidth = clampNumber(contentWidth - metricsWidth - (moveColumnWidth * 2), pokemonMinWidth, pokemonMaxWidth);
+      metricsWidth = clampNumber(contentWidth - pokemonWidth - (moveColumnWidth * 2), metricsMinWidth, metricsMaxWidth);
+
+      if (pokemonWidth + (moveColumnWidth * 2) + metricsWidth > contentWidth) {
+        const overflow = (pokemonWidth + (moveColumnWidth * 2) + metricsWidth) - contentWidth;
+        metricsWidth = Math.max(metricsMinWidth, metricsWidth - overflow);
+      }
+
+      pokemonWidth = contentWidth - metricsWidth - (moveColumnWidth * 2);
+      const pokemonImgSize = lerp(52, 68, progress);
+      const pokemonTextGap = clampNumber(gap + 2, 7, 12);
+      const pokemonTextWidth = Math.max(pokemonWidth - pokemonImgSize - pokemonTextGap, 42);
+      const metricBubbleWidth = Math.max((metricsWidth - gap) / 2, 58);
+
+      setCssPixelVar(card, "--mc-gap", gap);
+      setCssPixelVar(card, "--mc-card-pad-x", padX);
+      setCssPixelVar(card, "--mc-card-pad-y", lerp(10, 12, progress));
+      setCssPixelVar(card, "--mc-pokemon-width", pokemonWidth);
+      setCssPixelVar(card, "--mc-pokemon-text-gap", pokemonTextGap);
+      setCssPixelVar(card, "--mc-pokemon-text-width", pokemonTextWidth);
+      setCssPixelVar(card, "--mc-move-col-width", moveColumnWidth);
+      setCssPixelVar(card, "--mc-metrics-width", metricsWidth);
+      setCssPixelVar(card, "--mc-pokemon-img", pokemonImgSize);
+      setCssPixelVar(card, "--mc-name-size", lerp(13.6, 16.6, progress));
+      setCssPixelVar(card, "--mc-role-size", lerp(11.4, 13.2, progress));
+      setCssPixelVar(card, "--mc-metric-label-size", clampNumber(metricBubbleWidth * 0.118, 6.8, 8.9));
+      setCssPixelVar(card, "--mc-metric-value-size", clampNumber(metricBubbleWidth * 0.19, 10.2, 14.2));
+      setCssPixelVar(card, "--mc-metric-pad-x", clampNumber(metricBubbleWidth * 0.075, 3.5, 6));
+      setCssPixelVar(card, "--mc-metric-pad-y", clampNumber(metricBubbleWidth * 0.075, 4, 6));
+      setCssPixelVar(card, "--mc-metric-gap", clampNumber(metricBubbleWidth * 0.03, 1, 2.25));
+      setCssPixelVar(card, "--mc-metric-top-pad", 0);
+      setCssPixelVar(card, "--mc-move-icon-gap", 0);
+      setCssPixelVar(card, "--mc-move-row-gap", lerp(5, 7, progress));
+      setCssPixelVar(card, "--mc-move-icon-shell-size", lerp(40, 56, progress));
+      setCssPixelVar(card, "--mc-move-icon-size", lerp(34, 46, progress));
+      setCssPixelVar(card, "--mc-move-label-size", lerp(11.6, 13.4, progress));
+      setCssPixelVar(card, "--mc-move-label-width", moveColumnWidth);
+      return;
+    }
+
+    const progress = clampNumber((width - 320) / 180, 0, 1);
+    const padX = lerp(8, 11, progress);
+    const gap = lerp(6, 9, progress);
+    const innerWidth = Math.max(width - (padX * 2), 260);
+    const contentWidth = Math.max(innerWidth - (gap * 2), 240);
+    const metricsMinWidth = lerp(84, 98, progress);
+    const metricsMaxWidth = lerp(100, 120, progress);
+    const moveGap = lerp(5, 8, progress);
+    const moveColMinWidth = lerp(46, 56, progress);
+    const moveGroupMinWidth = (moveColMinWidth * 2) + moveGap;
+    const nonMetricsSpace = Math.max(contentWidth - metricsMinWidth, 180);
+    const distributedNonMetrics = distributeWidths(
+      nonMetricsSpace,
+      [76, moveGroupMinWidth],
+      [
+        nonMetricsSpace * 0.33,
+        nonMetricsSpace * 0.67
+      ],
+      [104, 198]
+    );
+    const pokemonWidth = distributedNonMetrics[0];
+    const moveGroupWidth = distributedNonMetrics[1];
+    const metricsWidth = clampNumber(
+      contentWidth - pokemonWidth - moveGroupWidth,
+      metricsMinWidth,
+      metricsMaxWidth
+    );
+    const moveColWidth = clampNumber((moveGroupWidth - moveGap) / 2, moveColMinWidth, 96);
+    const metricBubbleWidth = metricsWidth;
+
+    setCssPixelVar(card, "--mc-gap", gap);
+    setCssPixelVar(card, "--mc-card-pad-x", padX);
+    setCssPixelVar(card, "--mc-card-pad-y", lerp(9, 11, progress));
+    setCssPixelVar(card, "--mc-pokemon-width", pokemonWidth);
+    setCssPixelVar(card, "--mc-move-group-width", moveGroupWidth);
+    setCssPixelVar(card, "--mc-move-col-width", moveColWidth);
+    setCssPixelVar(card, "--mc-metrics-width", metricsWidth);
+    setCssPixelVar(card, "--mc-pokemon-img", lerp(52, 66, progress));
+    setCssPixelVar(card, "--mc-name-size", lerp(13, 15.4, progress));
+    setCssPixelVar(card, "--mc-role-size", lerp(11, 12.8, progress));
+    setCssPixelVar(card, "--mc-metric-label-size", clampNumber(metricBubbleWidth * 0.095, 6.6, 8.7));
+    setCssPixelVar(card, "--mc-metric-value-size", clampNumber(metricBubbleWidth * 0.155, 10, 13.8));
+    setCssPixelVar(card, "--mc-metric-pad-x", clampNumber(metricBubbleWidth * 0.09, 3.5, 6.5));
+    setCssPixelVar(card, "--mc-metric-pad-y", clampNumber(metricBubbleWidth * 0.08, 4, 6));
+    setCssPixelVar(card, "--mc-metric-gap", clampNumber(metricBubbleWidth * 0.03, 1, 2.5));
+    setCssPixelVar(card, "--mc-metric-top-pad", 0);
+    setCssPixelVar(card, "--mc-move-icon-gap", 0);
+    setCssPixelVar(card, "--mc-move-row-gap", lerp(4.5, 6.5, progress));
+    setCssPixelVar(card, "--mc-move-inner-gap", moveGap);
+    setCssPixelVar(card, "--mc-move-icon-shell-size", lerp(44, 56, progress));
+    setCssPixelVar(card, "--mc-move-icon-size", lerp(37, 48, progress));
+    setCssPixelVar(card, "--mc-move-label-size", lerp(12.2, 13.4, progress));
+    setCssPixelVar(card, "--mc-move-label-width", moveColWidth);
+  }
+
+  function observeMobileCards() {
+    const cards = movesetCards.querySelectorAll(".mobile-card");
+    cards.forEach((card) => applyMobileCardSizing(card));
+
+    if (!mobileCardObserver) {
+      return;
+    }
+
+    mobileCardObserver.disconnect();
+    cards.forEach((card) => mobileCardObserver.observe(card));
+  }
+
+  function isDesktopMobilePreview() {
+    return body.classList.contains("desktop-mobile-preview");
+  }
 
   function resetPopupScrollPosition() {
     popup.scrollTop = 0;
@@ -42,7 +414,19 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   function isPhoneView() {
-    return window.matchMedia("(max-width: 700px)").matches;
+    return window.matchMedia("(max-width: 750px)").matches || isDesktopMobilePreview();
+  }
+
+  function syncDesktopMobilePreviewButton() {
+    const active = isDesktopMobilePreview();
+    if (desktopMobilePreviewButton) {
+      desktopMobilePreviewButton.textContent = active ? "Exit Preview" : "Mobile Preview";
+      desktopMobilePreviewButton.setAttribute("aria-pressed", active ? "true" : "false");
+    }
+    if (desktopMobilePreviewInlineButton) {
+      desktopMobilePreviewInlineButton.hidden = !active;
+      desktopMobilePreviewInlineButton.setAttribute("aria-hidden", active ? "false" : "true");
+    }
   }
 
   function syncMobileSortControls() {
@@ -55,7 +439,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   function closeMobilePanels() {
-    body.classList.remove("mobile-panel-open", "mobile-panel-filters-open", "mobile-panel-sort-open", "mobile-panel-help-open");
+    body.classList.remove("mobile-panel-open", "mobile-panel-filters-open", "mobile-panel-sort-open", "mobile-panel-help-open", "desktop-help-open");
     if (mobilePanelScrim) {
       mobilePanelScrim.classList.add("hidden");
     }
@@ -73,6 +457,60 @@ document.addEventListener("DOMContentLoaded", async () => {
       mobilePanelScrim.classList.remove("hidden");
     }
     syncMobileSortControls();
+  }
+
+  function openHelpPanel() {
+    closeMobilePanels();
+    if (isPhoneView()) {
+      body.classList.add("mobile-panel-open", "mobile-panel-help-open");
+    } else {
+      body.classList.add("desktop-help-open");
+    }
+    if (mobilePanelScrim) {
+      mobilePanelScrim.classList.remove("hidden");
+    }
+  }
+
+  function setDesktopMobilePreview(enabled) {
+    body.classList.toggle("desktop-mobile-preview", enabled);
+    syncDesktopMobilePreviewButton();
+    closeMobilePanels();
+    renderRows(filterItems());
+    applyDesktopAdaptiveLayout();
+
+    try {
+      window.localStorage.setItem(desktopPreviewStorageKey, enabled ? "true" : "false");
+    } catch (error) {
+      console.warn("Unable to persist desktop mobile preview preference", error);
+    }
+  }
+
+  function hasActiveFilters() {
+    return Boolean(
+      activeNameFilter ||
+      activeRoleFilters.length > 0 ||
+      nameSearch.value.trim() ||
+      Number(minPickRate.value) !== 1
+    );
+  }
+
+  function resetAllFilters() {
+    activeNameFilter = null;
+    activeRoleFilters = [];
+
+    roleFilters.forEach(filter => {
+      filter.checked = false;
+      if (filter.closest('.role-option')) {
+        filter.closest('.role-option').classList.remove('active-role');
+      }
+    });
+
+    nameSearch.value = "";
+    minPickRate.value = 1;
+    currentSort = { column: "Win Rate", order: 'desc' };
+    syncMobileSortControls();
+    closeMobilePanels();
+    renderRows(filterItems());
   }
 
   async function fetchJsonAsset(path, fallbackValue, label, options = {}) {
@@ -788,6 +1226,25 @@ document.addEventListener("DOMContentLoaded", async () => {
       </div>
     `;
   }
+
+  function renderDesktopMovesetLabel(value) {
+    const text = String(value ?? "").trim();
+    if (!text) {
+      return "";
+    }
+
+    const parts = text.split("/").map((part) => part.trim()).filter(Boolean);
+    if (parts.length <= 1) {
+      return `<span class="moveset-label-inline">${escapeHtml(text)}</span>`;
+    }
+
+    return `
+      <span class="moveset-label-inline">${escapeHtml(parts.join(" / "))}</span>
+      <span class="moveset-label-stacked" aria-hidden="true">
+        ${parts.map((part) => `<span class="moveset-label-line">${escapeHtml(part)}</span>`).join("")}
+      </span>
+    `;
+  }
   
   // Calculate color based on win rate with EXACTLY 50% as white
   // Using an exponential scale to make small deviations visible
@@ -922,17 +1379,23 @@ document.addEventListener("DOMContentLoaded", async () => {
       <article class="mobile-card">
         <div class="mobile-card-top">
           <button class="mobile-card-pokemon-button" type="button">
-            <span class="mobile-card-name">${escapeHtml(entry["Name"])}</span>
             <img src="static/img/${entry["Pokemon"]}" alt="${escapeHtml(entry["Name"])}" class="mobile-card-pokemon-img">
-            <span class="mobile-card-role">${escapeHtml(entry["Role"])}</span>
+            <span class="mobile-card-pokemon-text">
+              <span class="mobile-card-name">${escapeHtml(entry["Name"])}</span>
+              <span class="mobile-card-role">${escapeHtml(entry["Role"])}</span>
+            </span>
           </button>
-          <div class="mobile-card-move-buttons">
-            <button class="mobile-move-button" type="button">
-              <img src="static/img/${move1Img}" alt="${escapeHtml(move1Label)}" class="mobile-card-move-img">
+          <div class="mobile-card-move-list">
+            <button class="mobile-move-button mobile-move-button-1" type="button">
+              <span class="mobile-card-move-icon-shell">
+                <img src="static/img/${move1Img}" alt="${escapeHtml(move1Label)}" class="mobile-card-move-img">
+              </span>
               ${renderMoveLabel(move1Label, "mobile-card-move-label")}
             </button>
-            <button class="mobile-move-button" type="button">
-              <img src="static/img/${move2Img}" alt="${escapeHtml(move2Label)}" class="mobile-card-move-img">
+            <button class="mobile-move-button mobile-move-button-2" type="button">
+              <span class="mobile-card-move-icon-shell">
+                <img src="static/img/${move2Img}" alt="${escapeHtml(move2Label)}" class="mobile-card-move-img">
+              </span>
               ${renderMoveLabel(move2Label, "mobile-card-move-label")}
             </button>
           </div>
@@ -999,8 +1462,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         <div class="table-cell"><img src="static/img/${entry["Pokemon"]}" alt="${escapeHtml(entry["Name"])}"></div>
         <div class="table-cell"><span class="${nameClass}" data-name="${escapeHtml(entry["Name"])}">${escapeHtml(entry["Name"])}</span></div>
         <div class="table-cell"><span class="${roleClass}" data-role="${escapeHtml(entry["Role"])}">${escapeHtml(entry["Role"])}</span></div>
-        <div class="table-cell">${escapeHtml(entry["Move Set"])}</div>
-        <div class="table-cell">
+        <div class="table-cell table-cell-moveset">${renderDesktopMovesetLabel(entry["Move Set"])}</div>
+        <div class="table-cell table-cell-move-icons">
           <span class="move-wrapper">${renderMoves(entry["Move 1"])}</span>
           <span class="move-wrapper">${renderMoves(entry["Move 2"])}</span>
         </div>
@@ -1019,6 +1482,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     movesetCards.innerHTML = sortedItems.map(renderMobileCard).join("");
     attachEventHandlers();
+    observeMobileCards();
+    applyDesktopAdaptiveLayout();
   }
 
   function attachEventHandlers() {
@@ -1429,23 +1894,27 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   // Add event listener for resetting all filters
-  resetFilters.addEventListener("click", () => {
-    activeNameFilter = null;
-    activeRoleFilters = [];
+  resetFilters.addEventListener("click", resetAllFilters);
 
-    roleFilters.forEach(filter => {
-      filter.checked = false;
-      if (filter.closest('.role-option')) {
-        filter.closest('.role-option').classList.remove('active-role');
-      }
-    });
+  document.addEventListener("click", (event) => {
+    if (isPhoneView() || popup.classList.contains("hidden") === false || body.classList.contains("desktop-help-open")) {
+      return;
+    }
 
-    nameSearch.value = "";
-    minPickRate.value = 1;
-    currentSort = { column: "Win Rate", order: 'desc' };
-    syncMobileSortControls();
-    closeMobilePanels();
-    renderRows(filterItems());
+    if (!hasActiveFilters()) {
+      return;
+    }
+
+    const target = event.target;
+    if (!(target instanceof Element)) {
+      return;
+    }
+
+    if (target.closest(".controls-shell") || target.closest(".table-scroll-shell") || target.closest("#tooltip")) {
+      return;
+    }
+
+    resetAllFilters();
   });
   
   function updateRoleCheckboxes() {
@@ -1589,7 +2058,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   mobileSortButton?.addEventListener("click", () => openMobilePanel("sort"));
   mobileFiltersButton?.addEventListener("click", () => openMobilePanel("filters"));
-  mobileHelpButton?.addEventListener("click", () => openMobilePanel("help"));
+  mobileHelpButton?.addEventListener("click", openHelpPanel);
+  desktopMobilePreviewInlineButton?.addEventListener("click", () => setDesktopMobilePreview(false));
+  desktopMobilePreviewButton?.addEventListener("click", () => setDesktopMobilePreview(!isDesktopMobilePreview()));
+  desktopTipsButton?.addEventListener("click", openHelpPanel);
   closeFiltersPanel?.addEventListener("click", closeMobilePanels);
   closeSortPanel?.addEventListener("click", closeMobilePanels);
   closeHelpPanel?.addEventListener("click", closeMobilePanels);
@@ -1606,14 +2078,39 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   window.addEventListener("resize", () => {
-    if (!isPhoneView()) {
+    if (!window.matchMedia("(max-width: 750px)").matches && !isDesktopMobilePreview()) {
       closeMobilePanels();
     }
+    applyDesktopAdaptiveLayout();
   });
+
+  if (typeof ResizeObserver !== "undefined") {
+    const desktopLayoutObserver = new ResizeObserver(() => {
+      applyDesktopAdaptiveLayout();
+    });
+    desktopLayoutObserver.observe(controlsShell);
+    desktopLayoutObserver.observe(tableScrollShell);
+
+    mobileCardObserver = new ResizeObserver((entries) => {
+      entries.forEach((entry) => {
+        applyMobileCardSizing(entry.target);
+      });
+    });
+  }
+
+  try {
+    if (window.localStorage.getItem(desktopPreviewStorageKey) === "true" && !window.matchMedia("(max-width: 750px)").matches) {
+      body.classList.add("desktop-mobile-preview");
+    }
+  } catch (error) {
+    console.warn("Unable to read desktop mobile preview preference", error);
+  }
 
   attachSortHandlers();
   syncMobileSortControls();
+  syncDesktopMobilePreviewButton();
   renderRows(filterItems());
+  applyDesktopAdaptiveLayout();
 });
 
 
