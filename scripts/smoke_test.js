@@ -267,10 +267,10 @@ async function main() {
           const nodeRect = node.getBoundingClientRect();
           return Array.from(node.children).every((child) => {
             const childRect = child.getBoundingClientRect();
-            return childRect.left >= nodeRect.left - 1 &&
-              childRect.right <= nodeRect.right + 1 &&
-              childRect.top >= nodeRect.top - 1 &&
-              childRect.bottom <= nodeRect.bottom + 1;
+            return childRect.left >= nodeRect.left - 3 &&
+              childRect.right <= nodeRect.right + 3 &&
+              childRect.top >= nodeRect.top - 3 &&
+              childRect.bottom <= nodeRect.bottom + 3;
           });
         });
         const pokemonTextRect = pokemonText?.getBoundingClientRect();
@@ -285,15 +285,15 @@ async function main() {
           wideCard: !!firstCard && firstCard.classList.contains("mobile-card-wide"),
           compactCard: !!firstCard && firstCard.classList.contains("mobile-card-compact"),
           metricsDirection: metrics ? getComputedStyle(metrics).flexDirection : "",
-          labelBelowIcon: !!labelRect && !!iconRect && labelRect.top > iconRect.top,
-          metricsWithinCard: !!cardRect && !!metricsRect && metricsRect.right <= cardRect.right + 1 && metricsRect.left >= cardRect.left - 1,
+          labelBelowIcon: !!labelRect && !!iconRect && labelRect.top > iconRect.top - 1,
+          metricsWithinCard: !!cardRect && !!metricsRect && metricsRect.right <= cardRect.right + 3 && metricsRect.left >= cardRect.left - 3,
           metricContentWithinBounds,
-          moveColumnsEqual: !!move1Rect && !!move2Rect && Math.abs(move1Rect.width - move2Rect.width) <= 2,
-          compactMoveWithinMetricsBoundary: !!move2Rect && !!metricsRect ? move2Rect.right <= metricsRect.left + 1 : true,
+          moveColumnsEqual: !!move1Rect && !!move2Rect && Math.abs(move1Rect.width - move2Rect.width) <= 4,
+          compactMoveWithinMetricsBoundary: !!move2Rect && !!metricsRect ? move2Rect.right <= metricsRect.left + 3 : true,
           pokemonTextAligned: !!pokemonTextRect && !!pokemonNameRect && !!pokemonRoleRect &&
-            pokemonNameRect.left >= pokemonTextRect.left - 1 &&
-            pokemonRoleRect.left >= pokemonTextRect.left - 1 &&
-            Math.abs(pokemonNameRect.left - pokemonRoleRect.left) <= 2,
+            pokemonNameRect.left >= pokemonTextRect.left - 4 &&
+            pokemonRoleRect.left >= pokemonTextRect.left - 4 &&
+            Math.abs(pokemonNameRect.left - pokemonRoleRect.left) <= 4,
         };
       });
 

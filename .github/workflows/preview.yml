@@ -18,10 +18,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       # 1) Checkout the repo _with_ the GITHUB_TOKEN so pushes work
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
         with:
           # persist-credentials=true is the default, but included here for clarity
           persist-credentials: true
@@ -29,7 +31,7 @@ jobs:
 
       # 2) Install, generate the preview, etc.
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v5
         with:
           node-version: '18'
 
