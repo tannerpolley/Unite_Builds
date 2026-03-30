@@ -181,23 +181,25 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const controlsWidth = controlsShell.clientWidth;
     const tableWidth = tableScrollShell.clientWidth;
+    const desktopUiScale = 0.88;
+    const desktopIconScale = 0.9;
 
     if (!controlsWidth || !tableWidth) {
       return;
     }
 
     const controlsProgress = clampNumber((controlsWidth - 720) / 920, 0, 1);
-    setCssPixelVar(controlsShell, "--controls-role-gap", lerp(6, 10, controlsProgress));
-    setCssPixelVar(controlsShell, "--controls-role-pad-y", lerp(6, 8, controlsProgress));
-    setCssPixelVar(controlsShell, "--controls-role-pad-x", lerp(8, 14, controlsProgress));
-    setCssPixelVar(controlsShell, "--controls-role-font-size", lerp(12.4, 15.8, controlsProgress));
-    setCssPixelVar(controlsShell, "--controls-action-gap", lerp(6, 8, controlsProgress));
-    setCssPixelVar(controlsShell, "--controls-action-pad-y", lerp(8, 10, controlsProgress));
-    setCssPixelVar(controlsShell, "--controls-action-pad-x", lerp(10, 18, controlsProgress));
-    setCssPixelVar(controlsShell, "--controls-action-font-size", lerp(12.4, 15.6, controlsProgress));
-    setCssPixelVar(controlsShell, "--controls-pick-label-size", lerp(12.6, 16.2, controlsProgress));
-    setCssPixelVar(controlsShell, "--controls-search-font-size", lerp(15.2, 17.6, controlsProgress));
-    setCssPixelVar(controlsShell, "--controls-pick-input-width", lerp(58, 68, controlsProgress));
+    setCssPixelVar(controlsShell, "--controls-role-gap", lerp(6, 10, controlsProgress) * desktopUiScale);
+    setCssPixelVar(controlsShell, "--controls-role-pad-y", lerp(6, 8, controlsProgress) * desktopUiScale);
+    setCssPixelVar(controlsShell, "--controls-role-pad-x", lerp(8, 14, controlsProgress) * desktopUiScale);
+    setCssPixelVar(controlsShell, "--controls-role-font-size", lerp(12.4, 15.8, controlsProgress) * desktopUiScale);
+    setCssPixelVar(controlsShell, "--controls-action-gap", lerp(6, 8, controlsProgress) * desktopUiScale);
+    setCssPixelVar(controlsShell, "--controls-action-pad-y", lerp(8, 10, controlsProgress) * desktopUiScale);
+    setCssPixelVar(controlsShell, "--controls-action-pad-x", lerp(10, 18, controlsProgress) * desktopUiScale);
+    setCssPixelVar(controlsShell, "--controls-action-font-size", lerp(12.4, 15.6, controlsProgress) * desktopUiScale);
+    setCssPixelVar(controlsShell, "--controls-pick-label-size", lerp(12.6, 16.2, controlsProgress) * desktopUiScale);
+    setCssPixelVar(controlsShell, "--controls-search-font-size", lerp(15.2, 17.6, controlsProgress) * desktopUiScale);
+    setCssPixelVar(controlsShell, "--controls-pick-input-width", lerp(58, 68, controlsProgress) * desktopUiScale);
 
     const controlLayoutCandidates = controlsWidth >= 1450
       ? ["desktop-controls-wide", "desktop-controls-stacked", "desktop-controls-compact"]
@@ -219,15 +221,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const tableProgress = clampNumber((tableWidth - 760) / 840, 0, 1);
     const easedProgress = Math.pow(tableProgress, 0.9);
-    setCssPixelVar(tableContainer, "--table-header-size", lerp(15.6, 20.6, easedProgress));
-    setCssPixelVar(tableContainer, "--table-cell-pad-y", lerp(8.4, 10.8, easedProgress));
-    setCssPixelVar(tableContainer, "--table-cell-pad-x", lerp(2.8, 7.2, easedProgress));
-    setCssPixelVar(tableContainer, "--table-image-size", lerp(44, 76, easedProgress));
-    setCssPixelVar(tableContainer, "--table-move-gap", lerp(0, 5, easedProgress));
-    setCssPixelVar(tableContainer, "--table-name-size", lerp(14.9, 19.8, easedProgress));
-    setCssPixelVar(tableContainer, "--table-role-size", lerp(14.9, 19.8, easedProgress));
-    setCssPixelVar(tableContainer, "--table-moveset-size", lerp(14.4, 18.4, easedProgress));
-    setCssPixelVar(tableContainer, "--table-rate-size", lerp(15.2, 21.6, easedProgress));
+    setCssPixelVar(tableContainer, "--table-header-size", lerp(15.6, 20.6, easedProgress) * desktopUiScale);
+    setCssPixelVar(tableContainer, "--table-cell-pad-y", lerp(8.4, 10.8, easedProgress) * desktopUiScale);
+    setCssPixelVar(tableContainer, "--table-cell-pad-x", lerp(2.8, 7.2, easedProgress) * desktopUiScale);
+    setCssPixelVar(tableContainer, "--table-image-size", lerp(44, 76, easedProgress) * desktopIconScale);
+    setCssPixelVar(tableContainer, "--table-move-gap", lerp(0, 5, easedProgress) * desktopUiScale);
+    setCssPixelVar(tableContainer, "--table-name-size", lerp(14.9, 19.8, easedProgress) * desktopUiScale);
+    setCssPixelVar(tableContainer, "--table-role-size", lerp(14.9, 19.8, easedProgress) * desktopUiScale);
+    setCssPixelVar(tableContainer, "--table-moveset-size", lerp(14.4, 18.4, easedProgress) * desktopUiScale);
+    setCssPixelVar(tableContainer, "--table-rate-size", lerp(15.2, 21.6, easedProgress) * desktopUiScale);
 
     const availableTableWidth = Math.max(tableWidth - 18, 760);
     const minimumColumnWidths = [64, 112, 98, 108, 78, 102, 102];

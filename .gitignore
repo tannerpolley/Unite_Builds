@@ -16,6 +16,9 @@ Thumbs.db
 # Local build/deploy staging
 _site/
 
+# Local scratch/debug captures
+.tmp_*
+
 # Local UniteDB snapshot caches
 /data/json/unite_db_held_items.json
 /data/json/patch_note_translation_report.json
