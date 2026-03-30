@@ -209,9 +209,9 @@ body.popup-open {
   border: 0;
   box-shadow: none;
   color: white;
-  gap: 12px 14px;
+  gap: 10px 12px;
   display: grid;
-  grid-template-columns: minmax(max-content, 1fr) max-content minmax(max-content, 1fr);
+  grid-template-columns: max-content minmax(0, 1fr) max-content;
   justify-content: stretch;
   align-items: center;
   background: transparent;
@@ -331,6 +331,7 @@ body.popup-open {
   gap: var(--controls-action-gap);
   justify-self: end;
   margin-left: 0;
+  min-width: max-content;
 }
 
 .desktop-preview-button,
@@ -2467,7 +2468,7 @@ body.desktop-mobile-preview .build-popup-identity {
   }
 
   .controls-shell.desktop-controls-wide #filters {
-    grid-template-columns: minmax(max-content, 1fr) max-content minmax(max-content, 1fr);
+    grid-template-columns: max-content minmax(0, 1fr) max-content;
     justify-content: stretch;
   }
 

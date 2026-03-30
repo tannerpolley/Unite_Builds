@@ -407,6 +407,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     return body.classList.contains("desktop-mobile-preview");
   }
 
+  function canUseDesktopMobilePreview() {
+    const { protocol, hostname } = window.location;
+    return protocol === "file:" ||
+      hostname === "localhost" ||
+      hostname === "127.0.0.1" ||
+      hostname === "::1";
+  }
+
   function resetPopupScrollPosition() {
     popup.scrollTop = 0;
     popupContent.scrollTop = 0;
@@ -421,12 +429,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   function syncDesktopMobilePreviewButton() {
     const active = isDesktopMobilePreview();
+    const enabled = canUseDesktopMobilePreview();
     if (desktopMobilePreviewButton) {
+      desktopMobilePreviewButton.hidden = !enabled;
       desktopMobilePreviewButton.textContent = active ? "Exit Preview" : "Mobile Preview";
       desktopMobilePreviewButton.setAttribute("aria-pressed", active ? "true" : "false");
     }
     if (desktopMobilePreviewInlineButton) {
-      desktopMobilePreviewInlineButton.hidden = !active;
+      desktopMobilePreviewInlineButton.hidden = !enabled || !active;
       desktopMobilePreviewInlineButton.setAttribute("aria-hidden", active ? "false" : "true");
     }
   }
@@ -474,6 +484,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   function setDesktopMobilePreview(enabled) {
+    if (!canUseDesktopMobilePreview()) {
+      body.classList.remove("desktop-mobile-preview");
+      syncDesktopMobilePreviewButton();
+      return;
+    }
     body.classList.toggle("desktop-mobile-preview", enabled);
     syncDesktopMobilePreviewButton();
     closeMobilePanels();
@@ -2101,7 +2116,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   try {
-    if (window.localStorage.getItem(desktopPreviewStorageKey) === "true" && !window.matchMedia("(max-width: 750px)").matches) {
+    if (canUseDesktopMobilePreview() && window.localStorage.getItem(desktopPreviewStorageKey) === "true" && !window.matchMedia("(max-width: 750px)").matches) {
       body.classList.add("desktop-mobile-preview");
     }
   } catch (error) {
