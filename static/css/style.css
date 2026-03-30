@@ -202,6 +202,10 @@ body.popup-open {
   display: none !important;
 }
 
+.desktop-preview-button[hidden] {
+  display: none !important;
+}
+
 #filters {
   width: 100%;
   padding: 0;

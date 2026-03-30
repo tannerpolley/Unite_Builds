@@ -441,6 +441,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
+  function removeDesktopPreviewControlsIfDisabled() {
+    if (canUseDesktopMobilePreview()) {
+      return;
+    }
+    desktopMobilePreviewButton?.remove();
+    desktopMobilePreviewInlineButton?.remove();
+    body.classList.remove("desktop-mobile-preview");
+    try {
+      window.localStorage.removeItem(desktopPreviewStorageKey);
+    } catch (error) {
+      console.warn("Unable to clear desktop mobile preview preference", error);
+    }
+  }
+
   function syncMobileSortControls() {
     if (mobileSortColumn) {
       mobileSortColumn.value = currentSort.column;
@@ -2114,6 +2128,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     });
   }
+
+  removeDesktopPreviewControlsIfDisabled();
 
   try {
     if (canUseDesktopMobilePreview() && window.localStorage.getItem(desktopPreviewStorageKey) === "true" && !window.matchMedia("(max-width: 750px)").matches) {
