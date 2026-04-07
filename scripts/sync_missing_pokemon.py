@@ -38,7 +38,8 @@ UNITEAPI_SLUG_OVERRIDES = {
     "Raichu": "alolanraichu",
     "MrMime": "mrmime",
     "Urshifu_Single": "urshifu",
-    "HoOh": "hooh",
+    "HoOh": "ho-oh",
+    "Ho-Oh": "ho-oh",
     "Rapidash": "galarianrapidash",
     "MEGALucario": "megalucario",
     "CharizardX": "charizardx",
@@ -46,7 +47,8 @@ UNITEAPI_SLUG_OVERRIDES = {
     "MegaGyarados": "megagyarados",
     "MewtwoY": "mewtwoy",
     "MewtwoX": "mewtwox",
-    "Sirfetch": "sirfetchd",
+    "Sirfetch": "sirfetch'd",
+    "Sirfetch'd": "sirfetch'd",
 }
 
 

@@ -7,7 +7,7 @@
   },
   "Sirfetch'd": {
     "display_name": "Sirfetch'd",
-    "uniteapi_name": "sirfetchd",
+    "uniteapi_name": "sirfetch'd",
     "role": "All-Rounder",
     "square_image_key": "Sirfetch"
   },
@@ -103,7 +103,7 @@
   },
   "Ho-Oh": {
     "display_name": "Ho-Oh",
-    "uniteapi_name": "hooh",
+    "uniteapi_name": "ho-oh",
     "role": "Defender",
     "square_image_key": "HoOh"
   },
