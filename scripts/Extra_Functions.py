@@ -8,8 +8,31 @@ import pandas as pd
 REPO_ROOT = Path(__file__).resolve().parents[1]
 MOVESETS_CSV_PATH = REPO_ROOT / "data" / "csv" / "movesets.csv"
 MOVESET_ROWS_JSON_PATH = REPO_ROOT / "static" / "json" / "moveset_rows.json"
+MATCHES_TXT_PATH = REPO_ROOT / "data" / "txt" / "matches.txt"
+UNITE_META_CSV_PATH = REPO_ROOT / "data" / "csv" / "Unite_Meta.csv"
 UNITE_DB_POKEMON_JSON_PATH = REPO_ROOT / "data" / "json" / "unite_db_pokemon.json"
 MAIN_MOVE_FALLBACKS_PATH = REPO_ROOT / "data" / "json" / "main_move_fallbacks.json"
+TIER_SCORE_CONFIG = {
+    "model": "sample-damped-interaction-zscore-v2",
+    "displayCutoff": 0.5,
+    "sampleScale": 1200,
+    "sampleFloor": 0.25,
+    "weights": {
+        "win": 0.72,
+        "pick": 0.14,
+        "ban": 0.08,
+        "winPick": 0.07,
+        "winBan": 0.02,
+        "pickBan": 0.01,
+    },
+    "bands": [
+        {"label": "S+", "threshold": 3.25},
+        {"label": "S", "threshold": 0.75},
+        {"label": "A", "threshold": 0.0},
+        {"label": "B", "threshold": -0.5},
+        {"label": "C", "threshold": -0.75},
+    ],
+}
 HELD_ITEM_NAME_ALIASES = {
     "EXP Share": "Exp Share",
 }
@@ -42,6 +65,95 @@ def empty_recommended_build():
 def normalize_pokemon_key(value):
     normalized = normalize_build_key(value)
     return POKEMON_NAME_ALIASES.get(normalized, normalized)
+
+
+def load_total_matches():
+    if not MATCHES_TXT_PATH.exists():
+        return 0.0
+
+    with open(MATCHES_TXT_PATH, "r", encoding="utf-8") as f:
+        raw_value = f.read().strip()
+
+    try:
+        return float(raw_value)
+    except ValueError:
+        return 0.0
+
+
+def load_unite_meta_ban_rates():
+    if not UNITE_META_CSV_PATH.exists():
+        return {}
+
+    meta_df = pd.read_csv(UNITE_META_CSV_PATH)
+    if "Pokemon" not in meta_df.columns or "Ban Rate" not in meta_df.columns:
+        return {}
+
+    meta_df = meta_df.copy()
+    meta_df["_normalized_name"] = meta_df["Pokemon"].map(normalize_pokemon_key)
+    meta_df["Ban Rate"] = pd.to_numeric(meta_df["Ban Rate"], errors="coerce").fillna(0.0)
+    return meta_df.groupby("_normalized_name")["Ban Rate"].mean().to_dict()
+
+
+def safe_zscore(values):
+    series = pd.to_numeric(pd.Series(values), errors="coerce").fillna(0.0)
+    std = float(series.std(ddof=0))
+    if np.isclose(std, 0.0):
+        return pd.Series(np.zeros(len(series)), index=series.index)
+    return (series - float(series.mean())) / std
+
+
+def score_to_tier(score):
+    for band in TIER_SCORE_CONFIG.get("bands", []):
+        if score >= band["threshold"]:
+            return band["label"]
+    return "D"
+
+
+def compute_tier_raw_score(df):
+    win_rates = pd.to_numeric(df["Win Rate"], errors="coerce").fillna(0.0)
+    pick_rates = pd.to_numeric(df["Pick Rate"], errors="coerce").fillna(0.0)
+    ban_rates = pd.to_numeric(df["Ban Rate"], errors="coerce").fillna(0.0)
+
+    win_z = safe_zscore(win_rates)
+    pick_z = safe_zscore(pick_rates)
+    ban_z = safe_zscore(ban_rates)
+
+    weights = TIER_SCORE_CONFIG["weights"]
+    return (
+        weights["win"] * win_z
+        + weights["pick"] * pick_z
+        + weights["ban"] * ban_z
+        + weights["winPick"] * (win_z * pick_z)
+        + weights["winBan"] * (win_z * ban_z)
+        + weights["pickBan"] * (pick_z * ban_z)
+    )
+
+
+def add_tier_estimates(df):
+    df = df.copy()
+    if df.empty:
+        df["Tier"] = pd.Series(dtype="object")
+        df["Tier Score"] = pd.Series(dtype="float64")
+        return df
+
+    ban_rate_lookup = load_unite_meta_ban_rates()
+    df["_normalized_name"] = df["Name"].map(normalize_pokemon_key)
+    df["Ban Rate"] = df["_normalized_name"].map(ban_rate_lookup).fillna(0.0)
+
+    tier_raw_score = compute_tier_raw_score(df)
+    total_matches = load_total_matches()
+    pick_rates = pd.to_numeric(df["Pick Rate"], errors="coerce").fillna(0.0)
+    estimated_picks = pick_rates / 100.0 * total_matches
+    sample_confidence = 1.0 - np.exp(-(estimated_picks / TIER_SCORE_CONFIG["sampleScale"]))
+    damped_score = tier_raw_score * (
+        TIER_SCORE_CONFIG["sampleFloor"]
+        + ((1.0 - TIER_SCORE_CONFIG["sampleFloor"]) * sample_confidence)
+    )
+    tier_score = safe_zscore(damped_score)
+
+    df["Tier"] = tier_score.map(score_to_tier)
+    df["Tier Score"] = tier_score.round(3)
+    return df.drop(columns=["_normalized_name"], errors="ignore")
 
 
 def finalize_recommended_build(build_variants):
@@ -212,10 +324,11 @@ def sanitize_for_json(value):
 def build_moveset_rows(df):
     build_lookup, unordered_build_lookup, pokemon_build_lookup = load_unite_db_build_lookup()
     main_move_fallbacks = load_main_move_fallbacks()
+    df = add_tier_estimates(df)
     df = df.sort_values(by='Name').reset_index(drop=True)
     df['Pick Rate'] = df['Pick Rate'].round(2)
     df['Win Rate'] = df['Win Rate'].round(2)
-    static_columns = ["Name", "Pokemon", "Role", "Move Set", "Move 1", "Move 2", "Win Rate", "Pick Rate"]
+    static_columns = ["Name", "Pokemon", "Role", "Move Set", "Move 1", "Move 2", "Tier", "Tier Score", "Win Rate", "Pick Rate"]
     final_data = []
 
     for _, row in df.iterrows():
@@ -245,7 +358,7 @@ def organize_df(df, column_titles):
     df = df.reindex(columns=column_titles)
     json_ready_data = build_moveset_rows(df)
 
-    csv_static_columns = ["Name", "Pokemon", "Role", "Move Set", "Move 1", "Move 2", "Win Rate", "Pick Rate"]
+    csv_static_columns = ["Name", "Pokemon", "Role", "Move Set", "Move 1", "Move 2", "Tier", "Tier Score", "Win Rate", "Pick Rate"]
     item_columns = []
     max_items = max((len(row.get("Battle Items", [])) for _, row in df.iterrows()), default=0)
     for idx in range(1, max_items + 1):

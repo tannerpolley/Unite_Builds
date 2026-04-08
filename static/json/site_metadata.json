@@ -1,6 +1,43 @@
 {
   "date": "April 5",
   "matches": 113724.0,
-  "generatedAt": "2026-04-07T04:53:53Z",
-  "assetVersion": "2026-04-07T04:53:53Z"
+  "generatedAt": "2026-04-08T17:36:08Z",
+  "assetVersion": "2026-04-08T17:36:08Z",
+  "tierScoreConfig": {
+    "model": "sample-damped-interaction-zscore-v2",
+    "displayCutoff": 0.5,
+    "sampleScale": 1200,
+    "sampleFloor": 0.25,
+    "weights": {
+      "win": 0.72,
+      "pick": 0.14,
+      "ban": 0.08,
+      "winPick": 0.07,
+      "winBan": 0.02,
+      "pickBan": 0.01
+    },
+    "bands": [
+      {
+        "label": "S+",
+        "threshold": 3.25
+      },
+      {
+        "label": "S",
+        "threshold": 0.75
+      },
+      {
+        "label": "A",
+        "threshold": 0.0
+      },
+      {
+        "label": "B",
+        "threshold": -0.5
+      },
+      {
+        "label": "C",
+        "threshold": -0.75
+      }
+    ]
+  },
+  "tierLabelDistribution": "fixed-stdev-bands"
 }

@@ -6,6 +6,8 @@
     "Move Set": "Pursuit/Sucker Punch",
     "Move 1": "Moves/Absol - Pursuit.png",
     "Move 2": "Moves/Absol - Sucker Punch.png",
+    "Tier": "D",
+    "Tier Score": -0.906,
     "Win Rate": 46.92,
     "Pick Rate": 2.91,
     "recommendedBuild": {
@@ -37,6 +39,8 @@
     "Move Set": "Night Slash/Psycho Cut",
     "Move 1": "Moves/Absol - Night Slash.png",
     "Move 2": "Moves/Absol - Psycho Cut.png",
+    "Tier": "D",
+    "Tier Score": -1.13,
     "Win Rate": 46.25,
     "Pick Rate": 2.25,
     "recommendedBuild": {
@@ -68,6 +72,8 @@
     "Move Set": "Pursuit/Psycho Cut",
     "Move 1": "Moves/Absol - Pursuit.png",
     "Move 2": "Moves/Absol - Psycho Cut.png",
+    "Tier": "D",
+    "Tier Score": -1.219,
     "Win Rate": 45.8,
     "Pick Rate": 1.64,
     "recommendedBuild": {
@@ -99,6 +105,8 @@
     "Move Set": "Night Slash/Sucker Punch",
     "Move 1": "Moves/Absol - Night Slash.png",
     "Move 2": "Moves/Absol - Sucker Punch.png",
+    "Tier": "D",
+    "Tier Score": -0.892,
     "Win Rate": 45.42,
     "Pick Rate": 0.42,
     "recommendedBuild": {
@@ -130,6 +138,8 @@
     "Move Set": "Sacred Sword/Wide Guard",
     "Move 1": "Moves/Aegislash - Sacred Sword.png",
     "Move 2": "Moves/Aegislash - Wide Guard.png",
+    "Tier": "D",
+    "Tier Score": -1.078,
     "Win Rate": 46.45,
     "Pick Rate": 2.75,
     "recommendedBuild": {
@@ -161,6 +171,8 @@
     "Move Set": "Shadow Claw/Wide Guard",
     "Move 1": "Moves/Aegislash - Shadow Claw.png",
     "Move 2": "Moves/Aegislash - Wide Guard.png",
+    "Tier": "D",
+    "Tier Score": -1.114,
     "Win Rate": 46.18,
     "Pick Rate": 1.75,
     "recommendedBuild": {
@@ -192,6 +204,8 @@
     "Move Set": "Shadow Claw/Iron Head",
     "Move 1": "Moves/Aegislash - Shadow Claw.png",
     "Move 2": "Moves/Aegislash - Iron Head.png",
+    "Tier": "D",
+    "Tier Score": -0.94,
     "Win Rate": 45.84,
     "Pick Rate": 0.67,
     "recommendedBuild": {
@@ -224,6 +238,8 @@
     "Move Set": "Sacred Sword/Iron Head",
     "Move 1": "Moves/Aegislash - Sacred Sword.png",
     "Move 2": "Moves/Aegislash - Iron Head.png",
+    "Tier": "D",
+    "Tier Score": -0.878,
     "Win Rate": 44.84,
     "Pick Rate": 0.27,
     "recommendedBuild": {
@@ -255,6 +271,8 @@
     "Move Set": "Recover/Sweet Scent",
     "Move 1": "Moves/Alcremie - Recover.png",
     "Move 2": "Moves/Alcremie - Sweet Scent.png",
+    "Tier": "S",
+    "Tier Score": 1.234,
     "Win Rate": 51.66,
     "Pick Rate": 7.46,
     "recommendedBuild": {
@@ -286,6 +304,8 @@
     "Move Set": "Decorate/Dazzling Gleam",
     "Move 1": "Moves/Alcremie - Decorate.png",
     "Move 2": "Moves/Alcremie - Dazzling Gleam.png",
+    "Tier": "B",
+    "Tier Score": -0.194,
     "Win Rate": 49.23,
     "Pick Rate": 0.8,
     "recommendedBuild": {
@@ -317,6 +337,8 @@
     "Move Set": "Recover/Dazzling Gleam",
     "Move 1": "Moves/Alcremie - Recover.png",
     "Move 2": "Moves/Alcremie - Dazzling Gleam.png",
+    "Tier": "D",
+    "Tier Score": -0.775,
     "Win Rate": 45.59,
     "Pick Rate": 0.29,
     "recommendedBuild": {
@@ -348,6 +370,8 @@
     "Move Set": "Decorate/Sweet Scent",
     "Move 1": "Moves/Alcremie - Decorate.png",
     "Move 2": "Moves/Alcremie - Sweet Scent.png",
+    "Tier": "B",
+    "Tier Score": -0.248,
     "Win Rate": 48.95,
     "Pick Rate": 0.13,
     "recommendedBuild": {
@@ -379,6 +403,8 @@
     "Move Set": "Avalanche/Blizzard",
     "Move 1": "Moves/Alolan Ninetales - Avalanche.png",
     "Move 2": "Moves/Alolan Ninetales - Blizzard.png",
+    "Tier": "C",
+    "Tier Score": -0.672,
     "Win Rate": 47.39,
     "Pick Rate": 4.79,
     "recommendedBuild": {
@@ -410,6 +436,8 @@
     "Move Set": "Dazzling Gleam/Aurora Veil",
     "Move 1": "Moves/Alolan Ninetales - Dazzling Gleam.png",
     "Move 2": "Moves/Alolan Ninetales - Aurora Veil.png",
+    "Tier": "B",
+    "Tier Score": -0.283,
     "Win Rate": 48.84,
     "Pick Rate": 0.65,
     "recommendedBuild": {
@@ -442,6 +470,8 @@
     "Move Set": "Dazzling Gleam/Blizzard",
     "Move 1": "Moves/Alolan Ninetales - Dazzling Gleam.png",
     "Move 2": "Moves/Alolan Ninetales - Blizzard.png",
+    "Tier": "A",
+    "Tier Score": 0.002,
     "Win Rate": 51.03,
     "Pick Rate": 0.13,
     "recommendedBuild": {
@@ -473,6 +503,8 @@
     "Move Set": "Electro Ball/Thunderbolt",
     "Move 1": "Moves/Alolan Raichu - Electro Ball.png",
     "Move 2": "Moves/Alolan Raichu - Thunderbolt.png",
+    "Tier": "B",
+    "Tier Score": -0.136,
     "Win Rate": 49.28,
     "Pick Rate": 1.47,
     "recommendedBuild": {
@@ -504,6 +536,8 @@
     "Move Set": "Electro Ball/Psychic",
     "Move 1": "Moves/Alolan Raichu - Electro Ball.png",
     "Move 2": "Moves/Alolan Raichu - Psychic.png",
+    "Tier": "C",
+    "Tier Score": -0.54,
     "Win Rate": 46.79,
     "Pick Rate": 0.19,
     "recommendedBuild": {
@@ -535,6 +569,8 @@
     "Move Set": "Stored Power/Psychic",
     "Move 1": "Moves/Alolan Raichu - Stored Power.png",
     "Move 2": "Moves/Alolan Raichu - Psychic.png",
+    "Tier": "B",
+    "Tier Score": -0.065,
     "Win Rate": 49.46,
     "Pick Rate": 1.69,
     "recommendedBuild": {
@@ -566,6 +602,8 @@
     "Move Set": "Stored Power/Thunderbolt",
     "Move 1": "Moves/Alolan Raichu - Stored Power.png",
     "Move 2": "Moves/Alolan Raichu - Thunderbolt.png",
+    "Tier": "D",
+    "Tier Score": -0.967,
     "Win Rate": 46.54,
     "Pick Rate": 1.51,
     "recommendedBuild": {
@@ -597,6 +635,8 @@
     "Move Set": "Fire Spin/Psyshock",
     "Move 1": "Moves/Armarouge - Fire Spin.png",
     "Move 2": "Moves/Armarouge - Psyshock.png",
+    "Tier": "B",
+    "Tier Score": -0.277,
     "Win Rate": 48.89,
     "Pick Rate": 0.72,
     "recommendedBuild": {
@@ -628,6 +668,8 @@
     "Move Set": "Armor Cannon/Psyshock",
     "Move 1": "Moves/Armarouge - Armor Cannon.png",
     "Move 2": "Moves/Armarouge - Psyshock.png",
+    "Tier": "A",
+    "Tier Score": 0.58,
     "Win Rate": 53.09,
     "Pick Rate": 0.57,
     "recommendedBuild": {
@@ -659,6 +701,8 @@
     "Move Set": "Fire Spin/Flame Charge",
     "Move 1": "Moves/Armarouge - Fire Spin.png",
     "Move 2": "Moves/Armarouge - Flame Charge.png",
+    "Tier": "B",
+    "Tier Score": -0.123,
     "Win Rate": 49.66,
     "Pick Rate": 0.52,
     "recommendedBuild": {
@@ -690,6 +734,8 @@
     "Move Set": "Armor Cannon/Flame Charge",
     "Move 1": "Moves/Armarouge - Armor Cannon.png",
     "Move 2": "Moves/Armarouge - Flame Charge.png",
+    "Tier": "C",
+    "Tier Score": -0.595,
     "Win Rate": 45.59,
     "Pick Rate": 0.06,
     "recommendedBuild": {
@@ -721,6 +767,8 @@
     "Move Set": "Play Rough/Whirlpool",
     "Move 1": "Moves/Azumarill - Play Rough.png",
     "Move 2": "Moves/Azumarill - Whirlpool.png",
+    "Tier": "D",
+    "Tier Score": -1.552,
     "Win Rate": 45.17,
     "Pick Rate": 3.2,
     "recommendedBuild": {
@@ -752,6 +800,8 @@
     "Move Set": "Water Pulse/Aqua Tail",
     "Move 1": "Moves/Azumarill - Water Pulse.png",
     "Move 2": "Moves/Azumarill - Aqua Tail.png",
+    "Tier": "A",
+    "Tier Score": 0.658,
     "Win Rate": 51.64,
     "Pick Rate": 1.9,
     "recommendedBuild": {
@@ -783,6 +833,8 @@
     "Move Set": "Play Rough/Aqua Tail",
     "Move 1": "Moves/Azumarill - Play Rough.png",
     "Move 2": "Moves/Azumarill - Aqua Tail.png",
+    "Tier": "D",
+    "Tier Score": -1.773,
     "Win Rate": 38.35,
     "Pick Rate": 0.23,
     "recommendedBuild": {
@@ -814,6 +866,8 @@
     "Move Set": "Water Pulse/Whirlpool",
     "Move 1": "Moves/Azumarill - Water Pulse.png",
     "Move 2": "Moves/Azumarill - Whirlpool.png",
+    "Tier": "A",
+    "Tier Score": 0.575,
     "Win Rate": 56.31,
     "Pick Rate": 0.09,
     "recommendedBuild": {
@@ -845,6 +899,8 @@
     "Move Set": "Hydro Pump/Rapid Spin",
     "Move 1": "Moves/Blastoise - Hydro Pump.png",
     "Move 2": "Moves/Blastoise - Rapid Spin.png",
+    "Tier": "A",
+    "Tier Score": 0.376,
     "Win Rate": 49.04,
     "Pick Rate": 1.05,
     "recommendedBuild": {
@@ -876,6 +932,8 @@
     "Move Set": "Hydro Pump/Surf",
     "Move 1": "Moves/Blastoise - Hydro Pump.png",
     "Move 2": "Moves/Blastoise - Surf.png",
+    "Tier": "S+",
+    "Tier Score": 4.983,
     "Win Rate": 51.46,
     "Pick Rate": 33.36,
     "recommendedBuild": {
@@ -915,6 +973,8 @@
       "Moves/Blaziken - Blaze Kick.png",
       "Moves/Blaziken - Focus Blast.png"
     ],
+    "Tier": "S",
+    "Tier Score": 0.779,
     "Win Rate": 50.33,
     "Pick Rate": 8.93,
     "recommendedBuild": {
@@ -946,6 +1006,8 @@
     "Move Set": "Helping Hand/Safeguard",
     "Move 1": "Moves/Blissey - Helping Hand.png",
     "Move 2": "Moves/Blissey - Safeguard.png",
+    "Tier": "S",
+    "Tier Score": 1.394,
     "Win Rate": 51.42,
     "Pick Rate": 10.05,
     "recommendedBuild": {
@@ -977,6 +1039,8 @@
     "Move Set": "Egg Bomb/Soft-Boiled",
     "Move 1": "Moves/Blissey - Egg Bomb.png",
     "Move 2": "Moves/Blissey - Soft-Boiled.png",
+    "Tier": "A",
+    "Tier Score": 0.543,
     "Win Rate": 49.83,
     "Pick Rate": 7.89,
     "recommendedBuild": {
@@ -1008,6 +1072,8 @@
     "Move Set": "Helping Hand/Soft-Boiled",
     "Move 1": "Moves/Blissey - Helping Hand.png",
     "Move 2": "Moves/Blissey - Soft-Boiled.png",
+    "Tier": "C",
+    "Tier Score": -0.717,
     "Win Rate": 45.76,
     "Pick Rate": 0.26,
     "recommendedBuild": {
@@ -1039,6 +1105,8 @@
     "Move Set": "Smack Down/Superpower",
     "Move 1": "Moves/Buzzwole - Smack Down.png",
     "Move 2": "Moves/Buzzwole - Superpower.png",
+    "Tier": "A",
+    "Tier Score": 0.137,
     "Win Rate": 49.1,
     "Pick Rate": 6.82,
     "recommendedBuild": {
@@ -1070,6 +1138,8 @@
     "Move Set": "Smack Down/Leech Life",
     "Move 1": "Moves/Buzzwole - Smack Down.png",
     "Move 2": "Moves/Buzzwole - Leech Life.png",
+    "Tier": "D",
+    "Tier Score": -1.216,
     "Win Rate": 45.95,
     "Pick Rate": 5.38,
     "recommendedBuild": {
@@ -1101,6 +1171,8 @@
     "Move Set": "Lunge/Leech Life",
     "Move 1": "Moves/Buzzwole - Lunge.png",
     "Move 2": "Moves/Buzzwole - Leech Life.png",
+    "Tier": "B",
+    "Tier Score": -0.336,
     "Win Rate": 48.59,
     "Pick Rate": 1.62,
     "recommendedBuild": {
@@ -1132,6 +1204,8 @@
     "Move Set": "Lunge/Superpower",
     "Move 1": "Moves/Buzzwole - Lunge.png",
     "Move 2": "Moves/Buzzwole - Superpower.png",
+    "Tier": "A",
+    "Tier Score": 0.493,
     "Win Rate": 53.69,
     "Pick Rate": 0.3,
     "recommendedBuild": {
@@ -1163,6 +1237,8 @@
     "Move Set": "Bitter Blade/Flame Charge",
     "Move 1": "Moves/Ceruledge - Bitter Blade.png",
     "Move 2": "Moves/Ceruledge - Flame Charge.png",
+    "Tier": "B",
+    "Tier Score": -0.339,
     "Win Rate": 48.36,
     "Pick Rate": 0.35,
     "recommendedBuild": {
@@ -1192,6 +1268,8 @@
     "Move Set": "Psycho Cut/Flame Charge",
     "Move 1": "Moves/Ceruledge - Psycho Cut.png",
     "Move 2": "Moves/Ceruledge - Flame Charge.png",
+    "Tier": "A",
+    "Tier Score": 0.59,
     "Win Rate": 50.81,
     "Pick Rate": 3.29,
     "recommendedBuild": {
@@ -1223,6 +1301,8 @@
     "Move Set": "Bitter Blade/Phantom Force",
     "Move 1": "Moves/Ceruledge - Bitter Blade.png",
     "Move 2": "Moves/Ceruledge - Phantom Force.png",
+    "Tier": "S",
+    "Tier Score": 2.215,
     "Win Rate": 52.69,
     "Pick Rate": 12.89,
     "recommendedBuild": {
@@ -1254,6 +1334,8 @@
     "Move Set": "Psycho Cut/Phantom Force",
     "Move 1": "Moves/Ceruledge - Psycho Cut.png",
     "Move 2": "Moves/Ceruledge - Phantom Force.png",
+    "Tier": "A",
+    "Tier Score": 0.265,
     "Win Rate": 50.01,
     "Pick Rate": 3.0,
     "recommendedBuild": {
@@ -1285,6 +1367,8 @@
     "Move Set": "Flamethrower/Poltergeist",
     "Move 1": "Moves/Chandelure - Flamethrower.png",
     "Move 2": "Moves/Chandelure - Poltergeist.png",
+    "Tier": "B",
+    "Tier Score": -0.129,
     "Win Rate": 49.32,
     "Pick Rate": 1.48,
     "recommendedBuild": {
@@ -1316,6 +1400,8 @@
     "Move Set": "Overheat/Imprison",
     "Move 1": "Moves/Chandelure - Overheat.png",
     "Move 2": "Moves/Chandelure - Imprison.png",
+    "Tier": "A",
+    "Tier Score": 0.198,
     "Win Rate": 51.02,
     "Pick Rate": 0.69,
     "recommendedBuild": {
@@ -1347,6 +1433,8 @@
     "Move Set": "Overheat/Poltergeist",
     "Move 1": "Moves/Chandelure - Overheat.png",
     "Move 2": "Moves/Chandelure - Poltergeist.png",
+    "Tier": "B",
+    "Tier Score": -0.307,
     "Win Rate": 48.67,
     "Pick Rate": 0.4,
     "recommendedBuild": {
@@ -1378,6 +1466,8 @@
     "Move Set": "Flamethrower/Imprison",
     "Move 1": "Moves/Chandelure - Flamethrower.png",
     "Move 2": "Moves/Chandelure - Imprison.png",
+    "Tier": "B",
+    "Tier Score": -0.204,
     "Win Rate": 48.95,
     "Pick Rate": 2.26,
     "recommendedBuild": {
@@ -1409,6 +1499,8 @@
     "Move Set": "Flamethrower/Imprison",
     "Move 1": "Moves/Charizard - Flamethrower.png",
     "Move 2": "Moves/Charizard - Imprison.png",
+    "Tier": "B",
+    "Tier Score": -0.195,
     "Win Rate": 48.95,
     "Pick Rate": 2.32,
     "recommendedBuild": {
@@ -1440,6 +1532,8 @@
     "Move Set": "Flamethrower/Poltergeist",
     "Move 1": "Moves/Charizard - Flamethrower.png",
     "Move 2": "Moves/Charizard - Poltergeist.png",
+    "Tier": "B",
+    "Tier Score": -0.122,
     "Win Rate": 49.32,
     "Pick Rate": 1.52,
     "recommendedBuild": {
@@ -1471,6 +1565,8 @@
     "Move Set": "Overheat/Imprison",
     "Move 1": "Moves/Charizard - Overheat.png",
     "Move 2": "Moves/Charizard - Imprison.png",
+    "Tier": "A",
+    "Tier Score": 0.208,
     "Win Rate": 51.02,
     "Pick Rate": 0.71,
     "recommendedBuild": {
@@ -1502,6 +1598,8 @@
     "Move Set": "Overheat/Poltergeist",
     "Move 1": "Moves/Charizard - Overheat.png",
     "Move 2": "Moves/Charizard - Poltergeist.png",
+    "Tier": "B",
+    "Tier Score": -0.305,
     "Win Rate": 48.67,
     "Pick Rate": 0.41,
     "recommendedBuild": {
@@ -1533,6 +1631,8 @@
     "Move Set": "Blaze Kick/Feint",
     "Move 1": "Moves/Cinderace - Blaze Kick.png",
     "Move 2": "Moves/Cinderace - Feint.png",
+    "Tier": "S",
+    "Tier Score": 1.225,
     "Win Rate": 50.92,
     "Pick Rate": 10.99,
     "recommendedBuild": {
@@ -1562,6 +1662,8 @@
     "Move Set": "Pyro Ball/Feint",
     "Move 1": "Moves/Cinderace - Pyro Ball.png",
     "Move 2": "Moves/Cinderace - Feint.png",
+    "Tier": "B",
+    "Tier Score": -0.044,
     "Win Rate": 48.4,
     "Pick Rate": 8.58,
     "recommendedBuild": {
@@ -1593,6 +1695,8 @@
     "Move Set": "Pyro Ball/Flame Charge",
     "Move 1": "Moves/Cinderace - Pyro Ball.png",
     "Move 2": "Moves/Cinderace - Flame Charge.png",
+    "Tier": "B",
+    "Tier Score": -0.249,
     "Win Rate": 48.16,
     "Pick Rate": 6.62,
     "recommendedBuild": {
@@ -1624,6 +1728,8 @@
     "Move Set": "Blaze Kick/Flame Charge",
     "Move 1": "Moves/Cinderace - Blaze Kick.png",
     "Move 2": "Moves/Cinderace - Flame Charge.png",
+    "Tier": "S",
+    "Tier Score": 1.268,
     "Win Rate": 52.88,
     "Pick Rate": 2.74,
     "recommendedBuild": {
@@ -1653,6 +1759,8 @@
     "Move Set": "Moonlight/Gravity",
     "Move 1": "Moves/Clefable - Moonlight.png",
     "Move 2": "Moves/Clefable - Gravity.png",
+    "Tier": "D",
+    "Tier Score": -1.043,
     "Win Rate": 46.25,
     "Pick Rate": 5.48,
     "recommendedBuild": {
@@ -1684,6 +1792,8 @@
     "Move Set": "Moonlight/Follow Me",
     "Move 1": "Moves/Clefable - Moonlight.png",
     "Move 2": "Moves/Clefable - Follow Me.png",
+    "Tier": "B",
+    "Tier Score": -0.366,
     "Win Rate": 48.19,
     "Pick Rate": 3.25,
     "recommendedBuild": {
@@ -1715,6 +1825,8 @@
     "Move Set": "Draining Kiss/Follow Me",
     "Move 1": "Moves/Clefable - Draining Kiss.png",
     "Move 2": "Moves/Clefable - Follow Me.png",
+    "Tier": "D",
+    "Tier Score": -0.777,
     "Win Rate": 44.83,
     "Pick Rate": 0.18,
     "recommendedBuild": {
@@ -1744,6 +1856,8 @@
     "Move Set": "Sweet Kiss/Magical Leaf",
     "Move 1": "Moves/Comfey - Sweet Kiss.png",
     "Move 2": "Moves/Comfey - Magical Leaf.png",
+    "Tier": "D",
+    "Tier Score": -1.575,
     "Win Rate": 41.06,
     "Pick Rate": 0.36,
     "recommendedBuild": {
@@ -1775,6 +1889,8 @@
     "Move Set": "Sweet Kiss/Grass Knot",
     "Move 1": "Moves/Comfey - Sweet Kiss.png",
     "Move 2": "Moves/Comfey - Grass Knot.png",
+    "Tier": "A",
+    "Tier Score": 0.605,
     "Win Rate": 50.59,
     "Pick Rate": 3.71,
     "recommendedBuild": {
@@ -1806,6 +1922,8 @@
     "Move Set": "Floral Healing/Magical Leaf",
     "Move 1": "Moves/Comfey - Floral Healing.png",
     "Move 2": "Moves/Comfey - Magical Leaf.png",
+    "Tier": "C",
+    "Tier Score": -0.603,
     "Win Rate": 47.36,
     "Pick Rate": 4.73,
     "recommendedBuild": {
@@ -1837,6 +1955,8 @@
     "Move Set": "Floral Healing/Grass Knot",
     "Move 1": "Moves/Comfey - Floral Healing.png",
     "Move 2": "Moves/Comfey - Grass Knot.png",
+    "Tier": "D",
+    "Tier Score": -0.913,
     "Win Rate": 46.68,
     "Pick Rate": 2.21,
     "recommendedBuild": {
@@ -1869,6 +1989,8 @@
     "Move Set": "Surf/Hurricane",
     "Move 1": "Moves/Cramorant - Surf.png",
     "Move 2": "Moves/Cramorant - Hurricane.png",
+    "Tier": "A",
+    "Tier Score": 0.359,
     "Win Rate": 50.56,
     "Pick Rate": 2.37,
     "recommendedBuild": {
@@ -1900,6 +2022,8 @@
     "Move Set": "Dive/Hurricane",
     "Move 1": "Moves/Cramorant - Dive.png",
     "Move 2": "Moves/Cramorant - Hurricane.png",
+    "Tier": "S",
+    "Tier Score": 0.876,
     "Win Rate": 52.18,
     "Pick Rate": 2.12,
     "recommendedBuild": {
@@ -1931,6 +2055,8 @@
     "Move Set": "Dive/Air Slash",
     "Move 1": "Moves/Cramorant - Dive.png",
     "Move 2": "Moves/Cramorant - Air Slash.png",
+    "Tier": "S",
+    "Tier Score": 1.118,
     "Win Rate": 52.95,
     "Pick Rate": 2.04,
     "recommendedBuild": {
@@ -1962,6 +2088,8 @@
     "Move Set": "Rock Tomb/X-Scissor",
     "Move 1": "Moves/Crustle - Rock Tomb.png",
     "Move 2": "Moves/Crustle - X-Scissor.png",
+    "Tier": "S",
+    "Tier Score": 1.003,
     "Win Rate": 51.52,
     "Pick Rate": 5.4,
     "recommendedBuild": {
@@ -1993,6 +2121,8 @@
     "Move Set": "Shell Smash/X-Scissor",
     "Move 1": "Moves/Crustle - Shell Smash.png",
     "Move 2": "Moves/Crustle - X-Scissor.png",
+    "Tier": "B",
+    "Tier Score": -0.464,
     "Win Rate": 48.22,
     "Pick Rate": 1.87,
     "recommendedBuild": {
@@ -2024,6 +2154,8 @@
     "Move Set": "Rock Tomb/Stealth Rock",
     "Move 1": "Moves/Crustle - Rock Tomb.png",
     "Move 2": "Moves/Crustle - Stealth Rock.png",
+    "Tier": "C",
+    "Tier Score": -0.637,
     "Win Rate": 47.49,
     "Pick Rate": 1.0,
     "recommendedBuild": {
@@ -2055,6 +2187,8 @@
     "Move Set": "Shell Smash/Stealth Rock",
     "Move 1": "Moves/Crustle - Shell Smash.png",
     "Move 2": "Moves/Crustle - Stealth Rock.png",
+    "Tier": "C",
+    "Tier Score": -0.592,
     "Win Rate": 47.37,
     "Pick Rate": 0.6,
     "recommendedBuild": {
@@ -2086,6 +2220,8 @@
     "Move Set": "Dark Void/Dark Pulse",
     "Move 1": "Moves/Darkrai - Dark Void.png",
     "Move 2": "Moves/Darkrai - Dark Pulse.png",
+    "Tier": "B",
+    "Tier Score": -0.486,
     "Win Rate": 47.22,
     "Pick Rate": 0.28,
     "recommendedBuild": {
@@ -2117,6 +2253,8 @@
     "Move Set": "Shadow Claw/Dark Pulse",
     "Move 1": "Moves/Darkrai - Shadow Claw.png",
     "Move 2": "Moves/Darkrai - Dark Pulse.png",
+    "Tier": "S",
+    "Tier Score": 1.696,
     "Win Rate": 53.39,
     "Pick Rate": 3.68,
     "recommendedBuild": {
@@ -2148,6 +2286,8 @@
     "Move Set": "Dark Void/Nasty Plot",
     "Move 1": "Moves/Darkrai - Dark Void.png",
     "Move 2": "Moves/Darkrai - Nasty Plot.png",
+    "Tier": "C",
+    "Tier Score": -0.507,
     "Win Rate": 47.78,
     "Pick Rate": 2.87,
     "recommendedBuild": {
@@ -2181,6 +2321,8 @@
     "Move Set": "Spirit Shackle/Shadow Sneak",
     "Move 1": "Moves/Decidueye - Spirit Shackle.png",
     "Move 2": "Moves/Decidueye - Shadow Sneak.png",
+    "Tier": "S",
+    "Tier Score": 2.494,
     "Win Rate": 52.24,
     "Pick Rate": 18.75,
     "recommendedBuild": {
@@ -2210,6 +2352,8 @@
     "Move Set": "Razor Leaf/Leaf Storm",
     "Move 1": "Moves/Decidueye - Razor Leaf.png",
     "Move 2": "Moves/Decidueye - Leaf Storm.png",
+    "Tier": "B",
+    "Tier Score": -0.373,
     "Win Rate": 48.02,
     "Pick Rate": 5.31,
     "recommendedBuild": {
@@ -2239,6 +2383,8 @@
     "Move Set": "Spirit Shackle/Leaf Storm",
     "Move 1": "Moves/Decidueye - Spirit Shackle.png",
     "Move 2": "Moves/Decidueye - Leaf Storm.png",
+    "Tier": "A",
+    "Tier Score": 0.472,
     "Win Rate": 50.7,
     "Pick Rate": 2.65,
     "recommendedBuild": {
@@ -2268,6 +2414,8 @@
     "Move Set": "Razor Leaf/Shadow Sneak",
     "Move 1": "Moves/Decidueye - Razor Leaf.png",
     "Move 2": "Moves/Decidueye - Shadow Sneak.png",
+    "Tier": "A",
+    "Tier Score": 0.737,
     "Win Rate": 51.66,
     "Pick Rate": 2.14,
     "recommendedBuild": {
@@ -2297,6 +2445,8 @@
     "Move Set": "Mystical Fire/Fire Spin",
     "Move 1": "Moves/Delphox - Mystical Fire.png",
     "Move 2": "Moves/Delphox - Fire Spin.png",
+    "Tier": "B",
+    "Tier Score": -0.459,
     "Win Rate": 48.23,
     "Pick Rate": 1.54,
     "recommendedBuild": {
@@ -2326,6 +2476,8 @@
     "Move Set": "Fire Blast/Fire Spin",
     "Move 1": "Moves/Delphox - Fire Blast.png",
     "Move 2": "Moves/Delphox - Fire Spin.png",
+    "Tier": "B",
+    "Tier Score": -0.39,
     "Win Rate": 48.18,
     "Pick Rate": 4.23,
     "recommendedBuild": {
@@ -2357,6 +2509,8 @@
     "Move Set": "Mystical Fire/Flame Charge",
     "Move 1": "Moves/Delphox - Mystical Fire.png",
     "Move 2": "Moves/Delphox - Flame Charge.png",
+    "Tier": "A",
+    "Tier Score": 0.336,
     "Win Rate": 50.75,
     "Pick Rate": 1.7,
     "recommendedBuild": {
@@ -2386,6 +2540,8 @@
     "Move Set": "Power Whip/Anchor Shot",
     "Move 1": "Moves/Dhelmise - Power Whip.png",
     "Move 2": "Moves/Dhelmise - Anchor Shot.png",
+    "Tier": "S",
+    "Tier Score": 1.186,
     "Win Rate": 51.96,
     "Pick Rate": 5.44,
     "recommendedBuild": {
@@ -2417,6 +2573,8 @@
     "Move Set": "Whirlpool/Anchor Shot",
     "Move 1": "Moves/Dhelmise - Whirlpool.png",
     "Move 2": "Moves/Dhelmise - Anchor Shot.png",
+    "Tier": "C",
+    "Tier Score": -0.537,
     "Win Rate": 47.95,
     "Pick Rate": 1.31,
     "recommendedBuild": {
@@ -2448,6 +2606,8 @@
     "Move Set": "Power Whip/Heavy Slam",
     "Move 1": "Moves/Dhelmise - Power Whip.png",
     "Move 2": "Moves/Dhelmise - Heavy Slam.png",
+    "Tier": "A",
+    "Tier Score": 0.099,
     "Win Rate": 51.91,
     "Pick Rate": 0.12,
     "recommendedBuild": {
@@ -2479,6 +2639,8 @@
     "Move Set": "Whirlpool/Heavy Slam",
     "Move 1": "Moves/Dhelmise - Whirlpool.png",
     "Move 2": "Moves/Dhelmise - Heavy Slam.png",
+    "Tier": "C",
+    "Tier Score": -0.529,
     "Win Rate": 46.39,
     "Pick Rate": 0.09,
     "recommendedBuild": {
@@ -2510,6 +2672,8 @@
     "Move Set": "Tri Attack/Jump Kick",
     "Move 1": "Moves/Dodrio - Tri Attack.png",
     "Move 2": "Moves/Dodrio - Jump Kick.png",
+    "Tier": "A",
+    "Tier Score": 0.451,
     "Win Rate": 50.31,
     "Pick Rate": 4.37,
     "recommendedBuild": {
@@ -2541,6 +2705,8 @@
     "Move Set": "Drill Peck/Jump Kick",
     "Move 1": "Moves/Dodrio - Drill Peck.png",
     "Move 2": "Moves/Dodrio - Jump Kick.png",
+    "Tier": "C",
+    "Tier Score": -0.531,
     "Win Rate": 47.88,
     "Pick Rate": 1.0,
     "recommendedBuild": {
@@ -2572,6 +2738,8 @@
     "Move Set": "Tri Attack/Agility",
     "Move 1": "Moves/Dodrio - Tri Attack.png",
     "Move 2": "Moves/Dodrio - Agility.png",
+    "Tier": "D",
+    "Tier Score": -1.304,
     "Win Rate": 41.97,
     "Pick Rate": 0.27,
     "recommendedBuild": {
@@ -2603,6 +2771,8 @@
     "Move Set": "Drill Peck/Agility",
     "Move 1": "Moves/Dodrio - Drill Peck.png",
     "Move 2": "Moves/Dodrio - Agility.png",
+    "Tier": "D",
+    "Tier Score": -1.155,
     "Win Rate": 40.91,
     "Pick Rate": 0.1,
     "recommendedBuild": {
@@ -2634,6 +2804,8 @@
     "Move Set": "Dragon Breath/Phantom Force",
     "Move 1": "Moves/Dragapult - Dragon Breath.png",
     "Move 2": "Moves/Dragapult - Phantom Force.png",
+    "Tier": "A",
+    "Tier Score": 0.117,
     "Win Rate": 49.94,
     "Pick Rate": 0.72,
     "recommendedBuild": {
@@ -2665,6 +2837,8 @@
     "Move Set": "Dragon Breath/Dragon Dance",
     "Move 1": "Moves/Dragapult - Dragon Breath.png",
     "Move 2": "Moves/Dragapult - Dragon Dance.png",
+    "Tier": "S",
+    "Tier Score": 2.347,
     "Win Rate": 52.73,
     "Pick Rate": 10.75,
     "recommendedBuild": {
@@ -2696,6 +2870,8 @@
     "Move Set": "Shadow Ball/Phantom Force",
     "Move 1": "Moves/Dragapult - Shadow Ball.png",
     "Move 2": "Moves/Dragapult - Phantom Force.png",
+    "Tier": "S",
+    "Tier Score": 1.514,
     "Win Rate": 51.28,
     "Pick Rate": 8.9,
     "recommendedBuild": {
@@ -2727,6 +2903,8 @@
     "Move Set": "Shadow Ball/Dragon Dance",
     "Move 1": "Moves/Dragapult - Shadow Ball.png",
     "Move 2": "Moves/Dragapult - Dragon Dance.png",
+    "Tier": "S",
+    "Tier Score": 1.065,
     "Win Rate": 51.69,
     "Pick Rate": 2.63,
     "recommendedBuild": {
@@ -2758,6 +2936,8 @@
     "Move Set": "Dragon Dance/Hyper Beam",
     "Move 1": "Moves/Dragonite - Dragon Dance.png",
     "Move 2": "Moves/Dragonite - Hyper Beam.png",
+    "Tier": "S",
+    "Tier Score": 1.109,
     "Win Rate": 51.79,
     "Pick Rate": 5.27,
     "recommendedBuild": {
@@ -2789,6 +2969,8 @@
     "Move Set": "Dragon Dance/Outrage",
     "Move 1": "Moves/Dragonite - Dragon Dance.png",
     "Move 2": "Moves/Dragonite - Outrage.png",
+    "Tier": "A",
+    "Tier Score": 0.009,
     "Win Rate": 49.83,
     "Pick Rate": 1.32,
     "recommendedBuild": {
@@ -2818,6 +3000,8 @@
     "Move Set": "Extreme Speed/Outrage",
     "Move 1": "Moves/Dragonite - Extreme Speed.png",
     "Move 2": "Moves/Dragonite - Outrage.png",
+    "Tier": "D",
+    "Tier Score": -1.3,
     "Win Rate": 45.04,
     "Pick Rate": 1.08,
     "recommendedBuild": {
@@ -2847,6 +3031,8 @@
     "Move Set": "Dragon Pulse/Stealth Rock",
     "Move 1": "Moves/Duraludon - Dragon Pulse.png",
     "Move 2": "Moves/Duraludon - Stealth Rock.png",
+    "Tier": "D",
+    "Tier Score": -1.144,
     "Win Rate": 42.86,
     "Pick Rate": 0.25,
     "recommendedBuild": {
@@ -2876,6 +3062,8 @@
     "Move Set": "Dragon Pulse/Dragon Tail",
     "Move 1": "Moves/Duraludon - Dragon Pulse.png",
     "Move 2": "Moves/Duraludon - Dragon Tail.png",
+    "Tier": "D",
+    "Tier Score": -1.267,
     "Win Rate": 39.06,
     "Pick Rate": 0.06,
     "recommendedBuild": {
@@ -2905,6 +3093,8 @@
     "Move Set": "Flash Cannon/Dragon Tail",
     "Move 1": "Moves/Duraludon - Flash Cannon.png",
     "Move 2": "Moves/Duraludon - Dragon Tail.png",
+    "Tier": "B",
+    "Tier Score": -0.05,
     "Win Rate": 50.0,
     "Pick Rate": 0.56,
     "recommendedBuild": {
@@ -2936,6 +3126,8 @@
     "Move Set": "Flash Cannon/Stealth Rock",
     "Move 1": "Moves/Duraludon - Flash Cannon.png",
     "Move 2": "Moves/Duraludon - Stealth Rock.png",
+    "Tier": "B",
+    "Tier Score": -0.291,
     "Win Rate": 48.74,
     "Pick Rate": 0.31,
     "recommendedBuild": {
@@ -2967,6 +3159,8 @@
     "Move Set": "Pollen Puff/Cotton Guard",
     "Move 1": "Moves/Eldegoss - Pollen Puff.png",
     "Move 2": "Moves/Eldegoss - Cotton Guard.png",
+    "Tier": "B",
+    "Tier Score": -0.432,
     "Win Rate": 48.19,
     "Pick Rate": 3.32,
     "recommendedBuild": {
@@ -2999,6 +3193,8 @@
     "Move Set": "Pollen Puff/Cotton Spore",
     "Move 1": "Moves/Eldegoss - Pollen Puff.png",
     "Move 2": "Moves/Eldegoss - Cotton Spore.png",
+    "Tier": "A",
+    "Tier Score": 0.002,
     "Win Rate": 49.5,
     "Pick Rate": 2.55,
     "recommendedBuild": {
@@ -3030,6 +3226,8 @@
     "Move Set": "Leaf Tornado/Cotton Spore",
     "Move 1": "Moves/Eldegoss - Leaf Tornado.png",
     "Move 2": "Moves/Eldegoss - Cotton Spore.png",
+    "Tier": "A",
+    "Tier Score": 0.54,
     "Win Rate": 52.85,
     "Pick Rate": 0.59,
     "recommendedBuild": {
@@ -3061,6 +3259,8 @@
     "Move Set": "Leaf Tornado/Cotton Guard",
     "Move 1": "Moves/Eldegoss - Leaf Tornado.png",
     "Move 2": "Moves/Eldegoss - Cotton Guard.png",
+    "Tier": "A",
+    "Tier Score": 0.045,
     "Win Rate": 50.89,
     "Pick Rate": 0.3,
     "recommendedBuild": {
@@ -3092,6 +3292,8 @@
     "Move Set": "Hydro Cannon/Aqua Jet",
     "Move 1": "Moves/Empoleon - Hydro Cannon.png",
     "Move 2": "Moves/Empoleon - Aqua Jet.png",
+    "Tier": "A",
+    "Tier Score": 0.448,
     "Win Rate": 50.73,
     "Pick Rate": 2.63,
     "recommendedBuild": {
@@ -3126,6 +3328,8 @@
     "Move Set": "Hydro Cannon/Metal Claw",
     "Move 1": "Moves/Empoleon - Hydro Cannon.png",
     "Move 2": "Moves/Empoleon - Metal Claw.png",
+    "Tier": "C",
+    "Tier Score": -0.637,
     "Win Rate": 47.52,
     "Pick Rate": 1.06,
     "recommendedBuild": {
@@ -3160,6 +3364,8 @@
     "Move Set": "Whirlpool/Aqua Jet",
     "Move 1": "Moves/Empoleon - Whirlpool.png",
     "Move 2": "Moves/Empoleon - Aqua Jet.png",
+    "Tier": "B",
+    "Tier Score": -0.431,
     "Win Rate": 47.66,
     "Pick Rate": 0.21,
     "recommendedBuild": {
@@ -3194,6 +3400,8 @@
     "Move Set": "Whirlpool/Metal Claw",
     "Move 1": "Moves/Empoleon - Whirlpool.png",
     "Move 2": "Moves/Empoleon - Metal Claw.png",
+    "Tier": "D",
+    "Tier Score": -1.167,
     "Win Rate": 41.57,
     "Pick Rate": 0.15,
     "recommendedBuild": {
@@ -3228,6 +3436,8 @@
     "Move Set": "Stored Power/Psybeam",
     "Move 1": "Moves/Espeon - Stored Power.png",
     "Move 2": "Moves/Espeon - Psybeam.png",
+    "Tier": "C",
+    "Tier Score": -0.528,
     "Win Rate": 47.98,
     "Pick Rate": 2.59,
     "recommendedBuild": {
@@ -3259,6 +3469,8 @@
     "Move Set": "Psyshock/Psybeam",
     "Move 1": "Moves/Espeon - Psyshock.png",
     "Move 2": "Moves/Espeon - Psybeam.png",
+    "Tier": "B",
+    "Tier Score": -0.106,
     "Win Rate": 48.65,
     "Pick Rate": 6.03,
     "recommendedBuild": {
@@ -3290,6 +3502,8 @@
     "Move Set": "Stored Power/Future Sight",
     "Move 1": "Moves/Espeon - Stored Power.png",
     "Move 2": "Moves/Espeon - Future Sight.png",
+    "Tier": "B",
+    "Tier Score": -0.459,
     "Win Rate": 47.86,
     "Pick Rate": 5.38,
     "recommendedBuild": {
@@ -3321,6 +3535,8 @@
     "Move Set": "Psyshock/Future Sight",
     "Move 1": "Moves/Espeon - Psyshock.png",
     "Move 2": "Moves/Espeon - Future Sight.png",
+    "Tier": "B",
+    "Tier Score": -0.304,
     "Win Rate": 48.4,
     "Pick Rate": 4.2,
     "recommendedBuild": {
@@ -3352,6 +3568,8 @@
     "Move Set": "Iron Head/Beat Up",
     "Move 1": "Moves/Falinks - Iron Head.png",
     "Move 2": "Moves/Falinks - Beat Up.png",
+    "Tier": "B",
+    "Tier Score": -0.182,
     "Win Rate": 49.28,
     "Pick Rate": 0.85,
     "recommendedBuild": {
@@ -3383,6 +3601,8 @@
     "Move Set": "Megahorn/No Retreat",
     "Move 1": "Moves/Falinks - Megahorn.png",
     "Move 2": "Moves/Falinks - No Retreat.png",
+    "Tier": "D",
+    "Tier Score": -0.847,
     "Win Rate": 44.19,
     "Pick Rate": 0.15,
     "recommendedBuild": {
@@ -3414,6 +3634,8 @@
     "Move Set": "Iron Head/No Retreat",
     "Move 1": "Moves/Falinks - Iron Head.png",
     "Move 2": "Moves/Falinks - No Retreat.png",
+    "Tier": "B",
+    "Tier Score": -0.062,
     "Win Rate": 50.7,
     "Pick Rate": 0.06,
     "recommendedBuild": {
@@ -3445,6 +3667,8 @@
     "Move Set": "Megahorn/Beat Up",
     "Move 1": "Moves/Falinks - Megahorn.png",
     "Move 2": "Moves/Falinks - Beat Up.png",
+    "Tier": "S",
+    "Tier Score": 0.858,
     "Win Rate": 59.68,
     "Pick Rate": 0.05,
     "recommendedBuild": {
@@ -3476,6 +3700,8 @@
     "Move Set": "Fairy Wind/Smart Strike",
     "Move 1": "Moves/Galarian Rapidash - Fairy Wind.png",
     "Move 2": "Moves/Galarian Rapidash - Smart Strike.png",
+    "Tier": "C",
+    "Tier Score": -0.512,
     "Win Rate": 46.94,
     "Pick Rate": 0.17,
     "recommendedBuild": {
@@ -3505,6 +3731,8 @@
     "Move Set": "Dazzling Gleam/Smart Strike",
     "Move 1": "Moves/Galarian Rapidash - Dazzling Gleam.png",
     "Move 2": "Moves/Galarian Rapidash - Smart Strike.png",
+    "Tier": "S",
+    "Tier Score": 0.893,
     "Win Rate": 51.86,
     "Pick Rate": 2.91,
     "recommendedBuild": {
@@ -3536,6 +3764,8 @@
     "Move Set": "Dazzling Gleam/Agility",
     "Move 1": "Moves/Galarian Rapidash - Dazzling Gleam.png",
     "Move 2": "Moves/Galarian Rapidash - Agility.png",
+    "Tier": "D",
+    "Tier Score": -1.153,
     "Win Rate": 44.07,
     "Pick Rate": 0.44,
     "recommendedBuild": {
@@ -3567,6 +3797,8 @@
     "Move Set": "Fairy Wind/Agility",
     "Move 1": "Moves/Galarian Rapidash - Fairy Wind.png",
     "Move 2": "Moves/Galarian Rapidash - Agility.png",
+    "Tier": "C",
+    "Tier Score": -0.538,
     "Win Rate": 46.82,
     "Pick Rate": 0.19,
     "recommendedBuild": {
@@ -3598,6 +3830,8 @@
     "Move Set": "Dig/Earthquake",
     "Move 1": "Moves/Garchomp - Dig.png",
     "Move 2": "Moves/Garchomp - Earthquake.png",
+    "Tier": "B",
+    "Tier Score": -0.04,
     "Win Rate": 49.89,
     "Pick Rate": 0.79,
     "recommendedBuild": {
@@ -3632,6 +3866,8 @@
     "Move Set": "Dragon Rush/Dragon Claw",
     "Move 1": "Moves/Garchomp - Dragon Rush.png",
     "Move 2": "Moves/Garchomp - Dragon Claw.png",
+    "Tier": "S",
+    "Tier Score": 1.739,
     "Win Rate": 52.78,
     "Pick Rate": 7.84,
     "recommendedBuild": {
@@ -3664,6 +3900,8 @@
     "Move Set": "Psychic/Psyshock",
     "Move 1": "Moves/Gardevoir - Psychic.png",
     "Move 2": "Moves/Gardevoir - Psyshock.png",
+    "Tier": "A",
+    "Tier Score": 0.031,
     "Win Rate": 49.26,
     "Pick Rate": 4.25,
     "recommendedBuild": {
@@ -3695,6 +3933,8 @@
     "Move Set": "Moonblast/Future Sight",
     "Move 1": "Moves/Gardevoir - Moonblast.png",
     "Move 2": "Moves/Gardevoir - Future Sight.png",
+    "Tier": "C",
+    "Tier Score": -0.644,
     "Win Rate": 47.64,
     "Pick Rate": 2.85,
     "recommendedBuild": {
@@ -3726,6 +3966,8 @@
     "Move Set": "Moonblast/Psyshock",
     "Move 1": "Moves/Gardevoir - Moonblast.png",
     "Move 2": "Moves/Gardevoir - Psyshock.png",
+    "Tier": "B",
+    "Tier Score": -0.018,
     "Win Rate": 49.47,
     "Pick Rate": 2.34,
     "recommendedBuild": {
@@ -3757,6 +3999,8 @@
     "Move Set": "Psychic/Future Sight",
     "Move 1": "Moves/Gardevoir - Psychic.png",
     "Move 2": "Moves/Gardevoir - Future Sight.png",
+    "Tier": "D",
+    "Tier Score": -0.896,
     "Win Rate": 46.72,
     "Pick Rate": 1.36,
     "recommendedBuild": {
@@ -3788,6 +4032,8 @@
     "Move Set": "Sludge Bomb/Hex",
     "Move 1": "Moves/Gengar - Sludge Bomb.png",
     "Move 2": "Moves/Gengar - Hex.png",
+    "Tier": "S",
+    "Tier Score": 1.613,
     "Win Rate": 52.74,
     "Pick Rate": 5.86,
     "recommendedBuild": {
@@ -3819,6 +4065,8 @@
     "Move Set": "Shadow Ball/Dream Eater",
     "Move 1": "Moves/Gengar - Shadow Ball.png",
     "Move 2": "Moves/Gengar - Dream Eater.png",
+    "Tier": "A",
+    "Tier Score": 0.266,
     "Win Rate": 49.46,
     "Pick Rate": 5.82,
     "recommendedBuild": {
@@ -3848,6 +4096,8 @@
     "Move Set": "Icicle Spear/Ice Shard",
     "Move 1": "Moves/Glaceon - Icicle Spear.png",
     "Move 2": "Moves/Glaceon - Ice Shard.png",
+    "Tier": "B",
+    "Tier Score": -0.422,
     "Win Rate": 47.6,
     "Pick Rate": 8.32,
     "recommendedBuild": {
@@ -3879,6 +4129,8 @@
     "Move Set": "Icy Wind/Freeze-Dry",
     "Move 1": "Moves/Glaceon - Icy Wind.png",
     "Move 2": "Moves/Glaceon - Freeze-Dry.png",
+    "Tier": "S",
+    "Tier Score": 1.246,
     "Win Rate": 54.1,
     "Pick Rate": 1.31,
     "recommendedBuild": {
@@ -3912,6 +4164,8 @@
     "Move Set": "Dragon Pulse/Power Whip",
     "Move 1": "Moves/Goodra - Dragon Pulse.png",
     "Move 2": "Moves/Goodra - Power Whip.png",
+    "Tier": "D",
+    "Tier Score": -0.824,
     "Win Rate": 47.1,
     "Pick Rate": 1.82,
     "recommendedBuild": {
@@ -3943,6 +4197,8 @@
     "Move Set": "Dragon Pulse/Acid Spray",
     "Move 1": "Moves/Goodra - Dragon Pulse.png",
     "Move 2": "Moves/Goodra - Acid Spray.png",
+    "Tier": "D",
+    "Tier Score": -1.205,
     "Win Rate": 45.13,
     "Pick Rate": 0.89,
     "recommendedBuild": {
@@ -3974,6 +4230,8 @@
     "Move Set": "Muddy Water/Power Whip",
     "Move 1": "Moves/Goodra - Muddy Water.png",
     "Move 2": "Moves/Goodra - Power Whip.png",
+    "Tier": "D",
+    "Tier Score": -0.781,
     "Win Rate": 46.0,
     "Pick Rate": 0.41,
     "recommendedBuild": {
@@ -4005,6 +4263,8 @@
     "Move Set": "Muddy Water/Acid Spray",
     "Move 1": "Moves/Goodra - Muddy Water.png",
     "Move 2": "Moves/Goodra - Acid Spray.png",
+    "Tier": "B",
+    "Tier Score": -0.401,
     "Win Rate": 48.08,
     "Pick Rate": 0.34,
     "recommendedBuild": {
@@ -4036,6 +4296,8 @@
     "Move Set": "Belch/Stuff Cheeks",
     "Move 1": "Moves/Greedent - Belch.png",
     "Move 2": "Moves/Greedent - Stuff Cheeks.png",
+    "Tier": "A",
+    "Tier Score": 0.026,
     "Win Rate": 51.38,
     "Pick Rate": 0.1,
     "recommendedBuild": {
@@ -4068,6 +4330,8 @@
     "Move Set": "Bullet Seed/Stuff Cheeks",
     "Move 1": "Moves/Greedent - Bullet Seed.png",
     "Move 2": "Moves/Greedent - Stuff Cheeks.png",
+    "Tier": "B",
+    "Tier Score": -0.382,
     "Win Rate": 48.4,
     "Pick Rate": 0.66,
     "recommendedBuild": {
@@ -4099,6 +4363,8 @@
     "Move Set": "Belch/Covet",
     "Move 1": "Moves/Greedent - Belch.png",
     "Move 2": "Moves/Greedent - Covet.png",
+    "Tier": "S",
+    "Tier Score": 1.664,
     "Win Rate": 54.61,
     "Pick Rate": 2.02,
     "recommendedBuild": {
@@ -4131,6 +4397,8 @@
     "Move Set": "Surf/Smokescreen",
     "Move 1": "Moves/Greninja - Surf.png",
     "Move 2": "Moves/Greninja - Smokescreen.png",
+    "Tier": "S+",
+    "Tier Score": 4.046,
     "Win Rate": 54.82,
     "Pick Rate": 17.2,
     "recommendedBuild": {
@@ -4164,6 +4432,8 @@
     "Move Set": "Surf/Double Team",
     "Move 1": "Moves/Greninja - Surf.png",
     "Move 2": "Moves/Greninja - Double Team.png",
+    "Tier": "S",
+    "Tier Score": 3.05,
     "Win Rate": 53.78,
     "Pick Rate": 12.88,
     "recommendedBuild": {
@@ -4197,6 +4467,8 @@
     "Move Set": "Water Shuriken/Double Team",
     "Move 1": "Moves/Greninja - Water Shuriken.png",
     "Move 2": "Moves/Greninja - Double Team.png",
+    "Tier": "S",
+    "Tier Score": 1.906,
     "Win Rate": 51.51,
     "Pick Rate": 12.37,
     "recommendedBuild": {
@@ -4226,6 +4498,8 @@
     "Move Set": "Dragon Breath/Waterfall",
     "Move 1": "Moves/Gyarados - Dragon Breath.png",
     "Move 2": "Moves/Gyarados - Waterfall.png",
+    "Tier": "C",
+    "Tier Score": -0.56,
     "Win Rate": 47.59,
     "Pick Rate": 0.68,
     "recommendedBuild": {
@@ -4255,6 +4529,8 @@
     "Move Set": "Dragon Breath/Bounce",
     "Move 1": "Moves/Gyarados - Dragon Breath.png",
     "Move 2": "Moves/Gyarados - Bounce.png",
+    "Tier": "B",
+    "Tier Score": -0.397,
     "Win Rate": 48.28,
     "Pick Rate": 0.56,
     "recommendedBuild": {
@@ -4284,6 +4560,8 @@
     "Move Set": "Aqua Tail/Bounce",
     "Move 1": "Moves/Gyarados - Aqua Tail.png",
     "Move 2": "Moves/Gyarados - Bounce.png",
+    "Tier": "B",
+    "Tier Score": -0.469,
     "Win Rate": 46.94,
     "Pick Rate": 0.09,
     "recommendedBuild": {
@@ -4313,6 +4591,8 @@
     "Move Set": "Aqua Tail/Waterfall",
     "Move 1": "Moves/Gyarados - Aqua Tail.png",
     "Move 2": "Moves/Gyarados - Waterfall.png",
+    "Tier": "D",
+    "Tier Score": -1.305,
     "Win Rate": 38.96,
     "Pick Rate": 0.07,
     "recommendedBuild": {
@@ -4342,6 +4622,8 @@
     "Move Set": "Fire Spin/Sky Attack",
     "Move 1": "Moves/Ho-Oh - Fire Spin.png",
     "Move 2": "Moves/Ho-Oh - Sky Attack.png",
+    "Tier": "A",
+    "Tier Score": 0.108,
     "Win Rate": 50.08,
     "Pick Rate": 1.56,
     "recommendedBuild": {
@@ -4374,6 +4656,8 @@
     "Move Set": "Sacred Fire/Flamethrower",
     "Move 1": "Moves/Ho-Oh - Sacred Fire.png",
     "Move 2": "Moves/Ho-Oh - Flamethrower.png",
+    "Tier": "A",
+    "Tier Score": 0.12,
     "Win Rate": 50.24,
     "Pick Rate": 1.29,
     "recommendedBuild": {
@@ -4403,6 +4687,8 @@
     "Move Set": "Sacred Fire/Sky Attack",
     "Move 1": "Moves/Ho-Oh - Sacred Fire.png",
     "Move 2": "Moves/Ho-Oh - Sky Attack.png",
+    "Tier": "S",
+    "Tier Score": 0.817,
     "Win Rate": 55.11,
     "Pick Rate": 0.4,
     "recommendedBuild": {
@@ -4432,6 +4718,8 @@
     "Move Set": "Fire Spin/Flamethrower",
     "Move 1": "Moves/Ho-Oh - Fire Spin.png",
     "Move 2": "Moves/Ho-Oh - Flamethrower.png",
+    "Tier": "A",
+    "Tier Score": 0.247,
     "Win Rate": 51.96,
     "Pick Rate": 0.36,
     "recommendedBuild": {
@@ -4463,6 +4751,8 @@
     "Move Set": "Phantom Force/Trick",
     "Move 1": "Moves/Hoopa - Phantom Force.png",
     "Move 2": "Moves/Hoopa - Trick.png",
+    "Tier": "S",
+    "Tier Score": 1.177,
     "Win Rate": 53.76,
     "Pick Rate": 1.4,
     "recommendedBuild": {
@@ -4497,6 +4787,8 @@
     "Move Set": "Phantom Force/Hyperspace Hole",
     "Move 1": "Moves/Hoopa - Phantom Force.png",
     "Move 2": "Moves/Hoopa - Hyperspace Hole.png",
+    "Tier": "C",
+    "Tier Score": -0.543,
     "Win Rate": 47.92,
     "Pick Rate": 2.93,
     "recommendedBuild": {
@@ -4528,6 +4820,8 @@
     "Move Set": "Shadow Ball/Trick",
     "Move 1": "Moves/Hoopa - Shadow Ball.png",
     "Move 2": "Moves/Hoopa - Trick.png",
+    "Tier": "A",
+    "Tier Score": 0.676,
     "Win Rate": 52.52,
     "Pick Rate": 1.02,
     "recommendedBuild": {
@@ -4559,6 +4853,8 @@
     "Move Set": "Shadow Ball/Hyperspace Hole",
     "Move 1": "Moves/Hoopa - Shadow Ball.png",
     "Move 2": "Moves/Hoopa - Hyperspace Hole.png",
+    "Tier": "A",
+    "Tier Score": 0.12,
     "Win Rate": 52.14,
     "Pick Rate": 0.11,
     "recommendedBuild": {
@@ -4587,6 +4883,8 @@
     "Move Set": "Water Pulse/Ice Beam",
     "Move 1": "Moves/Lapras - Water Pulse.png",
     "Move 2": "Moves/Lapras - Ice Beam.png",
+    "Tier": "A",
+    "Tier Score": 0.441,
     "Win Rate": 51.32,
     "Pick Rate": 1.33,
     "recommendedBuild": {
@@ -4620,6 +4918,8 @@
     "Move Set": "Water Pulse/Bubble Beam",
     "Move 1": "Moves/Lapras - Water Pulse.png",
     "Move 2": "Moves/Lapras - Bubble Beam.png",
+    "Tier": "B",
+    "Tier Score": -0.451,
     "Win Rate": 48.16,
     "Pick Rate": 3.04,
     "recommendedBuild": {
@@ -4653,6 +4953,8 @@
     "Move Set": "Perish Song/Bubble Beam",
     "Move 1": "Moves/Lapras - Perish Song.png",
     "Move 2": "Moves/Lapras - Bubble Beam.png",
+    "Tier": "D",
+    "Tier Score": -1.047,
     "Win Rate": 46.45,
     "Pick Rate": 1.99,
     "recommendedBuild": {
@@ -4684,6 +4986,8 @@
     "Move Set": "Perish Song/Ice Beam",
     "Move 1": "Moves/Lapras - Perish Song.png",
     "Move 2": "Moves/Lapras - Ice Beam.png",
+    "Tier": "A",
+    "Tier Score": 0.163,
     "Win Rate": 50.17,
     "Pick Rate": 1.78,
     "recommendedBuild": {
@@ -4715,6 +5019,8 @@
     "Move Set": "Dragon Cheer/Dragon Pulse",
     "Move 1": "Moves/Latias - Dragon Cheer.png",
     "Move 2": "Moves/Latias - Dragon Pulse.png",
+    "Tier": "S",
+    "Tier Score": 0.985,
     "Win Rate": 52.09,
     "Pick Rate": 3.0,
     "recommendedBuild": {
@@ -4746,6 +5052,8 @@
     "Move Set": "Mist Ball/Dragon Pulse",
     "Move 1": "Moves/Latias - Mist Ball.png",
     "Move 2": "Moves/Latias - Dragon Pulse.png",
+    "Tier": "A",
+    "Tier Score": 0.315,
     "Win Rate": 50.06,
     "Pick Rate": 3.93,
     "recommendedBuild": {
@@ -4777,6 +5085,8 @@
     "Move Set": "Dragon Cheer/Dragon Breath",
     "Move 1": "Moves/Latias - Dragon Cheer.png",
     "Move 2": "Moves/Latias - Dragon Breath.png",
+    "Tier": "S",
+    "Tier Score": 1.02,
     "Win Rate": 52.32,
     "Pick Rate": 2.67,
     "recommendedBuild": {
@@ -4808,6 +5118,8 @@
     "Move Set": "Mist Ball/Dragon Breath",
     "Move 1": "Moves/Latias - Mist Ball.png",
     "Move 2": "Moves/Latias - Dragon Breath.png",
+    "Tier": "B",
+    "Tier Score": -0.344,
     "Win Rate": 48.62,
     "Pick Rate": 1.05,
     "recommendedBuild": {
@@ -4839,6 +5151,8 @@
     "Move Set": "Luster Purge/Dragon Pulse",
     "Move 1": "Moves/Latios - Luster Purge.png",
     "Move 2": "Moves/Latios - Dragon Pulse.png",
+    "Tier": "S",
+    "Tier Score": 0.807,
     "Win Rate": 50.59,
     "Pick Rate": 6.93,
     "recommendedBuild": {
@@ -4868,6 +5182,8 @@
     "Move Set": "Telekinesis/Draco Meteor",
     "Move 1": "Moves/Latios - Telekinesis.png",
     "Move 2": "Moves/Latios - Draco Meteor.png",
+    "Tier": "S",
+    "Tier Score": 1.199,
     "Win Rate": 51.03,
     "Pick Rate": 9.63,
     "recommendedBuild": {
@@ -4899,6 +5215,8 @@
     "Move Set": "Luster Purge/Draco Meteor",
     "Move 1": "Moves/Latios - Luster Purge.png",
     "Move 2": "Moves/Latios - Draco Meteor.png",
+    "Tier": "B",
+    "Tier Score": -0.333,
     "Win Rate": 48.47,
     "Pick Rate": 2.1,
     "recommendedBuild": {
@@ -4930,6 +5248,8 @@
     "Move Set": "Telekinesis/Dragon Pulse",
     "Move 1": "Moves/Latios - Telekinesis.png",
     "Move 2": "Moves/Latios - Dragon Pulse.png",
+    "Tier": "A",
+    "Tier Score": 0.463,
     "Win Rate": 50.97,
     "Pick Rate": 1.76,
     "recommendedBuild": {
@@ -4959,6 +5279,8 @@
     "Move Set": "Razor Leaf/Aerial Ace",
     "Move 1": "Moves/Leafeon - Razor Leaf.png",
     "Move 2": "Moves/Leafeon - Aerial Ace.png",
+    "Tier": "A",
+    "Tier Score": 0.409,
     "Win Rate": 49.64,
     "Pick Rate": 7.79,
     "recommendedBuild": {
@@ -4990,6 +5312,8 @@
     "Move Set": "Solar Blade/Aerial Ace",
     "Move 1": "Moves/Leafeon - Solar Blade.png",
     "Move 2": "Moves/Leafeon - Aerial Ace.png",
+    "Tier": "D",
+    "Tier Score": -1.058,
     "Win Rate": 42.71,
     "Pick Rate": 0.17,
     "recommendedBuild": {
@@ -5019,6 +5343,8 @@
     "Move Set": "Razor Leaf/Leaf Blade",
     "Move 1": "Moves/Leafeon - Razor Leaf.png",
     "Move 2": "Moves/Leafeon - Leaf Blade.png",
+    "Tier": "B",
+    "Tier Score": -0.462,
     "Win Rate": 48.17,
     "Pick Rate": 1.08,
     "recommendedBuild": {
@@ -5050,6 +5376,8 @@
     "Move Set": "Solar Blade/Leaf Blade",
     "Move 1": "Moves/Leafeon - Solar Blade.png",
     "Move 2": "Moves/Leafeon - Leaf Blade.png",
+    "Tier": "D",
+    "Tier Score": -1.272,
     "Win Rate": 43.76,
     "Pick Rate": 0.51,
     "recommendedBuild": {
@@ -5079,6 +5407,8 @@
     "Move Set": "Power-Up Punch/Close Combat",
     "Move 1": "Moves/Lucario - Power-Up Punch.png",
     "Move 2": "Moves/Lucario - Close Combat.png",
+    "Tier": "D",
+    "Tier Score": -1.041,
     "Win Rate": 46.29,
     "Pick Rate": 1.47,
     "recommendedBuild": {
@@ -5108,6 +5438,8 @@
     "Move Set": "Extreme Speed/Bone Rush",
     "Move 1": "Moves/Lucario - Extreme Speed.png",
     "Move 2": "Moves/Lucario - Bone Rush.png",
+    "Tier": "A",
+    "Tier Score": 0.537,
     "Win Rate": 50.04,
     "Pick Rate": 7.2,
     "recommendedBuild": {
@@ -5139,6 +5471,8 @@
     "Move Set": "Power-Up Punch/Bone Rush",
     "Move 1": "Moves/Lucario - Power-Up Punch.png",
     "Move 2": "Moves/Lucario - Bone Rush.png",
+    "Tier": "A",
+    "Tier Score": 0.063,
     "Win Rate": 50.12,
     "Pick Rate": 1.11,
     "recommendedBuild": {
@@ -5171,6 +5505,8 @@
     "Move Set": "Extreme Speed/Close Combat",
     "Move 1": "Moves/Lucario - Extreme Speed.png",
     "Move 2": "Moves/Lucario - Close Combat.png",
+    "Tier": "D",
+    "Tier Score": -1.073,
     "Win Rate": 42.64,
     "Pick Rate": 0.17,
     "recommendedBuild": {
@@ -5202,6 +5538,8 @@
     "Move Set": "Cross Chop/Submission",
     "Move 1": "Moves/Machamp - Cross Chop.png",
     "Move 2": "Moves/Machamp - Submission.png",
+    "Tier": "S+",
+    "Tier Score": 3.313,
     "Win Rate": 52.88,
     "Pick Rate": 22.89,
     "recommendedBuild": {
@@ -5233,6 +5571,8 @@
     "Move Set": "Close Combat/Dynamic Punch",
     "Move 1": "Moves/Machamp - Close Combat.png",
     "Move 2": "Moves/Machamp - Dynamic Punch.png",
+    "Tier": "A",
+    "Tier Score": 0.406,
     "Win Rate": 50.56,
     "Pick Rate": 2.03,
     "recommendedBuild": {
@@ -5264,6 +5604,8 @@
     "Move Set": "Close Combat/Submission",
     "Move 1": "Moves/Machamp - Close Combat.png",
     "Move 2": "Moves/Machamp - Submission.png",
+    "Tier": "D",
+    "Tier Score": -1.286,
     "Win Rate": 45.41,
     "Pick Rate": 1.63,
     "recommendedBuild": {
@@ -5293,6 +5635,8 @@
     "Move Set": "Cross Chop/Dynamic Punch",
     "Move 1": "Moves/Machamp - Cross Chop.png",
     "Move 2": "Moves/Machamp - Dynamic Punch.png",
+    "Tier": "A",
+    "Tier Score": 0.444,
     "Win Rate": 51.68,
     "Pick Rate": 0.79,
     "recommendedBuild": {
@@ -5324,6 +5668,8 @@
     "Move Set": "Ice Fang/Earthquake",
     "Move 1": "Moves/Mamoswine - Ice Fang.png",
     "Move 2": "Moves/Mamoswine - Earthquake.png",
+    "Tier": "S",
+    "Tier Score": 0.889,
     "Win Rate": 49.91,
     "Pick Rate": 13.27,
     "recommendedBuild": {
@@ -5355,6 +5701,8 @@
     "Move Set": "Ice Fang/High Horsepower",
     "Move 1": "Moves/Mamoswine - Ice Fang.png",
     "Move 2": "Moves/Mamoswine - High Horsepower.png",
+    "Tier": "D",
+    "Tier Score": -1.115,
     "Win Rate": 46.32,
     "Pick Rate": 3.82,
     "recommendedBuild": {
@@ -5386,6 +5734,8 @@
     "Move Set": "Icicle Crash/High Horsepower",
     "Move 1": "Moves/Mamoswine - Icicle Crash.png",
     "Move 2": "Moves/Mamoswine - High Horsepower.png",
+    "Tier": "S",
+    "Tier Score": 0.752,
     "Win Rate": 51.76,
     "Pick Rate": 2.17,
     "recommendedBuild": {
@@ -5417,6 +5767,8 @@
     "Move Set": "Icicle Crash/Earthquake",
     "Move 1": "Moves/Mamoswine - Icicle Crash.png",
     "Move 2": "Moves/Mamoswine - Earthquake.png",
+    "Tier": "S",
+    "Tier Score": 0.825,
     "Win Rate": 54.17,
     "Pick Rate": 0.59,
     "recommendedBuild": {
@@ -5448,6 +5800,8 @@
     "Move Set": "Fire Punch/Flare Blitz",
     "Move 1": "Moves/Mega Charizard X - Fire Punch.png",
     "Move 2": "Moves/Mega Charizard X - Flare Blitz.png",
+    "Tier": "S",
+    "Tier Score": 1.099,
     "Win Rate": 49.97,
     "Pick Rate": 12.64,
     "recommendedBuild": {
@@ -5468,6 +5822,8 @@
     "Move Set": "Flamethrower/Fire Blast",
     "Move 1": "Moves/Mega Charizard Y - Flamethrower.png",
     "Move 2": "Moves/Mega Charizard Y - Fire Blast.png",
+    "Tier": "S+",
+    "Tier Score": 3.576,
     "Win Rate": 52.68,
     "Pick Rate": 11.88,
     "recommendedBuild": {
@@ -5490,6 +5846,8 @@
     "Move Set": "Dragon Breath/Waterfall",
     "Move 1": "Moves/Mega Gyarados - Dragon Breath.png",
     "Move 2": "Moves/Mega Gyarados - Waterfall.png",
+    "Tier": "S",
+    "Tier Score": 1.761,
     "Win Rate": 54.42,
     "Pick Rate": 2.54,
     "recommendedBuild": {
@@ -5514,6 +5872,8 @@
     "Move Set": "Power-Up Punch/Close Combat",
     "Move 1": "Moves/Mega Lucario - Power-Up Punch.png",
     "Move 2": "Moves/Mega Lucario - Close Combat.png",
+    "Tier": "A",
+    "Tier Score": 0.432,
     "Win Rate": 49.52,
     "Pick Rate": 8.83,
     "recommendedBuild": {
@@ -5536,6 +5896,8 @@
     "Move Set": "Night Slash/Double Team",
     "Move 1": "Moves/Meowscarada - Night Slash.png",
     "Move 2": "Moves/Meowscarada - Double Team.png",
+    "Tier": "D",
+    "Tier Score": -1.055,
     "Win Rate": 41.18,
     "Pick Rate": 0.06,
     "recommendedBuild": {
@@ -5567,6 +5929,8 @@
     "Move Set": "Flower Trick/Trailblaze",
     "Move 1": "Moves/Meowscarada - Flower Trick.png",
     "Move 2": "Moves/Meowscarada - Trailblaze.png",
+    "Tier": "C",
+    "Tier Score": -0.519,
     "Win Rate": 46.88,
     "Pick Rate": 0.17,
     "recommendedBuild": {
@@ -5598,6 +5962,8 @@
     "Move Set": "Flower Trick/Double Team",
     "Move 1": "Moves/Meowscarada - Flower Trick.png",
     "Move 2": "Moves/Meowscarada - Double Team.png",
+    "Tier": "A",
+    "Tier Score": 0.584,
     "Win Rate": 51.39,
     "Pick Rate": 1.95,
     "recommendedBuild": {
@@ -5629,6 +5995,8 @@
     "Move Set": "Night Slash/Trailblaze",
     "Move 1": "Moves/Meowscarada - Night Slash.png",
     "Move 2": "Moves/Meowscarada - Trailblaze.png",
+    "Tier": "A",
+    "Tier Score": 0.133,
     "Win Rate": 49.8,
     "Pick Rate": 2.82,
     "recommendedBuild": {
@@ -5660,6 +6028,8 @@
     "Move Set": "Fury Swipes/Feint Attack",
     "Move 1": "Moves/Meowth - Fury Swipes.png",
     "Move 2": "Moves/Meowth - Feint Attack.png",
+    "Tier": "A",
+    "Tier Score": 0.038,
     "Win Rate": 47.6,
     "Pick Rate": 5.21,
     "recommendedBuild": {
@@ -5691,6 +6061,8 @@
     "Move Set": "Pay Day/Assurance",
     "Move 1": "Moves/Meowth - Pay Day.png",
     "Move 2": "Moves/Meowth - Assurance.png",
+    "Tier": "B",
+    "Tier Score": -0.372,
     "Win Rate": 47.03,
     "Pick Rate": 0.62,
     "recommendedBuild": {
@@ -5720,6 +6092,8 @@
     "Move Set": "Fury Swipes/Assurance",
     "Move 1": "Moves/Meowth - Fury Swipes.png",
     "Move 2": "Moves/Meowth - Assurance.png",
+    "Tier": "C",
+    "Tier Score": -0.533,
     "Win Rate": 46.43,
     "Pick Rate": 4.26,
     "recommendedBuild": {
@@ -5752,6 +6126,8 @@
     "Move Set": "Pay Day/Feint Attack",
     "Move 1": "Moves/Meowth - Pay Day.png",
     "Move 2": "Moves/Meowth - Feint Attack.png",
+    "Tier": "B",
+    "Tier Score": -0.064,
     "Win Rate": 47.88,
     "Pick Rate": 2.03,
     "recommendedBuild": {
@@ -5781,6 +6157,8 @@
     "Move Set": "Meteor Mash/Zen Headbutt",
     "Move 1": "Moves/Metagross - Meteor Mash.png",
     "Move 2": "Moves/Metagross - Zen Headbutt.png",
+    "Tier": "B",
+    "Tier Score": -0.457,
     "Win Rate": 48.22,
     "Pick Rate": 1.21,
     "recommendedBuild": {
@@ -5810,6 +6188,8 @@
     "Move Set": "Gyro Ball/Magnet Rise",
     "Move 1": "Moves/Metagross - Gyro Ball.png",
     "Move 2": "Moves/Metagross - Magnet Rise.png",
+    "Tier": "B",
+    "Tier Score": -0.295,
     "Win Rate": 48.81,
     "Pick Rate": 0.96,
     "recommendedBuild": {
@@ -5841,6 +6221,8 @@
     "Move Set": "Meteor Mash/Magnet Rise",
     "Move 1": "Moves/Metagross - Meteor Mash.png",
     "Move 2": "Moves/Metagross - Magnet Rise.png",
+    "Tier": "B",
+    "Tier Score": -0.316,
     "Win Rate": 48.58,
     "Pick Rate": 0.31,
     "recommendedBuild": {
@@ -5870,6 +6252,8 @@
     "Move Set": "Gyro Ball/Zen Headbutt",
     "Move 1": "Moves/Metagross - Gyro Ball.png",
     "Move 2": "Moves/Metagross - Zen Headbutt.png",
+    "Tier": "D",
+    "Tier Score": -0.946,
     "Win Rate": 43.78,
     "Pick Rate": 0.19,
     "recommendedBuild": {
@@ -5909,6 +6293,8 @@
       "Moves/Mew - Agility.png",
       "Moves/Mew - Coaching.png"
     ],
+    "Tier": "S",
+    "Tier Score": 0.817,
     "Win Rate": 49.64,
     "Pick Rate": 13.99,
     "recommendedBuild": {
@@ -5940,6 +6326,8 @@
     "Move Set": "Future Sight/Recover",
     "Move 1": "Moves/Mewtwo X - Future Sight.png",
     "Move 2": "Moves/Mewtwo X - Recover.png",
+    "Tier": "D",
+    "Tier Score": -1.044,
     "Win Rate": 46.49,
     "Pick Rate": 2.14,
     "recommendedBuild": {
@@ -5971,6 +6359,8 @@
     "Move Set": "Future Sight/Teleport",
     "Move 1": "Moves/Mewtwo X - Future Sight.png",
     "Move 2": "Moves/Mewtwo X - Teleport.png",
+    "Tier": "B",
+    "Tier Score": -0.24,
     "Win Rate": 49.0,
     "Pick Rate": 1.18,
     "recommendedBuild": {
@@ -6002,6 +6392,8 @@
     "Move Set": "Psystrike/Teleport",
     "Move 1": "Moves/Mewtwo X - Psystrike.png",
     "Move 2": "Moves/Mewtwo X - Teleport.png",
+    "Tier": "B",
+    "Tier Score": -0.439,
     "Win Rate": 48.2,
     "Pick Rate": 0.81,
     "recommendedBuild": {
@@ -6033,6 +6425,8 @@
     "Move Set": "Psystrike/Recover",
     "Move 1": "Moves/Mewtwo X - Psystrike.png",
     "Move 2": "Moves/Mewtwo X - Recover.png",
+    "Tier": "B",
+    "Tier Score": -0.352,
     "Win Rate": 48.56,
     "Pick Rate": 0.77,
     "recommendedBuild": {
@@ -6064,6 +6458,8 @@
     "Move Set": "Psystrike/Recover",
     "Move 1": "Moves/Mewtwo Y - Psystrike.png",
     "Move 2": "Moves/Mewtwo Y - Recover.png",
+    "Tier": "B",
+    "Tier Score": -0.219,
     "Win Rate": 49.19,
     "Pick Rate": 0.33,
     "recommendedBuild": {
@@ -6093,6 +6489,8 @@
     "Move Set": "Psystrike/Teleport",
     "Move 1": "Moves/Mewtwo Y - Psystrike.png",
     "Move 2": "Moves/Mewtwo Y - Teleport.png",
+    "Tier": "B",
+    "Tier Score": -0.005,
     "Win Rate": 49.4,
     "Pick Rate": 2.93,
     "recommendedBuild": {
@@ -6122,6 +6520,8 @@
     "Move Set": "Future Sight/Teleport",
     "Move 1": "Moves/Mewtwo Y - Future Sight.png",
     "Move 2": "Moves/Mewtwo Y - Teleport.png",
+    "Tier": "B",
+    "Tier Score": -0.036,
     "Win Rate": 49.89,
     "Pick Rate": 0.83,
     "recommendedBuild": {
@@ -6151,6 +6551,8 @@
     "Move Set": "Future Sight/Recover",
     "Move 1": "Moves/Mewtwo Y - Future Sight.png",
     "Move 2": "Moves/Mewtwo Y - Recover.png",
+    "Tier": "B",
+    "Tier Score": -0.039,
     "Win Rate": 49.94,
     "Pick Rate": 0.72,
     "recommendedBuild": {
@@ -6180,6 +6582,8 @@
     "Move Set": "Play Rough/Shadow Sneak",
     "Move 1": "Moves/Mimikyu - Play Rough.png",
     "Move 2": "Moves/Mimikyu - Shadow Sneak.png",
+    "Tier": "S",
+    "Tier Score": 0.935,
     "Win Rate": 49.98,
     "Pick Rate": 9.82,
     "recommendedBuild": {
@@ -6211,6 +6615,8 @@
     "Move Set": "Shadow Claw/Shadow Sneak",
     "Move 1": "Moves/Mimikyu - Shadow Claw.png",
     "Move 2": "Moves/Mimikyu - Shadow Sneak.png",
+    "Tier": "B",
+    "Tier Score": -0.42,
     "Win Rate": 47.68,
     "Pick Rate": 3.83,
     "recommendedBuild": {
@@ -6242,6 +6648,8 @@
     "Move Set": "Shadow Claw/Trick Room",
     "Move 1": "Moves/Mimikyu - Shadow Claw.png",
     "Move 2": "Moves/Mimikyu - Trick Room.png",
+    "Tier": "S",
+    "Tier Score": 0.995,
     "Win Rate": 51.45,
     "Pick Rate": 3.15,
     "recommendedBuild": {
@@ -6273,6 +6681,8 @@
     "Move Set": "Charge Beam/Thunder",
     "Move 1": "Moves/Miraidon - Charge Beam.png",
     "Move 2": "Moves/Miraidon - Thunder.png",
+    "Tier": "B",
+    "Tier Score": -0.079,
     "Win Rate": 49.26,
     "Pick Rate": 2.6,
     "recommendedBuild": {
@@ -6304,6 +6714,8 @@
     "Move Set": "Electro Drift/Parabolic Charge",
     "Move 1": "Moves/Miraidon - Electro Drift.png",
     "Move 2": "Moves/Miraidon - Parabolic Charge.png",
+    "Tier": "B",
+    "Tier Score": -0.065,
     "Win Rate": 49.75,
     "Pick Rate": 0.88,
     "recommendedBuild": {
@@ -6335,6 +6747,8 @@
     "Move Set": "Charge Beam/Parabolic Charge",
     "Move 1": "Moves/Miraidon - Charge Beam.png",
     "Move 2": "Moves/Miraidon - Parabolic Charge.png",
+    "Tier": "D",
+    "Tier Score": -0.872,
     "Win Rate": 43.18,
     "Pick Rate": 0.08,
     "recommendedBuild": {
@@ -6366,6 +6780,8 @@
     "Move Set": "Sky Attack/Heat Wave",
     "Move 1": "Moves/Moltres - Sky Attack.png",
     "Move 2": "Moves/Moltres - Heat Wave.png",
+    "Tier": "S",
+    "Tier Score": 0.967,
     "Win Rate": 47.46,
     "Pick Rate": 22.95,
     "recommendedBuild": {
@@ -6391,6 +6807,8 @@
     "Move Set": "Psychic/Power Swap",
     "Move 1": "Moves/Mr. Mime - Psychic.png",
     "Move 2": "Moves/Mr. Mime - Power Swap.png",
+    "Tier": "A",
+    "Tier Score": 0.268,
     "Win Rate": 50.89,
     "Pick Rate": 1.09,
     "recommendedBuild": {
@@ -6422,6 +6840,8 @@
     "Move Set": "Confusion/Power Swap",
     "Move 1": "Moves/Mr. Mime - Confusion.png",
     "Move 2": "Moves/Mr. Mime - Power Swap.png",
+    "Tier": "A",
+    "Tier Score": 0.235,
     "Win Rate": 51.34,
     "Pick Rate": 0.59,
     "recommendedBuild": {
@@ -6453,6 +6873,8 @@
     "Move Set": "Confusion/Barrier",
     "Move 1": "Moves/Mr. Mime - Confusion.png",
     "Move 2": "Moves/Mr. Mime - Barrier.png",
+    "Tier": "S",
+    "Tier Score": 0.918,
     "Win Rate": 51.08,
     "Pick Rate": 6.47,
     "recommendedBuild": {
@@ -6484,6 +6906,8 @@
     "Move Set": "Supercell Slam/Volt Switch",
     "Move 1": "Moves/Pawmot - Supercell Slam.png",
     "Move 2": "Moves/Pawmot - Volt Switch.png",
+    "Tier": "S",
+    "Tier Score": 0.968,
     "Win Rate": 51.67,
     "Pick Rate": 4.25,
     "recommendedBuild": {
@@ -6515,6 +6939,8 @@
     "Move Set": "Supercell Slam/Mach Punch",
     "Move 1": "Moves/Pawmot - Supercell Slam.png",
     "Move 2": "Moves/Pawmot - Mach Punch.png",
+    "Tier": "A",
+    "Tier Score": 0.076,
     "Win Rate": 49.84,
     "Pick Rate": 1.95,
     "recommendedBuild": {
@@ -6546,6 +6972,8 @@
     "Move Set": "Thunder Punch/Volt Switch",
     "Move 1": "Moves/Pawmot - Thunder Punch.png",
     "Move 2": "Moves/Pawmot - Volt Switch.png",
+    "Tier": "B",
+    "Tier Score": -0.088,
     "Win Rate": 49.83,
     "Pick Rate": 0.51,
     "recommendedBuild": {
@@ -6577,6 +7005,8 @@
     "Move Set": "Thunder Punch/Mach Punch",
     "Move 1": "Moves/Pawmot - Thunder Punch.png",
     "Move 2": "Moves/Pawmot - Mach Punch.png",
+    "Tier": "D",
+    "Tier Score": -0.759,
     "Win Rate": 45.79,
     "Pick Rate": 0.31,
     "recommendedBuild": {
@@ -6608,6 +7038,8 @@
     "Move Set": "Electro Ball/Volt Tackle",
     "Move 1": "Moves/Pikachu - Electro Ball.png",
     "Move 2": "Moves/Pikachu - Volt Tackle.png",
+    "Tier": "A",
+    "Tier Score": 0.03,
     "Win Rate": 48.44,
     "Pick Rate": 9.74,
     "recommendedBuild": {
@@ -6639,6 +7071,8 @@
     "Move Set": "Thunder/Volt Tackle",
     "Move 1": "Moves/Pikachu - Thunder.png",
     "Move 2": "Moves/Pikachu - Volt Tackle.png",
+    "Tier": "B",
+    "Tier Score": -0.161,
     "Win Rate": 48.95,
     "Pick Rate": 2.64,
     "recommendedBuild": {
@@ -6670,6 +7104,8 @@
     "Move Set": "Thunder/Thunderbolt",
     "Move 1": "Moves/Pikachu - Thunder.png",
     "Move 2": "Moves/Pikachu - Thunderbolt.png",
+    "Tier": "B",
+    "Tier Score": -0.112,
     "Win Rate": 49.17,
     "Pick Rate": 2.18,
     "recommendedBuild": {
@@ -6701,6 +7137,8 @@
     "Move Set": "Electro Ball/Thunderbolt",
     "Move 1": "Moves/Pikachu - Electro Ball.png",
     "Move 2": "Moves/Pikachu - Thunderbolt.png",
+    "Tier": "D",
+    "Tier Score": -1.231,
     "Win Rate": 42.18,
     "Pick Rate": 0.24,
     "recommendedBuild": {
@@ -6732,6 +7170,8 @@
     "Move Set": "Surf/Psychic",
     "Move 1": "Moves/Psyduck - Surf.png",
     "Move 2": "Moves/Psyduck - Psychic.png",
+    "Tier": "S",
+    "Tier Score": 0.828,
     "Win Rate": 52.32,
     "Pick Rate": 1.38,
     "recommendedBuild": {
@@ -6763,6 +7203,8 @@
     "Move Set": "Surf/Disable",
     "Move 1": "Moves/Psyduck - Surf.png",
     "Move 2": "Moves/Psyduck - Disable.png",
+    "Tier": "S",
+    "Tier Score": 1.444,
     "Win Rate": 53.95,
     "Pick Rate": 1.7,
     "recommendedBuild": {
@@ -6794,6 +7236,8 @@
     "Move Set": "Bubble Beam/Disable",
     "Move 1": "Moves/Psyduck - Bubble Beam.png",
     "Move 2": "Moves/Psyduck - Disable.png",
+    "Tier": "S",
+    "Tier Score": 1.249,
     "Win Rate": 51.86,
     "Pick Rate": 5.37,
     "recommendedBuild": {
@@ -6825,6 +7269,8 @@
     "Move Set": "Bubble Beam/Psychic",
     "Move 1": "Moves/Psyduck - Bubble Beam.png",
     "Move 2": "Moves/Psyduck - Psychic.png",
+    "Tier": "S",
+    "Tier Score": 0.977,
     "Win Rate": 50.5,
     "Pick Rate": 9.16,
     "recommendedBuild": {
@@ -6856,6 +7302,8 @@
     "Move Set": "Shadow Sneak/Feint Attack",
     "Move 1": "Moves/Sableye - Shadow Sneak.png",
     "Move 2": "Moves/Sableye - Feint Attack.png",
+    "Tier": "B",
+    "Tier Score": -0.294,
     "Win Rate": 48.63,
     "Pick Rate": 0.26,
     "recommendedBuild": {
@@ -6887,6 +7335,8 @@
     "Move Set": "Knock Off/Feint Attack",
     "Move 1": "Moves/Sableye - Knock Off.png",
     "Move 2": "Moves/Sableye - Feint Attack.png",
+    "Tier": "D",
+    "Tier Score": -1.379,
     "Win Rate": 45.37,
     "Pick Rate": 1.89,
     "recommendedBuild": {
@@ -6918,6 +7368,8 @@
     "Move Set": "Knock Off/Confuse Ray",
     "Move 1": "Moves/Sableye - Knock Off.png",
     "Move 2": "Moves/Sableye - Confuse Ray.png",
+    "Tier": "D",
+    "Tier Score": -0.799,
     "Win Rate": 47.16,
     "Pick Rate": 3.16,
     "recommendedBuild": {
@@ -6949,6 +7401,8 @@
     "Move Set": "Shadow Sneak/Confuse Ray",
     "Move 1": "Moves/Sableye - Shadow Sneak.png",
     "Move 2": "Moves/Sableye - Confuse Ray.png",
+    "Tier": "D",
+    "Tier Score": -0.773,
     "Win Rate": 46.66,
     "Pick Rate": 0.74,
     "recommendedBuild": {
@@ -6980,6 +7434,8 @@
     "Move Set": "Bullet Punch/Swords Dance",
     "Move 1": "Moves/Scizor - Bullet Punch.png",
     "Move 2": "Moves/Scizor - Swords Dance.png",
+    "Tier": "A",
+    "Tier Score": 0.242,
     "Win Rate": 49.44,
     "Pick Rate": 5.91,
     "recommendedBuild": {
@@ -7011,6 +7467,8 @@
     "Move Set": "Bullet Punch/Double Hit",
     "Move 1": "Moves/Scizor - Bullet Punch.png",
     "Move 2": "Moves/Scizor - Double Hit.png",
+    "Tier": "A",
+    "Tier Score": 0.227,
     "Win Rate": 49.63,
     "Pick Rate": 4.53,
     "recommendedBuild": {
@@ -7042,6 +7500,8 @@
     "Move Set": "Dual Wingbeat/Double Hit",
     "Move 1": "Moves/Scyther - Dual Wingbeat.png",
     "Move 2": "Moves/Scyther - Double Hit.png",
+    "Tier": "C",
+    "Tier Score": -0.682,
     "Win Rate": 47.5,
     "Pick Rate": 3.58,
     "recommendedBuild": {
@@ -7075,6 +7535,8 @@
     "Move Set": "Dual Wingbeat/Swords Dance",
     "Move 1": "Moves/Scyther - Dual Wingbeat.png",
     "Move 2": "Moves/Scyther - Swords Dance.png",
+    "Tier": "B",
+    "Tier Score": -0.396,
     "Win Rate": 48.44,
     "Pick Rate": 1.16,
     "recommendedBuild": {
@@ -7108,6 +7570,8 @@
     "Move Set": "Fury Cutter/Brutal Swing",
     "Move 1": "Moves/Sirfetch'd - Fury Cutter.png",
     "Move 2": "Moves/Sirfetch'd - Brutal Swing.png",
+    "Tier": "B",
+    "Tier Score": -0.237,
     "Win Rate": 47.59,
     "Pick Rate": 0.67,
     "recommendedBuild": {
@@ -7139,6 +7603,8 @@
     "Move Set": "Leaf Blade/Detect",
     "Move 1": "Moves/Sirfetch'd - Leaf Blade.png",
     "Move 2": "Moves/Sirfetch'd - Detect.png",
+    "Tier": "S",
+    "Tier Score": 3.164,
     "Win Rate": 53.62,
     "Pick Rate": 8.91,
     "recommendedBuild": {
@@ -7170,6 +7636,8 @@
     "Move Set": "Fury Cutter/Detect",
     "Move 1": "Moves/Sirfetch'd - Fury Cutter.png",
     "Move 2": "Moves/Sirfetch'd - Detect.png",
+    "Tier": "S",
+    "Tier Score": 1.024,
     "Win Rate": 50.04,
     "Pick Rate": 4.15,
     "recommendedBuild": {
@@ -7201,6 +7669,8 @@
     "Move Set": "Surf/Telekinesis",
     "Move 1": "Moves/Slowbro - Surf.png",
     "Move 2": "Moves/Slowbro - Telekinesis.png",
+    "Tier": "A",
+    "Tier Score": 0.246,
     "Win Rate": 49.02,
     "Pick Rate": 8.85,
     "recommendedBuild": {
@@ -7232,6 +7702,8 @@
     "Move Set": "Surf/Amnesia",
     "Move 1": "Moves/Slowbro - Surf.png",
     "Move 2": "Moves/Slowbro - Amnesia.png",
+    "Tier": "A",
+    "Tier Score": 0.635,
     "Win Rate": 50.78,
     "Pick Rate": 3.97,
     "recommendedBuild": {
@@ -7263,6 +7735,8 @@
     "Move Set": "Scald/Amnesia",
     "Move 1": "Moves/Slowbro - Scald.png",
     "Move 2": "Moves/Slowbro - Amnesia.png",
+    "Tier": "B",
+    "Tier Score": -0.194,
     "Win Rate": 48.76,
     "Pick Rate": 3.12,
     "recommendedBuild": {
@@ -7298,6 +7772,8 @@
     "Move Set": "Scald/Telekinesis",
     "Move 1": "Moves/Slowbro - Scald.png",
     "Move 2": "Moves/Slowbro - Telekinesis.png",
+    "Tier": "D",
+    "Tier Score": -1.236,
     "Win Rate": 45.77,
     "Pick Rate": 1.86,
     "recommendedBuild": {
@@ -7333,6 +7809,8 @@
     "Move Set": "Flail/Block",
     "Move 1": "Moves/Snorlax - Flail.png",
     "Move 2": "Moves/Snorlax - Block.png",
+    "Tier": "A",
+    "Tier Score": 0.661,
     "Win Rate": 51.12,
     "Pick Rate": 3.27,
     "recommendedBuild": {
@@ -7364,6 +7842,8 @@
     "Move Set": "Heavy Slam/Block",
     "Move 1": "Moves/Snorlax - Heavy Slam.png",
     "Move 2": "Moves/Snorlax - Block.png",
+    "Tier": "B",
+    "Tier Score": -0.119,
     "Win Rate": 48.31,
     "Pick Rate": 8.47,
     "recommendedBuild": {
@@ -7395,6 +7875,8 @@
     "Move Set": "Flail/Yawn",
     "Move 1": "Moves/Snorlax - Flail.png",
     "Move 2": "Moves/Snorlax - Yawn.png",
+    "Tier": "C",
+    "Tier Score": -0.506,
     "Win Rate": 47.86,
     "Pick Rate": 0.72,
     "recommendedBuild": {
@@ -7426,6 +7908,8 @@
     "Move Set": "Heavy Slam/Yawn",
     "Move 1": "Moves/Snorlax - Heavy Slam.png",
     "Move 2": "Moves/Snorlax - Yawn.png",
+    "Tier": "A",
+    "Tier Score": 0.119,
     "Win Rate": 49.69,
     "Pick Rate": 3.13,
     "recommendedBuild": {
@@ -7457,6 +7941,8 @@
     "Move Set": "Surf/Icy Wind",
     "Move 1": "Moves/Suicune - Surf.png",
     "Move 2": "Moves/Suicune - Icy Wind.png",
+    "Tier": "S",
+    "Tier Score": 0.812,
     "Win Rate": 51.07,
     "Pick Rate": 2.75,
     "recommendedBuild": {
@@ -7489,6 +7975,8 @@
     "Move Set": "Whirlpool/Ice Beam",
     "Move 1": "Moves/Suicune - Whirlpool.png",
     "Move 2": "Moves/Suicune - Ice Beam.png",
+    "Tier": "S",
+    "Tier Score": 2.185,
     "Win Rate": 51.1,
     "Pick Rate": 18.7,
     "recommendedBuild": {
@@ -7518,6 +8006,8 @@
     "Move Set": "Surf/Ice Beam",
     "Move 1": "Moves/Suicune - Surf.png",
     "Move 2": "Moves/Suicune - Ice Beam.png",
+    "Tier": "D",
+    "Tier Score": -1.089,
     "Win Rate": 44.58,
     "Pick Rate": 0.58,
     "recommendedBuild": {
@@ -7550,6 +8040,8 @@
     "Move Set": "Mystical Fire/Calm Mind",
     "Move 1": "Moves/Sylveon - Mystical Fire.png",
     "Move 2": "Moves/Sylveon - Calm Mind.png",
+    "Tier": "B",
+    "Tier Score": -0.343,
     "Win Rate": 48.15,
     "Pick Rate": 0.12,
     "recommendedBuild": {
@@ -7582,6 +8074,8 @@
     "Move Set": "Mystical Fire/Draining Kiss",
     "Move 1": "Moves/Sylveon - Mystical Fire.png",
     "Move 2": "Moves/Sylveon - Draining Kiss.png",
+    "Tier": "D",
+    "Tier Score": -1.013,
     "Win Rate": 46.59,
     "Pick Rate": 4.08,
     "recommendedBuild": {
@@ -7614,6 +8108,8 @@
     "Move Set": "Hyper Voice/Calm Mind",
     "Move 1": "Moves/Sylveon - Hyper Voice.png",
     "Move 2": "Moves/Sylveon - Calm Mind.png",
+    "Tier": "B",
+    "Tier Score": -0.207,
     "Win Rate": 49.19,
     "Pick Rate": 0.76,
     "recommendedBuild": {
@@ -7646,6 +8142,8 @@
     "Move Set": "Hyper Voice/Draining Kiss",
     "Move 1": "Moves/Sylveon - Hyper Voice.png",
     "Move 2": "Moves/Sylveon - Draining Kiss.png",
+    "Tier": "C",
+    "Tier Score": -0.659,
     "Win Rate": 46.09,
     "Pick Rate": 0.23,
     "recommendedBuild": {
@@ -7678,6 +8176,8 @@
     "Move Set": "Aerial Ace/Brave Bird",
     "Move 1": "Moves/Talonflame - Aerial Ace.png",
     "Move 2": "Moves/Talonflame - Brave Bird.png",
+    "Tier": "A",
+    "Tier Score": 0.14,
     "Win Rate": 49.32,
     "Pick Rate": 5.21,
     "recommendedBuild": {
@@ -7709,6 +8209,8 @@
     "Move Set": "Aerial Ace/Fly",
     "Move 1": "Moves/Talonflame - Aerial Ace.png",
     "Move 2": "Moves/Talonflame - Fly.png",
+    "Tier": "D",
+    "Tier Score": -1.078,
     "Win Rate": 46.15,
     "Pick Rate": 1.53,
     "recommendedBuild": {
@@ -7740,6 +8242,8 @@
     "Move Set": "Flame Charge/Brave Bird",
     "Move 1": "Moves/Talonflame - Flame Charge.png",
     "Move 2": "Moves/Talonflame - Brave Bird.png",
+    "Tier": "D",
+    "Tier Score": -0.992,
     "Win Rate": 43.9,
     "Pick Rate": 0.25,
     "recommendedBuild": {
@@ -7771,6 +8275,8 @@
     "Move Set": "Flame Charge/Fly",
     "Move 1": "Moves/Talonflame - Flame Charge.png",
     "Move 2": "Moves/Talonflame - Fly.png",
+    "Tier": "A",
+    "Tier Score": 0.723,
     "Win Rate": 49.73,
     "Pick Rate": 11.61,
     "recommendedBuild": {
@@ -7802,6 +8308,8 @@
     "Move Set": "Gigaton Hammer/Thief",
     "Move 1": "Moves/Tinkaton - Gigaton Hammer.png",
     "Move 2": "Moves/Tinkaton - Thief.png",
+    "Tier": "B",
+    "Tier Score": -0.348,
     "Win Rate": 48.61,
     "Pick Rate": 1.02,
     "recommendedBuild": {
@@ -7833,6 +8341,8 @@
     "Move Set": "Gigaton Hammer/Ice Hammer",
     "Move 1": "Moves/Tinkaton - Gigaton Hammer.png",
     "Move 2": "Moves/Tinkaton - Ice Hammer.png",
+    "Tier": "D",
+    "Tier Score": -1.614,
     "Win Rate": 40.72,
     "Pick Rate": 0.34,
     "recommendedBuild": {
@@ -7864,6 +8374,8 @@
     "Move Set": "Smack Down/Ice Hammer",
     "Move 1": "Moves/Tinkaton - Smack Down.png",
     "Move 2": "Moves/Tinkaton - Ice Hammer.png",
+    "Tier": "A",
+    "Tier Score": 0.156,
     "Win Rate": 51.76,
     "Pick Rate": 0.25,
     "recommendedBuild": {
@@ -7895,6 +8407,8 @@
     "Move Set": "Smack Down/Thief",
     "Move 1": "Moves/Tinkaton - Smack Down.png",
     "Move 2": "Moves/Tinkaton - Thief.png",
+    "Tier": "D",
+    "Tier Score": -1.874,
     "Win Rate": 37.24,
     "Pick Rate": 0.21,
     "recommendedBuild": {
@@ -7926,6 +8440,8 @@
     "Move Set": "Wood Hammer/Horn Leech",
     "Move 1": "Moves/Trevenant - Wood Hammer.png",
     "Move 2": "Moves/Trevenant - Horn Leech.png",
+    "Tier": "B",
+    "Tier Score": -0.047,
     "Win Rate": 49.2,
     "Pick Rate": 3.36,
     "recommendedBuild": {
@@ -7957,6 +8473,8 @@
     "Move Set": "Wood Hammer/Pain Split",
     "Move 1": "Moves/Trevenant - Wood Hammer.png",
     "Move 2": "Moves/Trevenant - Pain Split.png",
+    "Tier": "D",
+    "Tier Score": -0.994,
     "Win Rate": 44.35,
     "Pick Rate": 0.32,
     "recommendedBuild": {
@@ -7988,6 +8506,8 @@
     "Move Set": "Curse/Pain Split",
     "Move 1": "Moves/Trevenant - Curse.png",
     "Move 2": "Moves/Trevenant - Pain Split.png",
+    "Tier": "B",
+    "Tier Score": -0.014,
     "Win Rate": 49.34,
     "Pick Rate": 3.07,
     "recommendedBuild": {
@@ -8022,6 +8542,8 @@
     "Move Set": "Curse/Horn Leech",
     "Move 1": "Moves/Trevenant - Curse.png",
     "Move 2": "Moves/Trevenant - Horn Leech.png",
+    "Tier": "A",
+    "Tier Score": 0.086,
     "Win Rate": 49.3,
     "Pick Rate": 4.86,
     "recommendedBuild": {
@@ -8056,6 +8578,8 @@
     "Move Set": "Triple Axel/Grassy Glide",
     "Move 1": "Moves/Tsareena - Triple Axel.png",
     "Move 2": "Moves/Tsareena - Grassy Glide.png",
+    "Tier": "B",
+    "Tier Score": -0.494,
     "Win Rate": 47.96,
     "Pick Rate": 0.8,
     "recommendedBuild": {
@@ -8087,6 +8611,8 @@
     "Move Set": "Stomp/Trop Kick",
     "Move 1": "Moves/Tsareena - Stomp.png",
     "Move 2": "Moves/Tsareena - Trop Kick.png",
+    "Tier": "S",
+    "Tier Score": 0.831,
     "Win Rate": 51.24,
     "Pick Rate": 4.63,
     "recommendedBuild": {
@@ -8120,6 +8646,8 @@
     "Move Set": "Triple Axel/Trop Kick",
     "Move 1": "Moves/Tsareena - Triple Axel.png",
     "Move 2": "Moves/Tsareena - Trop Kick.png",
+    "Tier": "B",
+    "Tier Score": -0.381,
     "Win Rate": 48.48,
     "Pick Rate": 1.13,
     "recommendedBuild": {
@@ -8151,6 +8679,8 @@
     "Move Set": "Stomp/Grassy Glide",
     "Move 1": "Moves/Tsareena - Stomp.png",
     "Move 2": "Moves/Tsareena - Grassy Glide.png",
+    "Tier": "B",
+    "Tier Score": -0.334,
     "Win Rate": 48.65,
     "Pick Rate": 1.34,
     "recommendedBuild": {
@@ -8184,6 +8714,8 @@
     "Move Set": "Dark Pulse/Ancient Power",
     "Move 1": "Moves/Tyranitar - Dark Pulse.png",
     "Move 2": "Moves/Tyranitar - Ancient Power.png",
+    "Tier": "B",
+    "Tier Score": -0.133,
     "Win Rate": 49.28,
     "Pick Rate": 1.64,
     "recommendedBuild": {
@@ -8215,6 +8747,8 @@
     "Move Set": "Stone Edge/Sand Tomb",
     "Move 1": "Moves/Tyranitar - Stone Edge.png",
     "Move 2": "Moves/Tyranitar - Sand Tomb.png",
+    "Tier": "A",
+    "Tier Score": 0.155,
     "Win Rate": 50.78,
     "Pick Rate": 0.74,
     "recommendedBuild": {
@@ -8246,6 +8780,8 @@
     "Move Set": "Dark Pulse/Sand Tomb",
     "Move 1": "Moves/Tyranitar - Dark Pulse.png",
     "Move 2": "Moves/Tyranitar - Sand Tomb.png",
+    "Tier": "B",
+    "Tier Score": -0.404,
     "Win Rate": 48.03,
     "Pick Rate": 0.31,
     "recommendedBuild": {
@@ -8277,6 +8813,8 @@
     "Move Set": "Stone Edge/Ancient Power",
     "Move 1": "Moves/Tyranitar - Stone Edge.png",
     "Move 2": "Moves/Tyranitar - Ancient Power.png",
+    "Tier": "D",
+    "Tier Score": -2.358,
     "Win Rate": 28.33,
     "Pick Rate": 0.05,
     "recommendedBuild": {
@@ -8308,6 +8846,8 @@
     "Move Set": "Foul Play/Snarl",
     "Move 1": "Moves/Umbreon - Foul Play.png",
     "Move 2": "Moves/Umbreon - Snarl.png",
+    "Tier": "A",
+    "Tier Score": 0.444,
     "Win Rate": 49.79,
     "Pick Rate": 6.83,
     "recommendedBuild": {
@@ -8339,6 +8879,8 @@
     "Move Set": "Mean Look/Wish",
     "Move 1": "Moves/Umbreon - Mean Look.png",
     "Move 2": "Moves/Umbreon - Wish.png",
+    "Tier": "B",
+    "Tier Score": -0.045,
     "Win Rate": 48.13,
     "Pick Rate": 10.77,
     "recommendedBuild": {
@@ -8370,6 +8912,8 @@
     "Move Set": "Mean Look/Snarl",
     "Move 1": "Moves/Umbreon - Mean Look.png",
     "Move 2": "Moves/Umbreon - Snarl.png",
+    "Tier": "B",
+    "Tier Score": -0.217,
     "Win Rate": 48.9,
     "Pick Rate": 1.8,
     "recommendedBuild": {
@@ -8401,6 +8945,8 @@
     "Move Set": "Foul Play/Wish",
     "Move 1": "Moves/Umbreon - Foul Play.png",
     "Move 2": "Moves/Umbreon - Wish.png",
+    "Tier": "D",
+    "Tier Score": -0.762,
     "Win Rate": 47.11,
     "Pick Rate": 1.34,
     "recommendedBuild": {
@@ -8432,6 +8978,8 @@
     "Move Set": "Wicked Blow/Throat Chop",
     "Move 1": "Moves/Urshifu - Wicked Blow.png",
     "Move 2": "Moves/Urshifu - Throat Chop.png",
+    "Tier": "B",
+    "Tier Score": -0.347,
     "Win Rate": 48.6,
     "Pick Rate": 0.97,
     "recommendedBuild": {
@@ -8463,6 +9011,8 @@
     "Move Set": "Surging Strikes/Liquidation",
     "Move 1": "Moves/Urshifu - Surging Strikes.png",
     "Move 2": "Moves/Urshifu - Liquidation.png",
+    "Tier": "S",
+    "Tier Score": 0.905,
     "Win Rate": 51.68,
     "Pick Rate": 3.62,
     "recommendedBuild": {
@@ -8494,6 +9044,8 @@
     "Move Set": "Hydro Pump/Aqua Ring",
     "Move 1": "Moves/Vaporeon - Hydro Pump.png",
     "Move 2": "Moves/Vaporeon - Aqua Ring.png",
+    "Tier": "A",
+    "Tier Score": 0.611,
     "Win Rate": 49.62,
     "Pick Rate": 10.32,
     "recommendedBuild": {
@@ -8523,6 +9075,8 @@
     "Move Set": "Muddy Water/Aqua Ring",
     "Move 1": "Moves/Vaporeon - Muddy Water.png",
     "Move 2": "Moves/Vaporeon - Aqua Ring.png",
+    "Tier": "S",
+    "Tier Score": 0.953,
     "Win Rate": 50.89,
     "Pick Rate": 7.31,
     "recommendedBuild": {
@@ -8557,6 +9111,8 @@
     "Move Set": "Hydro Pump/Flip Turn",
     "Move 1": "Moves/Vaporeon - Hydro Pump.png",
     "Move 2": "Moves/Vaporeon - Flip Turn.png",
+    "Tier": "A",
+    "Tier Score": 0.023,
     "Win Rate": 49.28,
     "Pick Rate": 3.35,
     "recommendedBuild": {
@@ -8586,6 +9142,8 @@
     "Move Set": "Muddy Water/Flip Turn",
     "Move 1": "Moves/Vaporeon - Muddy Water.png",
     "Move 2": "Moves/Vaporeon - Flip Turn.png",
+    "Tier": "A",
+    "Tier Score": 0.125,
     "Win Rate": 49.56,
     "Pick Rate": 3.32,
     "recommendedBuild": {
@@ -8620,6 +9178,8 @@
     "Move Set": "Sludge Bomb/Solar Beam",
     "Move 1": "Moves/Venusaur - Sludge Bomb.png",
     "Move 2": "Moves/Venusaur - Solar Beam.png",
+    "Tier": "S",
+    "Tier Score": 1.373,
     "Win Rate": 49.9,
     "Pick Rate": 19.57,
     "recommendedBuild": {
@@ -8651,6 +9211,8 @@
     "Move Set": "Giga Drain/Solar Beam",
     "Move 1": "Moves/Venusaur - Giga Drain.png",
     "Move 2": "Moves/Venusaur - Solar Beam.png",
+    "Tier": "B",
+    "Tier Score": -0.397,
     "Win Rate": 48.29,
     "Pick Rate": 1.13,
     "recommendedBuild": {
@@ -8682,6 +9244,8 @@
     "Move Set": "Giga Drain/Petal Dance",
     "Move 1": "Moves/Venusaur - Giga Drain.png",
     "Move 2": "Moves/Venusaur - Petal Dance.png",
+    "Tier": "D",
+    "Tier Score": -1.043,
     "Win Rate": 46.36,
     "Pick Rate": 2.05,
     "recommendedBuild": {
@@ -8713,6 +9277,8 @@
     "Move Set": "Sludge Bomb/Petal Dance",
     "Move 1": "Moves/Venusaur - Sludge Bomb.png",
     "Move 2": "Moves/Venusaur - Petal Dance.png",
+    "Tier": "B",
+    "Tier Score": -0.42,
     "Win Rate": 47.69,
     "Pick Rate": 0.25,
     "recommendedBuild": {
@@ -8744,6 +9310,8 @@
     "Move Set": "Double Slap/Sing",
     "Move 1": "Moves/Wigglytuff - Double Slap.png",
     "Move 2": "Moves/Wigglytuff - Sing.png",
+    "Tier": "A",
+    "Tier Score": 0.054,
     "Win Rate": 49.19,
     "Pick Rate": 4.77,
     "recommendedBuild": {
@@ -8775,6 +9343,8 @@
     "Move Set": "Dazzling Gleam/Sing",
     "Move 1": "Moves/Wigglytuff - Dazzling Gleam.png",
     "Move 2": "Moves/Wigglytuff - Sing.png",
+    "Tier": "B",
+    "Tier Score": -0.126,
     "Win Rate": 49.18,
     "Pick Rate": 1.98,
     "recommendedBuild": {
@@ -8808,6 +9378,8 @@
     "Move Set": "Double Slap/Rollout",
     "Move 1": "Moves/Wigglytuff - Double Slap.png",
     "Move 2": "Moves/Wigglytuff - Rollout.png",
+    "Tier": "B",
+    "Tier Score": -0.196,
     "Win Rate": 49.18,
     "Pick Rate": 0.75,
     "recommendedBuild": {
@@ -8839,6 +9411,8 @@
     "Move Set": "Dazzling Gleam/Rollout",
     "Move 1": "Moves/Wigglytuff - Dazzling Gleam.png",
     "Move 2": "Moves/Wigglytuff - Rollout.png",
+    "Tier": "C",
+    "Tier Score": -0.564,
     "Win Rate": 46.53,
     "Pick Rate": 0.18,
     "recommendedBuild": {
@@ -8872,6 +9446,8 @@
     "Move Set": "Sacred Sword/Agility",
     "Move 1": "Moves/Zacian - Sacred Sword.png",
     "Move 2": "Moves/Zacian - Agility.png",
+    "Tier": "C",
+    "Tier Score": -0.627,
     "Win Rate": 45.89,
     "Pick Rate": 0.18,
     "recommendedBuild": {
@@ -8903,6 +9479,8 @@
     "Move Set": "Sacred Sword/Play Rough",
     "Move 1": "Moves/Zacian - Sacred Sword.png",
     "Move 2": "Moves/Zacian - Play Rough.png",
+    "Tier": "D",
+    "Tier Score": -1.135,
     "Win Rate": 42.27,
     "Pick Rate": 0.19,
     "recommendedBuild": {
@@ -8934,6 +9512,8 @@
     "Move Set": "Metal Claw/Play Rough",
     "Move 1": "Moves/Zacian - Metal Claw.png",
     "Move 2": "Moves/Zacian - Play Rough.png",
+    "Tier": "A",
+    "Tier Score": 0.591,
     "Win Rate": 51.31,
     "Pick Rate": 1.55,
     "recommendedBuild": {
@@ -8965,6 +9545,8 @@
     "Move Set": "Metal Claw/Agility",
     "Move 1": "Moves/Zacian - Metal Claw.png",
     "Move 2": "Moves/Zacian - Agility.png",
+    "Tier": "S",
+    "Tier Score": 2.071,
     "Win Rate": 52.91,
     "Pick Rate": 9.04,
     "recommendedBuild": {
@@ -8996,6 +9578,8 @@
     "Move Set": "Thunderbolt/Zap Cannon",
     "Move 1": "Moves/Zapdos - Thunderbolt.png",
     "Move 2": "Moves/Zapdos - Zap Cannon.png",
+    "Tier": "S",
+    "Tier Score": 3.211,
     "Win Rate": 50.29,
     "Pick Rate": 26.12,
     "recommendedBuild": {
@@ -9027,6 +9611,8 @@
     "Move Set": "Spark/Wild Charge",
     "Move 1": "Moves/Zeraora - Spark.png",
     "Move 2": "Moves/Zeraora - Wild Charge.png",
+    "Tier": "C",
+    "Tier Score": -0.586,
     "Win Rate": 47.41,
     "Pick Rate": 6.58,
     "recommendedBuild": {
@@ -9058,6 +9644,8 @@
     "Move Set": "Volt Switch/Wild Charge",
     "Move 1": "Moves/Zeraora - Volt Switch.png",
     "Move 2": "Moves/Zeraora - Wild Charge.png",
+    "Tier": "D",
+    "Tier Score": -2.414,
     "Win Rate": 37.1,
     "Pick Rate": 0.44,
     "recommendedBuild": {
@@ -9089,6 +9677,8 @@
     "Move Set": "Volt Switch/Discharge",
     "Move 1": "Moves/Zeraora - Volt Switch.png",
     "Move 2": "Moves/Zeraora - Discharge.png",
+    "Tier": "D",
+    "Tier Score": -1.111,
     "Win Rate": 46.22,
     "Pick Rate": 1.88,
     "recommendedBuild": {
@@ -9122,6 +9712,8 @@
     "Move Set": "Spark/Discharge",
     "Move 1": "Moves/Zeraora - Spark.png",
     "Move 2": "Moves/Zeraora - Discharge.png",
+    "Tier": "D",
+    "Tier Score": -0.895,
     "Win Rate": 46.58,
     "Pick Rate": 1.12,
     "recommendedBuild": {
@@ -9155,6 +9747,8 @@
     "Move Set": "Shadow Claw/Feint Attack",
     "Move 1": "Moves/Zoroark - Shadow Claw.png",
     "Move 2": "Moves/Zoroark - Feint Attack.png",
+    "Tier": "D",
+    "Tier Score": -1.235,
     "Win Rate": 45.94,
     "Pick Rate": 5.08,
     "recommendedBuild": {
@@ -9186,6 +9780,8 @@
     "Move Set": "Cut/Feint Attack",
     "Move 1": "Moves/Zoroark - Cut.png",
     "Move 2": "Moves/Zoroark - Feint Attack.png",
+    "Tier": "D",
+    "Tier Score": -1.328,
     "Win Rate": 43.93,
     "Pick Rate": 0.63,
     "recommendedBuild": {
@@ -9217,6 +9813,8 @@
     "Move Set": "Cut/Night Slash",
     "Move 1": "Moves/Zoroark - Cut.png",
     "Move 2": "Moves/Zoroark - Night Slash.png",
+    "Tier": "B",
+    "Tier Score": -0.144,
     "Win Rate": 49.49,
     "Pick Rate": 0.61,
     "recommendedBuild": {
@@ -9248,6 +9846,8 @@
     "Move Set": "Shadow Claw/Night Slash",
     "Move 1": "Moves/Zoroark - Shadow Claw.png",
     "Move 2": "Moves/Zoroark - Night Slash.png",
+    "Tier": "D",
+    "Tier Score": -1.238,
     "Win Rate": 43.22,
     "Pick Rate": 0.38,
     "recommendedBuild": {

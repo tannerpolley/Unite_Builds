@@ -15,7 +15,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from scripts.Extra_Functions import fix_special_cases, organize_df
+from scripts.Extra_Functions import TIER_SCORE_CONFIG, fix_special_cases, organize_df
 from scripts.format_images import format_static_images
 from scripts.sync_missing_pokemon import DEFAULT_ROSTER_JSON_PATH, sync_missing_pokemon_entries
 
@@ -249,6 +249,8 @@ def write_supporting_outputs(date: str, matches: float, generated_at: str) -> No
                 "matches": matches,
                 "generatedAt": generated_at,
                 "assetVersion": generated_at,
+                "tierScoreConfig": TIER_SCORE_CONFIG,
+                "tierLabelDistribution": "fixed-stdev-bands",
             },
             indent=2,
         ) + "\n",
@@ -267,7 +269,10 @@ def write_unite_meta_csv(
         "Pick Rate": [pick_rate_dict.get(name) for name in all_names],
         "Ban Rate": [ban_rate_dict.get(name) for name in all_names],
     }
-    pd.DataFrame(combined_dict, index=all_names).to_csv(UNITE_META_CSV_PATH)
+    pd.DataFrame(combined_dict, index=all_names).to_csv(
+        UNITE_META_CSV_PATH,
+        index_label="Pokemon",
+    )
 
 
 def load_json(path: Path, label: str):

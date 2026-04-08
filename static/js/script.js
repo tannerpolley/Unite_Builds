@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const popupContent = document.getElementById("popupContent");
   const body = document.body;
   const roleFilters = document.querySelectorAll('input[name="role"]');
-  const minPickRate = document.getElementById("minPickRate");
   const nameSearch = document.getElementById("nameSearch");
   const resetFilters = document.getElementById("resetFilters");
   const filters = document.getElementById("filters");
@@ -17,6 +16,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   const desktopMobilePreviewInlineButton = document.getElementById("desktopMobilePreviewInlineButton");
   const desktopMobilePreviewButton = document.getElementById("desktopMobilePreviewButton");
   const desktopTipsButton = document.getElementById("desktopTipsButton");
+  const debugUiButton = document.getElementById("debugUiButton");
+  const pickRateMin = document.getElementById("pickRateMin");
+  const pickRateMax = document.getElementById("pickRateMax");
+  const winRateMin = document.getElementById("winRateMin");
+  const winRateMax = document.getElementById("winRateMax");
   const mobileSortPanel = document.getElementById("mobileSortPanel");
   const mobileHelpPanel = document.getElementById("mobileHelpPanel");
   const mobilePanelScrim = document.getElementById("mobilePanelScrim");
@@ -25,7 +29,45 @@ document.addEventListener("DOMContentLoaded", async () => {
   const closeHelpPanel = document.getElementById("closeHelpPanel");
   const mobileSortColumn = document.getElementById("mobileSortColumn");
   const mobileSortDirection = document.getElementById("mobileSortDirection");
+  const tierInfoElements = {
+    winWeight: document.getElementById("tierWinWeightValue"),
+    pickWeight: document.getElementById("tierPickWeightValue"),
+    banWeight: document.getElementById("tierBanWeightValue"),
+    winPickWeight: document.getElementById("tierWinPickWeightValue"),
+    winBanWeight: document.getElementById("tierWinBanWeightValue"),
+    pickBanWeight: document.getElementById("tierPickBanWeightValue"),
+    sampleScale: document.getElementById("tierSampleScaleValue"),
+    sampleFloor: document.getElementById("tierSampleFloorValue"),
+    bandSPlus: document.getElementById("tierBandSPlusValue"),
+    bandS: document.getElementById("tierBandSValue"),
+    bandA: document.getElementById("tierBandAValue"),
+    bandB: document.getElementById("tierBandBValue"),
+    bandC: document.getElementById("tierBandCValue"),
+    displayCutoff: document.getElementById("tierDisplayCutoffValue"),
+  };
   let assetVersion = "";
+  const defaultTierScoreConfig = {
+    model: "sample-damped-interaction-zscore-v2",
+    displayCutoff: 0.5,
+    sampleScale: 1200,
+    sampleFloor: 0.25,
+    weights: {
+      win: 0.72,
+      pick: 0.14,
+      ban: 0.08,
+      winPick: 0.07,
+      winBan: 0.02,
+      pickBan: 0.01,
+    },
+    bands: [
+      { label: "S+", threshold: 3.25 },
+      { label: "S", threshold: 0.75 },
+      { label: "A", threshold: 0.0 },
+      { label: "B", threshold: -0.5 },
+      { label: "C", threshold: -0.75 },
+    ],
+  };
+  const defaultPickRateMin = 0.5;
 
   let tableItems = [];
   let tableItemsPromise = null;
@@ -65,6 +107,109 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
+  function normalizeSortColumn(column) {
+    return column;
+  }
+
+  function parseThresholdValue(input) {
+    const value = parseFloat(String(input ?? "").trim());
+    return Number.isFinite(value) ? value : null;
+  }
+
+  function rangeFilterMatches(value, minThreshold, maxThreshold) {
+    if (minThreshold !== null && value < minThreshold) {
+      return false;
+    }
+
+    if (maxThreshold !== null && value > maxThreshold) {
+      return false;
+    }
+
+    return true;
+  }
+
+  function getTierDisplayData(entry) {
+    return {
+      label: entry["Tier"],
+      score: entry["Tier Score"],
+    };
+  }
+
+  function formatTierConfigNumber(value, digits = 0) {
+    const numeric = Number(value);
+    if (!Number.isFinite(numeric)) {
+      return "";
+    }
+    return digits > 0 ? numeric.toFixed(digits) : String(Math.round(numeric));
+  }
+
+  function applyTierInfoText(metadata = {}) {
+    const config = {
+      ...defaultTierScoreConfig,
+      ...(metadata?.tierScoreConfig || {}),
+      weights: {
+        ...defaultTierScoreConfig.weights,
+        ...(metadata?.tierScoreConfig?.weights || {}),
+      },
+    };
+
+    const bandsByLabel = new Map((config.bands || []).map((band) => [band.label, band.threshold]));
+    if (tierInfoElements.intercept) {
+      tierInfoElements.intercept.textContent = formatTierConfigNumber(config.intercept, 3);
+    }
+    if (tierInfoElements.winWeight) {
+      tierInfoElements.winWeight.textContent = formatTierConfigNumber(config.weights.win, 3);
+    }
+    if (tierInfoElements.pickWeight) {
+      tierInfoElements.pickWeight.textContent = formatTierConfigNumber(config.weights.pick, 3);
+    }
+    if (tierInfoElements.banWeight) {
+      tierInfoElements.banWeight.textContent = formatTierConfigNumber(config.weights.ban, 3);
+    }
+    if (tierInfoElements.winPickWeight) {
+      tierInfoElements.winPickWeight.textContent = formatTierConfigNumber(config.weights.winPick, 3);
+    }
+    if (tierInfoElements.winBanWeight) {
+      tierInfoElements.winBanWeight.textContent = formatTierConfigNumber(config.weights.winBan, 3);
+    }
+    if (tierInfoElements.pickBanWeight) {
+      tierInfoElements.pickBanWeight.textContent = formatTierConfigNumber(config.weights.pickBan, 3);
+    }
+    if (tierInfoElements.sampleScale) {
+      tierInfoElements.sampleScale.textContent = formatTierConfigNumber(config.sampleScale);
+    }
+    if (tierInfoElements.sampleFloor) {
+      tierInfoElements.sampleFloor.textContent = formatTierConfigNumber(config.sampleFloor, 2);
+    }
+    if (tierInfoElements.bandSPlus) {
+      tierInfoElements.bandSPlus.textContent = formatTierConfigNumber(bandsByLabel.get("S+"), 2);
+    }
+    if (tierInfoElements.bandS) {
+      tierInfoElements.bandS.textContent = formatTierConfigNumber(bandsByLabel.get("S"), 2);
+    }
+    if (tierInfoElements.bandA) {
+      tierInfoElements.bandA.textContent = formatTierConfigNumber(bandsByLabel.get("A"), 2);
+    }
+    if (tierInfoElements.bandB) {
+      tierInfoElements.bandB.textContent = formatTierConfigNumber(bandsByLabel.get("B"), 2);
+    }
+    if (tierInfoElements.bandC) {
+      tierInfoElements.bandC.textContent = formatTierConfigNumber(bandsByLabel.get("C"), 2);
+    }
+    if (tierInfoElements.displayCutoff) {
+      tierInfoElements.displayCutoff.textContent = formatTierConfigNumber(config.displayCutoff, 1);
+    }
+  }
+
+  function isLocalDevelopmentOrigin() {
+    if (location.protocol === "file:") {
+      return true;
+    }
+
+    const hostname = String(location.hostname || "").toLowerCase();
+    return hostname === "localhost" || hostname === "127.0.0.1" || hostname === "::1" || hostname.endsWith(".local");
+  }
+
   function clearDesktopAdaptiveLayout() {
     if (controlsShell) {
       controlsShell.classList.remove(...desktopControlLayoutClasses);
@@ -98,12 +243,15 @@ document.addEventListener("DOMContentLoaded", async () => {
         "--table-role-size",
         "--table-moveset-size",
         "--table-rate-size",
+        "--table-tier-size",
         "--col-pokemon-width",
         "--col-name-width",
         "--col-role-width",
         "--col-moveset-width",
         "--col-moves-width",
-        "--col-rate-width"
+        "--col-tier-width",
+        "--col-winrate-width",
+        "--col-pickrate-width"
       ].forEach((name) => tableContainer.style.removeProperty(name));
     }
   }
@@ -115,9 +263,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const shellRect = shell.getBoundingClientRect();
     const measuredNodes = [
-      shell.querySelector(".mobile-toolbar"),
-      shell.querySelector("#filters"),
-      shell.querySelector(".pick-rate-container"),
+      shell.querySelector(".mobile-toolbar-search"),
+      shell.querySelector(".threshold-filters"),
       shell.querySelector(".role-filters"),
       shell.querySelector(".filter-actions")
     ].filter(Boolean);
@@ -201,20 +348,29 @@ document.addEventListener("DOMContentLoaded", async () => {
     setCssPixelVar(controlsShell, "--controls-search-font-size", lerp(15.2, 17.6, controlsProgress) * desktopUiScale);
     setCssPixelVar(controlsShell, "--controls-pick-input-width", lerp(58, 68, controlsProgress) * desktopUiScale);
 
-    const controlLayoutCandidates = controlsWidth >= 1450
-      ? ["desktop-controls-wide", "desktop-controls-stacked", "desktop-controls-compact"]
-      : controlsWidth >= 1080
-        ? ["desktop-controls-stacked", "desktop-controls-compact"]
-        : ["desktop-controls-compact"];
-
-    let chosenControlLayout = controlLayoutCandidates[controlLayoutCandidates.length - 1];
-    for (const candidate of controlLayoutCandidates) {
-      setExclusiveClass(controlsShell, desktopControlLayoutClasses, candidate);
+    let chosenControlLayout;
+    if (controlsWidth >= 1080) {
+      chosenControlLayout = "desktop-controls-wide";
+      setExclusiveClass(controlsShell, desktopControlLayoutClasses, chosenControlLayout);
       // Force layout before checking bounds.
       void controlsShell.offsetWidth;
-      if (!controlsOverflow(controlsShell)) {
-        chosenControlLayout = candidate;
-        break;
+      if (controlsOverflow(controlsShell)) {
+        chosenControlLayout = controlsWidth >= 1240 ? "desktop-controls-compact" : "desktop-controls-stacked";
+      }
+    } else {
+      const controlLayoutCandidates = controlsWidth >= 900
+        ? ["desktop-controls-compact", "desktop-controls-stacked"]
+        : ["desktop-controls-stacked"];
+
+      chosenControlLayout = controlLayoutCandidates[controlLayoutCandidates.length - 1];
+      for (const candidate of controlLayoutCandidates) {
+        setExclusiveClass(controlsShell, desktopControlLayoutClasses, candidate);
+        // Force layout before checking bounds.
+        void controlsShell.offsetWidth;
+        if (!controlsOverflow(controlsShell)) {
+          chosenControlLayout = candidate;
+          break;
+        }
       }
     }
     setExclusiveClass(controlsShell, desktopControlLayoutClasses, chosenControlLayout);
@@ -229,20 +385,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     setCssPixelVar(tableContainer, "--table-name-size", lerp(14.9, 19.8, easedProgress) * desktopUiScale);
     setCssPixelVar(tableContainer, "--table-role-size", lerp(14.9, 19.8, easedProgress) * desktopUiScale);
     setCssPixelVar(tableContainer, "--table-moveset-size", lerp(14.4, 18.4, easedProgress) * desktopUiScale);
+    setCssPixelVar(tableContainer, "--table-tier-size", lerp(13.8, 18.2, easedProgress) * desktopUiScale);
     setCssPixelVar(tableContainer, "--table-rate-size", lerp(15.2, 21.6, easedProgress) * desktopUiScale);
 
     const availableTableWidth = Math.max(tableWidth - 18, 760);
-    const minimumColumnWidths = [64, 112, 98, 108, 78, 102, 102];
+    const minimumColumnWidths = [64, 112, 98, 108, 78, 72, 100, 100];
     const targetColumnWidths = [
       availableTableWidth * 0.078,
       availableTableWidth * 0.18,
       availableTableWidth * 0.135,
       availableTableWidth * 0.17,
-      availableTableWidth * 0.125,
-      availableTableWidth * 0.156,
-      availableTableWidth * 0.156
+      availableTableWidth * 0.12,
+      availableTableWidth * 0.085,
+      availableTableWidth * 0.116,
+      availableTableWidth * 0.116
     ];
-    const maximumColumnWidths = [94, 212, 166, 206, 160, 152, 152];
+    const maximumColumnWidths = [94, 212, 166, 206, 160, 112, 152, 152];
     const distributedWidths = distributeWidths(
       availableTableWidth,
       minimumColumnWidths,
@@ -255,7 +413,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     setCssPixelVar(tableContainer, "--col-role-width", distributedWidths[2]);
     setCssPixelVar(tableContainer, "--col-moveset-width", distributedWidths[3]);
     setCssPixelVar(tableContainer, "--col-moves-width", distributedWidths[4]);
-    setCssPixelVar(tableContainer, "--col-rate-width", distributedWidths[5]);
+    setCssPixelVar(tableContainer, "--col-tier-width", distributedWidths[5]);
+    setCssPixelVar(tableContainer, "--col-winrate-width", distributedWidths[6]);
+    setCssPixelVar(tableContainer, "--col-pickrate-width", distributedWidths[7]);
 
     tableScrollShell.classList.add("desktop-table-fluid");
     const tableLayoutClass = tableWidth >= 1320
@@ -321,6 +481,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       setCssPixelVar(card, "--mc-pokemon-img", pokemonImgSize);
       setCssPixelVar(card, "--mc-name-size", lerp(13.6, 16.6, progress));
       setCssPixelVar(card, "--mc-role-size", lerp(11.4, 13.2, progress));
+      setCssPixelVar(card, "--mc-tier-size", lerp(8.6, 9.8, progress));
       setCssPixelVar(card, "--mc-metric-label-size", clampNumber(metricBubbleWidth * 0.118, 6.8, 8.9));
       setCssPixelVar(card, "--mc-metric-value-size", clampNumber(metricBubbleWidth * 0.19, 10.2, 14.2));
       setCssPixelVar(card, "--mc-metric-pad-x", clampNumber(metricBubbleWidth * 0.075, 3.5, 6));
@@ -376,6 +537,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     setCssPixelVar(card, "--mc-pokemon-img", lerp(52, 66, progress));
     setCssPixelVar(card, "--mc-name-size", lerp(13, 15.4, progress));
     setCssPixelVar(card, "--mc-role-size", lerp(11, 12.8, progress));
+    setCssPixelVar(card, "--mc-tier-size", lerp(8.4, 9.4, progress));
     setCssPixelVar(card, "--mc-metric-label-size", clampNumber(metricBubbleWidth * 0.095, 6.6, 8.7));
     setCssPixelVar(card, "--mc-metric-value-size", clampNumber(metricBubbleWidth * 0.155, 10, 13.8));
     setCssPixelVar(card, "--mc-metric-pad-x", clampNumber(metricBubbleWidth * 0.09, 3.5, 6.5));
@@ -457,7 +619,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   function syncMobileSortControls() {
     if (mobileSortColumn) {
-      mobileSortColumn.value = currentSort.column;
+      mobileSortColumn.value = normalizeSortColumn(currentSort.column);
     }
     if (mobileSortDirection) {
       mobileSortDirection.value = currentSort.order;
@@ -517,11 +679,15 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   function hasActiveFilters() {
+    const pickMinValue = parseThresholdValue(pickRateMin?.value);
     return Boolean(
       activeNameFilter ||
       activeRoleFilters.length > 0 ||
       nameSearch.value.trim() ||
-      Number(minPickRate.value) !== 1
+      (pickMinValue !== null && pickMinValue !== defaultPickRateMin) ||
+      parseThresholdValue(pickRateMax?.value) !== null ||
+      parseThresholdValue(winRateMin?.value) !== null ||
+      parseThresholdValue(winRateMax?.value) !== null
     );
   }
 
@@ -537,8 +703,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     nameSearch.value = "";
-    minPickRate.value = 1;
-    currentSort = { column: "Win Rate", order: 'desc' };
+    if (pickRateMin) {
+      pickRateMin.value = String(defaultPickRateMin);
+    }
+    if (pickRateMax) {
+      pickRateMax.value = "";
+    }
+    if (winRateMin) {
+      winRateMin.value = "";
+    }
+    if (winRateMax) {
+      winRateMax.value = "";
+    }
+    currentSort = { column: "Tier", order: 'desc' };
     syncMobileSortControls();
     closeMobilePanels();
     renderRows(filterItems());
@@ -1039,6 +1216,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   async function injectHeaderText() {
     try {
       const metadata = await loadSiteMetadata();
+      applyTierInfoText(metadata);
       const rawDate = metadata.date;
       const matchesRaw = metadata.matches;
 
@@ -1074,8 +1252,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     injectHeaderText()
   ]);
 
-  // Keep Win Rate as the default sort column
-  let currentSort = { column: "Win Rate", order: 'desc' };
+  // Keep Tier as the default sort column
+  let currentSort = { column: "Tier", order: 'desc' };
   let activeNameFilter = null;
   let activeRoleFilters = []; // Change to array to store multiple roles
   
@@ -1159,7 +1337,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     
     return { min, middle, max };
   }
-  
+
   roleFilters.forEach(filter => {
     filter.addEventListener("change", (e) => {
       // Clear name filter when roles are selected
@@ -1188,12 +1366,20 @@ document.addEventListener("DOMContentLoaded", async () => {
       renderRows(filterItems());
     });
   });
-  minPickRate.addEventListener("input", () => renderRows(filterItems()));
+  pickRateMin?.addEventListener("input", () => renderRows(filterItems()));
+  pickRateMax?.addEventListener("input", () => renderRows(filterItems()));
+  winRateMin?.addEventListener("input", () => renderRows(filterItems()));
+  winRateMax?.addEventListener("input", () => renderRows(filterItems()));
   nameSearch.addEventListener("input", () => renderRows(filterItems()));
 
   function format(val) {
     const num = parseFloat(val);
     return isNaN(num) ? "?" : `${num.toFixed(2)}%`;
+  }
+
+  function formatTierScore(val) {
+    const num = parseFloat(val);
+    return Number.isFinite(num) ? num.toFixed(3) : "?";
   }
 
   function getAssetFileName(assetPath) {
@@ -1219,6 +1405,75 @@ document.addEventListener("DOMContentLoaded", async () => {
         <span class="${escapeHtml(className)}-line">${escapeHtml(firstLine)}</span>
         <span class="${escapeHtml(className)}-line">${secondLine === "&nbsp;" ? "&nbsp;" : escapeHtml(secondLine)}</span>
       </span>
+    `;
+  }
+
+  function getTierColor(tierLabel) {
+    const label = normalizeTierDisplayLabel(tierLabel);
+    const colors = {
+      "S+": "#d4af37",
+      "S": "#0fa24c",
+      "A": "#8ae7a0",
+      "B": "#f2f2f2",
+      "C": "#ee8d6e",
+      "D": "#d95a53",
+      "F": "#8f1d2d",
+    };
+
+    return colors[label] || colors["B"];
+  }
+
+  function normalizeTierDisplayLabel(tierLabel) {
+    const label = String(tierLabel || "").trim().toUpperCase();
+    if (!label) {
+      return "F";
+    }
+
+    if (label === "S+") {
+      return "S+";
+    }
+
+    if (label.startsWith("S")) {
+      return "S";
+    }
+
+    if (label.startsWith("A")) {
+      return "A";
+    }
+
+    if (label.startsWith("B")) {
+      return "B";
+    }
+
+    if (label.startsWith("C")) {
+      return "C";
+    }
+
+    if (label.startsWith("D")) {
+      return "D";
+    }
+
+    return "F";
+  }
+
+  function renderTierBadge(tierLabel, className = "") {
+    const label = normalizeTierDisplayLabel(tierLabel);
+    const classes = ["tier-badge"];
+    if (className) {
+      classes.push(className);
+    }
+    return `
+      <span class="${classes.map((name) => escapeHtml(name)).join(" ")}" style="color: ${escapeHtml(getTierColor(label))};">${escapeHtml(label)}</span>
+    `;
+  }
+
+  function renderTierScoreDebug(tierScore, className = "") {
+    const classes = ["tier-score-debug"];
+    if (className) {
+      classes.push(className);
+    }
+    return `
+      <span class="${classes.map((name) => escapeHtml(name)).join(" ")}">Score ${escapeHtml(formatTierScore(tierScore))}</span>
     `;
   }
 
@@ -1399,6 +1654,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   function renderMobileCard(entry) {
     const entryIndex = tableItems.indexOf(entry);
+    const tierData = getTierDisplayData(entry);
+    const tierBadge = renderTierBadge(tierData.label, "mobile-card-tier");
+    const tierScoreDebug = renderTierScoreDebug(tierData.score, "mobile-tier-score-debug");
     const winRate = parseFloat(entry["Win Rate"]);
     const winRateColor = getWinRateColor(winRate);
     const move1Img = Array.isArray(entry["Move 1"]) ? entry["Move 1"][0] : entry["Move 1"];
@@ -1414,6 +1672,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             <span class="mobile-card-pokemon-text">
               <span class="mobile-card-name">${escapeHtml(entry["Name"])}</span>
               <span class="mobile-card-role">${escapeHtml(entry["Role"])}</span>
+              ${tierBadge}
             </span>
           </button>
           <div class="mobile-card-move-list">
@@ -1431,6 +1690,10 @@ document.addEventListener("DOMContentLoaded", async () => {
             </button>
           </div>
           <div class="mobile-card-metrics">
+            <div class="mobile-card-metric mobile-card-tier-metric">
+              <span class="mobile-card-metric-label">Tier</span>
+              <span class="mobile-card-tier-value">${tierBadge}${tierScoreDebug}</span>
+            </div>
             <button class="mobile-view-items mobile-card-metric" type="button" data-index="${entryIndex}" data-win-rate="${entry["Win Rate"]}" style="color: ${winRateColor};">
               <span class="mobile-card-metric-label">Win Rate</span>
               <span class="mobile-card-metric-value">${escapeHtml(format(entry["Win Rate"]))}</span>
@@ -1452,6 +1715,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     return [...items].sort((a, b) => {
       const col = currentSort.column;
+      if (col === "Tier") {
+        const aTier = getTierDisplayData(a);
+        const bTier = getTierDisplayData(b);
+        const aScore = parseFloat(aTier.score ?? a["Tier Score"] ?? "0");
+        const bScore = parseFloat(bTier.score ?? b["Tier Score"] ?? "0");
+        if (aScore === bScore) {
+          return currentSort.order === 'asc'
+            ? String(a["Name"] || "").localeCompare(String(b["Name"] || ""))
+            : String(b["Name"] || "").localeCompare(String(a["Name"] || ""));
+        }
+        return currentSort.order === 'asc' ? aScore - bScore : bScore - aScore;
+      }
+
       const aVal = a[col] ?? "";
       const bVal = b[col] ?? "";
       const aNum = parseFloat(aVal);
@@ -1485,6 +1761,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       const isRoleActive = activeRoleFilters.includes(entry["Role"]);
       const roleClass = isRoleActive ? "filter-role active" : "filter-role";
+      const tierData = getTierDisplayData(entry);
+      const tierBadge = renderTierBadge(tierData.label);
+      const tierScoreDebug = renderTierScoreDebug(tierData.score, "table-tier-score-debug");
 
       const winRate = parseFloat(entry["Win Rate"]);
       const winRateColor = getWinRateColor(winRate);
@@ -1498,6 +1777,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           <span class="move-wrapper">${renderMoves(entry["Move 1"])}</span>
           <span class="move-wrapper">${renderMoves(entry["Move 2"])}</span>
         </div>
+        <div class="table-cell table-cell-tier"><span class="table-tier-value">${tierBadge}${tierScoreDebug}</span></div>
         <div class="table-cell">
           <button class="view-items" type="button" data-index="${tableItems.indexOf(entry)}"
                   style="color: ${winRateColor}; font-weight: bold; background: none; border: none;"
@@ -1511,7 +1791,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       tableBody.appendChild(row);
     });
 
-    movesetCards.innerHTML = sortedItems.map(renderMobileCard).join("");
+    movesetCards.innerHTML = sortedItems.map((entry) => renderMobileCard(entry)).join("");
     attachEventHandlers();
     observeMobileCards();
     applyDesktopAdaptiveLayout();
@@ -1969,7 +2249,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   function filterItems() {
     // Split search query into individual terms and remove empty strings
     const searchTerms = nameSearch.value.toLowerCase().split(/\s+/).filter(term => term.length > 0);
-    const minRate = parseFloat(minPickRate.value) || 0;
+    const pickMin = parseThresholdValue(pickRateMin?.value);
+    const pickMax = parseThresholdValue(pickRateMax?.value);
+    const winMin = parseThresholdValue(winRateMin?.value);
+    const winMax = parseThresholdValue(winRateMax?.value);
   
     return tableItems.filter(entry => {
       // If there's an active name filter, only show entries matching that name
@@ -1982,8 +2265,16 @@ document.addEventListener("DOMContentLoaded", async () => {
         return false;
       }
   
-      // Check minimum pick rate
-      if (parseFloat(entry["Pick Rate"]) < minRate) {
+      const entryPickRate = parseFloat(entry["Pick Rate"]);
+      const entryWinRate = parseFloat(entry["Win Rate"]);
+
+      // Check pick rate threshold
+      if (!rangeFilterMatches(entryPickRate, pickMin, pickMax)) {
+        return false;
+      }
+
+      // Check win rate threshold
+      if (!rangeFilterMatches(entryWinRate, winMin, winMax)) {
         return false;
       }
   
@@ -2062,7 +2353,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           e.stopPropagation();
           const col = div.getAttribute("data-sort");
           const isSame = currentSort.column === col;
-          currentSort.column = col;
+          currentSort.column = normalizeSortColumn(col);
           currentSort.order = isSame && currentSort.order === 'desc' ? 'asc' : 'desc';
           renderRows(filterItems());
         });
@@ -2079,10 +2370,49 @@ document.addEventListener("DOMContentLoaded", async () => {
       const arrow = document.getElementById(`arrow-${col}`);
       if (arrow) {
         arrow.textContent =
-          currentSort.column === col
+          normalizeSortColumn(currentSort.column) === col
             ? currentSort.order === "asc" ? "▲" : "▼"
             : "";
       }
+    });
+  }
+
+  const debugUiStorageKey = "uiDebugEnabled";
+
+  function setDebugUiState(enabled) {
+    body.classList.toggle("ui-debug", enabled);
+    if (debugUiButton) {
+      debugUiButton.setAttribute("aria-pressed", enabled ? "true" : "false");
+      debugUiButton.textContent = enabled ? "Debug On" : "Debug";
+    }
+    renderRows(filterItems());
+
+    if (isLocalDevelopmentOrigin()) {
+      try {
+        localStorage.setItem(debugUiStorageKey, enabled ? "1" : "0");
+      } catch (error) {
+        // Ignore storage failures in restricted environments.
+      }
+    }
+  }
+
+  function initializeDebugUiControl() {
+    if (!debugUiButton || !isLocalDevelopmentOrigin()) {
+      return;
+    }
+
+    debugUiButton.hidden = false;
+
+    let debugEnabled = false;
+    try {
+      debugEnabled = localStorage.getItem(debugUiStorageKey) === "1";
+    } catch (error) {
+      debugEnabled = false;
+    }
+
+    setDebugUiState(debugEnabled);
+    debugUiButton.addEventListener("click", () => {
+      setDebugUiState(!body.classList.contains("ui-debug"));
     });
   }
 
@@ -2093,13 +2423,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   desktopMobilePreviewInlineButton?.addEventListener("click", () => setDesktopMobilePreview(false));
   desktopMobilePreviewButton?.addEventListener("click", () => setDesktopMobilePreview(!isDesktopMobilePreview()));
   desktopTipsButton?.addEventListener("click", openHelpPanel);
+  initializeDebugUiControl();
   closeFiltersPanel?.addEventListener("click", closeMobilePanels);
   closeSortPanel?.addEventListener("click", closeMobilePanels);
   closeHelpPanel?.addEventListener("click", closeMobilePanels);
   mobilePanelScrim?.addEventListener("click", closeMobilePanels);
 
   mobileSortColumn?.addEventListener("change", () => {
-    currentSort.column = mobileSortColumn.value;
+    currentSort.column = normalizeSortColumn(mobileSortColumn.value);
     renderRows(filterItems());
   });
 

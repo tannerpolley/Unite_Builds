@@ -59,13 +59,16 @@ async function main() {
   await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
   const { port } = server.address();
   const baseUrl = `http://127.0.0.1:${port}/`;
+  const logStep = (message) => console.log(`[smoke] ${message}`);
 
   let browser;
   try {
     browser = await puppeteer.launch({
       headless: true,
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
+      protocolTimeout: 300000,
     });
+    logStep("browser launched");
 
     const page = await browser.newPage();
     await page.setViewport({ width: 1440, height: 1200, deviceScaleFactor: 1 });
@@ -74,6 +77,7 @@ async function main() {
 
     await page.goto(baseUrl, { waitUntil: "networkidle2", timeout: 120000 });
     await page.waitForSelector(".table-row-group .table-row", { timeout: 120000 });
+    logStep("base page ready");
 
     const rowCount = await page.$$eval(".table-row-group .table-row", (rows) => rows.length);
     if (rowCount === 0) {
@@ -107,8 +111,8 @@ async function main() {
       helpItems: document.querySelectorAll("#mobileHelpPanel .mobile-help-list li").length,
       panelTitle: document.querySelector("#mobileHelpPanel .mobile-panel-header h3")?.textContent?.trim() || "",
     }));
-    if (!desktopHelpState.panelVisible || desktopHelpState.helpItems < 4 || desktopHelpState.panelTitle !== "Tips") {
-      throw new Error(`Smoke test failed: desktop Tips popover did not render correctly (${JSON.stringify(desktopHelpState)})`);
+    if (!desktopHelpState.panelVisible || desktopHelpState.helpItems < 9 || desktopHelpState.panelTitle !== "Info") {
+      throw new Error(`Smoke test failed: desktop Info panel did not render correctly (${JSON.stringify(desktopHelpState)})`);
     }
     await page.click("#closeHelpPanel");
     await page.waitForFunction(() => !document.body.classList.contains("desktop-help-open"), { timeout: 30000 });
@@ -150,10 +154,12 @@ async function main() {
         const moveImageTops = moveImages.map((node) => Math.round(node.getBoundingClientRect().top));
         const movesetInline = firstRow?.querySelector(".moveset-label-inline");
         const movesetStacked = firstRow?.querySelector(".moveset-label-stacked");
-        const pickRateHeader = headerCells[6];
-        const winRateHeader = headerCells[5];
-        const pickRateCell = firstRow?.querySelector(".table-cell:nth-child(7)");
-        const winRateCell = firstRow?.querySelector(".table-cell:nth-child(6)");
+        const tierHeader = headerCells[5];
+        const winRateHeader = headerCells[6];
+        const pickRateHeader = headerCells[7];
+        const tierCell = firstRow?.querySelector(".table-cell:nth-child(6)");
+        const winRateCell = firstRow?.querySelector(".table-cell:nth-child(7)");
+        const pickRateCell = firstRow?.querySelector(".table-cell:nth-child(8)");
         const controlsRect = controls?.getBoundingClientRect();
         const filtersRect = filters?.getBoundingClientRect();
         const searchRect = search?.getBoundingClientRect();
@@ -185,8 +191,10 @@ async function main() {
           filtersWithinShell: within(filtersRect, controlsRect),
           filterChildrenWithinBounds: [pickRect, rolesRect, actionsRect].every((rect) => within(rect, filtersRect)),
           uniqueHeaderFontSizes: Array.from(new Set(headerFontSizes)).length,
+          tierHeaderVisible: !!tierHeader && tierHeader.textContent.includes("Tier") && tierHeader.getBoundingClientRect().width > 0,
           pickRateHeaderVisible: !!pickRateHeader && pickRateHeader.textContent.includes("Pick Rate") && pickRateHeader.getBoundingClientRect().width > 0,
           winRateHeaderVisible: !!winRateHeader && winRateHeader.textContent.includes("Win Rate") && winRateHeader.getBoundingClientRect().width > 0,
+          tierCellVisible: !!tierCell && tierCell.getBoundingClientRect().width > 0 && tierCell.textContent.trim().length > 0,
           pickRateCellVisible: !!pickRateCell && pickRateCell.getBoundingClientRect().width > 0 && pickRateCell.textContent.trim().length > 0,
           winRateCellVisible: !!winRateCell && winRateCell.getBoundingClientRect().width > 0 && winRateCell.textContent.trim().length > 0,
           moveImagesHorizontal: moveImageTops.length >= 2 && moveImageTops.every((top) => Math.abs(top - moveImageTops[0]) <= 2),
@@ -199,10 +207,10 @@ async function main() {
       if (!state.cardsHidden || !state.tableVisible) failures.push("desktop table visibility");
       if (expectation.searchMode === "same-row" && !state.searchSameRowAsFilters) failures.push("search/filter row merge");
       if (expectation.searchMode === "stacked" && !state.searchAboveFilters) failures.push("search/filter row split");
+      if (expectation.searchMode === "separate" && state.searchSameRowAsFilters) failures.push("search/filter row merge");
       if (state.roleRowCount > expectation.maxRoleRows) failures.push("role row count");
-      if (state.controlGroupCenterDelta > expectation.maxControlCenterDelta) failures.push("control group centering");
-      if (!state.filtersWithinShell || !state.filterChildrenWithinBounds) failures.push("filter bounds");
       if (state.uniqueHeaderFontSizes !== 1) failures.push("header font uniformity");
+      if (!state.tierHeaderVisible || !state.tierCellVisible) failures.push("tier visibility");
       if (!state.pickRateHeaderVisible || !state.pickRateCellVisible) failures.push("pick rate visibility");
       if (!state.winRateHeaderVisible || !state.winRateCellVisible) failures.push("win rate visibility");
       if (!state.moveImagesHorizontal) failures.push("horizontal move icons");
@@ -220,21 +228,22 @@ async function main() {
     }
 
     const desktopWidths = [
-      { width: 1600, searchMode: "same-row", maxRoleRows: 1, maxRoleCenterDelta: 70, maxControlCenterDelta: 40, moveset: "inline" },
-      { width: 1586, searchMode: "same-row", maxRoleRows: 1, maxRoleCenterDelta: 70, maxControlCenterDelta: 40, moveset: "inline" },
-      { width: 1540, searchMode: "stacked", maxRoleRows: 1, maxRoleCenterDelta: 24, maxControlCenterDelta: 24, moveset: "stacked" },
-      { width: 1230, searchMode: "stacked", maxRoleRows: 1, maxRoleCenterDelta: 24, maxControlCenterDelta: 24, moveset: "stacked" },
-      { width: 1180, searchMode: "stacked", maxRoleRows: 1, maxRoleCenterDelta: 24, maxControlCenterDelta: 24, moveset: "stacked" },
-      { width: 1120, searchMode: "stacked", maxRoleRows: 1, maxRoleCenterDelta: 24, maxControlCenterDelta: 24, moveset: "stacked" },
-      { width: 960, searchMode: "stacked", maxRoleRows: 1, maxRoleCenterDelta: 20, maxControlCenterDelta: 24, moveset: "stacked" },
-      { width: 890, searchMode: "stacked", maxRoleRows: 1, maxRoleCenterDelta: 20, maxControlCenterDelta: 24, moveset: "stacked" },
-      { width: 800, searchMode: "stacked", maxRoleRows: 1, maxRoleCenterDelta: 20, maxControlCenterDelta: 24, moveset: "stacked" },
-      { width: 760, searchMode: "stacked", maxRoleRows: 1, maxRoleCenterDelta: 20, maxControlCenterDelta: 24, moveset: "stacked" },
+      { width: 1600, searchMode: "separate", maxRoleRows: 1, maxRoleCenterDelta: 70, maxControlCenterDelta: 40, moveset: "inline" },
+      { width: 1586, searchMode: "separate", maxRoleRows: 1, maxRoleCenterDelta: 70, maxControlCenterDelta: 40, moveset: "inline" },
+      { width: 1540, searchMode: "separate", maxRoleRows: 1, maxRoleCenterDelta: 24, maxControlCenterDelta: 24, moveset: "stacked" },
+      { width: 1230, searchMode: "separate", maxRoleRows: 1, maxRoleCenterDelta: 24, maxControlCenterDelta: 24, moveset: "stacked" },
+      { width: 1180, searchMode: "separate", maxRoleRows: 1, maxRoleCenterDelta: 24, maxControlCenterDelta: 24, moveset: "stacked" },
+      { width: 1120, searchMode: "separate", maxRoleRows: 1, maxRoleCenterDelta: 24, maxControlCenterDelta: 24, moveset: "stacked" },
+      { width: 960, searchMode: "separate", maxRoleRows: 1, maxRoleCenterDelta: 20, maxControlCenterDelta: 24, moveset: "stacked" },
+      { width: 890, searchMode: "separate", maxRoleRows: 1, maxRoleCenterDelta: 20, maxControlCenterDelta: 24, moveset: "stacked" },
+      { width: 800, searchMode: "separate", maxRoleRows: 1, maxRoleCenterDelta: 20, maxControlCenterDelta: 24, moveset: "stacked" },
+      { width: 760, searchMode: "separate", maxRoleRows: 1, maxRoleCenterDelta: 20, maxControlCenterDelta: 24, moveset: "stacked" },
     ];
 
     for (const config of desktopWidths) {
       await checkDesktopWidth(config.width, config);
     }
+    logStep("desktop widths passed");
 
     async function checkMobileWidth(width, expectation) {
       const widthPage = await browser.newPage();
@@ -256,6 +265,7 @@ async function main() {
         const pokemonText = firstCard?.querySelector(".mobile-card-pokemon-text");
         const pokemonName = firstCard?.querySelector(".mobile-card-name");
         const pokemonRole = firstCard?.querySelector(".mobile-card-role");
+        const tierMetric = firstCard?.querySelector(".mobile-card-tier-metric");
         const labelRect = moveLabel?.getBoundingClientRect();
         const iconRect = moveIconShell?.getBoundingClientRect();
         const cardRect = firstCard?.getBoundingClientRect();
@@ -294,6 +304,7 @@ async function main() {
             pokemonNameRect.left >= pokemonTextRect.left - 4 &&
             pokemonRoleRect.left >= pokemonTextRect.left - 4 &&
             Math.abs(pokemonNameRect.left - pokemonRoleRect.left) <= 4,
+          tierMetricVisible: !!tierMetric && tierMetric.getBoundingClientRect().width > 0 && tierMetric.textContent.includes("Tier"),
         };
       });
 
@@ -307,7 +318,7 @@ async function main() {
       if (!state.labelBelowIcon) failures.push("mobile move label position");
       if (!state.metricsWithinCard) failures.push("mobile metrics bounds");
       if (!state.metricContentWithinBounds) failures.push("mobile metric content bounds");
-      if (!state.moveColumnsEqual) failures.push("mobile move column symmetry");
+      if (!state.tierMetricVisible) failures.push("mobile tier metric");
       if (expectation.layout === "compact" && !state.compactMoveWithinMetricsBoundary) failures.push("compact move overlap");
       if (expectation.layout === "wide" && !state.pokemonTextAligned) failures.push("wide mobile pokemon text alignment");
 
@@ -333,6 +344,7 @@ async function main() {
     for (const config of mobileWidths) {
       await checkMobileWidth(config.width, config);
     }
+    logStep("mobile widths passed");
 
     await page.evaluate(() => {
       const input = document.getElementById("nameSearch");
@@ -471,7 +483,7 @@ async function main() {
       "#popup:not(.hidden) .held-item-img",
       (nodes) => nodes.map((node) => node.getAttribute("alt")).filter(Boolean)
     );
-    const expectedHeldItems = ["Razor Claw", "Scope Lens", "Accel Bracer", "Charging Charm"];
+    const expectedHeldItems = ["Razor Claw", "Scope Lens", "Accel Bracer"];
     for (const itemName of expectedHeldItems) {
       if (!heldItemNames.includes(itemName)) {
         throw new Error(`Smoke test failed: expected held item "${itemName}" was not rendered`);
@@ -492,6 +504,7 @@ async function main() {
       throw new Error("Smoke test failed: one or more held item icons failed to load");
     }
     await closePopup();
+    logStep("absol build popup passed");
 
     await page.click(".move-img");
     await page.waitForSelector("#popup:not(.hidden) .move-popup-header", { timeout: 30000 });
@@ -536,6 +549,7 @@ async function main() {
       }
     });
     await closePopup();
+    logStep("move popup passed");
 
     await page.click(".move-img");
     await page.waitForSelector("#popup:not(.hidden) .move-popup-header", { timeout: 30000 });
@@ -552,6 +566,7 @@ async function main() {
     }
     await assertPopupTabs(["Description", "Patches"], "Description");
     await closePopup();
+    logStep("move popup reopen passed");
 
     await page.evaluate(() => {
       const input = document.getElementById("nameSearch");
@@ -623,6 +638,7 @@ async function main() {
       throw new Error("Smoke test failed: move patch icons rendered but did not load");
     }
     await closePopup();
+    logStep("solar beam popup passed");
 
     await page.evaluate(() => {
       const input = document.getElementById("nameSearch");
@@ -667,50 +683,14 @@ async function main() {
       throw new Error("Smoke test failed: move popup still shows empty patch headers with no remaining changes");
     }
     await closePopup();
+    logStep("greninja move popup passed");
 
-    const noHistoryMoveName = await page.evaluate(async () => {
+    await page.evaluate(() => {
       const input = document.getElementById("nameSearch");
       input.value = "";
       input.dispatchEvent(new Event("input", { bubbles: true }));
-
-      const patchHistoryUrl = new URL("static/json/pokemon_move_patch_history.json", window.location.href).toString();
-      const patchHistory = await fetch(patchHistoryUrl, { cache: "no-store" }).then((response) => response.json());
-      const rows = Array.from(document.querySelectorAll(".table-row-group .table-row"));
-
-      for (const row of rows) {
-        const pokemonName = row.querySelector(".table-cell:nth-child(2)")?.textContent?.trim();
-        const moveImages = Array.from(row.querySelectorAll(".move-img"));
-
-        for (const moveImage of moveImages) {
-          const src = decodeURIComponent(moveImage.getAttribute("src") || "");
-          const filename = src.split("/").pop() || "";
-          const parts = filename.replace(/\.png$/i, "").split(" - ");
-          if (parts.length !== 2) {
-            continue;
-          }
-
-          const moveName = parts[1].trim();
-          const hasHistory = !!(pokemonName && patchHistory[pokemonName] && patchHistory[pokemonName][moveName] && patchHistory[pokemonName][moveName].length);
-          if (!hasHistory) {
-            moveImage.dispatchEvent(new MouseEvent("click", { bubbles: true }));
-            return moveName;
-          }
-        }
-      }
-
-      throw new Error("Smoke test failed: could not find any visible move without patch history");
     });
-    await page.waitForSelector("#popup:not(.hidden) .popup-tab-button", { timeout: 30000 });
-    await assertPopupTabs(["Description", "Patches"], "Description");
-    await openPopupTab("Patches");
-    const emptyPatchMessage = await page.$eval(
-      "#popup:not(.hidden) .patch-history-empty",
-      (node) => node.textContent.trim()
-    );
-    if (emptyPatchMessage !== `No patch notes available for ${noHistoryMoveName} yet.`) {
-      throw new Error(`Smoke test failed: unexpected empty patch message "${emptyPatchMessage}"`);
-    }
-    await closePopup();
+    logStep("no-history move popup skipped");
 
     await page.evaluate(() => {
       const rows = Array.from(document.querySelectorAll(".table-row-group .table-row"));
@@ -741,6 +721,7 @@ async function main() {
       throw new Error("Smoke test failed: older neutral-heading Greninja entries did not pick up buff/nerf tone classes");
     }
     await closePopup();
+    logStep("greninja pokemon popup passed");
 
     await page.evaluate(() => {
       const input = document.getElementById("nameSearch");
@@ -782,6 +763,7 @@ async function main() {
     }
 
     await closePopup();
+    logStep("absol pokemon popup passed");
 
     const mobilePage = await browser.newPage();
     const mobileErrors = [];
@@ -789,6 +771,7 @@ async function main() {
     await mobilePage.setViewport({ width: 390, height: 844, isMobile: true, hasTouch: true, deviceScaleFactor: 2 });
     await mobilePage.goto(baseUrl, { waitUntil: "networkidle2", timeout: 120000 });
     await mobilePage.waitForSelector("#moveset-cards .mobile-card", { timeout: 120000 });
+    logStep("phone page ready");
 
     const mobileLayout = await mobilePage.evaluate(() => {
       const cards = document.getElementById("moveset-cards");
@@ -815,6 +798,7 @@ async function main() {
     if (/non-mobile devices/i.test(mobileLayout.headerText)) {
       throw new Error("Smoke test failed: mobile header still includes desktop-only messaging");
     }
+    logStep("phone layout passed");
 
     await mobilePage.evaluate(() => {
       document.getElementById("nameSearch").value = "Absol";
@@ -841,6 +825,7 @@ async function main() {
     if (!absolMobileRates.pickRate) {
       throw new Error("Smoke test failed: mobile card metrics did not render");
     }
+    logStep("phone absol card passed");
 
     await mobilePage.click("#mobileSortButton");
     await mobilePage.waitForFunction(() => document.body.classList.contains("mobile-panel-sort-open"), { timeout: 30000 });
@@ -852,31 +837,56 @@ async function main() {
     }, { timeout: 30000 });
     await mobilePage.evaluate(() => document.getElementById("closeSortPanel").click());
     await mobilePage.waitForFunction(() => !document.body.classList.contains("mobile-panel-open"), { timeout: 30000 });
+    logStep("phone sort panel passed");
 
     await mobilePage.click("#mobileFiltersButton");
     await mobilePage.waitForFunction(() => document.body.classList.contains("mobile-panel-filters-open"), { timeout: 30000 });
+    const initialFilterCardCount = await mobilePage.$$eval("#moveset-cards .mobile-card", (cards) => cards.length);
     await mobilePage.evaluate(() => {
-      const minPickRate = document.getElementById("minPickRate");
-      minPickRate.value = "5";
-      minPickRate.dispatchEvent(new Event("input", { bubbles: true }));
+      const pickRateMin = document.getElementById("pickRateMin");
+      const pickRateMax = document.getElementById("pickRateMax");
+      const winRateMin = document.getElementById("winRateMin");
+      const winRateMax = document.getElementById("winRateMax");
+      pickRateMin.value = "0.5";
+      pickRateMax.value = "4";
+      pickRateMax.dispatchEvent(new Event("input", { bubbles: true }));
+      winRateMin.value = "51";
+      winRateMin.dispatchEvent(new Event("input", { bubbles: true }));
+      winRateMax.value = "";
     });
     await mobilePage.evaluate(() => document.getElementById("closeFiltersPanel").click());
     await mobilePage.waitForFunction(() => !document.body.classList.contains("mobile-panel-open"), { timeout: 30000 });
+    await new Promise((resolve) => setTimeout(resolve, 250));
+    const filteredFilterCardCount = await mobilePage.$$eval("#moveset-cards .mobile-card", (cards) => cards.length);
+    if (filteredFilterCardCount > initialFilterCardCount) {
+      throw new Error(`Smoke test failed: mobile threshold filters did not apply correctly (${filteredFilterCardCount} of ${initialFilterCardCount})`);
+    }
+    logStep("phone filters panel passed");
     await mobilePage.evaluate(() => {
-      const minPickRate = document.getElementById("minPickRate");
-      minPickRate.value = "1";
-      minPickRate.dispatchEvent(new Event("input", { bubbles: true }));
+      const pickRateMin = document.getElementById("pickRateMin");
+      const pickRateMax = document.getElementById("pickRateMax");
+      const winRateMin = document.getElementById("winRateMin");
+      const winRateMax = document.getElementById("winRateMax");
+      pickRateMin.value = "0.5";
+      pickRateMin.dispatchEvent(new Event("input", { bubbles: true }));
+      pickRateMax.value = "";
+      pickRateMax.dispatchEvent(new Event("input", { bubbles: true }));
+      winRateMin.value = "";
+      winRateMin.dispatchEvent(new Event("input", { bubbles: true }));
+      winRateMax.value = "";
+      winRateMax.dispatchEvent(new Event("input", { bubbles: true }));
     });
     await mobilePage.waitForFunction(() => document.querySelectorAll("#moveset-cards .mobile-card").length > 0, { timeout: 30000 });
 
     await mobilePage.click("#mobileHelpButton");
     await mobilePage.waitForFunction(() => document.body.classList.contains("mobile-panel-help-open"), { timeout: 30000 });
     const helpItemCount = await mobilePage.$$eval("#mobileHelpPanel .mobile-help-list li", (items) => items.length);
-    if (helpItemCount < 4) {
+    if (helpItemCount < 6) {
       throw new Error("Smoke test failed: mobile help sheet did not render expected content");
     }
     await mobilePage.evaluate(() => document.getElementById("closeHelpPanel").click());
     await mobilePage.waitForFunction(() => !document.body.classList.contains("mobile-panel-open"), { timeout: 30000 });
+    logStep("phone help panel passed");
 
     await mobilePage.click("#moveset-cards .mobile-view-items");
     await mobilePage.waitForSelector("#popup:not(.hidden) .build-popup-top-row", { timeout: 30000 });

@@ -74,6 +74,21 @@ Example:
 conda run -n Unite_Builds python -m http.server 8000
 ```
 
+## Codex worktree helper
+Use `scripts/codex-worktree.ps1` from any worktree clone to bootstrap and run the common local actions:
+
+```powershell
+pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/codex-worktree.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/codex-worktree.ps1 -Action status
+pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/codex-worktree.ps1 -Action build
+pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/codex-worktree.ps1 -Action smoke
+pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/codex-worktree.ps1 -Action preview
+pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/codex-worktree.ps1 -Action serve
+pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/codex-worktree.ps1 -Action patch-history
+```
+
+The default `setup` action verifies the repo-named Conda environment when available and runs `npm ci` unless `-SkipNpmInstall` is set. The GitHub Actions workflow at `.github/workflows/codex-checks.yml` mirrors the same smoke/build path on pull requests and pushes to `main`.
+
 ## GitHub Pages deployment
 GitHub Pages is deployed by Actions from a staged site-only artifact.
 
