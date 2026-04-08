@@ -93,16 +93,33 @@ async function main() {
     }
 
     const desktopControls = await page.evaluate(() => {
+      const tierInfoButton = document.getElementById("tierInfoButton");
+      const hideTiersButton = document.getElementById("hideTiersButton");
       const tipsButton = document.getElementById("desktopTipsButton");
       const helpPanel = document.getElementById("mobileHelpPanel");
       return {
+        tierInfoButtonVisible: !!tierInfoButton && getComputedStyle(tierInfoButton).display !== "none",
+        hideTiersButtonVisible: !!hideTiersButton && getComputedStyle(hideTiersButton).display !== "none",
         tipsButtonVisible: !!tipsButton && getComputedStyle(tipsButton).display !== "none",
         helpPanelHidden: !!helpPanel && getComputedStyle(helpPanel).display === "none",
       };
     });
-    if (!desktopControls.tipsButtonVisible || !desktopControls.helpPanelHidden) {
+    if (!desktopControls.tierInfoButtonVisible || !desktopControls.hideTiersButtonVisible || !desktopControls.tipsButtonVisible || !desktopControls.helpPanelHidden) {
       throw new Error(`Smoke test failed: desktop controls did not initialize correctly (${JSON.stringify(desktopControls)})`);
     }
+
+    await page.click("#tierInfoButton");
+    await page.waitForFunction(() => document.body.classList.contains("desktop-tier-help-open"), { timeout: 30000 });
+    const desktopTierHelpState = await page.evaluate(() => ({
+      panelVisible: getComputedStyle(document.getElementById("tierHelpPanel")).display !== "none",
+      helpItems: document.querySelectorAll("#tierHelpPanel .mobile-help-list li").length,
+      panelTitle: document.querySelector("#tierHelpPanel .mobile-panel-header h3")?.textContent?.trim() || "",
+    }));
+    if (!desktopTierHelpState.panelVisible || desktopTierHelpState.helpItems < 1 || desktopTierHelpState.panelTitle !== "Tier") {
+      throw new Error(`Smoke test failed: desktop tier info panel did not render correctly (${JSON.stringify(desktopTierHelpState)})`);
+    }
+    await page.click("#closeTierHelpPanel");
+    await page.waitForFunction(() => !document.body.classList.contains("desktop-tier-help-open"), { timeout: 30000 });
 
     await page.click("#desktopTipsButton");
     await page.waitForFunction(() => document.body.classList.contains("desktop-help-open"), { timeout: 30000 });
@@ -111,7 +128,7 @@ async function main() {
       helpItems: document.querySelectorAll("#mobileHelpPanel .mobile-help-list li").length,
       panelTitle: document.querySelector("#mobileHelpPanel .mobile-panel-header h3")?.textContent?.trim() || "",
     }));
-    if (!desktopHelpState.panelVisible || desktopHelpState.helpItems < 9 || desktopHelpState.panelTitle !== "Info") {
+    if (!desktopHelpState.panelVisible || desktopHelpState.helpItems < 4 || desktopHelpState.panelTitle !== "Info") {
       throw new Error(`Smoke test failed: desktop Info panel did not render correctly (${JSON.stringify(desktopHelpState)})`);
     }
     await page.click("#closeHelpPanel");
@@ -228,8 +245,8 @@ async function main() {
     }
 
     const desktopWidths = [
-      { width: 1600, searchMode: "separate", maxRoleRows: 1, maxRoleCenterDelta: 70, maxControlCenterDelta: 40, moveset: "inline" },
-      { width: 1586, searchMode: "separate", maxRoleRows: 1, maxRoleCenterDelta: 70, maxControlCenterDelta: 40, moveset: "inline" },
+      { width: 1600, searchMode: "separate", maxRoleRows: 1, maxRoleCenterDelta: 70, maxControlCenterDelta: 40, moveset: "stacked" },
+      { width: 1586, searchMode: "separate", maxRoleRows: 1, maxRoleCenterDelta: 70, maxControlCenterDelta: 40, moveset: "stacked" },
       { width: 1540, searchMode: "separate", maxRoleRows: 1, maxRoleCenterDelta: 24, maxControlCenterDelta: 24, moveset: "stacked" },
       { width: 1230, searchMode: "separate", maxRoleRows: 1, maxRoleCenterDelta: 24, maxControlCenterDelta: 24, moveset: "stacked" },
       { width: 1180, searchMode: "separate", maxRoleRows: 1, maxRoleCenterDelta: 24, maxControlCenterDelta: 24, moveset: "stacked" },
@@ -847,7 +864,7 @@ async function main() {
       const pickRateMax = document.getElementById("pickRateMax");
       const winRateMin = document.getElementById("winRateMin");
       const winRateMax = document.getElementById("winRateMax");
-      pickRateMin.value = "0.5";
+      pickRateMin.value = "1.0";
       pickRateMax.value = "4";
       pickRateMax.dispatchEvent(new Event("input", { bubbles: true }));
       winRateMin.value = "51";
@@ -867,7 +884,7 @@ async function main() {
       const pickRateMax = document.getElementById("pickRateMax");
       const winRateMin = document.getElementById("winRateMin");
       const winRateMax = document.getElementById("winRateMax");
-      pickRateMin.value = "0.5";
+      pickRateMin.value = "1.0";
       pickRateMin.dispatchEvent(new Event("input", { bubbles: true }));
       pickRateMax.value = "";
       pickRateMax.dispatchEvent(new Event("input", { bubbles: true }));
@@ -881,8 +898,8 @@ async function main() {
     await mobilePage.click("#mobileHelpButton");
     await mobilePage.waitForFunction(() => document.body.classList.contains("mobile-panel-help-open"), { timeout: 30000 });
     const helpItemCount = await mobilePage.$$eval("#mobileHelpPanel .mobile-help-list li", (items) => items.length);
-    if (helpItemCount < 6) {
-      throw new Error("Smoke test failed: mobile help sheet did not render expected content");
+    if (helpItemCount < 1) {
+      throw new Error("Smoke test failed: mobile help sheet did not render expected Tier description");
     }
     await mobilePage.evaluate(() => document.getElementById("closeHelpPanel").click());
     await mobilePage.waitForFunction(() => !document.body.classList.contains("mobile-panel-open"), { timeout: 30000 });

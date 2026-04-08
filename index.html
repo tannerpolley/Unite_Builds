@@ -41,79 +41,92 @@
     <div class="main-header">
       <h1>Pokemon Unite Moveset Tierlist</h1>
       <div id="header-text" class="subheading"></div>
+      <div class="header-actions">
+        <button id="debugUiButton" class="debug-ui-button" type="button" hidden aria-pressed="false">Debug</button>
+        <button id="userViewButton" class="user-view-button" type="button" hidden aria-pressed="false">User View</button>
+      </div>
     </div>
 
     <div class="controls-shell">
-      <div class="mobile-toolbar">
-        <div class="mobile-toolbar-search control-box control-box-search">
-          <input id="nameSearch" placeholder="Search Name or Moves..." />
+      <div class="controls-row controls-row-primary">
+        <div class="mobile-toolbar">
+          <div class="mobile-toolbar-search control-box control-box-search">
+            <input id="nameSearch" placeholder="Search Name or Moves..." />
+          </div>
+          <div class="mobile-toolbar-actions">
+            <button id="mobileSortButton" class="mobile-toolbar-button" type="button">Sort</button>
+            <button id="mobileFiltersButton" class="mobile-toolbar-button" type="button">Filters</button>
+            <button id="mobileHelpButton" class="mobile-toolbar-button" type="button">Help</button>
+            <button id="desktopMobilePreviewInlineButton" class="mobile-toolbar-button mobile-preview-inline-button" type="button" hidden>Exit Preview</button>
+          </div>
         </div>
-        <div class="mobile-toolbar-actions">
-          <button id="mobileSortButton" class="mobile-toolbar-button" type="button">Sort</button>
-          <button id="mobileFiltersButton" class="mobile-toolbar-button" type="button">Filters</button>
-          <button id="mobileHelpButton" class="mobile-toolbar-button" type="button">Help</button>
-          <button id="desktopMobilePreviewInlineButton" class="mobile-toolbar-button mobile-preview-inline-button" type="button" hidden>Exit Preview</button>
+
+        <div class="control-box control-box-tier-toggle">
+          <button id="hideTiersButton" class="tier-toggle-button" type="button" aria-pressed="false">Hide Tiers</button>
+          <button id="tierInfoButton" class="tier-info-button" type="button" aria-label="How tiers are estimated">?</button>
         </div>
+
+        <button id="desktopTipsButton" class="desktop-tips-button" type="button">Info</button>
+        <button id="resetFilters" class="reset-button" type="button">Reset</button>
       </div>
 
-      <div id="filters">
-        <div class="mobile-panel-header">
-          <h3>Filters</h3>
-          <button id="closeFiltersPanel" class="mobile-panel-close" type="button" aria-label="Close filters">×</button>
-        </div>
+      <div class="controls-row controls-row-secondary">
+        <div id="filters">
+          <div class="mobile-panel-header">
+            <h3>Filters</h3>
+            <button id="closeFiltersPanel" class="mobile-panel-close" type="button" aria-label="Close filters">×</button>
+          </div>
 
-        <div class="threshold-filters pick-rate-container control-box control-box-filters">
-          <div class="threshold-filter">
-            <label class="threshold-filter-label" for="winRateMin">Win Rate</label>
-            <div class="threshold-filter-controls">
-              <input type="number" id="winRateMin" class="threshold-value-input" min="0" max="100" inputmode="decimal">
-              <span class="percentage-sign">%</span>
-              <span class="threshold-range-separator">to</span>
-              <input type="number" id="winRateMax" class="threshold-value-input" min="0" max="100" inputmode="decimal">
-              <span class="percentage-sign">%</span>
+          <div class="threshold-filters pick-rate-container control-box control-box-filters">
+            <div class="threshold-filter">
+              <label class="threshold-filter-label" for="winRateMin">Win Rate</label>
+              <div class="threshold-filter-controls">
+                <input type="number" id="winRateMin" class="threshold-value-input" min="0" max="100" inputmode="decimal">
+                <span class="percentage-sign">%</span>
+                <span class="threshold-range-separator">to</span>
+                <input type="number" id="winRateMax" class="threshold-value-input" min="0" max="100" inputmode="decimal">
+                <span class="percentage-sign">%</span>
+              </div>
+            </div>
+            <div class="threshold-filter">
+              <label class="threshold-filter-label" for="pickRateMin">Pick Rate</label>
+              <div class="threshold-filter-controls">
+                <input type="number" id="pickRateMin" class="threshold-value-input" min="0" max="100" inputmode="decimal" value="1.0">
+                <span class="percentage-sign">%</span>
+                <span class="threshold-range-separator">to</span>
+                <input type="number" id="pickRateMax" class="threshold-value-input" min="0" max="100" inputmode="decimal">
+                <span class="percentage-sign">%</span>
+              </div>
             </div>
           </div>
-          <div class="threshold-filter">
-            <label class="threshold-filter-label" for="pickRateMin">Pick Rate</label>
-            <div class="threshold-filter-controls">
-              <input type="number" id="pickRateMin" class="threshold-value-input" min="0" max="100" inputmode="decimal" value="0.5">
-              <span class="percentage-sign">%</span>
-              <span class="threshold-range-separator">to</span>
-              <input type="number" id="pickRateMax" class="threshold-value-input" min="0" max="100" inputmode="decimal">
-              <span class="percentage-sign">%</span>
-            </div>
+
+          <div class="role-filters control-box control-box-roles">
+            <label class="role-option">
+              <input type="checkbox" name="role" value="Attacker">
+              <span class="role-label">Attacker</span>
+            </label>
+            <label class="role-option">
+              <input type="checkbox" name="role" value="Defender">
+              <span class="role-label">Defender</span>
+            </label>
+            <label class="role-option">
+              <input type="checkbox" name="role" value="All-Rounder">
+              <span class="role-label">All-Rounder</span>
+            </label>
+            <label class="role-option">
+              <input type="checkbox" name="role" value="Speedster">
+              <span class="role-label">Speedster</span>
+            </label>
+            <label class="role-option">
+              <input type="checkbox" name="role" value="Supporter">
+              <span class="role-label">Supporter</span>
+            </label>
+          </div>
+
+          <div class="filter-actions control-box control-box-actions">
+            <button id="desktopMobilePreviewButton" class="desktop-preview-button" type="button" aria-pressed="false" hidden>Mobile Preview</button>
           </div>
         </div>
-
-        <div class="role-filters control-box control-box-roles">
-          <label class="role-option">
-            <input type="checkbox" name="role" value="Attacker">
-            <span class="role-label">Attacker</span>
-          </label>
-          <label class="role-option">
-            <input type="checkbox" name="role" value="Defender">
-            <span class="role-label">Defender</span>
-          </label>
-          <label class="role-option">
-            <input type="checkbox" name="role" value="All-Rounder">
-            <span class="role-label">All-Rounder</span>
-          </label>
-          <label class="role-option">
-            <input type="checkbox" name="role" value="Speedster">
-            <span class="role-label">Speedster</span>
-          </label>
-          <label class="role-option">
-            <input type="checkbox" name="role" value="Supporter">
-            <span class="role-label">Supporter</span>
-          </label>
-        </div>
-
-        <div class="filter-actions control-box control-box-actions">
-          <button id="desktopMobilePreviewButton" class="desktop-preview-button" type="button" aria-pressed="false" hidden>Mobile Preview</button>
-          <button id="desktopTipsButton" class="desktop-tips-button" type="button">Info</button>
-          <button id="resetFilters" class="reset-button" type="button">Reset</button>
-        </div>
-
       </div>
 
       <div id="mobileSortPanel" class="mobile-sheet" aria-hidden="true">
@@ -148,24 +161,31 @@
         </div>
         <div class="mobile-sheet-content">
           <ul class="mobile-help-list">
-            <li>Tap <strong>Pokemon</strong> for passive, attack, Unite Move, and patches</li>
-            <li>Tap <strong>moves</strong> for descriptions and move patch history</li>
-            <li><strong>Tier</strong> is a sample-damped composite of win rate, pick rate, and Pokémon ban rate</li>
-            <li><strong>Raw score</strong> = <span id="tierWinWeightValue">0.72</span> * z(win rate) + <span id="tierPickWeightValue">0.14</span> * z(pick rate) + <span id="tierBanWeightValue">0.08</span> * z(ban rate) + <span id="tierWinPickWeightValue">0.07</span> * z(win rate) * z(pick rate) + <span id="tierWinBanWeightValue">0.02</span> * z(win rate) * z(ban rate) + <span id="tierPickBanWeightValue">0.01</span> * z(pick rate) * z(ban rate)</li>
-            <li><strong>Sample confidence</strong> = 1 - exp(-estimated picks / <span id="tierSampleScaleValue">1200</span>)</li>
-            <li><strong>Damped score</strong> = raw score * (<span id="tierSampleFloorValue">0.25</span> + (1 - <span id="tierSampleFloorValue">0.25</span>) * sample confidence)</li>
-            <li><strong>Tier Score</strong> = z(damped score)</li>
-            <li><strong>Labels</strong> = S+ at <span id="tierBandSPlusValue">3.25</span>, S at <span id="tierBandSValue">0.75</span>, A at <span id="tierBandAValue">0.00</span>, B at <span id="tierBandBValue">-0.50</span>, C at <span id="tierBandCValue">-0.75</span>, and D below that</li>
-            <li><strong>Display cutoff</strong> = pick rate at or above <span id="tierDisplayCutoffValue">0.5</span>%</li>
-            <li>Tap <strong>Win Rate</strong> for build, battle item, and held item details</li>
-            <li>Use <strong>Sort</strong> and <strong>Filters</strong> to refine the list</li>
-            <li>Swipe and scroll within popups to explore details on mobile</li>
+            <li>Use the search box to filter by Pokémon name or moves.</li>
+            <li>Click a role chip to filter by role, or click it again to remove that filter.</li>
+            <li>Click a Pokémon image or name for the build popup, a move image for the move popup, and the Win Rate value for the row popup.</li>
+            <li>Click the table headers to sort, or use the mobile Sort panel on smaller screens.</li>
+            <li><strong>Hide Tiers</strong> switches the table to Win Rate sorting and hides the Tier column.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="tierHelpPanel" class="mobile-sheet" aria-hidden="true">
+        <div class="mobile-panel-header">
+          <h3>Tier</h3>
+          <button id="closeTierHelpPanel" class="mobile-panel-close" type="button" aria-label="Close tier help panel">×</button>
+        </div>
+        <div class="mobile-sheet-content">
+          <ul class="mobile-help-list">
+            <li><strong>Tier</strong> is an estimate, not a perfect ranking.</li>
+            <li>Win rate is the main signal, pick rate helps show whether the data is trustworthy, and ban rate nudges the result a little.</li>
+            <li>Very strong outliers become <strong>S</strong>, the middle of the list uses <strong>A</strong> through <strong>D</strong>, and the weakest rows fall to <strong>F</strong>.</li>
+            <li>Rows below the default trust cutoff can stay hidden until you turn them on or adjust filters.</li>
           </ul>
         </div>
       </div>
 
       <div id="mobilePanelScrim" class="mobile-panel-scrim hidden" aria-hidden="true"></div>
-      <button id="debugUiButton" class="debug-ui-button" type="button" hidden aria-pressed="false">Debug</button>
     </div>
 
     <div class="table-scroll-shell">

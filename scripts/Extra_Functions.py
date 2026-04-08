@@ -12,25 +12,41 @@ MATCHES_TXT_PATH = REPO_ROOT / "data" / "txt" / "matches.txt"
 UNITE_META_CSV_PATH = REPO_ROOT / "data" / "csv" / "Unite_Meta.csv"
 UNITE_DB_POKEMON_JSON_PATH = REPO_ROOT / "data" / "json" / "unite_db_pokemon.json"
 MAIN_MOVE_FALLBACKS_PATH = REPO_ROOT / "data" / "json" / "main_move_fallbacks.json"
+POKEMON_POPUP_DETAILS_PATH = REPO_ROOT / "static" / "json" / "pokemon_popup_details.json"
+HIDDEN_MOVESET_EXCLUSIONS = {
+    "Mew",
+    "Blaziken",
+    "Mega Charizard X",
+    "Mega Charizard Y",
+    "Mega Gyarados",
+    "Mega Lucario",
+    "Scizor",
+    "Scyther",
+    "Urshifu",
+}
 TIER_SCORE_CONFIG = {
-    "model": "sample-damped-interaction-zscore-v2",
-    "displayCutoff": 0.5,
-    "sampleScale": 1200,
-    "sampleFloor": 0.25,
-    "weights": {
-        "win": 0.72,
-        "pick": 0.14,
-        "ban": 0.08,
-        "winPick": 0.07,
-        "winBan": 0.02,
-        "pickBan": 0.01,
-    },
+    "model": "trusted-gated-log-trust-normalized",
+    "displayCutoff": 1.0,
+    "outlierFenceMultiplier": 1.5,
+    "trustPivot": 1.0,
+    "trustSharpness": 0.25,
+    "winWeight": 0.8,
+    "pickWeight": 0.25,
+    "banWeight": 0.005,
+    "banScale": 2.0,
     "bands": [
-        {"label": "S+", "threshold": 3.25},
-        {"label": "S", "threshold": 0.75},
-        {"label": "A", "threshold": 0.0},
-        {"label": "B", "threshold": -0.5},
-        {"label": "C", "threshold": -0.75},
+        {"label": "A+", "threshold": 0.8333333333333334},
+        {"label": "A", "threshold": 0.6666666666666666},
+        {"label": "A-", "threshold": 0.5},
+        {"label": "B+", "threshold": 0.3333333333333333},
+        {"label": "B", "threshold": 0.16666666666666666},
+        {"label": "B-", "threshold": 0.0},
+        {"label": "C+", "threshold": -0.16666666666666666},
+        {"label": "C", "threshold": -0.3333333333333333},
+        {"label": "C-", "threshold": -0.5},
+        {"label": "D+", "threshold": -0.6666666666666666},
+        {"label": "D", "threshold": -0.8333333333333334},
+        {"label": "D-", "threshold": -1.0},
     ],
 }
 HELD_ITEM_NAME_ALIASES = {
@@ -102,11 +118,52 @@ def safe_zscore(values):
     return (series - float(series.mean())) / std
 
 
+def normalize_signed_range(values, trusted_mask=None):
+    series = pd.to_numeric(pd.Series(values), errors="coerce").fillna(0.0)
+    if trusted_mask is not None:
+        trusted_series = series[pd.Series(trusted_mask, index=series.index).fillna(False)]
+        if len(trusted_series) >= 2:
+            minimum = float(trusted_series.min())
+            maximum = float(trusted_series.max())
+        else:
+            minimum = float(series.min()) if len(series) else 0.0
+            maximum = float(series.max()) if len(series) else 0.0
+    else:
+        minimum = float(series.min()) if len(series) else 0.0
+        maximum = float(series.max()) if len(series) else 0.0
+    if np.isclose(maximum, minimum):
+        return pd.Series(np.zeros(len(series)), index=series.index)
+    scaled = (series - minimum) / (maximum - minimum)
+    return (scaled * 2.0) - 1.0
+
+
+def tukey_fences(values, multiplier=1.5):
+    series = pd.to_numeric(pd.Series(values), errors="coerce").dropna()
+    if series.empty:
+        return None, None
+
+    q1 = float(series.quantile(0.25))
+    q3 = float(series.quantile(0.75))
+    iqr = q3 - q1
+    if np.isclose(iqr, 0.0):
+        return q1, q3
+
+    fence_multiplier = max(float(multiplier), 0.0)
+    lower = q1 - (fence_multiplier * iqr)
+    upper = q3 + (fence_multiplier * iqr)
+    return lower, upper
+
+
 def score_to_tier(score):
+    if score > 1.0:
+        return "S"
+    if score < -1.0:
+        return "F"
+
     for band in TIER_SCORE_CONFIG.get("bands", []):
         if score >= band["threshold"]:
             return band["label"]
-    return "D"
+    return "F"
 
 
 def compute_tier_raw_score(df):
@@ -117,15 +174,19 @@ def compute_tier_raw_score(df):
     win_z = safe_zscore(win_rates)
     pick_z = safe_zscore(pick_rates)
     ban_z = safe_zscore(ban_rates)
-
-    weights = TIER_SCORE_CONFIG["weights"]
+    trust_pivot = max(float(TIER_SCORE_CONFIG.get("trustPivot", 1.0)), 0.05)
+    trust_sharpness = max(float(TIER_SCORE_CONFIG.get("trustSharpness", 0.25)), 0.05)
+    pick_trust = np.tanh(np.log(np.clip(pick_rates, 0.05, None) / trust_pivot) / trust_sharpness)
+    trust_factor = (pick_trust + 1.0) / 2.0
+    ban_scale = max(float(TIER_SCORE_CONFIG.get("banScale", 2.0)), 0.01)
+    ban_signal = np.tanh(ban_z / ban_scale)
     return (
-        weights["win"] * win_z
-        + weights["pick"] * pick_z
-        + weights["ban"] * ban_z
-        + weights["winPick"] * (win_z * pick_z)
-        + weights["winBan"] * (win_z * ban_z)
-        + weights["pickBan"] * (pick_z * ban_z)
+        trust_factor
+        * (
+            float(TIER_SCORE_CONFIG["winWeight"]) * win_z
+            + float(TIER_SCORE_CONFIG["pickWeight"]) * pick_z
+        )
+        + float(TIER_SCORE_CONFIG["banWeight"]) * ban_signal
     )
 
 
@@ -133,6 +194,7 @@ def add_tier_estimates(df):
     df = df.copy()
     if df.empty:
         df["Tier"] = pd.Series(dtype="object")
+        df["Tier Raw Score"] = pd.Series(dtype="float64")
         df["Tier Score"] = pd.Series(dtype="float64")
         return df
 
@@ -141,16 +203,19 @@ def add_tier_estimates(df):
     df["Ban Rate"] = df["_normalized_name"].map(ban_rate_lookup).fillna(0.0)
 
     tier_raw_score = compute_tier_raw_score(df)
-    total_matches = load_total_matches()
-    pick_rates = pd.to_numeric(df["Pick Rate"], errors="coerce").fillna(0.0)
-    estimated_picks = pick_rates / 100.0 * total_matches
-    sample_confidence = 1.0 - np.exp(-(estimated_picks / TIER_SCORE_CONFIG["sampleScale"]))
-    damped_score = tier_raw_score * (
-        TIER_SCORE_CONFIG["sampleFloor"]
-        + ((1.0 - TIER_SCORE_CONFIG["sampleFloor"]) * sample_confidence)
-    )
-    tier_score = safe_zscore(damped_score)
+    display_cutoff = float(TIER_SCORE_CONFIG.get("displayCutoff", 1.0))
+    fence_multiplier = float(TIER_SCORE_CONFIG.get("outlierFenceMultiplier", 1.5))
+    trusted_mask = pd.to_numeric(df["Pick Rate"], errors="coerce").fillna(0.0) >= display_cutoff
+    trusted_raw_scores = tier_raw_score[trusted_mask]
+    lower_fence, upper_fence = tukey_fences(trusted_raw_scores, fence_multiplier)
+    if lower_fence is None or upper_fence is None:
+        trusted_inlier_mask = trusted_mask
+    else:
+        trusted_inlier_mask = trusted_mask & tier_raw_score.between(lower_fence, upper_fence)
 
+    tier_score = normalize_signed_range(tier_raw_score, trusted_mask=trusted_inlier_mask)
+
+    df["Tier Raw Score"] = tier_raw_score.round(3)
     df["Tier"] = tier_score.map(score_to_tier)
     df["Tier Score"] = tier_score.round(3)
     return df.drop(columns=["_normalized_name"], errors="ignore")
@@ -246,10 +311,209 @@ def load_unite_db_build_lookup():
             )
         pokemon_build_lookup[pokemon_name].append({
             "upgradeMoves": upgrade_moves,
+            "upgradeMoveNames": tuple(build.get("upgrade", [])),
             "recommendedBuild": recommended_build,
         })
 
     return build_lookup, unordered_build_lookup, pokemon_build_lookup
+
+
+def load_move_display_lookup():
+    display_lookup = {}
+
+    sources = []
+    if MOVESETS_CSV_PATH.exists():
+        sources.append(MOVESETS_CSV_PATH)
+    if MOVESET_ROWS_JSON_PATH.exists():
+        sources.append(MOVESET_ROWS_JSON_PATH)
+
+    for source_path in sources:
+        try:
+            if source_path.suffix.lower() == ".csv":
+                frame = pd.read_csv(source_path)
+                move_sets = frame["Move Set"].dropna() if "Move Set" in frame.columns else []
+            else:
+                with open(source_path, "r", encoding="utf-8") as handle:
+                    rows = json.load(handle)
+                move_sets = [
+                    row.get("Move Set")
+                    for row in rows
+                    if isinstance(row, dict) and row.get("Move Set")
+                ]
+        except Exception:
+            continue
+
+        for move_set in move_sets:
+            for move_name in str(move_set).split("/"):
+                normalized_move = normalize_build_key(move_name)
+                if normalized_move and normalized_move not in display_lookup:
+                    display_lookup[normalized_move] = move_name.strip()
+
+    return display_lookup
+
+
+def load_pokemon_popup_move_grids():
+    if not POKEMON_POPUP_DETAILS_PATH.exists():
+        return {}
+
+    move_display_lookup = load_move_display_lookup()
+    with open(POKEMON_POPUP_DETAILS_PATH, "r", encoding="utf-8") as handle:
+        popup_details = json.load(handle)
+
+    move_grid_lookup = {}
+    for pokemon_name, pokemon_entry in popup_details.items():
+        if not isinstance(pokemon_entry, dict):
+            continue
+
+        move_1 = pokemon_entry.get("Move 1")
+        move_2 = pokemon_entry.get("Move 2")
+        if not isinstance(move_1, dict) or not isinstance(move_2, dict):
+            continue
+
+        slot1_moves = [
+            move_display_lookup.get(normalize_build_key((move_1.get("Upgrade 1") or {}).get("Name")), (move_1.get("Upgrade 1") or {}).get("Name")),
+            move_display_lookup.get(normalize_build_key((move_1.get("Upgrade 2") or {}).get("Name")), (move_1.get("Upgrade 2") or {}).get("Name")),
+        ]
+        slot2_moves = [
+            move_display_lookup.get(normalize_build_key((move_2.get("Upgrade 1") or {}).get("Name")), (move_2.get("Upgrade 1") or {}).get("Name")),
+            move_display_lookup.get(normalize_build_key((move_2.get("Upgrade 2") or {}).get("Name")), (move_2.get("Upgrade 2") or {}).get("Name")),
+        ]
+        if not all(slot1_moves) or not all(slot2_moves):
+            continue
+
+        move_grid_lookup[normalize_pokemon_key(pokemon_name)] = {
+            "slot1Moves": slot1_moves,
+            "slot2Moves": slot2_moves,
+            "pairs": [(slot1_move, slot2_move) for slot1_move in slot1_moves for slot2_move in slot2_moves],
+        }
+
+    return move_grid_lookup
+
+
+def backfill_hidden_movesets(movesets, matches, pick_rate_dict, win_rate_dict):
+    movesets_by_name = defaultdict(list)
+    for moveset in movesets:
+        movesets_by_name[moveset.get("Name")].append(moveset)
+
+    move_grid_lookup = load_pokemon_popup_move_grids()
+    total_matches = float(matches or 0.0)
+    synthetic_movesets = []
+
+    for pokemon_name, pokemon_movesets in movesets_by_name.items():
+        if pokemon_name in HIDDEN_MOVESET_EXCLUSIONS:
+            continue
+
+        pair_rows = []
+        first_moves = []
+        second_moves = []
+        for moveset in pokemon_movesets:
+            move_parts = [part.strip() for part in str(moveset.get("Move Set") or "").split("/") if part.strip()]
+            if len(move_parts) != 2:
+                break
+            pair_rows.append(tuple(move_parts))
+            first_moves.append(move_parts[0])
+            second_moves.append(move_parts[1])
+        else:
+            pokemon_pick_rate = float(pick_rate_dict.get(pokemon_name, 0.0) or 0.0)
+            pokemon_win_rate = float(win_rate_dict.get(pokemon_name, 0.0) or 0.0)
+            total_pokemon_picks = (pokemon_pick_rate / 100.0) * total_matches
+            total_pokemon_wins = total_pokemon_picks * (pokemon_win_rate / 100.0)
+            observed_picks = sum(float(moveset.get("Pick Rate", 0.0) or 0.0) / 100.0 * total_matches for moveset in pokemon_movesets)
+            observed_wins = sum(
+                (float(moveset.get("Pick Rate", 0.0) or 0.0) / 100.0)
+                * total_matches
+                * (float(moveset.get("Win Rate", 0.0) or 0.0) / 100.0)
+                for moveset in pokemon_movesets
+            )
+            missing_picks = max(total_pokemon_picks - observed_picks, 0.0)
+            missing_wins = max(total_pokemon_wins - observed_wins, 0.0)
+            move_grid = move_grid_lookup.get(normalize_pokemon_key(pokemon_name))
+            if len(pokemon_movesets) == 3:
+                unique_first_moves = list(dict.fromkeys(first_moves))
+                unique_second_moves = list(dict.fromkeys(second_moves))
+                if len(unique_first_moves) != 2 or len(unique_second_moves) != 2:
+                    continue
+
+                existing_pairs = set(pair_rows)
+                missing_pairs = [
+                    (first_move, second_move)
+                    for first_move in unique_first_moves
+                    for second_move in unique_second_moves
+                    if (first_move, second_move) not in existing_pairs
+                ]
+                if len(missing_pairs) != 1:
+                    continue
+
+                missing_pair_weights = [1.0]
+                missing_move_names = list(missing_pairs[0])
+            elif len(pokemon_movesets) == 2 and move_grid and len(move_grid.get("pairs", [])) == 4:
+                visible_pairs = set(pair_rows)
+                missing_pairs = [pair for pair in move_grid["pairs"] if pair not in visible_pairs]
+                if len(missing_pairs) != 2:
+                    continue
+
+                visible_firsts = set(first_moves)
+                visible_seconds = set(second_moves)
+                if len(visible_firsts) == 1 and len(visible_seconds) == 2:
+                    visible_second_pick_rates = {
+                        pair[1]: float(row.get("Pick Rate", 0.0) or 0.0)
+                        for pair, row in zip(pair_rows, pokemon_movesets)
+                    }
+                    missing_pair_weights = [
+                        visible_second_pick_rates.get(pair[1], 0.0)
+                        for pair in missing_pairs
+                    ]
+                elif len(visible_seconds) == 1 and len(visible_firsts) == 2:
+                    visible_first_pick_rates = {
+                        pair[0]: float(row.get("Pick Rate", 0.0) or 0.0)
+                        for pair, row in zip(pair_rows, pokemon_movesets)
+                    }
+                    missing_pair_weights = [
+                        visible_first_pick_rates.get(pair[0], 0.0)
+                        for pair in missing_pairs
+                    ]
+                else:
+                    missing_pair_weights = [1.0, 1.0]
+                if not any(weight > 0 for weight in missing_pair_weights):
+                    missing_pair_weights = [1.0 for _ in missing_pairs]
+                missing_move_names = [list(pair) for pair in missing_pairs]
+            else:
+                continue
+
+            weight_total = float(sum(missing_pair_weights)) if missing_pair_weights else 0.0
+            if weight_total <= 0:
+                continue
+
+            target_pick_rate_total = round((missing_picks / total_matches * 100.0), 2) if total_matches > 0 else 0.0
+            row_specs = []
+            for pair, weight in zip(missing_pairs, missing_pair_weights):
+                estimated_picks = missing_picks * (float(weight) / weight_total)
+                estimated_pick_rate = (estimated_picks / total_matches * 100.0) if total_matches > 0 else 0.0
+                estimated_win_rate = (missing_wins / missing_picks * 100.0) if missing_picks > 0 else pokemon_win_rate
+                row_specs.append({
+                    "Name": pokemon_name,
+                    "Pokemon": f"Pokemon/{pokemon_name}.png",
+                    "Role": pokemon_movesets[0].get("Role"),
+                    "Pick Rate": estimated_pick_rate,
+                    "Win Rate": estimated_win_rate,
+                    "Move Set": f"{pair[0]}/{pair[1]}",
+                    "Move 1": f"Moves/{pokemon_name} - {pair[0]}.png",
+                    "Move 2": f"Moves/{pokemon_name} - {pair[1]}.png",
+                    "Battle Items": [],
+                })
+
+            rounded_pick_rates = [round(spec["Pick Rate"], 2) for spec in row_specs]
+            if rounded_pick_rates:
+                rounded_pick_rates[-1] = round(target_pick_rate_total - sum(rounded_pick_rates[:-1]), 2)
+                for spec, pick_rate in zip(row_specs, rounded_pick_rates):
+                    spec["Pick Rate"] = pick_rate
+                    spec["Win Rate"] = round(spec["Win Rate"], 2)
+                    synthetic_movesets.append(spec)
+
+    if not synthetic_movesets:
+        return movesets
+
+    return movesets + synthetic_movesets
 
 
 def get_recommended_build(
@@ -328,7 +592,7 @@ def build_moveset_rows(df):
     df = df.sort_values(by='Name').reset_index(drop=True)
     df['Pick Rate'] = df['Pick Rate'].round(2)
     df['Win Rate'] = df['Win Rate'].round(2)
-    static_columns = ["Name", "Pokemon", "Role", "Move Set", "Move 1", "Move 2", "Tier", "Tier Score", "Win Rate", "Pick Rate"]
+    static_columns = ["Name", "Pokemon", "Role", "Move Set", "Move 1", "Move 2", "Tier", "Tier Raw Score", "Tier Score", "Win Rate", "Pick Rate"]
     final_data = []
 
     for _, row in df.iterrows():
@@ -358,7 +622,7 @@ def organize_df(df, column_titles):
     df = df.reindex(columns=column_titles)
     json_ready_data = build_moveset_rows(df)
 
-    csv_static_columns = ["Name", "Pokemon", "Role", "Move Set", "Move 1", "Move 2", "Tier", "Tier Score", "Win Rate", "Pick Rate"]
+    csv_static_columns = ["Name", "Pokemon", "Role", "Move Set", "Move 1", "Move 2", "Tier", "Tier Raw Score", "Tier Score", "Win Rate", "Pick Rate"]
     item_columns = []
     max_items = max((len(row.get("Battle Items", [])) for _, row in df.iterrows()), default=0)
     for idx in range(1, max_items + 1):
@@ -396,6 +660,7 @@ def fix_special_cases(movesets, matches, pick_rate_dict, win_rate_dict):
     # movesets = fix_mega(movesets, mega_lucario_movesets, matches)
     movesets = fix_mew(movesets, mew_movesets, matches, pick_rate_dict, win_rate_dict)
     movesets = fix_scyther_and_urshifu(movesets)
+    movesets = backfill_hidden_movesets(movesets, matches, pick_rate_dict, win_rate_dict)
 
     pd.options.display.float_format = '{:.2f}%'.format
     df = pd.DataFrame(movesets)

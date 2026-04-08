@@ -16,58 +16,64 @@ document.addEventListener("DOMContentLoaded", async () => {
   const desktopMobilePreviewInlineButton = document.getElementById("desktopMobilePreviewInlineButton");
   const desktopMobilePreviewButton = document.getElementById("desktopMobilePreviewButton");
   const desktopTipsButton = document.getElementById("desktopTipsButton");
+  const hideTiersButton = document.getElementById("hideTiersButton");
+  const tierInfoButton = document.getElementById("tierInfoButton");
   const debugUiButton = document.getElementById("debugUiButton");
+  const userViewButton = document.getElementById("userViewButton");
   const pickRateMin = document.getElementById("pickRateMin");
   const pickRateMax = document.getElementById("pickRateMax");
   const winRateMin = document.getElementById("winRateMin");
   const winRateMax = document.getElementById("winRateMax");
   const mobileSortPanel = document.getElementById("mobileSortPanel");
   const mobileHelpPanel = document.getElementById("mobileHelpPanel");
+  const tierHelpPanel = document.getElementById("tierHelpPanel");
   const mobilePanelScrim = document.getElementById("mobilePanelScrim");
   const closeFiltersPanel = document.getElementById("closeFiltersPanel");
   const closeSortPanel = document.getElementById("closeSortPanel");
   const closeHelpPanel = document.getElementById("closeHelpPanel");
+  const closeTierHelpPanel = document.getElementById("closeTierHelpPanel");
   const mobileSortColumn = document.getElementById("mobileSortColumn");
   const mobileSortDirection = document.getElementById("mobileSortDirection");
   const tierInfoElements = {
+    model: document.getElementById("tierModelValue"),
+    trustPivot: document.getElementById("tierTrustPivotValue"),
+    trustSharpness: document.getElementById("tierTrustSharpnessValue"),
     winWeight: document.getElementById("tierWinWeightValue"),
     pickWeight: document.getElementById("tierPickWeightValue"),
     banWeight: document.getElementById("tierBanWeightValue"),
-    winPickWeight: document.getElementById("tierWinPickWeightValue"),
-    winBanWeight: document.getElementById("tierWinBanWeightValue"),
-    pickBanWeight: document.getElementById("tierPickBanWeightValue"),
-    sampleScale: document.getElementById("tierSampleScaleValue"),
-    sampleFloor: document.getElementById("tierSampleFloorValue"),
-    bandSPlus: document.getElementById("tierBandSPlusValue"),
-    bandS: document.getElementById("tierBandSValue"),
-    bandA: document.getElementById("tierBandAValue"),
-    bandB: document.getElementById("tierBandBValue"),
-    bandC: document.getElementById("tierBandCValue"),
+    banScale: document.getElementById("tierBanScaleValue"),
+    outlierFenceMultiplier: document.getElementById("tierOutlierFenceValue"),
+    normalizationCutoff: document.getElementById("tierNormalizationCutoffValue"),
+    bandSummary: document.getElementById("tierBandSummary"),
     displayCutoff: document.getElementById("tierDisplayCutoffValue"),
   };
   let assetVersion = "";
   const defaultTierScoreConfig = {
-    model: "sample-damped-interaction-zscore-v2",
-    displayCutoff: 0.5,
-    sampleScale: 1200,
-    sampleFloor: 0.25,
-    weights: {
-      win: 0.72,
-      pick: 0.14,
-      ban: 0.08,
-      winPick: 0.07,
-      winBan: 0.02,
-      pickBan: 0.01,
-    },
+    model: "trusted-gated-log-trust-normalized",
+    displayCutoff: 1.0,
+    outlierFenceMultiplier: 1.5,
+    trustPivot: 1.0,
+    trustSharpness: 0.25,
+    winWeight: 0.8,
+    pickWeight: 0.25,
+    banWeight: 0.005,
+    banScale: 2.0,
     bands: [
-      { label: "S+", threshold: 3.25 },
-      { label: "S", threshold: 0.75 },
-      { label: "A", threshold: 0.0 },
-      { label: "B", threshold: -0.5 },
-      { label: "C", threshold: -0.75 },
+      { label: "A+", threshold: 0.8333333333333334 },
+      { label: "A", threshold: 0.6666666666666666 },
+      { label: "A-", threshold: 0.5 },
+      { label: "B+", threshold: 0.3333333333333333 },
+      { label: "B", threshold: 0.16666666666666666 },
+      { label: "B-", threshold: 0.0 },
+      { label: "C+", threshold: -0.16666666666666666 },
+      { label: "C", threshold: -0.3333333333333333 },
+      { label: "C-", threshold: -0.5 },
+      { label: "D+", threshold: -0.6666666666666666 },
+      { label: "D", threshold: -0.8333333333333334 },
+      { label: "D-", threshold: -1.0 },
     ],
   };
-  const defaultPickRateMin = 0.5;
+  const defaultPickRateMin = 1.0;
 
   let tableItems = [];
   let tableItemsPromise = null;
@@ -81,7 +87,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   let movePatchHistoryPromise = null;
   let mobileCardObserver = null;
   const desktopPreviewStorageKey = "desktopMobilePreview";
-  const desktopControlLayoutClasses = ["desktop-controls-wide", "desktop-controls-stacked", "desktop-controls-compact"];
+  const userViewStorageKey = "userViewSimEnabled";
+  const desktopControlLayoutClasses = ["desktop-controls-wide", "desktop-controls-compact"];
   const desktopTableLayoutClasses = ["desktop-table-wide", "desktop-table-compact", "desktop-table-narrow"];
   const mobileCardLayoutClasses = ["mobile-card-compact", "mobile-card-wide"];
 
@@ -108,6 +115,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   function normalizeSortColumn(column) {
+    if (column === "Tier" && tierColumnHidden) {
+      return "Win Rate";
+    }
     return column;
   }
 
@@ -131,6 +141,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   function getTierDisplayData(entry) {
     return {
       label: entry["Tier"],
+      rawScore: entry["Tier Raw Score"],
       score: entry["Tier Score"],
     };
   }
@@ -147,54 +158,38 @@ document.addEventListener("DOMContentLoaded", async () => {
     const config = {
       ...defaultTierScoreConfig,
       ...(metadata?.tierScoreConfig || {}),
-      weights: {
-        ...defaultTierScoreConfig.weights,
-        ...(metadata?.tierScoreConfig?.weights || {}),
-      },
     };
 
-    const bandsByLabel = new Map((config.bands || []).map((band) => [band.label, band.threshold]));
-    if (tierInfoElements.intercept) {
-      tierInfoElements.intercept.textContent = formatTierConfigNumber(config.intercept, 3);
+    if (tierInfoElements.model) {
+      tierInfoElements.model.textContent = config.model || defaultTierScoreConfig.model;
+    }
+    if (tierInfoElements.trustPivot) {
+      tierInfoElements.trustPivot.textContent = formatTierConfigNumber(config.trustPivot, 1);
+    }
+    if (tierInfoElements.trustSharpness) {
+      tierInfoElements.trustSharpness.textContent = formatTierConfigNumber(config.trustSharpness, 2);
     }
     if (tierInfoElements.winWeight) {
-      tierInfoElements.winWeight.textContent = formatTierConfigNumber(config.weights.win, 3);
+      tierInfoElements.winWeight.textContent = formatTierConfigNumber(config.winWeight, 2);
     }
     if (tierInfoElements.pickWeight) {
-      tierInfoElements.pickWeight.textContent = formatTierConfigNumber(config.weights.pick, 3);
+      tierInfoElements.pickWeight.textContent = formatTierConfigNumber(config.pickWeight, 2);
     }
     if (tierInfoElements.banWeight) {
-      tierInfoElements.banWeight.textContent = formatTierConfigNumber(config.weights.ban, 3);
+      tierInfoElements.banWeight.textContent = formatTierConfigNumber(config.banWeight, 3);
     }
-    if (tierInfoElements.winPickWeight) {
-      tierInfoElements.winPickWeight.textContent = formatTierConfigNumber(config.weights.winPick, 3);
+    if (tierInfoElements.banScale) {
+      tierInfoElements.banScale.textContent = formatTierConfigNumber(config.banScale, 1);
     }
-    if (tierInfoElements.winBanWeight) {
-      tierInfoElements.winBanWeight.textContent = formatTierConfigNumber(config.weights.winBan, 3);
+    if (tierInfoElements.outlierFenceMultiplier) {
+      tierInfoElements.outlierFenceMultiplier.textContent = formatTierConfigNumber(config.outlierFenceMultiplier, 1);
     }
-    if (tierInfoElements.pickBanWeight) {
-      tierInfoElements.pickBanWeight.textContent = formatTierConfigNumber(config.weights.pickBan, 3);
+    if (tierInfoElements.normalizationCutoff) {
+      tierInfoElements.normalizationCutoff.textContent = formatTierConfigNumber(config.displayCutoff, 1);
     }
-    if (tierInfoElements.sampleScale) {
-      tierInfoElements.sampleScale.textContent = formatTierConfigNumber(config.sampleScale);
-    }
-    if (tierInfoElements.sampleFloor) {
-      tierInfoElements.sampleFloor.textContent = formatTierConfigNumber(config.sampleFloor, 2);
-    }
-    if (tierInfoElements.bandSPlus) {
-      tierInfoElements.bandSPlus.textContent = formatTierConfigNumber(bandsByLabel.get("S+"), 2);
-    }
-    if (tierInfoElements.bandS) {
-      tierInfoElements.bandS.textContent = formatTierConfigNumber(bandsByLabel.get("S"), 2);
-    }
-    if (tierInfoElements.bandA) {
-      tierInfoElements.bandA.textContent = formatTierConfigNumber(bandsByLabel.get("A"), 2);
-    }
-    if (tierInfoElements.bandB) {
-      tierInfoElements.bandB.textContent = formatTierConfigNumber(bandsByLabel.get("B"), 2);
-    }
-    if (tierInfoElements.bandC) {
-      tierInfoElements.bandC.textContent = formatTierConfigNumber(bandsByLabel.get("C"), 2);
+    if (tierInfoElements.bandSummary) {
+      const labels = (config.bands || []).map((band) => `${band.label} >= ${formatTierConfigNumber(band.threshold, 3)}`);
+      tierInfoElements.bandSummary.textContent = labels.length ? `${labels.join(", ")}, and F below that` : "";
     }
     if (tierInfoElements.displayCutoff) {
       tierInfoElements.displayCutoff.textContent = formatTierConfigNumber(config.displayCutoff, 1);
@@ -207,7 +202,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     const hostname = String(location.hostname || "").toLowerCase();
-    return hostname === "localhost" || hostname === "127.0.0.1" || hostname === "::1" || hostname.endsWith(".local");
+    return hostname === "localhost" ||
+      hostname === "127.0.0.1" ||
+      hostname === "::1" ||
+      hostname.endsWith(".local") ||
+      /^10\./.test(hostname) ||
+      /^192\.168\./.test(hostname) ||
+      /^172\.(1[6-9]|2\d|3[0-1])\./.test(hostname);
   }
 
   function clearDesktopAdaptiveLayout() {
@@ -264,12 +265,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     const shellRect = shell.getBoundingClientRect();
     const measuredNodes = [
       shell.querySelector(".mobile-toolbar-search"),
+      shell.querySelector(".control-box-tier-toggle"),
       shell.querySelector(".threshold-filters"),
       shell.querySelector(".role-filters"),
       shell.querySelector(".filter-actions")
     ].filter(Boolean);
 
-    return measuredNodes.some((node) => {
+    return measuredNodes.filter((node) => node.getClientRects().length > 0).some((node) => {
       const rect = node.getBoundingClientRect();
       return rect.left < shellRect.left - 1 || rect.right > shellRect.right + 1;
     });
@@ -348,74 +350,70 @@ document.addEventListener("DOMContentLoaded", async () => {
     setCssPixelVar(controlsShell, "--controls-search-font-size", lerp(15.2, 17.6, controlsProgress) * desktopUiScale);
     setCssPixelVar(controlsShell, "--controls-pick-input-width", lerp(58, 68, controlsProgress) * desktopUiScale);
 
-    let chosenControlLayout;
-    if (controlsWidth >= 1080) {
-      chosenControlLayout = "desktop-controls-wide";
-      setExclusiveClass(controlsShell, desktopControlLayoutClasses, chosenControlLayout);
-      // Force layout before checking bounds.
-      void controlsShell.offsetWidth;
-      if (controlsOverflow(controlsShell)) {
-        chosenControlLayout = controlsWidth >= 1240 ? "desktop-controls-compact" : "desktop-controls-stacked";
-      }
-    } else {
-      const controlLayoutCandidates = controlsWidth >= 900
-        ? ["desktop-controls-compact", "desktop-controls-stacked"]
-        : ["desktop-controls-stacked"];
-
-      chosenControlLayout = controlLayoutCandidates[controlLayoutCandidates.length - 1];
-      for (const candidate of controlLayoutCandidates) {
-        setExclusiveClass(controlsShell, desktopControlLayoutClasses, candidate);
-        // Force layout before checking bounds.
-        void controlsShell.offsetWidth;
-        if (!controlsOverflow(controlsShell)) {
-          chosenControlLayout = candidate;
-          break;
-        }
-      }
-    }
+    let chosenControlLayout = controlsWidth >= 1460 ? "desktop-controls-wide" : "desktop-controls-compact";
     setExclusiveClass(controlsShell, desktopControlLayoutClasses, chosenControlLayout);
+    // Force layout before checking bounds.
+    void controlsShell.offsetWidth;
+    if (chosenControlLayout === "desktop-controls-wide" && controlsOverflow(controlsShell)) {
+      chosenControlLayout = "desktop-controls-compact";
+      setExclusiveClass(controlsShell, desktopControlLayoutClasses, chosenControlLayout);
+    }
 
     const tableProgress = clampNumber((tableWidth - 760) / 840, 0, 1);
     const easedProgress = Math.pow(tableProgress, 0.9);
-    setCssPixelVar(tableContainer, "--table-header-size", lerp(15.6, 20.6, easedProgress) * desktopUiScale);
+    setCssPixelVar(tableContainer, "--table-header-size", lerp(17.2, 22.2, easedProgress) * desktopUiScale);
     setCssPixelVar(tableContainer, "--table-cell-pad-y", lerp(8.4, 10.8, easedProgress) * desktopUiScale);
     setCssPixelVar(tableContainer, "--table-cell-pad-x", lerp(2.8, 7.2, easedProgress) * desktopUiScale);
     setCssPixelVar(tableContainer, "--table-image-size", lerp(44, 76, easedProgress) * desktopIconScale);
     setCssPixelVar(tableContainer, "--table-move-gap", lerp(0, 5, easedProgress) * desktopUiScale);
-    setCssPixelVar(tableContainer, "--table-name-size", lerp(14.9, 19.8, easedProgress) * desktopUiScale);
-    setCssPixelVar(tableContainer, "--table-role-size", lerp(14.9, 19.8, easedProgress) * desktopUiScale);
-    setCssPixelVar(tableContainer, "--table-moveset-size", lerp(14.4, 18.4, easedProgress) * desktopUiScale);
-    setCssPixelVar(tableContainer, "--table-tier-size", lerp(13.8, 18.2, easedProgress) * desktopUiScale);
-    setCssPixelVar(tableContainer, "--table-rate-size", lerp(15.2, 21.6, easedProgress) * desktopUiScale);
+    setCssPixelVar(tableContainer, "--table-name-size", lerp(16.2, 21.4, easedProgress) * desktopUiScale);
+    setCssPixelVar(tableContainer, "--table-role-size", lerp(16.2, 21.4, easedProgress) * desktopUiScale);
+    setCssPixelVar(tableContainer, "--table-moveset-size", lerp(16.0, 20.8, easedProgress) * desktopUiScale);
+    setCssPixelVar(tableContainer, "--table-tier-size", lerp(14.0, 18.6, easedProgress) * desktopUiScale);
+    setCssPixelVar(tableContainer, "--table-rate-size", lerp(16.6, 23.6, easedProgress) * desktopUiScale);
 
     const availableTableWidth = Math.max(tableWidth - 18, 760);
-    const minimumColumnWidths = [64, 112, 98, 108, 78, 72, 100, 100];
+    const minimumColumnWidths = [64, 104, 102, 126, 80, 72, 108, 108];
     const targetColumnWidths = [
-      availableTableWidth * 0.078,
-      availableTableWidth * 0.18,
-      availableTableWidth * 0.135,
-      availableTableWidth * 0.17,
-      availableTableWidth * 0.12,
-      availableTableWidth * 0.085,
-      availableTableWidth * 0.116,
-      availableTableWidth * 0.116
+      availableTableWidth * 0.074,
+      availableTableWidth * 0.158,
+      availableTableWidth * 0.13,
+      availableTableWidth * 0.225,
+      availableTableWidth * 0.122,
+      availableTableWidth * 0.083,
+      availableTableWidth * 0.121,
+      availableTableWidth * 0.121
     ];
-    const maximumColumnWidths = [94, 212, 166, 206, 160, 112, 152, 152];
+    const maximumColumnWidths = [94, 204, 170, 246, 172, 112, 168, 168];
+    const visibleColumnIndexes = tierColumnHidden ? [0, 1, 2, 3, 4, 6, 7] : [0, 1, 2, 3, 4, 5, 6, 7];
     const distributedWidths = distributeWidths(
       availableTableWidth,
-      minimumColumnWidths,
-      targetColumnWidths,
-      maximumColumnWidths
+      visibleColumnIndexes.map((index) => minimumColumnWidths[index]),
+      visibleColumnIndexes.map((index) => targetColumnWidths[index]),
+      visibleColumnIndexes.map((index) => maximumColumnWidths[index])
     );
 
-    setCssPixelVar(tableContainer, "--col-pokemon-width", distributedWidths[0]);
-    setCssPixelVar(tableContainer, "--col-name-width", distributedWidths[1]);
-    setCssPixelVar(tableContainer, "--col-role-width", distributedWidths[2]);
-    setCssPixelVar(tableContainer, "--col-moveset-width", distributedWidths[3]);
-    setCssPixelVar(tableContainer, "--col-moves-width", distributedWidths[4]);
-    setCssPixelVar(tableContainer, "--col-tier-width", distributedWidths[5]);
-    setCssPixelVar(tableContainer, "--col-winrate-width", distributedWidths[6]);
-    setCssPixelVar(tableContainer, "--col-pickrate-width", distributedWidths[7]);
+    const resolvedWidths = tierColumnHidden
+      ? [
+          distributedWidths[0],
+          distributedWidths[1],
+          distributedWidths[2],
+          distributedWidths[3],
+          distributedWidths[4],
+          0,
+          distributedWidths[5],
+          distributedWidths[6]
+        ]
+      : distributedWidths;
+
+    setCssPixelVar(tableContainer, "--col-pokemon-width", resolvedWidths[0]);
+    setCssPixelVar(tableContainer, "--col-name-width", resolvedWidths[1]);
+    setCssPixelVar(tableContainer, "--col-role-width", resolvedWidths[2]);
+    setCssPixelVar(tableContainer, "--col-moveset-width", resolvedWidths[3]);
+    setCssPixelVar(tableContainer, "--col-moves-width", resolvedWidths[4]);
+    setCssPixelVar(tableContainer, "--col-tier-width", resolvedWidths[5]);
+    setCssPixelVar(tableContainer, "--col-winrate-width", resolvedWidths[6]);
+    setCssPixelVar(tableContainer, "--col-pickrate-width", resolvedWidths[7]);
 
     tableScrollShell.classList.add("desktop-table-fluid");
     const tableLayoutClass = tableWidth >= 1320
@@ -468,7 +466,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const pokemonImgSize = lerp(52, 68, progress);
       const pokemonTextGap = clampNumber(gap + 2, 7, 12);
       const pokemonTextWidth = Math.max(pokemonWidth - pokemonImgSize - pokemonTextGap, 42);
-      const metricBubbleWidth = Math.max((metricsWidth - gap) / 2, 58);
+      const metricBubbleWidth = Math.max((metricsWidth - (gap * 2)) / 3, 50);
 
       setCssPixelVar(card, "--mc-gap", gap);
       setCssPixelVar(card, "--mc-card-pad-x", padX);
@@ -570,11 +568,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   function canUseDesktopMobilePreview() {
-    const { protocol, hostname } = window.location;
-    return protocol === "file:" ||
-      hostname === "localhost" ||
-      hostname === "127.0.0.1" ||
-      hostname === "::1";
+    return isLocalDevelopmentOrigin();
   }
 
   function resetPopupScrollPosition() {
@@ -593,12 +587,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     const active = isDesktopMobilePreview();
     const enabled = canUseDesktopMobilePreview();
     if (desktopMobilePreviewButton) {
-      desktopMobilePreviewButton.hidden = !enabled;
+      desktopMobilePreviewButton.hidden = !enabled || body.classList.contains("user-view-sim");
       desktopMobilePreviewButton.textContent = active ? "Exit Preview" : "Mobile Preview";
       desktopMobilePreviewButton.setAttribute("aria-pressed", active ? "true" : "false");
     }
     if (desktopMobilePreviewInlineButton) {
-      desktopMobilePreviewInlineButton.hidden = !enabled || !active;
+      desktopMobilePreviewInlineButton.hidden = !enabled || !active || body.classList.contains("user-view-sim");
       desktopMobilePreviewInlineButton.setAttribute("aria-hidden", active ? "false" : "true");
     }
   }
@@ -609,9 +603,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     desktopMobilePreviewButton?.remove();
     desktopMobilePreviewInlineButton?.remove();
+    userViewButton?.remove();
     body.classList.remove("desktop-mobile-preview");
+    body.classList.remove("user-view-sim");
     try {
       window.localStorage.removeItem(desktopPreviewStorageKey);
+      window.localStorage.removeItem(userViewStorageKey);
     } catch (error) {
       console.warn("Unable to clear desktop mobile preview preference", error);
     }
@@ -627,7 +624,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   function closeMobilePanels() {
-    body.classList.remove("mobile-panel-open", "mobile-panel-filters-open", "mobile-panel-sort-open", "mobile-panel-help-open", "desktop-help-open");
+    body.classList.remove("mobile-panel-open", "mobile-panel-filters-open", "mobile-panel-sort-open", "mobile-panel-help-open", "mobile-panel-tier-open", "desktop-help-open", "desktop-tier-help-open");
     if (mobilePanelScrim) {
       mobilePanelScrim.classList.add("hidden");
     }
@@ -659,6 +656,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
+  function openTierHelpPanel() {
+    closeMobilePanels();
+    if (isPhoneView()) {
+      body.classList.add("mobile-panel-open", "mobile-panel-tier-open");
+    } else {
+      body.classList.add("desktop-tier-help-open");
+    }
+    if (mobilePanelScrim) {
+      mobilePanelScrim.classList.remove("hidden");
+    }
+  }
+
   function setDesktopMobilePreview(enabled) {
     if (!canUseDesktopMobilePreview()) {
       body.classList.remove("desktop-mobile-preview");
@@ -676,6 +685,51 @@ document.addEventListener("DOMContentLoaded", async () => {
     } catch (error) {
       console.warn("Unable to persist desktop mobile preview preference", error);
     }
+  }
+
+  let tierColumnHidden = false;
+  let previousSortBeforeTierHide = null;
+
+  function syncHideTiersButton() {
+    if (!hideTiersButton) {
+      return;
+    }
+
+    hideTiersButton.setAttribute("aria-pressed", tierColumnHidden ? "true" : "false");
+    hideTiersButton.textContent = tierColumnHidden ? "Show Tiers" : "Hide Tiers";
+  }
+
+  function setTierColumnHidden(hidden) {
+    if (tierColumnHidden === hidden) {
+      syncHideTiersButton();
+      return;
+    }
+
+    const wasHidden = tierColumnHidden;
+    tierColumnHidden = hidden;
+    body.classList.toggle("tiers-hidden", hidden);
+
+    if (hidden) {
+      previousSortBeforeTierHide = { ...currentSort };
+      currentSort = { column: "Win Rate", order: "desc" };
+    } else if (wasHidden && previousSortBeforeTierHide) {
+      currentSort = { ...previousSortBeforeTierHide };
+      previousSortBeforeTierHide = null;
+    }
+
+    syncHideTiersButton();
+    renderRows(filterItems());
+  }
+
+  function initializeTierColumnToggle() {
+    if (!hideTiersButton) {
+      return;
+    }
+
+    syncHideTiersButton();
+    hideTiersButton.addEventListener("click", () => {
+      setTierColumnHidden(!tierColumnHidden);
+    });
   }
 
   function hasActiveFilters() {
@@ -1379,7 +1433,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   function formatTierScore(val) {
     const num = parseFloat(val);
-    return Number.isFinite(num) ? num.toFixed(3) : "?";
+    return Number.isFinite(num) ? num.toFixed(2) : "?";
   }
 
   function getAssetFileName(assetPath) {
@@ -1408,19 +1462,64 @@ document.addEventListener("DOMContentLoaded", async () => {
     `;
   }
 
-  function getTierColor(tierLabel) {
-    const label = normalizeTierDisplayLabel(tierLabel);
-    const colors = {
-      "S+": "#d4af37",
-      "S": "#0fa24c",
-      "A": "#8ae7a0",
-      "B": "#f2f2f2",
-      "C": "#ee8d6e",
-      "D": "#d95a53",
-      "F": "#8f1d2d",
-    };
+  function hexToRgb(hex) {
+    const normalized = String(hex || "").replace("#", "");
+    if (normalized.length !== 6) {
+      return null;
+    }
 
-    return colors[label] || colors["B"];
+    const value = Number.parseInt(normalized, 16);
+    if (!Number.isFinite(value)) {
+      return null;
+    }
+
+    return {
+      r: (value >> 16) & 255,
+      g: (value >> 8) & 255,
+      b: value & 255,
+    };
+  }
+
+  function rgbToHex({ r, g, b }) {
+    return `#${[r, g, b].map((channel) => Math.round(clampNumber(channel, 0, 255)).toString(16).padStart(2, "0")).join("")}`;
+  }
+
+  function mixColors(startHex, endHex, progress) {
+    const start = hexToRgb(startHex);
+    const end = hexToRgb(endHex);
+    if (!start || !end) {
+      return endHex || startHex || "#ffffff";
+    }
+
+    const eased = clampNumber(progress, 0, 1);
+    return rgbToHex({
+      r: start.r + ((end.r - start.r) * eased),
+      g: start.g + ((end.g - start.g) * eased),
+      b: start.b + ((end.b - start.b) * eased),
+    });
+  }
+
+  function getTierColor(tierLabel, tierScore) {
+    const label = normalizeTierDisplayLabel(tierLabel);
+    if (label === "S") {
+      return "#d4af37";
+    }
+
+    const score = Number.parseFloat(tierScore);
+    if (!Number.isFinite(score)) {
+      return "#f0f0f0";
+    }
+
+    const clamped = clampNumber(score, -1, 1);
+    const eased = clamped >= 0
+      ? Math.pow(clamped, 0.85)
+      : -Math.pow(Math.abs(clamped), 0.85);
+
+    if (eased >= 0) {
+      return mixColors("#f5f5f5", "#0f8a44", eased);
+    }
+
+    return mixColors("#b6282f", "#f5f5f5", 1 + eased);
   }
 
   function normalizeTierDisplayLabel(tierLabel) {
@@ -1429,51 +1528,40 @@ document.addEventListener("DOMContentLoaded", async () => {
       return "F";
     }
 
-    if (label === "S+") {
-      return "S+";
-    }
-
     if (label.startsWith("S")) {
       return "S";
     }
 
-    if (label.startsWith("A")) {
-      return "A";
+    const match = label.match(/^([SABCD])([+-])?$/);
+    if (match) {
+      return `${match[1]}${match[2] || ""}`;
     }
 
-    if (label.startsWith("B")) {
-      return "B";
-    }
-
-    if (label.startsWith("C")) {
-      return "C";
-    }
-
-    if (label.startsWith("D")) {
-      return "D";
+    if (label.startsWith("F")) {
+      return "F";
     }
 
     return "F";
   }
 
-  function renderTierBadge(tierLabel, className = "") {
+  function renderTierBadge(tierLabel, tierScore, className = "") {
     const label = normalizeTierDisplayLabel(tierLabel);
     const classes = ["tier-badge"];
     if (className) {
       classes.push(className);
     }
     return `
-      <span class="${classes.map((name) => escapeHtml(name)).join(" ")}" style="color: ${escapeHtml(getTierColor(label))};">${escapeHtml(label)}</span>
+      <span class="${classes.map((name) => escapeHtml(name)).join(" ")}" style="color: ${escapeHtml(getTierColor(label, tierScore))};">${escapeHtml(label)}</span>
     `;
   }
 
-  function renderTierScoreDebug(tierScore, className = "") {
+  function renderTierScoreDebug(tierRawScore, tierScore, className = "") {
     const classes = ["tier-score-debug"];
     if (className) {
       classes.push(className);
     }
     return `
-      <span class="${classes.map((name) => escapeHtml(name)).join(" ")}">Score ${escapeHtml(formatTierScore(tierScore))}</span>
+      <span class="${classes.map((name) => escapeHtml(name)).join(" ")}">Raw ${escapeHtml(formatTierScore(tierRawScore))} / Norm ${escapeHtml(formatTierScore(tierScore))}</span>
     `;
   }
 
@@ -1525,8 +1613,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     return `
-      <span class="moveset-label-inline">${escapeHtml(parts.join(" / "))}</span>
-      <span class="moveset-label-stacked" aria-hidden="true">
+      <span class="moveset-label-stacked">
         ${parts.map((part) => `<span class="moveset-label-line">${escapeHtml(part)}</span>`).join("")}
       </span>
     `;
@@ -1655,8 +1742,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   function renderMobileCard(entry) {
     const entryIndex = tableItems.indexOf(entry);
     const tierData = getTierDisplayData(entry);
-    const tierBadge = renderTierBadge(tierData.label, "mobile-card-tier");
-    const tierScoreDebug = renderTierScoreDebug(tierData.score, "mobile-tier-score-debug");
+    const tierBadge = renderTierBadge(tierData.label, tierData.score, "mobile-card-tier");
+    const tierScoreDebug = renderTierScoreDebug(tierData.rawScore, tierData.score, "mobile-tier-score-debug");
     const winRate = parseFloat(entry["Win Rate"]);
     const winRateColor = getWinRateColor(winRate);
     const move1Img = Array.isArray(entry["Move 1"]) ? entry["Move 1"][0] : entry["Move 1"];
@@ -1672,7 +1759,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             <span class="mobile-card-pokemon-text">
               <span class="mobile-card-name">${escapeHtml(entry["Name"])}</span>
               <span class="mobile-card-role">${escapeHtml(entry["Role"])}</span>
-              ${tierBadge}
             </span>
           </button>
           <div class="mobile-card-move-list">
@@ -1714,7 +1800,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     return [...items].sort((a, b) => {
-      const col = currentSort.column;
+      const col = normalizeSortColumn(currentSort.column);
       if (col === "Tier") {
         const aTier = getTierDisplayData(a);
         const bTier = getTierDisplayData(b);
@@ -1762,8 +1848,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       const isRoleActive = activeRoleFilters.includes(entry["Role"]);
       const roleClass = isRoleActive ? "filter-role active" : "filter-role";
       const tierData = getTierDisplayData(entry);
-      const tierBadge = renderTierBadge(tierData.label);
-      const tierScoreDebug = renderTierScoreDebug(tierData.score, "table-tier-score-debug");
+      const tierBadge = renderTierBadge(tierData.label, tierData.score);
+      const tierScoreDebug = renderTierScoreDebug(tierData.rawScore, tierData.score, "table-tier-score-debug");
 
       const winRate = parseFloat(entry["Win Rate"]);
       const winRateColor = getWinRateColor(winRate);
@@ -2396,6 +2482,38 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
+  function setUserViewSimState(enabled) {
+    if (!canUseDesktopMobilePreview()) {
+      body.classList.remove("user-view-sim");
+      syncDesktopMobilePreviewButton();
+      syncUserViewButton();
+      return;
+    }
+
+    body.classList.toggle("user-view-sim", enabled);
+    if (enabled) {
+      setDesktopMobilePreview(false);
+    }
+    syncDesktopMobilePreviewButton();
+    syncUserViewButton();
+
+    try {
+      localStorage.setItem(userViewStorageKey, enabled ? "1" : "0");
+    } catch (error) {
+      console.warn("Unable to persist user view preference", error);
+    }
+  }
+
+  function syncUserViewButton() {
+    const enabled = canUseDesktopMobilePreview();
+    if (userViewButton) {
+      userViewButton.hidden = !enabled;
+      const active = body.classList.contains("user-view-sim");
+      userViewButton.setAttribute("aria-pressed", active ? "true" : "false");
+      userViewButton.textContent = active ? "Local View" : "User View";
+    }
+  }
+
   function initializeDebugUiControl() {
     if (!debugUiButton || !isLocalDevelopmentOrigin()) {
       return;
@@ -2416,6 +2534,26 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
+  function initializeUserViewControl() {
+    if (!userViewButton || !isLocalDevelopmentOrigin()) {
+      return;
+    }
+
+    userViewButton.hidden = false;
+
+    let userViewEnabled = false;
+    try {
+      userViewEnabled = localStorage.getItem(userViewStorageKey) === "1";
+    } catch (error) {
+      userViewEnabled = false;
+    }
+
+    setUserViewSimState(userViewEnabled);
+    userViewButton.addEventListener("click", () => {
+      setUserViewSimState(!body.classList.contains("user-view-sim"));
+    });
+  }
+
 
   mobileSortButton?.addEventListener("click", () => openMobilePanel("sort"));
   mobileFiltersButton?.addEventListener("click", () => openMobilePanel("filters"));
@@ -2423,10 +2561,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   desktopMobilePreviewInlineButton?.addEventListener("click", () => setDesktopMobilePreview(false));
   desktopMobilePreviewButton?.addEventListener("click", () => setDesktopMobilePreview(!isDesktopMobilePreview()));
   desktopTipsButton?.addEventListener("click", openHelpPanel);
+  tierInfoButton?.addEventListener("click", openTierHelpPanel);
   initializeDebugUiControl();
+  initializeTierColumnToggle();
+  initializeUserViewControl();
   closeFiltersPanel?.addEventListener("click", closeMobilePanels);
   closeSortPanel?.addEventListener("click", closeMobilePanels);
   closeHelpPanel?.addEventListener("click", closeMobilePanels);
+  closeTierHelpPanel?.addEventListener("click", closeMobilePanels);
   mobilePanelScrim?.addEventListener("click", closeMobilePanels);
 
   mobileSortColumn?.addEventListener("change", () => {
