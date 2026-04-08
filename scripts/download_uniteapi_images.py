@@ -1,6 +1,6 @@
 import os
-import quopri
 import re
+import sys
 import time
 from pathlib import Path
 from urllib.parse import unquote, urlparse, parse_qs
@@ -10,6 +10,11 @@ import pyperclip
 from bs4 import BeautifulSoup
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from scripts.uniteapi_html import decode_saved_html as decode_uniteapi_html
+
 STATIC_IMG_ROOT = REPO_ROOT / 'static' / 'img'
 POKEMON_IMG_ROOT = STATIC_IMG_ROOT / 'Pokemon'
 MOVE_IMG_ROOT = STATIC_IMG_ROOT / 'Moves'
@@ -25,8 +30,7 @@ def sanitize_filename(value: str) -> str:
 
 
 def decode_saved_html(html_path: Path | str) -> str:
-    html_path = Path(html_path)
-    return quopri.decodestring(html_path.read_bytes()).decode('utf-8', errors='ignore')
+    return decode_uniteapi_html(html_path)
 
 
 def normalize_uniteapi_image_url(url: str) -> str:
