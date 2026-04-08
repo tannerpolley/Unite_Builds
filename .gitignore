@@ -18,6 +18,7 @@ _site/
 
 # Local scratch/debug captures
 .tmp_*
+/data/tmp/
 
 # Local UniteDB snapshot caches
 /data/json/unite_db_held_items.json

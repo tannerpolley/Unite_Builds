@@ -2,14 +2,18 @@ from __future__ import annotations
 
 import argparse
 import json
-import quopri
 import re
+import sys
 from pathlib import Path
 from urllib.parse import unquote
 
 from bs4 import BeautifulSoup
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from scripts.uniteapi_html import decode_saved_html as decode_uniteapi_html
 DEFAULT_META_HTML_PATH = REPO_ROOT / "data" / "html" / "Unite API _ Pokémon Unite Meta Tierlist.html"
 DEFAULT_ROSTER_JSON_PATH = REPO_ROOT / "data" / "json" / "uniteapi_roster.json"
 DEFAULT_UNITE_DB_POKEMON_PATH = REPO_ROOT / "data" / "json" / "unite_db_pokemon.json"
@@ -99,8 +103,7 @@ def save_json_dict(path: Path | str, payload: dict) -> None:
 
 
 def decode_saved_html(path: Path | str) -> str:
-    path = Path(path)
-    return quopri.decodestring(path.read_bytes()).decode("utf-8", errors="ignore")
+    return decode_uniteapi_html(path)
 
 
 def extract_meta_page_entries(meta_html_path: Path | str) -> list[dict[str, str]]:

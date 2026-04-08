@@ -16,14 +16,73 @@ Static Pokemon Unite site for GitHub Pages, with local Python and Node tooling t
 - Published artifact: `index.html`, `static/`, `preview.png`, `favicon.ico`, `CNAME`, and the Google verification HTML file.
 
 ## Manual Unite API workflow
-`scripts/get_moveset_pages.py` intentionally stays manual and GUI-driven.
+Unite API capture now defaults to requests-first with browser fallback:
+1. `scripts/get_moveset_pages.py` runs in `--mode auto` by default.
+2. It fetches `https://uniteapi.dev/meta` once, updates roster metadata, and tries requests capture for Pokemon pages.
+3. If requests capture fails validation for specific pages, it falls back to Puppeteer for only those pages.
+4. If a browser challenge page appears, solve it in the browser window and continue.
+5. All capture modes write validated HTML snapshots into `data/html/` and `data/html/Pokemon_Sites/`.
 
-Unite API blocks normal request-based scraping, so the workflow is:
-1. Open a browser yourself so the site is visible on screen.
-2. Run the PyAutoGUI script locally.
-3. Let it navigate, save HTML pages with `Ctrl+S`, and write those source snapshots into `data/html/`.
+Default auto capture:
+```powershell
+conda run -n Unite_Builds python scripts/get_moveset_pages.py
+```
 
-That manual browser-save path is expected behavior for this repo.
+Direct requests capture:
+```powershell
+npm run capture:uniteapi:requests
+```
+
+Direct browser capture:
+```powershell
+npm run capture:uniteapi
+```
+
+Auto mode with resume (fetch only missing/invalid pages):
+```powershell
+conda run -n Unite_Builds python scripts/get_moveset_pages.py --resume
+```
+
+Capture a specific Pokemon page (auto mode):
+```powershell
+conda run -n Unite_Builds python scripts/get_moveset_pages.py --pokemon Inteleon
+```
+
+Force refresh even when the source date is unchanged:
+```powershell
+conda run -n Unite_Builds python scripts/get_moveset_pages.py --force-refresh
+```
+
+Low-traffic note: the requests capture path is date-gated by default (source date from meta page). If the source date is unchanged, full Pokemon refresh is skipped unless `--force-refresh` is set. Unite API also exposes `/_next/data/<buildId>/en/...json` endpoints, but their `pageProps.a/e` payload is custom-encoded and is not used by this workflow yet.
+
+## Windows scheduled updater + one-click publish
+Use this if you want a weekly watcher that retries daily until Unite API updates, then auto-builds and pushes to `main`.
+
+One-time task install (daily 6:00 AM local machine time):
+```powershell
+pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/install_unite_update_task.ps1
+```
+
+Manual one-click run:
+- Double-click `Run-UniteBuilds-Update.cmd` in repo root, or run:
+```powershell
+pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/run_unite_weekly_update.ps1 -Manual
+```
+
+How the cycle works:
+1. Sunday run sets `pending_update_cycle=true`.
+2. Daily scheduled runs at 6:00 AM continue while pending.
+3. If source date is unchanged, it exits and retries next day.
+4. When source date changes, it runs `capture -> build_site -> smoke`, stages curated outputs, commits, and pushes to `origin/main`.
+5. On success, it sets `pending_update_cycle=false` and waits until next Sunday.
+
+State and logs:
+- State: `data/tmp/unite_update_state.json`
+- Logs: `data/tmp/unite_update_logs/*.log`
+
+Troubleshooting:
+- Runner enforces git preconditions: `main` branch, non-detached HEAD, clean working tree, and fast-forwardable pull.
+- Scheduled mode is requests-only capture (no browser challenge fallback).
 
 ## Build/update flow
 Use the repo-named Conda environment when available.
@@ -43,6 +102,10 @@ conda run -n Unite_Builds python scripts/build_site.py
 4. If you only want the Unite API table rebuild, run:
 ```powershell
 conda run -n Unite_Builds python scripts/Scrape_Winrates.py
+```
+If you need to proceed with partial data (warnings instead of strict preflight failure), run:
+```powershell
+conda run -n Unite_Builds python scripts/Scrape_Winrates.py --allow-missing
 ```
 5. If you only want to rebuild popup detail data from the cached UniteDB snapshot, run:
 ```powershell

@@ -1,134 +1,198 @@
-import time
+from __future__ import annotations
+
+import argparse
+import json
+import subprocess
+import sys
+import tempfile
 from pathlib import Path
 
-import numpy as np
-import pyautogui
-import pyperclip
-
-from download_uniteapi_images import ensure_move_images_from_page, ensure_pokemon_square_image, wait_for_download
-from format_images import format_static_images
-from sync_missing_pokemon import sync_missing_pokemon_entries
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-POKEMON_PAGES_PATH = REPO_ROOT / 'data' / 'html' / 'Pokemon_Sites'
-META_HTML_PATH = REPO_ROOT / 'data' / 'html' / 'Unite API _ Pokémon Unite Meta Tierlist.html'
-PAGELESS_POKEMON = {
-    'Mega Charizard X',
-    'Mega Charizard Y',
-    'Mega Gyarados',
-    'Mega Lucario',
-}
+REQUESTS_CAPTURE_SCRIPT_PATH = REPO_ROOT / "scripts" / "capture_uniteapi_requests.py"
+BROWSER_CAPTURE_SCRIPT_PATH = REPO_ROOT / "scripts" / "capture_uniteapi_pages.js"
 
-new_week = False
-get_pages = True
-short_rest = 0.5
 
-if new_week:
-    for file_path in POKEMON_PAGES_PATH.glob('*'):
-        if file_path.is_file():
-            file_path.unlink()
-    if META_HTML_PATH.exists():
-        META_HTML_PATH.unlink()
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Capture Unite API meta and Pokemon pages (requests-first with browser fallback)."
+    )
+    parser.add_argument(
+        "--mode",
+        choices=("auto", "requests", "browser"),
+        default="auto",
+        help="Capture mode. auto=requests first then browser fallback for failed pages.",
+    )
+    parser.add_argument("--resume", action="store_true", help="Skip pages that already validate.")
+    parser.add_argument(
+        "--pokemon",
+        action="append",
+        default=[],
+        help="Capture only selected Pokemon page(s). May be provided multiple times.",
+    )
+    parser.add_argument(
+        "--force-refresh",
+        action="store_true",
+        help="Bypass source-date gate and force Pokemon page refresh.",
+    )
+    parser.add_argument("--headless", action="store_true", help="Run browser fallback headless.")
+    parser.add_argument("--headful", action="store_true", help="Run browser fallback headed.")
+    parser.add_argument("--retries", type=int, default=None, help="Retry count per page/request.")
+    parser.add_argument("--max-workers", type=int, default=None, help="Requests capture worker count.")
+    parser.add_argument("--timeout", type=float, default=None, help="Requests capture timeout in seconds.")
+    return parser.parse_args()
 
-pokemon_dict = {}
-meta_entry_map = {}
-new_images_downloaded = False
-existing_page_names = set()
 
-if get_pages:
-    time.sleep(3)
-    if new_week or not META_HTML_PATH.exists():
-        pyautogui.hotkey('ctrl', 'l')
-        time.sleep(short_rest)
-        pyperclip.copy(r'https://uniteapi.dev/meta')
-        pyautogui.hotkey('ctrl', 'v')
-        time.sleep(short_rest)
-        pyautogui.press('enter')
-        time.sleep(short_rest)
-        pyautogui.hotkey('ctrl', 's')
-        time.sleep(short_rest)
-        pyautogui.hotkey('alt', 'n')
-        time.sleep(short_rest)
-        pyperclip.copy(str(META_HTML_PATH))
-        pyautogui.hotkey('ctrl', 'v')
-        time.sleep(short_rest)
-        pyautogui.press('enter')
-        wait_for_download(META_HTML_PATH, 'Main Meta Page')
-    else:
-        print('Reusing existing main meta page:', META_HTML_PATH.name)
+def build_requests_command(
+    args: argparse.Namespace,
+    *,
+    allow_partial: bool = False,
+    failed_output: Path | None = None,
+) -> list[str]:
+    if not REQUESTS_CAPTURE_SCRIPT_PATH.exists():
+        raise FileNotFoundError(f"Missing requests capture script: {REQUESTS_CAPTURE_SCRIPT_PATH}")
 
-    sync_result = sync_missing_pokemon_entries(META_HTML_PATH)
-    pokemon_dict = sync_result['roster_dict']
-    meta_entry_map = sync_result['meta_entry_map']
-    existing_page_names = {
-        file_path.name[35:-5]
-        for file_path in POKEMON_PAGES_PATH.iterdir()
-        if file_path.suffix.lower() in {'.html', '.txt'}
-    }
+    command = [sys.executable, str(REQUESTS_CAPTURE_SCRIPT_PATH)]
 
-    for name, pokemon_data in sorted(pokemon_dict.items()):
-        meta_entry = meta_entry_map.get(name)
-        if ensure_pokemon_square_image(name, meta_entry):
-            new_images_downloaded = True
+    if args.resume:
+        command.append("--resume")
 
-        uniteapi_name = pokemon_data['uniteapi_name']
-        if uniteapi_name == 'scyther':
-            continue
-        if name in PAGELESS_POKEMON or uniteapi_name.startswith('mega'):
-            placeholder_path = POKEMON_PAGES_PATH / f'Unite API _ Pokémon Unite Meta for {name}.txt'
-            if new_week or not placeholder_path.exists():
-                np.savetxt(placeholder_path, np.array([]))
-            time.sleep(short_rest / 2)
-            continue
+    for pokemon_name in args.pokemon:
+        command.extend(["--pokemon", pokemon_name])
 
-        pokemon_page_path = POKEMON_PAGES_PATH / f'Unite API _ Pokémon Unite Meta for {name}.html'
-        if not new_week and name in existing_page_names:
-            continue
+    if args.force_refresh:
+        command.append("--force-refresh")
 
-        print(name)
-        url = 'https://uniteapi.dev/meta/pokemon-unite-meta-for-' + uniteapi_name
-        pyperclip.copy(url)
-        time.sleep(short_rest / 2)
-        pyautogui.hotkey('ctrl', 'l')
-        time.sleep(short_rest)
-        pyautogui.hotkey('ctrl', 'v')
-        time.sleep(short_rest)
-        pyautogui.press('enter')
-        time.sleep(short_rest * 2)
-        pyautogui.hotkey('ctrl', 's')
-        time.sleep(short_rest)
-        pyautogui.hotkey('alt', 'n')
-        time.sleep(short_rest)
-        pyperclip.copy(str(pokemon_page_path))
-        pyautogui.hotkey('ctrl', 'v')
-        time.sleep(short_rest)
-        pyautogui.press('enter')
-        wait_for_download(pokemon_page_path, name)
+    if args.retries is not None:
+        if args.retries < 1:
+            raise ValueError("--retries must be a positive integer")
+        command.extend(["--retries", str(args.retries)])
 
-        if ensure_move_images_from_page(pokemon_page_path, name):
-            new_images_downloaded = True
+    if args.max_workers is not None:
+        if args.max_workers < 1:
+            raise ValueError("--max-workers must be a positive integer")
+        command.extend(["--max-workers", str(args.max_workers)])
 
-        time.sleep(short_rest / 2)
-else:
-    sync_result = sync_missing_pokemon_entries(META_HTML_PATH)
-    pokemon_dict = sync_result['roster_dict']
-    meta_entry_map = sync_result['meta_entry_map']
+    if args.timeout is not None:
+        if args.timeout <= 0:
+            raise ValueError("--timeout must be positive")
+        command.extend(["--timeout", str(args.timeout)])
 
-if not get_pages:
-    existing_page_names = {
-        file_path.name[35:-5]
-        for file_path in POKEMON_PAGES_PATH.iterdir()
-        if file_path.suffix.lower() in {'.html', '.txt'}
-    }
+    if allow_partial:
+        command.append("--allow-partial")
 
-if new_images_downloaded:
-    summary = format_static_images()
-    print('Formatted newly downloaded images:')
-    for key, value in summary.items():
-        print(f'{key}: {value}')
+    if failed_output is not None:
+        command.extend(["--failed-output", str(failed_output)])
 
-pokemon_list = sorted(existing_page_names)
+    return command
 
-for pokemon in pokemon_dict.keys():
-    if pokemon not in pokemon_list and pokemon != 'Scyther':
-        print(pokemon)
+
+def build_browser_command(
+    args: argparse.Namespace,
+    *,
+    pokemon_override: list[str] | None = None,
+    resume_override: bool | None = None,
+    no_roster_additions: bool = False,
+) -> list[str]:
+    if not BROWSER_CAPTURE_SCRIPT_PATH.exists():
+        raise FileNotFoundError(f"Missing browser capture script: {BROWSER_CAPTURE_SCRIPT_PATH}")
+
+    command = ["node", str(BROWSER_CAPTURE_SCRIPT_PATH)]
+
+    should_resume = args.resume if resume_override is None else resume_override
+    if should_resume:
+        command.append("--resume")
+
+    pokemon_targets = args.pokemon if pokemon_override is None else pokemon_override
+    for pokemon_name in pokemon_targets:
+        command.extend(["--pokemon", pokemon_name])
+
+    if args.headless:
+        command.append("--headless")
+    elif args.headful:
+        command.append("--headful")
+
+    if args.retries is not None:
+        if args.retries < 1:
+            raise ValueError("--retries must be a positive integer")
+        command.extend(["--retries", str(args.retries)])
+
+    if no_roster_additions:
+        command.append("--no-roster-additions")
+
+    return command
+
+
+def load_failed_targets(path: Path) -> list[str]:
+    if not path.exists():
+        return []
+
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return []
+
+    if isinstance(payload, list):
+        return [str(item) for item in payload if str(item).strip()]
+
+    if isinstance(payload, dict):
+        failed = payload.get("failed_pokemon", [])
+        if isinstance(failed, list):
+            return [str(item) for item in failed if str(item).strip()]
+
+    return []
+
+
+def run_command(command: list[str]) -> int:
+    result = subprocess.run(command, cwd=REPO_ROOT, check=False)
+    return result.returncode
+
+
+def main() -> None:
+    args = parse_args()
+
+    if args.mode == "browser":
+        raise SystemExit(run_command(build_browser_command(args)))
+
+    if args.mode == "requests":
+        raise SystemExit(run_command(build_requests_command(args)))
+
+    failed_output_path: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile(prefix="uniteapi_failed_", suffix=".json", delete=False) as handle:
+            failed_output_path = Path(handle.name)
+
+        requests_return = run_command(
+            build_requests_command(args, allow_partial=True, failed_output=failed_output_path)
+        )
+        failed_targets = load_failed_targets(failed_output_path)
+
+        if failed_targets:
+            print(
+                "Requests capture failed for "
+                f"{len(failed_targets)} page(s); running browser fallback for those targets."
+            )
+            browser_return = run_command(
+                build_browser_command(
+                    args,
+                    pokemon_override=failed_targets,
+                    resume_override=False,
+                    no_roster_additions=True,
+                )
+            )
+            if browser_return != 0:
+                raise SystemExit(browser_return)
+
+        if requests_return != 0 and not failed_targets:
+            print("Requests capture hit a fatal error; running browser capture for the requested scope.")
+            browser_return = run_command(build_browser_command(args, no_roster_additions=True))
+            raise SystemExit(browser_return)
+
+        raise SystemExit(0)
+    finally:
+        if failed_output_path is not None:
+            failed_output_path.unlink(missing_ok=True)
+
+
+if __name__ == "__main__":
+    main()
