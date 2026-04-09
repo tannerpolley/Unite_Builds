@@ -13,13 +13,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   const mobileSortButton = document.getElementById("mobileSortButton");
   const mobileFiltersButton = document.getElementById("mobileFiltersButton");
   const mobileHelpButton = document.getElementById("mobileHelpButton");
-  const desktopMobilePreviewInlineButton = document.getElementById("desktopMobilePreviewInlineButton");
   const desktopMobilePreviewButton = document.getElementById("desktopMobilePreviewButton");
   const desktopTipsButton = document.getElementById("desktopTipsButton");
   const hideTiersButton = document.getElementById("hideTiersButton");
   const tierInfoButton = document.getElementById("tierInfoButton");
   const debugUiButton = document.getElementById("debugUiButton");
-  const userViewButton = document.getElementById("userViewButton");
   const pickRateMin = document.getElementById("pickRateMin");
   const pickRateMax = document.getElementById("pickRateMax");
   const winRateMin = document.getElementById("winRateMin");
@@ -87,10 +85,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   let movePatchHistoryPromise = null;
   let mobileCardObserver = null;
   const desktopPreviewStorageKey = "desktopMobilePreview";
-  const userViewStorageKey = "userViewSimEnabled";
   const desktopControlLayoutClasses = ["desktop-controls-wide", "desktop-controls-compact"];
   const desktopTableLayoutClasses = ["desktop-table-wide", "desktop-table-compact", "desktop-table-narrow"];
-  const mobileCardLayoutClasses = ["mobile-card-compact", "mobile-card-wide"];
 
   function clampNumber(value, min, max) {
     return Math.min(max, Math.max(min, value));
@@ -434,121 +430,55 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
-    const isWideMobileCard = width >= 460;
-    setExclusiveClass(card, mobileCardLayoutClasses, isWideMobileCard ? "mobile-card-wide" : "mobile-card-compact");
-
-    if (isWideMobileCard) {
-      const progress = clampNumber((width - 460) / 290, 0, 1);
-      const padX = lerp(10, 13, progress);
-      const gap = lerp(6, 9, progress);
-      const innerWidth = Math.max(width - (padX * 2), 320);
-      const contentWidth = Math.max(innerWidth - (gap * 3), 300);
-      const metricsMinWidth = lerp(132, 160, progress);
-      const metricsMaxWidth = lerp(160, 202, progress);
-      const pokemonMinWidth = lerp(108, 120, progress);
-      const pokemonMaxWidth = lerp(152, 176, progress);
-      const moveColMinWidth = lerp(64, 72, progress);
-      const moveColMaxWidth = lerp(96, 108, progress);
-
-      let metricsWidth = clampNumber(contentWidth * lerp(0.31, 0.33, progress), metricsMinWidth, metricsMaxWidth);
-      let remainingAfterMetrics = Math.max(contentWidth - metricsWidth, pokemonMinWidth + (moveColMinWidth * 2));
-      let pokemonWidth = clampNumber(remainingAfterMetrics * lerp(0.42, 0.4, progress), pokemonMinWidth, pokemonMaxWidth);
-      let moveColumnWidth = clampNumber((remainingAfterMetrics - pokemonWidth) / 2, moveColMinWidth, moveColMaxWidth);
-      pokemonWidth = clampNumber(contentWidth - metricsWidth - (moveColumnWidth * 2), pokemonMinWidth, pokemonMaxWidth);
-      metricsWidth = clampNumber(contentWidth - pokemonWidth - (moveColumnWidth * 2), metricsMinWidth, metricsMaxWidth);
-
-      if (pokemonWidth + (moveColumnWidth * 2) + metricsWidth > contentWidth) {
-        const overflow = (pokemonWidth + (moveColumnWidth * 2) + metricsWidth) - contentWidth;
-        metricsWidth = Math.max(metricsMinWidth, metricsWidth - overflow);
-      }
-
-      pokemonWidth = contentWidth - metricsWidth - (moveColumnWidth * 2);
-      const pokemonImgSize = lerp(52, 68, progress);
-      const pokemonTextGap = clampNumber(gap + 2, 7, 12);
-      const pokemonTextWidth = Math.max(pokemonWidth - pokemonImgSize - pokemonTextGap, 42);
-      const metricBubbleWidth = Math.max((metricsWidth - (gap * 2)) / 3, 50);
-
-      setCssPixelVar(card, "--mc-gap", gap);
-      setCssPixelVar(card, "--mc-card-pad-x", padX);
-      setCssPixelVar(card, "--mc-card-pad-y", lerp(10, 12, progress));
-      setCssPixelVar(card, "--mc-pokemon-width", pokemonWidth);
-      setCssPixelVar(card, "--mc-pokemon-text-gap", pokemonTextGap);
-      setCssPixelVar(card, "--mc-pokemon-text-width", pokemonTextWidth);
-      setCssPixelVar(card, "--mc-move-col-width", moveColumnWidth);
-      setCssPixelVar(card, "--mc-metrics-width", metricsWidth);
-      setCssPixelVar(card, "--mc-pokemon-img", pokemonImgSize);
-      setCssPixelVar(card, "--mc-name-size", lerp(13.6, 16.6, progress));
-      setCssPixelVar(card, "--mc-role-size", lerp(11.4, 13.2, progress));
-      setCssPixelVar(card, "--mc-tier-size", lerp(8.6, 9.8, progress));
-      setCssPixelVar(card, "--mc-metric-label-size", clampNumber(metricBubbleWidth * 0.118, 6.8, 8.9));
-      setCssPixelVar(card, "--mc-metric-value-size", clampNumber(metricBubbleWidth * 0.19, 10.2, 14.2));
-      setCssPixelVar(card, "--mc-metric-pad-x", clampNumber(metricBubbleWidth * 0.075, 3.5, 6));
-      setCssPixelVar(card, "--mc-metric-pad-y", clampNumber(metricBubbleWidth * 0.075, 4, 6));
-      setCssPixelVar(card, "--mc-metric-gap", clampNumber(metricBubbleWidth * 0.03, 1, 2.25));
-      setCssPixelVar(card, "--mc-metric-top-pad", 0);
-      setCssPixelVar(card, "--mc-move-icon-gap", 0);
-      setCssPixelVar(card, "--mc-move-row-gap", lerp(5, 7, progress));
-      setCssPixelVar(card, "--mc-move-icon-shell-size", lerp(40, 56, progress));
-      setCssPixelVar(card, "--mc-move-icon-size", lerp(34, 46, progress));
-      setCssPixelVar(card, "--mc-move-label-size", lerp(11.6, 13.4, progress));
-      setCssPixelVar(card, "--mc-move-label-width", moveColumnWidth);
-      return;
-    }
-
-    const progress = clampNumber((width - 320) / 180, 0, 1);
-    const padX = lerp(8, 11, progress);
-    const gap = lerp(6, 9, progress);
-    const innerWidth = Math.max(width - (padX * 2), 260);
-    const contentWidth = Math.max(innerWidth - (gap * 2), 240);
-    const metricsMinWidth = lerp(84, 98, progress);
-    const metricsMaxWidth = lerp(100, 120, progress);
-    const moveGap = lerp(5, 8, progress);
-    const moveColMinWidth = lerp(46, 56, progress);
-    const moveGroupMinWidth = (moveColMinWidth * 2) + moveGap;
-    const nonMetricsSpace = Math.max(contentWidth - metricsMinWidth, 180);
-    const distributedNonMetrics = distributeWidths(
-      nonMetricsSpace,
-      [76, moveGroupMinWidth],
+    const progress = clampNumber((width - 320) / 430, 0, 1);
+    const padX = lerp(8, 14, progress);
+    const gap = lerp(6, 10, progress);
+    const innerWidth = Math.max(width - (padX * 2), 250);
+    const contentWidth = Math.max(innerWidth - (gap * 2), 236);
+    const pokemonMinWidth = lerp(82, 112, progress);
+    const pokemonMaxWidth = lerp(108, 164, progress);
+    const moveBoxMinWidth = lerp(60, 76, progress);
+    const moveBoxMaxWidth = lerp(76, 104, progress);
+    const metricsMinWidth = lerp(118, 144, progress);
+    const metricsMaxWidth = lerp(168, 256, progress);
+    const distributedWidths = distributeWidths(
+      contentWidth,
+      [pokemonMinWidth, moveBoxMinWidth, metricsMinWidth],
       [
-        nonMetricsSpace * 0.33,
-        nonMetricsSpace * 0.67
+        contentWidth * lerp(0.29, 0.31, progress),
+        contentWidth * lerp(0.2, 0.17, progress),
+        contentWidth * lerp(0.51, 0.52, progress)
       ],
-      [104, 198]
+      [pokemonMaxWidth, moveBoxMaxWidth, metricsMaxWidth]
     );
-    const pokemonWidth = distributedNonMetrics[0];
-    const moveGroupWidth = distributedNonMetrics[1];
-    const metricsWidth = clampNumber(
-      contentWidth - pokemonWidth - moveGroupWidth,
-      metricsMinWidth,
-      metricsMaxWidth
-    );
-    const moveColWidth = clampNumber((moveGroupWidth - moveGap) / 2, moveColMinWidth, 96);
-    const metricBubbleWidth = metricsWidth;
+    const pokemonWidth = distributedWidths[0];
+    const moveBoxWidth = distributedWidths[1];
+    const metricsWidth = distributedWidths[2];
+    const pokemonImgSize = lerp(52, 68, progress);
+    const pokemonTextGap = clampNumber(lerp(4, 10, progress), 4, 10);
+    const pokemonTextWidth = Math.max(pokemonWidth - pokemonImgSize - pokemonTextGap, 34);
+    const metricCellWidth = Math.max((metricsWidth - (gap * 2)) / 3, 32);
 
     setCssPixelVar(card, "--mc-gap", gap);
     setCssPixelVar(card, "--mc-card-pad-x", padX);
-    setCssPixelVar(card, "--mc-card-pad-y", lerp(9, 11, progress));
+    setCssPixelVar(card, "--mc-card-pad-y", lerp(9, 12, progress));
     setCssPixelVar(card, "--mc-pokemon-width", pokemonWidth);
-    setCssPixelVar(card, "--mc-move-group-width", moveGroupWidth);
-    setCssPixelVar(card, "--mc-move-col-width", moveColWidth);
+    setCssPixelVar(card, "--mc-pokemon-text-gap", pokemonTextGap);
+    setCssPixelVar(card, "--mc-pokemon-text-width", pokemonTextWidth);
+    setCssPixelVar(card, "--mc-move-box-width", moveBoxWidth);
     setCssPixelVar(card, "--mc-metrics-width", metricsWidth);
-    setCssPixelVar(card, "--mc-pokemon-img", lerp(52, 66, progress));
-    setCssPixelVar(card, "--mc-name-size", lerp(13, 15.4, progress));
-    setCssPixelVar(card, "--mc-role-size", lerp(11, 12.8, progress));
-    setCssPixelVar(card, "--mc-tier-size", lerp(8.4, 9.4, progress));
-    setCssPixelVar(card, "--mc-metric-label-size", clampNumber(metricBubbleWidth * 0.095, 6.6, 8.7));
-    setCssPixelVar(card, "--mc-metric-value-size", clampNumber(metricBubbleWidth * 0.155, 10, 13.8));
-    setCssPixelVar(card, "--mc-metric-pad-x", clampNumber(metricBubbleWidth * 0.09, 3.5, 6.5));
-    setCssPixelVar(card, "--mc-metric-pad-y", clampNumber(metricBubbleWidth * 0.08, 4, 6));
-    setCssPixelVar(card, "--mc-metric-gap", clampNumber(metricBubbleWidth * 0.03, 1, 2.5));
-    setCssPixelVar(card, "--mc-metric-top-pad", 0);
-    setCssPixelVar(card, "--mc-move-icon-gap", 0);
-    setCssPixelVar(card, "--mc-move-row-gap", lerp(4.5, 6.5, progress));
-    setCssPixelVar(card, "--mc-move-inner-gap", moveGap);
-    setCssPixelVar(card, "--mc-move-icon-shell-size", lerp(44, 56, progress));
-    setCssPixelVar(card, "--mc-move-icon-size", lerp(37, 48, progress));
-    setCssPixelVar(card, "--mc-move-label-size", lerp(12.2, 13.4, progress));
-    setCssPixelVar(card, "--mc-move-label-width", moveColWidth);
+    setCssPixelVar(card, "--mc-pokemon-img", pokemonImgSize);
+    setCssPixelVar(card, "--mc-name-size", lerp(13, 16.5, progress));
+    setCssPixelVar(card, "--mc-role-size", lerp(11, 13, progress));
+    setCssPixelVar(card, "--mc-tier-size", lerp(12.5, 17, progress));
+    setCssPixelVar(card, "--mc-metric-label-size", clampNumber(metricCellWidth * 0.16, 6.2, 8.8));
+    setCssPixelVar(card, "--mc-metric-value-size", clampNumber(metricCellWidth * 0.24, 10.5, 14.8));
+    setCssPixelVar(card, "--mc-metric-pad-x", clampNumber(metricCellWidth * 0.12, 4, 9));
+    setCssPixelVar(card, "--mc-metric-pad-y", clampNumber(metricCellWidth * 0.12, 5, 8));
+    setCssPixelVar(card, "--mc-metric-gap", clampNumber(metricCellWidth * 0.04, 1, 2.5));
+    setCssPixelVar(card, "--mc-move-stack-gap", lerp(6, 10, progress));
+    setCssPixelVar(card, "--mc-move-icon-shell-size", lerp(38, 54, progress));
+    setCssPixelVar(card, "--mc-move-icon-size", lerp(32, 46, progress));
   }
 
   function observeMobileCards() {
@@ -587,13 +517,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     const active = isDesktopMobilePreview();
     const enabled = canUseDesktopMobilePreview();
     if (desktopMobilePreviewButton) {
-      desktopMobilePreviewButton.hidden = !enabled || body.classList.contains("user-view-sim");
+      desktopMobilePreviewButton.hidden = !enabled;
       desktopMobilePreviewButton.textContent = active ? "Exit Preview" : "Mobile Preview";
       desktopMobilePreviewButton.setAttribute("aria-pressed", active ? "true" : "false");
-    }
-    if (desktopMobilePreviewInlineButton) {
-      desktopMobilePreviewInlineButton.hidden = !enabled || !active || body.classList.contains("user-view-sim");
-      desktopMobilePreviewInlineButton.setAttribute("aria-hidden", active ? "false" : "true");
     }
   }
 
@@ -602,13 +528,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
     desktopMobilePreviewButton?.remove();
-    desktopMobilePreviewInlineButton?.remove();
-    userViewButton?.remove();
     body.classList.remove("desktop-mobile-preview");
-    body.classList.remove("user-view-sim");
     try {
       window.localStorage.removeItem(desktopPreviewStorageKey);
-      window.localStorage.removeItem(userViewStorageKey);
     } catch (error) {
       console.warn("Unable to clear desktop mobile preview preference", error);
     }
@@ -1761,32 +1683,33 @@ document.addEventListener("DOMContentLoaded", async () => {
               <span class="mobile-card-role">${escapeHtml(entry["Role"])}</span>
             </span>
           </button>
-          <div class="mobile-card-move-list">
-            <button class="mobile-move-button mobile-move-button-1" type="button">
-              <span class="mobile-card-move-icon-shell">
-                <img src="static/img/${move1Img}" alt="${escapeHtml(move1Label)}" class="mobile-card-move-img">
-              </span>
-              ${renderMoveLabel(move1Label, "mobile-card-move-label")}
-            </button>
-            <button class="mobile-move-button mobile-move-button-2" type="button">
-              <span class="mobile-card-move-icon-shell">
-                <img src="static/img/${move2Img}" alt="${escapeHtml(move2Label)}" class="mobile-card-move-img">
-              </span>
-              ${renderMoveLabel(move2Label, "mobile-card-move-label")}
-            </button>
-          </div>
-          <div class="mobile-card-metrics">
-            <div class="mobile-card-metric mobile-card-tier-metric">
-              <span class="mobile-card-metric-label">Tier</span>
-              <span class="mobile-card-tier-value">${tierBadge}${tierScoreDebug}</span>
+          <div class="mobile-card-move-box">
+            <div class="mobile-card-move-list">
+              <button class="mobile-move-button mobile-move-button-1" type="button">
+                <span class="mobile-card-move-icon-shell">
+                  <img src="static/img/${move1Img}" alt="${escapeHtml(move1Label)}" class="mobile-card-move-img">
+                </span>
+              </button>
+              <button class="mobile-move-button mobile-move-button-2" type="button">
+                <span class="mobile-card-move-icon-shell">
+                  <img src="static/img/${move2Img}" alt="${escapeHtml(move2Label)}" class="mobile-card-move-img">
+                </span>
+              </button>
             </div>
-            <button class="mobile-view-items mobile-card-metric" type="button" data-index="${entryIndex}" data-win-rate="${entry["Win Rate"]}" style="color: ${winRateColor};">
-              <span class="mobile-card-metric-label">Win Rate</span>
-              <span class="mobile-card-metric-value">${escapeHtml(format(entry["Win Rate"]))}</span>
-            </button>
-            <div class="mobile-card-metric">
-              <span class="mobile-card-metric-label">Pick Rate</span>
-              <span class="mobile-card-metric-value">${escapeHtml(format(entry["Pick Rate"]))}</span>
+          </div>
+          <div class="mobile-card-metrics-box">
+            <div class="mobile-card-metrics">
+              <div class="mobile-card-metric mobile-card-tier-metric">
+                <span class="mobile-card-tier-value">${tierBadge}${tierScoreDebug}</span>
+              </div>
+              <button class="mobile-view-items mobile-card-metric" type="button" data-index="${entryIndex}" data-win-rate="${entry["Win Rate"]}" style="color: ${winRateColor};">
+                <span class="mobile-card-metric-label">Win Rate</span>
+                <span class="mobile-card-metric-value">${escapeHtml(format(entry["Win Rate"]))}</span>
+              </button>
+              <div class="mobile-card-metric">
+                <span class="mobile-card-metric-label">Pick Rate</span>
+                <span class="mobile-card-metric-value">${escapeHtml(format(entry["Pick Rate"]))}</span>
+              </div>
             </div>
           </div>
         </div>
@@ -2482,38 +2405,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  function setUserViewSimState(enabled) {
-    if (!canUseDesktopMobilePreview()) {
-      body.classList.remove("user-view-sim");
-      syncDesktopMobilePreviewButton();
-      syncUserViewButton();
-      return;
-    }
-
-    body.classList.toggle("user-view-sim", enabled);
-    if (enabled) {
-      setDesktopMobilePreview(false);
-    }
-    syncDesktopMobilePreviewButton();
-    syncUserViewButton();
-
-    try {
-      localStorage.setItem(userViewStorageKey, enabled ? "1" : "0");
-    } catch (error) {
-      console.warn("Unable to persist user view preference", error);
-    }
-  }
-
-  function syncUserViewButton() {
-    const enabled = canUseDesktopMobilePreview();
-    if (userViewButton) {
-      userViewButton.hidden = !enabled;
-      const active = body.classList.contains("user-view-sim");
-      userViewButton.setAttribute("aria-pressed", active ? "true" : "false");
-      userViewButton.textContent = active ? "Local View" : "User View";
-    }
-  }
-
   function initializeDebugUiControl() {
     if (!debugUiButton || !isLocalDevelopmentOrigin()) {
       return;
@@ -2534,37 +2425,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  function initializeUserViewControl() {
-    if (!userViewButton || !isLocalDevelopmentOrigin()) {
-      return;
-    }
-
-    userViewButton.hidden = false;
-
-    let userViewEnabled = false;
-    try {
-      userViewEnabled = localStorage.getItem(userViewStorageKey) === "1";
-    } catch (error) {
-      userViewEnabled = false;
-    }
-
-    setUserViewSimState(userViewEnabled);
-    userViewButton.addEventListener("click", () => {
-      setUserViewSimState(!body.classList.contains("user-view-sim"));
-    });
-  }
-
 
   mobileSortButton?.addEventListener("click", () => openMobilePanel("sort"));
   mobileFiltersButton?.addEventListener("click", () => openMobilePanel("filters"));
   mobileHelpButton?.addEventListener("click", openHelpPanel);
-  desktopMobilePreviewInlineButton?.addEventListener("click", () => setDesktopMobilePreview(false));
   desktopMobilePreviewButton?.addEventListener("click", () => setDesktopMobilePreview(!isDesktopMobilePreview()));
   desktopTipsButton?.addEventListener("click", openHelpPanel);
   tierInfoButton?.addEventListener("click", openTierHelpPanel);
   initializeDebugUiControl();
   initializeTierColumnToggle();
-  initializeUserViewControl();
   closeFiltersPanel?.addEventListener("click", closeMobilePanels);
   closeSortPanel?.addEventListener("click", closeMobilePanels);
   closeHelpPanel?.addEventListener("click", closeMobilePanels);

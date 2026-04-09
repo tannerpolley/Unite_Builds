@@ -15,6 +15,7 @@ Thumbs.db
 
 # Local build/deploy staging
 _site/
+.vercel/
 
 # Local scratch/debug captures
 .tmp_*

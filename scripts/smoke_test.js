@@ -136,15 +136,33 @@ async function main() {
 
     await page.click("#desktopMobilePreviewButton");
     await page.waitForFunction(() => document.body.classList.contains("desktop-mobile-preview"), { timeout: 30000 });
-    const desktopPreviewState = await page.evaluate(() => ({
-      cardsVisible: getComputedStyle(document.getElementById("moveset-cards")).display !== "none",
-      tableHidden: getComputedStyle(document.querySelector(".table-scroll-shell")).display === "none",
-      inlineExitVisible: !document.getElementById("desktopMobilePreviewInlineButton").hidden,
-    }));
-    if (!desktopPreviewState.cardsVisible || !desktopPreviewState.tableHidden || !desktopPreviewState.inlineExitVisible) {
+    const desktopPreviewState = await page.evaluate(() => {
+      const firstCard = document.querySelector("#moveset-cards .mobile-card");
+      const moveBox = firstCard?.querySelector(".mobile-card-move-box");
+      const metricsBox = firstCard?.querySelector(".mobile-card-metrics-box");
+      const move1 = firstCard?.querySelector(".mobile-move-button-1");
+      const move2 = firstCard?.querySelector(".mobile-move-button-2");
+      const metricItems = Array.from(firstCard?.querySelectorAll(".mobile-card-metrics > .mobile-card-metric, .mobile-card-metrics > .mobile-view-items") || []);
+      const move1Rect = move1?.getBoundingClientRect();
+      const move2Rect = move2?.getBoundingClientRect();
+      const metricTops = metricItems.map((node) => Math.round(node.getBoundingClientRect().top));
+      return {
+        cardsVisible: getComputedStyle(document.getElementById("moveset-cards")).display !== "none",
+        tableHidden: getComputedStyle(document.querySelector(".table-scroll-shell")).display === "none",
+        inlineExitMissing: !document.getElementById("desktopMobilePreviewInlineButton"),
+        resetHidden: getComputedStyle(document.getElementById("resetFilters")).display === "none",
+        moveBoxVisible: !!moveBox && moveBox.getBoundingClientRect().width > 0,
+        metricsBoxVisible: !!metricsBox && metricsBox.getBoundingClientRect().width > 0,
+        moveButtonsStacked: !!move1Rect && !!move2Rect &&
+          move2Rect.top > move1Rect.bottom - 2 &&
+          Math.abs(((move1Rect.left + move1Rect.right) / 2) - ((move2Rect.left + move2Rect.right) / 2)) <= 4,
+        metricsHorizontal: metricTops.length === 3 && metricTops.every((top) => Math.abs(top - metricTops[0]) <= 3),
+      };
+    });
+    if (!desktopPreviewState.cardsVisible || !desktopPreviewState.tableHidden || !desktopPreviewState.inlineExitMissing || !desktopPreviewState.resetHidden || !desktopPreviewState.moveBoxVisible || !desktopPreviewState.metricsBoxVisible || !desktopPreviewState.moveButtonsStacked || !desktopPreviewState.metricsHorizontal) {
       throw new Error(`Smoke test failed: desktop mobile preview did not activate correctly (${JSON.stringify(desktopPreviewState)})`);
     }
-    await page.click("#desktopMobilePreviewInlineButton");
+    await page.click("#desktopMobilePreviewButton");
     await page.waitForFunction(() => !document.body.classList.contains("desktop-mobile-preview"), { timeout: 30000 });
 
     async function checkDesktopWidth(width, expectation) {
@@ -262,7 +280,7 @@ async function main() {
     }
     logStep("desktop widths passed");
 
-    async function checkMobileWidth(width, expectation) {
+    async function checkMobileWidth(width) {
       const widthPage = await browser.newPage();
       const widthErrors = [];
       widthPage.on("pageerror", (error) => widthErrors.push(error.message));
@@ -274,22 +292,29 @@ async function main() {
         const cards = document.getElementById("moveset-cards");
         const tableShell = document.querySelector(".table-scroll-shell");
         const firstCard = document.querySelector("#moveset-cards .mobile-card");
+        const moveBox = firstCard?.querySelector(".mobile-card-move-box");
+        const metricsBox = firstCard?.querySelector(".mobile-card-metrics-box");
+        const moveList = firstCard?.querySelector(".mobile-card-move-list");
         const metrics = firstCard?.querySelector(".mobile-card-metrics");
         const firstMoveButton = firstCard?.querySelector(".mobile-move-button");
         const secondMoveButton = firstCard?.querySelector(".mobile-move-button-2");
-        const moveLabel = firstMoveButton?.querySelector(".mobile-card-move-label");
         const moveIconShell = firstMoveButton?.querySelector(".mobile-card-move-icon-shell");
+        const pokemonButton = firstCard?.querySelector(".mobile-card-pokemon-button");
         const pokemonText = firstCard?.querySelector(".mobile-card-pokemon-text");
         const pokemonName = firstCard?.querySelector(".mobile-card-name");
         const pokemonRole = firstCard?.querySelector(".mobile-card-role");
         const tierMetric = firstCard?.querySelector(".mobile-card-tier-metric");
-        const labelRect = moveLabel?.getBoundingClientRect();
         const iconRect = moveIconShell?.getBoundingClientRect();
         const cardRect = firstCard?.getBoundingClientRect();
+        const pokemonButtonRect = pokemonButton?.getBoundingClientRect();
+        const moveBoxRect = moveBox?.getBoundingClientRect();
+        const moveListRect = moveList?.getBoundingClientRect();
         const metricsRect = metrics?.getBoundingClientRect();
+        const metricsBoxRect = metricsBox?.getBoundingClientRect();
         const move1Rect = firstMoveButton?.getBoundingClientRect();
         const move2Rect = secondMoveButton?.getBoundingClientRect();
-        const metricNodes = Array.from(firstCard?.querySelectorAll(".mobile-card-metric, .mobile-view-items") || []);
+        const metricNodes = Array.from(firstCard?.querySelectorAll(".mobile-card-metrics > .mobile-card-metric, .mobile-card-metrics > .mobile-view-items") || []);
+        const metricTops = metricNodes.map((node) => Math.round(node.getBoundingClientRect().top));
         const metricContentWithinBounds = metricNodes.every((node) => {
           const nodeRect = node.getBoundingClientRect();
           return Array.from(node.children).every((child) => {
@@ -309,35 +334,49 @@ async function main() {
           tableHidden: !!tableShell && getComputedStyle(tableShell).display === "none",
           docScrollWidth: document.documentElement.scrollWidth,
           viewportWidth: window.innerWidth,
-          wideCard: !!firstCard && firstCard.classList.contains("mobile-card-wide"),
-          compactCard: !!firstCard && firstCard.classList.contains("mobile-card-compact"),
-          metricsDirection: metrics ? getComputedStyle(metrics).flexDirection : "",
-          labelBelowIcon: !!labelRect && !!iconRect && labelRect.top > iconRect.top - 1,
+          moveBoxVisible: !!moveBoxRect && moveBoxRect.width > 0 && moveBoxRect.height > 0,
+          metricsBoxVisible: !!metricsBoxRect && metricsBoxRect.width > 0 && metricsBoxRect.height > 0,
+          moveLabelMissing: !firstMoveButton?.querySelector(".mobile-card-move-label") && !secondMoveButton?.querySelector(".mobile-card-move-label"),
+          moveIconsVisible: !!iconRect && iconRect.width > 0 && iconRect.height > 0,
           metricsWithinCard: !!cardRect && !!metricsRect && metricsRect.right <= cardRect.right + 3 && metricsRect.left >= cardRect.left - 3,
+          metricsBoxWithinCard: !!cardRect && !!metricsBoxRect && metricsBoxRect.right <= cardRect.right + 3 && metricsBoxRect.left >= cardRect.left - 3,
           metricContentWithinBounds,
-          moveColumnsEqual: !!move1Rect && !!move2Rect && Math.abs(move1Rect.width - move2Rect.width) <= 4,
-          compactMoveWithinMetricsBoundary: !!move2Rect && !!metricsRect ? move2Rect.right <= metricsRect.left + 3 : true,
-          pokemonTextAligned: !!pokemonTextRect && !!pokemonNameRect && !!pokemonRoleRect &&
-            pokemonNameRect.left >= pokemonTextRect.left - 4 &&
-            pokemonRoleRect.left >= pokemonTextRect.left - 4 &&
-            Math.abs(pokemonNameRect.left - pokemonRoleRect.left) <= 4,
-          tierMetricVisible: !!tierMetric && tierMetric.getBoundingClientRect().width > 0 && tierMetric.textContent.includes("Tier"),
+          moveButtonsStacked: !!move1Rect && !!move2Rect &&
+            move2Rect.top > move1Rect.bottom - 2 &&
+            Math.abs(((move1Rect.left + move1Rect.right) / 2) - ((move2Rect.left + move2Rect.right) / 2)) <= 4,
+          moveListCenteredInBox: !!moveBoxRect && !!moveListRect &&
+            Math.abs(((moveListRect.left + moveListRect.right) / 2) - ((moveBoxRect.left + moveBoxRect.right) / 2)) <= 4 &&
+            moveListRect.top >= moveBoxRect.top - 2 &&
+            moveListRect.bottom <= moveBoxRect.bottom + 2,
+          metricsHorizontal: metricTops.length === 3 && metricTops.every((top) => Math.abs(top - metricTops[0]) <= 3),
+          pokemonTextWithinButton: !!pokemonButtonRect && !!pokemonTextRect && !!pokemonNameRect && !!pokemonRoleRect &&
+            pokemonTextRect.left >= pokemonButtonRect.left - 3 &&
+            pokemonTextRect.right <= pokemonButtonRect.right + 3 &&
+            pokemonNameRect.left >= pokemonButtonRect.left - 3 &&
+            pokemonNameRect.right <= pokemonButtonRect.right + 3 &&
+            pokemonRoleRect.left >= pokemonButtonRect.left - 3 &&
+            pokemonRoleRect.right <= pokemonButtonRect.right + 3,
+          tierMetricVisible: !!tierMetric && tierMetric.getBoundingClientRect().width > 0,
+          tierMetricLabelMissing: !tierMetric?.querySelector(".mobile-card-metric-label"),
+          tierBadgeVisible: !!tierMetric?.querySelector(".mobile-card-tier"),
         };
       });
 
       const failures = [];
       if (!state.cardsVisible || !state.tableHidden) failures.push("mobile layout visibility");
       if (state.docScrollWidth > state.viewportWidth + 2) failures.push("mobile overflow");
-      if (expectation.layout === "wide" && !state.wideCard) failures.push("wide mobile card mode");
-      if (expectation.layout === "compact" && !state.compactCard) failures.push("compact mobile card mode");
-      if (expectation.metricsDirection === "row" && state.metricsDirection !== "row") failures.push("wide mobile metrics direction");
-      if (expectation.metricsDirection === "column" && state.metricsDirection !== "column") failures.push("compact mobile metrics direction");
-      if (!state.labelBelowIcon) failures.push("mobile move label position");
+      if (!state.moveBoxVisible) failures.push("mobile move box");
+      if (!state.metricsBoxVisible) failures.push("mobile metrics box");
+      if (!state.moveLabelMissing) failures.push("mobile move label removal");
+      if (!state.moveIconsVisible) failures.push("mobile move icons");
+      if (!state.moveButtonsStacked) failures.push("mobile move stacking");
+      if (!state.moveListCenteredInBox) failures.push("mobile move box centering");
       if (!state.metricsWithinCard) failures.push("mobile metrics bounds");
+      if (!state.metricsBoxWithinCard) failures.push("mobile metrics box bounds");
+      if (!state.metricsHorizontal) failures.push("mobile metrics horizontal row");
       if (!state.metricContentWithinBounds) failures.push("mobile metric content bounds");
-      if (!state.tierMetricVisible) failures.push("mobile tier metric");
-      if (expectation.layout === "compact" && !state.compactMoveWithinMetricsBoundary) failures.push("compact move overlap");
-      if (expectation.layout === "wide" && !state.pokemonTextAligned) failures.push("wide mobile pokemon text alignment");
+      if (!state.tierMetricVisible || !state.tierMetricLabelMissing || !state.tierBadgeVisible) failures.push("mobile tier metric");
+      if (!state.pokemonTextWithinButton) failures.push("mobile pokemon text bounds");
 
       await widthPage.close();
       if (widthErrors.length > 0) {
@@ -348,18 +387,10 @@ async function main() {
       }
     }
 
-    const mobileWidths = [
-      { width: 750, layout: "wide", metricsDirection: "row" },
-      { width: 680, layout: "wide", metricsDirection: "row" },
-      { width: 600, layout: "wide", metricsDirection: "row" },
-      { width: 500, layout: "wide", metricsDirection: "row" },
-      { width: 390, layout: "compact", metricsDirection: "column" },
-      { width: 360, layout: "compact", metricsDirection: "column" },
-      { width: 320, layout: "compact", metricsDirection: "column" },
-    ];
+    const mobileWidths = [750, 680, 600, 500, 390, 360, 320];
 
-    for (const config of mobileWidths) {
-      await checkMobileWidth(config.width, config);
+    for (const width of mobileWidths) {
+      await checkMobileWidth(width);
     }
     logStep("mobile widths passed");
 
@@ -435,6 +466,108 @@ async function main() {
         { timeout: 30000 },
         label
       );
+    }
+
+    async function collectLayoutIssues(config, pageRef = page) {
+      return await pageRef.evaluate((layoutConfig) => {
+        const tolerance = layoutConfig.tolerance ?? 2;
+
+        const isVisible = (node) => {
+          if (!node) {
+            return false;
+          }
+          const style = window.getComputedStyle(node);
+          if (style.display === "none" || style.visibility === "hidden" || style.opacity === "0") {
+            return false;
+          }
+          const rect = node.getBoundingClientRect();
+          return rect.width > 0 && rect.height > 0;
+        };
+
+        const rectData = (node) => {
+          const rect = node.getBoundingClientRect();
+          return {
+            left: rect.left,
+            right: rect.right,
+            top: rect.top,
+            bottom: rect.bottom,
+            width: rect.width,
+            height: rect.height,
+          };
+        };
+
+        const visibleChildren = (node) => Array.from(node.children).filter((child) => isVisible(child));
+        const issues = [];
+
+        for (const selector of layoutConfig.overflowContainers || []) {
+          document.querySelectorAll(selector).forEach((container, containerIndex) => {
+            if (!isVisible(container)) {
+              return;
+            }
+            const containerRect = rectData(container);
+            visibleChildren(container).forEach((child, childIndex) => {
+              const childRect = rectData(child);
+              if (
+                childRect.left < containerRect.left - tolerance ||
+                childRect.right > containerRect.right + tolerance ||
+                childRect.top < containerRect.top - tolerance ||
+                childRect.bottom > containerRect.bottom + tolerance
+              ) {
+                issues.push({
+                  type: "overflow",
+                  selector,
+                  containerIndex,
+                  childClass: child.className || child.tagName,
+                  childIndex,
+                  containerRect,
+                  childRect,
+                });
+              }
+            });
+          });
+        }
+
+        for (const selector of layoutConfig.siblingGroups || []) {
+          document.querySelectorAll(selector).forEach((group, groupIndex) => {
+            if (!isVisible(group)) {
+              return;
+            }
+            const children = visibleChildren(group);
+            for (let i = 0; i < children.length; i += 1) {
+              for (let j = i + 1; j < children.length; j += 1) {
+                const a = children[i];
+                const b = children[j];
+                const aRect = rectData(a);
+                const bRect = rectData(b);
+                const overlapX = Math.max(0, Math.min(aRect.right, bRect.right) - Math.max(aRect.left, bRect.left));
+                const overlapY = Math.max(0, Math.min(aRect.bottom, bRect.bottom) - Math.max(aRect.top, bRect.top));
+                if (overlapX > tolerance && overlapY > tolerance) {
+                  issues.push({
+                    type: "overlap",
+                    selector,
+                    groupIndex,
+                    aClass: a.className || a.tagName,
+                    bClass: b.className || b.tagName,
+                    aRect,
+                    bRect,
+                    overlapX,
+                    overlapY,
+                  });
+                }
+              }
+            }
+          });
+        }
+
+        return issues;
+      }, config);
+    }
+
+    async function assertNoLayoutIssues(config, label, pageRef = page) {
+      const issues = await collectLayoutIssues(config, pageRef);
+      if (issues.length > 0) {
+        throw new Error(`Smoke test failed: ${label} has layout collisions (${JSON.stringify(issues)})`);
+      }
     }
 
     await page.evaluate(() => {
@@ -520,6 +653,21 @@ async function main() {
     if (!heldImagesLoaded) {
       throw new Error("Smoke test failed: one or more held item icons failed to load");
     }
+    await assertNoLayoutIssues(
+      {
+        overflowContainers: [
+          "#popup:not(.hidden) .build-popup-inline-move",
+          "#popup:not(.hidden) .build-popup-title-stack",
+          "#popup:not(.hidden) .battle-item-card",
+        ],
+        siblingGroups: [
+          "#popup:not(.hidden) .build-popup-top-row",
+          "#popup:not(.hidden) .build-popup-move-icons",
+          "#popup:not(.hidden) .battle-item-grid",
+        ],
+      },
+      "desktop build popup"
+    );
     await closePopup();
     logStep("absol build popup passed");
 
@@ -794,6 +942,10 @@ async function main() {
       const cards = document.getElementById("moveset-cards");
       const tableShell = document.querySelector(".table-scroll-shell");
       const mobileToolbar = document.querySelector(".mobile-toolbar");
+      const search = document.getElementById("nameSearch");
+      const resetButton = document.getElementById("resetFilters");
+      const toolbarRect = mobileToolbar?.getBoundingClientRect();
+      const searchRect = search?.getBoundingClientRect();
       return {
         viewportWidth: window.innerWidth,
         docScrollWidth: document.documentElement.scrollWidth,
@@ -801,6 +953,9 @@ async function main() {
         tableHidden: !!tableShell && getComputedStyle(tableShell).display === "none",
         toolbarButtons: Array.from(document.querySelectorAll(".mobile-toolbar-actions .mobile-toolbar-button")).map((node) => node.textContent.trim()),
         headerText: document.getElementById("header-text")?.textContent?.trim() || "",
+        resetHidden: !!resetButton && getComputedStyle(resetButton).display === "none",
+        searchTextAlign: search ? getComputedStyle(search).textAlign : "",
+        searchCenterDelta: toolbarRect && searchRect ? Math.abs(((searchRect.left + searchRect.right) / 2) - ((toolbarRect.left + toolbarRect.right) / 2)) : 999,
       };
     });
     if (!mobileLayout.cardsVisible || !mobileLayout.tableHidden) {
@@ -811,6 +966,12 @@ async function main() {
     }
     if (!mobileLayout.toolbarButtons.includes("Sort") || !mobileLayout.toolbarButtons.includes("Filters") || !mobileLayout.toolbarButtons.includes("Help")) {
       throw new Error(`Smoke test failed: mobile toolbar buttons are missing (${mobileLayout.toolbarButtons.join(", ")})`);
+    }
+    if (!mobileLayout.resetHidden) {
+      throw new Error(`Smoke test failed: mobile reset button is still visible (${JSON.stringify(mobileLayout)})`);
+    }
+    if (mobileLayout.searchTextAlign !== "center" || mobileLayout.searchCenterDelta > 8) {
+      throw new Error(`Smoke test failed: mobile search is not centered (${JSON.stringify(mobileLayout)})`);
     }
     if (/non-mobile devices/i.test(mobileLayout.headerText)) {
       throw new Error("Smoke test failed: mobile header still includes desktop-only messaging");
@@ -920,6 +1081,22 @@ async function main() {
     if (!mobilePopupState.popupOpen || !mobilePopupState.bodyLocked || mobilePopupState.heldIcons === 0 || mobilePopupState.legacyMetrics !== 0 || !mobilePopupState.buildPopupNoScroll) {
       throw new Error(`Smoke test failed: mobile build popup state is invalid (${JSON.stringify(mobilePopupState)})`);
     }
+    await assertNoLayoutIssues(
+      {
+        overflowContainers: [
+          "#popup:not(.hidden) .build-popup-inline-move",
+          "#popup:not(.hidden) .build-popup-title-stack",
+          "#popup:not(.hidden) .battle-item-card",
+        ],
+        siblingGroups: [
+          "#popup:not(.hidden) .build-popup-top-row",
+          "#popup:not(.hidden) .build-popup-move-icons",
+          "#popup:not(.hidden) .battle-item-grid",
+        ],
+      },
+      "mobile build popup",
+      mobilePage
+    );
     await closePopup(mobilePage);
 
     await mobilePage.click("#moveset-cards .mobile-move-button");

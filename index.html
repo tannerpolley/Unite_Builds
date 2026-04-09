@@ -7,19 +7,26 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- this is what Google uses for the snippet -->
   <title>Pokemon Unite Meta Moveset Tierlist</title>
   <meta
     name="description"
     content="Pokémon Unite Moveset Tierlist – sortable and filterable by win-rate, pick-rate, and moveset. Up-to-date data from the official Unite API."
   >
+  <meta name="robots" content="index,follow,max-image-preview:large">
 
-  <!-- social-only tags (for Twitter, Facebook, etc.) -->
-  <meta property="og:title"        content="Pokemon Unite Tierlist by Moveset">
-  <meta property="og:description"  content="Pokémon Unite Tierlist based on movesets ...">
-  <meta property="og:image"        content="https://unitebuilds.com/preview.png">
-  <meta property="og:url"          content="https://unitebuilds.com">
-  <meta property="og:type"         content="website">
+  <meta property="og:title" content="Pokemon Unite Tierlist by Moveset">
+  <meta property="og:description" content="Pokémon Unite Moveset Tierlist – sortable and filterable by win-rate, pick-rate, and moveset. Up-to-date data from the official Unite API.">
+  <meta property="og:image" content="https://unitebuilds.com/preview.png">
+  <meta property="og:image:width" content="1900">
+  <meta property="og:image:height" content="1080">
+  <meta property="og:url" content="https://unitebuilds.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Unite Builds">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pokemon Unite Tierlist by Moveset">
+  <meta name="twitter:description" content="Pokémon Unite Moveset Tierlist – sortable and filterable by win-rate, pick-rate, and moveset. Up-to-date data from the official Unite API.">
+  <meta name="twitter:image" content="https://unitebuilds.com/preview.png">
+  <meta name="twitter:image:alt" content="Unite Builds preview showing the Pokémon Unite moveset tier list">
 
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="canonical" href="https://unitebuilds.com/">
@@ -27,7 +34,6 @@
   <link rel="stylesheet" href="static/css/style.css">
   <script src="static/js/script.js" defer></script>
 </head>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EQ3L23JSHS"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -42,8 +48,8 @@
       <h1>Pokemon Unite Moveset Tierlist</h1>
       <div id="header-text" class="subheading"></div>
       <div class="header-actions">
+        <button id="desktopMobilePreviewButton" class="desktop-preview-button header-preview-button" type="button" aria-pressed="false" hidden>Mobile Preview</button>
         <button id="debugUiButton" class="debug-ui-button" type="button" hidden aria-pressed="false">Debug</button>
-        <button id="userViewButton" class="user-view-button" type="button" hidden aria-pressed="false">User View</button>
       </div>
     </div>
 
@@ -57,7 +63,6 @@
             <button id="mobileSortButton" class="mobile-toolbar-button" type="button">Sort</button>
             <button id="mobileFiltersButton" class="mobile-toolbar-button" type="button">Filters</button>
             <button id="mobileHelpButton" class="mobile-toolbar-button" type="button">Help</button>
-            <button id="desktopMobilePreviewInlineButton" class="mobile-toolbar-button mobile-preview-inline-button" type="button" hidden>Exit Preview</button>
           </div>
         </div>
 
@@ -121,10 +126,6 @@
               <input type="checkbox" name="role" value="Supporter">
               <span class="role-label">Supporter</span>
             </label>
-          </div>
-
-          <div class="filter-actions control-box control-box-actions">
-            <button id="desktopMobilePreviewButton" class="desktop-preview-button" type="button" aria-pressed="false" hidden>Mobile Preview</button>
           </div>
         </div>
       </div>
@@ -225,8 +226,6 @@
     </div>
 
     <div id="tooltip" class="tooltip hidden"></div>
-    
-
   </div>
 </body>
 </html>

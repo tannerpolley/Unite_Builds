@@ -56,7 +56,7 @@ npm run build:patch-history
 ```powershell
 npm test
 ```
-8. Refresh the social/share preview image with:
+8. Refresh the local social/share preview image from the current worktree with:
 ```powershell
 npm run preview
 ```
@@ -65,7 +65,7 @@ npm run preview
 
 ## Local environment
 - Python dependencies are declared in `environment.yml`.
-- Node is only used for local helper scripts such as patch-history generation and `preview.png` capture.
+- Node is only used for local helper scripts such as patch-history generation and local `preview.png` capture.
 - `npm test` now runs a Puppeteer smoke test that serves the repo locally, verifies the table renders, and opens both move and Pokemon popups.
 - Because the frontend uses `fetch()` for JSON assets, serve the repo over HTTP for local browser testing instead of relying on `file://`.
 
@@ -95,3 +95,19 @@ GitHub Pages is deployed by Actions from a staged site-only artifact.
 The deploy workflow uploads only the files the site actually needs, instead of publishing the entire repository. Source folders like `data/` and `scripts/` stay in the repo but are not included in the Pages artifact.
 
 The Pages workflow now also runs the local Puppeteer smoke test before staging the site artifact, so a broken table or popup render will block deployment.
+
+## Vercel deployment
+Vercel is now configured in-repo for the same staged static artifact model used by GitHub Pages.
+
+- `vercel.json` tells Vercel to run `npm run stage:site` and publish `_site/`.
+- `scripts/stage_site.js` stages only the public site files: `index.html`, `static/`, `preview.png`, `favicon.ico`, `CNAME`, and the Google verification HTML file when present.
+- `.vercel/` is ignored because Vercel CLI stores local project linkage metadata there.
+
+Recommended Vercel setup:
+
+1. Import this GitHub repo into Vercel.
+2. Keep the repo root as the project root.
+3. Let Vercel use the repo `vercel.json` settings instead of overriding Build Command or Output Directory in the dashboard.
+4. Add `unitebuilds.com` as the production domain in Vercel once the project is linked.
+
+This keeps GitHub as the source of truth for code and PRs, while Vercel adds preview deployments for branches and pull requests.
